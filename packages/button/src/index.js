@@ -1,14 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import { variant } from 'styled-system'
 import { spacing } from '@tokko/theme'
 import PropTypes from 'prop-types'
 
-const APPEARANCES = {
-  PRIMARY: 'primary',
-  SECONDARY: 'secondary',
-}
-
 const Button = styled.button`
-  background-color: #000;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
@@ -34,29 +29,20 @@ const Button = styled.button`
     background-color: #fff;
   }
 
-  ${({ variant }) =>
-    variant === APPEARANCES.SECONDARY &&
-    css`
-      color: #666;
-      background-color: white;
-      border: 1px solid #eaeaea;
-
-      :hover {
-        color: #fff;
-        border: 1px solid #000;
-        background-color: #000;
-      }
-    `}
+  ${variant({
+    prop: 'kind',
+    scale: 'buttons',
+  })}
 `
 
 Button.propTypes = {
   disabled: PropTypes.bool.isRequired,
-  variant: PropTypes.oneOf(Object.values(APPEARANCES)),
+  kind: PropTypes.string,
 }
 
 Button.defaultProps = {
   disabled: false,
-  variant: APPEARANCES.PRIMARY,
+  kind: 'primary',
 }
 
 export default Button

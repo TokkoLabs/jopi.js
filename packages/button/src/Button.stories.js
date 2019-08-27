@@ -9,4 +9,4 @@ export default {
 
 export const primary = () => <Button>{'Button'}</Button>
 
-export const secondary = () => <Button variant="secondary">{'Button'}</Button>
+export const secondary = () => <Button kind="secondary">{'Button'}</Button>
