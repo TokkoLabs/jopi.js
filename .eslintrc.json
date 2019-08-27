@@ -1,0 +1,54 @@
+{
+    "env": {
+      "es6": true,
+      "jest/globals": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "standard",
+      "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "react-hooks",
+      "jest"
+    ],
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "detect",
+        "flowVersion": "0.59"
+      }
+    },
+    "rules": {
+      "react/destructuring-assignment": 2,
+      "react/boolean-prop-naming": [
+        "error",
+        {
+          "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+"
+        }
+      ],
+      "react/jsx-boolean-value": 2,
+      "react/jsx-pascal-case": 2,
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-indent": [
+        "error",
+        2
+      ],
+      "comma-dangle": ["error", "always-multiline"]
+    }
+  }
+  
