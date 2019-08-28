@@ -10,3 +10,9 @@ export default {
 export const primary = () => <Button>{'Button'}</Button>
 
 export const secondary = () => <Button kind="secondary">{'Button'}</Button>
+
+export const small = () => <Button size="small">{'Button'}</Button>
+
+export const medium = () => <Button size="medium">{'Button'}</Button>
+
+export const large = () => <Button size="large">{'Button'}</Button>

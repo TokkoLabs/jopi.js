@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { variant } from 'styled-system'
-import { spacing } from '@tokko/theme'
 import PropTypes from 'prop-types'
 
 const Button = styled.button`
@@ -10,12 +9,9 @@ const Button = styled.button`
   flex-shrink: 0;
   font-size: 0.88rem;
   font-weight: 500;
-  height: 40px;
   line-height: 38px;
-  min-width: 200px;
   outline: none;
   overflow: hidden;
-  padding: 0 ${spacing.extraLarge};
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
@@ -32,6 +28,11 @@ const Button = styled.button`
   ${variant({
     prop: 'kind',
     scale: 'buttons',
+  })}
+
+  ${variant({
+    prop: 'size',
+    scale: 'sizes',
   })}
 `
 
