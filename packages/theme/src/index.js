@@ -26,6 +26,11 @@ space.large = space[8]
 
 const theme = {
   fontSizes: [10, 12, 14, 16, 18, 21, 34],
+  text: {
+    body: { fontFamily: 'sans-serif', textTransform: 'uppercase' },
+    heading: 'inherit',
+    monospace: 'Menlo, monospace',
+  },
   colors: colors,
   space: space,
   buttons: {
