@@ -17,5 +17,8 @@
         "react-dom": "^15.0.0 || ^16.0.0",
         "styled-components": "^4.0.0"
     },
-    "gitHead": "2fa70d1b7d415930fd9a1fbcea0c707fe33467d8"
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "589f87f6781012bf3946450745c22ab975d04d1a"
 }
