@@ -1,49 +1,37 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { variant } from 'styled-system'
-import PropTypes from 'prop-types'
+import { Box } from '@tokko/box'
 
-const Button = styled.button`
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  flex-shrink: 0;
-  font-size: 0.88rem;
-  font-weight: 500;
-  line-height: 38px;
-  outline: none;
-  overflow: hidden;
-  text-align: center;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: all 0.2s ease 0s;
-  user-select: none;
-  white-space: nowrap;
-
-  :hover {
-    color: #000;
-    border: 1px solid #000;
-    background-color: #fff;
-  }
-
-  ${variant({
-    prop: 'kind',
-    scale: 'buttons',
-  })}
-
-  ${variant({
+const ButtonBase = styled(Box)(
+  variant({
     prop: 'size',
-    scale: 'sizes',
-  })}
-`
+    scale: 'buttons.sizes',
+  })
+)
 
-Button.propTypes = {
-  disabled: PropTypes.bool.isRequired,
-  kind: PropTypes.string,
-}
-
-Button.defaultProps = {
-  disabled: false,
-  kind: 'primary',
-}
-
-export default Button
+export const Button = props => (
+  <ButtonBase
+    as="button"
+    tx="buttons"
+    variant="primary"
+    size="medium"
+    {...props}
+    __css={{
+      appearance: 'none',
+      display: 'inline-block',
+      lineHeight: 'inherit',
+      textTransform: 'uppercase',
+      textAlign: 'center',
+      textDecoration: 'none',
+      outline: 'none',
+      px: 3,
+      py: 2,
+      color: 'white',
+      bg: 'primary',
+      border: 0,
+      borderRadius: 52,
+    }}
+  />
+)
