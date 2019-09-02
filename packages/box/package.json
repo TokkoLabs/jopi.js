@@ -1,6 +1,6 @@
 {
     "name": "@oneloop/box",
-    "version": "1.1.5-alpha.0",
+    "version": "1.1.5-alpha.1",
     "main": "lib/index.js",
     "module": "src/index.js",
     "dependencies": {
@@ -19,5 +19,5 @@
     "publishConfig": {
         "access": "public"
     },
-    "gitHead": "589f87f6781012bf3946450745c22ab975d04d1a"
+    "gitHead": "4cea4b6e1d2b274b20bde85644f7be5916105ef2"
 }
