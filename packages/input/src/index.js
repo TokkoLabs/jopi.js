@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { spacing } from '@tokko/theme'
+import { spacing } from '@oneloop/theme'
 import PropTypes from 'prop-types'
 
 const Input = styled.input`
