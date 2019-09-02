@@ -1,15 +1,15 @@
 {
     "name": "@tokko/box",
-    "version": "1.0.2",
+    "version": "1.1.0-alpha.0",
     "main": "lib/index.js",
     "module": "src/index.js",
     "dependencies": {
+        "@styled-system/css": "^5.0.23",
         "prop-types": "^15.7.2",
         "react": "16.8.6",
         "react-dom": "16.8.6",
         "styled-components": "4.3.2",
-        "styled-system": "5.0.21",
-        "@styled-system/css": "^5.0.23"
+        "styled-system": "5.0.21"
     },
     "peerDependencies": {
         "react": "^15.0.0 || ^16.0.0",
