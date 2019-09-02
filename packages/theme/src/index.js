@@ -24,19 +24,68 @@ space.small = space[2]
 space.medium = space[6]
 space.large = space[8]
 
+const fontSize = [10, 12, 14, 16, 18, 21, 34]
+
 const theme = {
-  fontSizes: [10, 12, 14, 16, 18, 21, 34],
+  fontSizes: fontSize,
+  fonts: {
+    heading: 'sans-serif',
+    body: 'sans-serif',
+  },
+  letterSpacings: {
+    heading: -0.9,
+  },
   text: {
-    body: { fontFamily: 'sans-serif', textTransform: 'uppercase' },
-    heading: 'inherit',
-    monospace: 'Menlo, monospace',
+    heading: [
+      {
+        fontSize: fontSize[6],
+      },
+      {
+        fontSize: fontSize[5],
+      },
+      {
+        fontSize: fontSize[4],
+      },
+      {
+        fontSize: fontSize[3],
+      },
+    ],
+    subtitle: {
+      fontSize: fontSize[5],
+      letterSpacing: -0.9,
+    },
+    label: {
+      color: colors.neutral[4],
+      fontSize: fontSize[1],
+      fontWeight: 'bold',
+    },
+    button: [
+      {
+        fontSize: fontSize[3],
+      },
+      {
+        fontSize: fontSize[2],
+      },
+    ],
+    caption: [
+      {
+        textTransform: 'uppercase',
+        fontSize: fontSize[1],
+      },
+      {
+        textTransform: 'uppercase',
+        fontSize: fontSize[0],
+      },
+    ],
+    body: [{ fontSize: fontSize[2] }, { fontSize: fontSize[1] }],
+    small: { fontSize: fontSize[0] },
   },
   colors: colors,
   space: space,
   buttons: {
     primary: {
-      color: colors.neutral[0],
       backgroundColor: colors.primary,
+      color: colors.neutral[0],
     },
     secondary: {
       color: colors.neutral[0],
@@ -58,31 +107,34 @@ const theme = {
       color: colors.neutral[5],
       backgroundColor: colors.neutral[0],
     },
+    sizes: {
+      small: {
+        paddingTop: space[2],
+        paddingBottom: space[2],
+        paddingLeft: space.small,
+        paddingRight: space.small,
+        fontSize: fontSize[2],
+      },
+      medium: {
+        paddingTop: space[4],
+        paddingBottom: space[4],
+        paddingLeft: space.medium,
+        paddingRight: space.medium,
+        fontSize: fontSize[2],
+      },
+      large: {
+        paddingTop: space[4],
+        paddingBottom: space[4],
+        paddingLeft: space.large,
+        paddingRight: space.large,
+        fontSize: fontSize[3],
+      },
+    },
   },
   borders: {
     light: { border: '1px solid rgba(255, 255, 255, 0.5)' },
     dark: { border: '1px solid rgba(0, 0, 0, 0.24)' },
     none: { border: '1px solid transparent' },
-  },
-  sizes: {
-    small: {
-      paddingTop: 1,
-      paddingBottom: 1,
-      paddingLeft: space.small,
-      paddingRight: space.small,
-    },
-    medium: {
-      paddingTop: 3,
-      paddingBottom: 3,
-      paddingLeft: space.medium,
-      paddingRight: space.medium,
-    },
-    large: {
-      paddingTop: 3,
-      paddingBottom: 3,
-      paddingLeft: space.large,
-      paddingRight: space.large,
-    },
   },
 }
 
