@@ -26,6 +26,27 @@ space.large = space[8]
 
 const fontSize = [10, 12, 14, 16, 18, 21, 34]
 
+const radius = {
+  input: 4,
+  default: 52,
+  circle: 99999,
+}
+
+const shadows = {
+  active: '0px 0px 4px rgba(0, 0, 0, 0.12)',
+}
+
+const forms = {
+  input: {
+    backgroundColor: colors.neutral[0],
+    borderRadius: radius.input,
+    '&:focus': {
+      boxShadow: shadows.active,
+      border: '1px solid #C2C0C0',
+    },
+  },
+}
+
 const theme = {
   fontSizes: fontSize,
   fonts: {
@@ -134,16 +155,10 @@ const theme = {
   borders: {
     light: { border: '1px solid rgba(255, 255, 255, 0.5)' },
     dark: { border: '1px solid rgba(0, 0, 0, 0.24)' },
-    none: { border: '1px solid transparent' },
   },
-}
-
-export const spacing = {
-  extraLarge: '32px',
-  large: '24px',
-  medium: '16px',
-  small: '8px',
-  extraSmall: '4px',
+  forms: forms,
+  radii: radius,
+  shadows: shadows,
 }
 
 export default theme

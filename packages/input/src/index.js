@@ -1,34 +1,38 @@
-import styled, { css } from 'styled-components'
-import { spacing } from '@oneloop/theme'
+import React from 'react'
 import PropTypes from 'prop-types'
+import { Box } from '@oneloop/box'
 
-const Input = styled.input`
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  box-shadow: none;
-  box-sizing: border-box;
-  caret-color: #000;
-  color: #000;
-  display: block;
-  font-size: 14px;
-  height: 40px;
-  line-height: 26px;
-  padding: ${spacing.medium};
-  margin-bottom: ${spacing.small};
-  width: 100%;
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      color: #999999;
-      background-color: #fafafa;
-      cursor: not-allowed;
-    `}
-`
+const Input = props => (
+  <Box
+    as="input"
+    type="text"
+    tx="forms"
+    variant="input"
+    {...props}
+    __css={{
+      borderRadius: 4,
+      border: '1px solid #DADADA',
+      boxShadow: 'none',
+      caretColor: '#757575',
+      color: '#757575',
+      display: 'block',
+      fontSize: 1,
+      height: 36,
+      lineHeight: 14,
+      px: 16,
+      py: 11,
+      marginBottom: 5,
+      outline: 'none',
+      '&:disabled': {
+        color: '#999999',
+        backgroundColor: '#EBEBEB',
+        cursor: 'not-allowed',
+      },
+    }}
+  />
+)
 
 Input.propTypes = {
-  disabled: PropTypes.bool,
   placeholder: PropTypes.string,
 }
 
