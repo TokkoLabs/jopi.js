@@ -31,7 +31,7 @@ export const Button = props => (
       color: 'white',
       bg: 'primary',
       border: 0,
-      borderRadius: 52,
+      borderRadius: 'default',
     }}
   />
 )
