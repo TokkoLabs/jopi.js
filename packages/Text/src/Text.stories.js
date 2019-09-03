@@ -21,32 +21,14 @@ export const all = () => (
     <Heading as="h4" variant="heading.3">
       Heading 4
     </Heading>
-    <Text as="p" variant="subtitle">
-      Subtitle
-    </Text>
-    <Text as="p" variant="label">
-      Label
-    </Text>
-    <Text as="p" variant="button.0">
-      Button 1
-    </Text>
-    <Text as="p" variant="button.1">
-      Button 2
-    </Text>
-    <Text as="p" variant="caption.0">
-      Caption 1
-    </Text>
-    <Text as="p" variant="caption.1">
-      Caption 2
-    </Text>
-    <Text as="p" variant="body.0">
-      Body 1
-    </Text>
-    <Text as="p" variant="body.1">
-      Body 2
-    </Text>
-    <Text as="p" variant="small">
-      Small text
-    </Text>
+    <Text variant="subtitle">Subtitle</Text>
+    <Text variant="label">Label</Text>
+    <Text variant="button.0">Button 1</Text>
+    <Text variant="button.1">Button 2</Text>
+    <Text variant="caption.0">Caption 1</Text>
+    <Text variant="caption.1">Caption 2</Text>
+    <Text variant="body.0">Body 1</Text>
+    <Text variant="body.1">Body 2</Text>
+    <Text variant="small">Small text</Text>
   </React.Fragment>
 )
