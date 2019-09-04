@@ -20,7 +20,7 @@ export const Badge = props => (
       color: 'white',
       bg: 'primary',
       border: 0,
-      borderRadius: 'default',
+      borderRadius: 'circle',
       minWidth: '32px',
       fontFamily: 'body',
     }}
