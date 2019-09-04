@@ -27,8 +27,7 @@ space.large = space[8]
 const fontSize = [10, 12, 14, 16, 18, 21, 34]
 
 const radius = {
-  input: 4,
-  default: 52,
+  default: 4,
   circle: 99999,
 }
 
@@ -39,11 +38,16 @@ const shadows = {
 const forms = {
   input: {
     backgroundColor: colors.neutral[0],
-    borderRadius: radius.input,
+    borderRadius: radius.default,
     '&:focus': {
       boxShadow: shadows.active,
       border: '1px solid #C2C0C0',
     },
+  },
+  label: {
+    color: colors.neutral[4],
+    fontSize: fontSize[1],
+    fontWeight: 'bold',
   },
 }
 
@@ -83,9 +87,11 @@ const theme = {
     button: [
       {
         fontSize: fontSize[3],
+        textTransform: 'uppercase',
       },
       {
         fontSize: fontSize[2],
+        textTransform: 'uppercase',
       },
     ],
     caption: [
