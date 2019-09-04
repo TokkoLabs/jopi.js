@@ -1,17 +1,6 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
-
-const SVG = ({ size = 18, ...props }) => (
-  <Box
-    as="svg"
-    xmlns="http://www.w3.org/2000/svg"
-    width={18}
-    height={18}
-    viewBox="0 0 18 18"
-    fill="none"
-    {...props}
-  />
-)
+import { Svg } from '@oneloop/icons'
 
 const CheckboxBox = ({
   borderColor,
@@ -20,7 +9,7 @@ const CheckboxBox = ({
   tickColor,
   ...props
 }) => (
-  <SVG {...props}>
+  <Svg width={18} height={18} viewBox="0 0 18 18" fill="none" {...props}>
     <rect
       x="0.5"
       y="0.5"
@@ -31,7 +20,7 @@ const CheckboxBox = ({
       stroke={borderColor}
     />
     {tick && <path d="M4.5 10L8 13L14 4" stroke={tickColor} />}
-  </SVG>
+  </Svg>
 )
 
 const CheckboxChecked = ({ isAlt, ...props }) => (

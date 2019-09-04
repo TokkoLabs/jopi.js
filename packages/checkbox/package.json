@@ -5,7 +5,7 @@
     "module": "src/index.js",
     "dependencies": {
         "@oneloop/box": "^1.1.6-alpha.0",
-        "@styled-system/should-forward-prop": "^5.1.1",
+        "@oneloop/icons": "^1.1.10-alpha.0",
         "prop-types": "^15.7.2",
         "react": "16.8.6",
         "react-dom": "16.8.6",
