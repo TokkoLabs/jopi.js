@@ -101,7 +101,12 @@ const CheckboxIcon = ({ isAlt = false, ...props }) => (
   </React.Fragment>
 )
 
-export const Checkbox = ({ sx, variant = 'checkbox', isAlt, ...props }) => (
+export const Checkbox = ({
+  sx,
+  variant = 'checkbox',
+  isAlt = false,
+  ...props
+}) => (
   <Box>
     <Box
       as="input"
