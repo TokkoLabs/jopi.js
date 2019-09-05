@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Box } from '@oneloop/box'
 import { Svg } from '@oneloop/icons'
 
@@ -15,7 +15,7 @@ const CheckboxBox = ({
       y="0.5"
       width="17"
       height="17"
-      rx="2.5"
+      rx="1.5"
       fill={backgroundColor}
       stroke={borderColor}
     />
@@ -91,12 +91,12 @@ const CheckboxIcon = ({ isAlt = false, ...props }) => (
 )
 
 export const Checkbox = ({
+  isAlt = false,
   sx,
   variant = 'checkbox',
-  isAlt = false,
   ...props
 }) => (
-  <Box>
+  <Box sx={{ position: 'relative', width: 18, height: 18 }}>
     <Box
       as="input"
       type="checkbox"
@@ -104,10 +104,9 @@ export const Checkbox = ({
       sx={{
         position: 'absolute',
         opacity: 0,
-        zIndex: -1,
-        width: 1,
-        height: 1,
         overflow: 'hidden',
+        width: '100%',
+        height: '100%',
       }}
     />
     <Box
@@ -125,8 +124,7 @@ export const Checkbox = ({
           color: 'primary',
         },
         'input:focus ~ &': {
-          color: 'primary',
-          bg: 'highlight',
+          boxShadow: 'active',
         },
       }}
     />

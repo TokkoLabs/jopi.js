@@ -84,7 +84,7 @@ const RadioIcon = ({ isAlt = false, ...props }) => (
 )
 
 export const Radio = ({ sx, variant = 'radio', isAlt = false, ...props }) => (
-  <Box>
+  <Box sx={{ position: 'relative', width: 16, height: 16 }}>
     <Box
       as="input"
       type="radio"
@@ -92,10 +92,9 @@ export const Radio = ({ sx, variant = 'radio', isAlt = false, ...props }) => (
       sx={{
         position: 'absolute',
         opacity: 0,
-        zIndex: -1,
-        width: 1,
-        height: 1,
         overflow: 'hidden',
+        width: '100%',
+        height: '100%',
       }}
     />
     <Box
@@ -107,14 +106,13 @@ export const Radio = ({ sx, variant = 'radio', isAlt = false, ...props }) => (
       sx={sx}
       __css={{
         mr: 2,
-        borderRadius: 2,
+        borderRadius: 'circle',
         color: 'gray',
         'input:checked ~ &': {
           color: 'primary',
         },
         'input:focus ~ &': {
-          color: 'primary',
-          bg: 'highlight',
+          boxShadow: 'active',
         },
       }}
     />
