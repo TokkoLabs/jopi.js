@@ -57,11 +57,11 @@ export const List = ({
   return (
     <Box as="ul" {...props} sx={{ listStyleType: 'none', p: 0 }}>
       {isSearchable && (
-        <Flex as="span" sx={{ px: '16px' }}>
+        <Flex as="span" sx={{ px: '16px', py: '14px' }}>
           <Input
             width={1}
             onChange={e => filterByInput(e)}
-            sx={{ borderRadius: 'circle' }}
+            sx={{ borderRadius: 'circle', bg: 'rgba(0, 0, 0, 0.04)' }}
           />
         </Flex>
       )}
@@ -140,4 +140,5 @@ List.defaultProps = {
   isMultiSelecteable: false,
   isSearchable: false,
   selectedData: [],
+  data: [],
 }
