@@ -1,6 +1,6 @@
 {
     "name": "@oneloop/text",
-    "version": "1.1.7-alpha.0",
+    "version": "1.1.8-alpha.0",
     "main": "lib/index.js",
     "module": "src/index.js",
     "dependencies": {
