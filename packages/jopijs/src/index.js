@@ -3,6 +3,7 @@ import { Badge } from '@oneloop/badge'
 import { Box, Flex } from '@oneloop/box'
 import { Button } from '@oneloop/button'
 import { Checkbox } from '@oneloop/checkbox'
+import { Dropdown } from '@oneloop/dropdown'
 import { Input } from '@oneloop/input'
 import { Label } from '@oneloop/label'
 import { List } from '@oneloop/list'
@@ -22,4 +23,5 @@ export {
   Radio,
   Text,
   Heading,
+  Dropdown,
 }
