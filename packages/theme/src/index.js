@@ -133,14 +133,18 @@ const theme = {
     default: {
       color: colors.neutral[5],
       backgroundColor: colors.neutral[0],
+      border: '1px solid #C2C2C2',
     },
     sizes: {
       small: {
-        paddingTop: space[2],
-        paddingBottom: space[2],
+        paddingTop: space.small,
+        paddingBottom: space.small,
         paddingLeft: space.small,
         paddingRight: space.small,
         fontSize: fontSize[2],
+        width: 24,
+        height: 24,
+        lineHeight: 0,
       },
       medium: {
         paddingTop: space[4],

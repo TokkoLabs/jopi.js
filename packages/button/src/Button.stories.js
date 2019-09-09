@@ -19,7 +19,11 @@ export const danger = () => <Button variant="danger">{'Button'}</Button>
 
 export const def = () => <Button variant="default">{'Button'}</Button>
 
-export const small = () => <Button size="small">{'Button'}</Button>
+export const small = () => (
+  <Button size="small" variant="default">
+    {'O'}
+  </Button>
+)
 
 export const medium = () => <Button size="medium">{'Button'}</Button>
 
