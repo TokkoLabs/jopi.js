@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from '@oneloop/box'
 
-const Input = props => (
+export const Input = props => (
   <Box
     as="input"
     type="text"
@@ -39,5 +39,3 @@ Input.propTypes = {
 Input.defaultProps = {
   disabled: false,
 }
-
-export default Input
