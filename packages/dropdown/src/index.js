@@ -63,7 +63,7 @@ const DropdownList = props => {
             flexGrow: 1,
             width: 0,
             mt: 0,
-            mb: '5px',
+            my: '5px',
           }}
         />
       </Flex>

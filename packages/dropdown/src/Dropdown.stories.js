@@ -31,7 +31,7 @@ const data = [
   },
 ]
 
-export const normal = () =>
+export const searchMultiSelect = () =>
   React.createElement(() => {
     const [titles, setTitles] = React.useState('')
     const [selected, setSelected] = React.useState([])
@@ -61,6 +61,103 @@ export const normal = () =>
           selectedData={selected}
           isSearchable
           isMultiSelecteable
+        />
+      </Dropdown>
+    )
+  })
+
+export const multiSelect = () =>
+  React.createElement(() => {
+    const [titles, setTitles] = React.useState('')
+    const [selected, setSelected] = React.useState([])
+    const handleSelect = value => {
+      let titlesFormatted = value
+        .map(data => data.content.name)
+        .flat()
+        .join(', ')
+
+      setSelected(value)
+      setTitles(titlesFormatted)
+    }
+    return (
+      <Dropdown
+        sx={{
+          minWidth: '240px',
+          maxWidth: '350px',
+        }}
+      >
+        <Dropdown.Button>{titles || 'Opción elegida'}</Dropdown.Button>
+        <Dropdown.Items
+          data={data}
+          onChangeSelected={value => {
+            action('Option')
+            handleSelect(value)
+          }}
+          selectedData={selected}
+          isMultiSelecteable
+        />
+      </Dropdown>
+    )
+  })
+
+export const searchSelect = () =>
+  React.createElement(() => {
+    const [titles, setTitles] = React.useState('')
+    const [selected, setSelected] = React.useState([])
+    const handleSelect = value => {
+      let titlesFormatted = value.content.name
+
+      setSelected(value)
+      setTitles(titlesFormatted)
+    }
+    return (
+      <Dropdown
+        sx={{
+          minWidth: '240px',
+          maxWidth: '350px',
+        }}
+      >
+        <Dropdown.Button>{titles || 'Opción elegida'}</Dropdown.Button>
+        <Dropdown.Items
+          data={data}
+          onChangeSelected={value => {
+            action('Option')
+            handleSelect(value)
+          }}
+          selectedData={selected}
+          isSearchable
+          isSelecteable
+        />
+      </Dropdown>
+    )
+  })
+
+export const select = () =>
+  React.createElement(() => {
+    const [titles, setTitles] = React.useState('')
+    const [selected, setSelected] = React.useState([])
+    const handleSelect = value => {
+      let titlesFormatted = value.content.name
+
+      setSelected(value)
+      setTitles(titlesFormatted)
+    }
+    return (
+      <Dropdown
+        sx={{
+          minWidth: '240px',
+          maxWidth: '350px',
+        }}
+      >
+        <Dropdown.Button>{titles || 'Opción elegida'}</Dropdown.Button>
+        <Dropdown.Items
+          data={data}
+          onChangeSelected={value => {
+            action('Option')
+            handleSelect(value)
+          }}
+          selectedData={selected}
+          isSelecteable
         />
       </Dropdown>
     )

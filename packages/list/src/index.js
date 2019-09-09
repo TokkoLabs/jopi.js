@@ -61,7 +61,7 @@ export const List = ({
           <Input
             width={1}
             onChange={e => filterByInput(e)}
-            sx={{ borderRadius: 'circle', bg: 'rgba(0, 0, 0, 0.04)' }}
+            sx={{ borderRadius: 'circle', bg: 'rgba(0, 0, 0, 0.04)', mb: 0 }}
           />
         </Flex>
       )}
