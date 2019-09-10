@@ -8,7 +8,7 @@ export default {
 }
 
 export const normal = () => (
-  <Collapsible>
+  <Collapsible width={1 / 3}>
     <Collapsible.Button variant="default" borderBottom="1px solid #e7e7e6">
       Estado
     </Collapsible.Button>

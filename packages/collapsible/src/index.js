@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@oneloop/button'
 import { useToggle } from '@oneloop/hooks'
 import { Add, Substract } from '@oneloop/icons'
+import { Box } from '@oneloop/box'
 
 const CollapsibleContext = createContext()
 
@@ -13,7 +14,7 @@ export const Collapsible = ({ children, isOpen, ...props }) => {
 
   return (
     <CollapsibleContext.Provider value={value}>
-      {children}
+      <Box {...props}>{children}</Box>
     </CollapsibleContext.Provider>
   )
 }
