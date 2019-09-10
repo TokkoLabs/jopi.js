@@ -169,6 +169,14 @@ const theme = {
   forms: forms,
   radii: radius,
   shadows: shadows,
+  loader: {
+    primary: {
+      backgroundColor: colors.primary,
+    },
+    secondary: {
+      backgroundColor: colors.secondary,
+    },
+  },
 }
 
 export default theme
