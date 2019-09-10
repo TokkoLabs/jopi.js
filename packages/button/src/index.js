@@ -25,6 +25,7 @@ export const Button = props => (
       textTransform: 'uppercase',
       textAlign: 'center',
       textDecoration: 'none',
+      cursor: 'pointer',
       outline: 'none',
       px: 3,
       py: 2,
