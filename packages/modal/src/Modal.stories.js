@@ -43,7 +43,7 @@ export const normal = () =>
               </Text>
             </Modal.Body>
             <Modal.Footer>
-              <Button width={1} variant="secondary">
+              <Button width={1} variant="secondary" onClick={toggle}>
                 Accept
               </Button>
             </Modal.Footer>
