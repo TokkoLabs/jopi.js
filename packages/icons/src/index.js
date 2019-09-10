@@ -45,3 +45,21 @@ export const Exclamation = ({ color = 'black', ...props }) => (
     />
   </Svg>
 )
+
+export const Substract = ({ color = 'black', ...props }) => (
+  <Svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+    <path
+      d="M14.25 9.75001H9.75H8.25H3.75V8.25001H8.25L9.75 8.24994L14.25 8.25001V9.75001Z"
+      fill={color}
+    />
+  </Svg>
+)
+
+export const Add = ({ color = 'black', ...props }) => (
+  <Svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+    <path
+      d="M14.25 9.75H9.75V14.25H8.25V9.75H3.75V8.25H8.25V3.75H9.75V8.25H14.25V9.75Z"
+      fill={color}
+    />
+  </Svg>
+)

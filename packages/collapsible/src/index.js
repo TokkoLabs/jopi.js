@@ -2,6 +2,7 @@ import React, { createContext, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@oneloop/button'
 import { useToggle } from '@oneloop/hooks'
+import { Add, Substract } from '@oneloop/icons'
 
 const CollapsibleContext = createContext()
 
@@ -27,8 +28,8 @@ const useCollapsibleContext = () => {
   return context
 }
 
-const CollapsibleButton = props => {
-  const { setOpen } = useCollapsibleContext()
+const CollapsibleButton = ({ children, ...props }) => {
+  const { open, setOpen } = useCollapsibleContext()
   return (
     <Button
       {...props}
@@ -40,16 +41,16 @@ const CollapsibleButton = props => {
         padding: '10px 0',
         textAlign: 'left',
         position: 'relative',
+        display: 'flex',
+        justifyContent: 'space-between',
         '+ .content': {
           overflow: 'hidden',
         },
-        '&:after': {
-          float: 'right',
-          fontSize: '16px',
-          margin: '-4px 0 0 5px',
-        },
       }}
-    />
+    >
+      {children}
+      {open ? <Substract color="#717171" /> : <Add color="#717171" />}
+    </Button>
   )
 }
 
