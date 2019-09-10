@@ -17,7 +17,7 @@ export const normal = () =>
       <React.Fragment>
         <Button onClick={toggle}>Show modal</Button>
         {open && (
-          <Modal isOpen={open}>
+          <Modal>
             <Modal.Header>
               <Text>Tokko Broker</Text>
               <Button
