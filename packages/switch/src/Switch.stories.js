@@ -1,4 +1,5 @@
 import React from 'react'
+import { useToggle } from '@oneloop/hooks'
 
 import { Switch } from '.'
 
@@ -7,6 +8,14 @@ export default {
   title: 'Design System|Switch',
 }
 
-export const normal = () => <Switch />
-export const alt = () => <Switch variant="alt" />
+export const normal = () =>
+  React.createElement(() => {
+    const [on, toggle] = useToggle(false)
+    return <Switch aria-checked={on} onClick={toggle} />
+  })
+export const alt = () =>
+  React.createElement(() => {
+    const [on, toggle] = useToggle(false)
+    return <Switch aria-checked={on} onClick={toggle} variant="alt" />
+  })
 export const disabled = () => <Switch disabled />
