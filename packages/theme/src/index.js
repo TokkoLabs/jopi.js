@@ -51,6 +51,39 @@ const forms = {
   },
 }
 
+const borders = {
+  light: '1px solid rgba(255, 255, 255, 0.5)',
+  dark: '1px solid rgba(0, 0, 0, 0.24)',
+}
+
+const switches = {
+  primary: {
+    border: `1px solid ${colors.neutral[3]}`,
+    '&::before': {
+      background: colors.neutral[4],
+    },
+    '&[aria-checked="true"]': {
+      backgroundColor: 'neutral.0',
+      '&::before': {
+        bg: colors.primary,
+      },
+    },
+  },
+  alt: {
+    border: borders.dark,
+    background: colors.neutral[4],
+    '&::before': {
+      background: colors.neutral[0],
+    },
+    '&[aria-checked="true"]': {
+      backgroundColor: colors.primary,
+      '&::before': {
+        background: colors.neutral[0],
+      },
+    },
+  },
+}
+
 const theme = {
   fontSizes: fontSize,
   fonts: {
@@ -162,10 +195,7 @@ const theme = {
       },
     },
   },
-  borders: {
-    light: { border: '1px solid rgba(255, 255, 255, 0.5)' },
-    dark: { border: '1px solid rgba(0, 0, 0, 0.24)' },
-  },
+  borders: borders,
   forms: forms,
   radii: radius,
   shadows: shadows,
@@ -177,6 +207,7 @@ const theme = {
       backgroundColor: colors.secondary,
     },
   },
+  switches: switches,
 }
 
 export default theme
