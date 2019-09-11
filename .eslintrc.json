@@ -42,6 +42,7 @@
       ],
       "react/jsx-boolean-value": 2,
       "react/jsx-pascal-case": 2,
+      "react/prop-types": 0,
       "react-hooks/rules-of-hooks": "error",
       "react/jsx-indent": [
         "error",

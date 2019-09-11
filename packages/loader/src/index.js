@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import { variant } from 'styled-system'
-import { Box, Flex } from '@oneloop/box'
+import { Box } from '@oneloop/box'
 import { Text } from '@oneloop/text'
 
 const size = type => {
@@ -61,7 +61,6 @@ export const Loader = ({ text, ...props }) => (
 
 Loader.propTypes = {
   size: PropTypes.string,
-  children: PropTypes.string,
   kind: PropTypes.string,
   text: PropTypes.string,
 }

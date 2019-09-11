@@ -1,7 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Text } from '@oneloop/text'
-import { Button } from '@oneloop/button'
 import { Box, Flex } from '@oneloop/box'
 
 export const Modal = ({ children, ...props }) => {

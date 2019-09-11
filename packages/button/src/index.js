@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { variant } from 'styled-system'
 import { Box } from '@oneloop/box'
