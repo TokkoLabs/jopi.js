@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { Badge } from '.'
+import { Badge } from '../src'
 
 describe('Badge', () => {
   test('primary', () => {
