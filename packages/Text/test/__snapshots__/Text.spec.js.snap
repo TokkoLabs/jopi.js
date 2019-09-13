@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: body;
+  color: neutral.6;
+}
+
+<p
+  className="c0"
+>
+  This is a text
+</p>
+`;
+
+exports[`Text renders heading correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 24px;
+  font-family: heading;
+  font-weight: heading;
+  line-height: heading;
+  -webkit-letter-spacing: heading;
+  -moz-letter-spacing: heading;
+  -ms-letter-spacing: heading;
+  letter-spacing: heading;
+  color: neutral.6;
+}
+
+<h2
+  className="c0"
+>
+  This is a heading
+</h2>
+`;
