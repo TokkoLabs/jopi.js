@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox alt 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c2 {
+  color: primary;
+}
+
+input:focus ~ .c2 {
+  box-shadow: active;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+input:checked:not(:disabled) ~ .c3 {
+  display: block;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+input:not(:checked):not(:disabled) ~ .c4 {
+  display: block;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+input:disabled:not(:checked) ~ .c5 {
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+input:checked:disabled ~ .c6 {
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    type="checkbox"
+  />
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c3"
+    fill="none"
+    height={18}
+    viewBox="0 0 18 18"
+    width={18}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="#D64A36"
+      height="17"
+      rx="1.5"
+      stroke="#D64A36"
+      width="17"
+      x="0.5"
+      y="0.5"
+    />
+    <path
+      d="M4.5 10L8 13L14 4"
+      stroke="white"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c4"
+    fill="none"
+    height={18}
+    viewBox="0 0 18 18"
+    width={18}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="white"
+      height="17"
+      rx="1.5"
+      stroke="#E7E7E6"
+      width="17"
+      x="0.5"
+      y="0.5"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c5"
+    fill="none"
+    height={18}
+    viewBox="0 0 18 18"
+    width={18}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="#F5F5F5"
+      height="17"
+      rx="1.5"
+      stroke="#F5F5F5"
+      width="17"
+      x="0.5"
+      y="0.5"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c6"
+    fill="none"
+    height={18}
+    viewBox="0 0 18 18"
+    width={18}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="#F5F5F5"
+      height="17"
+      rx="1.5"
+      stroke="#F5F5F5"
+      width="17"
+      x="0.5"
+      y="0.5"
+    />
+    <path
+      d="M4.5 10L8 13L14 4"
+      stroke="#BABABA"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Checkbox default 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c2 {
+  color: primary;
+}
+
+input:focus ~ .c2 {
+  box-shadow: active;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+input:checked:not(:disabled) ~ .c3 {
+  display: block;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+input:not(:checked):not(:disabled) ~ .c4 {
+  display: block;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+input:disabled:not(:checked) ~ .c5 {
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+input:checked:disabled ~ .c6 {
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    type="checkbox"
+  />
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c3"
+    fill="none"
+    height={18}
+    viewBox="0 0 18 18"
+    width={18}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="white"
+      height="17"
+      rx="1.5"
+      stroke="#F5F5F5"
+      width="17"
+      x="0.5"
+      y="0.5"
+    />
+    <path
+      d="M4.5 10L8 13L14 4"
+      stroke="#D64A36"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c4"
+    fill="none"
+    height={18}
+    viewBox="0 0 18 18"
+    width={18}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="white"
+      height="17"
+      rx="1.5"
+      stroke="#E7E7E6"
+      width="17"
+      x="0.5"
+      y="0.5"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c5"
+    fill="none"
+    height={18}
+    viewBox="0 0 18 18"
+    width={18}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="#F5F5F5"
+      height="17"
+      rx="1.5"
+      stroke="#F5F5F5"
+      width="17"
+      x="0.5"
+      y="0.5"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c6"
+    fill="none"
+    height={18}
+    viewBox="0 0 18 18"
+    width={18}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="#F5F5F5"
+      height="17"
+      rx="1.5"
+      stroke="#F5F5F5"
+      width="17"
+      x="0.5"
+      y="0.5"
+    />
+    <path
+      d="M4.5 10L8 13L14 4"
+      stroke="#BABABA"
+    />
+  </svg>
+</div>
+`;
