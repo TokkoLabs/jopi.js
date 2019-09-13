@@ -1,16 +1,12 @@
 import React, { createContext, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@oneloop/button'
-import { useToggle } from '@oneloop/hooks'
-import { Add, Substract } from '@oneloop/icons'
 import { Box } from '@oneloop/box'
 
 const CollapsibleContext = createContext()
 
-export const Collapsible = ({ children, isOpen, ...props }) => {
-  const [open, setOpen] = useToggle(isOpen)
-
-  const value = React.useMemo(() => ({ open, setOpen }), [open])
+export const Collapsible = ({ children, isOpen = false, ...props }) => {
+  const value = React.useMemo(() => ({ isOpen }), [isOpen])
 
   return (
     <CollapsibleContext.Provider value={value}>
@@ -30,11 +26,9 @@ const useCollapsibleContext = () => {
 }
 
 const CollapsibleButton = ({ children, ...props }) => {
-  const { open, setOpen } = useCollapsibleContext()
   return (
     <Button
       {...props}
-      onClick={setOpen}
       sx={{
         width: '100%',
         border: 'none',
@@ -50,17 +44,16 @@ const CollapsibleButton = ({ children, ...props }) => {
       }}
     >
       {children}
-      {open ? <Substract color="#717171" /> : <Add color="#717171" />}
     </Button>
   )
 }
 
 const CollapsibleBody = ({ children }) => {
-  const { open } = useCollapsibleContext()
+  const { isOpen } = useCollapsibleContext()
 
   return (
     <AnimatePresence initial={false}>
-      {open && (
+      {isOpen && (
         <motion.div
           className="content"
           initial="collapsed"
