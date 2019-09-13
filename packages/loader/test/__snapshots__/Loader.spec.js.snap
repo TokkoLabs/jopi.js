@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 10px;
+  width: small;
+  height: small;
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 16px;
+}
+
+.c1::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: lazCIu 500ms alternate infinite ease;
+  animation: lazCIu 500ms alternate infinite ease;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    kind="primary"
+    size="small"
+  />
+  
+</div>
+`;

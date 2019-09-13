@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 14px 38px;
+  position: relative;
+  cursor: pointer;
+}
+
+.c1 > * {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    One
+  </div>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Two
+  </div>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Three
+  </div>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Four
+  </div>
+</div>
+`;

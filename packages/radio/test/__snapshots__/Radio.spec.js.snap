@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio renders alt correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: circle;
+  color: gray;
+}
+
+input:checked ~ .c2 {
+  color: primary;
+}
+
+input:focus ~ .c2 {
+  box-shadow: active;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked:not(:disabled) ~ .c3 {
+  display: block;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:not(:checked):not(:disabled) ~ .c4 {
+  display: block;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:disabled:not(:checked) ~ .c5 {
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked:disabled ~ .c6 {
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    type="radio"
+  />
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c3"
+    fill="none"
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="8"
+      cy="8"
+      fill="#D64A36"
+      r="8"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      r="7.5"
+      stroke="#D64A36"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      fill="white"
+      r="4"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c4"
+    fill="none"
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="8"
+      cy="8"
+      fill="white"
+      r="8"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      r="7.5"
+      stroke="#E7E7E6"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c5"
+    fill="none"
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="8"
+      cy="8"
+      fill="#F5F5F5"
+      r="8"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      r="7.5"
+      stroke="#F5F5F5"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c6"
+    fill="none"
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="8"
+      cy="8"
+      fill="#F5F5F5"
+      r="8"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      r="7.5"
+      stroke="#F5F5F5"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      fill="#BABABA"
+      r="4"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Radio renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: circle;
+  color: gray;
+}
+
+input:checked ~ .c2 {
+  color: primary;
+}
+
+input:focus ~ .c2 {
+  box-shadow: active;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked:not(:disabled) ~ .c3 {
+  display: block;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:not(:checked):not(:disabled) ~ .c4 {
+  display: block;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:disabled:not(:checked) ~ .c5 {
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked:disabled ~ .c6 {
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    type="radio"
+  />
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c3"
+    fill="none"
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="8"
+      cy="8"
+      fill="white"
+      r="8"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      r="7.5"
+      stroke="#C2C2C2"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      fill="#D64A36"
+      r="4"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c4"
+    fill="none"
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="8"
+      cy="8"
+      fill="white"
+      r="8"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      r="7.5"
+      stroke="#E7E7E6"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c5"
+    fill="none"
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="8"
+      cy="8"
+      fill="#F5F5F5"
+      r="8"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      r="7.5"
+      stroke="#F5F5F5"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="c2 sc-1e38spu-0 c6"
+    fill="none"
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="8"
+      cy="8"
+      fill="#F5F5F5"
+      r="8"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      r="7.5"
+      stroke="#F5F5F5"
+    />
+    <circle
+      cx="8"
+      cy="8"
+      fill="#BABABA"
+      r="4"
+    />
+  </svg>
+</div>
+`;
