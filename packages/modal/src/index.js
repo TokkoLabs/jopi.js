@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { Box, Flex } from '@oneloop/box'
 
 export const Modal = ({ children, ...props }) => {
+  const portalNode = document.createElement('div')
+
+  useEffect(() => {
+    document.body.appendChild(portalNode)
+    return () => {
+      portalNode.parentNode.removeChild(portalNode)
+    }
+  }, [])
+
   return ReactDOM.createPortal(
     <Box
       __css={{
@@ -27,7 +36,7 @@ export const Modal = ({ children, ...props }) => {
         {children}
       </Box>
     </Box>,
-    document.body
+    portalNode
   )
 }
 
