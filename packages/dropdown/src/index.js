@@ -45,7 +45,7 @@ const DropdownButton = props => {
   )
 }
 
-const DropdownList = props => {
+const DropdownList = ({ children, ...props }) => {
   const { open } = useDropdownContext()
   return (
     open && (
@@ -59,17 +59,27 @@ const DropdownList = props => {
       >
         <List
           {...props}
-          __css={{
+          sx={{
             flexGrow: 1,
             width: 0,
             mt: 0,
             my: '5px',
           }}
-        />
+        >
+          {children}
+        </List>
       </Flex>
     )
   )
 }
 
+const DropdownListSearch = props => <List.Search {...props} />
+
+const DropdownListItem = props => (
+  <List.Item {...props} sx={{ cursor: 'pointer' }} />
+)
+
 Dropdown.Button = DropdownButton
 Dropdown.Items = DropdownList
+Dropdown.Item = DropdownListItem
+Dropdown.Search = DropdownListSearch

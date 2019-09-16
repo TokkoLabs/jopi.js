@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { action } from '@storybook/addon-actions'
 
-import { List } from '.'
+import { List, useFilterData } from '.'
 
 export default {
   component: List,
@@ -32,71 +32,46 @@ const data = [
   },
 ]
 
-let dataSelected = [
-  {
-    id: 8,
-    content: {
-      name: 'Walter Pimazzoni',
-      count: 323,
-    },
-  },
-]
-
 export const normal = () => (
-  <List
-    width={1 / 3}
-    data={data}
-    selectedData={dataSelected}
-    onChangeSelected={action('Data selected change')}
-  />
+  <List width={1 / 3}>
+    <List.Item>Hola</List.Item>
+    <List.Item>Good</List.Item>
+    <List.Item>Bye</List.Item>
+  </List>
 )
 export const selectable = () => (
-  <List
-    width={1 / 3}
-    data={data}
-    isSelecteable
-    selectedData={dataSelected}
-    onChangeSelected={action('Data selected change')}
-  />
-)
-export const searchable = () => (
-  <List
-    width={1 / 3}
-    data={data}
-    isSearchable
-    selectedData={dataSelected}
-    onChangeSelected={action('Data selected change')}
-  />
-)
-
-export const multi = () => (
-  <List
-    width={1 / 3}
-    data={data}
-    isMultiSelecteable
-    selectedData={dataSelected}
-    onChangeSelected={action('Data selected change')}
-  />
+  <List width={1 / 3}>
+    <List.Item
+      onClick={action('Data selected change')}
+      sx={{ cursor: 'pointer' }}
+    >
+      Hola
+    </List.Item>
+    <List.Item
+      onClick={action('Data selected change')}
+      sx={{ cursor: 'pointer' }}
+    >
+      Good
+    </List.Item>
+    <List.Item
+      onClick={action('Data selected change')}
+      sx={{ cursor: 'pointer' }}
+    >
+      Bye
+    </List.Item>
+  </List>
 )
 
-export const multiSearch = () => (
-  <List
-    width={1 / 3}
-    data={data}
-    isMultiSelecteable
-    isSearchable
-    selectedData={dataSelected}
-    onChangeSelected={action('Data selected change')}
-  />
-)
+export const searchable = () =>
+  React.createElement(() => {
+    const [filteredData, setValue] = useFilterData(data, 'content')
 
-export const SingleSearch = () => (
-  <List
-    width={1 / 3}
-    data={data}
-    isSelecteable
-    isSearchable
-    selectedData={dataSelected}
-    onChangeSelected={action('Data selected change')}
-  />
-)
+    return (
+      <List width={1 / 3}>
+        <List.Search onChange={e => setValue(e.target.value)} />
+        {filteredData.map(user => (
+          <List.Item key={user.id}>{user.content.name}</List.Item>
+        ))}
+      </List>
+    )
+  })

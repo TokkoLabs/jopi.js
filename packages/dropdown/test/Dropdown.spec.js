@@ -10,7 +10,12 @@ describe('Dropdown', () => {
       .create(
         <Dropdown>
           <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
-          <Dropdown.Items />
+          <Dropdown.Items>
+            <Dropdown.Search />
+            <Dropdown.Item>One</Dropdown.Item>
+            <Dropdown.Item>Two</Dropdown.Item>
+            <Dropdown.Item>Three</Dropdown.Item>
+          </Dropdown.Items>
         </Dropdown>
       )
       .toJSON()

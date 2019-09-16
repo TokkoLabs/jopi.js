@@ -1,6 +1,7 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { Dropdown } from '.'
+import { useFilterData } from '@oneloop/list'
 
 export default {
   component: Dropdown,
@@ -31,19 +32,14 @@ const data = [
   },
 ]
 
-export const searchMultiSelect = () =>
+export const search = () =>
   React.createElement(() => {
-    const [titles, setTitles] = React.useState('')
-    const [selected, setSelected] = React.useState([])
-    const handleSelect = value => {
-      let titlesFormatted = value
-        .map(data => data.content.name)
-        .flat()
-        .join(', ')
+    const [filteredData, setValue] = useFilterData(data, 'content')
 
-      setSelected(value)
-      setTitles(titlesFormatted)
+    const onFilter = e => {
+      setValue(e.target.value)
     }
+
     return (
       <Dropdown
         sx={{
@@ -51,114 +47,33 @@ export const searchMultiSelect = () =>
           maxWidth: '350px',
         }}
       >
-        <Dropdown.Button>{titles || 'Opción elegida'}</Dropdown.Button>
-        <Dropdown.Items
-          data={data}
-          onChangeSelected={value => {
-            action('Option')
-            handleSelect(value)
-          }}
-          selectedData={selected}
-          isSearchable
-          isMultiSelecteable
-        />
+        <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
+        <Dropdown.Items>
+          <Dropdown.Search placeholder="search something" onChange={onFilter} />
+          {filteredData.map(user => (
+            <Dropdown.Item key={user.id} onClick={action('selected')}>
+              {user.content.name}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Items>
       </Dropdown>
     )
   })
 
-export const multiSelect = () =>
-  React.createElement(() => {
-    const [titles, setTitles] = React.useState('')
-    const [selected, setSelected] = React.useState([])
-    const handleSelect = value => {
-      let titlesFormatted = value
-        .map(data => data.content.name)
-        .flat()
-        .join(', ')
-
-      setSelected(value)
-      setTitles(titlesFormatted)
-    }
-    return (
-      <Dropdown
-        sx={{
-          minWidth: '240px',
-          maxWidth: '350px',
-        }}
-      >
-        <Dropdown.Button>{titles || 'Opción elegida'}</Dropdown.Button>
-        <Dropdown.Items
-          data={data}
-          onChangeSelected={value => {
-            action('Option')
-            handleSelect(value)
-          }}
-          selectedData={selected}
-          isMultiSelecteable
-        />
-      </Dropdown>
-    )
-  })
-
-export const searchSelect = () =>
-  React.createElement(() => {
-    const [titles, setTitles] = React.useState('')
-    const [selected, setSelected] = React.useState([])
-    const handleSelect = value => {
-      let titlesFormatted = value.content.name
-
-      setSelected(value)
-      setTitles(titlesFormatted)
-    }
-    return (
-      <Dropdown
-        sx={{
-          minWidth: '240px',
-          maxWidth: '350px',
-        }}
-      >
-        <Dropdown.Button>{titles || 'Opción elegida'}</Dropdown.Button>
-        <Dropdown.Items
-          data={data}
-          onChangeSelected={value => {
-            action('Option')
-            handleSelect(value)
-          }}
-          selectedData={selected}
-          isSearchable
-          isSelecteable
-        />
-      </Dropdown>
-    )
-  })
-
-export const select = () =>
-  React.createElement(() => {
-    const [titles, setTitles] = React.useState('')
-    const [selected, setSelected] = React.useState([])
-    const handleSelect = value => {
-      let titlesFormatted = value.content.name
-
-      setSelected(value)
-      setTitles(titlesFormatted)
-    }
-    return (
-      <Dropdown
-        sx={{
-          minWidth: '240px',
-          maxWidth: '350px',
-        }}
-      >
-        <Dropdown.Button>{titles || 'Opción elegida'}</Dropdown.Button>
-        <Dropdown.Items
-          data={data}
-          onChangeSelected={value => {
-            action('Option')
-            handleSelect(value)
-          }}
-          selectedData={selected}
-          isSelecteable
-        />
-      </Dropdown>
-    )
-  })
+export const select = () => (
+  <Dropdown
+    sx={{
+      minWidth: '240px',
+      maxWidth: '350px',
+    }}
+  >
+    <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
+    <Dropdown.Items>
+      {data.map(user => (
+        <Dropdown.Item key={user.id} onClick={action('selected')}>
+          {user.content.name}
+        </Dropdown.Item>
+      ))}
+    </Dropdown.Items>
+  </Dropdown>
+)
