@@ -1,2 +1,2 @@
-# justatest.js
-justatest.js
+# Jopi.js
+Just a React component library
