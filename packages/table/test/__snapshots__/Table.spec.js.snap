@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<table
+  className="c0"
+>
+  <tr
+    className="c0"
+  >
+    <th
+      className="c0"
+    >
+      Agency
+    </th>
+    <th
+      className="c0"
+    >
+      Country
+    </th>
+    <th
+      className="c0"
+    >
+      Paid
+    </th>
+  </tr>
+  <tr
+    className="c0"
+  >
+    <td
+      className="c0"
+    >
+      InmoMex
+    </td>
+    <td
+      className="c0"
+    >
+      Mexico
+    </td>
+    <td
+      className="c0"
+    >
+      Yes
+    </td>
+  </tr>
+  <tr
+    className="c0"
+  >
+    <td
+      className="c0"
+    >
+      RGM
+    </td>
+    <td
+      className="c0"
+    >
+      Argentina
+    </td>
+    <td
+      className="c0"
+    >
+      Yes
+    </td>
+  </tr>
+  <tr
+    className="c0"
+  >
+    <td
+      className="c0"
+    >
+      Urbania
+    </td>
+    <td
+      className="c0"
+    >
+      Peru
+    </td>
+    <td
+      className="c0"
+    >
+      Yes
+    </td>
+  </tr>
+</table>
+`;
