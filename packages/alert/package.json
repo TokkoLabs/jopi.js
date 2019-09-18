@@ -8,16 +8,10 @@
         "@oneloop/button": "^1.1.12-alpha.0",
         "@oneloop/icons": "^1.1.12-alpha.0",
         "@oneloop/text": "^1.1.9-alpha.0",
-        "prop-types": "^15.7.2",
-        "react": "16.8.6",
-        "react-dom": "16.8.6",
-        "styled-components": "4.3.2",
-        "styled-system": "5.0.21"
+        "react": "16.9.0"
     },
     "peerDependencies": {
-        "react": "^15.0.0 || ^16.0.0",
-        "react-dom": "^15.0.0 || ^16.0.0",
-        "styled-components": "^4.0.0"
+        "react": "^15.0.0 || ^16.0.0"
     },
     "publishConfig": {
         "access": "public"
