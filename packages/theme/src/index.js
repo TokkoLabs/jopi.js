@@ -208,6 +208,13 @@ const theme = {
     },
   },
   switches: switches,
+  variants: {
+    avatar: {
+      width: '30px',
+      height: '30px',
+      borderRadius: radius.circle,
+    },
+  },
 }
 
 export default theme
