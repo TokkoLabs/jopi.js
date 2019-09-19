@@ -1,11 +1,11 @@
 {
   "name": "@oneloop/list",
-  "version": "1.1.14-alpha.0",
+  "version": "1.1.15-alpha.0",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.1.8-alpha.0",
-    "@oneloop/input": "^1.1.11-alpha.0",
+    "@oneloop/box": "^1.1.9-alpha.0",
+    "@oneloop/input": "^1.1.12-alpha.0",
     "react": "16.9.0"
   },
   "peerDependencies": {
