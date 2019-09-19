@@ -5,83 +5,114 @@ exports[`Table renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  font-family: body;
+  border-collapse: collapse;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-top: 1px solid #EBEBEB;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 <table
   className="c0"
 >
-  <tr
-    className="c0"
+  <thead
+    className="c1"
   >
-    <th
-      className="c0"
+    <tr
+      className="c1"
     >
-      Agency
-    </th>
-    <th
-      className="c0"
-    >
-      Country
-    </th>
-    <th
-      className="c0"
-    >
-      Paid
-    </th>
-  </tr>
+      <th
+        className="c2"
+      >
+        Agency
+      </th>
+      <th
+        className="c2"
+      >
+        Country
+      </th>
+      <th
+        className="c2"
+      >
+        Paid
+      </th>
+    </tr>
+  </thead>
   <tr
-    className="c0"
+    className="c1"
   >
     <td
-      className="c0"
+      className="c3"
     >
       InmoMex
     </td>
     <td
-      className="c0"
+      className="c3"
     >
       Mexico
     </td>
     <td
-      className="c0"
+      className="c3"
     >
       Yes
     </td>
   </tr>
   <tr
-    className="c0"
+    className="c1"
   >
     <td
-      className="c0"
+      className="c3"
     >
       RGM
     </td>
     <td
-      className="c0"
+      className="c3"
     >
       Argentina
     </td>
     <td
-      className="c0"
+      className="c3"
     >
       Yes
     </td>
   </tr>
   <tr
-    className="c0"
+    className="c1"
   >
     <td
-      className="c0"
+      className="c3"
     >
       Urbania
     </td>
     <td
-      className="c0"
+      className="c3"
     >
       Peru
     </td>
     <td
-      className="c0"
+      className="c3"
     >
       Yes
     </td>
