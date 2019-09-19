@@ -1,19 +1,19 @@
 {
-    "name": "@oneloop/alert",
-    "version": "1.1.13-alpha.0",
-    "main": "lib/index.js",
-    "module": "src/index.js",
-    "dependencies": {
-        "@oneloop/box": "^1.1.8-alpha.0",
-        "@oneloop/button": "^1.1.13-alpha.0",
-        "@oneloop/icons": "^1.1.13-alpha.0",
-        "@oneloop/text": "^1.1.10-alpha.0",
-        "react": "16.9.0"
-    },
-    "peerDependencies": {
-        "react": "^15.0.0 || ^16.0.0"
-    },
-    "publishConfig": {
-        "access": "public"
-    }
+  "name": "@oneloop/alert",
+  "version": "1.1.13-alpha.0",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "dependencies": {
+    "@oneloop/box": "^1.1.8-alpha.0",
+    "@oneloop/button": "^1.1.13-alpha.0",
+    "@oneloop/icons": "^1.1.13-alpha.0",
+    "@oneloop/text": "^1.1.10-alpha.0",
+    "react": "16.9.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

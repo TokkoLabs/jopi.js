@@ -1,21 +1,21 @@
 {
-    "name": "@oneloop/button",
-    "version": "1.1.13-alpha.0",
-    "main": "lib/index.js",
-    "module": "src/index.js",
-    "dependencies": {
-        "@oneloop/box": "^1.1.8-alpha.0",
-        "react": "16.9.0",
-        "styled-components": "4.3.2",
-        "styled-system": "5.1.2"
-    },
-    "peerDependencies": {
-        "react": "^15.0.0 || ^16.0.0",
-        "react-dom": "^15.0.0 || ^16.0.0",
-        "styled-components": "^4.0.0"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "gitHead": "9db07c0218402938de798169d7b750d5c8136691"
+  "name": "@oneloop/button",
+  "version": "1.1.13-alpha.0",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "dependencies": {
+    "@oneloop/box": "^1.1.8-alpha.0",
+    "react": "16.9.0",
+    "styled-components": "4.3.2",
+    "styled-system": "5.1.2"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0",
+    "styled-components": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "9db07c0218402938de798169d7b750d5c8136691"
 }

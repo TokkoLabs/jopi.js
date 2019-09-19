@@ -1,18 +1,18 @@
 {
-    "name": "@oneloop/text",
-    "version": "1.1.10-alpha.0",
-    "main": "lib/index.js",
-    "module": "src/index.js",
-    "dependencies": {
-        "@oneloop/box": "^1.1.8-alpha.0",
-        "prop-types": "^15.7.2",
-        "react": "16.9.0"
-    },
-    "peerDependencies": {
-        "react": "^15.0.0 || ^16.0.0"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "gitHead": "589f87f6781012bf3946450745c22ab975d04d1a"
+  "name": "@oneloop/text",
+  "version": "1.1.10-alpha.0",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "dependencies": {
+    "@oneloop/box": "^1.1.8-alpha.0",
+    "prop-types": "^15.7.2",
+    "react": "16.9.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "589f87f6781012bf3946450745c22ab975d04d1a"
 }

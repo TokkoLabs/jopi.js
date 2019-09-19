@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
@@ -47,9 +48,9 @@ const LoaderStyled = styled(Box)`
     transform-origin: 50%;
     animation: ${bounce} 500ms alternate infinite ease;
     ${variant({
-    prop: 'kind',
-    scale: 'loader',
-  })}
+      prop: 'kind',
+      scale: 'loader',
+    })}
   }
 `
 export const Loader = ({ text, ...props }) => (

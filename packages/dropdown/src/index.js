@@ -1,60 +1,60 @@
-import React, { createContext, useContext } from "react";
-import { Box, Flex } from "@oneloop/box";
-import { Button } from "@oneloop/button";
-import { List } from "@oneloop/list";
-import { useToggle } from "@oneloop/hooks";
+import React, { createContext, useContext } from 'react'
+import { Box, Flex } from '@oneloop/box'
+import { Button } from '@oneloop/button'
+import { List } from '@oneloop/list'
+import { useToggle } from '@oneloop/hooks'
 
-const DropdownContext = createContext();
+const DropdownContext = createContext()
 
 export const Dropdown = ({ children, ...props }) => {
-  const [open, toggle] = useToggle(false);
+  const [open, toggle] = useToggle(false)
 
-  const value = React.useMemo(() => ({ open, toggle }), [open]);
+  const value = React.useMemo(() => ({ open, toggle }), [open])
 
   return (
     <DropdownContext.Provider value={value}>
-      <Box {...props} __css={{ display: "inline-grid" }}>
+      <Box {...props} __css={{ display: 'inline-grid' }}>
         {children}
       </Box>
     </DropdownContext.Provider>
-  );
-};
+  )
+}
 
 const useDropdownContext = () => {
-  const context = useContext(DropdownContext);
+  const context = useContext(DropdownContext)
   if (!context) {
     throw new Error(
-      "Dropdown compound components cannot be rendered outside the Dropdown component"
-    );
+      'Dropdown compound components cannot be rendered outside the Dropdown component'
+    )
   }
-  return context;
-};
+  return context
+}
 
 const DropdownButton = props => {
-  const { toggle } = useDropdownContext();
+  const { toggle } = useDropdownContext()
   return (
     <Button
       {...props}
       onClick={toggle}
       sx={{
-        textOverflow: "ellipsis",
-        overflow: "hidden",
-        whiteSpace: "nowrap"
+        textOverflow: 'ellipsis',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
       }}
     />
-  );
-};
+  )
+}
 
 const DropdownList = ({ children, ...props }) => {
-  const { open } = useDropdownContext();
+  const { open } = useDropdownContext()
   return (
     open && (
       <Flex
         sx={{
-          backgroundColor: "neutral.0",
-          boxShadow: "active",
-          borderRadius: "default",
-          margin: "5px 0 0"
+          backgroundColor: 'neutral.0',
+          boxShadow: 'active',
+          borderRadius: 'default',
+          margin: '5px 0 0',
         }}
       >
         <List
@@ -63,23 +63,23 @@ const DropdownList = ({ children, ...props }) => {
             flexGrow: 1,
             width: 0,
             mt: 0,
-            my: "5px"
+            my: '5px',
           }}
         >
           {children}
         </List>
       </Flex>
     )
-  );
-};
+  )
+}
 
-const DropdownListSearch = props => <List.Search {...props} />;
+const DropdownListSearch = props => <List.Search {...props} />
 
 const DropdownListItem = props => (
-  <List.Item {...props} sx={{ cursor: "pointer" }} />
-);
+  <List.Item {...props} sx={{ cursor: 'pointer' }} />
+)
 
-Dropdown.Button = DropdownButton;
-Dropdown.Items = DropdownList;
-Dropdown.Item = DropdownListItem;
-Dropdown.Search = DropdownListSearch;
+Dropdown.Button = DropdownButton
+Dropdown.Items = DropdownList
+Dropdown.Item = DropdownListItem
+Dropdown.Search = DropdownListSearch
