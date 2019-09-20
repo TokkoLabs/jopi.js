@@ -26,5 +26,12 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      # run tests!
+      - link:
+      # link dependencies!
+      - run: yarn bootstrap
+      - test:
       - run: yarn test
+      - publish:
+      # link dependencies!
+      - run: lerna version prepatch --yes
+      - run: lerna publish from-git --yes
