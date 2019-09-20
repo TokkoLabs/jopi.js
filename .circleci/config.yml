@@ -31,5 +31,5 @@ jobs:
       # Test
       - run: yarn test
       # Add tags and publish to NPM!
-      - run: lerna version prepatch --yes
-      - run: lerna publish from-git --yes
+      - run: $(yarn bin)/lerna version prepatch --yes
+      - run: $(yarn bin)/lerna publish from-git --yes
