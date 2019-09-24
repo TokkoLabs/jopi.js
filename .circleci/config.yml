@@ -22,7 +22,7 @@ examples:
       workflows:
         build_test_deploy:
           jobs:
-            - test
+            - node_10_test_plan
             - lerna-deliver:
                 context: github-interaction
                 email: eulke@navent.com
@@ -32,7 +32,7 @@ examples:
                 fingerprint: 61:87:86:ed:16:8f:5c:53:98:6a:5a:7c:8d:e7:ee:94
                 fullname: Esteban Ulke
                 requires:
-                  - test
+                  - node_10_test_plan
             - lerna-deploy:
                 context: npm-interaction
                 filters:
@@ -42,10 +42,6 @@ examples:
                   - lerna-deliver
         version: 2
 jobs:
-  test:
-    description: Check the building, lintting and unit testing
-    steps:
-      run: yarn test
   lerna-deliver:
     description: |
       Job for generating a release, along with corresponding git tags, for a Lerna-based mono-repository.
