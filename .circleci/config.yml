@@ -1,45 +1,25 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:lts
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-    working_directory: ~/repo
-    parameters:
-      email:
-        description: E-mail that to use for git commits created by Lerna.
-        type: string
-      fullname:
-        description: Full name to use as the committer for git commits created by Lerna.
-        type: string
-    steps:
-      - checkout
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run: yarn install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      # Link dependencies!
-      - run: yarn bootstrap
-      # Test
-      - run: yarn test
-      # Add tags and publish to NPM!
-      - run: >-
-          git config --global user.email "<<parameters.email>>" && git config
-          --global user.name "<<parameters.fullname>>"
-      - run: $(yarn bin)/lerna version prepatch --yes
-      - run: $(yarn bin)/lerna publish from-git --yes
+orbs:
+  release-workflows: hutson/library-release-workflows@4.3.3
+version: 2.1
+workflows:
+  build_test_deploy:
+    jobs:
+      - node_10_test_plan
+      - release-workflows/lerna-deliver:
+          context: github-interaction
+          email: eulke@navent.com
+          filters:
+            branches:
+              only: master
+          fingerprint: '61:87:86:ed:16:8f:5c:53:98:6a:5a:7c:8d:e7:ee:94'
+          fullname: Esteban Ulke
+          requires:
+            - node_10_test_plan
+      - release-workflows/lerna-deploy:
+          context: npm-interaction
+          filters:
+            branches:
+              only: master
+          requires:
+            - release-workflows/lerna-deliver
+  version: 2
