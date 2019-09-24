@@ -13,6 +13,13 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
     working_directory: ~/repo
+    parameters:
+      email:
+        description: E-mail that to use for git commits created by Lerna.
+        type: string
+      fullname:
+        description: Full name to use as the committer for git commits created by Lerna.
+        type: string
     steps:
       - checkout
       # Download and cache dependencies
@@ -31,5 +38,8 @@ jobs:
       # Test
       - run: yarn test
       # Add tags and publish to NPM!
+      - run: >-
+          git config --global user.email "<<parameters.email>>" && git config
+          --global user.name "<<parameters.fullname>>"
       - run: $(yarn bin)/lerna version prepatch --yes
       - run: $(yarn bin)/lerna publish from-git --yes
