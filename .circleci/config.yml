@@ -1,3 +1,4 @@
+version: 2
 jobs:
   build:
     docker:
@@ -15,63 +16,9 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn bootstrap
-      - run: yarn build
-  test:
-    docker:
-      - image: circleci/node:lts
-    working_directory: ~/repo
-    steps:
-      - checkout
       - run: yarn test
-  deliver:
-    docker:
-      - image: circleci/node:lts
-    working_directory: ~/repo
-    parameters:
-      email:
-        description: E-mail that to use for git commits created by Lerna.
-        type: string
-      fingerprint:
-        description: |
-          Fingerprint of your SSH deploy key:
-          - https://circleci.com/docs/2.0/gh-bb-integration/#creating-a-github-user-key
-        type: string
-      fullname:
-        description:
-          Full name to use as the committer for git commits created by
-          Lerna.
-        type: string
-    steps:
-      - checkout
-      - run: >-
-          git config --global user.email "<<parameters.email>>" && git config
-          --global user.name "<<parameters.fullname>>"
-      - run: $(yarn bin)/lerna version prepatch --yes
-  deploy:
-    docker:
-      - image: circleci/node:lts
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - run: $(yarn bin)/lerna publish from-git --yes
-workflows:
-  version: 2
-  build_test_deploy:
-    jobs:
-      - build
-      - test
-      - deliver:
-          requires:
-            - test
-          filters:
-            branches:
-              only: master
-          email: eulke@navent.com
-          fingerprint: 61:87:86:ed:16:8f:5c:53:98:6a:5a:7c:8d:e7:ee:94
-          fullname: Esteban Ulke
-      - deploy:
-          requires:
-            - deliver
-          filters:
-            branches:
-              only: master
+      # - run: >-
+      #    git config --global user.email "<<parameters.email>>" && git config
+      #    --global user.name "<<parameters.fullname>>"
+      #- run: $(yarn bin)/lerna version prepatch --yes
+      #- run: $(yarn bin)/lerna publish from-git --yes
