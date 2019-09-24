@@ -5,13 +5,13 @@ We try to give developers every component they need in their UX in a simple, min
 
 ###Installation
 
-You can install Jopi.js via:
+You can install Jopi.js from:
 
-NPM: `npm i @oneloop/jopijs`
+`npm i @oneloop/jopijs`
 
 Or
 
-YARN: `yarn add @oneloop/jopijs`
+`yarn add @oneloop/jopijs`
 
 For now, we recommend to install Jopi.js with it's theme while we tried to decouple some stuff and give you more flexibility.
 For install Jopi.js theme run
