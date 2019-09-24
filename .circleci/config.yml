@@ -1,62 +1,32 @@
-# This code is licensed from CircleCI to the user under the MIT license. See
-# https://circleci.com/orbs/registry/licensing for details.
-description:
-  Jobs, commands, and executors, for automating your library's delivery,
-  deploy, and release, workflows on Circle CI.
-examples:
-  lerna:
-    description: |
-      Automated package release workflow for Lerna-based mono-repositories.
-
-      The `lerna-deliver` job of the `build_test_deploy` workflow calls Lerna to bump the version of all packages with releasable changes (by analying all commits since the last deliverable was generated), create a new git commit with those version bumps, tag the commit for each releable package, and then push those changes to the project's repository.
-
-      Since Lerna creates a git commit, the job must be provided a name and e-mail address to use as the committer.
-
-      In this example, we only run the delivery job on commits made to the `master` branch, as seen under `filters`, after all tests have passed. You may adjust the filter to automate your release workflow on any branch.
-
-      The `lerna-deploy` is triggered after the `lerna-deliver` job finishes. If no deliverables were created during the `lerna-deliver` job, the `lerna-deploy` job will simply exit.
-
-      If deliverables were created by the `lerna-deliver` job, `lerna-deploy` will publish those packages to an npm-compatible registry.
-    usage:
-      version: 2.1
-      workflows:
-        build_test_deploy:
-          jobs:
-            - node_10_test_plan
-            - lerna-deliver:
-                context: github-interaction
-                email: eulke@navent.com
-                filters:
-                  branches:
-                    only: master
-                fingerprint: 61:87:86:ed:16:8f:5c:53:98:6a:5a:7c:8d:e7:ee:94
-                fullname: Esteban Ulke
-                requires:
-                  - node_10_test_plan
-            - lerna-deploy:
-                context: npm-interaction
-                filters:
-                  branches:
-                    only: master
-                requires:
-                  - lerna-deliver
-        version: 2
 jobs:
-  lerna-deliver:
-    description: |
-      Job for generating a release, along with corresponding git tags, for a Lerna-based mono-repository.
-
-      We assume your package lists `lerna` as a development dependency, and that your project has a `lerna.json` file to configure the behavior of the tool.
-
-      You must setup a deploy key on GitHub with write access so that the CI job on Circle CI can push a git commit and tags to the project's GitHub repository.
-
-      Please see https://circleci.com/docs/2.0/gh-bb-integration/#creating-a-github-user-key
-
-      Once your deploy key is setup please provide the fingerprint as a parameter to this job.
-
-      Please checkout the `lerna` example in our Orb documentation.
+  build:
     docker:
-      - image: node:10.15.0@sha256:cdca9751c481ae77f2f57bf8a7337c378a144af45310f7d2711d265f5ac9ef15
+      - image: circleci/node:lts
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn bootstrap
+      - run: yarn build
+  test:
+    docker:
+      - image: circleci/node:lts
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: yarn test
+  deliver:
+    docker:
+      - image: circleci/node:lts
+    working_directory: ~/repo
     parameters:
       email:
         description: E-mail that to use for git commits created by Lerna.
@@ -73,36 +43,35 @@ jobs:
         type: string
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - <<parameters.fingerprint>>
-      - run:
-          git config --global user.email "<<parameters.email>>" && git config --global
-          user.name "<<parameters.fullname>>"
-      - run: yarn install
-      - run: $(yarn bin)/lerna version --yes
-  lerna-deploy:
-    description: |
-      Job for publishing multiple npm packages from a Lerna-based mono-repository to an npm-compatible package registry.
-
-      We assume your package lists `lerna` as a development dependency, and that your project has a `lerna.json` file to configure the behavior of the tool.
-
-      You must expose an environment variable called `NPM_TOKEN` to this job. The value of the environment variable must be a [personal access token](https://docs.npmjs.com/creating-and-viewing-authentication-tokens) associated with an account that has publish permissions on an npm-compatible package registry for the packages that are being published.
-
-      If you have enabled [2FA for npm](https://docs.npmjs.com/configuring-two-factor-authentication), which is a good practice, please keep in mind that this CI job does not support publishing if 2FA is enabled for writes (`npm profile enable-2fa auth-and-writes`), though it will work if you configured it for authorization only (`npm profile enable-2fa auth-only`). Please carefully consider the trade-offs of an automated publishing workflow versus the lack of 2FA for publishing.
-
-      Consider using a Circle CI _context_ for storing your environment variable.
-
-      Please checkout the `lerna` example in our Orb documentation.
+      - run: >-
+          git config --global user.email "<<parameters.email>>" && git config
+          --global user.name "<<parameters.fullname>>"
+      - run: $(yarn bin)/lerna version prepatch --yes
+  deploy:
     docker:
       - image: circleci/node:lts
+    working_directory: ~/repo
     steps:
       - checkout
-      - run: yarn install
-      - run: yarn global add @hutson/set-npm-auth-token-for-ci
-      - run: set-npm-auth-token-for-ci
       - run: $(yarn bin)/lerna publish from-git --yes
-orbs:
-  cli: circleci/circleci-cli@0.1.2
-  orb-tools: circleci/orb-tools@2.0.2
-version: 2.1
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+      - build
+      - test
+      - deliver:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
+          email: eulke@navent.com
+          fingerprint: 61:87:86:ed:16:8f:5c:53:98:6a:5a:7c:8d:e7:ee:94
+          fullname: Esteban Ulke
+      - deploy:
+          requires:
+            - deliver
+          filters:
+            branches:
+              only: master
