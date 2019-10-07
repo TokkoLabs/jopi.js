@@ -8,13 +8,13 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
       - run: yarn install
       - save_cache:
           paths:
             - ./node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v2-dependencies-{{ checksum "package.json" }}
   Link:
     working_directory: ~/jopijs
     docker:
@@ -23,8 +23,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
       - run:
           name: Link dependencies
           command: |
@@ -32,7 +32,7 @@ jobs:
       - save_cache:
           paths:
             - ./node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v2-dependencies-{{ checksum "package.json" }}
   Build_Test:
     docker:
       - image: circleci/node:lts
