@@ -28,7 +28,7 @@ jobs:
       - run:
           name: Link dependencies
           command: |
-            yarn bootstrap
+            $(yarn bin)/lerna bootstrap --use-workspaces
       - save_cache:
           paths:
             - ./node_modules
