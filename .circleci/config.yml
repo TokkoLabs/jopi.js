@@ -37,10 +37,17 @@ jobs:
   Deliver:
     <<: *defaults
     steps:
+      - checkout
+      - <<: *restore_modules_cache
       - run:
-          name: Versioning
+          name: GH user
           command: |
-            echo 'Creating versions'
+            git config --global user.email $GITHUB_EMAIL && git config --global user.name $GITHUB_USER
+      - run:
+          name: Create new version
+          command: |
+            lerna version prepatch --yes
+      - <<: *save_modules_cache
   Deploy:
     <<: *defaults
     steps:
