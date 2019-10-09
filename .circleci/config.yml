@@ -28,7 +28,7 @@ jobs:
       - run:
           name: Link dependencies
           command: |
-            $(yarn bin)/lerna bootstrap --use-workspaces
+            yarn bootstrap
       - save_cache:
           paths:
             - ./node_modules
@@ -38,10 +38,18 @@ jobs:
       - image: circleci/node:lts
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
       - run:
           name: Build packages and test
           command: |
             yarn test
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v2-dependencies-{{ checksum "package.json" }}
   Deliver:
     docker:
       - image: circleci/node:lts
