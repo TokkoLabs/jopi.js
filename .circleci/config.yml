@@ -16,28 +16,19 @@ save_modules_cache: &save_modules_cache
     key: v3-dependencies-{{ checksum "package.json" }}
 
 jobs:
-  Check-Dependencies:
-    <<: *defaults
-    steps:
-      - checkout
-      - <<: *restore_modules_cache
-      - run: yarn install
-      - <<: *save_modules_cache
-  Link:
+  Check_Build_Test:
     <<: *defaults
     steps:
       - checkout
       - <<: *restore_modules_cache
       - run:
+          name: Install dependencies
+          command: |
+            yarn install
+      - run:
           name: Link dependencies
           command: |
             yarn bootstrap
-      - <<: *save_modules_cache
-  Build_Test:
-    <<: *defaults
-    steps:
-      - checkout
-      - <<: *restore_modules_cache
       - run:
           name: Build packages and test
           command: |
@@ -62,19 +53,13 @@ workflows:
   version: 2
   Lerna:
     jobs:
-      - Check-Dependencies
-      - Link:
-          requires:
-            - Check-Dependencies
-      - Build_Test:
-          requires:
-            - Link
+      - Check_Build_Test
       - Deliver:
           filters:
             branches:
               only: master
           requires:
-            - Build_Test
+            - Check_Build_Test
       - Deploy:
           filters:
             branches:
