@@ -1,24 +1,93 @@
-version: 2
+version: 2.1
 jobs:
-  build:
+  Check-Dependencies:
+    working_directory: ~/jopijs
     docker:
       - image: circleci/node:lts
-    working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
+            - v3-dependencies-{{ checksum "package.json" }}
+            - v3-dependencies-
       - run: yarn install
       - save_cache:
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn bootstrap
-      - run: yarn test
-      # - run: >-
-      #    git config --global user.email "<<parameters.email>>" && git config
-      #    --global user.name "<<parameters.fullname>>"
-      #- run: $(yarn bin)/lerna version prepatch --yes
-      #- run: $(yarn bin)/lerna publish from-git --yes
+            - ./node_modules
+          key: v3-dependencies-{{ checksum "package.json" }}
+  Link:
+    working_directory: ~/jopijs
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v3-dependencies-{{ checksum "package.json" }}
+            - v3-dependencies-
+      - run:
+          name: Link dependencies
+          command: |
+            yarn bootstrap
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v3-dependencies-{{ checksum "package.json" }}
+  Build_Test:
+    working_directory: ~/jopijs
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v3-dependencies-{{ checksum "package.json" }}
+            - v3-dependencies-
+      - run:
+          name: Build packages and test
+          command: |
+            yarn test
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v3-dependencies-{{ checksum "package.json" }}
+  Deliver:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - run:
+          name: Versioning
+          command: |
+            echo 'Creating versions'
+  Deploy:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - run:
+          name: Publish packages
+          command: |
+            echo 'Publishing packages'
+
+workflows:
+  version: 2
+  Lerna:
+    jobs:
+      - Check-Dependencies
+      - Link:
+          requires:
+            - Check-Dependencies
+      - Build_Test:
+          requires:
+            - Link
+      - Deliver:
+          filters:
+            branches:
+              only: master
+          requires:
+            - Build_Test
+      - Deploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - Deliver
