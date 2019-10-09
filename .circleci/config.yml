@@ -8,13 +8,13 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "package.json" }}
-            - v2-dependencies-
+            - v3-dependencies-{{ checksum "package.json" }}
+            - v3-dependencies-
       - run: yarn install
       - save_cache:
           paths:
             - ./node_modules
-          key: v2-dependencies-{{ checksum "package.json" }}
+          key: v3-dependencies-{{ checksum "package.json" }}
   Link:
     working_directory: ~/jopijs
     docker:
@@ -23,8 +23,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "package.json" }}
-            - v2-dependencies-
+            - v3-dependencies-{{ checksum "package.json" }}
+            - v3-dependencies-
       - run:
           name: Link dependencies
           command: |
@@ -32,7 +32,7 @@ jobs:
       - save_cache:
           paths:
             - ./node_modules
-          key: v2-dependencies-{{ checksum "package.json" }}
+          key: v3-dependencies-{{ checksum "package.json" }}
   Build_Test:
     docker:
       - image: circleci/node:lts
@@ -40,8 +40,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "package.json" }}
-            - v2-dependencies-
+            - v3-dependencies-{{ checksum "package.json" }}
+            - v3-dependencies-
       - run:
           name: Build packages and test
           command: |
@@ -49,7 +49,7 @@ jobs:
       - save_cache:
           paths:
             - ./node_modules
-          key: v2-dependencies-{{ checksum "package.json" }}
+          key: v3-dependencies-{{ checksum "package.json" }}
   Deliver:
     docker:
       - image: circleci/node:lts
