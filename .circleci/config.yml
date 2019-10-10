@@ -1,67 +1,55 @@
 version: 2.1
+
+defaults: &defaults
+  docker:
+    - image: circleci/node:lts
+  working_directory: ~/jopijs
+restore_modules_cache: &restore_modules_cache
+  restore_cache:
+    keys:
+      - v3-dependencies-{{ checksum "package.json" }}
+      - v3-dependencies-
+save_modules_cache: &save_modules_cache
+  save_cache:
+    paths:
+      - ./node_modules
+    key: v3-dependencies-{{ checksum "package.json" }}
+
 jobs:
-  Check-Dependencies:
-    working_directory: ~/jopijs
-    docker:
-      - image: circleci/node:lts
+  Check_Build_Test:
+    <<: *defaults
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v3-dependencies-{{ checksum "package.json" }}
-            - v3-dependencies-
-      - run: yarn install
-      - save_cache:
-          paths:
-            - ./node_modules
-          key: v3-dependencies-{{ checksum "package.json" }}
-  Link:
-    working_directory: ~/jopijs
-    docker:
-      - image: circleci/node:lts
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v3-dependencies-{{ checksum "package.json" }}
-            - v3-dependencies-
+      - <<: *restore_modules_cache
+      - run:
+          name: Install dependencies
+          command: |
+            yarn install
       - run:
           name: Link dependencies
           command: |
             yarn bootstrap
-      - save_cache:
-          paths:
-            - ./node_modules
-          key: v3-dependencies-{{ checksum "package.json" }}
-  Build_Test:
-    working_directory: ~/jopijs
-    docker:
-      - image: circleci/node:lts
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v3-dependencies-{{ checksum "package.json" }}
-            - v3-dependencies-
       - run:
           name: Build packages and test
           command: |
             yarn test
-      - save_cache:
-          paths:
-            - ./node_modules
-          key: v3-dependencies-{{ checksum "package.json" }}
+      - <<: *save_modules_cache
   Deliver:
-    docker:
-      - image: circleci/node:lts
+    <<: *defaults
     steps:
+      - checkout
+      - <<: *restore_modules_cache
       - run:
-          name: Versioning
+          name: GH user
           command: |
-            echo 'Creating versions'
+            git config --global user.email $GITHUB_EMAIL && git config --global user.name $GITHUB_USER
+      - run:
+          name: Create new version
+          command: |
+            lerna version prepatch --yes
+      - <<: *save_modules_cache
   Deploy:
-    docker:
-      - image: circleci/node:lts
+    <<: *defaults
     steps:
       - run:
           name: Publish packages
@@ -72,19 +60,13 @@ workflows:
   version: 2
   Lerna:
     jobs:
-      - Check-Dependencies
-      - Link:
-          requires:
-            - Check-Dependencies
-      - Build_Test:
-          requires:
-            - Link
+      - Check_Build_Test
       - Deliver:
           filters:
             branches:
               only: master
           requires:
-            - Build_Test
+            - Check_Build_Test
       - Deploy:
           filters:
             branches:
