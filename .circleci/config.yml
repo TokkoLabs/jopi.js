@@ -46,7 +46,7 @@ jobs:
       - run:
           name: Create new version
           command: |
-            lerna version prepatch --yes
+            $(yarn bin)/lerna version prepatch --yes
       - <<: *save_modules_cache
   Deploy:
     <<: *defaults
