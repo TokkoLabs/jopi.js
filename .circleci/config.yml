@@ -39,6 +39,9 @@ jobs:
     steps:
       - checkout
       - <<: *restore_modules_cache
+      - add_ssh_keys:
+          fingerprints:
+            - 'df:0b:f7:bf:63:60:b1:cb:86:79:2e:73:f9:8a:7d:26'
       - run:
           name: GH user
           command: |
@@ -51,11 +54,15 @@ jobs:
   Deploy:
     <<: *defaults
     steps:
+      - checkout
+      - <<: *restore_modules_cache
       - run:
-          name: Publish packages
+          name: Authenticate with registry
           command: |
-            echo 'Publishing packages'
-
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/jopijs/.npmrc
+      - run:
+          name: Publish package
+          command: lerna publish from-git --yes
 workflows:
   version: 2
   Lerna:
