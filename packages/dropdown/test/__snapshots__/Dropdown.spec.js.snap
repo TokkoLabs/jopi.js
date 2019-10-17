@@ -5,7 +5,7 @@ exports[`Dropdown default 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: inline-grid;
+  position: relative;
 }
 
 .c1 {
@@ -34,6 +34,15 @@ exports[`Dropdown default 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  text-align: start;
+  font-size: 14px;
+  line-height: 0;
+  height: 36px;
 }
 
 <div
