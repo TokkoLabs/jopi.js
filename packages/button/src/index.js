@@ -1,21 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
-import { variant } from 'styled-system'
 import { Box } from '@oneloop/box'
 
-const ButtonBase = styled(Box)(
-  variant({
-    prop: 'size',
-    scale: 'buttons.sizes',
-  })
-)
-
 export const Button = props => (
-  <ButtonBase
+  <Box
     as="button"
     tx="buttons"
     variant="primary"
-    size="medium"
     {...props}
     __css={{
       appearance: 'none',

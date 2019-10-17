@@ -34,8 +34,6 @@ exports[`Dropdown default 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: medium;
-  height: medium;
 }
 
 <div
@@ -44,7 +42,6 @@ exports[`Dropdown default 1`] = `
   <button
     className="c1"
     onClick={[Function]}
-    size="medium"
   >
     Opción elegida
   </button>
