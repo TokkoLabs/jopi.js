@@ -24,13 +24,10 @@ exports[`Button primary 1`] = `
   background-color: primary;
   border: 0;
   border-radius: circle;
-  width: medium;
-  height: medium;
 }
 
 <button
   className="c0"
-  size="medium"
 >
   Test
 </button>
@@ -60,13 +57,10 @@ exports[`Button secondary 1`] = `
   background-color: primary;
   border: 0;
   border-radius: circle;
-  width: medium;
-  height: medium;
 }
 
 <button
   className="c0"
-  size="medium"
 >
   Test
 </button>

@@ -6,7 +6,6 @@ export const Button = props => (
     as="button"
     tx="buttons"
     variant="primary"
-    size="medium"
     {...props}
     __css={{
       appearance: 'none',
