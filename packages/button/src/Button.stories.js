@@ -20,11 +20,19 @@ export const danger = () => <Button variant="danger">{'Button'}</Button>
 export const def = () => <Button variant="default">{'Button'}</Button>
 
 export const small = () => (
-  <Button size="small" variant="default">
+  <Button p={2} fontSize={2} variant="default">
     {'O'}
   </Button>
 )
 
-export const medium = () => <Button size="medium">{'Button'}</Button>
+export const medium = () => (
+  <Button px={6} py={4} fontSize={2}>
+    {'Button'}
+  </Button>
+)
 
-export const large = () => <Button size="large">{'Button'}</Button>
+export const large = () => (
+  <Button px={8} py={4} fontSize={3}>
+    {'Button'}
+  </Button>
+)

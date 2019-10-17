@@ -34,11 +34,14 @@ jobs:
           command: |
             yarn test
       - <<: *save_modules_cache
-  Deliver:
+  Deliver_Deploy:
     <<: *defaults
     steps:
       - checkout
       - <<: *restore_modules_cache
+      - add_ssh_keys:
+          fingerprints:
+            - 'df:0b:f7:bf:63:60:b1:cb:86:79:2e:73:f9:8a:7d:26'
       - run:
           name: GH user
           command: |
@@ -46,30 +49,23 @@ jobs:
       - run:
           name: Create new version
           command: |
-            lerna version prepatch --yes
-      - <<: *save_modules_cache
-  Deploy:
-    <<: *defaults
-    steps:
+            $(yarn bin)/lerna version prepatch --yes
       - run:
-          name: Publish packages
+          name: Authenticate with registry
           command: |
-            echo 'Publishing packages'
-
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/jopijs/.npmrc
+      - run:
+          name: Publish package
+          command: $(yarn bin)/lerna publish from-git --yes
+      - <<: *save_modules_cache
 workflows:
   version: 2
   Lerna:
     jobs:
       - Check_Build_Test
-      - Deliver:
+      - Deliver_Deploy:
           filters:
             branches:
               only: master
           requires:
             - Check_Build_Test
-      - Deploy:
-          filters:
-            branches:
-              only: master
-          requires:
-            - Deliver
