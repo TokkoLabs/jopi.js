@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.1.19-alpha.0",
+  "version": "1.1.20-alpha.0",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
@@ -10,7 +10,7 @@
     "@oneloop/button": "^1.1.15-alpha.0",
     "@oneloop/checkbox": "^1.1.14-alpha.0",
     "@oneloop/collapsible": "^1.1.16-alpha.0",
-    "@oneloop/dropdown": "^1.1.17-alpha.0",
+    "@oneloop/dropdown": "^1.1.18-alpha.0",
     "@oneloop/image": "^1.1.15-alpha.0",
     "@oneloop/input": "^1.1.12-alpha.0",
     "@oneloop/label": "^1.1.14-alpha.0",
