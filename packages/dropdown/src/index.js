@@ -13,7 +13,7 @@ export const Dropdown = ({ children, ...props }) => {
 
   return (
     <DropdownContext.Provider value={value}>
-      <Box {...props} __css={{ display: 'inline-grid' }}>
+      <Box {...props} __css={{ position: 'relative' }}>
         {children}
       </Box>
     </DropdownContext.Provider>
@@ -40,6 +40,13 @@ const DropdownButton = props => {
         textOverflow: 'ellipsis',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
+        py: '12px',
+        px: '16px',
+        width: '100%',
+        textAlign: 'start',
+        fontSize: 1,
+        lineHeight: 0,
+        height: '36px',
       }}
     />
   )
@@ -54,7 +61,9 @@ const DropdownList = ({ children, ...props }) => {
           backgroundColor: 'neutral.0',
           boxShadow: 'active',
           borderRadius: 'default',
-          margin: '5px 0 0',
+          position: 'absolute',
+          top: '42px',
+          width: '100%',
         }}
       >
         <List
