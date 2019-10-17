@@ -41,12 +41,7 @@ export const search = () =>
     }
 
     return (
-      <Dropdown
-        sx={{
-          minWidth: '240px',
-          maxWidth: '350px',
-        }}
-      >
+      <Dropdown width={1 / 3}>
         <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
         <Dropdown.Items>
           <Dropdown.Search placeholder="search something" onChange={onFilter} />
@@ -61,12 +56,7 @@ export const search = () =>
   })
 
 export const select = () => (
-  <Dropdown
-    sx={{
-      minWidth: '240px',
-      maxWidth: '350px',
-    }}
-  >
+  <Dropdown width={1 / 3}>
     <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
     <Dropdown.Items>
       {data.map(user => (
