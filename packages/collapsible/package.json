@@ -1,11 +1,11 @@
 {
   "name": "@oneloop/collapsible",
-  "version": "1.1.15-alpha.0",
+  "version": "1.1.16-alpha.0",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
     "@oneloop/box": "^1.1.9-alpha.0",
-    "@oneloop/button": "^1.1.14-alpha.0",
+    "@oneloop/button": "^1.1.15-alpha.0",
     "framer-motion": "1.6.7",
     "react": "16.9.0"
   },
