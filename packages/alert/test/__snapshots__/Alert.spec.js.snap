@@ -21,6 +21,43 @@ exports[`Alert danger 1`] = `
   flex-grow: 1;
 }
 
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: circle;
+  padding: 16px;
+  margin-right: 8px;
+  background-color: #F6F2F2;
+  width: 32px;
+  height: 32px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 .c4 {
   box-sizing: border-box;
   margin: 0;
@@ -59,43 +96,6 @@ exports[`Alert danger 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  line-height: inherit;
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: circle;
-  padding: 16px;
-  margin-right: 8px;
-  background-color: #F6F2F2;
-  width: 32px;
-  height: 32px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -176,34 +176,6 @@ exports[`Alert primary default 1`] = `
   flex-grow: 1;
 }
 
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-  width: 14px;
-  height: 14px;
-}
-
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-  background-color: white;
-  box-shadow: active;
-  border-radius: circle;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c3 {
   box-sizing: border-box;
   margin: 0;
@@ -239,6 +211,34 @@ exports[`Alert primary default 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+}
+
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: active;
+  border-radius: circle;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div
@@ -311,6 +311,43 @@ exports[`Alert warning 1`] = `
   flex-grow: 1;
 }
 
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: circle;
+  padding: 16px;
+  margin-right: 8px;
+  background-color: #F6F2F2;
+  width: 32px;
+  height: 32px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 .c4 {
   box-sizing: border-box;
   margin: 0;
@@ -349,43 +386,6 @@ exports[`Alert warning 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  line-height: inherit;
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: circle;
-  padding: 16px;
-  margin-right: 8px;
-  background-color: #F6F2F2;
-  width: 32px;
-  height: 32px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
