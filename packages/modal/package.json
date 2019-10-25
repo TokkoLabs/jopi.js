@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/modal",
-  "version": "1.1.15-alpha.0",
+  "version": "1.2.0",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.1.9-alpha.0",
-    "@oneloop/button": "^1.1.15-alpha.0",
-    "@oneloop/hooks": "^1.1.14-alpha.0",
-    "@oneloop/text": "^1.1.11-alpha.0",
+    "@oneloop/box": "^1.2.0",
+    "@oneloop/button": "^1.2.0",
+    "@oneloop/hooks": "^1.2.0",
+    "@oneloop/text": "^1.2.0",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-dom": "16.9.0"
