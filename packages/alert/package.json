@@ -8,7 +8,7 @@
     "@oneloop/button": "^1.2.0",
     "@oneloop/icons": "^1.2.0",
     "@oneloop/text": "^1.2.0",
-    "react": "16.9.0"
+    "react": "^16.9.0"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0"
