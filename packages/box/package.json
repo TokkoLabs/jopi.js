@@ -1,11 +1,11 @@
 {
   "name": "@oneloop/box",
-  "version": "1.1.9-alpha.0",
+  "version": "1.2.0",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
     "@styled-system/css": "^5.0.23",
-    "react": "16.9.0",
+    "react": "^16.9.0",
     "styled-components": "4.3.2",
     "styled-system": "5.1.2"
   },
