@@ -56,7 +56,7 @@ jobs:
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/jopijs/.npmrc
       - run:
           name: Publish package
-          command: $(yarn bin)/lerna publish from-git --dist-tag dev --yes
+          command: $(yarn bin)/lerna publish from-git --yes
       - <<: *save_modules_cache
 workflows:
   version: 2
