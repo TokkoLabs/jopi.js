@@ -16,7 +16,7 @@ export const Dropdown = ({ children, ...props }) => {
 
   return (
     <DropdownContext.Provider value={value}>
-      <Box {...props} __css={{ position: 'relative' }}>
+      <Box ref={ref} {...props} __css={{ position: 'relative' }}>
         {children}
       </Box>
     </DropdownContext.Provider>
@@ -56,11 +56,10 @@ const DropdownButton = props => {
 }
 
 const DropdownList = ({ children, ...props }) => {
-  const { open, ref } = useDropdownContext()
+  const { open } = useDropdownContext()
   return (
     open && (
       <Flex
-        ref={ref}
         sx={{
           backgroundColor: 'neutral.0',
           boxShadow: 'active',
