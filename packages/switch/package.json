@@ -1,11 +1,11 @@
 {
   "name": "@oneloop/switch",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.2.2",
-    "@oneloop/hooks": "^1.2.2",
+    "@oneloop/box": "^1.2.3",
+    "@oneloop/hooks": "^1.2.3",
     "react": "^16.9.0"
   },
   "peerDependencies": {
