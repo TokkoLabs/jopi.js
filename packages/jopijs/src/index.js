@@ -16,7 +16,6 @@ import { Switch } from '@oneloop/switch'
 import { Table } from '@oneloop/table'
 import { Tabs } from '@oneloop/tabs'
 import { Text, Heading } from '@oneloop/text'
-import { ThemeProvider } from 'styled-components'
 
 export {
   Alert,
@@ -40,5 +39,4 @@ export {
   useFilterData,
   Table,
   Image,
-  ThemeProvider,
 }
