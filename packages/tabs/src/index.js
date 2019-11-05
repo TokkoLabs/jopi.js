@@ -38,16 +38,20 @@ const Tab = ({ id, children, ...props }) => {
         fontFamily: 'heading',
         textTransform: 'uppercase',
         textAlign: 'center',
+        fontWeight: 'bold',
         fontSize: 1,
         '*': {
           textDecoration: 'none',
-          color: active === id ? 'white' : '#F17E7E',
+          color: active === id ? 'white' : '#EBA49A',
         },
         a: {
           display: 'block',
           width: '148px',
           height: '52px',
           lineHeight: '52px',
+        },
+        'a > *:first-child': {
+          marginRight: '10px',
         },
       }}
     >
