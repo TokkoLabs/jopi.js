@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Flex } from '@oneloop/box'
+import { Box } from '@oneloop/box'
 
 export const Input = ({ prefix, suffix, ...props }) => (
-  <Flex
+  <Box
     __css={{
       position: 'relative',
+      height: 'fit-content',
       '> *:first-child': prefix
         ? { position: 'absolute', top: '9px', left: '12px' }
         : {},
       '> *:last-child': suffix
-        ? { position: 'relative', top: '9px', right: '30px' }
+        ? { position: 'absolute', top: '9px', right: '12px' }
         : {},
     }}
   >
@@ -43,7 +44,7 @@ export const Input = ({ prefix, suffix, ...props }) => (
       }}
     />
     {suffix}
-  </Flex>
+  </Box>
 )
 
 Input.propTypes = {
