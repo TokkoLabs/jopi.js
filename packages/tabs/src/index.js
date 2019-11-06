@@ -38,7 +38,7 @@ const Tab = ({ id, children, ...props }) => {
         fontFamily: 'heading',
         textTransform: 'uppercase',
         textAlign: 'center',
-        fontWeight: 'bold',
+        fontWeight: '600',
         fontSize: 1,
         '*': {
           textDecoration: 'none',
