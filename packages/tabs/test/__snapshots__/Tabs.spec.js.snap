@@ -15,14 +15,31 @@ exports[`Tabs renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding: 14px 38px;
+  padding: auto 38px;
   position: relative;
   cursor: pointer;
+  font-family: heading;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.c1 > * {
+.c1 * {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #EBA49A;
+}
+
+.c1 a {
+  display: block;
+  width: 148px;
+  height: 52px;
+  line-height: 52px;
+}
+
+.c1 a > *:first-child {
+  margin-right: 10px;
 }
 
 <div
