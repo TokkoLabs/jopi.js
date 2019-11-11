@@ -68,6 +68,7 @@ const DropdownList = ({ children, ...props }) => {
           borderRadius: 'default',
           position: 'absolute',
           top: '42px',
+          zIndex: 1,
         }}
       >
         {children}
