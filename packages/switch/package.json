@@ -1,10 +1,10 @@
 {
   "name": "@oneloop/switch",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.2.10",
+    "@oneloop/box": "^1.2.11",
     "@oneloop/hooks": "^1.2.13",
     "react": "^16.9.0"
   },

@@ -1,10 +1,10 @@
 {
   "name": "@oneloop/icons",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.2.10",
+    "@oneloop/box": "^1.2.11",
     "react": "^16.9.0"
   },
   "peerDependencies": {
