@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Box, Flex } from '@oneloop/box'
 import { Input } from '@oneloop/input'
 import { useFilterData } from '@oneloop/hooks'
 
-const List = ({ children, ...props }) => (
-  <Box as="ul" {...props} __css={{ listStyleType: 'none', p: 0 }}>
+const List = forwardRef(({ children, ...props }, ref) => (
+  <Box ref={ref} as="ul" {...props} __css={{ listStyleType: 'none', p: 0 }}>
     {children}
   </Box>
-)
+))
 
 const ListInput = props => (
   <Flex as="span" sx={{ px: '16px', py: '14px' }}>
@@ -39,5 +39,6 @@ const ListItem = ({ children, ...props }) => (
 
 List.Search = ListInput
 List.Item = ListItem
+List.displayName = 'List'
 
 export { List, useFilterData }
