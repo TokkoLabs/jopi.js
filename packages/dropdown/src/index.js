@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react'
-import { Box, Flex } from '@oneloop/box'
+import { Box } from '@oneloop/box'
 import { Button } from '@oneloop/button'
 import { List } from '@oneloop/list'
 import { useToggle } from '@oneloop/hooks'
