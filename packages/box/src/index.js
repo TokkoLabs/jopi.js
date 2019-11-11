@@ -6,6 +6,7 @@ import {
   flexbox,
   border,
   typography,
+  position,
   variant,
 } from 'styled-system'
 import css from '@styled-system/css'
@@ -31,7 +32,8 @@ export const Box = styled.div(
   layout,
   flexbox,
   typography,
-  border
+  border,
+  position
 )
 
 export const Flex = styled(Box)({
