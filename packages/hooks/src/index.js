@@ -32,7 +32,7 @@ export const useFilterData = (data, key) => {
   const [value, setValue] = useState('')
 
   const handleFilter = data.filter(data =>
-    _.values(_.get(data, key)).some(val =>
+    _.values(_.get(data, key, data)).some(val =>
       _.includes(val.toString().toLowerCase(), value.toLowerCase())
     )
   )
