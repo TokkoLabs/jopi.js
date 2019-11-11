@@ -87,8 +87,8 @@ const switches = {
 const theme = {
   fontSizes: fontSize,
   fonts: {
-    heading: 'sans-serif',
-    body: 'sans-serif',
+    heading: 'Superjopi, sans-serif',
+    body: 'Superjopi, sans-serif',
   },
   letterSpacings: {
     heading: -0.9,

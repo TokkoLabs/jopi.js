@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react'
-import { Box, Flex } from '@oneloop/box'
+import { Box } from '@oneloop/box'
 import { Button } from '@oneloop/button'
 import { List } from '@oneloop/list'
 import { useToggle } from '@oneloop/hooks'
@@ -42,7 +42,6 @@ const DropdownButton = props => {
         whiteSpace: 'nowrap',
         py: '12px',
         px: '16px',
-        width: '100%',
         textAlign: 'start',
         fontSize: 1,
         lineHeight: 0,
@@ -56,28 +55,23 @@ const DropdownList = ({ children, ...props }) => {
   const { open } = useDropdownContext()
   return (
     open && (
-      <Flex
+      <List
+        {...props}
         sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          flexGrow: 1,
+          mt: 0,
+          py: '5px',
           backgroundColor: 'neutral.0',
           boxShadow: 'active',
           borderRadius: 'default',
           position: 'absolute',
           top: '42px',
-          width: '100%',
         }}
       >
-        <List
-          {...props}
-          sx={{
-            flexGrow: 1,
-            width: 0,
-            mt: 0,
-            my: '5px',
-          }}
-        >
-          {children}
-        </List>
-      </Flex>
+        {children}
+      </List>
     )
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Add } from '@oneloop/icons'
 
 import { Input } from '.'
 
@@ -22,3 +23,24 @@ export const warning = () => (
 )
 
 export const disabled = () => <Input disabled placeholder="Hello World!" />
+
+export const search = () => (
+  <Input
+    prefix={<Add />}
+    suffix={<Add />}
+    placeholder="Buscar"
+    sx={{
+      borderRadius: 'circle',
+      mb: 0,
+      bg: '#EBA49A',
+      border: 'none',
+      width: '294px',
+      '::placeholder': {
+        color: '#6C4B47',
+      },
+      ':focus': {
+        border: 'none',
+      },
+    }}
+  />
+)

@@ -12,6 +12,7 @@ export const Button = props => (
       display: 'inline-block',
       lineHeight: 'inherit',
       textTransform: 'uppercase',
+      fontFamily: 'body',
       textAlign: 'center',
       textDecoration: 'none',
       cursor: 'pointer',

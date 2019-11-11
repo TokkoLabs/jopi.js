@@ -32,11 +32,26 @@ const Tab = ({ id, children, ...props }) => {
       onClick={() => setActive(id)}
       {...props}
       __css={{
-        padding: '14px 38px',
+        padding: 'auto 38px',
         position: 'relative',
         cursor: 'pointer',
-        '> *': {
+        fontFamily: 'heading',
+        textTransform: 'uppercase',
+        textAlign: 'center',
+        fontWeight: '600',
+        fontSize: 1,
+        '*': {
           textDecoration: 'none',
+          color: active === id ? 'white' : '#EBA49A',
+        },
+        a: {
+          display: 'block',
+          width: '148px',
+          height: '52px',
+          lineHeight: '52px',
+        },
+        'a > *:first-child': {
+          marginRight: '10px',
         },
       }}
     >
