@@ -1,24 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Box, Flex } from '@oneloop/box'
 import { Input } from '@oneloop/input'
+import { useFilterData } from '@oneloop/hooks'
 
-export const useFilterData = (data, key) => {
-  const [value, setValue] = useState('')
-  const valueFormatted = value.toLowerCase()
-
-  const handleFilter = data.filter(data => {
-    const dataFormatted = Object.values(data[key])
-      .toString()
-      .toLowerCase()
-    if (dataFormatted.includes(valueFormatted)) {
-      return data
-    }
-  })
-
-  return [handleFilter, setValue]
-}
-
-export const List = ({ children, ...props }) => (
+const List = ({ children, ...props }) => (
   <Box as="ul" {...props} __css={{ listStyleType: 'none', p: 0 }}>
     {children}
   </Box>
@@ -54,3 +39,5 @@ const ListItem = ({ children, ...props }) => (
 
 List.Search = ListInput
 List.Item = ListItem
+
+export { List, useFilterData }

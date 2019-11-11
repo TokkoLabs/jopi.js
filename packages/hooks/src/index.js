@@ -1,4 +1,5 @@
 import { useCallback, useState, useEffect } from 'react'
+import _ from 'lodash'
 
 export const useToggle = (initialState = false) => {
   const [state, setState] = useState(initialState)
@@ -25,4 +26,16 @@ export const useOnClickOutside = (ref, handler) => {
       document.removeEventListener('touchstart', listener)
     }
   }, [ref, handler])
+}
+
+export const useFilterData = (data, key) => {
+  const [value, setValue] = useState('')
+
+  const handleFilter = data.filter(data =>
+    _.values(_.get(data, key)).some(val =>
+      _.includes(val.toString().toLowerCase(), value.toLowerCase())
+    )
+  )
+
+  return [handleFilter, setValue]
 }
