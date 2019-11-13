@@ -1,0 +1,22 @@
+{
+  "name": "@oneloop/calendar",
+  "version": "1.2.11",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "dependencies": {
+    "@datepicker-react/hooks": "^2.1.4",
+    "@oneloop/box": "^1.2.11",
+    "@oneloop/button": "^1.2.14",
+    "@oneloop/text": "^1.2.11",
+    "@oneloop/icons": "1.2.11",
+    "@oneloop/dropdown": "1.2.25",
+    "date-fns": "^2.7.0",
+    "react": "^16.9.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
