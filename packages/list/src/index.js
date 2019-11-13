@@ -19,7 +19,7 @@ const ListInput = props => (
   </Flex>
 )
 
-const ListItem = ({ children, ...props }) => (
+const ListItem = ({ children, hover = true, ...props }) => (
   <Box
     as="li"
     width={1}
@@ -30,7 +30,7 @@ const ListItem = ({ children, ...props }) => (
       display: 'inline-flex',
       justifyContent: 'space-between',
       fontFamily: 'body',
-      ':hover': { bg: 'neutral.1' },
+      ':hover': hover && { bg: 'neutral.1' },
     }}
   >
     {children}
