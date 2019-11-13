@@ -1,10 +1,10 @@
 {
   "name": "@oneloop/table",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.2.12",
+    "@oneloop/box": "^1.2.13",
     "react": "^16.9.0"
   },
   "peerDependencies": {
