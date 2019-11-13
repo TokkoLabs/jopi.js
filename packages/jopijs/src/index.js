@@ -16,6 +16,7 @@ import { Switch } from '@oneloop/switch'
 import { Table } from '@oneloop/table'
 import { Tabs } from '@oneloop/tabs'
 import { Text, Heading } from '@oneloop/text'
+import { Datepicker } from '@oneloop/datepicker'
 import { ThemeProvider } from 'styled-components'
 
 export {
@@ -40,5 +41,6 @@ export {
   useFilterData,
   Table,
   Image,
+  Datepicker,
   ThemeProvider,
 }
