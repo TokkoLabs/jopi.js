@@ -22,7 +22,7 @@
     "@oneloop/table": "^1.2.11",
     "@oneloop/tabs": "^1.2.17",
     "@oneloop/text": "^1.2.11",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.4.1"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0"
