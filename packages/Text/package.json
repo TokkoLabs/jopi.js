@@ -1,10 +1,10 @@
 {
   "name": "@oneloop/text",
-  "version": "1.2.15",
+  "version": "1.2.16",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.2.15",
+    "@oneloop/box": "^1.2.16",
     "prop-types": "^15.7.2",
     "react": "^16.9.0"
   },
