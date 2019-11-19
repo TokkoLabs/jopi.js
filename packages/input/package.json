@@ -1,11 +1,11 @@
 {
   "name": "@oneloop/input",
-  "version": "1.2.11",
+  "version": "1.2.17",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.2.9",
-    "@oneloop/icons": "^1.2.9",
+    "@oneloop/box": "^1.2.13",
+    "@oneloop/icons": "^1.2.13",
     "prop-types": "^15.7.2",
     "react": "^16.9.0"
   },
