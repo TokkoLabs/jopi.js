@@ -1,10 +1,10 @@
 {
   "name": "@oneloop/text",
-  "version": "1.2.18",
+  "version": "1.2.19",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.2.18",
+    "@oneloop/box": "^1.2.19",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
