@@ -37,7 +37,16 @@
     "react/prop-types": 0,
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-indent": ["error", 2],
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
     "no-async-promise-executor": 0,
     "no-misleading-character-class": 0,
     "no-useless-catch": 0,
