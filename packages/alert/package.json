@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/alert",
-  "version": "1.2.17",
+  "version": "1.2.18",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.2.14",
-    "@oneloop/button": "^1.2.17",
-    "@oneloop/icons": "^1.2.14",
-    "@oneloop/text": "^1.2.14",
+    "@oneloop/box": "^1.2.15",
+    "@oneloop/button": "^1.2.18",
+    "@oneloop/icons": "^1.2.15",
+    "@oneloop/text": "^1.2.15",
     "react": "^16.9.0"
   },
   "peerDependencies": {
