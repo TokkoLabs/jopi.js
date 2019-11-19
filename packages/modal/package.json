@@ -9,12 +9,11 @@
     "@oneloop/hooks": "^1.2.18",
     "@oneloop/text": "^1.2.17",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
     "react-dom": "16.9.0"
   },
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"
