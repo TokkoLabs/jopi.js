@@ -49,14 +49,14 @@ jobs:
       - run:
           name: Create new version
           command: |
-            $(yarn bin)/lerna version prepatch --yes
+            $(yarn bin)/lerna version patch --yes
       - run:
           name: Authenticate with registry
           command: |
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/jopijs/.npmrc
       - run:
           name: Publish package
-          command: $(yarn bin)/lerna publish from-git --yes
+          command: $(yarn bin)/lerna publish from-package --yes
       - <<: *save_modules_cache
 workflows:
   version: 2
@@ -66,6 +66,6 @@ workflows:
       - Deliver_Deploy:
           filters:
             branches:
-              only: master
+              only: development
           requires:
             - Check_Build_Test

@@ -1,6 +1,6 @@
 const colors = {
   primary: '#D64A36',
-  primaryAccent: '#EBA399',
+  primaryAccent: '#F6D4CF',
   secondary: '#848484',
   success: '#6fb824',
   successAccent: '#F1F8E9',
@@ -87,8 +87,8 @@ const switches = {
 const theme = {
   fontSizes: fontSize,
   fonts: {
-    heading: 'sans-serif',
-    body: 'sans-serif',
+    heading: 'Superjopi, sans-serif',
+    body: 'Superjopi, sans-serif',
   },
   letterSpacings: {
     heading: -0.9,

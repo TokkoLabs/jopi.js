@@ -5,6 +5,16 @@ exports[`Input disabled 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   border-radius: 4px;
   border: 1px solid #DADADA;
   box-shadow: none;
@@ -22,17 +32,21 @@ exports[`Input disabled 1`] = `
   outline: none;
 }
 
-.c0:disabled {
+.c1:disabled {
   color: #999999;
   background-color: #EBEBEB;
   cursor: not-allowed;
 }
 
-<input
+<div
   className="c0"
-  disabled={true}
-  type="text"
-/>
+>
+  <input
+    className="c1"
+    disabled={true}
+    type="text"
+  />
+</div>
 `;
 
 exports[`Input placeholder 1`] = `
@@ -40,39 +54,13 @@ exports[`Input placeholder 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 4px;
-  border: 1px solid #DADADA;
-  box-shadow: none;
-  caret-color: #757575;
-  color: #757575;
-  display: block;
-  font-size: 14px;
-  height: 36px;
-  line-height: 14;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  margin-bottom: 64px;
-  outline: none;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-.c0:disabled {
-  color: #999999;
-  background-color: #EBEBEB;
-  cursor: not-allowed;
-}
-
-<input
-  className="c0"
-  disabled={false}
-  placeholder="test"
-  type="text"
-/>
-`;
-
-exports[`Input renders correctly 1`] = `
-.c0 {
+.c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -93,15 +81,69 @@ exports[`Input renders correctly 1`] = `
   outline: none;
 }
 
-.c0:disabled {
+.c1:disabled {
   color: #999999;
   background-color: #EBEBEB;
   cursor: not-allowed;
 }
 
-<input
+<div
   className="c0"
-  disabled={false}
-  type="text"
-/>
+>
+  <input
+    className="c1"
+    disabled={false}
+    placeholder="test"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Input renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-radius: 4px;
+  border: 1px solid #DADADA;
+  box-shadow: none;
+  caret-color: #757575;
+  color: #757575;
+  display: block;
+  font-size: 14px;
+  height: 36px;
+  line-height: 14;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-bottom: 64px;
+  outline: none;
+}
+
+.c1:disabled {
+  color: #999999;
+  background-color: #EBEBEB;
+  cursor: not-allowed;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    disabled={false}
+    type="text"
+  />
+</div>
 `;

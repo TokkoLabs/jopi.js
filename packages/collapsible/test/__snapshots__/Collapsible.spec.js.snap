@@ -17,6 +17,7 @@ exports[`Collapsible default 1`] = `
   display: inline-block;
   line-height: inherit;
   text-transform: uppercase;
+  font-family: body;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;

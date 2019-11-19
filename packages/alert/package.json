@@ -1,17 +1,16 @@
 {
   "name": "@oneloop/alert",
-  "version": "1.1.15-alpha.0",
+  "version": "1.2.22",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.1.9-alpha.0",
-    "@oneloop/button": "^1.1.15-alpha.0",
-    "@oneloop/icons": "^1.1.14-alpha.0",
-    "@oneloop/text": "^1.1.11-alpha.0",
-    "react": "16.9.0"
+    "@oneloop/box": "^1.2.19",
+    "@oneloop/button": "^1.2.22",
+    "@oneloop/icons": "^1.2.19",
+    "@oneloop/text": "^1.2.19"
   },
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0"
+    "react": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"

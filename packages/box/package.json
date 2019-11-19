@@ -1,16 +1,15 @@
 {
   "name": "@oneloop/box",
-  "version": "1.1.9-alpha.0",
+  "version": "1.2.19",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
     "@styled-system/css": "^5.0.23",
-    "react": "16.9.0",
-    "styled-components": "4.3.2",
+    "styled-components": "4.4.1",
     "styled-system": "5.1.2"
   },
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0",
+    "react": "^16.8.0",
     "styled-components": "^4.0.0"
   },
   "publishConfig": {

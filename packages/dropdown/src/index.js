@@ -1,15 +1,18 @@
 import React, { createContext, useContext } from 'react'
-import { Box, Flex } from '@oneloop/box'
+import { Box } from '@oneloop/box'
 import { Button } from '@oneloop/button'
 import { List } from '@oneloop/list'
-import { useToggle } from '@oneloop/hooks'
+import { useToggle, useOnClickOutside } from '@oneloop/hooks'
 
 const DropdownContext = createContext()
 
 export const Dropdown = ({ children, ...props }) => {
+  const ref = React.useRef()
   const [open, toggle] = useToggle(false)
 
-  const value = React.useMemo(() => ({ open, toggle }), [open])
+  useOnClickOutside(ref, () => toggle(false))
+
+  const value = React.useMemo(() => ({ open, toggle, ref }), [open])
 
   return (
     <DropdownContext.Provider value={value}>
@@ -42,7 +45,6 @@ const DropdownButton = props => {
         whiteSpace: 'nowrap',
         py: '12px',
         px: '16px',
-        width: '100%',
         textAlign: 'start',
         fontSize: 1,
         lineHeight: 0,
@@ -53,31 +55,28 @@ const DropdownButton = props => {
 }
 
 const DropdownList = ({ children, ...props }) => {
-  const { open } = useDropdownContext()
+  const { open, ref } = useDropdownContext()
   return (
     open && (
-      <Flex
+      <List
+        ref={ref}
+        {...props}
         sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          flexGrow: 1,
+          mt: 0,
+          py: '5px',
           backgroundColor: 'neutral.0',
           boxShadow: 'active',
           borderRadius: 'default',
           position: 'absolute',
           top: '42px',
-          width: '100%',
+          zIndex: 1,
         }}
       >
-        <List
-          {...props}
-          sx={{
-            flexGrow: 1,
-            width: 0,
-            mt: 0,
-            my: '5px',
-          }}
-        >
-          {children}
-        </List>
-      </Flex>
+        {children}
+      </List>
     )
   )
 }

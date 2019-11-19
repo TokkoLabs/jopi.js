@@ -21,7 +21,7 @@ exports[`Checkbox alt 1`] = `
   height: 100%;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -30,15 +30,15 @@ exports[`Checkbox alt 1`] = `
   color: gray;
 }
 
-input:checked ~ .c2 {
+input:checked ~ .c3 {
   color: primary;
 }
 
-input:focus ~ .c2 {
+input:focus ~ .c3 {
   box-shadow: active;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -47,7 +47,7 @@ input:focus ~ .c2 {
   height: 18px;
 }
 
-input:checked:not(:disabled) ~ .c3 {
+input:checked:not(:disabled) ~ .c2 {
   display: block;
 }
 
@@ -122,7 +122,7 @@ input:checked:disabled ~ .c6 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c2 sc-1e38spu-0 c4"
+    className="c4 sc-1e38spu-0 c3"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -141,7 +141,7 @@ input:checked:disabled ~ .c6 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c2 sc-1e38spu-0 c5"
+    className="c5 sc-1e38spu-0 c3"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -160,7 +160,7 @@ input:checked:disabled ~ .c6 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c2 sc-1e38spu-0 c6"
+    className="c6 sc-1e38spu-0 c3"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -205,7 +205,7 @@ exports[`Checkbox default 1`] = `
   height: 100%;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -214,15 +214,15 @@ exports[`Checkbox default 1`] = `
   color: gray;
 }
 
-input:checked ~ .c2 {
+input:checked ~ .c3 {
   color: primary;
 }
 
-input:focus ~ .c2 {
+input:focus ~ .c3 {
   box-shadow: active;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -231,7 +231,7 @@ input:focus ~ .c2 {
   height: 18px;
 }
 
-input:checked:not(:disabled) ~ .c3 {
+input:checked:not(:disabled) ~ .c2 {
   display: block;
 }
 
@@ -306,7 +306,7 @@ input:checked:disabled ~ .c6 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c2 sc-1e38spu-0 c4"
+    className="c4 sc-1e38spu-0 c3"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -325,7 +325,7 @@ input:checked:disabled ~ .c6 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c2 sc-1e38spu-0 c5"
+    className="c5 sc-1e38spu-0 c3"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -344,7 +344,7 @@ input:checked:disabled ~ .c6 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c2 sc-1e38spu-0 c6"
+    className="c6 sc-1e38spu-0 c3"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
