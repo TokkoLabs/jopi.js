@@ -1,12 +1,12 @@
 {
   "name": "@oneloop/button",
-  "version": "1.2.22",
+  "version": "1.2.24",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@oneloop/box": "^1.2.19",
+    "@oneloop/box": "^1.2.21",
     "styled-components": "4.4.1",
-    "styled-system": "5.1.2"
+    "styled-system": "5.1.4"
   },
   "peerDependencies": {
     "react": "^16.8.0",
