@@ -2,7 +2,7 @@
 
 Just One Perfect Interface
 
-####Packages we use to build Jopi:
+#### Packages we use to build Jopi:
 
 - Storybook (for building isolated components)
 - React
