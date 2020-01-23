@@ -1,9 +1,9 @@
-##Jopi.js
+## Jopi.js
 
 Jopi.js is a component library full of cool stuff.
 We try to give developers every component they need in their UX in a simple, minimal and beautiful way.
 
-###Installation
+### Installation
 
 You can install Jopi.js from:
 
@@ -22,26 +22,27 @@ or
 
 `yarn add @oneloop/theme`
 
-###Usage
+### Usage
+
 Jopi.js is built using [styled-system](https://styled-system.com/) so you can use all the props they give us to style or position the component.
 
-###Components
+### Components
 
-Alert
-Badge
-Box
-Button
-Checkbox
-Collapsible
-Dropdown
-Image
-Input
-Label
-List
-Loader
-Modal
-Radio
-Switch
-Table
-Tabs
-Text
+- Alert
+- Badge
+- Box
+- Button
+- Checkbox
+- Collapsible
+- Dropdown
+- Image
+- Input
+- Label
+- List
+- Loader
+- Modal
+- Radio
+- Switch
+- Table
+- Tabs
+- Text
