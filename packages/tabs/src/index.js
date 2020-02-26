@@ -75,4 +75,16 @@ const Tab = ({ id, children, ...props }) => {
   )
 }
 
+const Content = ({ id, children, ...props }) => {
+  const { active, setActive } = useTabsContext()
+  return (
+    active === id && (
+      <Box {...props} __css={{ paddingTop: '10px' }}>
+        {children}
+      </Box>
+    )
+  )
+}
+
 Tabs.Tab = Tab
+Tabs.Content = Content
