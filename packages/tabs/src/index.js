@@ -18,7 +18,9 @@ export const Tabs = ({ children, ...props }) => {
       <Box {...props} __css={{ display: 'inline-flex' }}>
         {tabChildren}
       </Box>
-      {contentChildren}
+      <Box {...props} __css={{ paddingTop: '10px' }}>
+        {contentChildren}
+      </Box>
     </TabsContext.Provider>
   )
 }
@@ -85,13 +87,7 @@ const Tab = ({ id, children, ...props }) => {
 
 const Content = ({ id, children, ...props }) => {
   const { active } = useTabsContext()
-  return (
-    active === id && (
-      <Box {...props} __css={{ paddingTop: '10px' }}>
-        {children}
-      </Box>
-    )
-  )
+  return active === id && <Box {...props}>{children}</Box>
 }
 
 Tabs.Tab = Tab
