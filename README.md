@@ -2,6 +2,32 @@
 
 Just One Perfect Interface
 
+#### Installation
+
+##### For your projects
+
+If you want to install `jopi.js` in your proyect, you should read the [package installation guide](https://github.com/TokkoLabs/jopi.js/tree/master/packages/jopijs).
+
+##### For package development
+
+If you want to work on `jopi.js` you should install the dependencies and then start the development server.
+
+For `yarn`:
+
+```
+$ cd jopi.js
+$ yarn
+$ yarn run dev
+```
+
+For `npm`:
+
+```
+$ cd jopi.js
+$ npm (i | install) # Use one of these options
+$ npm run dev
+```
+
 #### Packages we use to build Jopi:
 
 - Storybook (for building isolated components)

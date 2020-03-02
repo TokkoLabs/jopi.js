@@ -6,11 +6,19 @@ const TabsContext = createContext()
 export const Tabs = ({ children, ...props }) => {
   const [active, setActive] = useState()
   const value = React.useMemo(() => ({ active, setActive }), [active])
+  const tabChildren = React.Children.toArray(children).filter(
+    child => child.type.name === 'Tab'
+  )
+  const contentChildren = React.Children.toArray(children).filter(
+    child => child.type.name === 'Content'
+  )
+
   return (
     <TabsContext.Provider value={value}>
       <Box {...props} __css={{ display: 'inline-flex' }}>
-        {children}
+        {tabChildren}
       </Box>
+      <Box __css={{ padding: '10px' }}>{contentChildren}</Box>
     </TabsContext.Provider>
   )
 }
@@ -75,4 +83,10 @@ const Tab = ({ id, children, ...props }) => {
   )
 }
 
+const Content = ({ id, children, ...props }) => {
+  const { active } = useTabsContext()
+  return active === id && <Box {...props}>{children}</Box>
+}
+
 Tabs.Tab = Tab
+Tabs.Content = Content
