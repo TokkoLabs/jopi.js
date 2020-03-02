@@ -85,8 +85,7 @@ Array [
 `;
 
 exports[`Tabs renders correctly with only headers 1`] = `
-Array [
-  .c0 {
+.c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -128,42 +127,31 @@ Array [
 }
 
 <div
-    className="c0"
+  className="c0"
+>
+  <div
+    className="c1"
+    onClick={[Function]}
   >
-    <div
-      className="c1"
-      onClick={[Function]}
-    >
-      One
-    </div>
-    <div
-      className="c1"
-      onClick={[Function]}
-    >
-      Two
-    </div>
-    <div
-      className="c1"
-      onClick={[Function]}
-    >
-      Three
-    </div>
-    <div
-      className="c1"
-      onClick={[Function]}
-    >
-      Four
-    </div>
-  </div>,
-  .c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding: 10px;
-}
-
-<div
-    className="c0"
-  />,
-]
+    One
+  </div>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Two
+  </div>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Three
+  </div>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Four
+  </div>
+</div>
 `;

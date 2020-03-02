@@ -18,7 +18,9 @@ export const Tabs = ({ children, ...props }) => {
       <Box {...props} __css={{ display: 'inline-flex' }}>
         {tabChildren}
       </Box>
-      <Box __css={{ padding: '10px' }}>{contentChildren}</Box>
+      {contentChildren.length > 0 && (
+        <Box __css={{ padding: '10px' }}>{contentChildren}</Box>
+      )}
     </TabsContext.Provider>
   )
 }
