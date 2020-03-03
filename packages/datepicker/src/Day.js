@@ -92,6 +92,7 @@ export const Day = React.forwardRef(({ dayLabel, date }, ref) => {
         display: 'flex',
         justifyContent: 'center',
         justifySelf: 'center',
+        alignItems: 'center',
         color: getStateFn({
           selectedFirstOrLastColor: '#FFFFFF',
           normalColor: '#001217',
