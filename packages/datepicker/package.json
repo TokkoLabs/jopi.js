@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/datepicker",
-  "version": "1.2.23",
+  "version": "1.2.24",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
