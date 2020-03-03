@@ -1,23 +1,19 @@
 {
-    "name": "@oneloop/box",
-    "version": "1.1.7-alpha.0",
-    "main": "lib/index.js",
-    "module": "src/index.js",
-    "dependencies": {
-        "@styled-system/css": "^5.0.23",
-        "prop-types": "^15.7.2",
-        "react": "16.8.6",
-        "react-dom": "16.8.6",
-        "styled-components": "4.3.2",
-        "styled-system": "5.0.21"
-    },
-    "peerDependencies": {
-        "react": "^15.0.0 || ^16.0.0",
-        "react-dom": "^15.0.0 || ^16.0.0",
-        "styled-components": "^4.0.0"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "gitHead": "4cea4b6e1d2b274b20bde85644f7be5916105ef2"
+  "name": "@oneloop/box",
+  "version": "1.2.23",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "dependencies": {
+    "@styled-system/css": "^5.1.4",
+    "styled-components": "4.4.1",
+    "styled-system": "5.1.4"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "styled-components": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "4cea4b6e1d2b274b20bde85644f7be5916105ef2"
 }

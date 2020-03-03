@@ -19,7 +19,7 @@ const useCollapsibleContext = () => {
   const context = useContext(CollapsibleContext)
   if (!context) {
     throw new Error(
-      `Collapsible compound components cannot be rendered outside the Collapsible component`
+      'Collapsible compound components cannot be rendered outside the Collapsible component'
     )
   }
   return context

@@ -17,6 +17,15 @@ const TableHeaderItem = props => (
   />
 )
 
+const TableBody = props => <Box as="tbody" {...props} />
+
+const TableHeader = ({ children, ...props }) => (
+  <Box as="thead">
+    <Box as="tr" {...props}>
+      {children}
+    </Box>
+  </Box>
+)
 const TableRow = props => <Box as="tr" {...props} />
 
 const TableRowItem = props => (
@@ -27,7 +36,8 @@ const TableRowItem = props => (
   />
 )
 
-Table.Header = TableRow
+Table.Header = TableHeader
 Table.HeaderItem = TableHeaderItem
+Table.Rows = TableBody
 Table.Row = TableRow
 Table.RowItem = TableRowItem

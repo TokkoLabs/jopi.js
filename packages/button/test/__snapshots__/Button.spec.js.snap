@@ -11,6 +11,7 @@ exports[`Button primary 1`] = `
   display: inline-block;
   line-height: inherit;
   text-transform: uppercase;
+  font-family: body;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -24,13 +25,10 @@ exports[`Button primary 1`] = `
   background-color: primary;
   border: 0;
   border-radius: circle;
-  width: medium;
-  height: medium;
 }
 
 <button
   className="c0"
-  size="medium"
 >
   Test
 </button>
@@ -47,6 +45,7 @@ exports[`Button secondary 1`] = `
   display: inline-block;
   line-height: inherit;
   text-transform: uppercase;
+  font-family: body;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -60,13 +59,10 @@ exports[`Button secondary 1`] = `
   background-color: primary;
   border: 0;
   border-radius: circle;
-  width: medium;
-  height: medium;
 }
 
 <button
   className="c0"
-  size="medium"
 >
   Test
 </button>

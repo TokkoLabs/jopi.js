@@ -17,6 +17,7 @@ exports[`Collapsible default 1`] = `
   display: inline-block;
   line-height: inherit;
   text-transform: uppercase;
+  font-family: body;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -44,8 +45,6 @@ exports[`Collapsible default 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: medium;
-  height: medium;
 }
 
 .c1 + .content {
@@ -57,7 +56,6 @@ exports[`Collapsible default 1`] = `
 >
   <button
     className="c1"
-    size="medium"
   >
     Estado
   </button>

@@ -1,6 +1,6 @@
 const colors = {
   primary: '#D64A36',
-  primaryAccent: '#EBA399',
+  primaryAccent: '#F6D4CF',
   secondary: '#848484',
   success: '#6fb824',
   successAccent: '#F1F8E9',
@@ -87,8 +87,8 @@ const switches = {
 const theme = {
   fontSizes: fontSize,
   fonts: {
-    heading: 'sans-serif',
-    body: 'sans-serif',
+    heading: 'Superjopi, sans-serif',
+    body: 'Superjopi, sans-serif',
   },
   letterSpacings: {
     heading: -0.9,
@@ -167,32 +167,6 @@ const theme = {
       color: colors.neutral[5],
       backgroundColor: colors.neutral[0],
       border: '1px solid #C2C2C2',
-    },
-    sizes: {
-      small: {
-        paddingTop: space.small,
-        paddingBottom: space.small,
-        paddingLeft: space.small,
-        paddingRight: space.small,
-        fontSize: fontSize[2],
-        width: 24,
-        height: 24,
-        lineHeight: 0,
-      },
-      medium: {
-        paddingTop: space[4],
-        paddingBottom: space[4],
-        paddingLeft: space.medium,
-        paddingRight: space.medium,
-        fontSize: fontSize[2],
-      },
-      large: {
-        paddingTop: space[4],
-        paddingBottom: space[4],
-        paddingLeft: space.large,
-        paddingRight: space.large,
-        fontSize: fontSize[3],
-      },
     },
   },
   borders: borders,

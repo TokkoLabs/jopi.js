@@ -63,3 +63,21 @@ export const Add = ({ color = 'black', ...props }) => (
     />
   </Svg>
 )
+
+export const ChevronLeft = ({ color = 'black', ...props }) => (
+  <Svg width="8" height="12" viewBox="0 0 18 12" fill="none" {...props}>
+    <path
+      d="M7.41 1.41L6 0L0 6L6 12L7.41 10.59L2.83 6L7.41 1.41Z"
+      fill={color}
+    />
+  </Svg>
+)
+
+export const ChevronRight = ({ color = 'black', ...props }) => (
+  <Svg width="8" height="12" viewBox="0 0 18 12" fill="none" {...props}>
+    <path
+      d="M2.00009 0L0.590088 1.41L5.17009 6L0.590088 10.59L2.00009 12L8.00009 6L2.00009 0Z"
+      fill={color}
+    />
+  </Svg>
+)
