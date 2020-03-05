@@ -20,7 +20,7 @@ export const normal = () =>
       <React.Fragment>
         <Button onClick={toggle}>My awesome Drawer</Button>
         {isOpen && (
-          <Drawer isOpen={isOpen} side={'right'}>
+          <Drawer isOpen={isOpen} screenSide={'left'}>
             <Drawer.Header>
               <Button
                 variant="default"

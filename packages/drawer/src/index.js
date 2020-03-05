@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Box, Flex } from '@oneloop/box'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export const Drawer = ({ children, isOpen = false, side, ...props }) => {
+export const Drawer = ({ children, isOpen = false, screenSide, ...props }) => {
   const portalNode = document.createElement('div')
   portalNode.setAttribute('id', 'drawerPortal')
 
@@ -26,9 +26,11 @@ export const Drawer = ({ children, isOpen = false, side, ...props }) => {
 
   return ReactDOM.createPortal(
     <AnimatePresence>
-      {side === 'left'
-        ? ((drawerContentInitial[side] = 0), (drawerContentInitial.x = -100))
-        : ((drawerContentInitial[side] = 0), (drawerContentInitial.x = 100))}
+      {screenSide === 'left'
+        ? ((drawerContentInitial[screenSide] = 0),
+          (drawerContentInitial.x = -100))
+        : ((drawerContentInitial[screenSide] = 0),
+          (drawerContentInitial.x = 100))}
       {isOpen && (
         <motion.div
           key="drawerOverlay"
