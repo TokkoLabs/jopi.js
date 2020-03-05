@@ -20,17 +20,13 @@ export const normal = () =>
       <React.Fragment>
         <Button onClick={toggle}>My awesome Drawer</Button>
         {isOpen && (
-          <Drawer isOpen={isOpen}>
+          <Drawer isOpen={isOpen} side={'right'}>
             <Drawer.Header>
               <Button
+                variant="default"
+                size="small"
                 onClick={toggle}
-                sx={{
-                  bg: 'transparent',
-                  mr: '10px',
-                  color: 'black',
-                  fontSize: '20px',
-                  p: '0px',
-                }}
+                sx={{ bg: 'inherit', border: 0 }}
               >
                 X
               </Button>
@@ -46,14 +42,28 @@ export const normal = () =>
               <Text
                 sx={{
                   textDecoration: 'underline',
+                  mb: '5px',
                 }}
               >
                 Drawer Body
               </Text>
-              <Text>Lorem Ipsum is simply dummy text</Text>
+              <Text sx={{ mb: '5px' }}>This is a Drawer component</Text>
+              <Text sx={{ mb: '5px' }}>
+                Drawer consists of an Overlay that animates from{' '}
+                <em>opacity:0</em> to <em>opacity:1</em>
+              </Text>
+              <Text sx={{ mb: '5px' }}>
+                Inside the Overlay there is a Drawer Content that handles Drawer
+                animation on <em>translate</em>
+              </Text>
+              <Text>Drawer Content has 3 children:</Text>
+              <ul>
+                <li>Drawer Title</li>
+                <li>Drawer Body</li>
+                <li>Drawer Footer</li>
+              </ul>
               <Text>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Drawer has a <button>close button (x) </button>
               </Text>
             </Drawer.Body>
             <Drawer.Footer>

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Box, Flex } from '@oneloop/box'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export const Drawer = ({ children, isOpen = false, ...props }) => {
+export const Drawer = ({ children, isOpen = false, side, ...props }) => {
   const portalNode = document.createElement('div')
   portalNode.setAttribute('id', 'drawerPortal')
 
@@ -14,12 +14,32 @@ export const Drawer = ({ children, isOpen = false, ...props }) => {
     }
   }, [])
 
+  const drawerContentInitial = {
+    backgroundColor: 'white',
+    position: 'absolute',
+    height: '100%',
+    maxWidth: '100%',
+    overflowY: 'auto',
+    padding: '10px',
+    x: -100,
+  }
+
   return ReactDOM.createPortal(
     <AnimatePresence>
+      {side === 'left'
+        ? ((drawerContentInitial[side] = 0), (drawerContentInitial.x = -100))
+        : ((drawerContentInitial[side] = 0), (drawerContentInitial.x = 100))}
       {isOpen && (
         <motion.div
           key="drawerOverlay"
-          initial="hidden"
+          initial={{
+            backgroundColor: 'rgba(4, 4, 4, 0.79)',
+            position: 'fixed',
+            left: 0,
+            top: 0,
+            width: '100%',
+            height: '100%',
+          }}
           animate="visible"
           exit="hidden"
           variants={{
@@ -28,19 +48,13 @@ export const Drawer = ({ children, isOpen = false, ...props }) => {
             },
             hidden: {
               opacity: 0,
-              backgroundColor: 'rgba(4, 4, 4, 0.79)',
-              position: 'fixed',
-              left: 0,
-              top: 0,
-              width: '100%',
-              height: '100%',
             },
           }}
           transition={{ duration: 0.2 }}
         >
           <motion.div
             key="drawerContent"
-            initial="hidden"
+            initial={drawerContentInitial}
             animate="visible"
             exit="hidden"
             variants={{
@@ -48,13 +62,7 @@ export const Drawer = ({ children, isOpen = false, ...props }) => {
                 x: 0,
               },
               hidden: {
-                x: -500,
-                backgroundColor: 'white',
-                position: 'fixed',
-                height: '100%',
-                maxWidth: '100%',
-                overflowY: 'auto',
-                padding: '10px',
+                x: -100,
               },
             }}
             transition={{ duration: 0.3 }}
