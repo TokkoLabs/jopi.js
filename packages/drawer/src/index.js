@@ -14,6 +14,15 @@ export const Drawer = ({ children, isOpen = false, screenSide, ...props }) => {
     }
   }, [])
 
+  const drawerOverlayInitial = {
+    backgroundColor: 'rgba(4, 4, 4, 0.79)',
+    position: 'fixed',
+    left: 0,
+    top: 0,
+    width: '100%',
+    height: '100%',
+  }
+
   const drawerContentInitial = {
     backgroundColor: 'white',
     position: 'absolute',
@@ -26,22 +35,10 @@ export const Drawer = ({ children, isOpen = false, screenSide, ...props }) => {
 
   return ReactDOM.createPortal(
     <AnimatePresence>
-      {screenSide === 'left'
-        ? ((drawerContentInitial[screenSide] = 0),
-          (drawerContentInitial.x = -100))
-        : ((drawerContentInitial[screenSide] = 0),
-          (drawerContentInitial.x = 100))}
       {isOpen && (
         <motion.div
           key="drawerOverlay"
-          initial={{
-            backgroundColor: 'rgba(4, 4, 4, 0.79)',
-            position: 'fixed',
-            left: 0,
-            top: 0,
-            width: '100%',
-            height: '100%',
-          }}
+          initial={drawerOverlayInitial}
           animate="visible"
           exit="hidden"
           variants={{
@@ -55,6 +52,11 @@ export const Drawer = ({ children, isOpen = false, screenSide, ...props }) => {
           transition={{ duration: 0.2 }}
         >
           <motion.div
+            {...(screenSide === 'left'
+              ? ((drawerContentInitial[screenSide] = 0),
+                (drawerContentInitial.x = -100))
+              : ((drawerContentInitial[screenSide] = 0),
+                (drawerContentInitial.x = 100)))}
             key="drawerContent"
             initial={drawerContentInitial}
             animate="visible"
