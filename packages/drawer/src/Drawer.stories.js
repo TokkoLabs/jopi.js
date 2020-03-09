@@ -1,9 +1,7 @@
 import React from 'react'
 import { useToggle } from '@oneloop/hooks'
-import { Input } from '@oneloop/input'
 import { Button } from '@oneloop/button'
 import { Text } from '@oneloop/text'
-import { motion } from 'framer-motion'
 
 import { Drawer } from '.'
 
@@ -20,7 +18,7 @@ export const normal = () =>
       <React.Fragment>
         <Button onClick={toggle}>My awesome Drawer</Button>
         {isOpen && (
-          <Drawer isOpen={isOpen} screenSide={'right'}>
+          <Drawer isOpen={isOpen} screenSide={'left'}>
             <Drawer.Header>
               <Button
                 variant="default"
