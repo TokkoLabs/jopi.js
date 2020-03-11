@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Box, Flex } from '@oneloop/box'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export const Drawer = ({ children, isOpen = false, screenSide, ...props }) => {
+const DrawerPortal = ({ isOpen = false, children, screenSide, ...props }) => {
   const portalNode = document.createElement('div')
   portalNode.setAttribute('id', 'drawerPortal')
 
@@ -12,7 +12,7 @@ export const Drawer = ({ children, isOpen = false, screenSide, ...props }) => {
     return () => {
       portalNode.parentNode.removeChild(portalNode)
     }
-  }, [])
+  }, [isOpen])
 
   const drawerOverlayInitial = {
     backgroundColor: 'rgba(4, 4, 4, 0.79)',
@@ -34,49 +34,53 @@ export const Drawer = ({ children, isOpen = false, screenSide, ...props }) => {
   }
 
   return ReactDOM.createPortal(
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          key="drawerOverlay"
-          initial={drawerOverlayInitial}
-          animate="visible"
-          exit="hidden"
-          variants={{
-            visible: {
-              opacity: 1,
-            },
-            hidden: {
-              opacity: 0,
-            },
-          }}
-          transition={{ duration: 0.2 }}
-        >
-          <motion.div
-            {...(screenSide === 'left'
-              ? ((drawerContentInitial[screenSide] = 0),
-                (drawerContentInitial.x = -100))
-              : ((drawerContentInitial[screenSide] = 0),
-                (drawerContentInitial.x = 100)))}
-            key="drawerContent"
-            initial={drawerContentInitial}
-            animate="visible"
-            exit="hidden"
-            variants={{
-              visible: {
-                x: 0,
-              },
-              hidden: {
-                x: -100,
-              },
-            }}
-            transition={{ duration: 0.3 }}
-          >
-            {children}
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>,
+    <motion.div
+      key="drawerOverlay"
+      initial={drawerOverlayInitial}
+      animate="visible"
+      exit="hidden"
+      variants={{
+        visible: {
+          opacity: 1,
+        },
+        hidden: {
+          opacity: 0,
+        },
+      }}
+      transition={{ duration: 0.3 }}
+    >
+      <motion.div
+        {...(screenSide === 'left'
+          ? ((drawerContentInitial[screenSide] = 0),
+            (drawerContentInitial.x = -100))
+          : ((drawerContentInitial[screenSide] = 0),
+            (drawerContentInitial.x = 100)))}
+        key="drawerContent"
+        initial={drawerContentInitial}
+        animate="visible"
+        exit="hidden"
+        variants={{
+          visible: {
+            x: 0,
+          },
+          hidden: {
+            x: -100,
+          },
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        {children}
+      </motion.div>
+    </motion.div>,
     portalNode
+  )
+}
+
+export const Drawer = ({ isOpen = true, children, ...props }) => {
+  return (
+    <AnimatePresence>
+      {isOpen && <DrawerPortal>{children}</DrawerPortal>}
+    </AnimatePresence>
   )
 }
 
