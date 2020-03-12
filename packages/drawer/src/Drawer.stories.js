@@ -2,10 +2,7 @@ import React from 'react'
 import { useToggle } from '@oneloop/hooks'
 import { Button } from '@oneloop/button'
 import { Text } from '@oneloop/text'
-
 import { Drawer } from '.'
-
-import { AnimatePresence } from 'framer-motion'
 
 export default {
   component: Drawer,
