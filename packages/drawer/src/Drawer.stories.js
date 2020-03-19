@@ -16,7 +16,7 @@ export const normal = () =>
     return (
       <React.Fragment>
         <Button onClick={toggle}>My awesome Drawer</Button>
-        <Drawer isOpen={isOpen} screenSide={'left'}>
+        <Drawer isOpen={isOpen} screenSide={'right'}>
           <Drawer.Header>
             <Button
               variant="default"

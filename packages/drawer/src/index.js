@@ -3,7 +3,17 @@ import ReactDOM from 'react-dom'
 import { Box, Flex } from '@oneloop/box'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const DrawerPortal = ({ isOpen = false, children, screenSide, ...props }) => {
+export const Drawer = ({ isOpen = false, children, screenSide, ...props }) => {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <DrawerPortal screenSide={screenSide}>{children}</DrawerPortal>
+      )}
+    </AnimatePresence>
+  )
+}
+
+const DrawerPortal = ({ isOpen, children, screenSide, ...props }) => {
   const portalNode = document.createElement('div')
   portalNode.setAttribute('id', 'drawerPortal')
 
@@ -30,7 +40,6 @@ const DrawerPortal = ({ isOpen = false, children, screenSide, ...props }) => {
     maxWidth: '100%',
     overflowY: 'auto',
     padding: '10px',
-    x: -100,
   }
 
   return ReactDOM.createPortal(
@@ -54,33 +63,25 @@ const DrawerPortal = ({ isOpen = false, children, screenSide, ...props }) => {
           ? ((drawerContentInitial[screenSide] = 0),
             (drawerContentInitial.x = -100))
           : ((drawerContentInitial[screenSide] = 0),
-            (drawerContentInitial.x = 100)))}
+            (drawerContentInitial.x = 1000)))}
         key="drawerContent"
         initial={drawerContentInitial}
-        animate="visible"
-        exit="hidden"
+        animate="moveIn"
+        exit="moveOut"
         variants={{
-          visible: {
+          moveIn: {
             x: 0,
           },
-          hidden: {
-            x: -100,
+          moveOut: {
+            x: 1000,
           },
         }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
       >
         {children}
       </motion.div>
     </motion.div>,
     portalNode
-  )
-}
-
-export const Drawer = ({ isOpen = true, children, ...props }) => {
-  return (
-    <AnimatePresence>
-      {isOpen && <DrawerPortal>{children}</DrawerPortal>}
-    </AnimatePresence>
   )
 }
 
