@@ -24,15 +24,15 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            yarn install
+            npm install
       - run:
           name: Link dependencies
           command: |
-            yarn bootstrap
+            npm run bootstrap
       - run:
           name: Build packages and test
           command: |
-            yarn test
+            npm test
       - <<: *save_modules_cache
   Deliver_Deploy:
     <<: *defaults
