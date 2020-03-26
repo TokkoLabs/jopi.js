@@ -3,6 +3,10 @@
   "version": "1.5.2",
   "main": "lib/index.js",
   "module": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "dependencies": {
     "@oneloop/alert": "^1.2.30",
     "@oneloop/badge": "^1.2.27",

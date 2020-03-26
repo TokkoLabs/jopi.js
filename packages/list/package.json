@@ -3,6 +3,10 @@
   "version": "1.2.34",
   "main": "lib/index.js",
   "module": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "dependencies": {
     "@oneloop/box": "^1.2.27",
     "@oneloop/hooks": "^1.2.28",
