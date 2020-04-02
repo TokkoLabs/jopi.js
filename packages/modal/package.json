@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/modal",
-  "version": "1.2.36",
+  "version": "1.2.37",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,10 +8,10 @@
     "src"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.30",
-    "@oneloop/button": "^1.2.33",
-    "@oneloop/hooks": "^1.2.31",
-    "@oneloop/text": "^1.2.30",
+    "@oneloop/box": "^1.2.31",
+    "@oneloop/button": "^1.2.34",
+    "@oneloop/hooks": "^1.2.32",
+    "@oneloop/text": "^1.2.31",
     "prop-types": "^15.7.2",
     "react-dom": "16.12.0"
   },
