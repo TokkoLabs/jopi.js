@@ -28,10 +28,10 @@ export const Box = styled.div(
   theme,
   sx,
   space,
-  flexbox,
-  typography,
   color,
   layout,
+  flexbox,
+  typography,
   border,
   position
 )
