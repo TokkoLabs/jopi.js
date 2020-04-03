@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import {
+  border,
   variant,
   space,
   color,
   layout,
   position,
   flexbox,
-  border,
   typography,
 } from 'styled-system'
 import css from '@styled-system/css'
@@ -28,10 +28,10 @@ export const Box = styled.div(
   theme,
   sx,
   space,
-  color,
-  layout,
   flexbox,
   typography,
+  color,
+  layout,
   border,
   position
 )
