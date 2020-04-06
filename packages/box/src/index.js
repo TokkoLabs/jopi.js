@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import {
+  border,
   space,
   color,
   layout,
   flexbox,
-  border,
   typography,
   position,
   variant,
