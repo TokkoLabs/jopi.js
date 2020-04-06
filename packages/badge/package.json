@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/badge",
-  "version": "1.2.34",
+  "version": "1.2.35",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,7 +8,7 @@
     "src"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.34"
+    "@oneloop/box": "^1.2.35"
   },
   "peerDependencies": {
     "react": "^16.8.0"
