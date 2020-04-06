@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import {
-  border,
   space,
   color,
   layout,
@@ -8,6 +7,7 @@ import {
   typography,
   position,
   variant,
+  border,
 } from 'styled-system'
 import css from '@styled-system/css'
 
