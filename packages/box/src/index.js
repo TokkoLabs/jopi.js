@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {
-  space,
   border,
+  space,
   color,
   layout,
   flexbox,
