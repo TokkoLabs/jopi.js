@@ -4,10 +4,10 @@ import {
   color,
   layout,
   flexbox,
-  border,
   typography,
   position,
   variant,
+  border,
 } from 'styled-system'
 import css from '@styled-system/css'
 
