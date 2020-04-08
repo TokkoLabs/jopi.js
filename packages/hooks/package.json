@@ -4,7 +4,8 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "dependencies": {
     "lodash": "4.17.15"

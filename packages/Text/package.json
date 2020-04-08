@@ -4,7 +4,8 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.40",

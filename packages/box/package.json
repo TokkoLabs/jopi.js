@@ -4,7 +4,8 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "dependencies": {
     "@styled-system/css": "^5.1.4",
