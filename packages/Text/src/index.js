@@ -20,8 +20,8 @@ export const Heading = props => (
     {...props}
     __css={{
       fontSize: 4,
-      fontFamily: 'heading',
       fontWeight: 'heading',
+      fontFamily: 'heading',
       lineHeight: 'heading',
       letterSpacing: 'heading',
       color: 'neutral.6',
