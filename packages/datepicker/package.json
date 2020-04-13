@@ -4,8 +4,7 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
-    "lib",
-    "src"
+    "lib"
   ],
   "dependencies": {
     "@datepicker-react/hooks": "^2.2.0",
