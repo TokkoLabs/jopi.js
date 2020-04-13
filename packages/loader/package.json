@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/loader",
-  "version": "1.2.40",
+  "version": "1.2.41",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,8 +8,8 @@
     "src"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.40",
-    "@oneloop/text": "^1.2.40",
+    "@oneloop/box": "^1.2.41",
+    "@oneloop/text": "^1.2.41",
     "prop-types": "^15.7.2",
     "styled-components": "4.4.1",
     "styled-system": "5.1.4"
