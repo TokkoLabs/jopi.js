@@ -11,8 +11,8 @@ export const Alert = ({ type = 'success', text, ...props }) => (
     __css={{
       width: '100%',
       bg: 'white',
-      borderRadius: 'circle',
       boxShadow: 'active',
+      borderRadius: 'circle',
       justifyContent: 'space-between',
       p: 1,
     }}
