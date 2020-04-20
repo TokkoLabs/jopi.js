@@ -19,8 +19,8 @@ After some development, you’ll have some commits you want to push.
 :warning: Before pushing, you must fetch TokkoLabs/jopi.js/development. 
 If this does not cause conflicts, proceed to **merge** the changes to your branch.
 ```
-git fetch <TokkoLabs/jopi.js/develompent> <my-branch>
-git merge origin/<my-branch>
+git fetch <TokkoLabs/jopi.js/develompent>
+git merge  <TokkoLabs/jopi.js/develompent>
 ```
 
 Next you can push the changes to your remote
