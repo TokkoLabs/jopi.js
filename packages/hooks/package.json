@@ -1,8 +1,11 @@
 {
   "name": "@oneloop/hooks",
-  "version": "1.2.24",
+  "version": "1.2.34",
   "main": "lib/index.js",
   "module": "src/index.js",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "lodash": "4.17.15"
   },

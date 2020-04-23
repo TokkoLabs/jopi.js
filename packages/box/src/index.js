@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import {
+  border,
+  variant,
   space,
   color,
   layout,
-  flexbox,
-  border,
-  typography,
   position,
-  variant,
+  flexbox,
+  typography,
 } from 'styled-system'
 import css from '@styled-system/css'
 

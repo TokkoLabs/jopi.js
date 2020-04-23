@@ -1,8 +1,11 @@
 {
   "name": "@oneloop/theme",
-  "version": "1.2.23",
+  "version": "1.2.33",
   "main": "lib/index.js",
   "module": "src/index.js",
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },
