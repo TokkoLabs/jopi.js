@@ -13,6 +13,16 @@ export const Drawer = ({ isOpen = false, children, screenSide, ...props }) => {
   )
 }
 
+const variantsOverlay = {
+  open: { opacity: 1 },
+  closed: { opacity: 0, transition: { delay: 0.3 } },
+}
+
+const variantsDrawer = {
+  open: { x: 0 },
+  closed: { x: 1000 },
+}
+
 const DrawerPortal = ({ isOpen, children, screenSide, ...props }) => {
   const portalNode = document.createElement('div')
   portalNode.setAttribute('id', 'drawerPortal')
@@ -45,18 +55,10 @@ const DrawerPortal = ({ isOpen, children, screenSide, ...props }) => {
   return ReactDOM.createPortal(
     <motion.div
       key="drawerOverlay"
+      variants={variantsOverlay}
       initial={drawerOverlayInitial}
-      animate="visible"
-      exit="hidden"
-      variants={{
-        visible: {
-          opacity: 1,
-        },
-        hidden: {
-          opacity: 0,
-        },
-      }}
-      transition={{ duration: 0.3 }}
+      animate="open"
+      exit="closed"
     >
       <motion.div
         {...(screenSide === 'left'
@@ -65,17 +67,9 @@ const DrawerPortal = ({ isOpen, children, screenSide, ...props }) => {
           : ((drawerContentInitial[screenSide] = 0),
             (drawerContentInitial.x = 1000)))}
         key="drawerContent"
+        variants={variantsDrawer}
         initial={drawerContentInitial}
-        animate="moveIn"
-        exit="moveOut"
-        variants={{
-          moveIn: {
-            x: 0,
-          },
-          moveOut: {
-            x: 1000,
-          },
-        }}
+        exit="closed"
         transition={{ duration: 0.5 }}
       >
         {children}
