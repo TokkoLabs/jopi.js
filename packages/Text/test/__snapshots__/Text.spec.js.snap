@@ -22,8 +22,8 @@ exports[`Text renders heading correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-size: 24px;
-  font-weight: heading;
   font-family: heading;
+  font-weight: heading;
   line-height: heading;
   -webkit-letter-spacing: heading;
   -moz-letter-spacing: heading;
