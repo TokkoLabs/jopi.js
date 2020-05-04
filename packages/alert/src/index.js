@@ -9,8 +9,8 @@ export const Alert = ({ type = 'success', text, ...props }) => (
     variant="alert"
     {...props}
     __css={{
-      width: '100%',
       bg: 'white',
+      width: '100%',
       boxShadow: 'active',
       borderRadius: 'circle',
       justifyContent: 'space-between',
