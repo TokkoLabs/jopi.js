@@ -26,6 +26,7 @@ const Datepicker = ({
     startDate: null,
     endDate: null,
     focusedInput: START_DATE,
+    numberOfMonths: 1,
   })
   const handleDataChange = data => {
     action('onDatesChange')(data)
@@ -42,6 +43,7 @@ const Datepicker = ({
       startDate={state.startDate}
       endDate={state.endDate}
       focusedInput={state.focusedInput}
+      numberOfMonths={state.numberOfMonths}
       firstDayOfWeek={firstDayOfWeek}
       dayLabelFormat={dayLabelFormat}
       weekdayLabelFormat={weekdayLabelFormat}
