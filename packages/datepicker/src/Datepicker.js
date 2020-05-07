@@ -15,6 +15,7 @@ export const Datepicker = ({
   startDate,
   endDate,
   focusedInput,
+  numberOfMonths,
   dayLabelFormat = dayLabelFormatFn,
   weekdayLabelFormat = weekdayLabelFormatFn,
   monthLabelFormat = monthLabelFormatFn,
@@ -39,6 +40,7 @@ export const Datepicker = ({
     startDate,
     endDate,
     focusedInput,
+    numberOfMonths,
     onDatesChange,
     firstDayOfWeek: firstDayOfWeekProp,
   })

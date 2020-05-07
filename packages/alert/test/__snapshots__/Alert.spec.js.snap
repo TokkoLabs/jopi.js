@@ -84,8 +84,8 @@ exports[`Alert danger 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  width: 100%;
   background-color: white;
+  width: 100%;
   box-shadow: active;
   border-radius: circle;
   -webkit-box-pack: justify;
@@ -228,8 +228,8 @@ exports[`Alert primary default 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  width: 100%;
   background-color: white;
+  width: 100%;
   box-shadow: active;
   border-radius: circle;
   -webkit-box-pack: justify;
@@ -376,8 +376,8 @@ exports[`Alert warning 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  width: 100%;
   background-color: white;
+  width: 100%;
   box-shadow: active;
   border-radius: circle;
   -webkit-box-pack: justify;
