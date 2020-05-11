@@ -71,5 +71,9 @@
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.9.0",
     "webpack": "^4.40.2"
-  }
+  },
+  "dependencies": {
+    "chokidar": "^3.4.0"
+  },
+  "version": "0.0.0"
 }
