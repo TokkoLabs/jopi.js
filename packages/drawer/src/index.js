@@ -3,27 +3,31 @@ import ReactDOM from 'react-dom'
 import { Box, Flex } from '@oneloop/box'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export const Drawer = ({ isOpen = false, children, screenSide, ...props }) => {
+export const Drawer = ({
+  isOpen = false,
+  children,
+  screenSide,
+  animationWidth,
+  ...props
+}) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <DrawerPortal screenSide={screenSide}>{children}</DrawerPortal>
+        <DrawerPortal screenSide={screenSide} animationWidth={animationWidth}>
+          {children}
+        </DrawerPortal>
       )}
     </AnimatePresence>
   )
 }
 
-const variantsOverlay = {
-  open: { opacity: 1 },
-  closed: { opacity: 0, transition: { delay: 0.3 } },
-}
-
-const variantsDrawer = {
-  open: { x: 0 },
-  closed: { x: 1000 },
-}
-
-const DrawerPortal = ({ isOpen, children, screenSide, ...props }) => {
+const DrawerPortal = ({
+  isOpen,
+  children,
+  screenSide,
+  animationWidth = 1000,
+  ...props
+}) => {
   const portalNode = document.createElement('div')
   portalNode.setAttribute('id', 'drawerPortal')
 
@@ -33,6 +37,16 @@ const DrawerPortal = ({ isOpen, children, screenSide, ...props }) => {
       portalNode.parentNode.removeChild(portalNode)
     }
   }, [isOpen])
+
+  const variantsOverlay = {
+    open: { opacity: 1 },
+    closed: { opacity: 0, transition: { delay: 0.3 } },
+  }
+
+  const variantsDrawer = {
+    open: { x: 0 },
+    closed: { x: 1000 },
+  }
 
   const drawerOverlayInitial = {
     backgroundColor: 'rgba(4, 4, 4, 0.79)',
@@ -52,6 +66,16 @@ const DrawerPortal = ({ isOpen, children, screenSide, ...props }) => {
     padding: '10px',
   }
 
+  drawerContentInitial[screenSide] = 0
+
+  if (screenSide === 'left') {
+    drawerContentInitial.x = animationWidth * -1
+    variantsDrawer.closed.x = animationWidth * -1
+  } else {
+    drawerContentInitial.x = animationWidth
+    variantsDrawer.closed.x = animationWidth
+  }
+
   return ReactDOM.createPortal(
     <motion.div
       key="drawerOverlay"
@@ -61,11 +85,6 @@ const DrawerPortal = ({ isOpen, children, screenSide, ...props }) => {
       exit="closed"
     >
       <motion.div
-        {...(screenSide === 'left'
-          ? ((drawerContentInitial[screenSide] = 0),
-            (drawerContentInitial.x = -100))
-          : ((drawerContentInitial[screenSide] = 0),
-            (drawerContentInitial.x = 1000)))}
         key="drawerContent"
         variants={variantsDrawer}
         initial={drawerContentInitial}
