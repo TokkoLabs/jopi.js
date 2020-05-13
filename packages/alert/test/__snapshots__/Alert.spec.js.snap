@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert danger 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 16px;
+  margin-right: 64px;
+  background-color: danger;
+  width: 40px;
+  height: 40px;
+  border-radius: circle;
+}
+
 .c2 {
   box-sizing: border-box;
   margin: 0;
@@ -66,18 +78,6 @@ exports[`Alert danger 1`] = `
   margin: auto;
   width: 14px;
   height: 14px;
-}
-
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding: 16px;
-  margin-right: 64px;
-  background-color: danger;
-  width: 40px;
-  height: 40px;
-  border-radius: circle;
 }
 
 .c0 {
@@ -293,6 +293,18 @@ exports[`Alert primary default 1`] = `
 `;
 
 exports[`Alert warning 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 16px;
+  margin-right: 64px;
+  background-color: warning;
+  width: 40px;
+  height: 40px;
+  border-radius: circle;
+}
+
 .c2 {
   box-sizing: border-box;
   margin: 0;
@@ -358,18 +370,6 @@ exports[`Alert warning 1`] = `
   margin: auto;
   width: 14px;
   height: 14px;
-}
-
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding: 16px;
-  margin-right: 64px;
-  background-color: warning;
-  width: 40px;
-  height: 40px;
-  border-radius: circle;
 }
 
 .c0 {
