@@ -39,8 +39,8 @@ exports[`Loader renders correctly 1`] = `
   -webkit-transform-origin: 50%;
   -ms-transform-origin: 50%;
   transform-origin: 50%;
-  -webkit-animation: fIIevM 500ms alternate infinite ease;
-  animation: fIIevM 500ms alternate infinite ease;
+  -webkit-animation: lazCIu 500ms alternate infinite ease;
+  animation: lazCIu 500ms alternate infinite ease;
 }
 
 <div
