@@ -98,7 +98,7 @@ const DrawerPortal = ({
   )
 }
 
-const DrawerHeader = (props) => (
+const DrawerHeader = props => (
   <Flex
     {...props}
     __css={{
@@ -110,9 +110,9 @@ const DrawerHeader = (props) => (
   />
 )
 
-const DrawerBody = (props) => <Box {...props} />
+const DrawerBody = props => <Box {...props} />
 
-const DrawerFooter = (props) => (
+const DrawerFooter = props => (
   <Flex
     {...props}
     sx={{

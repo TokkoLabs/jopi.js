@@ -4,6 +4,7 @@ import { Box, Flex } from '@oneloop/box'
 import { Button } from '@oneloop/button'
 import { Checkbox } from '@oneloop/checkbox'
 import { Collapsible } from '@oneloop/collapsible'
+import { Drawer } from '@oneloop/drawer'
 import { Dropdown } from '@oneloop/dropdown'
 import { Image } from '@oneloop/image'
 import { Input } from '@oneloop/input'
@@ -32,6 +33,7 @@ export {
   Radio,
   Text,
   Heading,
+  Drawer,
   Dropdown,
   Collapsible,
   Loader,
