@@ -14,7 +14,7 @@ exports[`Label renders correctly 1`] = `
 }
 
 <label
-  className="c0"
+  className="sc-1e38spu-0 c0"
 >
   This is a label
 </label>
