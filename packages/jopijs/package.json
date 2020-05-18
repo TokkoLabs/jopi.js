@@ -14,6 +14,7 @@
     "@oneloop/checkbox": "^1.2.44",
     "@oneloop/collapsible": "^1.2.47",
     "@oneloop/datepicker": "^1.2.45",
+    "@oneloop/drawer": "^1.0.0",
     "@oneloop/dropdown": "^1.2.58",
     "@oneloop/image": "^1.2.44",
     "@oneloop/input": "^1.2.48",
