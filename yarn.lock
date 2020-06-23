@@ -1230,11 +1230,11 @@
     minimist "^1.2.0"
 
 "@datepicker-react/hooks@^2.2.0":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@datepicker-react/hooks/-/hooks-2.3.1.tgz#b33f28aa9dc8628b5c273846544c38693452bd8a"
-  integrity sha512-9GIGWV0jwt2sDicK/e7Wdymv52n6Hj7srTjC+TMGO6eHRyIa29nrpbrepUVTITF9nwPLCjHll6cNfCKVD0Fghw==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@datepicker-react/hooks/-/hooks-2.6.0.tgz#609110056fb1dc5161e89f3b0bd442fbe15f5f38"
+  integrity sha512-i6lSlEbs5kvAhhh9vi4xW8GIXTCo20wjVResJQjVV4OcNoSON56Ksaa0uO03JbdiccpUisRxsdbjZ8kwi8JDXQ==
   dependencies:
-    date-fns "^2.8.1"
+    date-fns "^2.14.0"
 
 "@egoist/vue-to-react@^1.1.0":
   version "1.1.0"
@@ -6136,7 +6136,7 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-date-fns@^2.8.1:
+date-fns@^2.14.0, date-fns@^2.8.1:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.14.0.tgz#359a87a265bb34ef2e38f93ecf63ac453f9bc7ba"
   integrity sha512-1zD+68jhFgDIM0rF05rcwYO8cExdNqxjq4xP1QKM60Q45mnO6zaMWB4tOzrIr4M4GSLntsKeE4c9Bdl2jhL/yw==
