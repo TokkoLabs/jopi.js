@@ -1330,9 +1330,9 @@
     minimist "^1.2.0"
 
 "@datepicker-react/hooks@^2.2.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@datepicker-react/hooks/-/hooks-2.6.0.tgz#609110056fb1dc5161e89f3b0bd442fbe15f5f38"
-  integrity sha512-i6lSlEbs5kvAhhh9vi4xW8GIXTCo20wjVResJQjVV4OcNoSON56Ksaa0uO03JbdiccpUisRxsdbjZ8kwi8JDXQ==
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@datepicker-react/hooks/-/hooks-2.7.0.tgz#2f5b00dfc6b5439fdb8c902d39893669a2f04009"
+  integrity sha512-LdtrwTcwB7xzRwb++C66b9VOexeP0xa4K4WMvuSplD0hW4Uah5fOLZW+IJJaZEH1jDX++PFzEPQ6QxWNiFPrZA==
   dependencies:
     date-fns "^2.14.0"
 
