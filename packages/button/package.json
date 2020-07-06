@@ -8,8 +8,8 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.45",
-    "styled-components": "4.4.1",
-    "styled-system": "5.1.4"
+    "styled-components": "5.1.1",
+    "styled-system": "5.1.5"
   },
   "peerDependencies": {
     "react": "^16.8.0",
