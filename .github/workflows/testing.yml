@@ -36,6 +36,9 @@ jobs:
       - name: updetea los paquetes de lerna
         run: lerna version patch --yes
 
+      - name: agrega usuario a npm
+        run: npm-cli-adduser -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
+
       - name: prueba de logueo WHOAMI
         run: npm whoami
 
