@@ -29,10 +29,10 @@ jobs:
         run: cd node_modules/.bin
 
       - name: updetea los paquetes de lerna
-        run: lerna version patch —yes
+        run: lerna version patch -—yes
 
       - name: publica una nueva verion de jopi
-        run: lerna publish from-package —yes
+        run: lerna publish from-package -—yes
 
       - name: listar
         run: ls
