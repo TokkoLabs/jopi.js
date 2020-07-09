@@ -23,8 +23,14 @@ jobs:
       - name: loguearse
         run: npm-cli-login -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
 
-      - name: listar tokens
-        run: npm token list
+      - name: se posiciona en la ruta de bin
+        run: cd node_modules/.bin
+
+      - name: updetea los paquetes de lerna
+        run: lerna version patch —yes
+
+      - name: publica una nueva verion de jopi
+        run: lerna publish from-package —yes
 
       - name: listar
         run: ls
