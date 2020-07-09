@@ -13,27 +13,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-          #registry-url: https://www.npmjs.com/
-          #scope: "@bsabatino"
+          registry-url: 'https://registry.npmjs.org'
 
-      - name: npm install
-        run: npm install
+      - name: Installing Npn & Lerna & Yarn
+        run: |
+          npm install
+          npm install -g npm-cli-login
 
-      - name: lerna install
-        run: npm install --global lerna
-
-      - name: iniciar lerna
-        run: lerna init
-
-      - name: instala yarn
-        run: yarn install
-      #- name: yarn coverage
-      #  run: yarn run coverage -u
-      - name: run yarn test
-        run: yarn test
-
-      - name: yarn Jest
-        run: yarn jest --coverage
-
-      - name: listar
-        run: ls
+      - name: Listar tokens
+        run: |
+          npm-cli-login -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
+          npm token
