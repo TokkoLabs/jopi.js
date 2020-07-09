@@ -21,9 +21,7 @@ jobs:
           npm install -g npm-cli-login
 
       - name: loguearse
-        run: |
-          npm-cli-login -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
-          npm token
+        run: npm-cli-login -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
 
       - name: listar tokens
         run: npm token list
