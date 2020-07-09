@@ -36,6 +36,9 @@ jobs:
       - name: updetea los paquetes de lerna
         run: lerna version patch --yes
 
+      - name: prueba de logueo WHOAMI
+        run: npm whoami
+
       - name: publica una nueva verion de jopi
         run: lerna publish from-package --yes
 
