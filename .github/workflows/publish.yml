@@ -1,0 +1,66 @@
+#on:
+#  push:
+#    branches:
+#      - master
+
+on: [push]
+
+jobs:
+  build:
+    name: Build Jopi
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: Installing node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Installing yarn
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Run coverage
+        run: yarn jest --coverage
+
+      - name: Build Jopi
+        run: yarn build
+
+  publish:
+    needs: build
+    name: Publish New Jopi Version
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: Installing node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Installing npm & lerna
+        run: |
+          npm install
+          npm install --global lerna
+
+      - name: Set Git config
+        run: |
+          git config --global user.email "${{secrets.GIT_EMAIL}}"
+          git config --global user.name "${{secrets.GIT_USER}}"
+
+      - name: Update lerna packages
+        run: |
+          cd node_modules/.bin
+          lerna version patch --yes
+
+      - name: Publish New Jopi version to NPM
+        run: lerna publish from-package -y --no-verify-access
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
