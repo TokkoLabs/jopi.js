@@ -34,8 +34,8 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
 
-      #- name: loguearse a npm
-      #  run: npm-cli-login -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
+      - name: loguearse a npm
+        run: npm-cli-login -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
 
       - name: loguearse a github
         run: |
