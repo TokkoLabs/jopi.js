@@ -48,6 +48,9 @@ jobs:
       - name: instala lerna
         run: npm install --global lerna
 
+      - name: inicio lerna
+        run: lerna init
+
       - name: se posiciona en la ruta de bin
         run: cd node_modules/.bin
 
