@@ -32,7 +32,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
+          registry-url: 'https://registry.npmjs.org'
 
       - name: loguearse a github
         run: |
@@ -58,6 +58,6 @@ jobs:
         run: lerna version patch --yes
 
       - name: publica una nueva version en NPM
-        run: lerna publish from-package -y --no-verify-access
+        run: lerna publish from-package -y --no-verify-access --no-verify-registry
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
