@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   build:
-    name: test for Jopi
+    name: buildea JOPI
     runs-on: ubuntu-latest
 
     steps:
@@ -15,14 +15,14 @@ jobs:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Installing Yarn
-        run: yarn install
-
-      - name: corre test de yarn
-        run: yarn test
-
-      - name: yarn Jest
-        run: yarn jest --coverage
+      #- name: instala yarn
+      #  run: yarn install
+      #- name: corre test de yarn
+      #  run: yarn test
+      #- name: corre el coverage
+      #  run: yarn jest --coverage
+      #- name: buildea la app
+      #  run: yarn build
 
   publish-npm:
     needs: build
@@ -37,10 +37,10 @@ jobs:
       #- name: loguearse a npm
       #  run: npm-cli-login -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
 
-      #- name: loguearse a github
-      #  run: |
-      #    git config --global user.email "bsabatino@navent.com"
-      #    git config --global user.name "bsabatino"
+      - name: loguearse a github
+        run: |
+          git config --global user.email "bsabatino@navent.com"  
+          git config --global user.name "bsabatino"
 
       - name: instala npm
         run: npm install
