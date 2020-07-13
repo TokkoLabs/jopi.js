@@ -1,0 +1,51 @@
+on: [push]
+jobs:
+  build:
+    name: test for Jopi
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      # - name: node install
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 12
+      #     registry-url: 'https://registry.npmjs.org'
+      # - name: Installing Yarn
+      #   run: yarn install
+      # - name: run yarn test
+      #   run: yarn test
+      # - name: yarn Jest
+      #   run: yarn jest --coverage
+  publish:
+    needs: build
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: node install
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: 'https://registry.npmjs.org'
+      - name: Installing Yarn
+        run: |
+          npm install
+          # npm install -g npm-cli-login
+          npm install --global lerna
+          # yarn install
+      - name: Set Git config
+        run: |
+          git config --global user.email "nquiroga@navent.com"
+          git config --global user.name "matiasz8"
+      # - name: Iniciando Lerna
+      #   run: lerna init
+      - name: se posiciona en la ruta de bin
+        run: cd node_modules/.bin
+      - name: updetea los paquetes de lerna
+        run: lerna version patch --yes
+      - name: publica una nueva version en NPM
+        run: lerna publish from-package -y --no-verify-access
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
