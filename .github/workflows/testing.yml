@@ -1,7 +1,7 @@
 on: [push]
 
 jobs:
-  runTest:
+  build:
     name: test for Jopi
     runs-on: ubuntu-latest
 
@@ -15,35 +15,46 @@ jobs:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Installing Npn & Lerna & Yarn
-        run: |
-          npm install
-          npm install -g npm-cli-login
-          npm install --global lerna
-          yarn install
+      - name: Installing Yarn
+        run: yarn install
 
-      - name: loguearse a npm
-        run: npm-cli-login -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
+      - name: corre test de yarn
+        run: yarn test
+
+      - name: yarn Jest
+        run: yarn jest --coverage
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+
+      #- name: loguearse a npm
+      #  run: npm-cli-login -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
+
+      #- name: loguearse a github
+      #  run: |
+      #    git config --global user.email "bsabatino@navent.com"
+      #    git config --global user.name "bsabatino"
+
+      - name: instala npm
+        run: npm install
+
+      - name: instala lerna
+        run: npm install --global lerna
 
       - name: se posiciona en la ruta de bin
         run: cd node_modules/.bin
 
-      - name: loguearse a github
-        run: |
-          git config --global user.email "bsabatino@navent.com"  
-          git config --global user.name "bsabatino"
-
       - name: updetea los paquetes de lerna
         run: lerna version patch --yes
 
-      - name: agrega usuario a npm
-        run: npm-cli-adduser -u ${{ secrets.NPM_USER_NAME }} -p '${{ secrets.NPM_PASSWORD }}' -e ${{ secrets.NPM_EMAIL }}
-
-      - name: prueba de logueo WHOAMI
-        run: npm whoami
-
-      - name: publica una nueva verion de jopi
-        run: lerna publish from-package --yes
-
-      - name: listar
-        run: ls
+      - name: publica una nueva version en NPM
+        run: lerna publish from-package -y --no-verify-access
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
