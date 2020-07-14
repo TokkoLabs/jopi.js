@@ -1,0 +1,30 @@
+on:
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  build:
+    name: Build Jopi
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Installing node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Installing yarn
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Run coverage
+        run: yarn jest --coverage
+
+      - name: Build Jopi
+        run: yarn build
