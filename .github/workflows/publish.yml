@@ -54,12 +54,14 @@ jobs:
           git config --global user.name "${{secrets.GIT_USER}}"
 
       - name: Update lerna packages
+        env:
+          GH_TOKEN: ${{secrets.GIT_TOKEN}}
         run: |
           cd node_modules/.bin
           lerna version patch --yes
 
       - name: Publish New Jopi version to NPM
-        run: lerna publish from-package -y --no-verify-access
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
+        run: lerna publish from-package -y --no-verify-access
