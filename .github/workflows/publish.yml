@@ -40,6 +40,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      - name: Configure git credentials
+        uses: OleksiyRudenko/gha-git-credentials@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Installing node
         uses: actions/setup-node@v1
         with:
