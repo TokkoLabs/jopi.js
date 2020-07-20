@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
 
-export const Text = props => (
+export const Text = (props) => (
   <Box
     as="p"
     tx="text"
@@ -13,15 +13,15 @@ export const Text = props => (
   />
 )
 
-export const Heading = props => (
+export const Heading = (props) => (
   <Box
     as="h2"
     tx="text"
     {...props}
     __css={{
       fontSize: 4,
-      fontFamily: 'heading',
       fontWeight: 'heading',
+      fontFamily: 'heading',
       lineHeight: 'heading',
       letterSpacing: 'heading',
       color: 'neutral.6',
