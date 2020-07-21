@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea basic type renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-radius: 4px;
+  border: 1px solid #DADADA;
+  caret-color: #757575;
+  color: #757575;
+  font-size: 14px;
+  height: 170px;
+  width: 390px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.c1:disabled {
+  color: #999999;
+  background-color: #EBEBEB;
+  cursor: not-allowed;
+}
+
+<div
+  className="c0"
+  display="inline-block"
+>
+  <textarea
+    className="c1"
+    disabled={false}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Textarea styled type renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 45px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-radius: 4px;
+  border: 1px solid #DADADA;
+  caret-color: #757575;
+  color: #757575;
+  font-size: 14px;
+  height: 170px;
+  width: 390px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 64px;
+  padding-right: 64px;
+  color: danger;
+  height: 400px;
+  width: 200px;
+  line-height: 3;
+  font-weight: bold;
+  border-color: success;
+}
+
+.c2:disabled {
+  color: #999999;
+  background-color: #EBEBEB;
+  cursor: not-allowed;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: body;
+  color: neutral.6;
+  margin-left: 5px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  font-family: sans-serif;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+  className="c0"
+  display="inline-block"
+>
+  <label
+    className="c1"
+  >
+    Este es el label del textarea:
+  </label>
+  <textarea
+    className="c2"
+    color="danger"
+    disabled={false}
+    fontWeight="bold"
+    height="400px"
+    placeholder="Hello World!"
+    type="text"
+    width="200px"
+  />
+  <p
+    className="c3"
+  >
+    *Este es el detalle del textarea
+  </p>
+</div>
+`;
