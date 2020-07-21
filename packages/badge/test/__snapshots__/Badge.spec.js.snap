@@ -1,56 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge primary 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  line-height: 14px;
-  display: inline-block;
-  font-size: 14px;
-  text-align: right;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: circle;
-  min-width: 32px;
-  font-family: body;
-}
-
 <span
-  className="c0"
+  className="sc-1e38spu-0 dIAijm"
 >
   Test
 </span>
 `;
 
 exports[`Badge secondary 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  line-height: 14px;
-  display: inline-block;
-  font-size: 14px;
-  text-align: right;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: circle;
-  min-width: 32px;
-  font-family: body;
-}
-
 <span
-  className="c0"
+  className="sc-1e38spu-0 dIAijm"
 >
   Test
 </span>

@@ -40,10 +40,8 @@ $ npm run dev
 #### Things to improve
 
 - [ ] STRUCTURE: Too many packages, reduce amount (1)
-- [ ] STRUCTURE: Use typescript
 - [ ] STRUCTURE: Upgrade dependencies (storybook 5.3)
 - [ ] CI: Publish a testing version
-- [ ] CI: Production setup
 - [ ] CI - BUG: Make publish dont push to github or something else
 - [ ] PACKAGES: Calendar
 - [ ] PACKAGES: Button (hover).
@@ -54,7 +52,6 @@ $ npm run dev
 ### New thigs to do
 
 - [ ] PACKAGES: Carousel.
-- [ ] PACKAGES: Drawer.
 
 ### QA:
 
