@@ -1,109 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert danger 1`] = `
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding: 16px;
-  margin-right: 64px;
-  background-color: danger;
-  width: 40px;
-  height: 40px;
-  border-radius: circle;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: body;
-  color: neutral.6;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  line-height: inherit;
-  text-transform: uppercase;
-  font-family: body;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: circle;
-  padding: 16px;
-  margin-right: 8px;
-  background-color: #F6F2F2;
-  width: 32px;
-  height: 32px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-  width: 14px;
-  height: 14px;
-}
-
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: white;
-  width: 100%;
-  box-shadow: active;
-  border-radius: circle;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="c0"
+  className="sc-1e38spu-0 sc-1e38spu-1 hWHYWK"
 >
   <svg
-    className="c1"
+    className="sc-1e38spu-0 cilMZr"
     fill="currentcolor"
     height={14}
     size={40}
@@ -117,18 +19,18 @@ exports[`Alert danger 1`] = `
     />
   </svg>
   <p
-    className="c2"
+    className="sc-1e38spu-0 humScQ"
     display="flex"
   >
     NOOOOOO!!! Perdonanos, explotó todo! :(
   </p>
   <button
-    className="c3"
+    className="sc-1e38spu-0 hZdKRB"
     display="inline-flex"
     size={32}
   >
     <svg
-      className="c4"
+      className="sc-1e38spu-0 eHPBwm"
       fill="currentcolor"
       height={14}
       viewBox="0 0 14 14"
@@ -145,109 +47,11 @@ exports[`Alert danger 1`] = `
 `;
 
 exports[`Alert primary default 1`] = `
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding: 16px;
-  margin-right: 64px;
-  background-color: success;
-  width: 40px;
-  height: 40px;
-  border-radius: circle;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: body;
-  color: neutral.6;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  line-height: inherit;
-  text-transform: uppercase;
-  font-family: body;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: circle;
-  padding: 16px;
-  margin-right: 8px;
-  background-color: #F6F2F2;
-  width: 32px;
-  height: 32px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-  width: 14px;
-  height: 14px;
-}
-
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: white;
-  width: 100%;
-  box-shadow: active;
-  border-radius: circle;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="c0"
+  className="sc-1e38spu-0 sc-1e38spu-1 hWHYWK"
 >
   <svg
-    className="c1"
+    className="sc-1e38spu-0 hviqGv"
     fill="none"
     height="17px"
     size={40}
@@ -265,18 +69,18 @@ exports[`Alert primary default 1`] = `
     />
   </svg>
   <p
-    className="c2"
+    className="sc-1e38spu-0 humScQ"
     display="flex"
   >
     Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!
   </p>
   <button
-    className="c3"
+    className="sc-1e38spu-0 hZdKRB"
     display="inline-flex"
     size={32}
   >
     <svg
-      className="c4"
+      className="sc-1e38spu-0 eHPBwm"
       fill="currentcolor"
       height={14}
       viewBox="0 0 14 14"
@@ -293,109 +97,11 @@ exports[`Alert primary default 1`] = `
 `;
 
 exports[`Alert warning 1`] = `
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding: 16px;
-  margin-right: 64px;
-  background-color: warning;
-  width: 40px;
-  height: 40px;
-  border-radius: circle;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: body;
-  color: neutral.6;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  line-height: inherit;
-  text-transform: uppercase;
-  font-family: body;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: circle;
-  padding: 16px;
-  margin-right: 8px;
-  background-color: #F6F2F2;
-  width: 32px;
-  height: 32px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-  width: 14px;
-  height: 14px;
-}
-
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: white;
-  width: 100%;
-  box-shadow: active;
-  border-radius: circle;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="c0"
+  className="sc-1e38spu-0 sc-1e38spu-1 hWHYWK"
 >
   <svg
-    className="c1"
+    className="sc-1e38spu-0 jlUyny"
     fill="none"
     height="19px"
     size={40}
@@ -411,18 +117,18 @@ exports[`Alert warning 1`] = `
     />
   </svg>
   <p
-    className="c2"
+    className="sc-1e38spu-0 humScQ"
     display="flex"
   >
     Danger Zone!!!!
   </p>
   <button
-    className="c3"
+    className="sc-1e38spu-0 hZdKRB"
     display="inline-flex"
     size={32}
   >
     <svg
-      className="c4"
+      className="sc-1e38spu-0 eHPBwm"
       fill="currentcolor"
       height={14}
       viewBox="0 0 14 14"
