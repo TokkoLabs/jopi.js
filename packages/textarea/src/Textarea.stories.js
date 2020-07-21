@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import { Add } from '@oneloop/icons'
 
 import { Textarea } from '.'
 
