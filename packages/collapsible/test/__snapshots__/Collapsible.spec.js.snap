@@ -1,61 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Collapsible default 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  line-height: inherit;
-  text-transform: uppercase;
-  font-family: body;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: circle;
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  padding: 10px 0;
-  text-align: left;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c1 + .content {
-  overflow: hidden;
-}
-
 <div
-  className="c0"
+  className="sc-1e38spu-0 fSmcDz"
 >
   <button
-    className="c1"
+    className="sc-1e38spu-0 isuzCg"
   >
     Estado
   </button>
