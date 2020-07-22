@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Box render 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
 <div
-  className="sc-1e38spu-0 fSmcDz"
+  className="c0"
 >
   Test
 </div>

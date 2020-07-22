@@ -1,85 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: body;
+  border-collapse: collapse;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-top: 1px solid #EBEBEB;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
 <table
-  className="sc-1e38spu-0 bINBjG"
+  className="c0"
 >
   <thead
-    className="sc-1e38spu-0 fSmcDz"
+    className="c1"
   >
     <tr
-      className="sc-1e38spu-0 fSmcDz"
+      className="c1"
     >
       <th
-        className="sc-1e38spu-0 gWLPXJ"
+        className="c2"
       >
         Agency
       </th>
       <th
-        className="sc-1e38spu-0 gWLPXJ"
+        className="c2"
       >
         Country
       </th>
       <th
-        className="sc-1e38spu-0 gWLPXJ"
+        className="c2"
       >
         Paid
       </th>
     </tr>
   </thead>
   <tr
-    className="sc-1e38spu-0 fSmcDz"
+    className="c1"
   >
     <td
-      className="sc-1e38spu-0 jsgcgA"
+      className="c3"
     >
       InmoMex
     </td>
     <td
-      className="sc-1e38spu-0 jsgcgA"
+      className="c3"
     >
       Mexico
     </td>
     <td
-      className="sc-1e38spu-0 jsgcgA"
+      className="c3"
     >
       Yes
     </td>
   </tr>
   <tr
-    className="sc-1e38spu-0 fSmcDz"
+    className="c1"
   >
     <td
-      className="sc-1e38spu-0 jsgcgA"
+      className="c3"
     >
       RGM
     </td>
     <td
-      className="sc-1e38spu-0 jsgcgA"
+      className="c3"
     >
       Argentina
     </td>
     <td
-      className="sc-1e38spu-0 jsgcgA"
+      className="c3"
     >
       Yes
     </td>
   </tr>
   <tr
-    className="sc-1e38spu-0 fSmcDz"
+    className="c1"
   >
     <td
-      className="sc-1e38spu-0 jsgcgA"
+      className="c3"
     >
       Urbania
     </td>
     <td
-      className="sc-1e38spu-0 jsgcgA"
+      className="c3"
     >
       Peru
     </td>
     <td
-      className="sc-1e38spu-0 jsgcgA"
+      className="c3"
     >
       Yes
     </td>

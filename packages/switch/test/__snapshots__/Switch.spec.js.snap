@@ -1,15 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Switch renders alt correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 42px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 2px 4px;
+  border-radius: circle;
+  cursor: pointer;
+  border: 1px solid #c2c2c2;
+  background-color: neutral.0;
+  position: relative;
+  outline: none;
+  -webkit-transition: background-color .1s cubic-bezier(.4,0,.2,1);
+  transition: background-color .1s cubic-bezier(.4,0,.2,1);
+}
+
+.c0::before {
+  content: '';
+  background: #757575;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: circle;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(3px,-50%);
+  -ms-transform: translate(3px,-50%);
+  transform: translate(3px,-50%);
+  -webkit-transition: -webkit-transform .1s cubic-bezier(.4,0,.2,1);
+  -webkit-transition: transform .1s cubic-bezier(.4,0,.2,1);
+  transition: transform .1s cubic-bezier(.4,0,.2,1);
+}
+
+.c0[aria-checked="true"] {
+  background-color: neutral.0;
+}
+
+.c0[aria-checked="true"]::before {
+  -webkit-transform: translate(21px,-50%);
+  -ms-transform: translate(21px,-50%);
+  transform: translate(21px,-50%);
+  background-color: primary;
+}
+
+.c0[disabled] {
+  background-color: neutral.0;
+  border: 1px solid neutral.2;
+}
+
+.c0[disabled]::before {
+  background: #C4C4C4;
+  box-shadow: none;
+}
+
 <button
-  className="sc-1e38spu-0 eRLsv"
+  className="c0"
   role="switch"
 />
 `;
 
 exports[`Switch renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 42px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 2px 4px;
+  border-radius: circle;
+  cursor: pointer;
+  border: 1px solid #c2c2c2;
+  background-color: neutral.0;
+  position: relative;
+  outline: none;
+  -webkit-transition: background-color .1s cubic-bezier(.4,0,.2,1);
+  transition: background-color .1s cubic-bezier(.4,0,.2,1);
+}
+
+.c0::before {
+  content: '';
+  background: #757575;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: circle;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(3px,-50%);
+  -ms-transform: translate(3px,-50%);
+  transform: translate(3px,-50%);
+  -webkit-transition: -webkit-transform .1s cubic-bezier(.4,0,.2,1);
+  -webkit-transition: transform .1s cubic-bezier(.4,0,.2,1);
+  transition: transform .1s cubic-bezier(.4,0,.2,1);
+}
+
+.c0[aria-checked="true"] {
+  background-color: neutral.0;
+}
+
+.c0[aria-checked="true"]::before {
+  -webkit-transform: translate(21px,-50%);
+  -ms-transform: translate(21px,-50%);
+  transform: translate(21px,-50%);
+  background-color: primary;
+}
+
+.c0[disabled] {
+  background-color: neutral.0;
+  border: 1px solid neutral.2;
+}
+
+.c0[disabled]::before {
+  background: #C4C4C4;
+  box-shadow: none;
+}
+
 <button
-  className="sc-1e38spu-0 eRLsv"
+  className="c0"
   role="switch"
 />
 `;
