@@ -1,16 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio renders alt correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: circle;
+  color: gray;
+}
+
+input:checked ~ .c3 {
+  color: primary;
+}
+
+input:focus ~ .c3 {
+  box-shadow: active;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked:not(:disabled) ~ .c2 {
+  display: block;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:not(:checked):not(:disabled) ~ .c4 {
+  display: block;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:disabled:not(:checked) ~ .c5 {
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked:disabled ~ .c6 {
+  display: block;
+}
+
 <div
-  className="sc-1e38spu-0 bAImKy"
+  className="c0"
 >
   <input
-    className="sc-1e38spu-0 djHjgm"
+    className="c1"
     type="radio"
   />
   <svg
     aria-hidden="true"
-    className="sc-1e38spu-0 fIXijI sc-1e38spu-0 iOJaJW"
+    className="c2 sc-1e38spu-0 c3"
     fill="none"
     height={16}
     viewBox="0 0 16 16"
@@ -38,7 +127,7 @@ exports[`Radio renders alt correctly 1`] = `
   </svg>
   <svg
     aria-hidden="true"
-    className="sc-1e38spu-0 jVLrgW sc-1e38spu-0 iOJaJW"
+    className="c4 sc-1e38spu-0 c3"
     fill="none"
     height={16}
     viewBox="0 0 16 16"
@@ -60,7 +149,7 @@ exports[`Radio renders alt correctly 1`] = `
   </svg>
   <svg
     aria-hidden="true"
-    className="sc-1e38spu-0 fpqGME sc-1e38spu-0 iOJaJW"
+    className="c5 sc-1e38spu-0 c3"
     fill="none"
     height={16}
     viewBox="0 0 16 16"
@@ -82,7 +171,7 @@ exports[`Radio renders alt correctly 1`] = `
   </svg>
   <svg
     aria-hidden="true"
-    className="sc-1e38spu-0 jPcRlm sc-1e38spu-0 iOJaJW"
+    className="c6 sc-1e38spu-0 c3"
     fill="none"
     height={16}
     viewBox="0 0 16 16"
@@ -112,16 +201,105 @@ exports[`Radio renders alt correctly 1`] = `
 `;
 
 exports[`Radio renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: circle;
+  color: gray;
+}
+
+input:checked ~ .c3 {
+  color: primary;
+}
+
+input:focus ~ .c3 {
+  box-shadow: active;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked:not(:disabled) ~ .c2 {
+  display: block;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:not(:checked):not(:disabled) ~ .c4 {
+  display: block;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:disabled:not(:checked) ~ .c5 {
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked:disabled ~ .c6 {
+  display: block;
+}
+
 <div
-  className="sc-1e38spu-0 bAImKy"
+  className="c0"
 >
   <input
-    className="sc-1e38spu-0 djHjgm"
+    className="c1"
     type="radio"
   />
   <svg
     aria-hidden="true"
-    className="sc-1e38spu-0 fIXijI sc-1e38spu-0 iOJaJW"
+    className="c2 sc-1e38spu-0 c3"
     fill="none"
     height={16}
     viewBox="0 0 16 16"
@@ -149,7 +327,7 @@ exports[`Radio renders correctly 1`] = `
   </svg>
   <svg
     aria-hidden="true"
-    className="sc-1e38spu-0 jVLrgW sc-1e38spu-0 iOJaJW"
+    className="c4 sc-1e38spu-0 c3"
     fill="none"
     height={16}
     viewBox="0 0 16 16"
@@ -171,7 +349,7 @@ exports[`Radio renders correctly 1`] = `
   </svg>
   <svg
     aria-hidden="true"
-    className="sc-1e38spu-0 fpqGME sc-1e38spu-0 iOJaJW"
+    className="c5 sc-1e38spu-0 c3"
     fill="none"
     height={16}
     viewBox="0 0 16 16"
@@ -193,7 +371,7 @@ exports[`Radio renders correctly 1`] = `
   </svg>
   <svg
     aria-hidden="true"
-    className="sc-1e38spu-0 jPcRlm sc-1e38spu-0 iOJaJW"
+    className="c6 sc-1e38spu-0 c3"
     fill="none"
     height={16}
     viewBox="0 0 16 16"

@@ -1,24 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Modal renders correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4,4,4,0.79);
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 40px auto 0px auto;
+  width: 690px;
+  height: auto;
+  background-color: neutral.1;
+  border-radius: 9px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  height: 200px;
+  overflow: auto;
+  margin: 4px 0px 4px 0px;
+  padding: 10px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 10px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  text-align: center;
+  border-top: 1px solid #c4c4c4;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
-  className="sc-1e38spu-0 gzwzhE"
+  className="c0"
 >
   <div
-    className="sc-1e38spu-0 bRgyvh"
+    className="c1"
   >
     <div
-      className="sc-1e38spu-0 sc-1e38spu-1 gSyPoB"
+      className="c2"
     >
       This is the header
     </div>
     <div
-      className="sc-1e38spu-0 dygjdb"
+      className="c3"
     >
       This is the body
     </div>
     <div
-      className="sc-1e38spu-0 sc-1e38spu-1 lpaeLh"
+      className="c4"
     >
       This is the footer
     </div>

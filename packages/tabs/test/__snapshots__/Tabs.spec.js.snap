@@ -2,64 +2,153 @@
 
 exports[`Tabs renders correctly with headers and content 1`] = `
 Array [
-  <div
-    className="sc-1e38spu-0 iYdRdP"
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: auto 38px;
+  position: relative;
+  cursor: pointer;
+  font-family: heading;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.c1 * {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #EBA49A;
+}
+
+.c1 a {
+  display: block;
+  width: 148px;
+  height: 52px;
+  line-height: 52px;
+}
+
+.c1 a > *:first-child {
+  margin-right: 10px;
+}
+
+<div
+    className="c0"
   >
     <div
-      className="sc-1e38spu-0 jvdnaf"
+      className="c1"
       onClick={[Function]}
     >
       One
     </div>
     <div
-      className="sc-1e38spu-0 jvdnaf"
+      className="c1"
       onClick={[Function]}
     >
       Two
     </div>
     <div
-      className="sc-1e38spu-0 jvdnaf"
+      className="c1"
       onClick={[Function]}
     >
       Three
     </div>
     <div
-      className="sc-1e38spu-0 jvdnaf"
+      className="c1"
       onClick={[Function]}
     >
       Four
     </div>
   </div>,
-  <div
-    className="sc-1e38spu-0 jgIXau"
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 10px;
+}
+
+<div
+    className="c0"
   />,
 ]
 `;
 
 exports[`Tabs renders correctly with only headers 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: auto 38px;
+  position: relative;
+  cursor: pointer;
+  font-family: heading;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.c1 * {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #EBA49A;
+}
+
+.c1 a {
+  display: block;
+  width: 148px;
+  height: 52px;
+  line-height: 52px;
+}
+
+.c1 a > *:first-child {
+  margin-right: 10px;
+}
+
 <div
-  className="sc-1e38spu-0 iYdRdP"
+  className="c0"
 >
   <div
-    className="sc-1e38spu-0 jvdnaf"
+    className="c1"
     onClick={[Function]}
   >
     One
   </div>
   <div
-    className="sc-1e38spu-0 jvdnaf"
+    className="c1"
     onClick={[Function]}
   >
     Two
   </div>
   <div
-    className="sc-1e38spu-0 jvdnaf"
+    className="c1"
     onClick={[Function]}
   >
     Three
   </div>
   <div
-    className="sc-1e38spu-0 jvdnaf"
+    className="c1"
     onClick={[Function]}
   >
     Four

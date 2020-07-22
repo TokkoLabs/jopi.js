@@ -5,6 +5,20 @@ exports[`Loader renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   margin-right: 10px;
   width: small;
   height: small;
@@ -14,7 +28,7 @@ exports[`Loader renders correctly 1`] = `
   width: 16px;
 }
 
-.c0::before {
+.c1::before {
   position: absolute;
   content: '';
   display: block;
@@ -30,10 +44,10 @@ exports[`Loader renders correctly 1`] = `
 }
 
 <div
-  className="sc-1e38spu-0 iVSNPf"
+  className="c0"
 >
   <div
-    className="sc-1e38spu-0 c0"
+    className="c1"
     kind="primary"
     size="small"
   />
