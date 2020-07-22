@@ -65,6 +65,9 @@ jobs:
         env:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
         run: |
+          git remote -v
+          git branch
+          ssh -T git@github.com
           cd node_modules/.bin
           lerna version patch --yes
 
