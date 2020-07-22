@@ -61,13 +61,20 @@ jobs:
           git config --global user.email "${{secrets.GIT_EMAIL}}"
           git config --global user.name "${{secrets.GIT_USER}}"
 
+      - name: Get Git info
+        run: |
+          git remote -v
+          git branch
+          git status
+
+      - name: Get SHH info
+        run: |
+          ssh -T git@github.com
+
       - name: Update lerna packages
         env:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
         run: |
-          git remote -v
-          git branch
-          ssh -T git@github.com
           cd node_modules/.bin
           lerna version patch --yes
 
