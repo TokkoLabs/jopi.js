@@ -73,11 +73,6 @@ jobs:
       - name: SSH agent
         run: eval "$(ssh-agent -s)"
 
-      - name: Get SHH info
-        run: |
-          ls -a
-          ssh -vT git@github.com
-
       - name: Update lerna packages
         env:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
