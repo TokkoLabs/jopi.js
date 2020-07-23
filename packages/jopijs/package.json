@@ -27,6 +27,7 @@
     "@oneloop/table": "^1.2.52",
     "@oneloop/tabs": "^1.4.27",
     "@oneloop/text": "^1.2.52",
+    "@oneloop/textarea": "^1.0.1",
     "styled-components": "^5.1.1"
   },
   "peerDependencies": {
