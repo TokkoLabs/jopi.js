@@ -70,14 +70,18 @@ jobs:
       - name: Run whoami
         run: whoami
 
+      - name: SSH agent
+        run: eval "$(ssh-agent -s)"
+
       - name: Get SHH info
         run: |
           ls -a
-          ssh -T git@github.com
+          ssh -vT git@github.com
 
       - name: Update lerna packages
         env:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           cd node_modules/.bin
           lerna version patch --yes
