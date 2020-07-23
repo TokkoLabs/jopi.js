@@ -73,6 +73,6 @@ jobs:
 
       - name: Publish New Jopi version to NPM
         env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
         run: lerna publish from-package -y --no-verify-access
