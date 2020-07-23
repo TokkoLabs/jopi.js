@@ -67,8 +67,12 @@ jobs:
           git branch
           git status
 
+      - name: Run whoami
+        run: whoami
+
       - name: Get SHH info
         run: |
+          ls -a
           ssh -T git@github.com
 
       - name: Update lerna packages
