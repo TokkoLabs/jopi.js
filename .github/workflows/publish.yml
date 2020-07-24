@@ -64,9 +64,6 @@ jobs:
       - name: Run lerna info
         run: lerna info
 
-      - name: Install dependencies
-        run: yarn
-
       - name: Update lerna packages
         env:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
@@ -78,4 +75,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
-        run: lerna publish from-package -y --no-verify-access --force-publish=*
+        run: lerna publish from-package -y --no-verify-access
