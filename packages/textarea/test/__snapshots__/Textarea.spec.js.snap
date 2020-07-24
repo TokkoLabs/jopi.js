@@ -68,7 +68,7 @@ exports[`Textarea styled type renders correctly 1`] = `
   padding-bottom: 11px;
   padding-left: 64px;
   padding-right: 64px;
-  color: danger;
+  color: blue;
   height: 400px;
   width: 200px;
   line-height: 3;
@@ -116,7 +116,7 @@ exports[`Textarea styled type renders correctly 1`] = `
   </label>
   <textarea
     className="c2"
-    color="danger"
+    color="blue"
     disabled={false}
     fontWeight="bold"
     height="400px"
