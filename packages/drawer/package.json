@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/drawer",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.59",
+    "@oneloop/box": "^1.2.60",
     "framer-motion": "1.11.1"
   },
   "peerDependencies": {
