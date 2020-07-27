@@ -74,6 +74,12 @@ jobs:
           git config --global user.email "${{secrets.GIT_EMAIL}}"
           git config --global user.name "${{secrets.GIT_USER}}"
 
+      - name: Look up for lib folder in Alert package
+        run: |
+          ls
+          cd packages/alert
+          ls
+
       - name: Update lerna packages
         env:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
