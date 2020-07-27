@@ -4,8 +4,8 @@ on:
       - fix-github-actions
 
 jobs:
-  build:
-    name: Build Jopi
+  build-and-publish:
+    name: Build Jopi & Publish New Version in NPM
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,7 +25,7 @@ jobs:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Installing npm & lerna
+      - name: Installing npm
         run: |
           npm install
           npm install --global lerna
@@ -42,43 +42,10 @@ jobs:
       - name: Build Jopi
         run: yarn build
 
-  publish:
-    needs: build
-    name: Publish New Jopi Version in NPM
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Configure git credentials
-        uses: OleksiyRudenko/gha-git-credentials@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Installing node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Installing npm & lerna
-        run: |
-          npm install
-          npm install --global lerna
-
       - name: Set Git config
         run: |
           git config --global user.email "${{secrets.GIT_EMAIL}}"
           git config --global user.name "${{secrets.GIT_USER}}"
-
-      - name: Look up for lib folder in Alert package
-        run: |
-          ls
-          cd packages/alert
-          ls
 
       - name: Update lerna packages
         env:
