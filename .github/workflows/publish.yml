@@ -25,9 +25,10 @@ jobs:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Installing npm
+      - name: Installing npm & lerna
         run: |
           npm install
+          npm install --global lerna
 
       - name: Installing yarn
         run: yarn install
