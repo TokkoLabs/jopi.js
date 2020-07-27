@@ -33,9 +33,6 @@ jobs:
       - name: Installing yarn
         run: yarn install
 
-      - name: Run lerna info
-        run: lerna info
-
       - name: Run tests
         run: yarn test
 
