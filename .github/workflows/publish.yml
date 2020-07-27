@@ -1,37 +1,11 @@
 on:
   push:
     branches:
-      - master
+      - fix-github-actions
 
 jobs:
-  build:
-    name: Build Jopi
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Installing node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Installing yarn
-        run: yarn install
-
-      - name: Run tests
-        run: yarn test
-
-      - name: Run coverage
-        run: yarn jest --coverage
-
-      - name: Build Jopi
-        run: yarn build
-
-  publish:
-    needs: build
-    name: Publish New Jopi Version
+  build-and-publish:
+    name: Build Jopi & Publish New Version in NPM
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -51,32 +25,31 @@ jobs:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Installing npm & lerna
+      - name: Installing npm
         run: |
           npm install
           npm install --global lerna
+
+      - name: Installing yarn
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Run coverage
+        run: yarn jest --coverage
+
+      - name: Build Jopi
+        run: yarn build
 
       - name: Set Git config
         run: |
           git config --global user.email "${{secrets.GIT_EMAIL}}"
           git config --global user.name "${{secrets.GIT_USER}}"
 
-      - name: Get Git info
-        run: |
-          git remote -v
-          git branch
-          git status
-
-      - name: Run whoami
-        run: whoami
-
-      - name: SSH agent
-        run: eval "$(ssh-agent -s)"
-
       - name: Update lerna packages
         env:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           cd node_modules/.bin
           lerna version patch --yes
