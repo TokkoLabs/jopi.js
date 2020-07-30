@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/button",
-  "version": "1.2.71",
+  "version": "1.2.72",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.68",
+    "@oneloop/box": "^1.2.69",
     "styled-components": "5.1.1",
     "styled-system": "5.1.5"
   },
