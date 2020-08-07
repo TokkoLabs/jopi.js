@@ -4,18 +4,31 @@ on:
       - master
 
 jobs:
-  build:
-    name: Build Jopi
+  build-and-publish:
+    name: Build Jopi & Publish New Version in NPM
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Configure git credentials
+        uses: OleksiyRudenko/gha-git-credentials@v1
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
 
       - name: Installing node
         uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Installing npm
+        run: |
+          npm install
+          npm install --global lerna
 
       - name: Installing yarn
         run: yarn install
@@ -23,53 +36,39 @@ jobs:
       - name: Run tests
         run: yarn test
 
-      #  - name: Run coverage
-      #    run: yarn jest --coverage
+      - name: Run coverage
+        run: yarn jest --coverage
 
       - name: Build Jopi
         run: yarn build
-
-  publish:
-    needs: build
-    name: Publish New Jopi Version
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Configure git credentials
-        uses: OleksiyRudenko/gha-git-credentials@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Installing node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Installing npm & lerna
-        run: |
-          npm install
-          npm install --global lerna
 
       - name: Set Git config
         run: |
           git config --global user.email "${{secrets.GIT_EMAIL}}"
           git config --global user.name "${{secrets.GIT_USER}}"
 
-      #  - name: Update lerna packages
-      #    env:
-      #      GH_TOKEN: ${{secrets.GIT_TOKEN}}
-      #    run: |
-      #      cd node_modules/.bin
-      #      lerna version patch --yes
+      - name: Update lerna packages
+        env:
+          GH_TOKEN: ${{secrets.GIT_TOKEN}}
+        run: |
+          cd node_modules/.bin
+          lerna version patch --yes
 
       - name: Publish New Jopi version to NPM
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
         run: lerna publish from-package -y --no-verify-access
+
+  merge-me:
+    name: Merge to master
+    needs:
+      - build-and-publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge me!
+        uses: ridedott/merge-me-action@master
+        with:
+          # This must be used as GitHub Actions token does not support
+          # pushing to protected branches.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
