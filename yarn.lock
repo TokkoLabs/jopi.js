@@ -2585,6 +2585,23 @@
   dependencies:
     "@types/node" ">= 8"
 
+"@oneloop/box@^1.2.90":
+  version "1.2.90"
+  resolved "https://registry.yarnpkg.com/@oneloop/box/-/box-1.2.90.tgz#b82806d4d3aac2e956c3c1cce4be7f635acb6f43"
+  integrity sha512-iN6h5N13dRbzcqmbmrHhMZ1XUaD4Wt4onzUwvZlRfpJy24cqrcnXQLeTdhVfHC7Kpzos0LRi9b5ZqgSbk+DIFg==
+  dependencies:
+    "@styled-system/css" "^5.1.4"
+    styled-components "5.1.1"
+    styled-system "5.1.5"
+
+"@oneloop/drawer@^1.0.2":
+  version "1.0.46"
+  resolved "https://registry.yarnpkg.com/@oneloop/drawer/-/drawer-1.0.46.tgz#134c5ef906ea034676650c7adf91e1ee7e1c4cc2"
+  integrity sha512-5eQrS+QcCL8T9hz2heic0+Vu7UwWFddzuEyZa5ziJQ94zGROJHwgEIS+sKpH84gSiFYHtKsYhS+FPrRNZ19cYw==
+  dependencies:
+    "@oneloop/box" "^1.2.90"
+    framer-motion "2.4.1"
+
 "@popmotion/easing@^1.0.1", "@popmotion/easing@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@popmotion/easing/-/easing-1.0.2.tgz#17d925c45b4bf44189e5a38038d149df42d8c0b4"
@@ -14720,6 +14737,14 @@ style-to-object@^0.2.1:
     inline-style-parser "0.1.1"
 
 style-value-types@^3.1.6, style-value-types@^3.1.7, style-value-types@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.1.9.tgz#faf7da660d3f284ed695cff61ea197d85b9122cc"
+  integrity sha512-050uqgB7WdvtgacoQKm+4EgKzJExVq0sieKBQQtJiU3Muh6MYcCp4T3M8+dfl6VOF2LR0NNwXBP1QYEed8DfIw==
+  dependencies:
+    hey-listen "^1.0.8"
+    tslib "^1.10.0"
+
+style-value-types@^3.1.9:
   version "3.1.9"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.1.9.tgz#faf7da660d3f284ed695cff61ea197d85b9122cc"
   integrity sha512-050uqgB7WdvtgacoQKm+4EgKzJExVq0sieKBQQtJiU3Muh6MYcCp4T3M8+dfl6VOF2LR0NNwXBP1QYEed8DfIw==
