@@ -2432,6 +2432,23 @@
   dependencies:
     "@types/node" ">= 8"
 
+"@oneloop/box@^1.2.90":
+  version "1.2.90"
+  resolved "https://registry.yarnpkg.com/@oneloop/box/-/box-1.2.90.tgz#b82806d4d3aac2e956c3c1cce4be7f635acb6f43"
+  integrity sha512-iN6h5N13dRbzcqmbmrHhMZ1XUaD4Wt4onzUwvZlRfpJy24cqrcnXQLeTdhVfHC7Kpzos0LRi9b5ZqgSbk+DIFg==
+  dependencies:
+    "@styled-system/css" "^5.1.4"
+    styled-components "5.1.1"
+    styled-system "5.1.5"
+
+"@oneloop/drawer@^1.0.2":
+  version "1.0.46"
+  resolved "https://registry.yarnpkg.com/@oneloop/drawer/-/drawer-1.0.46.tgz#134c5ef906ea034676650c7adf91e1ee7e1c4cc2"
+  integrity sha512-5eQrS+QcCL8T9hz2heic0+Vu7UwWFddzuEyZa5ziJQ94zGROJHwgEIS+sKpH84gSiFYHtKsYhS+FPrRNZ19cYw==
+  dependencies:
+    "@oneloop/box" "^1.2.90"
+    framer-motion "2.4.1"
+
 "@popmotion/easing@^1.0.1", "@popmotion/easing@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@popmotion/easing/-/easing-1.0.2.tgz#17d925c45b4bf44189e5a38038d149df42d8c0b4"
@@ -7302,6 +7319,21 @@ framer-motion@1.11.1:
     popmotion "9.0.0-beta-8"
     style-value-types "^3.1.6"
     stylefire "^7.0.2"
+    tslib "^1.10.0"
+  optionalDependencies:
+    "@emotion/is-prop-valid" "^0.8.2"
+
+framer-motion@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-2.4.1.tgz#df37a008f94c2d05d54077d5b9988016d30db0cd"
+  integrity sha512-q0jNi01IGP/cwl1S50qYrZkmeI+0aF+sic5gmP502Ca9QSrbeCA7/wAPE94aLfyqtKO404ejIYmC1raZBv5lew==
+  dependencies:
+    "@popmotion/easing" "^1.0.2"
+    "@popmotion/popcorn" "^0.4.2"
+    framesync "^4.0.4"
+    hey-listen "^1.0.8"
+    popmotion "9.0.0-beta-8"
+    style-value-types "^3.1.9"
     tslib "^1.10.0"
   optionalDependencies:
     "@emotion/is-prop-valid" "^0.8.2"
@@ -13901,6 +13933,14 @@ style-value-types@^3.1.6, style-value-types@^3.1.7:
   version "3.1.7"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.1.7.tgz#3d7d3cf9cb9f9ee86c00e19ba65d6a181a0db33a"
   integrity sha512-jPaG5HcAPs3vetSwOJozrBXxuHo9tjZVnbRyBjxqb00c2saIoeuBJc1/2MtvB8eRZy41u/BBDH0CpfzWixftKg==
+  dependencies:
+    hey-listen "^1.0.8"
+    tslib "^1.10.0"
+
+style-value-types@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.1.9.tgz#faf7da660d3f284ed695cff61ea197d85b9122cc"
+  integrity sha512-050uqgB7WdvtgacoQKm+4EgKzJExVq0sieKBQQtJiU3Muh6MYcCp4T3M8+dfl6VOF2LR0NNwXBP1QYEed8DfIw==
   dependencies:
     hey-listen "^1.0.8"
     tslib "^1.10.0"
