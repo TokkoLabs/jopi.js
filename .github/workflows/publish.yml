@@ -60,12 +60,12 @@ jobs:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
         run: lerna publish from-package -y --no-verify-access
 
-      - name: Publish New Jopi version to GitHubPage
-        uses: JamesIves/github-pages-deploy-action@3.5.9
-        with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: jopi.js # The folder the action should deploy.
+      #- name: Publish New Jopi version to GitHubPage
+      #  uses: JamesIves/github-pages-deploy-action@3.5.9
+      #  with:
+      #    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      #    BRANCH: gh-pages # The branch the action should deploy to.
+      #    FOLDER: jopi.js # The folder the action should deploy.
 
   merge-me:
     name: Merge to master
