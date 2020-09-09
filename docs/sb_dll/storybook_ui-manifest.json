@@ -317,10 +317,6 @@
       "id": "TnXy",
       "buildMeta": { "providedExports": true }
     },
-    "./react-color/lib/components/photoshop/PhotoshopFields.js": {
-      "id": "TtEy",
-      "buildMeta": { "providedExports": true }
-    },
     "./function.prototype.name/implementation.js": {
       "id": "Txjs",
       "buildMeta": { "providedExports": true }
@@ -555,6 +551,10 @@
     },
     "./es-abstract/helpers/isPrimitive.js": {
       "id": "vYa2",
+      "buildMeta": { "providedExports": true }
+    },
+    "./has/src/index.js": {
+      "id": "wSS7",
       "buildMeta": { "providedExports": true }
     },
     "./es-abstract/5/CheckObjectCoercible.js": {
@@ -3897,6 +3897,10 @@
       "id": "Ts6v",
       "buildMeta": { "providedExports": true }
     },
+    "./react-color/lib/components/photoshop/PhotoshopFields.js": {
+      "id": "TtEy",
+      "buildMeta": { "providedExports": true }
+    },
     "./es-abstract/2019/IteratorComplete.js": {
       "id": "Tuui",
       "buildMeta": { "providedExports": true }
@@ -6653,10 +6657,6 @@
     },
     "./refractor/lang/protobuf.js": {
       "id": "wS90",
-      "buildMeta": { "providedExports": true }
-    },
-    "./has/src/index.js": {
-      "id": "wSS7",
       "buildMeta": { "providedExports": true }
     },
     "./core-js/internals/object-set-prototype-of.js": {
