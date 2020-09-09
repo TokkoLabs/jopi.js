@@ -18,7 +18,8 @@ import { Table } from '@oneloop/table'
 import { Tabs } from '@oneloop/tabs'
 import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
-import { Datepicker, START_DATE, END_DATE } from '@oneloop/datepicker'
+//import { Datepicker, START_DATE, END_DATE } from '@oneloop/datepicker'
+import { DatePicker } from '@oneloop/datepicker'
 import { ThemeProvider } from 'styled-components'
 
 export {
@@ -45,8 +46,9 @@ export {
   useFilterData,
   Table,
   Image,
-  Datepicker,
-  START_DATE,
-  END_DATE,
+  //Datepicker,
+  DatePicker,
+  // START_DATE,
+  // END_DATE,
   ThemeProvider,
 }
