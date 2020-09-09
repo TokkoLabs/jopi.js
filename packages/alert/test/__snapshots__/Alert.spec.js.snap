@@ -1,7 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert danger 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: active;
+  border-radius: circle;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -13,7 +28,7 @@ exports[`Alert danger 1`] = `
   border-radius: circle;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -33,7 +48,7 @@ exports[`Alert danger 1`] = `
   flex-grow: 1;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -71,7 +86,7 @@ exports[`Alert danger 1`] = `
   align-self: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -80,19 +95,7 @@ exports[`Alert danger 1`] = `
   height: 14px;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: white;
-  width: 100%;
-  box-shadow: active;
-  border-radius: circle;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,10 +103,10 @@ exports[`Alert danger 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
   <svg
-    className="c1"
+    className="c2"
     fill="currentcolor"
     height={14}
     size={40}
@@ -117,18 +120,18 @@ exports[`Alert danger 1`] = `
     />
   </svg>
   <p
-    className="c2"
+    className="c3"
     display="flex"
   >
     NOOOOOO!!! Perdonanos, explotó todo! :(
   </p>
   <button
-    className="c3"
+    className="c4"
     display="inline-flex"
     size={32}
   >
     <svg
-      className="c4"
+      className="c5"
       fill="currentcolor"
       height={14}
       viewBox="0 0 14 14"
@@ -145,7 +148,22 @@ exports[`Alert danger 1`] = `
 `;
 
 exports[`Alert primary default 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: active;
+  border-radius: circle;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -157,7 +175,7 @@ exports[`Alert primary default 1`] = `
   border-radius: circle;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -177,7 +195,7 @@ exports[`Alert primary default 1`] = `
   flex-grow: 1;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -215,7 +233,7 @@ exports[`Alert primary default 1`] = `
   align-self: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -224,19 +242,7 @@ exports[`Alert primary default 1`] = `
   height: 14px;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: white;
-  width: 100%;
-  box-shadow: active;
-  border-radius: circle;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -244,10 +250,10 @@ exports[`Alert primary default 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
   <svg
-    className="c1"
+    className="c2"
     fill="none"
     height="17px"
     size={40}
@@ -265,18 +271,18 @@ exports[`Alert primary default 1`] = `
     />
   </svg>
   <p
-    className="c2"
+    className="c3"
     display="flex"
   >
     Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!
   </p>
   <button
-    className="c3"
+    className="c4"
     display="inline-flex"
     size={32}
   >
     <svg
-      className="c4"
+      className="c5"
       fill="currentcolor"
       height={14}
       viewBox="0 0 14 14"
@@ -293,7 +299,22 @@ exports[`Alert primary default 1`] = `
 `;
 
 exports[`Alert warning 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: active;
+  border-radius: circle;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -305,7 +326,7 @@ exports[`Alert warning 1`] = `
   border-radius: circle;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -325,7 +346,7 @@ exports[`Alert warning 1`] = `
   flex-grow: 1;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -363,7 +384,7 @@ exports[`Alert warning 1`] = `
   align-self: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -372,19 +393,7 @@ exports[`Alert warning 1`] = `
   height: 14px;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: white;
-  width: 100%;
-  box-shadow: active;
-  border-radius: circle;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -392,10 +401,10 @@ exports[`Alert warning 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
   <svg
-    className="c1"
+    className="c2"
     fill="none"
     height="19px"
     size={40}
@@ -411,18 +420,18 @@ exports[`Alert warning 1`] = `
     />
   </svg>
   <p
-    className="c2"
+    className="c3"
     display="flex"
   >
     Danger Zone!!!!
   </p>
   <button
-    className="c3"
+    className="c4"
     display="inline-flex"
     size={32}
   >
     <svg
-      className="c4"
+      className="c5"
       fill="currentcolor"
       height={14}
       viewBox="0 0 14 14"

@@ -7,6 +7,9 @@ exports[`Label renders correctly 1`] = `
   min-width: 0;
   width: 100%;
   font-family: sans-serif;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14,7 +17,7 @@ exports[`Label renders correctly 1`] = `
 }
 
 <label
-  className="sc-1e38spu-0 c0"
+  className="c0 c1"
 >
   This is a label
 </label>
