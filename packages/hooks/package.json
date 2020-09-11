@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/hooks",
-  "version": "1.2.43",
+  "version": "1.2.81",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "lodash": "4.17.19"
+    "lodash": "4.17.20"
   },
   "peerDependencies": {
     "react": "^16.8.0"

@@ -53,7 +53,17 @@ exports[`Textarea styled type renders correctly 1`] = `
   display: inline-block;
 }
 
-.c2 {
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  font-family: sans-serif;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -68,7 +78,7 @@ exports[`Textarea styled type renders correctly 1`] = `
   padding-bottom: 11px;
   padding-left: 64px;
   padding-right: 64px;
-  color: danger;
+  color: success;
   height: 400px;
   width: 200px;
   line-height: 3;
@@ -76,13 +86,13 @@ exports[`Textarea styled type renders correctly 1`] = `
   border-color: success;
 }
 
-.c2:disabled {
+.c3:disabled {
   color: #999999;
   background-color: #EBEBEB;
   cursor: not-allowed;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -91,14 +101,7 @@ exports[`Textarea styled type renders correctly 1`] = `
   margin-left: 5px;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-  font-family: sans-serif;
-  margin-left: 5px;
-  margin-bottom: 5px;
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,13 +113,13 @@ exports[`Textarea styled type renders correctly 1`] = `
   display="inline-block"
 >
   <label
-    className="c1"
+    className="c1 c2"
   >
     Este es el label del textarea:
   </label>
   <textarea
-    className="c2"
-    color="danger"
+    className="c3"
+    color="success"
     disabled={false}
     fontWeight="bold"
     height="400px"
@@ -125,7 +128,7 @@ exports[`Textarea styled type renders correctly 1`] = `
     width="200px"
   />
   <p
-    className="c3"
+    className="c4"
   >
     *Este es el detalle del textarea
   </p>
