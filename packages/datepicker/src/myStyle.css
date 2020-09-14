@@ -8,7 +8,7 @@
     padding: 30px;
     border-radius: 3rem;
     margin-left: 220px;
-    margin-top: -50px;
+    margin-top: -60px;
   }
 .primero .react-datepicker__day--selected{
     border: 1px solid green;
