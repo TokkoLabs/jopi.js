@@ -171,7 +171,7 @@
   font-weight: bold;
   font-size: 0.944rem;
   text-transform: uppercase;
-  font-family: Superjopi;
+  font-family: Superjopi, sans-serif;
   margin-bottom: 20px;
 }
 
@@ -475,7 +475,12 @@
   cursor: pointer;
 }
 
-.react-datepicker__day:hover,
+.react-datepicker__day:hover{
+  border-radius: 1rem;
+  background-color: #D64A36;
+  color: white;
+}
+
 .react-datepicker__month-text:hover,
 .react-datepicker__quarter-text:hover,
 .react-datepicker__year-text:hover {
@@ -520,7 +525,12 @@
   color: green;
 }
 
-.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range,
+.react-datepicker__day--selected{
+  border-radius: 1rem;
+  background-color: #D64A36;
+  color: white;
+} 
+.react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range,
 .react-datepicker__month-text--selected,
 .react-datepicker__month-text--in-selecting-range,
 .react-datepicker__month-text--in-range,
