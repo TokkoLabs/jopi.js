@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react'
 import { es as locale } from 'date-fns/locale'
 
-import { Datepicker } from './DatePicker'
+import { Datepicker } from './Datepicker'
 import { Box } from '@oneloop/box'
 import './myStyle.css'
 
@@ -10,7 +10,7 @@ export default {
   title: 'Design System|Datepicker',
 }
 
-export const plain = () => {
+export const Plain = () => {
   const [plainDate, setPlainDate] = useState(new Date())
   return (
     <Fragment>
@@ -29,7 +29,7 @@ export const plain = () => {
   )
 }
 
-export const custom = () => {
+export const Custom = () => {
   const [date, setDate] = useState(new Date())
   return (
     <Box className="primero">
@@ -46,9 +46,9 @@ export const custom = () => {
   )
 }
 
-export const range = () => {
-  const [startDate, setStartDate] = useState(new Date())
-  const [endDate, setEndDate] = useState(new Date())
+export const Range = () => {
+  const [startDate, setStartDate] = useState()
+  const [endDate, setEndDate] = useState()
 
   return (
     <Fragment>

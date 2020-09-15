@@ -1,3 +1,3 @@
-import { MiDP } from './DatePicker'
+import { Datepicker } from './Datepicker'
 
-export { MiDP }
+export { Datepicker }
