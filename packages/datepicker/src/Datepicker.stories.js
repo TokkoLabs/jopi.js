@@ -13,14 +13,19 @@ export default {
 export const plain = () => {
   const [plainDate, setPlainDate] = useState(new Date())
   return (
-    <Datepicker
-      selected={plainDate}
-      onChange={(date) => setPlainDate(date)}
-      dateFormat="dd-MM-yyyy"
-      minDate={new Date()}
-      locale={locale}
-      placeholderText="día, mes y año"
-    />
+    <Fragment>
+      <span>Seleccione una fecha: </span>
+      <Datepicker
+        showPopperArrow={false}
+        selected={plainDate}
+        onChange={(date) => setPlainDate(date)}
+        dateFormat="dd-MM-yyyy"
+        minDate={new Date()}
+        locale={locale}
+        placeholderText="día, mes y año"
+      />
+      <div style={{ border: '0.81rem solid transparent' }}></div>
+    </Fragment>
   )
 }
 
