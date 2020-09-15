@@ -45,3 +45,46 @@ export const custom = () => {
     </Box>
   )
 }
+
+export const range = () => {
+  const [startDate, setStartDate] = useState(new Date())
+  const [endDate, setEndDate] = useState(new Date())
+
+  return (
+    <Fragment>
+      <Box>
+        <span>Fecha inicio: </span>
+        <Datepicker
+          dateFormat="dd-MM-yyyy"
+          locale={locale}
+          placeholderText="DD-MM-AAAA"
+          showPopperArrow={false}
+          selected={startDate}
+          onChange={(date) => {
+            setStartDate(date)
+          }}
+          selectsStart
+          startDate={startDate}
+          endDate={endDate}
+        />
+      </Box>
+      <Box>
+        <span>Fecha fin: </span>
+        <Datepicker
+          dateFormat="dd-MM-yyyy"
+          minDate={startDate}
+          locale={locale}
+          placeholderText="DD-MM-AAAA"
+          showPopperArrow={false}
+          selected={endDate}
+          onChange={(date) => {
+            setEndDate(date)
+          }}
+          selectsEnd
+          startDate={startDate}
+          endDate={endDate}
+        />
+      </Box>
+    </Fragment>
+  )
+}
