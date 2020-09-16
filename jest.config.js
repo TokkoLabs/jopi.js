@@ -12,4 +12,7 @@ module.exports = {
     },
   },
   testPathIgnorePatterns: ['<rootDir>/packages/(?:.+?)/lib/'],
+  moduleNameMapper: {
+    '^.+\\.(css)$': '<rootDir>/packages/datepicker/config/CSSStub.js',
+  },
 }
