@@ -12,4 +12,5 @@ module.exports = {
     },
   },
   testPathIgnorePatterns: ['<rootDir>/packages/(?:.+?)/lib/'],
+  moduleNameMapper: { '^.+\\.(css|less)$': '<rootDir>/config/CSSStub.js' },
 }
