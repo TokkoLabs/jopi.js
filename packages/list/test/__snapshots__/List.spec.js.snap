@@ -9,7 +9,17 @@ exports[`List renders correctly 1`] = `
   padding: 0;
 }
 
-.c2 {
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -19,7 +29,7 @@ exports[`List renders correctly 1`] = `
   height: fit-content;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -44,13 +54,13 @@ exports[`List renders correctly 1`] = `
   width: 100%;
 }
 
-.c3:disabled {
+.c4:disabled {
   color: #999999;
   background-color: #EBEBEB;
   cursor: not-allowed;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -70,18 +80,11 @@ exports[`List renders correctly 1`] = `
   width: 100%;
 }
 
-.c4:hover {
+.c5:hover {
   background-color: neutral.1;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -92,13 +95,13 @@ exports[`List renders correctly 1`] = `
   className="c0"
 >
   <span
-    className="c1"
+    className="c1 c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <input
-        className="c3"
+        className="c4"
         disabled={false}
         type="text"
         width={1}
@@ -106,19 +109,19 @@ exports[`List renders correctly 1`] = `
     </div>
   </span>
   <li
-    className="c4"
+    className="c5"
     width={1}
   >
     One
   </li>
   <li
-    className="c4"
+    className="c5"
     width={1}
   >
     Two
   </li>
   <li
-    className="c4"
+    className="c5"
     width={1}
   >
     Three
