@@ -11,8 +11,7 @@
     "@oneloop/button": "^1.2.103",
     "@oneloop/hooks": "^1.2.91",
     "@oneloop/text": "^1.2.100",
-    "prop-types": "^15.7.2",
-    "react-dom": "16.13.1"
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "react": "^16.8.0",
