@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/hooks",
-  "version": "1.2.100",
+  "version": "1.2.101",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
