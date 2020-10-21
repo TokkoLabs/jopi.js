@@ -33,7 +33,7 @@ const CheckboxChecked = ({ isAlt, ...props }) => (
   />
 )
 
-const CheckboxUnchecked = props => (
+const CheckboxUnchecked = (props) => (
   <CheckboxBox borderColor="#E7E7E6" backgroundColor="white" {...props} />
 )
 
@@ -52,7 +52,7 @@ const CheckboxIcon = ({ isAlt = false, ...props }) => (
     <CheckboxChecked
       isAlt={isAlt}
       {...props}
-      __css={{
+      css={{
         display: 'none',
         'input:checked:not(:disabled) ~ &': {
           display: 'block',
@@ -61,7 +61,7 @@ const CheckboxIcon = ({ isAlt = false, ...props }) => (
     />
     <CheckboxUnchecked
       {...props}
-      __css={{
+      css={{
         display: 'none',
         'input:not(:checked):not(:disabled) ~ &': {
           display: 'block',
@@ -70,7 +70,7 @@ const CheckboxIcon = ({ isAlt = false, ...props }) => (
     />
     <CheckboxDisabled
       {...props}
-      __css={{
+      css={{
         display: 'none',
         'input:disabled:not(:checked) ~ &': {
           display: 'block',
@@ -80,7 +80,7 @@ const CheckboxIcon = ({ isAlt = false, ...props }) => (
     <CheckboxDisabled
       checked
       {...props}
-      __css={{
+      css={{
         display: 'none',
         'input:checked:disabled ~ &': {
           display: 'block',
