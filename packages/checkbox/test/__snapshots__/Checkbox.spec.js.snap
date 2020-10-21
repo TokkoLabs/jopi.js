@@ -21,7 +21,7 @@ exports[`Checkbox alt 1`] = `
   height: 100%;
 }
 
-.c4 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -42,51 +42,50 @@ input:focus ~ .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: none;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
   width: 18px;
   height: 18px;
 }
 
-input:checked:not(:disabled) ~ .c0 {
-  display: block;
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
 }
 
 .c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   display: none;
-  width: 18px;
-  height: 18px;
 }
 
-input:not(:checked):not(:disabled) ~ .c0 {
+input:checked:not(:disabled) ~ .c4 {
   display: block;
 }
 
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
+.c8 {
   display: none;
-  width: 18px;
-  height: 18px;
 }
 
-input:disabled:not(:checked) ~ .c0 {
+input:not(:checked):not(:disabled) ~ .c7 {
   display: block;
 }
 
-.c7 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
+.c12 {
   display: none;
-  width: 18px;
-  height: 18px;
 }
 
-input:checked:disabled ~ .c0 {
+input:checked:disabled ~ .c11 {
+  display: block;
+}
+
+.c10 {
+  display: none;
+}
+
+input:disabled:not(:checked) ~ .c9 {
   display: block;
 }
 
@@ -99,7 +98,7 @@ input:checked:disabled ~ .c0 {
   />
   <svg
     aria-hidden="true"
-    className="c0 c3 c0 c4"
+    className="c0 c3 c4 c5 c0 c6"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -122,7 +121,7 @@ input:checked:disabled ~ .c0 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c0 c5 c0 c4"
+    className="c0 c3 c7 c8 c0 c6"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -141,7 +140,7 @@ input:checked:disabled ~ .c0 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c0 c6 c0 c4"
+    className="c0 c3 c9 c10 c0 c6"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -160,7 +159,7 @@ input:checked:disabled ~ .c0 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c0 c7 c0 c4"
+    className="c0 c3 c11 c12 c0 c6"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -205,7 +204,7 @@ exports[`Checkbox default 1`] = `
   height: 100%;
 }
 
-.c4 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -226,51 +225,50 @@ input:focus ~ .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: none;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
   width: 18px;
   height: 18px;
 }
 
-input:checked:not(:disabled) ~ .c0 {
-  display: block;
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
 }
 
 .c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   display: none;
-  width: 18px;
-  height: 18px;
 }
 
-input:not(:checked):not(:disabled) ~ .c0 {
+input:checked:not(:disabled) ~ .c4 {
   display: block;
 }
 
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
+.c8 {
   display: none;
-  width: 18px;
-  height: 18px;
 }
 
-input:disabled:not(:checked) ~ .c0 {
+input:not(:checked):not(:disabled) ~ .c7 {
   display: block;
 }
 
-.c7 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
+.c12 {
   display: none;
-  width: 18px;
-  height: 18px;
 }
 
-input:checked:disabled ~ .c0 {
+input:checked:disabled ~ .c11 {
+  display: block;
+}
+
+.c10 {
+  display: none;
+}
+
+input:disabled:not(:checked) ~ .c9 {
   display: block;
 }
 
@@ -283,7 +281,7 @@ input:checked:disabled ~ .c0 {
   />
   <svg
     aria-hidden="true"
-    className="c0 c3 c0 c4"
+    className="c0 c3 c4 c5 c0 c6"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -306,7 +304,7 @@ input:checked:disabled ~ .c0 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c0 c5 c0 c4"
+    className="c0 c3 c7 c8 c0 c6"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -325,7 +323,7 @@ input:checked:disabled ~ .c0 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c0 c6 c0 c4"
+    className="c0 c3 c9 c10 c0 c6"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
@@ -344,7 +342,7 @@ input:checked:disabled ~ .c0 {
   </svg>
   <svg
     aria-hidden="true"
-    className="c0 c7 c0 c4"
+    className="c0 c3 c11 c12 c0 c6"
     fill="none"
     height={18}
     viewBox="0 0 18 18"
