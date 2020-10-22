@@ -3,6 +3,7 @@ import { es as locale } from 'date-fns/locale'
 
 import { Datepicker } from './Datepicker'
 import { Box } from '@oneloop/box'
+import './datepicker.css'
 import './myStyle.css'
 
 export default {
