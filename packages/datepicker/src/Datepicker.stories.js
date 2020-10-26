@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react'
 import { es as locale } from 'date-fns/locale'
 
-import { Datepicker } from './Datepicker'
+import { Datepicker } from '.'
 import { Box } from '@oneloop/box'
 import './datepicker.css'
 import './myStyle.css'
