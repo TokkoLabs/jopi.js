@@ -15,7 +15,7 @@ jobs:
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Configure git credentials
-        uses: OleksiyRudenko/gha-git-credentials@v1
+        uses: OleksiyRudenko/gha-git-credentials@v2
         with:
           token: ${{ secrets.GIT_TOKEN }}
 
