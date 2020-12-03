@@ -3,13 +3,9 @@
   "version": "1.2.102",
   "main": "lib/index.js",
   "module": "src/index.js",
-  "style": "dist/datepicker.css",
   "files": [
     "lib",
     "styles"
-  ],
-  "sideEffects": [
-    "*.css"
   ],
   "dependencies": {
     "@datepicker-react/hooks": "^2.2.0",
