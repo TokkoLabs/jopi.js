@@ -6,8 +6,7 @@
   "style": "dist/datepicker.css",
   "files": [
     "lib",
-    "src/stylesheets",
-    "dist"
+    "styles"
   ],
   "sideEffects": [
     "*.css"
