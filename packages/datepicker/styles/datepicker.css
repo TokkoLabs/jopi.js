@@ -528,7 +528,7 @@
 
 .react-datepicker__day--selected{
   border-radius: 1rem;
-  background-color: greenyellow;
+  background-color: #D64A36;
   color: white;
 } 
 .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range,
