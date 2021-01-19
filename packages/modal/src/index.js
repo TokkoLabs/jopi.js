@@ -21,7 +21,7 @@ export const Modal = ({ children, ...props }) => {
         width: '100%',
         height: '100%',
         bg: 'rgba(4, 4, 4, 0.79)',
-        zIndex:'1000',
+        zIndex: '1000',
       }}
     >
       <Box
