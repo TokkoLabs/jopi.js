@@ -19,6 +19,8 @@ export const danger = () => <Button variant="danger">{'Button'}</Button>
 
 export const def = () => <Button variant="default">{'Button'}</Button>
 
+export const disabled = () => <Button variant="disabled">{'Button'}</Button>
+
 export const small = () => (
   <Button size={24} p={2} fontSize={2} lineHeight={0} variant="default">
     {'O'}
