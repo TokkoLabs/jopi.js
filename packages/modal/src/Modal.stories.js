@@ -7,7 +7,7 @@ import { Modal } from '.'
 
 export default {
   component: Modal,
-  title: 'Design System|Modal',
+  title: 'Modal',
 }
 
 export const normal = () =>

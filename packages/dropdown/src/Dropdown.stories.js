@@ -5,7 +5,7 @@ import { useFilterData } from '@oneloop/list'
 
 export default {
   component: Dropdown,
-  title: 'Design System|Dropdown',
+  title: 'Dropdown',
 }
 
 const data = [
@@ -36,7 +36,7 @@ export const search = () =>
   React.createElement(() => {
     const [filteredData, setValue] = useFilterData(data, 'content')
 
-    const onFilter = e => {
+    const onFilter = (e) => {
       setValue(e.target.value)
     }
 
@@ -45,7 +45,7 @@ export const search = () =>
         <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
         <Dropdown.Items>
           <Dropdown.Search placeholder="search something" onChange={onFilter} />
-          {filteredData.map(user => (
+          {filteredData.map((user) => (
             <Dropdown.Item key={user.id} onClick={action('selected')}>
               {user.content.name}
             </Dropdown.Item>
@@ -59,7 +59,7 @@ export const select = () => (
   <Dropdown width={1 / 3}>
     <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
     <Dropdown.Items>
-      {data.map(user => (
+      {data.map((user) => (
         <Dropdown.Item key={user.id} onClick={action('selected')}>
           {user.content.name}
         </Dropdown.Item>

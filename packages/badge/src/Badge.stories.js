@@ -4,7 +4,7 @@ import { Badge } from '.'
 
 export default {
   component: Badge,
-  title: 'Design System|Badge',
+  title: 'Badge',
 }
 
 export const primary = () => <Badge>{'1'}</Badge>

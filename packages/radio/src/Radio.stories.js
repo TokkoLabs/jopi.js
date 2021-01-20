@@ -4,7 +4,7 @@ import { Radio } from '.'
 
 export default {
   component: Radio,
-  title: 'Design System|Radio',
+  title: 'Radio',
 }
 
 export const normal = () => <Radio />

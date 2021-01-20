@@ -4,7 +4,7 @@ import { Box } from '.'
 
 export default {
   component: Box,
-  title: 'Design System|Box',
+  title: 'Box',
 }
 
 export const side = () => (

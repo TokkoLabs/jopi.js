@@ -5,7 +5,7 @@ import { Switch } from '.'
 
 export default {
   component: Switch,
-  title: 'Design System|Switch',
+  title: 'Switch',
 }
 
 export const normal = () =>
