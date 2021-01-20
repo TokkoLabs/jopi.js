@@ -6,4 +6,6 @@ export default {
   title: 'Paginator',
 }
 
-export const normal = () => <>{'1 2 3 4 5 [6] 7 8 ... 68 69'}</>
+export const normal = () => (
+  <Paginator currentPage={7} total={23} perPage={10} />
+)
