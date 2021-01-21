@@ -9,10 +9,6 @@ export default {
   title: 'Design System|Alert',
 }
 
-// export const success = () => (
-//   <Alert text="Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!" />
-// )
-
 export const success = () =>
   React.createElement(() => {
     const [openAlert, setOpenAlert] = useToggle(false)
