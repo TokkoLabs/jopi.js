@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Box } from '@oneloop/box'
+import _ from 'lodash'
 
 export const Paginator = (props) => {
   const [state, setState] = useState(props)
