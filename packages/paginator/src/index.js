@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Box } from '@oneloop/box'
+import _ from 'lodash'
 
 export const Paginator = (props) => {
   const [state, setState] = useState(props)
@@ -78,17 +79,6 @@ export const Paginator = (props) => {
     return props.currentPage < lastPage()
   }
 
-  const previousPage = () => {
-    const { currentPage } = props
-    return currentPage > 1 ? currentPage - 1 : 1
-  }
-
-  const nextPage = () => {
-    const { currentPage } = props
-    const lastPage = lastPage()
-    return lastPage > currentPage ? currentPage + 1 : lastPage
-  }
-
   const changePage = (page, e) => {
     e.preventDefault()
     //const { handlePageChanged } = props;
@@ -96,6 +86,20 @@ export const Paginator = (props) => {
     props.changePageNumber(page)
   }
 
+  if (
+    props.total < 0 ||
+    props.perPage < 1 ||
+    props.currentPage < 1 ||
+    props.currentPage > props.total / props.perPage
+  ) {
+    console.error('Error in paginator parameters')
+    return (
+      <Box>
+        {'<'}
+        {'>'}
+      </Box>
+    )
+  }
   return (
     <Box sx={{ display: 'flex' }}>
       <Box
@@ -104,9 +108,9 @@ export const Paginator = (props) => {
           paddingRight: '0.5rem',
         }}
       >
-        {onFirstPage() ? (
+        {!onFirstPage() && (
           <span
-            sx={{
+            style={{
               cursor: 'pointer',
               color: '#C8C9CA',
               fontStyle: 'normal',
@@ -114,20 +118,7 @@ export const Paginator = (props) => {
               fontSize: '16px',
               lineHeight: '22px',
             }}
-          >
-            {'<'}
-          </span>
-        ) : (
-          <span
-            sx={{
-              cursor: 'pointer',
-              color: '#C8C9CA',
-              fontStyle: 'normal',
-              fontWeight: 'normal',
-              fontSize: '16px',
-              lineHeight: '22px',
-            }}
-            onClick={(e) => changePage(previousPage(), e)}
+            onClick={(e) => changePage(props.currentPage - 1, e)}
           >
             {'<'}
           </span>
@@ -205,9 +196,9 @@ export const Paginator = (props) => {
           paddingRight: '0.5rem',
         }}
       >
-        {hasMorePages() ? (
+        {hasMorePages() && (
           <span
-            sx={{
+            style={{
               cursor: 'pointer',
               color: '#C8C9CA',
               fontStyle: 'normal',
@@ -215,20 +206,7 @@ export const Paginator = (props) => {
               fontSize: '16px',
               lineHeight: '22px',
             }}
-            onClick={(e) => changePage(nextPage(), e)}
-          >
-            {'>'}
-          </span>
-        ) : (
-          <span
-            sx={{
-              cursor: 'pointer',
-              color: '#C8C9CA',
-              fontStyle: 'normal',
-              fontWeight: 'normal',
-              fontSize: '16px',
-              lineHeight: '22px',
-            }}
+            onClick={(e) => changePage(props.currentPage + 1, e)}
           >
             {'>'}
           </span>
