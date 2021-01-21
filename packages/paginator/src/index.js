@@ -96,6 +96,21 @@ export const Paginator = (props) => {
     props.changePageNumber(page)
   }
 
+  if (
+    props.total < 0 ||
+    props.perPage < 1 ||
+    props.currentPage < 0 ||
+    props.currentPage > props.total / props.perPage
+  ) {
+    console.error('Error in paginator parameters')
+    return (
+      <Box>
+        {' '}
+        {'<'}
+        {'>'}{' '}
+      </Box>
+    )
+  }
   return (
     <Box sx={{ display: 'flex' }}>
       <Box
