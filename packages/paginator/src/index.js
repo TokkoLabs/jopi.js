@@ -10,7 +10,6 @@ export const Paginator = (props) => {
       total: props.total,
       perPage: props.perPage,
     })
-    // call request to refresh data
   }
 
   const lastPage = () => {
@@ -94,6 +93,7 @@ export const Paginator = (props) => {
     e.preventDefault()
     //const { handlePageChanged } = props;
     handlePageChanged(page)
+    props.changePageNumber(page)
   }
 
   return (
