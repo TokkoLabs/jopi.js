@@ -13,11 +13,49 @@ export const Paginator = (props) => {
     // call request to refresh data
   }
 
+  const lastPage = () => {
+    const { total, perPage } = props
+    return Math.max(Math.ceil(total / perPage), 1)
+  }
+
   const makeUrlWindow = () => {
+    // small slider
+    if (lastPage() < 12) {
+      return {
+        first: _.range(1, lastPage() + 1),
+        slider: null,
+        last: null,
+      }
+    }
+
+    // url slider
+    const onBothSide = 6
+
+    const { currentPage } = props
+
+    // if slider too close to beginning
+    if (currentPage <= onBothSide) {
+      return {
+        first: _.range(1, onBothSide + 3),
+        slider: null,
+        last: _.range(lastPage() - 1, lastPage() + 1),
+      }
+    }
+
+    // if slider too close to ending
+    if (currentPage > lastPage() - onBothSide) {
+      return {
+        first: _.range(1, 3),
+        slider: null,
+        last: _.range(lastPage() - (onBothSide + 2), lastPage() + 1),
+      }
+    }
+
+    // get full slider
     return {
-      first: [1],
-      slider: [6, 7, 8, 9, 10],
-      last: [23],
+      first: _.range(1, 3),
+      slider: _.range(currentPage - 3, currentPage + 4),
+      last: _.range(lastPage() - 1, lastPage() + 1),
     }
   }
 
@@ -31,11 +69,6 @@ export const Paginator = (props) => {
       Array.isArray(urlWindow.last) ? '...' : null,
       urlWindow.last,
     ])
-  }
-
-  const lastPage = () => {
-    const { total, perPage } = props
-    return Math.max(Math.ceil(total / perPage), 1)
   }
 
   const onFirstPage = () => {

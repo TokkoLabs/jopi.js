@@ -7,5 +7,5 @@ export default {
 }
 
 export const normal = () => (
-  <Paginator currentPage={7} total={23} perPage={10} />
+  <Paginator currentPage={7} total={200} perPage={10} />
 )
