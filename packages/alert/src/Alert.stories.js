@@ -57,4 +57,3 @@ export const danger = () =>
       </React.Fragment>
     )
   })
-  
