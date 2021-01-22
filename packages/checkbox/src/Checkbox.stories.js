@@ -8,7 +8,8 @@ export default {
 }
 
 export const normal = () => <Checkbox />
-export const checked = () => <Checkbox defaultChecked />
+export const defaultCheckedTrue = () => <Checkbox defaultChecked={true} />
+export const defaultCheckedFalse = () => <Checkbox defaultChecked={false} />
 export const checkedDisabled = () => <Checkbox defaultChecked disabled />
 export const disabled = () => <Checkbox disabled />
 
