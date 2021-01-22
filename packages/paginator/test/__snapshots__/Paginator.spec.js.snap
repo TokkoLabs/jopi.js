@@ -15,6 +15,143 @@ exports[`Paginator Paginator with error in actualPage 1`] = `
 </div>
 `;
 
+exports[`Paginator Paginator with error in actualPage value 0 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
+  className="c0"
+>
+  &lt;
+  &gt;
+</div>
+`;
+
+exports[`Paginator Paginator with error in currentPage value -20 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
+  className="c0"
+>
+  &lt;
+  &gt;
+</div>
+`;
+
+exports[`Paginator Paginator with error in currentPage value String 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#C8C9CA",
+          "cursor": "pointer",
+          "fontSize": "16px",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+          "lineHeight": "22px",
+        }
+      }
+    >
+      &lt;
+    </span>
+  </div>
+  <div
+    className="c2"
+  >
+    <span
+      onClick={[Function]}
+    >
+      1
+    </span>
+  </div>
+  <div
+    className="c2"
+  >
+    <span
+      onClick={[Function]}
+    >
+      2
+    </span>
+  </div>
+  <div
+    className="c2"
+  >
+    ...
+  </div>
+  <div
+    className="c2"
+  >
+    ...
+  </div>
+  <div
+    className="c2"
+  >
+    <span
+      onClick={[Function]}
+    >
+      99
+    </span>
+  </div>
+  <div
+    className="c2"
+  >
+    <span
+      onClick={[Function]}
+    >
+      100
+    </span>
+  </div>
+  <div
+    className="c1"
+  />
+</div>
+`;
+
 exports[`Paginator Paginator with error in perPage 1`] = `
 .c0 {
   box-sizing: border-box;
