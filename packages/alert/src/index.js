@@ -57,6 +57,7 @@ export const Alert = ({ type = 'success', text, ...props }) => (
       display="inline-flex"
       alignSelf="center"
       mr={2}
+      onClick={() => props.closeFunction()}
     >
       <Times color="#716F6F" m="auto" />
     </Button>

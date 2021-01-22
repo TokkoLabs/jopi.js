@@ -4,7 +4,7 @@ import { Times, Check, Exclamation } from '.'
 
 export default {
   component: Times,
-  title: 'Design System|Icons',
+  title: 'Icons',
 }
 
 export const times = () => (

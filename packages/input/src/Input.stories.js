@@ -5,7 +5,7 @@ import { Input } from '.'
 
 export default {
   component: Input,
-  title: 'Design System|Input',
+  title: 'Input',
 }
 
 export const placeholder = () => <Input placeholder="Hello World!" />

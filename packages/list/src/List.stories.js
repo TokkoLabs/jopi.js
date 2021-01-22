@@ -5,7 +5,7 @@ import { List, useFilterData } from '.'
 
 export default {
   component: List,
-  title: 'Design System|List',
+  title: 'List',
 }
 
 const data = [
@@ -68,8 +68,8 @@ export const searchable = () =>
 
     return (
       <List width={1 / 3}>
-        <List.Search onChange={e => setValue(e.target.value)} />
-        {filteredData.map(user => (
+        <List.Search onChange={(e) => setValue(e.target.value)} />
+        {filteredData.map((user) => (
           <List.Item key={user.id}>{user.content.name}</List.Item>
         ))}
       </List>

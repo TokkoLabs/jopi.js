@@ -8,7 +8,7 @@ import './myStyle.css'
 
 export default {
   component: Datepicker,
-  title: 'Design System|Datepicker',
+  title: 'Datepicker',
 }
 
 export const Plain = () => {
