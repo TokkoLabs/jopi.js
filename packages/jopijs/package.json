@@ -23,6 +23,7 @@
     "@oneloop/loader": "^1.2.145",
     "@oneloop/modal": "^1.2.151",
     "@oneloop/radio": "^1.2.145",
+    "@oneloop/paginator": "^1.0.1",
     "@oneloop/switch": "^1.2.148",
     "@oneloop/table": "^1.2.145",
     "@oneloop/tabs": "^1.4.120",
