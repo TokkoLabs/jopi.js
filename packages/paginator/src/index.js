@@ -3,16 +3,6 @@ import { Box } from '@oneloop/box'
 import _ from 'lodash'
 
 export const Paginator = (props) => {
-  const [state, setState] = useState(props)
-
-  const handlePageChanged = (page) => {
-    setState({
-      currentPage: page,
-      total: props.total,
-      perPage: props.perPage,
-    })
-  }
-
   const lastPage = () => {
     const { total, perPage } = props
     return Math.max(Math.ceil(total / perPage), 1)
@@ -81,8 +71,6 @@ export const Paginator = (props) => {
 
   const changePage = (page, e) => {
     e.preventDefault()
-    //const { handlePageChanged } = props;
-    handlePageChanged(page)
     props.changePageNumber(page)
   }
 

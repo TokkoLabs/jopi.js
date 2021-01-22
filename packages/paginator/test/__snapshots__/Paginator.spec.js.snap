@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Paginator Paginator with error in actualPage 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-<div
-  className="c0"
->
-  &lt;
-  &gt;
-</div>
-`;
-
 exports[`Paginator Paginator with error in actualPage value 0 1`] = `
 .c0 {
   box-sizing: border-box;
