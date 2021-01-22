@@ -35,11 +35,41 @@ describe('Paginator', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test('Paginator with error in actualPage', () => {
+  test('Paginator with error in actualPage value 0', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={0}
+          total={1000}
+          perPage={10}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('Paginator with error in currentPage value -20', () => {
     const tree = renderer
       .create(
         <Paginator
           currentPage={-20}
+          total={1000}
+          perPage={10}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('Paginator with error in currentPage value String', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={'Hello world'}
           total={1000}
           perPage={10}
           changePageNumber={() => console.log('change page')}

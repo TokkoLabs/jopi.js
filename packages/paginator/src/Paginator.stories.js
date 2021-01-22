@@ -24,19 +24,3 @@ export const normal = () =>
       </React.Fragment>
     )
   })
-
-export const withErrors = () =>
-  React.createElement(() => {
-    const [actualPage, setActualPage] = useState(-1)
-    return (
-      <React.Fragment>
-        <Text>{actualPage}</Text>
-        <Paginator
-          currentPage={actualPage}
-          total={1000}
-          perPage={0}
-          changePageNumber={setActualPage}
-        />
-      </React.Fragment>
-    )
-  })
