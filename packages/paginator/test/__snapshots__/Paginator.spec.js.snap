@@ -11,7 +11,9 @@ exports[`Paginator Paginator with error in actualPage value 0 1`] = `
   className="c0"
 >
   &lt;
+   
   &gt;
+   
 </div>
 `;
 
@@ -26,7 +28,9 @@ exports[`Paginator Paginator with error in currentPage value -20 1`] = `
   className="c0"
 >
   &lt;
+   
   &gt;
+   
 </div>
 `;
 
@@ -148,7 +152,9 @@ exports[`Paginator Paginator with error in perPage 1`] = `
   className="c0"
 >
   &lt;
+   
   &gt;
+   
 </div>
 `;
 
@@ -163,7 +169,9 @@ exports[`Paginator Paginator with error in total 1`] = `
   className="c0"
 >
   &lt;
+   
   &gt;
+   
 </div>
 `;
 
@@ -346,6 +354,8 @@ exports[`Paginator renders correctly 2 1`] = `
   className="c0"
 >
   &lt;
+   
   &gt;
+   
 </div>
 `;

@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Box } from '@oneloop/box'
 import _ from 'lodash'
 
-export const Paginator = (props) => {
+export const Paginator = ({
+  currentPage,
+  total,
+  perPage,
+  changePageNumber,
+  ...props
+}) => {
   const lastPage = () => {
-    const { total, perPage } = props
     return Math.max(Math.ceil(total / perPage), 1)
   }
 
@@ -20,8 +25,6 @@ export const Paginator = (props) => {
 
     // url slider
     const onBothSide = 6
-
-    const { currentPage } = props
 
     // if slider too close to beginning
     if (currentPage <= onBothSide) {
@@ -62,29 +65,28 @@ export const Paginator = (props) => {
   }
 
   const onFirstPage = () => {
-    return props.currentPage <= 1
+    return currentPage <= 1
   }
 
   const hasMorePages = () => {
-    return props.currentPage < lastPage()
+    return currentPage < lastPage()
   }
 
   const changePage = (page, e) => {
     e.preventDefault()
-    props.changePageNumber(page)
+    changePageNumber(page)
   }
 
   if (
-    props.total < 0 ||
-    props.perPage < 1 ||
-    props.currentPage < 1 ||
-    props.currentPage > props.total / props.perPage
+    total < 0 ||
+    perPage < 1 ||
+    currentPage < 1 ||
+    currentPage > total / perPage
   ) {
     console.error('Error in paginator parameters')
     return (
       <Box>
-        {'<'}
-        {'>'}
+        {'<'} {'>'}{' '}
       </Box>
     )
   }
@@ -106,7 +108,7 @@ export const Paginator = (props) => {
               fontSize: '16px',
               lineHeight: '22px',
             }}
-            onClick={(e) => changePage(props.currentPage - 1, e)}
+            onClick={(e) => changePage(currentPage - 1, e)}
           >
             {'<'}
           </span>
@@ -134,7 +136,7 @@ export const Paginator = (props) => {
           }
           if (Array.isArray(element)) {
             return element.map((page) => {
-              if (page === props.currentPage) {
+              if (page === currentPage) {
                 return (
                   <Box
                     sx={{
@@ -194,7 +196,7 @@ export const Paginator = (props) => {
               fontSize: '16px',
               lineHeight: '22px',
             }}
-            onClick={(e) => changePage(props.currentPage + 1, e)}
+            onClick={(e) => changePage(currentPage + 1, e)}
           >
             {'>'}
           </span>
