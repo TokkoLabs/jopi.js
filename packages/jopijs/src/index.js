@@ -12,6 +12,7 @@ import { Label } from '@oneloop/label'
 import { List, useFilterData } from '@oneloop/list'
 import { Loader } from '@oneloop/loader'
 import { Modal } from '@oneloop/modal'
+import { Paginator } from '@oneloop/paginator'
 import { Radio } from '@oneloop/radio'
 import { Switch } from '@oneloop/switch'
 import { Table } from '@oneloop/table'
@@ -39,6 +40,7 @@ export {
   Collapsible,
   Loader,
   Modal,
+  Paginator,
   Switch,
   Tabs,
   Textarea,
