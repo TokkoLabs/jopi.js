@@ -5,7 +5,7 @@ import { Tabs } from '.'
 
 export default {
   component: Tabs,
-  title: 'Design System|Tabs',
+  title: 'Tabs',
 }
 
 export const normal = () => (

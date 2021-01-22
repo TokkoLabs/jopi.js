@@ -4,7 +4,7 @@ import { Label } from '.'
 
 export default {
   component: Label,
-  title: 'Design System|Label',
+  title: 'Label',
 }
 
 export const normal = () => <Label>{'Email'}</Label>

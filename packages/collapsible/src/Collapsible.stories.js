@@ -4,7 +4,7 @@ import { Collapsible } from '.'
 
 export default {
   component: Collapsible,
-  title: 'Design System|Collapsible',
+  title: 'Collapsible',
 }
 
 export const normal = () =>

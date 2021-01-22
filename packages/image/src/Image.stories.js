@@ -4,7 +4,7 @@ import { Image } from '.'
 
 export default {
   component: Image,
-  title: 'Design System|Image',
+  title: 'Image',
 }
 
 export const normal = () => (

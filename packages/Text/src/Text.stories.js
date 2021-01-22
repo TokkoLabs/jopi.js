@@ -4,7 +4,7 @@ import { Text, Heading } from '.'
 
 export default {
   component: Text,
-  title: 'Design System|Text',
+  title: 'Text',
 }
 
 export const all = () => (

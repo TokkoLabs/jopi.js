@@ -4,7 +4,7 @@ import { Table } from '.'
 
 export default {
   component: Table,
-  title: 'Design System|Table',
+  title: 'Table',
 }
 
 export const normal = () => (

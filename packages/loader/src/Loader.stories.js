@@ -4,7 +4,7 @@ import { Loader } from '.'
 
 export default {
   component: Loader,
-  title: 'Design System|Loader',
+  title: 'Loader',
 }
 
 export const normal = () => <Loader />

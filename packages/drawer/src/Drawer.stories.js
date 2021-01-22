@@ -6,7 +6,7 @@ import { Drawer } from '.'
 
 export default {
   component: Drawer,
-  title: 'Design System|Drawer',
+  title: 'Drawer',
 }
 
 export const normal = () =>
