@@ -7,6 +7,8 @@ export const Paginator = ({
   total,
   perPage,
   changePageNumber,
+  sx,
+  selectedPageStyle,
   ...props
 }) => {
   const lastPage = () => {
@@ -97,7 +99,19 @@ export const Paginator = ({
     )
   }
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        fontFamily: 'body',
+        fontSize: '12px',
+        cursor: 'pointer',
+        color: '#C8C9CA',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        lineHeight: '22px',
+      }}
+      {...sx}
+    >
       <Box
         sx={{
           paddingLeft: '0.5rem',
@@ -105,19 +119,7 @@ export const Paginator = ({
         }}
       >
         {!onFirstPage() && (
-          <span
-            style={{
-              cursor: 'pointer',
-              color: '#C8C9CA',
-              fontStyle: 'normal',
-              fontWeight: 'normal',
-              fontSize: '16px',
-              lineHeight: '22px',
-            }}
-            onClick={(e) => changePage(currentPage - 1, e)}
-          >
-            {'<'}
-          </span>
+          <Box onClick={(e) => changePage(currentPage - 1, e)}>{'<'}</Box>
         )}
       </Box>
       {elements().map((element, index) => {
@@ -126,12 +128,6 @@ export const Paginator = ({
             return (
               <Box
                 sx={{
-                  cursor: 'pointer',
-                  color: '#C8C9CA',
-                  fontStyle: 'normal',
-                  fontWeight: 'normal',
-                  fontSize: '16px',
-                  lineHeight: '22px',
                   paddingLeft: '0.5rem',
                   paddingRight: '0.5rem',
                 }}
@@ -146,17 +142,13 @@ export const Paginator = ({
                 return (
                   <Box
                     sx={{
-                      cursor: 'pointer',
                       color: '#D54936',
                       borderBottom: '2px solid #D54936',
                       paddingBottom: '3px',
-                      fontStyle: 'normal',
-                      fontWeight: 'normal',
-                      fontSize: '16px',
-                      lineHeight: '22px',
                       paddingLeft: '0.5rem',
                       paddingRight: '0.5rem',
                     }}
+                    style={selectedPageStyle}
                     key={page}
                   >
                     {page}
@@ -166,12 +158,6 @@ export const Paginator = ({
               return (
                 <Box
                   sx={{
-                    cursor: 'pointer',
-                    color: '#C8C9CA',
-                    fontStyle: 'normal',
-                    fontWeight: 'normal',
-                    fontSize: '16px',
-                    lineHeight: '22px',
                     paddingLeft: '0.5rem',
                     paddingRight: '0.5rem',
                   }}
@@ -193,19 +179,7 @@ export const Paginator = ({
         }}
       >
         {hasMorePages() && (
-          <span
-            style={{
-              cursor: 'pointer',
-              color: '#C8C9CA',
-              fontStyle: 'normal',
-              fontWeight: 'normal',
-              fontSize: '16px',
-              lineHeight: '22px',
-            }}
-            onClick={(e) => changePage(currentPage + 1, e)}
-          >
-            {'>'}
-          </span>
+          <Box onClick={(e) => changePage(currentPage + 1, e)}>{'>'}</Box>
         )}
       </Box>
     </Box>
