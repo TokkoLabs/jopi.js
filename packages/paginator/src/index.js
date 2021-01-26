@@ -81,7 +81,13 @@ export const Paginator = ({
     total < 0 ||
     perPage < 1 ||
     currentPage < 1 ||
-    currentPage > total / perPage
+    (total < perPage && currentPage > 1) ||
+    (total > perPage &&
+      total % perPage == 0 &&
+      currentPage > total / perPage) ||
+    (total > perPage &&
+      total % perPage != 0 &&
+      currentPage > 1 + total / perPage)
   ) {
     console.error('Error in paginator parameters')
     return (
