@@ -9,6 +9,13 @@ exports[`Paginator Paginator with (total > perPage && total % perPage != 0) && (
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-family: body;
+  font-size: 12px;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
 }
 
 .c1 {
@@ -23,28 +30,15 @@ exports[`Paginator Paginator with (total > perPage && total % perPage != 0) && (
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
   color: #D54936;
   border-bottom: 2px solid #D54936;
   padding-bottom: 3px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -55,24 +49,15 @@ exports[`Paginator Paginator with (total > perPage && total % perPage != 0) && (
   <div
     className="c1"
   >
-    <span
+    <div
+      className="c2"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "#C8C9CA",
-          "cursor": "pointer",
-          "fontSize": "16px",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "22px",
-        }
-      }
     >
       &lt;
-    </span>
+    </div>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -81,7 +66,7 @@ exports[`Paginator Paginator with (total > perPage && total % perPage != 0) && (
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -90,7 +75,7 @@ exports[`Paginator Paginator with (total > perPage && total % perPage != 0) && (
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -135,6 +120,13 @@ exports[`Paginator Paginator with (total > perPage && total % perPage == 0) && (
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-family: body;
+  font-size: 12px;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
 }
 
 .c1 {
@@ -149,28 +141,15 @@ exports[`Paginator Paginator with (total > perPage && total % perPage == 0) && (
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
   color: #D54936;
   border-bottom: 2px solid #D54936;
   padding-bottom: 3px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -181,24 +160,15 @@ exports[`Paginator Paginator with (total > perPage && total % perPage == 0) && (
   <div
     className="c1"
   >
-    <span
+    <div
+      className="c2"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "#C8C9CA",
-          "cursor": "pointer",
-          "fontSize": "16px",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "22px",
-        }
-      }
     >
       &lt;
-    </span>
+    </div>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -277,6 +247,13 @@ exports[`Paginator Paginator with error in currentPage value String 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-family: body;
+  font-size: 12px;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
 }
 
 .c1 {
@@ -291,14 +268,6 @@ exports[`Paginator Paginator with error in currentPage value String 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 <div
@@ -307,24 +276,15 @@ exports[`Paginator Paginator with error in currentPage value String 1`] = `
   <div
     className="c1"
   >
-    <span
+    <div
+      className="c2"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "#C8C9CA",
-          "cursor": "pointer",
-          "fontSize": "16px",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "22px",
-        }
-      }
     >
       &lt;
-    </span>
+    </div>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -333,7 +293,7 @@ exports[`Paginator Paginator with error in currentPage value String 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -342,17 +302,17 @@ exports[`Paginator Paginator with error in currentPage value String 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     ...
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     ...
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -361,7 +321,7 @@ exports[`Paginator Paginator with error in currentPage value String 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -384,6 +344,13 @@ exports[`Paginator Paginator with error, currentPage too big 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-family: body;
+  font-size: 12px;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
 }
 
 .c1 {
@@ -398,14 +365,6 @@ exports[`Paginator Paginator with error, currentPage too big 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 <div
@@ -414,24 +373,15 @@ exports[`Paginator Paginator with error, currentPage too big 1`] = `
   <div
     className="c1"
   >
-    <span
+    <div
+      className="c2"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "#C8C9CA",
-          "cursor": "pointer",
-          "fontSize": "16px",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "22px",
-        }
-      }
     >
       &lt;
-    </span>
+    </div>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -488,6 +438,13 @@ exports[`Paginator renders correctly 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-family: body;
+  font-size: 12px;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
 }
 
 .c1 {
@@ -502,14 +459,9 @@ exports[`Paginator renders correctly 1 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
   color: #D54936;
   border-bottom: 2px solid #D54936;
   padding-bottom: 3px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -518,14 +470,6 @@ exports[`Paginator renders correctly 1 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 <div
@@ -540,7 +484,7 @@ exports[`Paginator renders correctly 1 1`] = `
     1
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -549,7 +493,7 @@ exports[`Paginator renders correctly 1 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -558,7 +502,7 @@ exports[`Paginator renders correctly 1 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -567,7 +511,7 @@ exports[`Paginator renders correctly 1 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -576,7 +520,7 @@ exports[`Paginator renders correctly 1 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -585,7 +529,7 @@ exports[`Paginator renders correctly 1 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -594,7 +538,7 @@ exports[`Paginator renders correctly 1 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -603,12 +547,12 @@ exports[`Paginator renders correctly 1 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     ...
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -617,7 +561,7 @@ exports[`Paginator renders correctly 1 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -628,21 +572,12 @@ exports[`Paginator renders correctly 1 1`] = `
   <div
     className="c1"
   >
-    <span
+    <div
+      className="c3"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "#C8C9CA",
-          "cursor": "pointer",
-          "fontSize": "16px",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "22px",
-        }
-      }
     >
       &gt;
-    </span>
+    </div>
   </div>
 </div>
 `;
@@ -673,6 +608,13 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-family: body;
+  font-size: 12px;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
 }
 
 .c1 {
@@ -687,28 +629,15 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  cursor: pointer;
   color: #D54936;
   border-bottom: 2px solid #D54936;
   padding-bottom: 3px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -719,24 +648,15 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
   <div
     className="c1"
   >
-    <span
+    <div
+      className="c2"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "#C8C9CA",
-          "cursor": "pointer",
-          "fontSize": "16px",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "22px",
-        }
-      }
     >
       &lt;
-    </span>
+    </div>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -745,7 +665,7 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -754,12 +674,12 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     ...
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -768,7 +688,7 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -777,7 +697,7 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -791,7 +711,7 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
     410
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -800,7 +720,7 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -809,7 +729,7 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -818,12 +738,12 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     ...
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -832,7 +752,7 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <span
       onClick={[Function]}
@@ -843,21 +763,522 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
   <div
     className="c1"
   >
-    <span
+    <div
+      className="c2"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "#C8C9CA",
-          "cursor": "pointer",
-          "fontSize": "16px",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "22px",
-        }
-      }
     >
       &gt;
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Paginator renders correctly 4 - with sx 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: body;
+  font-size: 12px;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
+  padding: 50px;
+  color: black;
+  background-color: lightgray;
+  font-size: 20px;
+  font-family: inherit;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #D54936;
+  border-bottom: 2px solid #D54936;
+  padding-bottom: 3px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+<div
+  className="c0"
+  color="black"
+  fontFamily="inherit"
+  fontSize="20px"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      &lt;
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      1
     </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      2
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      3
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      4
+    </span>
+  </div>
+  <div
+    className="c3"
+  >
+    5
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      6
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      7
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      8
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    ...
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      59
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      60
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      &gt;
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Paginator renders correctly 5 - with selectedPageStyle 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: body;
+  font-size: 12px;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #D54936;
+  border-bottom: 2px solid #D54936;
+  padding-bottom: 3px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      &lt;
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      1
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      2
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      3
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      4
+    </span>
+  </div>
+  <div
+    className="c3"
+    style={
+      Object {
+        "borderBottom": "5px dotted purple",
+        "color": "purple",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    5
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      6
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      7
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      8
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    ...
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      59
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      60
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      &gt;
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Paginator renders correctly 6 - with sx and selectedPageStyle 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: body;
+  font-size: 12px;
+  cursor: pointer;
+  color: #C8C9CA;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
+  padding: 50px;
+  color: black;
+  background-color: lightgray;
+  font-size: 20px;
+  font-family: inherit;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #D54936;
+  border-bottom: 2px solid #D54936;
+  padding-bottom: 3px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+<div
+  className="c0"
+  color="black"
+  fontFamily="inherit"
+  fontSize="20px"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      &lt;
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      1
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      2
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      3
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      4
+    </span>
+  </div>
+  <div
+    className="c3"
+    style={
+      Object {
+        "borderBottom": "5px dotted purple",
+        "color": "purple",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    5
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      6
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      7
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      8
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    ...
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      59
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      60
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      &gt;
+    </div>
   </div>
 </div>
 `;

@@ -50,6 +50,75 @@ describe('Paginator', () => {
     expect(tree).toMatchSnapshot()
   })
 
+  test('renders correctly 4 - with sx', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={5}
+          total={1500}
+          perPage={25}
+          sx={{
+            color: 'black',
+            fontSize: '20px',
+            bg: 'lightgray',
+            padding: '50px',
+            fontFamily: 'inherit',
+          }}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('renders correctly 5 - with selectedPageStyle', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={5}
+          total={1500}
+          perPage={25}
+          selectedPageStyle={{
+            fontWeight: 'bold',
+            color: 'purple',
+            borderBottom: '5px dotted purple',
+          }}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('renders correctly 6 - with sx and selectedPageStyle', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={5}
+          total={1500}
+          perPage={25}
+          sx={{
+            color: 'black',
+            fontSize: '20px',
+            bg: 'lightgray',
+            padding: '50px',
+            fontFamily: 'inherit',
+          }}
+          selectedPageStyle={{
+            fontWeight: 'bold',
+            color: 'purple',
+            borderBottom: '5px dotted purple',
+          }}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
   test('Paginator with error in actualPage value 0', () => {
     const tree = renderer
       .create(
