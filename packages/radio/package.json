@@ -1,14 +1,14 @@
 {
   "name": "@oneloop/radio",
-  "version": "1.2.153",
+  "version": "1.2.154",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.153",
-    "@oneloop/icons": "^1.2.153"
+    "@oneloop/box": "^1.2.154",
+    "@oneloop/icons": "^1.2.154"
   },
   "peerDependencies": {
     "react": "^16.8.0"
