@@ -35,6 +35,90 @@ describe('Paginator', () => {
     expect(tree).toMatchSnapshot()
   })
 
+  test('renders correctly 3 - big numbers', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={410}
+          total={17000}
+          perPage={37}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('renders correctly 4 - with sx', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={5}
+          total={1500}
+          perPage={25}
+          sx={{
+            color: 'black',
+            fontSize: '20px',
+            bg: 'lightgray',
+            padding: '50px',
+            fontFamily: 'inherit',
+          }}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('renders correctly 5 - with selectedPageStyle', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={5}
+          total={1500}
+          perPage={25}
+          selectedPageStyle={{
+            fontWeight: 'bold',
+            color: 'purple',
+            borderBottom: '5px dotted purple',
+          }}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('renders correctly 6 - with sx and selectedPageStyle', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={5}
+          total={1500}
+          perPage={25}
+          sx={{
+            color: 'black',
+            fontSize: '20px',
+            bg: 'lightgray',
+            padding: '50px',
+            fontFamily: 'inherit',
+          }}
+          selectedPageStyle={{
+            fontWeight: 'bold',
+            color: 'purple',
+            borderBottom: '5px dotted purple',
+          }}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
   test('Paginator with error in actualPage value 0', () => {
     const tree = renderer
       .create(
@@ -80,7 +164,7 @@ describe('Paginator', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test('Paginator with error in total', () => {
+  test('Paginator with error, currentPage too big', () => {
     const tree = renderer
       .create(
         <Paginator
@@ -95,13 +179,88 @@ describe('Paginator', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test('Paginator with error in perPage', () => {
+  test('Paginator with error, perPage < 0', () => {
     const tree = renderer
       .create(
         <Paginator
           currentPage={20}
           total={100}
           perPage={-10}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('Paginator with total < perPage && (currentPage > 1) ', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={2}
+          total={23}
+          perPage={30}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('Paginator with (total > perPage && total % perPage == 0) && ( currentPage <= total/perPage) ', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={2}
+          total={20}
+          perPage={10}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('Paginator with (total > perPage && total % perPage == 0) && ( currentPage > total/perPage) ', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={3}
+          total={20}
+          perPage={10}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('Paginator with (total > perPage && total % perPage != 0) && ( currentPage <= (1 + total / perPage)', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={4}
+          total={19}
+          perPage={5}
+          changePageNumber={() => console.log('change page')}
+        />
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('Paginator with (total > perPage && total % perPage != 0) && ( currentPage > (1 + total / perPage)', () => {
+    const tree = renderer
+      .create(
+        <Paginator
+          currentPage={5}
+          total={19}
+          perPage={5}
           changePageNumber={() => console.log('change page')}
         />
       )
