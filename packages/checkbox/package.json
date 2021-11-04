@@ -1,14 +1,14 @@
 {
   "name": "@oneloop/checkbox",
-  "version": "1.2.161",
+  "version": "1.2.162",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.161",
-    "@oneloop/icons": "^1.2.161"
+    "@oneloop/box": "^1.2.162",
+    "@oneloop/icons": "^1.2.162"
   },
   "peerDependencies": {
     "react": "^16.8.0"
