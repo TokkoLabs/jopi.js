@@ -10,7 +10,7 @@
     "@oneloop/box": "^1.2.178",
     "@oneloop/text": "^1.2.178",
     "prop-types": "^15.7.2",
-    "styled-components": "5.2.0",
+    "styled-components": "5.3.3",
     "styled-system": "5.1.5"
   },
   "peerDependencies": {
