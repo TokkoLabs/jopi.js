@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.5.153",
+  "version": "1.5.154",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -12,9 +12,9 @@
     "@oneloop/box": "^1.2.178",
     "@oneloop/button": "^1.2.181",
     "@oneloop/checkbox": "^1.2.178",
-    "@oneloop/collapsible": "^1.2.181",
+    "@oneloop/collapsible": "^1.2.182",
     "@oneloop/datepicker": "^1.2.179",
-    "@oneloop/drawer": "^1.0.134",
+    "@oneloop/drawer": "^1.0.135",
     "@oneloop/dropdown": "^1.2.192",
     "@oneloop/image": "^1.2.178",
     "@oneloop/input": "^1.2.182",
