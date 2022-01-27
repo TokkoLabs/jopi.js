@@ -98,6 +98,9 @@ const theme = {
   text: {
     heading: [
       {
+        fontSize: fontSize[7],
+      },
+      {
         fontSize: fontSize[6],
       },
       {
@@ -108,6 +111,9 @@ const theme = {
       },
       {
         fontSize: fontSize[3],
+      },
+      {
+        fontSize: fontSize[2],
       },
     ],
     subtitle: {
