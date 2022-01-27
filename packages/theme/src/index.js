@@ -24,7 +24,7 @@ space.small = space[2]
 space.medium = space[6]
 space.large = space[8]
 
-const fontSize = [10, 12, 14, 16, 18, 21, 34]
+const fontSize = [9, 10, 12, 14, 16, 20, 24, 28]
 
 const radius = {
   default: 4,
@@ -55,6 +55,7 @@ const forms = {
 const borders = {
   light: '1px solid rgba(255, 255, 255, 0.5)',
   dark: '1px solid rgba(0, 0, 0, 0.24)',
+  primaryBorder: '1px solid ' + colors.primary,
 }
 
 const switches = {
@@ -149,7 +150,7 @@ const theme = {
     secondary: {
       color: colors.primary,
       backgroundColor: colors.neutral[0],
-      border: '1px solid ' + colors.primary,
+      border: borders.primaryBorder,
     },
     text: {
       color: colors.primary,
