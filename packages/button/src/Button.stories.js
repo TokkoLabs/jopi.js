@@ -11,6 +11,8 @@ export const primary = () => <Button>{'Button'}</Button>
 
 export const secondary = () => <Button variant="secondary">{'Button'}</Button>
 
+export const text = () => <Button variant="text">{'Button'}</Button>
+
 export const success = () => <Button variant="success">{'Button'}</Button>
 
 export const warning = () => <Button variant="warning">{'Button'}</Button>

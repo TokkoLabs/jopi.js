@@ -153,6 +153,10 @@ const theme = {
       backgroundColor: colors.neutral[0],
       border: '1px solid ' + colors.primary,
     },
+    text: {
+      color: colors.primary,
+      backgroundColor: colors.neutral[0],
+    },
     success: {
       color: colors.neutral[0],
       backgroundColor: colors.success,
