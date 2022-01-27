@@ -121,11 +121,9 @@ const theme = {
     button: [
       {
         fontSize: fontSize[3],
-        textTransform: 'uppercase',
       },
       {
         fontSize: fontSize[2],
-        textTransform: 'uppercase',
       },
     ],
     caption: [
