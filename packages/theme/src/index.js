@@ -1,7 +1,7 @@
 const colors = {
-  primary: '#D64A36',
+  primary: '#DF1E02',
   primaryAccent: '#F6D4CF',
-  secondary: '#848484',
+  secondary: '#1A4958',
   success: '#6fb824',
   successAccent: '#F1F8E9',
   warning: '#f49c1a',
@@ -28,6 +28,7 @@ const fontSize = [10, 12, 14, 16, 18, 21, 34]
 
 const radius = {
   default: 4,
+  button: 12,
   circle: 99999,
 }
 
@@ -148,8 +149,9 @@ const theme = {
       color: colors.neutral[0],
     },
     secondary: {
-      color: colors.neutral[0],
-      backgroundColor: colors.secondary,
+      color: colors.primary,
+      backgroundColor: colors.neutral[0],
+      border: '1px solid ' + colors.primary,
     },
     success: {
       color: colors.neutral[0],
