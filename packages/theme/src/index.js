@@ -117,10 +117,14 @@ const theme = {
         fontSize: fontSize[2],
       },
     ],
-    subtitle: {
-      fontSize: fontSize[5],
-      letterSpacing: -0.9,
-    },
+    subtitle: [
+      {
+        fontSize: fontSize[4],
+      },
+      {
+        fontSize: fontSize[3],
+      },
+    ],
     label: {
       color: colors.neutral[4],
       fontSize: fontSize[1],

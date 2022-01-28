@@ -27,7 +27,8 @@ export const all = () => (
     <Heading as="h6" variant="heading.5">
       Heading 6
     </Heading>
-    <Text variant="subtitle">Subtitle</Text>
+    <Text variant="subtitle.0">Subtitle 1</Text>
+    <Text variant="subtitle.1">Subtitle 2</Text>
     <Text variant="label">Label</Text>
     <Text variant="button.0">Button 1</Text>
     <Text variant="button.1">Button 2</Text>
