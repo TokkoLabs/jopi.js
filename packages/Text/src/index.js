@@ -7,7 +7,7 @@ export const Text = (props) => (
     tx="text"
     {...props}
     __css={{
-      fontFamily: 'body',
+      fontFamily: 'primary',
       color: 'neutral.6',
     }}
   />

@@ -147,8 +147,18 @@ const theme = {
         textTransform: 'uppercase',
         fontSize: fontSize[0],
       },
+      {
+        fontSize: fontSize[0],
+      },
     ],
-    body: [{ fontSize: fontSize[2] }, { fontSize: fontSize[1] }],
+    body: [
+      {
+        fontSize: fontSize[2],
+      },
+      {
+        fontSize: fontSize[1],
+      },
+    ],
     small: { fontSize: fontSize[0] },
   },
   colors: colors,
