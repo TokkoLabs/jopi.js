@@ -6,7 +6,3 @@ import theme from '@oneloop/theme'
 addDecorator((story) => <ThemeProvider theme={theme}>{story()}</ThemeProvider>)
 
 configure(require.context('../packages/', true, /\.stories\.js$/), module)
-
-module.exports = {
-  staticDirs: ['../public'],
-}

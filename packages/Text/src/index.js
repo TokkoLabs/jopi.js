@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
+import '../../../public/fonts.css'
 
 export const Text = (props) => (
   <Box
@@ -9,6 +10,7 @@ export const Text = (props) => (
     __css={{
       fontFamily: 'primary',
       color: 'neutral.6',
+      // letterSpacing: 'normal',
     }}
   />
 )

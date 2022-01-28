@@ -89,12 +89,12 @@ const switches = {
 const theme = {
   fontSizes: fontSize,
   fonts: {
-    primary: 'Nunito Sans, sans-serif',
+    primary: '"Nunito Sans", sans-serif',
     body: 'Superjopi, sans-serif',
     heading: 'Superjopi, sans-serif',
   },
   letterSpacings: {
-    heading: -0.9,
+    // heading: -0.9,
   },
   text: {
     heading: [
