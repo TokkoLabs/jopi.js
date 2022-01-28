@@ -120,9 +120,11 @@ const theme = {
     subtitle: [
       {
         fontSize: fontSize[4],
+        fontWeight: 400,
       },
       {
         fontSize: fontSize[3],
+        fontWeight: 400,
       },
     ],
     label: {
@@ -142,21 +144,26 @@ const theme = {
       {
         textTransform: 'uppercase',
         fontSize: fontSize[1],
+        fontWeight: 700,
       },
       {
         textTransform: 'uppercase',
         fontSize: fontSize[0],
+        fontWeight: 700,
       },
       {
         fontSize: fontSize[0],
+        fontWeight: 700,
       },
     ],
     body: [
       {
         fontSize: fontSize[2],
+        fontWeight: 400,
       },
       {
         fontSize: fontSize[1],
+        fontWeight: 400,
       },
     ],
     small: { fontSize: fontSize[0] },
