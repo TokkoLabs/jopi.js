@@ -15,7 +15,7 @@ const colors = {
     '#C2C0C0',
     '#848484',
     '#50504B',
-    '#14140A',
+    '#384248',
   ],
 }
 
@@ -91,6 +91,7 @@ const theme = {
   fonts: {
     body: 'Superjopi, sans-serif',
     heading: 'Superjopi, sans-serif',
+    primary: 'Nunito Sans, sans-serif',
   },
   letterSpacings: {
     heading: -0.9,

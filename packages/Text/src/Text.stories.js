@@ -21,6 +21,12 @@ export const all = () => (
     <Heading as="h4" variant="heading.3">
       Heading 4
     </Heading>
+    <Heading as="h5" variant="heading.4">
+      Heading 5
+    </Heading>
+    <Heading as="h6" variant="heading.5">
+      Heading 6
+    </Heading>
     <Text variant="subtitle">Subtitle</Text>
     <Text variant="label">Label</Text>
     <Text variant="button.0">Button 1</Text>
