@@ -13,9 +13,10 @@ const colors = {
     '#F5F5F5',
     '#E7E7E6',
     '#C2C0C0',
-    '#848484',
+    '#C1CCD0',
     '#50504B',
     '#384248',
+    '#EFF2F3',
   ],
 }
 
@@ -203,8 +204,7 @@ const theme = {
     },
     disabled: {
       color: colors.neutral[4],
-      backgroundColor: '#EEE',
-      border: '1px solid #C2C2C2',
+      backgroundColor: colors.neutral[7],
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',

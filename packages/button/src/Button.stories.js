@@ -24,13 +24,13 @@ export const def = () => <Button variant="default">{'Button'}</Button>
 export const disabled = () => <Button variant="disabled">{'Button'}</Button>
 
 export const small = () => (
-  <Button px={14} py={7}>
+  <Button px={8} py={3} borderRadius={7}>
     {'Small'}
   </Button>
 )
 
 export const medium = () => (
-  <Button px={6} py={4} fontSize={2}>
+  <Button px={6} py={4} fontSize={2} borderRadius={10}>
     {'Button'}
   </Button>
 )
