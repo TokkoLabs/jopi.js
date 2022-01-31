@@ -13,13 +13,13 @@ export const secondary = () => <Button variant="secondary">{'Button'}</Button>
 
 export const text = () => <Button variant="text">{'Button'}</Button>
 
-export const success = () => <Button variant="success">{'Button'}</Button>
+// export const success = () => <Button variant="success">{'Button'}</Button>
 
-export const warning = () => <Button variant="warning">{'Button'}</Button>
+// export const warning = () => <Button variant="warning">{'Button'}</Button>
 
-export const danger = () => <Button variant="danger">{'Button'}</Button>
+// export const danger = () => <Button variant="danger">{'Button'}</Button>
 
-export const def = () => <Button variant="default">{'Button'}</Button>
+// export const def = () => <Button variant="default">{'Button'}</Button>
 
 export const disabled = () => <Button variant="disabled">{'Button'}</Button>
 
