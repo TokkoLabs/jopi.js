@@ -4,14 +4,14 @@ const colors = {
   primaryPressed: '#FD4E34',
   primaryAccent: '#F6D4CF',
   secondary: '#1A4958',
+  success: '#068B5B',
+  error: '#B21702',
   info: '#386DF4',
   lightBlue: '#6A88F2',
-  success: '#6fb824',
-  successAccent: '#F1F8E9',
-  warning: '#f49c1a',
-  warningAccent: '#FDF0DD',
-  danger: '#ee3322',
-  dangerAccent: '#FEEBE9',
+  // successAccent: '#F1F8E9',
+  // warning: '#f49c1a',
+  // warningAccent: '#FDF0DD',
+  // dangerAccent: '#FEEBE9',
   neutral: [
     '#FFF',
     '#F5F5F5',
@@ -172,7 +172,25 @@ const theme = {
         fontWeight: 400,
       },
     ],
-    small: { fontSize: fontSize[0] },
+    success: [
+      {
+        fontSize: fontSize[5],
+        color: colors.success,
+      },
+    ],
+    error: [
+      {
+        fontSize: fontSize[5],
+        color: colors.error,
+      },
+    ],
+    alert: [
+      {
+        fontSize: fontSize[5],
+        color: colors.info,
+      },
+    ],
+    // small: { fontSize: fontSize[0] },
   },
   colors: colors,
   space: space,

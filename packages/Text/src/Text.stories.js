@@ -37,6 +37,15 @@ export const all = () => (
     {/* <Text variant="small">Small text</Text>
     <Text variant="label">Label</Text>
     <Text variant="button.0">Button 1</Text>
-    <Text variant="button.1">Button 2</Text> */}
+  <Text variant="button.1">Button 2</Text> */}
+    <Heading as="h3" variant="success.0">
+      Success Message
+    </Heading>
+    <Heading as="h3" variant="error.0">
+      Error Message
+    </Heading>
+    <Heading as="h3" variant="alert.0">
+      Alert Message
+    </Heading>
   </React.Fragment>
 )
