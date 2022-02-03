@@ -37,6 +37,16 @@ export const secondaryDisabled = () => (
 
 export const text = () => <Button variant="text">{'Button'}</Button>
 
+export const textHover = () => <Button variant="textHover">{'Button'}</Button>
+
+export const textPressed = () => (
+  <Button variant="textPressed">{'Button'}</Button>
+)
+
+export const textDisabled = () => (
+  <Button variant="textDisabled">{'Button'}</Button>
+)
+
 // export const success = () => <Button variant="success">{'Button'}</Button>
 
 // export const warning = () => <Button variant="warning">{'Button'}</Button>

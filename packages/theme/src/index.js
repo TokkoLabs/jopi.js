@@ -19,9 +19,9 @@ const colors = {
     '#50504B',
     '#384248',
     '#EFF2F3',
+    '#6D777D',
   ],
 }
-
 const space = [0, 4, 6, 8, 12, 16, 24, 32, 64, 128, 256]
 space.small = space[2]
 space.medium = space[6]
@@ -213,6 +213,18 @@ const theme = {
     },
     text: {
       color: colors.primary,
+      backgroundColor: colors.neutral[0],
+    },
+    textHover: {
+      color: colors.neutral[8],
+      backgroundColor: colors.neutral[0],
+    },
+    textPressed: {
+      color: colors.primaryPressed,
+      backgroundColor: colors.neutral[7],
+    },
+    textDisabled: {
+      color: colors.neutral[4],
       backgroundColor: colors.neutral[0],
     },
     success: {
