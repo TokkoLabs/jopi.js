@@ -9,27 +9,11 @@ export default {
 
 export const primary = () => <Button>{'Button'}</Button>
 
-export const primaryHover = () => (
-  <Button variant="primaryHover">{'Button'}</Button>
-)
-
-export const primaryPressed = () => (
-  <Button variant="pressed">{'Button'}</Button>
-)
-
 export const primaryDisabled = () => (
   <Button variant="primaryDisabled">{'Button'}</Button>
 )
 
 export const secondary = () => <Button variant="secondary">{'Button'}</Button>
-
-export const secondaryHover = () => (
-  <Button variant="secondaryHover">{'Button'}</Button>
-)
-
-export const secondaryPressed = () => (
-  <Button variant="pressed">{'Button'}</Button>
-)
 
 export const secondaryDisabled = () => (
   <Button variant="secondaryDisabled">{'Button'}</Button>
@@ -37,30 +21,12 @@ export const secondaryDisabled = () => (
 
 export const text = () => <Button variant="text">{'Button'}</Button>
 
-export const textHover = () => <Button variant="textHover">{'Button'}</Button>
-
-export const textPressed = () => (
-  <Button variant="textPressed">{'Button'}</Button>
-)
-
 export const textDisabled = () => (
   <Button variant="textDisabled">{'Button'}</Button>
 )
 
 export const icon = () => (
   <Button px={4} py={3} fontSize={5} variant="icon">
-    {'+'}
-  </Button>
-)
-
-export const iconHover = () => (
-  <Button px={4} py={3} fontSize={5} variant="iconHover">
-    {'+'}
-  </Button>
-)
-
-export const iconPressed = () => (
-  <Button px={4} py={3} fontSize={5} variant="pressed">
     {'+'}
   </Button>
 )
@@ -77,18 +43,6 @@ export const iconSecondary = () => (
   </Button>
 )
 
-export const iconSecondaryHover = () => (
-  <Button px={4} py={3} fontSize={5} variant="secondaryHover">
-    {'+'}
-  </Button>
-)
-
-export const iconSecondaryPressed = () => (
-  <Button px={4} py={3} fontSize={5} variant="pressed">
-    {'+'}
-  </Button>
-)
-
 export const iconSecondaryDisabled = () => (
   <Button px={4} py={3} fontSize={5} variant="secondaryDisabled">
     {'+'}
@@ -97,18 +51,6 @@ export const iconSecondaryDisabled = () => (
 
 export const link = () => (
   <Button px={0} py={0} variant="link">
-    {'Button'}
-  </Button>
-)
-
-export const linkHover = () => (
-  <Button px={0} py={0} variant="linkHover">
-    {'Button'}
-  </Button>
-)
-
-export const linkPressed = () => (
-  <Button px={0} py={0} variant="linkPressed">
     {'Button'}
   </Button>
 )

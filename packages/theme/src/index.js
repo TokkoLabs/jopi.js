@@ -205,19 +205,13 @@ const theme = {
       backgroundColor: colors.primary,
       color: colors.neutral[0],
       ':hover': {
-        color: '#6C4B47',
+        backgroundColor: colors.primaryHover,
+        color: colors.neutral[0],
       },
       ':focus': {
-        color: 'black',
+        backgroundColor: colors.primaryPressed,
+        color: colors.neutral[0],
       },
-    },
-    primaryHover: {
-      backgroundColor: colors.primaryHover,
-      color: colors.neutral[0],
-    },
-    pressed: {
-      backgroundColor: colors.primaryPressed,
-      color: colors.neutral[0],
     },
     primaryDisabled: {
       color: colors.neutral[4],
@@ -230,10 +224,14 @@ const theme = {
       color: colors.primary,
       backgroundColor: colors.neutral[0],
       border: borders.primaryBorder,
-    },
-    secondaryHover: {
-      backgroundColor: colors.primary,
-      color: colors.neutral[0],
+      ':hover': {
+        backgroundColor: colors.primary,
+        color: colors.neutral[0],
+      },
+      ':focus': {
+        backgroundColor: colors.primaryPressed,
+        color: colors.neutral[0],
+      },
     },
     secondaryDisabled: {
       color: colors.neutral[4],
@@ -246,14 +244,14 @@ const theme = {
     text: {
       color: colors.primary,
       backgroundColor: colors.neutral[0],
-    },
-    textHover: {
-      color: colors.neutral[8],
-      backgroundColor: colors.neutral[0],
-    },
-    textPressed: {
-      color: colors.primaryPressed,
-      backgroundColor: colors.neutral[7],
+      ':hover': {
+        color: colors.neutral[8],
+        backgroundColor: colors.neutral[0],
+      },
+      ':focus': {
+        color: colors.primaryPressed,
+        backgroundColor: colors.neutral[7],
+      },
     },
     textDisabled: {
       color: colors.neutral[4],
@@ -265,10 +263,14 @@ const theme = {
     icon: {
       backgroundColor: colors.primary,
       color: colors.neutral[0],
-    },
-    iconHover: {
-      backgroundColor: colors.primaryHover,
-      color: colors.neutral[0],
+      ':hover': {
+        backgroundColor: colors.primaryHover,
+        color: colors.neutral[0],
+      },
+      ':focus': {
+        backgroundColor: colors.primaryPressed,
+        color: colors.neutral[0],
+      },
     },
     iconDisabled: {
       color: colors.neutral[4],
@@ -281,16 +283,14 @@ const theme = {
       fontSize: fontSize[3],
       color: colors.info,
       backgroundColor: colors.neutral[0],
-    },
-    linkHover: {
-      fontSize: fontSize[3],
-      color: colors.lightBlue,
-      backgroundColor: colors.neutral[0],
-    },
-    linkPressed: {
-      fontSize: fontSize[3],
-      color: colors.neutral[8],
-      backgroundColor: colors.neutral[0],
+      ':hover': {
+        color: colors.lightBlue,
+        backgroundColor: colors.neutral[0],
+      },
+      ':focus': {
+        color: colors.neutral[8],
+        backgroundColor: colors.neutral[0],
+      },
     },
     linkDisabled: {
       fontSize: fontSize[3],
@@ -300,23 +300,6 @@ const theme = {
       pointerEvents: 'none',
       userSelect: 'none',
     },
-    // success: {
-    //   color: colors.neutral[0],
-    //   backgroundColor: colors.success,
-    // },
-    // warning: {
-    //   color: colors.neutral[0],
-    //   backgroundColor: colors.warning,
-    // },
-    // danger: {
-    //   color: colors.neutral[0],
-    //   backgroundColor: colors.danger,
-    // },
-    // default: {
-    //   color: colors.neutral[5],
-    //   backgroundColor: colors.neutral[0],
-    //   border: '1px solid #C2C2C2',
-    // },
   },
   borders: borders,
   forms: forms,
