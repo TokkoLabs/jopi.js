@@ -23,15 +23,15 @@ export const Input = ({ prefix, suffix, ...props }) => (
       variant="input"
       {...props}
       __css={{
-        borderRadius: 4,
-        border: '1px solid #DADADA',
+        borderRadius: 10,
+        border: 'none',
         boxShadow: 'none',
-        caretColor: '#757575',
-        color: '#757575',
+        // caretColor: '#757575',
+        // color: '#757575',
         display: 'block',
         fontSize: 1,
         height: 36,
-        lineHeight: 14,
+        // lineHeight: 14,
         px: suffix || prefix ? 40 : 16,
         py: 11,
         marginBottom: 5,

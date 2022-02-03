@@ -22,6 +22,8 @@ const colors = {
     '#384248',
     '#EFF2F3',
     '#6D777D',
+    '#F7F8FA',
+    '#A6B2BA',
   ],
 }
 const space = [0, 4, 6, 8, 12, 16, 24, 32, 64, 128, 256]
@@ -35,6 +37,7 @@ const radius = {
   default: 4,
   button: 12,
   circle: 99999,
+  input: 10,
 }
 
 const shadows = {
@@ -43,11 +46,12 @@ const shadows = {
 
 const forms = {
   input: {
-    backgroundColor: colors.neutral[0],
-    borderRadius: radius.default,
+    backgroundColor: colors.neutral[9],
+    color: colors.neutral[10],
+    borderRadius: radius.input,
     '&:focus': {
-      boxShadow: shadows.active,
-      border: '1px solid #C2C0C0',
+      // boxShadow: shadows.active,
+      // border: '1px solid #C2C0C0',
     },
   },
   label: {
