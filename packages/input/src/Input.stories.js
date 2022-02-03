@@ -15,7 +15,7 @@ export const inputWithIcon = () => (
 )
 
 export const inputWithLabel = () => (
-  <Input label="prueba" placeholder="Hello World!" />
+  <Input label="Label de prueba" placeholder="Hello World!" />
 )
 
 // export const error = () => (

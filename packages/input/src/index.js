@@ -6,9 +6,16 @@ import { Heading } from '@oneloop/text'
 export const Input = ({ prefix, suffix, label, ...props }) => (
   <>
     {label && (
-      <Heading as="h6" variant="heading.5">
-        {label}
-      </Heading>
+      <Box
+        __css={{
+          px: 16,
+          py: 1,
+        }}
+      >
+        <Heading as="h6" variant="heading.5">
+          {label}
+        </Heading>
+      </Box>
     )}
     <Box
       __css={{
