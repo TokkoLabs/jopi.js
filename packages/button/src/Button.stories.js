@@ -9,6 +9,14 @@ export default {
 
 export const primary = () => <Button>{'Button'}</Button>
 
+export const primaryHover = () => (
+  <Button variant="primaryHover">{'Button'}</Button>
+)
+
+export const primaryPressed = () => (
+  <Button variant="primaryPressed">{'Button'}</Button>
+)
+
 export const secondary = () => <Button variant="secondary">{'Button'}</Button>
 
 export const text = () => <Button variant="text">{'Button'}</Button>

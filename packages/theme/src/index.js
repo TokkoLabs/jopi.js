@@ -1,5 +1,7 @@
 const colors = {
   primary: '#DF1E02',
+  primaryHover: '#FD2B0C',
+  primaryPressed: '#FD4E34',
   primaryAccent: '#F6D4CF',
   secondary: '#1A4958',
   success: '#6fb824',
@@ -174,6 +176,14 @@ const theme = {
   buttons: {
     primary: {
       backgroundColor: colors.primary,
+      color: colors.neutral[0],
+    },
+    primaryHover: {
+      backgroundColor: colors.primaryHover,
+      color: colors.neutral[0],
+    },
+    primaryPressed: {
+      backgroundColor: colors.primaryPressed,
       color: colors.neutral[0],
     },
     secondary: {
