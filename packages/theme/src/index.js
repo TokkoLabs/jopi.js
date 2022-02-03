@@ -4,6 +4,8 @@ const colors = {
   primaryPressed: '#FD4E34',
   primaryAccent: '#F6D4CF',
   secondary: '#1A4958',
+  info: '#386DF4',
+  lightBlue: '#6A88F2',
   success: '#6fb824',
   successAccent: '#F1F8E9',
   warning: '#f49c1a',
@@ -226,24 +228,65 @@ const theme = {
     textDisabled: {
       color: colors.neutral[4],
       backgroundColor: colors.neutral[0],
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
-    success: {
+    icon: {
+      backgroundColor: colors.primary,
       color: colors.neutral[0],
-      backgroundColor: colors.success,
     },
-    warning: {
+    iconHover: {
+      backgroundColor: colors.primaryHover,
       color: colors.neutral[0],
-      backgroundColor: colors.warning,
     },
-    danger: {
-      color: colors.neutral[0],
-      backgroundColor: colors.danger,
+    iconDisabled: {
+      color: colors.neutral[4],
+      backgroundColor: colors.neutral[7],
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
-    default: {
-      color: colors.neutral[5],
+    link: {
+      fontSize: fontSize[3],
+      color: colors.info,
       backgroundColor: colors.neutral[0],
-      border: '1px solid #C2C2C2',
     },
+    linkHover: {
+      fontSize: fontSize[3],
+      color: colors.lightBlue,
+      backgroundColor: colors.neutral[0],
+    },
+    linkPressed: {
+      fontSize: fontSize[3],
+      color: colors.neutral[8],
+      backgroundColor: colors.neutral[0],
+    },
+    linkDisabled: {
+      fontSize: fontSize[3],
+      color: colors.neutral[7],
+      backgroundColor: colors.neutral[0],
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
+    },
+    // success: {
+    //   color: colors.neutral[0],
+    //   backgroundColor: colors.success,
+    // },
+    // warning: {
+    //   color: colors.neutral[0],
+    //   backgroundColor: colors.warning,
+    // },
+    // danger: {
+    //   color: colors.neutral[0],
+    //   backgroundColor: colors.danger,
+    // },
+    // default: {
+    //   color: colors.neutral[5],
+    //   backgroundColor: colors.neutral[0],
+    //   border: '1px solid #C2C2C2',
+    // },
   },
   borders: borders,
   forms: forms,
