@@ -204,6 +204,12 @@ const theme = {
     primary: {
       backgroundColor: colors.primary,
       color: colors.neutral[0],
+      ':hover': {
+        color: '#6C4B47',
+      },
+      ':focus': {
+        color: 'black',
+      },
     },
     primaryHover: {
       backgroundColor: colors.primaryHover,

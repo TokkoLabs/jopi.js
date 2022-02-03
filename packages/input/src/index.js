@@ -53,6 +53,12 @@ export const Input = ({ prefix, suffix, label, ...props }) => (
             backgroundColor: '#EBEBEB',
             cursor: 'not-allowed',
           },
+          ':focus': {
+            border: '1px solid #386DF4',
+          },
+          '::placeholder': {
+            color: '#A6B2BA',
+          },
         }}
       />
       {suffix}

@@ -23,9 +23,6 @@ export const Button = (props) => (
       bg: 'primary',
       border: 0,
       borderRadius: 'button',
-      ':hover': {
-        color: '#6C4B47',
-      },
     }}
   />
 )

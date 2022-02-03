@@ -36,18 +36,15 @@ export const search = () => (
   <Input
     prefix={<Add />}
     suffix={<Add />}
-    placeholder="Buscar"
+    placeholder="Buscar contactos, propiedades, emprendimientos o usuarios..."
     sx={{
       borderRadius: 'input',
       mb: 0,
       bg: '#FFF',
       border: 'none',
-      width: '294px',
+      width: '100%',
       '::placeholder': {
         color: '#6C4B47',
-      },
-      ':focus': {
-        border: '1px solid red',
       },
     }}
   />
