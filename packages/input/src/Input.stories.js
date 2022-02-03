@@ -30,7 +30,7 @@ export const inputWithLabel = () => (
 //   <Input placeholder="Hello World!" borderColor="warning" />
 // )
 
-export const disabled = () => <Input disabled placeholder="Hello World!" />
+// export const disabled = () => <Input disabled placeholder="Hello World!" />
 
 export const search = () => (
   <Input
@@ -38,16 +38,16 @@ export const search = () => (
     suffix={<Add />}
     placeholder="Buscar"
     sx={{
-      borderRadius: 'circle',
+      borderRadius: 'input',
       mb: 0,
-      bg: '#EBA49A',
+      bg: '#FFF',
       border: 'none',
       width: '294px',
       '::placeholder': {
         color: '#6C4B47',
       },
       ':focus': {
-        border: 'none',
+        border: '1px solid red',
       },
     }}
   />

@@ -41,7 +41,6 @@ export const Input = ({ prefix, suffix, label, ...props }) => (
           border: 'none',
           boxShadow: 'none',
           fontFamily: 'primary',
-          // caretColor: '#757575',
           display: 'block',
           fontSize: 1,
           height: 36,
