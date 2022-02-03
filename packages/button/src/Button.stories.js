@@ -14,10 +14,26 @@ export const primaryHover = () => (
 )
 
 export const primaryPressed = () => (
-  <Button variant="primaryPressed">{'Button'}</Button>
+  <Button variant="pressed">{'Button'}</Button>
+)
+
+export const primaryDisabled = () => (
+  <Button variant="primaryDisabled">{'Button'}</Button>
 )
 
 export const secondary = () => <Button variant="secondary">{'Button'}</Button>
+
+export const secondaryHover = () => (
+  <Button variant="secondaryHover">{'Button'}</Button>
+)
+
+export const secondaryPressed = () => (
+  <Button variant="pressed">{'Button'}</Button>
+)
+
+export const secondaryDisabled = () => (
+  <Button variant="secondaryDisabled">{'Button'}</Button>
+)
 
 export const text = () => <Button variant="text">{'Button'}</Button>
 
@@ -28,8 +44,6 @@ export const text = () => <Button variant="text">{'Button'}</Button>
 // export const danger = () => <Button variant="danger">{'Button'}</Button>
 
 // export const def = () => <Button variant="default">{'Button'}</Button>
-
-export const disabled = () => <Button variant="disabled">{'Button'}</Button>
 
 export const small = () => (
   <Button px={8} py={3} borderRadius={7}>

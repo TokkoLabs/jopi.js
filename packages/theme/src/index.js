@@ -59,6 +59,7 @@ const borders = {
   light: '1px solid rgba(255, 255, 255, 0.5)',
   dark: '1px solid rgba(0, 0, 0, 0.24)',
   primaryBorder: '1px solid ' + colors.primary,
+  secondaryBorder: '1px solid ' + colors.neutral[4],
 }
 
 const switches = {
@@ -182,14 +183,33 @@ const theme = {
       backgroundColor: colors.primaryHover,
       color: colors.neutral[0],
     },
-    primaryPressed: {
+    pressed: {
       backgroundColor: colors.primaryPressed,
       color: colors.neutral[0],
+    },
+    primaryDisabled: {
+      color: colors.neutral[4],
+      backgroundColor: colors.neutral[7],
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
     secondary: {
       color: colors.primary,
       backgroundColor: colors.neutral[0],
       border: borders.primaryBorder,
+    },
+    secondaryHover: {
+      backgroundColor: colors.primary,
+      color: colors.neutral[0],
+    },
+    secondaryDisabled: {
+      color: colors.neutral[4],
+      backgroundColor: colors.neutral[0],
+      border: borders.secondaryBorder,
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
     text: {
       color: colors.primary,
@@ -211,13 +231,6 @@ const theme = {
       color: colors.neutral[5],
       backgroundColor: colors.neutral[0],
       border: '1px solid #C2C2C2',
-    },
-    disabled: {
-      color: colors.neutral[4],
-      backgroundColor: colors.neutral[7],
-      cursor: 'default',
-      pointerEvents: 'none',
-      userSelect: 'none',
     },
   },
   borders: borders,
