@@ -49,6 +49,8 @@ const forms = {
     backgroundColor: colors.neutral[9],
     color: colors.neutral[10],
     borderRadius: radius.input,
+    fontSize: fontSize[3],
+    fontWeight: 400,
     '&:focus': {
       // boxShadow: shadows.active,
       // border: '1px solid #C2C0C0',

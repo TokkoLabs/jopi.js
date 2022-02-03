@@ -10,7 +10,6 @@ export const Text = (props) => (
     __css={{
       fontFamily: 'primary',
       color: 'neutral.6',
-      // letterSpacing: 'normal',
     }}
   />
 )
