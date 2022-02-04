@@ -9,12 +9,12 @@ const CheckboxBox = ({
   tickColor,
   ...props
 }) => (
-  <Svg width={18} height={18} viewBox="0 0 18 18" fill="none" {...props}>
+  <Svg width={16} height={16} viewBox="0 0 16 16" fill="none" {...props}>
     <rect
       x="0.5"
       y="0.5"
-      width="17"
-      height="17"
+      width="15"
+      height="15"
       rx="1.5"
       fill={backgroundColor}
       stroke={borderColor}
@@ -25,24 +25,24 @@ const CheckboxBox = ({
 
 const CheckboxChecked = ({ isAlt, ...props }) => (
   <CheckboxBox
-    borderColor={isAlt ? '#D64A36' : '#F5F5F5'}
-    backgroundColor={isAlt ? '#D64A36' : 'white'}
+    borderColor={isAlt ? '#D64A36' : '#6A88F2'}
+    backgroundColor={isAlt ? '#D64A36' : '#6A88F2'}
     tick
-    tickColor={isAlt ? 'white' : '#D64A36'}
+    tickColor={isAlt ? 'white' : 'white'}
     {...props}
   />
 )
 
 const CheckboxUnchecked = (props) => (
-  <CheckboxBox borderColor="#E7E7E6" backgroundColor="white" {...props} />
+  <CheckboxBox borderColor="#C1CCD0" backgroundColor="white" {...props} />
 )
 
 const CheckboxDisabled = ({ checked = false, ...props }) => (
   <CheckboxBox
-    borderColor="#F5F5F5"
-    backgroundColor="#F5F5F5"
+    borderColor="#EFF2F3"
+    backgroundColor="#EFF2F3"
     tick={checked}
-    tickColor="#BABABA"
+    tickColor="#C1CCD0"
     {...props}
   />
 )
