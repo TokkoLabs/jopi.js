@@ -11,6 +11,7 @@ const colors = {
   inputErrors: '#FFF2F0',
   inputBackground: '#F7F8FA',
   inputPlaceholderColor: '#A6B2BA',
+  darkGray: '#6D777D',
   neutral: [
     '#FFF',
     '#F5F5F5',
@@ -307,6 +308,14 @@ const theme = {
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
+    },
+    dropdown: {
+      backgroundColor: colors.inputBackground,
+      color: colors.inputPlaceholderColor,
+      borderRadius: radius.input,
+      fontSize: fontSize[3],
+      fontWeight: 400,
+      fontFamily: 'primary',
     },
   },
   borders: borders,
