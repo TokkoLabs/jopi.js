@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from '@oneloop/box'
-import { Heading } from '@oneloop/text'
+import { Heading, Text } from '@oneloop/text'
 
-export const Input = ({ prefix, suffix, label, ...props }) => (
+export const Input = ({ prefix, suffix, label, errors, ...props }) => (
   <>
     {label && (
       <Box
@@ -46,23 +46,25 @@ export const Input = ({ prefix, suffix, label, ...props }) => (
           height: 36,
           px: suffix || prefix ? 40 : 16,
           py: 11,
-          marginBottom: 5,
           outline: 'none',
-          '&:disabled': {
-            color: '#999999',
-            backgroundColor: '#EBEBEB',
-            cursor: 'not-allowed',
-          },
-          ':focus': {
-            border: '1px solid #386DF4',
-          },
+          backgroundColor: errors ? 'inputErrors' : 'inputBackground',
           '::placeholder': {
-            color: '#A6B2BA',
+            color: errors ? 'error' : 'inputPlaceholderColor',
           },
         }}
       />
       {suffix}
     </Box>
+    {errors && (
+      <Box
+        __css={{
+          px: 16,
+          py: 1,
+        }}
+      >
+        <Text variant="inputMessageErrors.0">{errors}</Text>
+      </Box>
+    )}
   </>
 )
 

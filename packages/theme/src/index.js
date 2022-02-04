@@ -8,10 +8,9 @@ const colors = {
   error: '#B21702',
   info: '#386DF4',
   lightBlue: '#6A88F2',
-  // successAccent: '#F1F8E9',
-  // warning: '#f49c1a',
-  // warningAccent: '#FDF0DD',
-  // dangerAccent: '#FEEBE9',
+  inputErrors: '#FFF2F0',
+  inputBackground: '#F7F8FA',
+  inputPlaceholderColor: '#A6B2BA',
   neutral: [
     '#FFF',
     '#F5F5F5',
@@ -46,14 +45,16 @@ const shadows = {
 
 const forms = {
   input: {
-    backgroundColor: colors.neutral[9],
-    color: colors.neutral[10],
     borderRadius: radius.input,
     fontSize: fontSize[3],
     fontWeight: 400,
     '&:focus': {
-      // boxShadow: shadows.active,
-      // border: '1px solid #C2C0C0',
+      border: '1px solid #386DF4',
+    },
+    '&:disabled': {
+      color: '#999999',
+      backgroundColor: '#EBEBEB',
+      cursor: 'not-allowed',
     },
   },
   label: {
@@ -194,6 +195,13 @@ const theme = {
       {
         fontSize: fontSize[5],
         color: colors.info,
+      },
+    ],
+    inputMessageErrors: [
+      {
+        fontSize: fontSize[1],
+        fontWeight: 400,
+        color: colors.error,
       },
     ],
     // small: { fontSize: fontSize[0] },

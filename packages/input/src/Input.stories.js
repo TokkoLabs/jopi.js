@@ -18,6 +18,10 @@ export const inputWithLabel = () => (
   <Input label="Label de prueba" placeholder="Hello World!" />
 )
 
+export const inputWithErrors = () => (
+  <Input errors="Minimo 8 caracteres." placeholder="email" />
+)
+
 // export const error = () => (
 //   <Input placeholder="Hello World!" borderColor="danger" />
 // )

@@ -47,5 +47,6 @@ export const all = () => (
     <Heading as="h3" variant="alert.0">
       Alert Message
     </Heading>
+    <Text variant="inputMessageErrors.0">Input message errors.</Text>
   </React.Fragment>
 )
