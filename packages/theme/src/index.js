@@ -1,34 +1,43 @@
 const colors = {
-  primary: '#D64A36',
+  primary: '#DF1E02',
+  primaryHover: '#FD2B0C',
+  primaryPressed: '#FD4E34',
   primaryAccent: '#F6D4CF',
-  secondary: '#848484',
-  success: '#6fb824',
-  successAccent: '#F1F8E9',
-  warning: '#f49c1a',
-  warningAccent: '#FDF0DD',
-  danger: '#ee3322',
-  dangerAccent: '#FEEBE9',
+  secondary: '#1A4958',
+  success: '#068B5B',
+  error: '#B21702',
+  info: '#386DF4',
+  lightBlue: '#6A88F2',
+  inputErrors: '#FFF2F0',
+  inputBackground: '#F7F8FA',
+  inputPlaceholderColor: '#A6B2BA',
+  darkGray: '#6D777D',
   neutral: [
     '#FFF',
     '#F5F5F5',
     '#E7E7E6',
     '#C2C0C0',
-    '#848484',
+    '#C1CCD0',
     '#50504B',
-    '#14140A',
+    '#384248',
+    '#EFF2F3',
+    '#6D777D',
+    '#F7F8FA',
+    '#A6B2BA',
   ],
 }
-
 const space = [0, 4, 6, 8, 12, 16, 24, 32, 64, 128, 256]
 space.small = space[2]
 space.medium = space[6]
 space.large = space[8]
 
-const fontSize = [10, 12, 14, 16, 18, 21, 34]
+const fontSize = [9, 10, 12, 14, 16, 20, 24, 28]
 
 const radius = {
   default: 4,
+  button: 12,
   circle: 99999,
+  input: 10,
 }
 
 const shadows = {
@@ -37,11 +46,16 @@ const shadows = {
 
 const forms = {
   input: {
-    backgroundColor: colors.neutral[0],
-    borderRadius: radius.default,
+    borderRadius: radius.input,
+    fontSize: fontSize[3],
+    fontWeight: 400,
     '&:focus': {
-      boxShadow: shadows.active,
-      border: '1px solid #C2C0C0',
+      border: '1px solid #386DF4',
+    },
+    '&:disabled': {
+      color: '#999999',
+      backgroundColor: '#EBEBEB',
+      cursor: 'not-allowed',
     },
   },
   label: {
@@ -54,6 +68,8 @@ const forms = {
 const borders = {
   light: '1px solid rgba(255, 255, 255, 0.5)',
   dark: '1px solid rgba(0, 0, 0, 0.24)',
+  primaryBorder: '1px solid ' + colors.primary,
+  secondaryBorder: '1px solid ' + colors.neutral[4],
 }
 
 const switches = {
@@ -87,14 +103,18 @@ const switches = {
 const theme = {
   fontSizes: fontSize,
   fonts: {
+    primary: '"Nunito Sans", sans-serif',
     body: 'Superjopi, sans-serif',
     heading: 'Superjopi, sans-serif',
   },
   letterSpacings: {
-    heading: -0.9,
+    // heading: -0.9,
   },
   text: {
     heading: [
+      {
+        fontSize: fontSize[7],
+      },
       {
         fontSize: fontSize[6],
       },
@@ -107,11 +127,20 @@ const theme = {
       {
         fontSize: fontSize[3],
       },
+      {
+        fontSize: fontSize[2],
+      },
     ],
-    subtitle: {
-      fontSize: fontSize[5],
-      letterSpacing: -0.9,
-    },
+    subtitle: [
+      {
+        fontSize: fontSize[4],
+        fontWeight: 400,
+      },
+      {
+        fontSize: fontSize[3],
+        fontWeight: 400,
+      },
+    ],
     label: {
       color: colors.neutral[4],
       fontSize: fontSize[1],
@@ -120,25 +149,63 @@ const theme = {
     button: [
       {
         fontSize: fontSize[3],
-        textTransform: 'uppercase',
       },
       {
         fontSize: fontSize[2],
-        textTransform: 'uppercase',
       },
     ],
     caption: [
       {
         textTransform: 'uppercase',
         fontSize: fontSize[1],
+        fontWeight: 700,
       },
       {
         textTransform: 'uppercase',
         fontSize: fontSize[0],
+        fontWeight: 700,
+      },
+      {
+        fontSize: fontSize[0],
+        fontWeight: 700,
       },
     ],
-    body: [{ fontSize: fontSize[2] }, { fontSize: fontSize[1] }],
-    small: { fontSize: fontSize[0] },
+    body: [
+      {
+        fontSize: fontSize[2],
+        fontWeight: 400,
+      },
+      {
+        fontSize: fontSize[1],
+        fontWeight: 400,
+      },
+    ],
+    success: [
+      {
+        fontSize: fontSize[5],
+        color: colors.success,
+      },
+    ],
+    error: [
+      {
+        fontSize: fontSize[5],
+        color: colors.error,
+      },
+    ],
+    alert: [
+      {
+        fontSize: fontSize[5],
+        color: colors.info,
+      },
+    ],
+    inputMessageErrors: [
+      {
+        fontSize: fontSize[1],
+        fontWeight: 400,
+        color: colors.error,
+      },
+    ],
+    // small: { fontSize: fontSize[0] },
   },
   colors: colors,
   space: space,
@@ -146,35 +213,109 @@ const theme = {
     primary: {
       backgroundColor: colors.primary,
       color: colors.neutral[0],
+      ':hover': {
+        backgroundColor: colors.primaryHover,
+        color: colors.neutral[0],
+      },
+      ':focus': {
+        backgroundColor: colors.primaryPressed,
+        color: colors.neutral[0],
+      },
     },
-    secondary: {
-      color: colors.neutral[0],
-      backgroundColor: colors.secondary,
-    },
-    success: {
-      color: colors.neutral[0],
-      backgroundColor: colors.success,
-    },
-    warning: {
-      color: colors.neutral[0],
-      backgroundColor: colors.warning,
-    },
-    danger: {
-      color: colors.neutral[0],
-      backgroundColor: colors.danger,
-    },
-    default: {
-      color: colors.neutral[5],
-      backgroundColor: colors.neutral[0],
-      border: '1px solid #C2C2C2',
-    },
-    disabled: {
+    primaryDisabled: {
       color: colors.neutral[4],
-      backgroundColor: '#EEE',
-      border: '1px solid #C2C2C2',
+      backgroundColor: colors.neutral[7],
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
+    },
+    secondary: {
+      color: colors.primary,
+      backgroundColor: colors.neutral[0],
+      border: borders.primaryBorder,
+      ':hover': {
+        backgroundColor: colors.primary,
+        color: colors.neutral[0],
+      },
+      ':focus': {
+        backgroundColor: colors.primaryPressed,
+        color: colors.neutral[0],
+      },
+    },
+    secondaryDisabled: {
+      color: colors.neutral[4],
+      backgroundColor: colors.neutral[0],
+      border: borders.secondaryBorder,
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
+    },
+    text: {
+      color: colors.primary,
+      backgroundColor: colors.neutral[0],
+      ':hover': {
+        color: colors.neutral[8],
+        backgroundColor: colors.neutral[0],
+      },
+      ':focus': {
+        color: colors.primaryPressed,
+        backgroundColor: colors.neutral[7],
+      },
+    },
+    textDisabled: {
+      color: colors.neutral[4],
+      backgroundColor: colors.neutral[0],
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
+    },
+    icon: {
+      backgroundColor: colors.primary,
+      color: colors.neutral[0],
+      ':hover': {
+        backgroundColor: colors.primaryHover,
+        color: colors.neutral[0],
+      },
+      ':focus': {
+        backgroundColor: colors.primaryPressed,
+        color: colors.neutral[0],
+      },
+    },
+    iconDisabled: {
+      color: colors.neutral[4],
+      backgroundColor: colors.neutral[7],
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
+    },
+    link: {
+      fontSize: fontSize[3],
+      color: colors.info,
+      backgroundColor: colors.neutral[0],
+      ':hover': {
+        color: colors.lightBlue,
+        backgroundColor: colors.neutral[0],
+      },
+      ':focus': {
+        color: colors.neutral[8],
+        backgroundColor: colors.neutral[0],
+      },
+    },
+    linkDisabled: {
+      fontSize: fontSize[3],
+      color: colors.neutral[7],
+      backgroundColor: colors.neutral[0],
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
+    },
+    dropdown: {
+      backgroundColor: colors.inputBackground,
+      color: colors.inputPlaceholderColor,
+      borderRadius: radius.input,
+      fontSize: fontSize[3],
+      fontWeight: 400,
+      fontFamily: 'primary',
     },
   },
   borders: borders,
