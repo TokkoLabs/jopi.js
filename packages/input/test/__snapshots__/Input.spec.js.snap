@@ -15,27 +15,35 @@ exports[`Input disabled 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 4px;
-  border: 1px solid #DADADA;
+  border-radius: 10px;
+  border: none;
   box-shadow: none;
-  caret-color: #757575;
-  color: #757575;
+  font-family: primary;
   display: block;
   font-size: 14px;
   height: 36px;
-  line-height: 14;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 11px;
   padding-bottom: 11px;
-  margin-bottom: 64px;
   outline: none;
+  background-color: inputBackground;
 }
 
-.c1:disabled {
-  color: #999999;
-  background-color: #EBEBEB;
-  cursor: not-allowed;
+.c1::-webkit-input-placeholder {
+  color: inputPlaceholderColor;
+}
+
+.c1::-moz-placeholder {
+  color: inputPlaceholderColor;
+}
+
+.c1:-ms-input-placeholder {
+  color: inputPlaceholderColor;
+}
+
+.c1::placeholder {
+  color: inputPlaceholderColor;
 }
 
 <div
@@ -64,27 +72,35 @@ exports[`Input placeholder 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 4px;
-  border: 1px solid #DADADA;
+  border-radius: 10px;
+  border: none;
   box-shadow: none;
-  caret-color: #757575;
-  color: #757575;
+  font-family: primary;
   display: block;
   font-size: 14px;
   height: 36px;
-  line-height: 14;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 11px;
   padding-bottom: 11px;
-  margin-bottom: 64px;
   outline: none;
+  background-color: inputBackground;
 }
 
-.c1:disabled {
-  color: #999999;
-  background-color: #EBEBEB;
-  cursor: not-allowed;
+.c1::-webkit-input-placeholder {
+  color: inputPlaceholderColor;
+}
+
+.c1::-moz-placeholder {
+  color: inputPlaceholderColor;
+}
+
+.c1:-ms-input-placeholder {
+  color: inputPlaceholderColor;
+}
+
+.c1::placeholder {
+  color: inputPlaceholderColor;
 }
 
 <div
@@ -114,27 +130,35 @@ exports[`Input renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 4px;
-  border: 1px solid #DADADA;
+  border-radius: 10px;
+  border: none;
   box-shadow: none;
-  caret-color: #757575;
-  color: #757575;
+  font-family: primary;
   display: block;
   font-size: 14px;
   height: 36px;
-  line-height: 14;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 11px;
   padding-bottom: 11px;
-  margin-bottom: 64px;
   outline: none;
+  background-color: inputBackground;
 }
 
-.c1:disabled {
-  color: #999999;
-  background-color: #EBEBEB;
-  cursor: not-allowed;
+.c1::-webkit-input-placeholder {
+  color: inputPlaceholderColor;
+}
+
+.c1::-moz-placeholder {
+  color: inputPlaceholderColor;
+}
+
+.c1:-ms-input-placeholder {
+  color: inputPlaceholderColor;
+}
+
+.c1::placeholder {
+  color: inputPlaceholderColor;
 }
 
 <div

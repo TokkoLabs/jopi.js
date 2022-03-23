@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
 
-export const Button = props => (
+export const Button = (props) => (
   <Box
     as="button"
     tx="buttons"
@@ -11,18 +11,18 @@ export const Button = props => (
       appearance: 'none',
       display: 'inline-block',
       lineHeight: 'inherit',
-      textTransform: 'uppercase',
       fontFamily: 'body',
+      fontWeight: 'bold',
       textAlign: 'center',
       textDecoration: 'none',
       cursor: 'pointer',
       outline: 'none',
-      px: 3,
-      py: 2,
+      px: 26,
+      py: 14,
       color: 'white',
       bg: 'primary',
       border: 0,
-      borderRadius: 'circle',
+      borderRadius: 'button',
     }}
   />
 )

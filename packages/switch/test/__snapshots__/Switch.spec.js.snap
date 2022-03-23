@@ -15,7 +15,7 @@ exports[`Switch renders alt correctly 1`] = `
   padding: 2px 4px;
   border-radius: circle;
   cursor: pointer;
-  border: 1px solid #c2c2c2;
+  border: 1px solid #D4DBDE;
   background-color: neutral.0;
   position: relative;
   outline: none;
@@ -25,7 +25,7 @@ exports[`Switch renders alt correctly 1`] = `
 
 .c0::before {
   content: '';
-  background: #757575;
+  background: #D4DBDE;
   position: absolute;
   width: 16px;
   height: 16px;
@@ -41,23 +41,23 @@ exports[`Switch renders alt correctly 1`] = `
 }
 
 .c0[aria-checked="true"] {
-  background-color: neutral.0;
+  background-color: #6A88F2;
 }
 
 .c0[aria-checked="true"]::before {
   -webkit-transform: translate(21px,-50%);
   -ms-transform: translate(21px,-50%);
   transform: translate(21px,-50%);
-  background-color: primary;
+  background-color: white;
 }
 
 .c0[disabled] {
-  background-color: neutral.0;
-  border: 1px solid neutral.2;
+  background-color: #EFF2F3;
+  border: none;
 }
 
 .c0[disabled]::before {
-  background: #C4C4C4;
+  background: #C1CCD0;
   box-shadow: none;
 }
 
@@ -82,7 +82,7 @@ exports[`Switch renders correctly 1`] = `
   padding: 2px 4px;
   border-radius: circle;
   cursor: pointer;
-  border: 1px solid #c2c2c2;
+  border: 1px solid #D4DBDE;
   background-color: neutral.0;
   position: relative;
   outline: none;
@@ -92,7 +92,7 @@ exports[`Switch renders correctly 1`] = `
 
 .c0::before {
   content: '';
-  background: #757575;
+  background: #D4DBDE;
   position: absolute;
   width: 16px;
   height: 16px;
@@ -108,23 +108,23 @@ exports[`Switch renders correctly 1`] = `
 }
 
 .c0[aria-checked="true"] {
-  background-color: neutral.0;
+  background-color: #6A88F2;
 }
 
 .c0[aria-checked="true"]::before {
   -webkit-transform: translate(21px,-50%);
   -ms-transform: translate(21px,-50%);
   transform: translate(21px,-50%);
-  background-color: primary;
+  background-color: white;
 }
 
 .c0[disabled] {
-  background-color: neutral.0;
-  border: 1px solid neutral.2;
+  background-color: #EFF2F3;
+  border: none;
 }
 
 .c0[disabled]::before {
-  background: #C4C4C4;
+  background: #C1CCD0;
   box-shadow: none;
 }
 

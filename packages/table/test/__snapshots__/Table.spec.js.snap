@@ -5,8 +5,9 @@ exports[`Table renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  font-family: body;
-  border-collapse: collapse;
+  font-family: primary;
+  width: 100%;
+  border-spacing: 0 4px;
 }
 
 .c1 {
@@ -19,19 +20,22 @@ exports[`Table renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  font-size: 16px;
-  text-transform: uppercase;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: white;
+  margin-bottom: 5px;
+  background-color: secondary;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-top: 1px solid #EBEBEB;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: darkGrey;
+  margin-bottom: 5px;
+  background-color: inputBackground;
 }
 
 <table

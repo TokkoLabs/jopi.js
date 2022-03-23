@@ -45,8 +45,8 @@ input:focus ~ .c0 {
   margin-right: 8px;
   border-radius: 2px;
   color: gray;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 input:checked ~ .c0 {
@@ -100,17 +100,17 @@ input:disabled:not(:checked) ~ .c9 {
     aria-hidden="true"
     className="c0 c3 c4 c5 c0 c6"
     fill="none"
-    height={18}
-    viewBox="0 0 18 18"
-    width={18}
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect
       fill="#D64A36"
-      height="17"
+      height="15"
       rx="1.5"
       stroke="#D64A36"
-      width="17"
+      width="15"
       x="0.5"
       y="0.5"
     />
@@ -123,17 +123,17 @@ input:disabled:not(:checked) ~ .c9 {
     aria-hidden="true"
     className="c0 c3 c7 c8 c0 c6"
     fill="none"
-    height={18}
-    viewBox="0 0 18 18"
-    width={18}
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect
       fill="white"
-      height="17"
+      height="15"
       rx="1.5"
-      stroke="#E7E7E6"
-      width="17"
+      stroke="#C1CCD0"
+      width="15"
       x="0.5"
       y="0.5"
     />
@@ -142,17 +142,17 @@ input:disabled:not(:checked) ~ .c9 {
     aria-hidden="true"
     className="c0 c3 c9 c10 c0 c6"
     fill="none"
-    height={18}
-    viewBox="0 0 18 18"
-    width={18}
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect
-      fill="#F5F5F5"
-      height="17"
+      fill="#EFF2F3"
+      height="15"
       rx="1.5"
-      stroke="#F5F5F5"
-      width="17"
+      stroke="#EFF2F3"
+      width="15"
       x="0.5"
       y="0.5"
     />
@@ -161,23 +161,23 @@ input:disabled:not(:checked) ~ .c9 {
     aria-hidden="true"
     className="c0 c3 c11 c12 c0 c6"
     fill="none"
-    height={18}
-    viewBox="0 0 18 18"
-    width={18}
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect
-      fill="#F5F5F5"
-      height="17"
+      fill="#EFF2F3"
+      height="15"
       rx="1.5"
-      stroke="#F5F5F5"
-      width="17"
+      stroke="#EFF2F3"
+      width="15"
       x="0.5"
       y="0.5"
     />
     <path
       d="M4.5 10L8 13L14 4"
-      stroke="#BABABA"
+      stroke="#C1CCD0"
     />
   </svg>
 </div>
@@ -228,8 +228,8 @@ input:focus ~ .c0 {
   margin-right: 8px;
   border-radius: 2px;
   color: gray;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 input:checked ~ .c0 {
@@ -283,40 +283,40 @@ input:disabled:not(:checked) ~ .c9 {
     aria-hidden="true"
     className="c0 c3 c4 c5 c0 c6"
     fill="none"
-    height={18}
-    viewBox="0 0 18 18"
-    width={18}
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect
-      fill="white"
-      height="17"
+      fill="#6A88F2"
+      height="15"
       rx="1.5"
-      stroke="#F5F5F5"
-      width="17"
+      stroke="#6A88F2"
+      width="15"
       x="0.5"
       y="0.5"
     />
     <path
       d="M4.5 10L8 13L14 4"
-      stroke="#D64A36"
+      stroke="white"
     />
   </svg>
   <svg
     aria-hidden="true"
     className="c0 c3 c7 c8 c0 c6"
     fill="none"
-    height={18}
-    viewBox="0 0 18 18"
-    width={18}
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect
       fill="white"
-      height="17"
+      height="15"
       rx="1.5"
-      stroke="#E7E7E6"
-      width="17"
+      stroke="#C1CCD0"
+      width="15"
       x="0.5"
       y="0.5"
     />
@@ -325,17 +325,17 @@ input:disabled:not(:checked) ~ .c9 {
     aria-hidden="true"
     className="c0 c3 c9 c10 c0 c6"
     fill="none"
-    height={18}
-    viewBox="0 0 18 18"
-    width={18}
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect
-      fill="#F5F5F5"
-      height="17"
+      fill="#EFF2F3"
+      height="15"
       rx="1.5"
-      stroke="#F5F5F5"
-      width="17"
+      stroke="#EFF2F3"
+      width="15"
       x="0.5"
       y="0.5"
     />
@@ -344,23 +344,23 @@ input:disabled:not(:checked) ~ .c9 {
     aria-hidden="true"
     className="c0 c3 c11 c12 c0 c6"
     fill="none"
-    height={18}
-    viewBox="0 0 18 18"
-    width={18}
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect
-      fill="#F5F5F5"
-      height="17"
+      fill="#EFF2F3"
+      height="15"
       rx="1.5"
-      stroke="#F5F5F5"
-      width="17"
+      stroke="#EFF2F3"
+      width="15"
       x="0.5"
       y="0.5"
     />
     <path
       d="M4.5 10L8 13L14 4"
-      stroke="#BABABA"
+      stroke="#C1CCD0"
     />
   </svg>
 </div>

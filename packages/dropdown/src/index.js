@@ -33,10 +33,11 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = props => {
+const DropdownButton = (props) => {
   const { toggle } = useDropdownContext()
   return (
     <Button
+      variant="dropdown"
       {...props}
       onClick={toggle}
       sx={{
@@ -49,6 +50,7 @@ const DropdownButton = props => {
         fontSize: 1,
         lineHeight: 0,
         height: '36px',
+        width: '236px',
       }}
     />
   )
@@ -65,14 +67,15 @@ const DropdownList = ({ children, ...props }) => {
           display: 'flex',
           flexDirection: 'column',
           flexGrow: 1,
-          mt: 0,
+          mt: '5px',
           py: '5px',
-          backgroundColor: 'neutral.0',
+          backgroundColor: 'inputBackground',
           boxShadow: 'active',
-          borderRadius: 'default',
+          borderRadius: 'input',
           position: 'absolute',
           top: '42px',
           zIndex: 1,
+          width: '236px',
         }}
       >
         {children}
@@ -81,10 +84,17 @@ const DropdownList = ({ children, ...props }) => {
   )
 }
 
-const DropdownListSearch = props => <List.Search {...props} />
+const DropdownListSearch = (props) => <List.Search {...props} />
 
-const DropdownListItem = props => (
-  <List.Item {...props} sx={{ cursor: 'pointer' }} />
+const DropdownListItem = (props) => (
+  <List.Item
+    {...props}
+    sx={{
+      cursor: 'pointer',
+      fontSize: '2',
+      color: 'darkGray',
+    }}
+  />
 )
 
 Dropdown.Button = DropdownButton
