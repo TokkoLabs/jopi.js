@@ -13,9 +13,9 @@ export const normal = () =>
     const [on, toggle] = useToggle(false)
     return <Switch aria-checked={on} onClick={toggle} />
   })
-export const alt = () =>
-  React.createElement(() => {
-    const [on, toggle] = useToggle(false)
-    return <Switch aria-checked={on} onClick={toggle} variant="alt" />
-  })
+// export const alt = () =>
+//   React.createElement(() => {
+//     const [on, toggle] = useToggle(false)
+//     return <Switch aria-checked={on} onClick={toggle} variant="alt" />
+//   })
 export const disabled = () => <Switch disabled />
