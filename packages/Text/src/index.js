@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
+import '../../../public/fonts.css'
 
 export const Text = (props) => (
   <Box
@@ -7,7 +8,7 @@ export const Text = (props) => (
     tx="text"
     {...props}
     __css={{
-      fontFamily: 'body',
+      fontFamily: 'primary',
       color: 'neutral.6',
     }}
   />
@@ -21,7 +22,7 @@ export const Heading = (props) => (
     __css={{
       fontSize: 4,
       fontWeight: 'heading',
-      fontFamily: 'heading',
+      fontFamily: 'primary',
       lineHeight: 'heading',
       letterSpacing: 'heading',
       color: 'neutral.6',

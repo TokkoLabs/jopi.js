@@ -42,7 +42,7 @@ export const search = () =>
 
     return (
       <Dropdown width={1 / 3}>
-        <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
+        <Dropdown.Button>{'Placeholder'}</Dropdown.Button>
         <Dropdown.Items>
           <Dropdown.Search placeholder="search something" onChange={onFilter} />
           {filteredData.map((user) => (
