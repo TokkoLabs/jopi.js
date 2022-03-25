@@ -75,4 +75,3 @@ Input.propTypes = {
 Input.defaultProps = {
   disabled: false,
 }
-     
