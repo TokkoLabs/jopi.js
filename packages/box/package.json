@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/box",
-  "version": "1.2.147",
+  "version": "1.2.180",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@styled-system/css": "^5.1.4",
-    "styled-components": "5.2.0",
+    "styled-components": "5.3.3",
     "styled-system": "5.1.5"
   },
   "peerDependencies": {
