@@ -9,7 +9,7 @@
   "dependencies": {
     "@oneloop/box": "^1.2.181",
     "@oneloop/button": "^1.2.184",
-    "@oneloop/hooks": "^1.2.169",
+    "@oneloop/hooks": "^1.2.170",
     "@oneloop/list": "^1.2.188"
   },
   "peerDependencies": {
