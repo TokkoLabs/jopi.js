@@ -3,47 +3,80 @@ import { Box } from '@oneloop/box'
 import { Svg } from '@oneloop/icons'
 
 const RadioBox = ({
-  borderColor,
+  borderColor = '#D4DBDE',
   backgroundColor,
   tick,
   tickColor,
+  isMedium,
   ...props
 }) => (
-  <Svg width={16} height={16} viewBox="0 0 16 16" fill="none" {...props}>
-    <circle cx="8" cy="8" r="8" fill={backgroundColor} />
-    <circle cx="8" cy="8" r="7.5" stroke={borderColor} />
-    {tick && <circle cx="8" cy="8" r="4" fill={tickColor} />}
+  <Svg
+    width={isMedium ? 20 : 16}
+    height={isMedium ? 20 : 16}
+    viewBox={'0 0 ' + isMedium ? 20 : 16 + '' + isMedium ? 20 : 16}
+    fill="none"
+    {...props}
+  >
+    <circle
+      cx={isMedium ? 10 : 8}
+      cy={isMedium ? 10 : 8}
+      r={isMedium ? 10 : 8}
+      fill={backgroundColor}
+    />
+    <circle
+      cx={isMedium ? 10 : 8}
+      cy={isMedium ? 10 : 8}
+      r={isMedium ? 9.5 : 7.5}
+      stroke={borderColor}
+    />
+    {tick && (
+      <circle
+        cx={isMedium ? 10 : 8}
+        cy={isMedium ? 10 : 8}
+        r={isMedium ? 5 : 4}
+        fill={tickColor}
+      />
+    )}
   </Svg>
 )
 
-const RadioChecked = ({ isAlt, ...props }) => (
+const RadioChecked = ({ isMedium, ...props }) => (
   <RadioBox
-    borderColor={isAlt ? '#D64A36' : '#C2C2C2'}
-    backgroundColor={isAlt ? '#D64A36' : 'white'}
+    borderColor="#6A88F2"
+    backgroundColor="#6A88F2"
     tick
-    tickColor={isAlt ? 'white' : '#D64A36'}
+    tickColor="white"
+    isMedium={isMedium}
     {...props}
   />
 )
 
-const RadioUnchecked = props => (
-  <RadioBox borderColor="#E7E7E6" backgroundColor="white" {...props} />
-)
-
-const RadioDisabled = ({ checked = false, ...props }) => (
+const RadioUnchecked = ({ isMedium, ...props }) => (
   <RadioBox
-    borderColor="#F5F5F5"
-    backgroundColor="#F5F5F5"
-    tick={checked}
-    tickColor="#BABABA"
+    borderColor="#D4DBDE"
+    backgroundColor="white"
+    tick
+    tickColor="white"
+    isMedium={isMedium}
     {...props}
   />
 )
 
-const RadioIcon = ({ isAlt = false, ...props }) => (
+const RadioDisabled = ({ isMedium, ...props }) => (
+  <RadioBox
+    borderColor="white"
+    backgroundColor="white"
+    tick
+    tickColor="#C1CCD0"
+    isMedium={isMedium}
+    {...props}
+  />
+)
+
+const RadioIcon = ({ isMedium, ...props }) => (
   <React.Fragment>
     <RadioChecked
-      isAlt={isAlt}
+      isMedium={isMedium}
       {...props}
       __css={{
         display: 'none',
@@ -53,6 +86,7 @@ const RadioIcon = ({ isAlt = false, ...props }) => (
       }}
     />
     <RadioUnchecked
+      isMedium={isMedium}
       {...props}
       __css={{
         display: 'none',
@@ -62,6 +96,7 @@ const RadioIcon = ({ isAlt = false, ...props }) => (
       }}
     />
     <RadioDisabled
+      isMedium={isMedium}
       {...props}
       __css={{
         display: 'none',
@@ -70,21 +105,22 @@ const RadioIcon = ({ isAlt = false, ...props }) => (
         },
       }}
     />
-    <RadioDisabled
-      checked
-      {...props}
-      __css={{
-        display: 'none',
-        'input:checked:disabled ~ &': {
-          display: 'block',
-        },
-      }}
-    />
   </React.Fragment>
 )
 
-export const Radio = ({ sx, variant = 'radio', isAlt = false, ...props }) => (
-  <Box sx={{ position: 'relative', width: 16, height: 16 }}>
+export const Radio = ({
+  sx,
+  variant = 'radio',
+  isMedium = false,
+  ...props
+}) => (
+  <Box
+    sx={{
+      position: 'relative',
+      width: isMedium ? 20 : 16,
+      height: isMedium ? 20 : 16,
+    }}
+  >
     <Box
       as="input"
       type="radio"
@@ -102,7 +138,7 @@ export const Radio = ({ sx, variant = 'radio', isAlt = false, ...props }) => (
       aria-hidden="true"
       tx="forms"
       variant={variant}
-      isAlt={isAlt}
+      isMedium={isMedium}
       sx={sx}
       __css={{
         mr: 2,
