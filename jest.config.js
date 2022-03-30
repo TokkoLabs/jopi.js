@@ -15,4 +15,5 @@ module.exports = {
   moduleNameMapper: {
     '^.+\\.(css)$': '<rootDir>/packages/datepicker/config/CSSStub.js',
   },
+  testEnvironment: 'jest-environment-jsdom'
 }
