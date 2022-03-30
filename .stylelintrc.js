@@ -9,4 +9,5 @@ module.exports = {
     'declaration-empty-line-before': null,
     'value-keyword-case': null,
   },
+  customSyntax: "@stylelint/postcss-css-in-js",
 }
