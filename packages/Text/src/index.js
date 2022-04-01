@@ -1,8 +1,6 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
-//import '../../../public/fonts.css'
-import { fonts } from '@oneloop/fonts'
-//import '../../fonts/src/index'
+import '@oneloop/fonts'
 
 export const Text = (props) => (
   <Box
