@@ -38,12 +38,12 @@ const CheckboxChecked = ({ isMedium, ...props }) => (
   />
 )
 
-const CheckboxUnchecked = ({isMedium, ...props}) => (
-  <CheckboxBox 
-    borderColor="#C1CCD0" 
-    backgroundColor="white" 
+const CheckboxUnchecked = ({ isMedium, ...props }) => (
+  <CheckboxBox
+    borderColor="#C1CCD0"
+    backgroundColor="white"
     isMedium={isMedium}
-    {...props} 
+    {...props}
   />
 )
 
