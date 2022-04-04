@@ -7,52 +7,61 @@ const CheckboxBox = ({
   backgroundColor,
   tick,
   tickColor,
+  isMedium,
   ...props
 }) => (
   <>
-    <Svg width={16} height={16} viewBox="0 0 16 16" fill="none" {...props}>
+    <Svg width={isMedium ? 20 : 16} height={isMedium ? 20 : 16} viewBox="0 0 16 16" fill="none" {...props}>
       <rect
         x="0.5"
         y="0.5"
         width="15"
         height="15"
-        rx="1.5"
+        rx="4"
+        ry="4"
         fill={backgroundColor}
         stroke={borderColor}
       />
-      {tick && <path d="M4.5 10L8 13L14 4" stroke={tickColor} />}
+      {tick && <path d="M 5,8 L 7,10 L 12,5" stroke={tickColor} strokeWidth="1.5" strokeLinecap="round"/>}
     </Svg>
   </>
 )
 
-const CheckboxChecked = ({ isAlt, ...props }) => (
+const CheckboxChecked = ({ isMedium, ...props }) => (
   <CheckboxBox
-    borderColor={isAlt ? '#D64A36' : '#6A88F2'}
-    backgroundColor={isAlt ? '#D64A36' : '#6A88F2'}
+    borderColor='#6A88F2'
+    backgroundColor='#6A88F2'
     tick
-    tickColor={isAlt ? 'white' : 'white'}
+    tickColor='white'
+    isMedium={isMedium}
     {...props}
   />
 )
 
-const CheckboxUnchecked = (props) => (
-  <CheckboxBox borderColor="#C1CCD0" backgroundColor="white" {...props} />
+const CheckboxUnchecked = ({isMedium, ...props}) => (
+  <CheckboxBox 
+    borderColor="#C1CCD0" 
+    backgroundColor="white" 
+    isMedium={isMedium}
+    {...props} 
+  />
 )
 
-const CheckboxDisabled = ({ checked = false, ...props }) => (
+const CheckboxDisabled = ({ isMedium, checked = false, ...props }) => (
   <CheckboxBox
     borderColor="#EFF2F3"
     backgroundColor="#EFF2F3"
     tick={checked}
     tickColor="#C1CCD0"
+    isMedium={isMedium}
     {...props}
   />
 )
 
-const CheckboxIcon = ({ isAlt = false, ...props }) => (
+const CheckboxIcon = ({ isMedium, ...props }) => (
   <React.Fragment>
     <CheckboxChecked
-      isAlt={isAlt}
+      isMedium={isMedium}
       {...props}
       css={{
         display: 'none',
@@ -62,6 +71,7 @@ const CheckboxIcon = ({ isAlt = false, ...props }) => (
       }}
     />
     <CheckboxUnchecked
+      isMedium={isMedium}
       {...props}
       css={{
         display: 'none',
@@ -71,6 +81,7 @@ const CheckboxIcon = ({ isAlt = false, ...props }) => (
       }}
     />
     <CheckboxDisabled
+      isMedium={isMedium}
       {...props}
       css={{
         display: 'none',
@@ -93,7 +104,7 @@ const CheckboxIcon = ({ isAlt = false, ...props }) => (
 )
 
 export const Checkbox = ({
-  isAlt = false,
+  isMedium = false,
   sx,
   variant = 'checkbox',
   ...props
@@ -116,7 +127,7 @@ export const Checkbox = ({
       aria-hidden="true"
       tx="forms"
       variant={variant}
-      isAlt={isAlt}
+      isMedium={isMedium}
       sx={sx}
       __css={{
         mr: 2,
