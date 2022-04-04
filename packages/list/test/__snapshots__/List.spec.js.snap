@@ -223,15 +223,18 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="#6A88F2"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#6A88F2"
           width="15"
           x="0.5"
           y="0.5"
         />
         <path
-          d="M4.5 10L8 13L14 4"
+          d="M 5,8 L 7,10 L 12,5"
           stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
         />
       </svg>
       <svg
@@ -246,7 +249,8 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="white"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#C1CCD0"
           width="15"
           x="0.5"
@@ -265,7 +269,8 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="#EFF2F3"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#EFF2F3"
           width="15"
           x="0.5"
@@ -284,15 +289,18 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="#EFF2F3"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#EFF2F3"
           width="15"
           x="0.5"
           y="0.5"
         />
         <path
-          d="M4.5 10L8 13L14 4"
+          d="M 5,8 L 7,10 L 12,5"
           stroke="#C1CCD0"
+          strokeLinecap="round"
+          strokeWidth="1.5"
         />
       </svg>
     </div>
@@ -321,15 +329,18 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="#6A88F2"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#6A88F2"
           width="15"
           x="0.5"
           y="0.5"
         />
         <path
-          d="M4.5 10L8 13L14 4"
+          d="M 5,8 L 7,10 L 12,5"
           stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
         />
       </svg>
       <svg
@@ -344,7 +355,8 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="white"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#C1CCD0"
           width="15"
           x="0.5"
@@ -363,7 +375,8 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="#EFF2F3"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#EFF2F3"
           width="15"
           x="0.5"
@@ -382,15 +395,18 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="#EFF2F3"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#EFF2F3"
           width="15"
           x="0.5"
           y="0.5"
         />
         <path
-          d="M4.5 10L8 13L14 4"
+          d="M 5,8 L 7,10 L 12,5"
           stroke="#C1CCD0"
+          strokeLinecap="round"
+          strokeWidth="1.5"
         />
       </svg>
     </div>
@@ -419,15 +435,18 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="#6A88F2"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#6A88F2"
           width="15"
           x="0.5"
           y="0.5"
         />
         <path
-          d="M4.5 10L8 13L14 4"
+          d="M 5,8 L 7,10 L 12,5"
           stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
         />
       </svg>
       <svg
@@ -442,7 +461,8 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="white"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#C1CCD0"
           width="15"
           x="0.5"
@@ -461,7 +481,8 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="#EFF2F3"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#EFF2F3"
           width="15"
           x="0.5"
@@ -480,15 +501,18 @@ input:disabled:not(:checked) ~ .c15 {
         <rect
           fill="#EFF2F3"
           height="15"
-          rx="1.5"
+          rx="4"
+          ry="4"
           stroke="#EFF2F3"
           width="15"
           x="0.5"
           y="0.5"
         />
         <path
-          d="M4.5 10L8 13L14 4"
+          d="M 5,8 L 7,10 L 12,5"
           stroke="#C1CCD0"
+          strokeLinecap="round"
+          strokeWidth="1.5"
         />
       </svg>
     </div>
