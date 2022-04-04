@@ -4,6 +4,8 @@ const colors = {
   primaryPressed: '#FD4E34',
   primaryAccent: '#F6D4CF',
   secondary: '#1A4958',
+  secondaryHover: '#2D7D97',
+  secondaryPressed: '#236377',
   success: '#068B5B',
   error: '#B21702',
   info: '#386DF4',
@@ -24,6 +26,8 @@ const colors = {
     '#6D777D',
     '#F7F8FA',
     '#A6B2BA',
+    '#E0E5E8',
+    '#707E86',
   ],
 }
 const space = [0, 4, 6, 8, 12, 16, 24, 32, 64, 128, 256]
@@ -230,15 +234,15 @@ const theme = {
       userSelect: 'none',
     },
     secondary: {
-      color: colors.primary,
+      color: colors.secondary,
       backgroundColor: colors.neutral[0],
-      border: borders.primaryBorder,
+      border: borders.secondaryBorder,
       ':hover': {
-        backgroundColor: colors.primary,
+        backgroundColor: colors.secondary,
         color: colors.neutral[0],
       },
       ':focus': {
-        backgroundColor: colors.primaryPressed,
+        backgroundColor: colors.secondaryPressed,
         color: colors.neutral[0],
       },
     },
@@ -287,6 +291,65 @@ const theme = {
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
+    },
+    iconSecondary: {
+      backgroundColor: colors.secondary,
+      color: colors.neutral[0],
+      ':hover': {
+        backgroundColor: colors.secondaryHover,
+        color: colors.neutral[0],
+      },
+      ':focus': {
+        backgroundColor: colors.secondaryPressed,
+        color: colors.neutral[0],
+      },
+    },
+    primaryOutlineIcon: {
+      backgroundColor: colors.neutral[0],
+      color: colors.primary,
+      border: borders.primaryBorder,
+      ':hover': {
+        backgroundColor: colors.primaryHover,
+        color: colors.neutral[0],
+      },
+      ':focus': {
+        backgroundColor: colors.primaryPressed,
+        color: colors.neutral[0],
+      },
+    },
+    secondaryOutlineIcon: {
+      backgroundColor: colors.neutral[0],
+      color: colors.secondary,
+      border: borders.secondaryBorder,
+      ':hover': {
+        backgroundColor: colors.secondaryHover,
+        color: colors.neutral[0],
+      },
+      ':focus': {
+        backgroundColor: colors.secondaryPressed,
+        color: colors.neutral[0],
+      },
+    },
+    outlineIconDisabled: {
+      color: colors.neutral[4],
+      backgroundColor: colors.neutral[0],
+      border: borders.secondaryBorder,
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
+    },
+    subtleIcon: {
+      backgroundColor: colors.neutral[0],
+      border: colors.neutral[0],
+      color: colors.neutral[6],
+      ':hover': {
+        backgroundColor: colors.neutral[11],
+        color: colors.neutral[10],
+      },
+      ':focus': {
+        backgroundColor: colors.neutral[7],
+        color: colors.neutral[12],
+      },
     },
     link: {
       fontSize: fontSize[3],
