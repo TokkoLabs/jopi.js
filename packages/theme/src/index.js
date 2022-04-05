@@ -6,6 +6,10 @@ const colors = {
   secondary: '#1A4958',
   secondaryHover: '#2D7D97',
   secondaryPressed: '#236377',
+  subtle: '#707E86',
+  subtleHover: '#4D5B64',
+  subtlePressed: '#384248',
+  disabled: '#C1CCD0',
   success: '#068B5B',
   error: '#B21702',
   info: '#386DF4',
@@ -63,7 +67,7 @@ const forms = {
     },
   },
   label: {
-    color: colors.neutral[4],
+    color: colors.disabled,
     fontSize: fontSize[1],
     fontWeight: 'bold',
   },
@@ -73,14 +77,14 @@ const borders = {
   light: '1px solid rgba(255, 255, 255, 0.5)',
   dark: '1px solid rgba(0, 0, 0, 0.24)',
   primaryBorder: '1px solid ' + colors.primary,
-  secondaryBorder: '1px solid ' + colors.neutral[4],
+  secondaryBorder: '1px solid ' + colors.disabled,
 }
 
 const switches = {
   primary: {
     border: `1px solid ${colors.neutral[3]}`,
     '&::before': {
-      background: colors.neutral[4],
+      background: colors.disabled,
     },
     '&[aria-checked="true"]': {
       backgroundColor: 'neutral.0',
@@ -91,7 +95,7 @@ const switches = {
   },
   alt: {
     border: borders.dark,
-    background: colors.neutral[4],
+    background: colors.disabled,
     '&::before': {
       background: colors.neutral[0],
     },
@@ -146,7 +150,7 @@ const theme = {
       },
     ],
     label: {
-      color: colors.neutral[4],
+      color: colors.disabled,
       fontSize: fontSize[1],
       fontWeight: 'bold',
     },
@@ -227,18 +231,18 @@ const theme = {
       },
     },
     primaryDisabled: {
-      color: colors.neutral[4],
+      color: colors.disabled,
       backgroundColor: colors.neutral[7],
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
     },
     secondary: {
-      color: colors.secondary,
-      backgroundColor: colors.neutral[0],
+      color: colors.neutral[0],
+      backgroundColor: colors.secondary,
       border: borders.secondaryBorder,
       ':hover': {
-        backgroundColor: colors.secondary,
+        backgroundColor: colors.secondaryHover,
         color: colors.neutral[0],
       },
       ':focus': {
@@ -247,33 +251,57 @@ const theme = {
       },
     },
     secondaryDisabled: {
-      color: colors.neutral[4],
+      color: colors.disabled,
       backgroundColor: colors.neutral[0],
       border: borders.secondaryBorder,
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
     },
-    text: {
+    primaryText: {
       color: colors.primary,
       backgroundColor: colors.neutral[0],
       ':hover': {
-        color: colors.neutral[8],
+        color: colors.primaryHover,
         backgroundColor: colors.neutral[0],
       },
       ':focus': {
         color: colors.primaryPressed,
-        backgroundColor: colors.neutral[7],
+        backgroundColor: colors.neutral[0],
+      },
+    },
+    secondaryText: {
+      color: colors.secondary,
+      backgroundColor: colors.neutral[0],
+      ':hover': {
+        color: colors.secondaryHover,
+        backgroundColor: colors.neutral[0],
+      },
+      ':focus': {
+        color: colors.secondaryPressed,
+        backgroundColor: colors.neutral[0],
+      },
+    },
+    subtleText: {
+      color: colors.subtle,
+      backgroundColor: colors.neutral[0],
+      ':hover': {
+        color: colors.subtleHover,
+        backgroundColor: colors.neutral[0],
+      },
+      ':focus': {
+        color: colors.subtlePressed,
+        backgroundColor: colors.neutral[0],
       },
     },
     textDisabled: {
-      color: colors.neutral[4],
+      color: colors.disabled,
       backgroundColor: colors.neutral[0],
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
     },
-    icon: {
+    iconPrimary: {
       backgroundColor: colors.primary,
       color: colors.neutral[0],
       ':hover': {
@@ -284,13 +312,6 @@ const theme = {
         backgroundColor: colors.primaryPressed,
         color: colors.neutral[0],
       },
-    },
-    iconDisabled: {
-      color: colors.neutral[4],
-      backgroundColor: colors.neutral[7],
-      cursor: 'default',
-      pointerEvents: 'none',
-      userSelect: 'none',
     },
     iconSecondary: {
       backgroundColor: colors.secondary,
@@ -304,7 +325,14 @@ const theme = {
         color: colors.neutral[0],
       },
     },
-    primaryOutlineIcon: {
+    iconDisabled: {
+      color: colors.disabled,
+      backgroundColor: colors.neutral[7],
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
+    },
+    primaryOutline: {
       backgroundColor: colors.neutral[0],
       color: colors.primary,
       border: borders.primaryBorder,
@@ -330,8 +358,8 @@ const theme = {
         color: colors.neutral[0],
       },
     },
-    outlineIconDisabled: {
-      color: colors.neutral[4],
+    outlineDisabled: {
+      color: colors.disabled,
       backgroundColor: colors.neutral[0],
       border: borders.secondaryBorder,
       cursor: 'default',
