@@ -26,25 +26,55 @@ export const textDisabled = () => (
 )
 
 export const icon = () => (
-  <Button px={4} py={3} fontSize={5} variant="icon">
+  <Button px={5} py={3} fontSize={5} variant="icon">
     {'+'}
   </Button>
 )
 
 export const iconDisabled = () => (
-  <Button px={4} py={3} fontSize={5} variant="iconDisabled">
+  <Button px={5} py={3} fontSize={5} variant="iconDisabled">
     {'+'}
   </Button>
 )
 
 export const iconSecondary = () => (
-  <Button px={4} py={3} fontSize={5} variant="secondary">
+  <Button px={5} py={3} fontSize={5} variant="iconSecondary">
     {'+'}
   </Button>
 )
 
 export const iconSecondaryDisabled = () => (
-  <Button px={4} py={3} fontSize={5} variant="secondaryDisabled">
+  <Button px={5} py={3} fontSize={5} variant="iconDisabled">
+    {'+'}
+  </Button>
+)
+
+export const primaryOutlineIcon = () => (
+  <Button px={5} py={3} fontSize={5} variant="primaryOutlineIcon">
+    {'+'}
+  </Button>
+)
+
+export const secondaryOutlineIcon = () => (
+  <Button px={5} py={3} fontSize={5} variant="secondaryOutlineIcon">
+    {'+'}
+  </Button>
+)
+
+export const outlineIconDisabled = () => (
+  <Button px={5} py={3} fontSize={5} variant="outlineIconDisabled">
+    {'+'}
+  </Button>
+)
+
+export const subtleIcon = () => (
+  <Button px={5} py={3} fontSize={5} variant="subtleIcon">
+    {'+'}
+  </Button>
+)
+
+export const subtleIconDisabled = () => (
+  <Button px={5} py={3} fontSize={5} variant="iconDisabled">
     {'+'}
   </Button>
 )
