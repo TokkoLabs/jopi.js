@@ -2,6 +2,7 @@ import React from 'react'
 import { Box } from '@oneloop/box'
 import { Svg } from '@oneloop/icons'
 
+// viewBox={'0 0 ' + isMedium ? 20 : 16 + '' + isMedium ? 20 : 16}
 const RadioBox = ({
   borderColor = '#D4DBDE',
   backgroundColor,
@@ -109,18 +110,12 @@ const RadioIcon = ({ isMedium, ...props }) => (
 )
 
 export const Radio = ({
+  isMedium = false,
   sx,
   variant = 'radio',
-  isMedium = false,
   ...props
 }) => (
-  <Box
-    sx={{
-      position: 'relative',
-      width: isMedium ? 20 : 16,
-      height: isMedium ? 20 : 16,
-    }}
-  >
+  <Box sx={{ position: 'relative', width: 18, height: 18 }}>
     <Box
       as="input"
       type="radio"
