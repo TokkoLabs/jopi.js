@@ -18,6 +18,7 @@ const colors = {
   inputBackground: '#F7F8FA',
   inputPlaceholderColor: '#A6B2BA',
   darkGray: '#6D777D',
+  feedback: '#048465',
   neutral: [
     '#FFF',
     '#F5F5F5',
@@ -77,6 +78,7 @@ const borders = {
   dark: '1px solid rgba(0, 0, 0, 0.24)',
   primaryBorder: '1px solid ' + colors.primary,
   secondaryBorder: '1px solid ' + colors.disabled,
+  feedbackBorder: '1px solid ' + colors.feedback,
 }
 
 const switches = {
@@ -397,6 +399,31 @@ const theme = {
         stroke: colors.subtlePressed,
       },
     },
+    roundIconArrow: {
+      backgroundColor: colors.neutral[7],
+      border: colors.neutral[7],
+      color: colors.subtle,
+      stroke: colors.subtle,
+      ':hover': {
+        backgroundColor: colors.neutral[11],
+        color: colors.subtleHover,
+        stroke: colors.subtleHover,
+      },
+      ':focus': {
+        backgroundColor: colors.neutral[0],
+        color: colors.subtlePressed,
+        stroke: colors.subtlePressed,
+      },
+    },
+    colourFeedback: {
+      backgroundColor: colors.feedback,
+      border: borders.feedbackBorder,
+      color: colors.neutral[0],
+      stroke: colors.neutral[0],
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
+    },
     link: {
       fontSize: fontSize[3],
       color: colors.info,
@@ -404,19 +431,46 @@ const theme = {
       ':hover': {
         color: colors.lightBlue,
         backgroundColor: colors.neutral[0],
+        textDecoration: 'underline',
       },
       ':focus': {
         color: colors.neutral[8],
         backgroundColor: colors.neutral[0],
       },
     },
+    linkSubtle: {
+      fontSize: fontSize[3],
+      color: colors.subtle,
+      backgroundColor: colors.neutral[0],
+      ':hover': {
+        color: colors.subtleHover,
+        backgroundColor: colors.neutral[0],
+        textDecoration: 'underline',
+      },
+      ':focus': {
+        color: colors.subtlePressed,
+        backgroundColor: colors.neutral[0],
+      },
+    },
     linkDisabled: {
       fontSize: fontSize[3],
-      color: colors.neutral[7],
+      color: colors.disabled,
       backgroundColor: colors.neutral[0],
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
+    },
+    subtleButton: {
+      color: colors.subtle,
+      backgroundColor: colors.neutral[0],
+      ':hover': {
+        backgroundColor: colors.neutral[0],
+        color: colors.subtleHover,
+      },
+      ':focus': {
+        backgroundColor: colors.neutral[0],
+        color: colors.subtlePressed,
+      },
     },
     dropdown: {
       backgroundColor: colors.inputBackground,

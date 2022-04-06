@@ -95,25 +95,26 @@ export const subtleRoundIconButton = () => (
   <ButtonRoundIcon variant="subtleIcon"></ButtonRoundIcon>
 )
 
+export const roundIconArrowButton = () => (
+  <ButtonRoundIcon variant="roundIconArrow"></ButtonRoundIcon>
+)
+
 export const roundIconButtonDisabled = () => (
   <ButtonRoundIcon variant="iconDisabled"></ButtonRoundIcon>
 )
-
-// Falta el de la flecha para abajo
-
-
-// Round Button
 
 export const roundButton = () => (
   <ButtonRound text="Label"> </ButtonRound>
 )
 
+// Hay que arreglar round button
+export const roundButtonColourFeedback = () => (
+  <ButtonRound text="Label" variant="colourFeedback"> </ButtonRound>
+)
+
 export const roundButtonDisabled = () => (
   <ButtonRound text="Label" variant="primaryDisabled"> </ButtonRound>
 )
-
-
-
 
 export const link = () => (
   <Button px={0} py={0} variant="link">
@@ -121,8 +122,20 @@ export const link = () => (
   </Button>
 )
 
+export const linkSubtle = () => (
+  <Button px={0} py={0} variant="linkSubtle">
+    {'Button'}
+  </Button>
+)
+
 export const linkDisabled = () => (
   <Button px={0} py={0} variant="linkDisabled">
+    {'Button'}
+  </Button>
+)
+
+export const subtleButton = () => (
+  <Button px={0} py={0} variant="subtleButton">
     {'Button'}
   </Button>
 )
