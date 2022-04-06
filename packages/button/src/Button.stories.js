@@ -90,13 +90,22 @@ export const roundIconButton = () => (
  <ButtonRoundIcon variant="primary"></ButtonRoundIcon>
 )
 
+export const subtleRoundIconButton = () => (
+  <ButtonRoundIcon variant="subtleIcon"></ButtonRoundIcon>
+)
+
 export const roundIconButtonDisabled = () => (
   <ButtonRoundIcon variant="iconDisabled"></ButtonRoundIcon>
 )
 
+// Falta el de la flecha para abajo
+
+
+// Round Button
+
 export const roundButton = () => (
   <Button borderRadius={24} height={48}>
-    {'+ Label'}
+    {'Label'}
   </Button>
 )
 
