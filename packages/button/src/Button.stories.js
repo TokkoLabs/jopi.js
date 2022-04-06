@@ -1,6 +1,9 @@
 import React from 'react'
+import { Svg } from '@oneloop/icons'
 
 import { Button } from '.'
+import { ButtonIcon } from '.'
+import { ButtonRoundIcon } from '.'
 
 export default {
   component: Button,
@@ -52,52 +55,53 @@ export const textDisabled = () => (
 )
 
 export const iconPrimary = () => (
-  <Button px={48} py={48} borderRadius={12} variant="iconPrimary">
-    
-  </Button>
+  <ButtonIcon variant="iconPrimary"/>
 )
 
 export const iconSecondary = () => (
-  <Button px={5} py={3} fontSize={5} variant="iconSecondary">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="iconSecondary"/>
 )
 
 export const iconDisabled = () => (
-  <Button px={5} py={3} fontSize={5} variant="iconDisabled">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="iconDisabled"/>
 )
 
 export const primaryOutlineIcon = () => (
-  <Button px={5} py={3} fontSize={5} variant="primaryOutline">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="primaryOutline"/>
 )
 
 export const secondaryOutlineIcon = () => (
-  <Button px={5} py={3} fontSize={5} variant="secondaryOutlineIcon">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="secondaryOutlineIcon"/>
 )
 
 export const outlineIconDisabled = () => (
-  <Button px={5} py={3} fontSize={5} variant="outlineDisabled">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="outlineDisabled"/>
 )
 
 export const subtleIcon = () => (
-  <Button px={5} py={3} fontSize={5} variant="subtleIcon">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="subtleIcon"/>
 )
 
 export const subtleIconDisabled = () => (
-  <Button px={5} py={3} fontSize={5} variant="iconDisabled">
-    {'+'}
+  <ButtonIcon variant="iconDisabled"/>
+)
+
+export const roundIconButton = () => (
+ <ButtonRoundIcon variant="primary"></ButtonRoundIcon>
+)
+
+export const roundIconButtonDisabled = () => (
+  <ButtonRoundIcon variant="iconDisabled"></ButtonRoundIcon>
+)
+
+export const roundButton = () => (
+  <Button borderRadius={24} height={48}>
+    {'+ Label'}
   </Button>
 )
+
+
+
 
 export const link = () => (
   <Button px={0} py={0} variant="link">
