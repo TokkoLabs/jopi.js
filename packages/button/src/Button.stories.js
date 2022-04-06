@@ -4,6 +4,7 @@ import { Svg } from '@oneloop/icons'
 import { Button } from '.'
 import { ButtonIcon } from '.'
 import { ButtonRoundIcon } from '.'
+import { ButtonRound } from '.'
 
 export default {
   component: Button,
@@ -23,7 +24,7 @@ export const secondary = () => (
 )
 
 export const secondaryDisabled = () => (
-  <Button variant="secondaryDisabled">{'Button'}</Button>
+  <Button variant="primaryDisabled">{'Button'}</Button>
 )
 
 export const primaryOutline = () => (
@@ -104,9 +105,11 @@ export const roundIconButtonDisabled = () => (
 // Round Button
 
 export const roundButton = () => (
-  <Button borderRadius={24} height={48}>
-    {'Label'}
-  </Button>
+  <ButtonRound text="Label"> </ButtonRound>
+)
+
+export const roundButtonDisabled = () => (
+  <ButtonRound text="Label" variant="primaryDisabled"> </ButtonRound>
 )
 
 

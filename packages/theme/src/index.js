@@ -233,6 +233,7 @@ const theme = {
     primaryDisabled: {
       color: colors.disabled,
       backgroundColor: colors.neutral[7],
+      stroke: colors.disabled,
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
