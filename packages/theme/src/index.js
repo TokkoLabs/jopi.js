@@ -428,6 +428,7 @@ const theme = {
       fontSize: fontSize[3],
       color: colors.info,
       backgroundColor: colors.neutral[0],
+      whiteSpace: 'nowrap',
       ':hover': {
         color: colors.lightBlue,
         backgroundColor: colors.neutral[0],
@@ -442,6 +443,7 @@ const theme = {
       fontSize: fontSize[3],
       color: colors.subtle,
       backgroundColor: colors.neutral[0],
+      whiteSpace: 'nowrap',
       ':hover': {
         color: colors.subtleHover,
         backgroundColor: colors.neutral[0],
@@ -459,6 +461,7 @@ const theme = {
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
+      whiteSpace: 'nowrap',
     },
     subtleButton: {
       color: colors.subtle,
@@ -470,6 +473,23 @@ const theme = {
       ':focus': {
         backgroundColor: colors.neutral[0],
         color: colors.subtlePressed,
+      },
+    },
+    mainButton: {
+      color: colors.subtle,
+      stroke: colors.subtle,
+      backgroundColor: colors.neutral[0],
+      ':hover': {
+        backgroundColor: colors.neutral[0],
+        fontWeight: 'normal',
+        color: colors.subtlePressed,
+        stroke: colors.primary,
+      },
+      ':focus': {
+        backgroundColor: colors.neutral[0],
+        fontWeight: 'bold',
+        color: colors.subtlePressed,
+        stroke: colors.primary,
       },
     },
     dropdown: {
