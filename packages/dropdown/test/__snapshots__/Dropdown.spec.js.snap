@@ -12,6 +12,15 @@ exports[`Dropdown default 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -49,11 +58,15 @@ exports[`Dropdown default 1`] = `
 <div
   className="c0"
 >
-  <button
+  <div
     className="c1"
-    onClick={[Function]}
   >
-    Opción elegida
-  </button>
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      Opción elegida
+    </button>
+  </div>
 </div>
 `;
