@@ -1,118 +1,136 @@
 import React from 'react'
 
-import { Button } from '.'
+import { Button, ButtonIcon, ButtonRoundIcon, ButtonRound, ButtonMain } from '.'
 
 export default {
   component: Button,
   title: 'Button',
 }
 
-export const primary = () => <Button>{'Button'}</Button>
+export const primary = () => (
+  <Button>{'Label'}</Button>
+)
 
 export const primaryDisabled = () => (
-  <Button variant="primaryDisabled">{'Button'}</Button>
+  <Button variant="primaryDisabled">{'Label'}</Button>
 )
 
-export const secondary = () => <Button variant="secondary">{'Button'}</Button>
+export const secondary = () => (
+  <Button variant="secondary">{'Label'}</Button>
+)
 
 export const secondaryDisabled = () => (
-  <Button variant="secondaryDisabled">{'Button'}</Button>
+  <Button variant="primaryDisabled">{'Label'}</Button>
 )
 
-export const text = () => <Button variant="text">{'Button'}</Button>
+export const primaryOutline = () => (
+  <Button variant="primaryOutline">{'Label'}</Button>
+)
+
+export const secondaryOutline = () => (
+  <Button variant="secondaryOutlineIcon">{'Label'}</Button>
+)
+
+export const outlineDisabled = () => (
+  <Button variant="outlineDisabled">{'Label'}</Button>
+)
+
+export const primaryText = () => (
+  <Button variant="primaryText">{'Label'}</Button>
+)
+
+export const secondaryText = () => (
+  <Button variant="secondaryText">{'Label'}</Button>
+)
+
+export const subtleText = () => (
+  <Button variant="subtleText">{'Label'}</Button>
+)
 
 export const textDisabled = () => (
-  <Button variant="textDisabled">{'Button'}</Button>
+  <Button variant="textDisabled">{'Label'}</Button>
 )
 
-export const icon = () => (
-  <Button px={5} py={3} fontSize={5} variant="icon">
-    {'+'}
-  </Button>
-)
-
-export const iconDisabled = () => (
-  <Button px={5} py={3} fontSize={5} variant="iconDisabled">
-    {'+'}
-  </Button>
+export const iconPrimary = () => (
+  <ButtonIcon variant="iconPrimary"/>
 )
 
 export const iconSecondary = () => (
-  <Button px={5} py={3} fontSize={5} variant="iconSecondary">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="iconSecondary"/>
 )
 
-export const iconSecondaryDisabled = () => (
-  <Button px={5} py={3} fontSize={5} variant="iconDisabled">
-    {'+'}
-  </Button>
+export const iconDisabled = () => (
+  <ButtonIcon variant="iconDisabled"/>
 )
 
 export const primaryOutlineIcon = () => (
-  <Button px={5} py={3} fontSize={5} variant="primaryOutlineIcon">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="primaryOutline"/>
 )
 
 export const secondaryOutlineIcon = () => (
-  <Button px={5} py={3} fontSize={5} variant="secondaryOutlineIcon">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="secondaryOutlineIcon"/>
 )
 
 export const outlineIconDisabled = () => (
-  <Button px={5} py={3} fontSize={5} variant="outlineIconDisabled">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="outlineDisabled"/>
 )
 
 export const subtleIcon = () => (
-  <Button px={5} py={3} fontSize={5} variant="subtleIcon">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="subtleIcon"/>
 )
 
 export const subtleIconDisabled = () => (
-  <Button px={5} py={3} fontSize={5} variant="iconDisabled">
-    {'+'}
-  </Button>
+  <ButtonIcon variant="iconDisabled"/>
+)
+
+export const roundIconButton = () => (
+  <ButtonRoundIcon variant="primary"/>
+)
+
+export const subtleRoundIconButton = () => (
+  <ButtonRoundIcon variant="subtleIcon"/>
+)
+
+export const roundIconArrowButton = () => (
+  <ButtonRoundIcon variant="roundIconArrow"/>
+)
+
+export const roundIconButtonDisabled = () => (
+  <ButtonRoundIcon variant="iconDisabled"/>
+)
+
+export const roundButton = () => (
+  <ButtonRound text="Label" variant="primary"/>
+)
+
+export const roundButtonColourFeedback = () => (
+  <ButtonRound text="Label" variant="colourFeedback"/>
+)
+
+export const roundButtonDisabled = () => (
+  <ButtonRound text="Label" variant="primaryDisabled"/>
 )
 
 export const link = () => (
-  <Button px={0} py={0} variant="link">
-    {'Button'}
-  </Button>
+  <Button variant="link">{'Link button'}</Button>
+)
+
+export const linkSubtle = () => (
+  <Button variant="linkSubtle">{'Link button'}</Button>
 )
 
 export const linkDisabled = () => (
-  <Button px={0} py={0} variant="linkDisabled">
-    {'Button'}
-  </Button>
+  <Button variant="linkDisabled">{'Link button'}</Button>
 )
 
-// export const success = () => <Button variant="success">{'Button'}</Button>
+export const subtleButton = () => (
+  <Button variant="subtleButton">{'Label'}</Button>
+)
 
-// export const warning = () => <Button variant="warning">{'Button'}</Button>
+export const mainButton = () => (
+  <ButtonMain variant="mainButton" text="Emprendimientos"/>
+)
 
-// export const danger = () => <Button variant="danger">{'Button'}</Button>
-
-// export const def = () => <Button variant="default">{'Button'}</Button>
-
-// export const small = () => (
-//   <Button px={8} py={3} borderRadius={7}>
-//     {'Small'}
-//   </Button>
-// )
-
-// export const medium = () => (
-//   <Button px={6} py={4} fontSize={2} borderRadius={10}>
-//     {'Button'}
-//   </Button>
-// )
-
-// export const large = () => (
-//   <Button px={8} py={4} fontSize={3}>
-//     {'Button'}
-//   </Button>
-// )
+export const mainButtonCollapsible = () => (
+  <ButtonMain variant="mainButton" isCollapsible text="Emprendimientos"/>
+)
