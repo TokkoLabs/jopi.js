@@ -1,10 +1,6 @@
 import React from 'react'
-import { Svg } from '@oneloop/icons'
 
-import { Button } from '.'
-import { ButtonIcon } from '.'
-import { ButtonRoundIcon } from '.'
-import { ButtonRound } from '.'
+import { Button, ButtonIcon, ButtonRoundIcon, ButtonRound } from '.'
 
 export default {
   component: Button,
@@ -88,32 +84,31 @@ export const subtleIconDisabled = () => (
 )
 
 export const roundIconButton = () => (
- <ButtonRoundIcon variant="primary"></ButtonRoundIcon>
+  <ButtonRoundIcon variant="primary"/>
 )
 
 export const subtleRoundIconButton = () => (
-  <ButtonRoundIcon variant="subtleIcon"></ButtonRoundIcon>
+  <ButtonRoundIcon variant="subtleIcon"/>
 )
 
 export const roundIconArrowButton = () => (
-  <ButtonRoundIcon variant="roundIconArrow"></ButtonRoundIcon>
+  <ButtonRoundIcon variant="roundIconArrow"/>
 )
 
 export const roundIconButtonDisabled = () => (
-  <ButtonRoundIcon variant="iconDisabled"></ButtonRoundIcon>
+  <ButtonRoundIcon variant="iconDisabled"/>
 )
 
 export const roundButton = () => (
-  <ButtonRound text="Label"> </ButtonRound>
+  <ButtonRound text="Label" variant="primary"/>
 )
 
-// Hay que arreglar round button
 export const roundButtonColourFeedback = () => (
-  <ButtonRound text="Label" variant="colourFeedback"> </ButtonRound>
+  <ButtonRound text="Label" variant="colourFeedback"/>
 )
 
 export const roundButtonDisabled = () => (
-  <ButtonRound text="Label" variant="primaryDisabled"> </ButtonRound>
+  <ButtonRound text="Label" variant="primaryDisabled"/>
 )
 
 export const link = () => (

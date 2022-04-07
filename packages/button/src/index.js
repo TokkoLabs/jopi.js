@@ -99,22 +99,19 @@ export const ButtonRoundIcon = (props) => (
     >
       {
         <Svg width={38} height={38} viewBox="0 0 15 15" fill="none">
-          <path d="M 7.5,7.5 H 10 
-                   M 7.5,7.5 V 10 
-                   M 7.5,7.5 H 5 
-                   M 7.5,7.5 V 5" strokeWidth="1" strokeLinecap="round"/>
+          <path d="M 7.5,7.5 H 10 M 7.5,7.5 V 10 M 7.5,7.5 H 5 M 7.5,7.5 V 5" strokeWidth="1" strokeLinecap="round"/>
         </Svg>
       }
     </Box>
   </Box>
 )
 
-export const ButtonRound = ({text, props}) => (
+export const ButtonRound = ({ text, variant, props }) => (
   <Box sx={{ position: 'relative', width: 18, height: 18 }}>
     <Box
       as="button"
       tx="buttons"
-      variant="primary"
+      variant={variant}
       {...props}
       __css={{
         appearance: 'none',
@@ -142,15 +139,11 @@ export const ButtonRound = ({text, props}) => (
       }}
     >
       {
-      <Svg width={10} height={10} viewBox="0 0 15 15" fill="none">
-        <path d="  M 0,7.5 H 0 
-                   M 7.5,0 V 0 
-                   M 0,7.5 H 14
-                   M 7.5,0 V 14" strokeWidth="3" strokeLinecap="round"/>
+        <Svg width={10} height={10} viewBox="0 0 15 15" fill="none">
+          <path d="  M 0,7.5 H 0 M 7.5,0 V 0 M 0,7.5 H 14 M 7.5,0 V 14" strokeWidth="3" strokeLinecap="round"/>
         </Svg>
       }
       <span> {text}</span>
-      
     </Box>
   </Box>
 )
