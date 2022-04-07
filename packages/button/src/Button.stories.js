@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Button, ButtonIcon, ButtonRoundIcon, ButtonRound, ButtonMain } from '.'
+import '@oneloop/fonts'
 
 export default {
   component: Button,
