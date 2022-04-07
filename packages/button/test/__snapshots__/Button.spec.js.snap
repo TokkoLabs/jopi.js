@@ -5,37 +5,12 @@ exports[`Button primary 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  line-height: inherit;
-  font-family: body;
-  font-weight: bold;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: button;
+  position: relative;
+  width: 18px;
+  height: 18px;
 }
 
-<button
-  className="c0"
->
-  Test
-</button>
-`;
-
-exports[`Button secondary 1`] = `
-.c0 {
+.c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -61,9 +36,60 @@ exports[`Button secondary 1`] = `
   border-radius: button;
 }
 
-<button
+<div
   className="c0"
 >
-  Test
-</button>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button secondary 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
 `;

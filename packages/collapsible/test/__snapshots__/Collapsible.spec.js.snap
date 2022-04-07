@@ -11,6 +11,15 @@ exports[`Collapsible default 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -47,17 +56,21 @@ exports[`Collapsible default 1`] = `
   justify-content: space-between;
 }
 
-.c1 + .content {
+.c2 + .content {
   overflow: hidden;
 }
 
 <div
   className="c0"
 >
-  <button
+  <div
     className="c1"
   >
-    Estado
-  </button>
+    <button
+      className="c2"
+    >
+      Estado
+    </button>
+  </div>
 </div>
 `;
