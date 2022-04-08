@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { Button, ButtonIcon, ButtonRoundIcon, ButtonRound, ButtonMain } from '.'
-import '@oneloop/fonts'
 
 export default {
   component: Button,
@@ -129,9 +128,9 @@ export const subtleButton = () => (
 )
 
 export const mainButton = () => (
-  <ButtonMain variant="mainButton" text="Emprendimientos"/>
+  <ButtonMain variant="mainButton" icon="icon-propiedades" text="Emprendimientos"/>
 )
 
 export const mainButtonCollapsible = () => (
-  <ButtonMain variant="mainButton" isCollapsible text="Emprendimientos"/>
+  <ButtonMain variant="mainButton" icon="icon-propiedades" text="Emprendimientos" isCollapsible/>
 )

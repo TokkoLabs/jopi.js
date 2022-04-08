@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
 import { Box } from '@oneloop/box'
 import { Svg } from '@oneloop/icons'
+import '@oneloop/fonts'
 
 export const Button = (props) => (
   <Box sx={{ position: 'relative', width: 18, height: 18 }}>
@@ -81,7 +82,7 @@ export const ButtonRoundIcon = (props) => (
         lineHeight: 'inherit',
         fontFamily: 'body',
         fontWeight: 'bold',
-        fontSize: 6,
+        fontSize: 26,
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
@@ -105,6 +106,7 @@ export const ButtonRoundIcon = (props) => (
     </Box>
   </Box>
 )
+// <span className="icon-agregar"></span>
 
 export const ButtonRound = ({ text, variant, props }) => (
   <Box sx={{ position: 'relative', width: 18, height: 18 }}>
@@ -131,7 +133,7 @@ export const ButtonRound = ({ text, variant, props }) => (
         border: 0,
         borderRadius: 24,
         height: 48,
-        paddingLeft: 30,
+        //paddingLeft: 30,
         whiteSpace: 'nowrap',
         paddingTop: 13,
         paddingBottom: 13,
@@ -139,16 +141,17 @@ export const ButtonRound = ({ text, variant, props }) => (
       }}
     >
       {
-        <Svg width={10} height={10} viewBox="0 0 15 15" fill="none">
+       /* <Svg width={10} height={10} viewBox="0 0 15 15" fill="none">
           <path d="  M 0,7.5 H 0 M 7.5,0 V 0 M 0,7.5 H 14 M 7.5,0 V 14" strokeWidth="3" strokeLinecap="round"/>
-        </Svg>
+        </Svg>*/
+        <span className="icon-link" style={{fontSize: '22px', paddingTop: '0'}}></span>
       }
       <span> {text}</span>
     </Box>
   </Box>
 )
 
-export const ButtonMain = ({ text, variant, isCollapsible, props }) => (
+export const ButtonMain = ({ text, icon, variant, isCollapsible, props }) => (
   <Box sx={{ position: 'relative', width: 18, height: 18 }}>
     <Box
       as="button"
@@ -160,7 +163,7 @@ export const ButtonMain = ({ text, variant, isCollapsible, props }) => (
         display: 'inline-block',
         lineHeight: 'inherit',
         fontFamily: 'body',
-        fontWeight: 'bold',
+        fontWeight: 'normal',
         fontSize: 16,
         textAlign: 'center',
         textDecoration: 'none',
@@ -175,17 +178,12 @@ export const ButtonMain = ({ text, variant, isCollapsible, props }) => (
         whiteSpace: 'nowrap',
       }}
     >
-      {
-        <Svg width={10} height={10} viewBox="0 0 15 15" fill="none">
-          <path d="  M 0,7.5 H 0 M 7.5,0 V 0 M 0,7.5 H 14 M 7.5,0 V 14" strokeWidth="3" strokeLinecap="round"/>
-        </Svg>
-      }
-      <span> {text} </span>
-      { isCollapsible &&
-        <Svg width={10} height={10} viewBox="0 0 15 15" fill="none">
-          <path d="  M 0,7.5 H 0 M 7.5,0 V 0 M 0,7.5 H 14 M 7.5,0 V 14" strokeWidth="3" strokeLinecap="round"/>
-        </Svg>
-      }
+      <span className={icon} style={{fontSize: '20px' , color:color == '#DF1E02'? '#DF1E02' : '#DF1E02'}}
+
+      />
+      <span style={{}}> {text} </span>
+      { isCollapsible && <span className="icon-dropdown" style={{fontSize: '16px', color: '#A6B2BA'}}/>}
     </Box>
   </Box>
 )
+// '.a:hover':{color: '#DF1E02'}
