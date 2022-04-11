@@ -331,3 +331,15 @@
 .icon-zoom-out:before {
   content: "\e003";
 }
+.icon-expand:before {
+  content: "\e004";
+}
+.icon-performance:before {
+  content: "\e005";
+}
+.icon-filtros:before {
+  content: "\e006";
+}
+.icon-emprendimiento:before {
+  content: "\e007";
+}
