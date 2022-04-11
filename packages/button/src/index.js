@@ -108,7 +108,7 @@ export const ButtonRoundIcon = (props) => (
 )
 // <span className="icon-agregar"></span>
 
-export const ButtonRound = ({ text, variant, props }) => (
+export const ButtonRound = ({ text, icon, variant, props }) => (
   <Box sx={{ position: 'relative', width: 18, height: 18 }}>
     <Box
       as="button"
@@ -133,20 +133,14 @@ export const ButtonRound = ({ text, variant, props }) => (
         border: 0,
         borderRadius: 24,
         height: 48,
-        //paddingLeft: 30,
         whiteSpace: 'nowrap',
         paddingTop: 13,
         paddingBottom: 13,
         paddingRight: 26,
       }}
     >
-      {
-       /* <Svg width={10} height={10} viewBox="0 0 15 15" fill="none">
-          <path d="  M 0,7.5 H 0 M 7.5,0 V 0 M 0,7.5 H 14 M 7.5,0 V 14" strokeWidth="3" strokeLinecap="round"/>
-        </Svg>*/
-        <span className="icon-link" style={{fontSize: '22px', paddingTop: '0'}}></span>
-      }
-      <span> {text}</span>
+      <span className={icon} style={{fontSize: '20px', position:'absolute' }}></span>
+      <span style={{paddingLeft:'24px', marginTop:'0px', position:'relative', weight: 'fit-content' }}> {text}</span>
     </Box>
   </Box>
 )
@@ -178,12 +172,9 @@ export const ButtonMain = ({ text, icon, variant, isCollapsible, props }) => (
         whiteSpace: 'nowrap',
       }}
     >
-      <span className={icon} style={{fontSize: '20px' , color:color == '#DF1E02'? '#DF1E02' : '#DF1E02'}}
-
-      />
-      <span style={{}}> {text} </span>
+      <span className={icon} style={{fontSize: '20px', position:'absolute', color:'#707E86'}}/>
+      <span style={{marginLeft:'24px', marginTop:'1px', position:'relative'}}> {text} </span>
       { isCollapsible && <span className="icon-dropdown" style={{fontSize: '16px', color: '#A6B2BA'}}/>}
     </Box>
   </Box>
 )
-// '.a:hover':{color: '#DF1E02'}
