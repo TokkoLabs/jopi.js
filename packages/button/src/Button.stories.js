@@ -100,15 +100,15 @@ export const roundIconButtonDisabled = () => (
 )
 
 export const roundButton = () => (
-  <ButtonRound text="Label" variant="primary"/>
+  <ButtonRound text="Label" icon="icon-unificar" variant="primary"/>
 )
 
 export const roundButtonColourFeedback = () => (
-  <ButtonRound text="Label" variant="colourFeedback"/>
+  <ButtonRound text="Label" icon="icon-check" variant="colourFeedback"/>
 )
 
 export const roundButtonDisabled = () => (
-  <ButtonRound text="Label" variant="primaryDisabled"/>
+  <ButtonRound text="Label" icon="icon-unificar" variant="primaryDisabled"/>
 )
 
 export const link = () => (
@@ -128,9 +128,9 @@ export const subtleButton = () => (
 )
 
 export const mainButton = () => (
-  <ButtonMain variant="mainButton" text="Emprendimientos"/>
+  <ButtonMain variant="mainButton" icon="icon-propiedades" text="Emprendimientos"/>
 )
 
 export const mainButtonCollapsible = () => (
-  <ButtonMain variant="mainButton" isCollapsible text="Emprendimientos"/>
+  <ButtonMain variant="mainButton" icon="icon-propiedades" text="Emprendimientos" isCollapsible/>
 )

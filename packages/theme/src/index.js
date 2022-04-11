@@ -77,8 +77,9 @@ const borders = {
   light: '1px solid rgba(255, 255, 255, 0.5)',
   dark: '1px solid rgba(0, 0, 0, 0.24)',
   primaryBorder: '1px solid ' + colors.primary,
-  secondaryBorder: '1px solid ' + colors.disabled,
+  secondaryBorder: '1px solid ' + colors.secondary,
   feedbackBorder: '1px solid ' + colors.feedback,
+  disabledBorder: '1px solid ' + colors.disabled,
 }
 
 const switches = {
@@ -378,7 +379,7 @@ const theme = {
       color: colors.disabled,
       backgroundColor: colors.neutral[0],
       stroke: colors.disabled,
-      border: borders.secondaryBorder,
+      border: borders.disabledBorder,
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
