@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import { Box } from '@oneloop/box'
 import { Svg } from '@oneloop/icons'
 import '@oneloop/fonts'
@@ -138,8 +138,8 @@ export const ButtonRound = ({ text, icon, variant, props }) => (
         paddingRight: 26,
       }}
     >
-      <span className={icon} style={{fontSize: '20px', position:'absolute' }}></span>
-      <span style={{paddingLeft:'24px'}}> {text}</span>
+      <span className={icon} style={{ fontSize: '20px', position: 'absolute' }}></span>
+      <span style={{ paddingLeft: '24px' }}> {text}</span>
     </Box>
   </Box>
 )
@@ -148,40 +148,41 @@ export const ButtonMain = ({ text, icon, variant, isCollapsible, props }) => {
   const [hover, setHover] = useState()
   const [active, setActive] = useState()
 
-return (
-  <Box sx={{ position: 'relative', width: 18, height: 18 }}>
-    <Box
-      as="button"
-      tx="buttons"
-      variant={variant}
-      onMouseOver={() => setHover(true)}
-      onMouseOut={() => setHover(false)}
-      onClick={() => setActive(true)}
-      onBlur={() => setActive(false)}
-      {...props}
-      __css={{
-        appearance: 'none',
-        display: 'inline-block',
-        lineHeight: 'inherit',
-        fontFamily: 'body',
-        fontWeight: 'normal',
-        fontSize: 16,
-        textAlign: 'center',
-        textDecoration: 'none',
-        cursor: 'pointer',
-        outline: 'none',
-        px: 26,
-        py: 14,
-        color: 'white',
-        bg: 'primary',
-        border: 0,
-        borderRadius: 'button',
-        whiteSpace: 'nowrap',
-      }}
-    >
-      <span className={icon} style={{fontSize: '20px', position:'absolute', color:active || hover ? '#DF1E02' : '#707E86' }}/>
-      <span style={{marginLeft:'24px', marginTop:'22px', position:'relative'}}> {text} </span>
-      { isCollapsible && <span className="icon-dropdown" style={{fontSize: '20px', position:'absolute', color: '#A6B2BA'}}/>}
+  return (
+    <Box sx={{ position: 'relative', width: 18, height: 18 }}>
+      <Box
+        as="button"
+        tx="buttons"
+        variant={variant}
+        onMouseOver={() => setHover(true)}
+        onMouseOut={() => setHover(false)}
+        onClick={() => setActive(true)}
+        onBlur={() => setActive(false)}
+        {...props}
+        __css={{
+          appearance: 'none',
+          display: 'inline-block',
+          lineHeight: 'inherit',
+          fontFamily: 'body',
+          fontWeight: 'normal',
+          fontSize: 16,
+          textAlign: 'center',
+          textDecoration: 'none',
+          cursor: 'pointer',
+          outline: 'none',
+          px: 26,
+          py: 14,
+          color: 'white',
+          bg: 'primary',
+          border: 0,
+          borderRadius: 'button',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        <span className={icon} style={{ fontSize: '20px', position: 'absolute', color: active || hover ? '#DF1E02' : '#707E86' }}/>
+        <span style={{ marginLeft: '24px', marginTop: '22px', position: 'relative' }}> {text} </span>
+        { isCollapsible && <span className="icon-dropdown" style={{ fontSize: '20px', position: 'absolute', color: '#A6B2BA' }}/>}
+      </Box>
     </Box>
-  </Box>
-)}
+  )
+}

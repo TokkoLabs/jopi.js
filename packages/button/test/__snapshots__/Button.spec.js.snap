@@ -1,5 +1,641 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button iconDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 48px;
+  height: 48px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button iconPrimary 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 48px;
+  height: 48px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button iconSecondary 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 48px;
+  height: 48px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button link 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button linkDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button linkSubtle 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button mainButton 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+  white-space: nowrap;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    <span
+      className="icon-propiedades"
+      style={
+        Object {
+          "color": "#707E86",
+          "fontSize": "20px",
+          "position": "absolute",
+        }
+      }
+    />
+    <span
+      style={
+        Object {
+          "marginLeft": "24px",
+          "marginTop": "22px",
+          "position": "relative",
+        }
+      }
+    >
+       
+      Emprendimientos
+       
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button mainButtonCollapsible 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+  white-space: nowrap;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    <span
+      className="icon-propiedades"
+      style={
+        Object {
+          "color": "#707E86",
+          "fontSize": "20px",
+          "position": "absolute",
+        }
+      }
+    />
+    <span
+      style={
+        Object {
+          "marginLeft": "24px",
+          "marginTop": "22px",
+          "position": "relative",
+        }
+      }
+    >
+       
+      Emprendimientos
+       
+    </span>
+    <span
+      className="icon-dropdown"
+      style={
+        Object {
+          "color": "#A6B2BA",
+          "fontSize": "20px",
+          "position": "absolute",
+        }
+      }
+    />
+  </button>
+</div>
+`;
+
+exports[`Button outlineDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button outlineIconDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 48px;
+  height: 48px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
 exports[`Button primary 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -47,7 +683,1163 @@ exports[`Button primary 1`] = `
 </div>
 `;
 
+exports[`Button primaryDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button primaryOutline 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button primaryOutlineIcon 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 48px;
+  height: 48px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button primaryText 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button roundButton 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 24px;
+  height: 48px;
+  white-space: nowrap;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <span
+      className="icon-unificar"
+      style={
+        Object {
+          "fontSize": "20px",
+          "position": "absolute",
+        }
+      }
+    />
+    <span
+      style={
+        Object {
+          "paddingLeft": "24px",
+        }
+      }
+    >
+       
+      Label
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button roundButtonColourFeedback 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 24px;
+  height: 48px;
+  white-space: nowrap;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <span
+      className="icon-check"
+      style={
+        Object {
+          "fontSize": "20px",
+          "position": "absolute",
+        }
+      }
+    />
+    <span
+      style={
+        Object {
+          "paddingLeft": "24px",
+        }
+      }
+    >
+       
+      Label
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button roundButtonDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 24px;
+  height: 48px;
+  white-space: nowrap;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <span
+      className="icon-unificar"
+      style={
+        Object {
+          "fontSize": "20px",
+          "position": "absolute",
+        }
+      }
+    />
+    <span
+      style={
+        Object {
+          "paddingLeft": "24px",
+        }
+      }
+    >
+       
+      Label
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button roundIconArrowButton 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 50px;
+  with: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 38px;
+  height: 38px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={38}
+      viewBox="0 0 15 15"
+      width={38}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7.5,7.5 H 10 M 7.5,7.5 V 10 M 7.5,7.5 H 5 M 7.5,7.5 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button roundIconButton 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 50px;
+  with: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 38px;
+  height: 38px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={38}
+      viewBox="0 0 15 15"
+      width={38}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7.5,7.5 H 10 M 7.5,7.5 V 10 M 7.5,7.5 H 5 M 7.5,7.5 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button roundIconButtonDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 50px;
+  with: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 38px;
+  height: 38px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={38}
+      viewBox="0 0 15 15"
+      width={38}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7.5,7.5 H 10 M 7.5,7.5 V 10 M 7.5,7.5 H 5 M 7.5,7.5 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
 exports[`Button secondary 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button secondaryOutlineIcon 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button secondaryOutlineIcon 2`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 48px;
+  height: 48px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button secondaryText 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button subtleButton 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button subtleIcon 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 48px;
+  height: 48px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button subtleIconDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 48px;
+  height: 48px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button subtleRoundIconButton 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 50px;
+  with: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 38px;
+  height: 38px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={38}
+      viewBox="0 0 15 15"
+      width={38}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7.5,7.5 H 10 M 7.5,7.5 V 10 M 7.5,7.5 H 5 M 7.5,7.5 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button subtleText 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: button;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button textDisabled 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
