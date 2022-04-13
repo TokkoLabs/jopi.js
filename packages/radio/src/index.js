@@ -3,7 +3,7 @@ import { Box } from '@oneloop/box'
 import { Svg } from '@oneloop/icons'
 
 const RadioBox = ({
-  borderColor = '#D4DBDE',
+  borderColor,
   backgroundColor,
   tick,
   tickColor,
