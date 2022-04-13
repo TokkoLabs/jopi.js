@@ -91,6 +91,7 @@ const CheckboxIcon = ({ isMedium, ...props }) => (
       }}
     />
     <CheckboxDisabled
+      isMedium={isMedium}
       checked
       {...props}
       css={{

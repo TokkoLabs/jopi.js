@@ -10,8 +10,23 @@ describe('Radio', () => {
 
     expect(tree).toMatchSnapshot()
   })
-  test('renders alt correctly', () => {
-    const tree = renderer.create(<Radio isAlt />).toJSON()
+  test('renders checked correctly', () => {
+    const tree = renderer.create(<Radio defaultChecked />).toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+  test('renders unchecked correctly', () => {
+    const tree = renderer.create(<Radio defaultChecked={false} />).toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+  test('renders disabled correctly', () => {
+    const tree = renderer.create(<Radio disabled />).toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+  test('renders isMedium correctly', () => {
+    const tree = renderer.create(<Radio isMedium defaultChecked/>).toJSON()
 
     expect(tree).toMatchSnapshot()
   })
