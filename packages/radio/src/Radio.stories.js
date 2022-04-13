@@ -9,7 +9,7 @@ export default {
 
 export const normal = () => <Radio />
 export const checked = () => <Radio defaultChecked />
-export const checkedDisabled = () => <Radio defaultChecked disabled />
+export const unchecked = () => <Radio defaultChecked={false} />
 export const disabled = () => <Radio disabled />
 
-export const altChecked = () => <Radio isAlt defaultChecked />
+export const isMediumChecked = () => <Radio isMedium defaultChecked />
