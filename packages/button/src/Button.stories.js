@@ -155,9 +155,30 @@ export const roundIconButtonDisabled = () => (
   <ButtonIcon isRounded={true} icon="icon-agregar" variant="iconDisabled"/>
 )
 
-export const roundButton = () => (
+export const roundButtonLarge = () => (
   <ButtonRound text="Label" icon="icon-unificar" variant="primary"/>
 )
+
+
+
+export const roundButtonMedium = () => (
+  <ButtonRound text="Label" icon="icon-unificar" variant="primary" height='38px' borderRadius='18px' fontSize='14px' paddingLeft='20px'/>
+)
+
+export const roundButtonSmall = () => (
+  <ButtonRound text="Label" icon="icon-unificar" variant="primary" height='32px' borderRadius='16px' fontSize='12px' paddingLeft='18px' />
+)
+
+export const roundButtonExtraSmall = () => (
+  <ButtonRound text="Label" icon="icon-unificar" variant="primary" height='26px' borderRadius='12px' fontSize='12px' paddingLeft='16px' paddingTop='18%' />
+)
+
+
+
+
+
+
+
 
 export const roundButtonColourFeedback = () => (
   <ButtonRound text="Label" icon="icon-check" variant="colourFeedback"/>

@@ -15,7 +15,7 @@ export const Button = (props) => (
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: '16px',
+        fontSize: 16,
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
@@ -35,7 +35,7 @@ export const Button = (props) => (
 )
 
 export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, padding, height, width, variant, props }) => (
-  <Box sx={{ position: 'relative', width: 26, height: 40 }}>
+  <Box sx={{ position: 'relative', width: 26, height: 26 }}>
     <Box
       as="button"
       tx="buttons"
@@ -75,8 +75,8 @@ export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, padding, h
   </Box>
 )
 
-export const ButtonRound = ({ text, icon, variant, props }) => (
-  <Box sx={{ position: 'relative', width: 18, height: 18 }}>
+export const ButtonRound = ({ text, icon, fontSize, borderRadius, paddingLeft, paddingTop, height, variant, props }) => (
+  <Box sx={{ position: 'relative', width: 26, height: 26 }}>
     <Box
       as="button"
       tx="buttons"
@@ -84,11 +84,11 @@ export const ButtonRound = ({ text, icon, variant, props }) => (
       {...props}
       __css={{
         appearance: 'none',
-        display: 'inline-block',
+        display: 'inline-block',    //
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: fontSize ? fontSize : 16,
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
@@ -98,16 +98,19 @@ export const ButtonRound = ({ text, icon, variant, props }) => (
         color: 'white',
         bg: 'primary',
         border: 0,
-        borderRadius: 24,
-        height: 48,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+
         whiteSpace: 'nowrap',
-        paddingTop: 13,
-        paddingBottom: 13,
-        paddingRight: 26,
+        borderRadius: borderRadius ? borderRadius :24,
+        height: height ? height : '48px',
+        paddingBottom: '27%',
+        paddingTop: paddingTop ? paddingTop : '27%',
       }}
     >
-      <span className={icon} style={{ fontSize: '20px', position: 'absolute' }}></span>
-      <span style={{ paddingLeft: '24px' }}> {text}</span>
+      <span className={icon} style={{ fontSize: fontSize ? fontSize : '20px', position: 'absolute' }}></span>
+      <span style={{ paddingLeft: paddingLeft ? paddingLeft :'24px' }}> {text}</span>
     </Box>
   </Box>
 )
