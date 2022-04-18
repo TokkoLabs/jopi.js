@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Box } from '@oneloop/box'
-import { Svg } from '@oneloop/icons'
 import '@oneloop/fonts'
-import { paddingRight } from 'styled-system'
 
 export const Button = (props) => (
   <Box sx={{ position: 'relative', width: 26, height: 26 }}>
@@ -36,49 +34,8 @@ export const Button = (props) => (
   </Box>
 )
 
-export const ButtonIcon = (props) => (
+export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, height, width, variant, props }) => (
   <Box sx={{ position: 'relative', width: 26, height: 40 }}>
-    <Box
-      as="button"
-      tx="buttons"
-      variant="primary"
-      {...props}
-      __css={{
-        appearance: 'none',
-        display: 'inline-block',
-        lineHeight: 'inherit',
-        fontFamily: 'Nunito Sans',
-        fontWeight: 'bold',
-        fontSize: '24px',
-        textAlign: 'center',
-        textDecoration: 'none',
-        cursor: 'pointer',
-        outline: 'none',
-        px: 26,
-        py: 14,
-        color: 'white',
-        bg: 'primary',
-        border: 0,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-
-        borderRadius: 12,
-        with: 48,
-        height: 48,
-        left: '0%',
-        right: '0%',
-        paddingLeft: '14px',
-        paddingRight: '14px',
-      }}
-    >
-      <span className="icon-agregar"></span>
-    </Box>
-  </Box>
-)
-
-export const ButtonRoundIcon = ({ icon, variant, props }) => (
-  <Box sx={{ position: 'relative', width: 24, height: 36 }}>
     <Box
       as="button"
       tx="buttons"
@@ -90,12 +47,12 @@ export const ButtonRoundIcon = ({ icon, variant, props }) => (
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: '20px',
+        fontSize: fontSize ? fontSize : '28px',
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
         outline: 'none',
-        px: 24,
+        px: isRounded ? 24 : 26,
         py: 14,
         color: 'white',
         bg: 'primary',
@@ -103,17 +60,16 @@ export const ButtonRoundIcon = ({ icon, variant, props }) => (
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        
-        borderRadius: 99999,
-        with: 48,
-        height: 48,
-        left: '0%',
-        right: '0%',
-        paddingLeft: '14px',
-        paddingRight: '14px',
+        borderRadius: borderRadius ? borderRadius : 12,
+        width: width ? width : '48px',
+        height: height ? height : '48px',
+        paddingLeft: '35.4%',
+        paddingRight: '35.4%',
+        paddingTop: '40%',
+        paddingBottom: '40%',
       }}
     >
-      {icon && <span className={icon} ></span>}
+    {icon && <span className={icon}></span>}
     </Box>
   </Box>
 )
