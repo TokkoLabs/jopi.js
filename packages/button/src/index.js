@@ -47,7 +47,7 @@ export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, padding, h
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: fontSize ? fontSize : '28px',
+        fontSize: fontSize || '28px',
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
@@ -60,9 +60,9 @@ export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, padding, h
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: borderRadius ? borderRadius : 12,
-        width: width ? width : '48px',
-        height: height ? height : '48px',
+        borderRadius: borderRadius || 12,
+        width: width || '48px',
+        height: height || '48px',
         paddingLeft: '35.4%',
         paddingRight: '35.4%',
         paddingTop: '40%',
@@ -70,7 +70,7 @@ export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, padding, h
         padding: padding,
       }}
     >
-    {icon && <span className={icon}></span>}
+      {icon && <span className={icon}></span>}
     </Box>
   </Box>
 )
@@ -84,11 +84,11 @@ export const ButtonRound = ({ text, icon, fontSize, borderRadius, paddingLeft, p
       {...props}
       __css={{
         appearance: 'none',
-        display: 'inline-block',    //
+        display: 'inline-block',
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: fontSize ? fontSize : 16,
+        fontSize: fontSize || 16,
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
@@ -101,21 +101,20 @@ export const ButtonRound = ({ text, icon, fontSize, borderRadius, paddingLeft, p
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-
         whiteSpace: 'nowrap',
-        borderRadius: borderRadius ? borderRadius :24,
-        height: height ? height : '48px',
+        borderRadius: borderRadius || 24,
+        height: height || '48px',
         paddingBottom: '27%',
-        paddingTop: paddingTop ? paddingTop : '27%',
+        paddingTop: paddingTop || '27%',
       }}
     >
-      <span className={icon} style={{ fontSize: fontSize ? fontSize : '20px', position: 'absolute' }}></span>
-      <span style={{ paddingLeft: paddingLeft ? paddingLeft :'24px' }}> {text}</span>
+      <span className={icon} style={{ fontSize: fontSize || '20px', position: 'absolute' }}></span>
+      <span style={{ paddingLeft: paddingLeft || '24px' }}> {text}</span>
     </Box>
   </Box>
 )
 
-export const ButtonMain = ({ text, icon, variant, isCollapsible, props }) => {
+export const ButtonMain = ({ text, icon, fontSize, variant, isCollapsible, props }) => {
   const [hover, setHover] = useState()
   const [active, setActive] = useState()
 
@@ -136,7 +135,7 @@ export const ButtonMain = ({ text, icon, variant, isCollapsible, props }) => {
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
           fontWeight: 'normal',
-          fontSize: 16,
+          fontSize: fontSize || 16,
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
