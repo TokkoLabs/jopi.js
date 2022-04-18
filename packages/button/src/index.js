@@ -34,7 +34,7 @@ export const Button = (props) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, height, width, variant, props }) => (
+export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, padding, height, width, variant, props }) => (
   <Box sx={{ position: 'relative', width: 26, height: 40 }}>
     <Box
       as="button"
@@ -67,6 +67,7 @@ export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, height, wi
         paddingRight: '35.4%',
         paddingTop: '40%',
         paddingBottom: '40%',
+        padding: padding,
       }}
     >
     {icon && <span className={icon}></span>}

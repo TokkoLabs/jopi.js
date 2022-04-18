@@ -71,9 +71,6 @@ export const iconPrimaryLarge = () => (
   <ButtonIcon icon="icon-agregar" variant="iconPrimary" />
 )
 
-
-
-
 export const iconPrimaryMedium = () => (
   <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='38px' width='38px' borderRadius='10px' fontSize='20px'/>
 )
@@ -87,16 +84,12 @@ export const iconPrimaryExtraSmall = () => (
 )
 
 export const iconPrimaryExtraSmallX2 = () => (
-  <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='22px' width='22px' borderRadius='4px' fontSize='6px'/>
+  <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='22px' width='22px' borderRadius='4px' fontSize='8px' padding='28%'/>
 )
 
 export const iconPrimaryExtraSmallX3 = () => (
-  <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='18px' width='18px' borderRadius='4px' fontSize='8px'/>
+  <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='18px' width='18px' borderRadius='4px' fontSize='8px' padding='18%'/>
 )
-
-
-
-
 
 export const iconSecondary = () => (
   <ButtonIcon icon="icon-agregar" variant="iconSecondary"/>
