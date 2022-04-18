@@ -11,6 +11,22 @@ export const primary = () => (
   <Button>{'Label'}</Button>
 )
 
+export const primaryLarge = () => (
+  <Button>{'Label'}</Button>
+)
+
+export const primaryMedium = () => (
+  <Button height='38px' borderRadius='10px' fontSize='14px' >{'Label'}</Button>
+)
+
+export const primarySmall = () => (
+  <Button height='32px' borderRadius='6px' fontSize='12px' >{'Label'}</Button>
+)
+
+export const primaryExtraSmall = () => (
+  <Button height='26px' borderRadius='6px' fontSize='12px' >{'Label'}</Button>
+)
+
 export const primaryDisabled = () => (
   <Button variant="primaryDisabled">{'Label'}</Button>
 )
@@ -52,7 +68,7 @@ export const textDisabled = () => (
 )
 
 export const iconPrimary = () => (
-  <ButtonIcon variant="iconPrimary"/>
+  <ButtonIcon icon="icon-agregar" variant="iconPrimary">{'text'}</ButtonIcon>
 )
 
 export const iconSecondary = () => (
@@ -84,19 +100,19 @@ export const subtleIconDisabled = () => (
 )
 
 export const roundIconButton = () => (
-  <ButtonRoundIcon variant="primary"/>
+  <ButtonRoundIcon icon="icon-agregar" variant="primary"/>
 )
 
 export const subtleRoundIconButton = () => (
-  <ButtonRoundIcon variant="subtleIcon"/>
+  <ButtonRoundIcon icon="icon-agregar" variant="subtleIcon"/>
 )
 
 export const roundIconArrowButton = () => (
-  <ButtonRoundIcon variant="roundIconArrow"/>
+  <ButtonRoundIcon icon="icon-dropdown" variant="roundIconArrow"/>
 )
 
 export const roundIconButtonDisabled = () => (
-  <ButtonRoundIcon variant="iconDisabled"/>
+  <ButtonRoundIcon icon="icon-agregar" variant="iconDisabled"/>
 )
 
 export const roundButton = () => (

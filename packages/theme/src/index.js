@@ -221,9 +221,10 @@ const theme = {
   space: space,
   buttons: {
     primary: {
-      backgroundColor: colors.primary,
       color: colors.neutral[0],
       stroke: colors.neutral[0],
+      backgroundColor: colors.primary,
+      border: borders.primaryBorder,
       ':hover': {
         backgroundColor: colors.primaryHover,
         color: colors.neutral[0],
