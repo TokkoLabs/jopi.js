@@ -119,8 +119,28 @@ export const subtleIconDisabled = () => (
   <ButtonIcon icon="icon-agregar" variant="iconDisabled"/>
 )
 
-export const roundIconButton = () => (
+export const roundIconButtonLarge = () => (
   <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="primary"/>
+)
+
+export const roundIconMedium = () => (
+  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='38px' width='38px' fontSize='20px'/>
+)
+
+export const roundIconSmall = () => (
+  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='32px' width='32px' fontSize='12px'/>
+)
+
+export const roundIconExtraSmall = () => (
+  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='26px' width='26px' fontSize='8px'/>
+)
+
+export const roundIconExtraSmallX2 = () => (
+  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='22px' width='22px' fontSize='8px' padding='28%'/>
+)
+
+export const roundIconExtraSmallX3 = () => (
+  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='18px' width='18px' fontSize='8px' padding='18%'/>
 )
 
 export const subtleRoundIconButton = () => (
