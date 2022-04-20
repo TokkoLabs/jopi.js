@@ -6,8 +6,8 @@ exports[`Button iconDisabled 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -19,33 +19,31 @@ exports[`Button iconDisabled 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 48px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 35.4%;
-  padding-right: 35.4%;
-  padding-top: 40%;
-  padding-bottom: 40%;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   width: 48px;
   height: 48px;
 }
@@ -55,7 +53,22 @@ exports[`Button iconDisabled 1`] = `
 >
   <button
     className="c1"
-  />
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
 </div>
 `;
 
@@ -65,8 +78,8 @@ exports[`Button iconPrimary 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -78,33 +91,31 @@ exports[`Button iconPrimary 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 48px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 35.4%;
-  padding-right: 35.4%;
-  padding-top: 40%;
-  padding-bottom: 40%;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   width: 48px;
   height: 48px;
 }
@@ -114,7 +125,22 @@ exports[`Button iconPrimary 1`] = `
 >
   <button
     className="c1"
-  />
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
 </div>
 `;
 
@@ -124,8 +150,8 @@ exports[`Button iconSecondary 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -137,33 +163,31 @@ exports[`Button iconSecondary 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 48px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 35.4%;
-  padding-right: 35.4%;
-  padding-top: 40%;
-  padding-bottom: 40%;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   width: 48px;
   height: 48px;
 }
@@ -173,7 +197,22 @@ exports[`Button iconSecondary 1`] = `
 >
   <button
     className="c1"
-  />
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
 </div>
 `;
 
@@ -183,8 +222,8 @@ exports[`Button link 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -194,14 +233,10 @@ exports[`Button link 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -215,17 +250,6 @@ exports[`Button link 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -245,8 +269,8 @@ exports[`Button linkDisabled 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -256,14 +280,10 @@ exports[`Button linkDisabled 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -277,17 +297,6 @@ exports[`Button linkDisabled 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -307,8 +316,8 @@ exports[`Button linkSubtle 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -318,14 +327,10 @@ exports[`Button linkSubtle 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -339,17 +344,6 @@ exports[`Button linkSubtle 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -382,7 +376,7 @@ exports[`Button mainButton 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: normal;
   font-size: 16px;
   text-align: center;
@@ -457,7 +451,7 @@ exports[`Button mainButtonCollapsible 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: normal;
   font-size: 16px;
   text-align: center;
@@ -529,8 +523,8 @@ exports[`Button outlineDisabled 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -540,14 +534,10 @@ exports[`Button outlineDisabled 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -561,17 +551,6 @@ exports[`Button outlineDisabled 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -591,8 +570,8 @@ exports[`Button outlineIconDisabled 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -604,33 +583,31 @@ exports[`Button outlineIconDisabled 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 48px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 35.4%;
-  padding-right: 35.4%;
-  padding-top: 40%;
-  padding-bottom: 40%;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   width: 48px;
   height: 48px;
 }
@@ -640,7 +617,22 @@ exports[`Button outlineIconDisabled 1`] = `
 >
   <button
     className="c1"
-  />
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
 </div>
 `;
 
@@ -650,8 +642,8 @@ exports[`Button primary 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -661,14 +653,10 @@ exports[`Button primary 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -682,17 +670,6 @@ exports[`Button primary 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -712,8 +689,8 @@ exports[`Button primaryDisabled 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -723,14 +700,10 @@ exports[`Button primaryDisabled 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -744,17 +717,6 @@ exports[`Button primaryDisabled 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -774,8 +736,8 @@ exports[`Button primaryOutline 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -785,14 +747,10 @@ exports[`Button primaryOutline 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -806,17 +764,6 @@ exports[`Button primaryOutline 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -836,8 +783,8 @@ exports[`Button primaryOutlineIcon 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -849,33 +796,31 @@ exports[`Button primaryOutlineIcon 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 48px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 35.4%;
-  padding-right: 35.4%;
-  padding-top: 40%;
-  padding-bottom: 40%;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   width: 48px;
   height: 48px;
 }
@@ -885,7 +830,22 @@ exports[`Button primaryOutlineIcon 1`] = `
 >
   <button
     className="c1"
-  />
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
 </div>
 `;
 
@@ -895,8 +855,8 @@ exports[`Button primaryText 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -906,14 +866,10 @@ exports[`Button primaryText 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -927,17 +883,6 @@ exports[`Button primaryText 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -957,8 +902,8 @@ exports[`Button roundButton 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -970,7 +915,7 @@ exports[`Button roundButton 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
   font-size: 16px;
   text-align: center;
@@ -980,25 +925,14 @@ exports[`Button roundButton 1`] = `
   outline: none;
   padding-left: 26px;
   padding-right: 26px;
-  padding-top: 27%;
-  padding-bottom: 27%;
+  padding-top: 13px;
+  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
   border-radius: 24px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1036,8 +970,8 @@ exports[`Button roundButtonColourFeedback 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1049,7 +983,7 @@ exports[`Button roundButtonColourFeedback 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
   font-size: 16px;
   text-align: center;
@@ -1059,25 +993,14 @@ exports[`Button roundButtonColourFeedback 1`] = `
   outline: none;
   padding-left: 26px;
   padding-right: 26px;
-  padding-top: 27%;
-  padding-bottom: 27%;
+  padding-top: 13px;
+  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
   border-radius: 24px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1115,8 +1038,8 @@ exports[`Button roundButtonDisabled 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1128,7 +1051,7 @@ exports[`Button roundButtonDisabled 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
   font-size: 16px;
   text-align: center;
@@ -1138,25 +1061,14 @@ exports[`Button roundButtonDisabled 1`] = `
   outline: none;
   padding-left: 26px;
   padding-right: 26px;
-  padding-top: 27%;
-  padding-bottom: 27%;
+  padding-top: 13px;
+  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
   border-radius: 24px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1188,14 +1100,14 @@ exports[`Button roundButtonDisabled 1`] = `
 </div>
 `;
 
-exports[`Button secondary 1`] = `
+exports[`Button roundIconArrowButton 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1205,14 +1117,226 @@ exports[`Button secondary 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 26px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 50px;
+  with: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 38px;
+  height: 38px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={38}
+      viewBox="0 0 15 15"
+      width={38}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7.5,7.5 H 10 M 7.5,7.5 V 10 M 7.5,7.5 H 5 M 7.5,7.5 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button roundIconButton 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 50px;
+  with: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 38px;
+  height: 38px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={38}
+      viewBox="0 0 15 15"
+      width={38}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7.5,7.5 H 10 M 7.5,7.5 V 10 M 7.5,7.5 H 5 M 7.5,7.5 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button roundIconButtonDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 50px;
+  with: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 38px;
+  height: 38px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={38}
+      viewBox="0 0 15 15"
+      width={38}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7.5,7.5 H 10 M 7.5,7.5 V 10 M 7.5,7.5 H 5 M 7.5,7.5 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button secondary 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1226,17 +1350,6 @@ exports[`Button secondary 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -1256,8 +1369,8 @@ exports[`Button secondaryOutlineIcon 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1267,14 +1380,10 @@ exports[`Button secondaryOutlineIcon 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1288,17 +1397,6 @@ exports[`Button secondaryOutlineIcon 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -1318,8 +1416,8 @@ exports[`Button secondaryOutlineIcon 2`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1331,33 +1429,31 @@ exports[`Button secondaryOutlineIcon 2`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 48px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 35.4%;
-  padding-right: 35.4%;
-  padding-top: 40%;
-  padding-bottom: 40%;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   width: 48px;
   height: 48px;
 }
@@ -1367,7 +1463,22 @@ exports[`Button secondaryOutlineIcon 2`] = `
 >
   <button
     className="c1"
-  />
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
 </div>
 `;
 
@@ -1377,8 +1488,8 @@ exports[`Button secondaryText 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1388,14 +1499,10 @@ exports[`Button secondaryText 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1409,17 +1516,6 @@ exports[`Button secondaryText 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -1439,8 +1535,8 @@ exports[`Button subtleButton 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1450,14 +1546,10 @@ exports[`Button subtleButton 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1471,17 +1563,6 @@ exports[`Button subtleButton 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -1501,8 +1582,8 @@ exports[`Button subtleIcon 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1514,33 +1595,31 @@ exports[`Button subtleIcon 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 48px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 35.4%;
-  padding-right: 35.4%;
-  padding-top: 40%;
-  padding-bottom: 40%;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   width: 48px;
   height: 48px;
 }
@@ -1550,7 +1629,22 @@ exports[`Button subtleIcon 1`] = `
 >
   <button
     className="c1"
-  />
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
 </div>
 `;
 
@@ -1560,8 +1654,8 @@ exports[`Button subtleIconDisabled 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1573,33 +1667,31 @@ exports[`Button subtleIconDisabled 1`] = `
   appearance: none;
   display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 48px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 35.4%;
-  padding-right: 35.4%;
-  padding-top: 40%;
-  padding-bottom: 40%;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   color: white;
   background-color: primary;
   border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   border-radius: 12px;
+  with: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   width: 48px;
   height: 48px;
 }
@@ -1609,18 +1701,33 @@ exports[`Button subtleIconDisabled 1`] = `
 >
   <button
     className="c1"
-  />
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={48}
+      viewBox="0 0 14 14"
+      width={48}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7,7 H 9 M 7,7 V 9 M 7,7 H 5 M 7,7 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
 </div>
 `;
 
-exports[`Button subtleText 1`] = `
+exports[`Button subtleRoundIconButton 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1630,14 +1737,82 @@ exports[`Button subtleText 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 26px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 50px;
+  with: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 38px;
+  height: 38px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="none"
+      height={38}
+      viewBox="0 0 15 15"
+      width={38}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M 7.5,7.5 H 10 M 7.5,7.5 V 10 M 7.5,7.5 H 5 M 7.5,7.5 V 5"
+        strokeLinecap="round"
+        strokeWidth="1"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button subtleText 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  line-height: inherit;
+  font-family: body;
+  font-weight: bold;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1651,17 +1826,6 @@ exports[`Button subtleText 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
@@ -1681,8 +1845,8 @@ exports[`Button textDisabled 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -1692,14 +1856,10 @@ exports[`Button textDisabled 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   line-height: inherit;
-  font-family: Nunito Sans;
+  font-family: body;
   font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1713,17 +1873,6 @@ exports[`Button textDisabled 1`] = `
   background-color: primary;
   border: 0;
   border-radius: button;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
