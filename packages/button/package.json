@@ -8,6 +8,7 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.194",
+    "@oneloop/fonts": "^1.0.11",
     "styled-components": "5.3.5",
     "styled-system": "5.1.5"
   },
