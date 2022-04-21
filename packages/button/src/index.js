@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Box } from '@oneloop/box'
 import { Svg } from '@oneloop/icons'
-import '@oneloop/fonts'
 
 export const Button = (props) => (
   <Box sx={{ position: 'relative', width: 18, height: 18 }}>
