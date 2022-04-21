@@ -21,7 +21,6 @@ import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
 import { Datepicker } from '@oneloop/datepicker'
 import { ThemeProvider } from 'styled-components'
-import '@oneloop/fonts'
 export {
   Alert,
   Badge,
