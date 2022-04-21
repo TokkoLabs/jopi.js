@@ -61,7 +61,7 @@
     "jest-resolve": "^27.5.1",
     "jest-styled-components": "^7.0.0",
     "lerna": "^4.0.0",
-    "lint-staged": "^11.1.1",
+    "lint-staged": "^12.4.0",
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.0.5",
     "react": "^16.12.0",
