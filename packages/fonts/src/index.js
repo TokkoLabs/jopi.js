@@ -1,4 +1,6 @@
+import '../../../public/fonts.css'
+import '../../../public/tokko-icons.css'
 
-const fonts = {}
+const Fonts = {}
 
-export default fonts
+export default Fonts

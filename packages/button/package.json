@@ -8,13 +8,14 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.197",
+    "@oneloop/fonts": "^1.0.14",
     "styled-components": "5.3.5",
     "styled-system": "5.1.5"
   },
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "styled-components": "^5.0.0"
+    "styled-components": "^5.3.5"
   },
   "publishConfig": {
     "access": "public"
