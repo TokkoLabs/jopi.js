@@ -16,15 +16,15 @@ export const primaryLarge = () => (
 )
 
 export const primaryMedium = () => (
-  <Button height='38px' borderRadius='10px' fontSize='14px' >{'Label'}</Button>
+  <Button height='38px' borderRadius='10px' fontSize='14px' py='10px' px='24px'>{'Label'}</Button>
 )
 
 export const primarySmall = () => (
-  <Button height='32px' borderRadius='6px' fontSize='12px' >{'Label'}</Button>
+  <Button height='32px' borderRadius='8px' fontSize='12px' py='8px' px='14px'>{'Label'}</Button>
 )
 
 export const primaryExtraSmall = () => (
-  <Button height='26px' borderRadius='6px' fontSize='12px' >{'Label'}</Button>
+  <Button height='26px' borderRadius='6px' fontSize='12px' py='5px' px='12px'>{'Label'}</Button>
 )
 
 export const primaryDisabled = () => (

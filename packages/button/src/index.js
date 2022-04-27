@@ -3,7 +3,7 @@ import { Box } from '@oneloop/box'
 import '@oneloop/fonts'
 
 export const Button = (props) => (
-  <Box sx={{ position: 'relative', width: 26, height: 26 }}>
+  <Box sx={{ position: 'relative' }}>
     <Box
       as="button"
       tx="buttons"
@@ -21,7 +21,7 @@ export const Button = (props) => (
         cursor: 'pointer',
         outline: 'none',
         px: 26,
-        py: 14,
+        py: 13,
         color: 'white',
         bg: 'primary',
         border: 0,
@@ -29,6 +29,7 @@ export const Button = (props) => (
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+        height: '48px',
       }}
     />
   </Box>
