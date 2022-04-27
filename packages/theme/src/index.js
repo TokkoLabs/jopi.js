@@ -509,7 +509,7 @@ const theme = {
     },
     badgeTips: {
       backgroundColor: colors.tips,
-      color: colors.subtlePressed
+      color: colors.subtlePressed,
     },
     badgeAdded: {
       backgroundColor: colors.badgeBackgroundSuccess,
@@ -518,7 +518,7 @@ const theme = {
     badgeRemoved: {
       backgroundColor: colors.backgroundError,
       color: colors.error,
-    }
+    },
   },
   borders: borders,
   forms: forms,
