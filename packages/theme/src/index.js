@@ -12,6 +12,7 @@ const colors = {
   disabled: '#C1CCD0',
   success: '#068B5B',
   error: '#B21702',
+  backgroundError: '#FDDDD8',
   info: '#386DF4',
   lightBlue: '#6A88F2',
   inputErrors: '#FFF2F0',
@@ -19,6 +20,9 @@ const colors = {
   inputPlaceholderColor: '#A6B2BA',
   darkGray: '#6D777D',
   feedback: '#048465',
+  tips: '#FFD02A',
+  badgeBackgroundSuccess: '#9EE4CB',
+  badgeSuccess: '#048465',
   neutral: [
     '#FFF',
     '#F5F5F5',
@@ -245,7 +249,6 @@ const theme = {
     secondary: {
       color: colors.neutral[0],
       backgroundColor: colors.secondary,
-      border: borders.secondaryBorder,
       ':hover': {
         backgroundColor: colors.secondaryHover,
         color: colors.neutral[0],
@@ -501,6 +504,21 @@ const theme = {
       fontSize: fontSize[3],
       fontWeight: 400,
       fontFamily: 'primary',
+    },
+    badgeInfo: {
+      backgroundColor: colors.info,
+    },
+    badgeTips: {
+      backgroundColor: colors.tips,
+      color: colors.subtlePressed,
+    },
+    badgeAdded: {
+      backgroundColor: colors.badgeBackgroundSuccess,
+      color: colors.badgeSuccess,
+    },
+    badgeRemoved: {
+      backgroundColor: colors.backgroundError,
+      color: colors.error,
     },
   },
   borders: borders,

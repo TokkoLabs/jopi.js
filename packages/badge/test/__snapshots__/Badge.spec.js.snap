@@ -1,14 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Badge primary 1`] = `
+exports[`Badge icon 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  line-height: 14px;
+  line-height: 9px;
+  height: 20px;
   display: inline-block;
-  font-size: 14px;
-  text-align: right;
+  font-size: 8px;
+  font-family: primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 2px;
@@ -16,16 +24,113 @@ exports[`Badge primary 1`] = `
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: circle;
-  min-width: 32px;
-  font-family: body;
+  border-radius: 12px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1px 5px;
+  position: static;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
 }
 
-<span
+<button
+  className="c0"
+>
+  <span
+    className="icon-vista"
+    style={
+      Object {
+        "paddingTop": "0.5px",
+        "position": "absolute",
+      }
+    }
+  />
+  <span
+    style={
+      Object {
+        "paddingLeft": "10px",
+      }
+    }
+  >
+    55
+  </span>
+</button>
+`;
+
+exports[`Badge primary 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 9px;
+  height: 11px;
+  display: inline-block;
+  font-size: 8px;
+  font-family: primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1px 5px;
+  position: static;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+<button
   className="c0"
 >
   Test
-</span>
+</button>
 `;
 
 exports[`Badge secondary 1`] = `
@@ -33,10 +138,18 @@ exports[`Badge secondary 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  line-height: 14px;
+  line-height: 9px;
+  height: 11px;
   display: inline-block;
-  font-size: 14px;
-  text-align: right;
+  font-size: 8px;
+  font-family: primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 2px;
@@ -44,14 +157,36 @@ exports[`Badge secondary 1`] = `
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: circle;
-  min-width: 32px;
-  font-family: body;
+  border-radius: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1px 5px;
+  position: static;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
 }
 
-<span
+<button
   className="c0"
 >
   Test
-</span>
+</button>
 `;

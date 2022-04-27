@@ -22,6 +22,7 @@ import { Tabs } from '@oneloop/tabs'
 import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
 import { ThemeProvider } from 'styled-components'
+import { fonts } from '@oneloop/fonts'
 export {
   Alert,
   Badge,
@@ -49,5 +50,5 @@ export {
   Image,
   Datepicker,
   ThemeProvider,
-  Fonts,
+  fonts,
 }
