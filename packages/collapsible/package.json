@@ -9,7 +9,7 @@
   "dependencies": {
     "@oneloop/box": "^1.2.198",
     "@oneloop/button": "^1.2.202",
-    "framer-motion": "2.9.4"
+    "framer-motion": "6.3.2"
   },
   "peerDependencies": {
     "react": "^16.8.0"
