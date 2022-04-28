@@ -35,46 +35,42 @@ export const Button = (props) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, isRounded, fontSize, borderRadius, padding, height, width, variant, props }) => (
-  <Box sx={{ position: 'relative', width: 26, height: 26 }}>
+export const ButtonIcon = ({ icon, isRounded, heightIcon, ...props }) => (
+  <Box sx={{ position: 'relative' }}>
     <Box
       as="button"
       tx="buttons"
-      variant={variant}
+      variant="primary"
       {...props}
       __css={{
         appearance: 'none',
-        display: 'inline-block',
+        display: 'flex',
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: fontSize || '28px',
+        fontSize: '24px',
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
         outline: 'none',
-        px: isRounded ? 24 : 26,
-        py: 14,
+        px: '14px',
+        py: '5px',
         color: 'white',
         bg: 'primary',
         border: 0,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: borderRadius || 12,
-        width: width || '48px',
-        height: height || '48px',
-        paddingLeft: '35.4%',
-        paddingRight: '35.4%',
-        paddingTop: '40%',
-        paddingBottom: '40%',
-        padding: padding,
+        borderRadius: 12,
+        width: '48px',
+        height: '48px',
       }}
     >
-      {icon && <span className={icon}></span>}
+      <span className={icon} style={{ height: heightIcon || '24px'}}></span>
     </Box>
   </Box>
 )
+// border: '2px solid #FFFFFF', 
 
 export const ButtonRound = ({ text, icon, fontSize, borderRadius, paddingLeft, paddingTop, height, variant, props }) => (
   <Box sx={{ position: 'relative', width: 26, height: 26 }}>
