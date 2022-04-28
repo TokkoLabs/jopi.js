@@ -70,7 +70,6 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, ...props }) => (
     </Box>
   </Box>
 )
-// border: '2px solid #FFFFFF', 
 
 export const ButtonRound = ({ text, icon, fontSize, borderRadius, paddingLeft, paddingTop, height, variant, props }) => (
   <Box sx={{ position: 'relative', width: 26, height: 26 }}>
@@ -111,16 +110,16 @@ export const ButtonRound = ({ text, icon, fontSize, borderRadius, paddingLeft, p
   </Box>
 )
 
-export const ButtonMain = ({ text, icon, fontSize, variant, isCollapsible, props }) => {
+export const ButtonMain = ({ text, icon, isCollapsible, ...props }) => {
   const [hover, setHover] = useState()
   const [active, setActive] = useState()
 
   return (
-    <Box sx={{ position: 'relative', width: 18, height: 18 }}>
+    <Box sx={{ position: 'relative' }}>
       <Box
         as="button"
         tx="buttons"
-        variant={variant}
+        variant="mainButton"
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
         onClick={() => setActive(true)}
@@ -128,27 +127,29 @@ export const ButtonMain = ({ text, icon, fontSize, variant, isCollapsible, props
         {...props}
         __css={{
           appearance: 'none',
-          display: 'inline-block',
-          lineHeight: 'inherit',
+          display: 'flex',
+          lineHeight: '19px',
           fontFamily: 'Nunito Sans',
           fontWeight: 'normal',
-          fontSize: fontSize || 16,
+          fontSize: 14,
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
           outline: 'none',
-          px: 26,
+          px: 11,
           py: 14,
           color: 'white',
           bg: 'primary',
           border: 0,
-          borderRadius: 'button',
-          whiteSpace: 'nowrap',
+          borderRadius: '8px',
+          flexDirection: 'row',
+          alignItems: 'center',
+          height: '38px',
         }}
       >
-        <span className={icon} style={{ fontSize: '20px', position: 'absolute', color: active || hover ? '#DF1E02' : '#707E86' }}/>
-        <span style={{ marginLeft: '24px', marginTop: '22px', position: 'relative' }}> {text} </span>
-        { isCollapsible && <span className="icon-dropdown" style={{ fontSize: '20px', position: 'absolute', color: '#A6B2BA' }}/>}
+        <span className={icon} style={{ color: active || hover ? '#DF1E02' : '#707E86', paddingTop: '4px' }}/>
+        <span style={{ paddingLeft:'8px', paddingRight:'8px' }}> {text} </span>
+        { isCollapsible && <span className="icon-dropdown" style={{ color: '#A6B2BA', paddingTop: '4px' }}/>}
       </Box>
     </Box>
   )

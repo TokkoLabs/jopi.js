@@ -460,7 +460,7 @@ const theme = {
       color: colors.subtle,
       backgroundColor: colors.neutral[0],
       ':hover': {
-        backgroundColor: colors.neutral[0],
+        backgroundColor: colors.neutral[7],
         fontWeight: 'normal',
         color: colors.subtlePressed,
       },

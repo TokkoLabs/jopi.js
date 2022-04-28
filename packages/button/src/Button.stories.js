@@ -67,17 +67,6 @@ export const textDisabled = () => (
   <Button variant="textDisabled">{'Label'}</Button>
 )
 
-
-/*
-
-export const iconPrimary = () => (
-  <Button width='48px' height='48px' py='5px' px='14px' border='2px solid #FFFFFF' borderRadius='12px' fontSize='24px'>
-    <span className='icon-agregar' style={{position:'absolute', paddingTop:'12px', fontSize:'24px'}}></span>  
-  </Button>
-)
-
-*/
-
 export const iconPrimaryLarge = () => (
   <ButtonIcon icon="icon-agregar" variant="iconPrimary" width='48px' height='48px' heightIcon='24px'/>
 )
@@ -166,7 +155,7 @@ export const roundIconButtonDisabled = () => (
   <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconDisabled"/>
 )
 
-
+// --------------------------------------
 
 
 export const roundButtonLarge = () => (
@@ -192,6 +181,10 @@ export const roundButtonColourFeedback = () => (
 export const roundButtonDisabled = () => (
   <ButtonRound text="Label" icon="icon-unificar" variant="primaryDisabled"/>
 )
+
+
+// --------------------------------------
+
 
 export const link = () => (
   <Button variant="link">{'Link button'}</Button>
