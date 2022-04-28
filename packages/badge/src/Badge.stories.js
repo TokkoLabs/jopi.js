@@ -11,9 +11,9 @@ export const primary = () => <Badge>{'20'}</Badge>
 
 export const secondary = () => <Badge variant="secondary">{'2'}</Badge>
 
-export const icon = () => <Badge variant="badgeInfo" hasIcon isMedium>
-  <span className='icon-vista' style={{ position: 'absolute', paddingTop: '0.5px' }}/>
-  <span style={{ paddingLeft: '10px' }}>{'55'}</span>
+export const icon = () => <Badge variant="badgeInfo" isMedium hasIcon>
+  <span className='icon-vista' style={{ position: 'absolute', fontSize: '12px', paddingTop: '1.8px' }}/>
+  <span style={{ paddingLeft: '16px' }}>{'55'}</span>
 </Badge>
 
 export const redTokko = () => <Badge variant="badgeTips">{'50%'}</Badge>
