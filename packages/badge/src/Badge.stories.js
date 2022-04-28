@@ -12,7 +12,7 @@ export const primary = () => <Badge>{'20'}</Badge>
 export const secondary = () => <Badge variant="secondary">{'2'}</Badge>
 
 export const icon = () => <Badge variant="badgeInfo" isMedium hasIcon>
-  <span className='icon-vista' style={{ position: 'absolute', fontSize: '12px', paddingTop:'1.8px' }}/>
+  <span className='icon-vista' style={{ position: 'absolute', fontSize: '12px', paddingTop: '1.8px' }}/>
   <span style={{ paddingLeft: '16px' }}>{'55'}</span>
 </Badge>
 

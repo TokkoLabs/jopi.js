@@ -27,7 +27,7 @@ export const Badge = ({ isMedium, hasIcon, ...props }) => (
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: hasIcon? '4px 8px' : '1px 5px',
+      padding: hasIcon ? '4px 8px' : '1px 5px',
       position: 'static',
       flex: 'none',
       order: 0,
