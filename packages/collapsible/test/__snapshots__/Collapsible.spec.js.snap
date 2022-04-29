@@ -12,8 +12,6 @@ exports[`Collapsible default 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 18px;
-  height: 18px;
 }
 
 .c2 {
@@ -23,10 +21,14 @@ exports[`Collapsible default 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   line-height: inherit;
-  font-family: body;
+  font-family: Nunito Sans;
   font-weight: bold;
+  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -34,12 +36,24 @@ exports[`Collapsible default 1`] = `
   outline: none;
   padding-left: 26px;
   padding-right: 26px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
   border-radius: button;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 48px;
   width: 100%;
   border: none;
   border-radius: 0;

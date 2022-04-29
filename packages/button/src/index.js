@@ -66,7 +66,7 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, ...props }) => (
         height: '48px',
       }}
     >
-      <span className={icon} style={{ height: heightIcon || '24px'}}></span>
+      <span className={icon} style={{ height: heightIcon || '24px' }}></span>
     </Box>
   </Box>
 )
@@ -145,7 +145,7 @@ export const ButtonMain = ({ text, icon, isCollapsible, ...props }) => {
         }}
       >
         <span className={icon} style={{ color: active || hover ? '#DF1E02' : '#707E86', paddingTop: '4px' }}/>
-        <span style={{ paddingLeft:'8px', paddingRight:'8px' }}> {text} </span>
+        <span style={{ paddingLeft: '8px', paddingRight: '8px' }}> {text} </span>
         { isCollapsible && <span className="icon-dropdown" style={{ color: '#A6B2BA', paddingTop: '4px' }}/>}
       </Box>
     </Box>
