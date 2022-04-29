@@ -344,10 +344,12 @@ const theme = {
       ':hover': {
         backgroundColor: colors.primaryHover,
         color: colors.neutral[0],
+        border: 'none',
       },
       ':focus': {
         backgroundColor: colors.primaryPressed,
         color: colors.neutral[0],
+        border: 'none',
       },
     },
     secondaryOutlineIcon: {
@@ -357,10 +359,12 @@ const theme = {
       ':hover': {
         backgroundColor: colors.secondaryHover,
         color: colors.neutral[0],
+        border: 'none',
       },
       ':focus': {
         backgroundColor: colors.secondaryPressed,
         color: colors.neutral[0],
+        border: 'none',
       },
     },
     outlineDisabled: {
