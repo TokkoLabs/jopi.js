@@ -4,8 +4,10 @@ import { Box, Flex } from '@oneloop/box'
 import { Button } from '@oneloop/button'
 import { Checkbox } from '@oneloop/checkbox'
 import { Collapsible } from '@oneloop/collapsible'
+import { Datepicker } from '@oneloop/datepicker'
 import { Drawer } from '@oneloop/drawer'
 import { Dropdown } from '@oneloop/dropdown'
+import { Fonts } from '@oneloop/fonts'
 import { Image } from '@oneloop/image'
 import { Input } from '@oneloop/input'
 import { Label } from '@oneloop/label'
@@ -19,9 +21,7 @@ import { Table } from '@oneloop/table'
 import { Tabs } from '@oneloop/tabs'
 import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
-import { Datepicker } from '@oneloop/datepicker'
 import { ThemeProvider } from 'styled-components'
-import { fonts } from '@oneloop/fonts'
 export {
   Alert,
   Badge,
@@ -49,5 +49,5 @@ export {
   Image,
   Datepicker,
   ThemeProvider,
-  fonts,
+  Fonts,
 }

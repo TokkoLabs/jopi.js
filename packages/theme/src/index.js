@@ -24,7 +24,7 @@ const colors = {
   badgeBackgroundSuccess: '#9EE4CB',
   badgeSuccess: '#048465',
   neutral: [
-    '#FFF',
+    '#FFFFFF',
     '#F5F5F5',
     '#E7E7E6',
     '#C2C0C0',
@@ -225,9 +225,8 @@ const theme = {
   space: space,
   buttons: {
     primary: {
-      backgroundColor: colors.primary,
       color: colors.neutral[0],
-      stroke: colors.neutral[0],
+      backgroundColor: colors.primary,
       ':hover': {
         backgroundColor: colors.primaryHover,
         color: colors.neutral[0],
@@ -240,7 +239,6 @@ const theme = {
     primaryDisabled: {
       color: colors.disabled,
       backgroundColor: colors.neutral[7],
-      stroke: colors.disabled,
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
@@ -311,37 +309,30 @@ const theme = {
     iconPrimary: {
       backgroundColor: colors.primary,
       color: colors.neutral[0],
-      stroke: colors.neutral[0],
       ':hover': {
         backgroundColor: colors.primaryHover,
         color: colors.neutral[0],
-        stroke: colors.neutral[0],
       },
       ':focus': {
         backgroundColor: colors.primaryPressed,
         color: colors.neutral[0],
-        stroke: colors.neutral[0],
       },
     },
     iconSecondary: {
       backgroundColor: colors.secondary,
       color: colors.neutral[0],
-      stroke: colors.neutral[0],
       ':hover': {
         backgroundColor: colors.secondaryHover,
         color: colors.neutral[0],
-        stroke: colors.neutral[0],
       },
       ':focus': {
         backgroundColor: colors.secondaryPressed,
         color: colors.neutral[0],
-        stroke: colors.neutral[0],
       },
     },
     iconDisabled: {
       color: colors.disabled,
       backgroundColor: colors.neutral[7],
-      stroke: colors.disabled,
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
@@ -350,38 +341,35 @@ const theme = {
       backgroundColor: colors.neutral[0],
       color: colors.primary,
       border: borders.primaryBorder,
-      stroke: colors.primary,
       ':hover': {
         backgroundColor: colors.primaryHover,
         color: colors.neutral[0],
-        stroke: colors.neutral[0],
+        border: 'none',
       },
       ':focus': {
         backgroundColor: colors.primaryPressed,
         color: colors.neutral[0],
-        stroke: colors.neutral[0],
+        border: 'none',
       },
     },
     secondaryOutlineIcon: {
       backgroundColor: colors.neutral[0],
       color: colors.secondary,
       border: borders.secondaryBorder,
-      stroke: colors.secondary,
       ':hover': {
         backgroundColor: colors.secondaryHover,
         color: colors.neutral[0],
-        stroke: colors.neutral[0],
+        border: 'none',
       },
       ':focus': {
         backgroundColor: colors.secondaryPressed,
         color: colors.neutral[0],
-        stroke: colors.neutral[0],
+        border: 'none',
       },
     },
     outlineDisabled: {
       color: colors.disabled,
       backgroundColor: colors.neutral[0],
-      stroke: colors.disabled,
       border: borders.disabledBorder,
       cursor: 'default',
       pointerEvents: 'none',
@@ -391,39 +379,32 @@ const theme = {
       backgroundColor: colors.neutral[0],
       border: colors.neutral[0],
       color: colors.subtle,
-      stroke: colors.subtle,
       ':hover': {
         backgroundColor: colors.neutral[7],
         color: colors.subtleHover,
-        stroke: colors.subtleHover,
       },
       ':focus': {
         backgroundColor: colors.neutral[0],
         color: colors.subtlePressed,
-        stroke: colors.subtlePressed,
       },
     },
     roundIconArrow: {
       backgroundColor: colors.neutral[7],
       border: colors.neutral[7],
       color: colors.subtle,
-      stroke: colors.subtle,
       ':hover': {
         backgroundColor: colors.neutral[11],
         color: colors.subtleHover,
-        stroke: colors.subtleHover,
       },
       ':focus': {
         backgroundColor: colors.neutral[0],
         color: colors.subtlePressed,
-        stroke: colors.subtlePressed,
       },
     },
     colourFeedback: {
       backgroundColor: colors.feedback,
       border: borders.feedbackBorder,
       color: colors.neutral[0],
-      stroke: colors.neutral[0],
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
@@ -481,19 +462,16 @@ const theme = {
     },
     mainButton: {
       color: colors.subtle,
-      stroke: colors.subtle,
       backgroundColor: colors.neutral[0],
       ':hover': {
-        backgroundColor: colors.neutral[0],
+        backgroundColor: colors.neutral[7],
         fontWeight: 'normal',
         color: colors.subtlePressed,
-        stroke: colors.primary,
       },
       ':focus': {
         backgroundColor: colors.neutral[0],
         fontWeight: 'bold',
         color: colors.subtlePressed,
-        stroke: colors.primary,
       },
     },
     dropdown: {

@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { Button, ButtonIcon, ButtonRoundIcon, ButtonRound, ButtonMain } from '../src'
+import { Button, ButtonIcon, ButtonRound, ButtonMain } from '../src'
 
 describe('Button', () => {
   test('primary', () => {
@@ -142,38 +142,6 @@ describe('Button', () => {
   test('subtleIconDisabled', () => {
     const tree = renderer
       .create(<ButtonIcon variant="iconDisabled"/>)
-      .toJSON()
-
-    expect(tree).toMatchSnapshot()
-  })
-
-  test('roundIconButton', () => {
-    const tree = renderer
-      .create(<ButtonRoundIcon variant="primary"/>)
-      .toJSON()
-
-    expect(tree).toMatchSnapshot()
-  })
-
-  test('subtleRoundIconButton', () => {
-    const tree = renderer
-      .create(<ButtonRoundIcon variant="subtleIcon"/>)
-      .toJSON()
-
-    expect(tree).toMatchSnapshot()
-  })
-
-  test('roundIconArrowButton', () => {
-    const tree = renderer
-      .create(<ButtonRoundIcon variant="roundIconArrow"/>)
-      .toJSON()
-
-    expect(tree).toMatchSnapshot()
-  })
-
-  test('roundIconButtonDisabled', () => {
-    const tree = renderer
-      .create(<ButtonRoundIcon variant="iconDisabled"/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
