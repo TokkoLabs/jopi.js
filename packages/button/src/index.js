@@ -71,41 +71,38 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, ...props }) => (
   </Box>
 )
 
-export const ButtonRound = ({ text, icon, fontSize, borderRadius, paddingLeft, paddingTop, height, variant, props }) => (
-  <Box sx={{ position: 'relative', width: 26, height: 26 }}>
+export const ButtonRound = ({ text, icon, heightIcon, ...props }) => (
+  <Box sx={{ position: 'relative' }}>
     <Box
       as="button"
       tx="buttons"
-      variant={variant}
+      variant="primary"
       {...props}
       __css={{
         appearance: 'none',
-        display: 'inline-block',
+        display: 'flex',
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: fontSize || 16,
+        fontSize: 16,
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
         outline: 'none',
         px: 26,
-        py: 14,
+        py: 13,
         color: 'white',
         bg: 'primary',
         border: 0,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        whiteSpace: 'nowrap',
-        borderRadius: borderRadius || 24,
-        height: height || '48px',
-        paddingBottom: '27%',
-        paddingTop: paddingTop || '27%',
+        borderRadius: 24,
+        height: '48px',
       }}
     >
-      <span className={icon} style={{ fontSize: fontSize || '20px', position: 'absolute' }}></span>
-      <span style={{ paddingLeft: paddingLeft || '24px' }}> {text}</span>
+      <span className={icon} style={{ height: heightIcon || '16px' }}></span>
+      <span style={{ paddingLeft: '8px' }}> {text}</span>
     </Box>
   </Box>
 )
