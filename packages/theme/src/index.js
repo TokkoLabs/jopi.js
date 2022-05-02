@@ -456,7 +456,7 @@ const theme = {
         color: colors.subtleHover,
       },
       ':focus': {
-        backgroundColor: colors.neutral[0],
+        backgroundColor: colors.neutral[7],
         color: colors.subtlePressed,
       },
     },
