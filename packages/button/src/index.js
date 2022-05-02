@@ -146,9 +146,9 @@ export const ButtonMain = ({ text, icon, isCollapsible, ...props }) => {
           gap: '6px',
         }}
       >
-        <span className={icon} style={{ color: active || hover ? '#DF1E02' : '#707E86', paddingTop: '4px', fontSize: '22px' }}/>
+        <span className={icon} style={{ color: active || hover ? '#DF1E02' : '#707E86', fontSize: '22px' }}/>
         <span> {text} </span>
-        { isCollapsible && <span className="icon-dropdown" style={{ color: '#A6B2BA', paddingTop: '4px' }}/>}
+        { isCollapsible && <span className="icon-dropdown" style={{ color: '#A6B2BA', fontSize: '22px' }}/>}
       </Box>
     </Box>
   )
