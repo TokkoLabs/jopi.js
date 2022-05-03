@@ -1,5 +1,5 @@
-import './fonts.css'
-import './tokko-icons.css'
+import '../styles/fonts.css'
+import '../styles/tokko-icons.css'
 
 const Fonts = {}
 
