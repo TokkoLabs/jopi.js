@@ -1,10 +1,11 @@
 {
   "name": "@oneloop/fonts",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
-    "lib"
+    "lib",
+    "styles"
   ],
   "publishConfig": {
     "access": "public"
