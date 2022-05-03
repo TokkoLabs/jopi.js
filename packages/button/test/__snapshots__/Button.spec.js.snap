@@ -431,6 +431,7 @@ exports[`Button mainButton 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 38px;
+  gap: 6px;
 }
 
 <div
@@ -448,18 +449,11 @@ exports[`Button mainButton 1`] = `
       style={
         Object {
           "color": "#707E86",
-          "paddingTop": "4px",
+          "fontSize": "22px",
         }
       }
     />
-    <span
-      style={
-        Object {
-          "paddingLeft": "8px",
-          "paddingRight": "8px",
-        }
-      }
-    >
+    <span>
        
       Emprendimientos
        
@@ -512,6 +506,7 @@ exports[`Button mainButtonCollapsible 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 38px;
+  gap: 6px;
 }
 
 <div
@@ -529,18 +524,11 @@ exports[`Button mainButtonCollapsible 1`] = `
       style={
         Object {
           "color": "#707E86",
-          "paddingTop": "4px",
+          "fontSize": "22px",
         }
       }
     />
-    <span
-      style={
-        Object {
-          "paddingLeft": "8px",
-          "paddingRight": "8px",
-        }
-      }
-    >
+    <span>
        
       Emprendimientos
        
@@ -550,7 +538,7 @@ exports[`Button mainButtonCollapsible 1`] = `
       style={
         Object {
           "color": "#A6B2BA",
-          "paddingTop": "4px",
+          "fontSize": "22px",
         }
       }
     />
@@ -1047,6 +1035,7 @@ exports[`Button roundButton 1`] = `
   align-items: center;
   border-radius: 24px;
   height: 48px;
+  gap: 6px;
 }
 
 <div
@@ -1059,17 +1048,12 @@ exports[`Button roundButton 1`] = `
       className="icon-unificar"
       style={
         Object {
-          "height": "16px",
+          "fontSize": "20px",
+          "height": "20px",
         }
       }
     />
-    <span
-      style={
-        Object {
-          "paddingLeft": "8px",
-        }
-      }
-    >
+    <span>
        
       Label
     </span>
@@ -1125,6 +1109,7 @@ exports[`Button roundButtonColourFeedback 1`] = `
   align-items: center;
   border-radius: 24px;
   height: 48px;
+  gap: 6px;
 }
 
 <div
@@ -1137,17 +1122,12 @@ exports[`Button roundButtonColourFeedback 1`] = `
       className="icon-check"
       style={
         Object {
-          "height": "16px",
+          "fontSize": "20px",
+          "height": "20px",
         }
       }
     />
-    <span
-      style={
-        Object {
-          "paddingLeft": "8px",
-        }
-      }
-    >
+    <span>
        
       Label
     </span>
@@ -1203,6 +1183,7 @@ exports[`Button roundButtonDisabled 1`] = `
   align-items: center;
   border-radius: 24px;
   height: 48px;
+  gap: 6px;
 }
 
 <div
@@ -1215,17 +1196,12 @@ exports[`Button roundButtonDisabled 1`] = `
       className="icon-unificar"
       style={
         Object {
-          "height": "16px",
+          "fontSize": "20px",
+          "height": "20px",
         }
       }
     />
-    <span
-      style={
-        Object {
-          "paddingLeft": "8px",
-        }
-      }
-    >
+    <span>
        
       Label
     </span>
