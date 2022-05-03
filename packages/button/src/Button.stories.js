@@ -112,14 +112,22 @@ export const outlineIconDisabled = () => (
 )
 
 export const subtleIcon = () => (
-  <ButtonIcon icon="icon-agregar" variant="subtleIcon"/>
+  <ButtonIcon icon="icon-agregar" variant="subtleIconButton"/>
+)
+
+export const subtleTransparentIconClear = () => (
+  <ButtonIcon icon="icon-agregar" variant="subtleTrasnparentIconClearButton"/>
+)
+
+export const subtleTransparentIconObscure = () => (
+  <ButtonIcon icon="icon-agregar" variant="subtleTrasnparentIconObscureButton"/>
 )
 
 export const subtleIconDisabled = () => (
   <ButtonIcon icon="icon-agregar" variant="iconDisabled"/>
 )
 
-export const roundIconButtonLarge = () => (
+export const roundIconLarge = () => (
   <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="primary"/>
 )
 
@@ -143,39 +151,39 @@ export const roundIconExtraSmall18px = () => (
   <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='18px' width='18px' fontSize='12px' heightIcon='12px' py='4px' px='8px'/>
 )
 
-export const subtleRoundIconButton = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="subtleIcon"/>
+export const subtleRoundIcon = () => (
+  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="subtleIconButton"/>
 )
 
-export const roundIconArrowButton = () => (
+export const roundIconArrow = () => (
   <ButtonIcon isRounded borderRadius={99999} icon="icon-dropdown" variant="roundIconArrow"/>
 )
 
-export const roundIconButtonDisabled = () => (
+export const roundIconDisabled = () => (
   <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconDisabled"/>
 )
 
-export const roundButtonLarge = () => (
+export const roundLarge = () => (
   <ButtonRound text="Label" icon="icon-unificar" variant="primary"/>
 )
 
-export const roundButtonMedium = () => (
+export const roundMedium = () => (
   <ButtonRound text="Label" icon="icon-unificar" variant="primary" height='38px' borderRadius='20px' fontSize='14px' heightIcon='16px' py='10px' px='24px' fontSizeIcon='16px' gap='4px'/>
 )
 
-export const roundButtonSmall = () => (
+export const roundSmall = () => (
   <ButtonRound text="Label" icon="icon-unificar" variant="primary" height='32px' borderRadius='16px' fontSize='12px' heightIcon='16px' py='8px' px='14px' fontSizeIcon='16px' gap='4px'/>
 )
 
-export const roundButtonExtraSmall = () => (
+export const roundExtraSmall = () => (
   <ButtonRound text="Label" icon="icon-unificar" variant="primary" height='26px' borderRadius='12px' fontSize='12px' heightIcon='16px' py='5px' px='12px' fontSizeIcon='16px' gap='4px'/>
 )
 
-export const roundButtonColourFeedback = () => (
+export const roundColourFeedback = () => (
   <ButtonRound text="Label" icon="icon-check" variant="colourFeedback"/>
 )
 
-export const roundButtonDisabled = () => (
+export const roundDisabled = () => (
   <ButtonRound text="Label" icon="icon-unificar" variant="primaryDisabled"/>
 )
 
