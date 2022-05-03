@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "tokko";
-  src:url("./fonts//tokko-icons/tokko.eot");
-  src:url("./fonts//tokko-icons/tokko.eot") format("embedded-opentype"),
-    url("./fonts//tokko-icons/tokko.woff") format("woff"),
-    url("./fonts//tokko-icons/tokko.ttf") format("truetype"),
-    url("./fonts//tokko-icons/tokko.svg") format("svg");
+  src:url("./fonts/tokko-icons/tokko.eot");
+  src:url("./fonts/tokko-icons/tokko.eot") format("embedded-opentype"),
+    url("./fonts/tokko-icons/tokko.woff") format("woff"),
+    url("./fonts/tokko-icons/tokko.ttf") format("truetype"),
+    url("./fonts/tokko-icons/tokko.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
