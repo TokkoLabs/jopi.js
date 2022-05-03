@@ -23,6 +23,7 @@ const colors = {
   tips: '#FFD02A',
   badgeBackgroundSuccess: '#9EE4CB',
   badgeSuccess: '#048465',
+  transparent: '#00000000',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -475,7 +476,7 @@ const theme = {
     },
     subtleTrasnparentIconClearButton: {
       color: colors.subtle,
-      backgroundColor: '#00000000',
+      backgroundColor: colors.transparent,
       ':hover': {
         color: colors.subtleHover,
       },
@@ -485,7 +486,7 @@ const theme = {
     },
     subtleTrasnparentIconObscureButton: {
       color: colors.neutral[7],
-      backgroundColor: '#00000000',
+      backgroundColor: colors.transparent,
       ':hover': {
         color: colors.neutral[12],
       },
