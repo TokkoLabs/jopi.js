@@ -23,6 +23,7 @@ const colors = {
   tips: '#FFD02A',
   badgeBackgroundSuccess: '#9EE4CB',
   badgeSuccess: '#048465',
+  transparent: '#00000000',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -36,6 +37,7 @@ const colors = {
     '#F7F8FA',
     '#A6B2BA',
     '#E0E5E8',
+    '#D4DBDE',
   ],
 }
 const space = [0, 4, 6, 8, 12, 16, 24, 32, 64, 128, 256]
@@ -456,8 +458,40 @@ const theme = {
         color: colors.subtleHover,
       },
       ':focus': {
+        backgroundColor: colors.neutral[7],
+        color: colors.subtlePressed,
+      },
+    },
+    subtleIconButton: {
+      color: colors.neutral[10],
+      backgroundColor: colors.neutral[0],
+      ':hover': {
+        backgroundColor: colors.neutral[7],
+        color: colors.subtleHover,
+      },
+      ':focus': {
         backgroundColor: colors.neutral[0],
         color: colors.subtlePressed,
+      },
+    },
+    subtleTrasnparentIconClearButton: {
+      color: colors.subtle,
+      backgroundColor: colors.transparent,
+      ':hover': {
+        color: colors.subtleHover,
+      },
+      ':focus': {
+        color: colors.subtlePressed,
+      },
+    },
+    subtleTrasnparentIconObscureButton: {
+      color: colors.neutral[7],
+      backgroundColor: colors.transparent,
+      ':hover': {
+        color: colors.neutral[12],
+      },
+      ':focus': {
+        color: colors.neutral[7],
       },
     },
     mainButton: {
