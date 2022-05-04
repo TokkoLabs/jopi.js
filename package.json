@@ -67,7 +67,7 @@
     "prettier": "^2.6.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-is": "^16.12.0",
+    "react-is": "^18.1.0",
     "react-test-renderer": "^16.12.0",
     "regenerator-runtime": "^0.13.9",
     "style-loader": "^3.3.1",
