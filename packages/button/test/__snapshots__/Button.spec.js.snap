@@ -450,6 +450,7 @@ exports[`Button mainButton 1`] = `
         Object {
           "color": "#707E86",
           "fontSize": "22px",
+          "paddingTop": "4px",
         }
       }
     />
@@ -525,6 +526,7 @@ exports[`Button mainButtonCollapsible 1`] = `
         Object {
           "color": "#707E86",
           "fontSize": "22px",
+          "paddingTop": "4px",
         }
       }
     />
@@ -538,7 +540,7 @@ exports[`Button mainButtonCollapsible 1`] = `
       style={
         Object {
           "color": "#A6B2BA",
-          "fontSize": "22px",
+          "fontSize": "18px",
         }
       }
     />
