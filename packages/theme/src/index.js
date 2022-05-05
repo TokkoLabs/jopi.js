@@ -496,14 +496,14 @@ const theme = {
     },
     mainButton: {
       color: colors.subtle,
-      backgroundColor: colors.neutral[0],
+      backgroundColor: colors.transparent,
       ':hover': {
         backgroundColor: colors.neutral[7],
         fontWeight: 'normal',
         color: colors.subtlePressed,
       },
       ':focus': {
-        backgroundColor: colors.neutral[0],
+        backgroundColor: colors.transparent,
         fontWeight: 'bold',
         color: colors.subtlePressed,
       },
