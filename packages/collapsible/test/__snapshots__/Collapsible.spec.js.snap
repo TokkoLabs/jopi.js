@@ -54,6 +54,7 @@ exports[`Collapsible default 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
   width: 100%;
   border: none;
   border-radius: 0;
