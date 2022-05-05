@@ -49,6 +49,7 @@ exports[`Button iconDisabled 1`] = `
   border-radius: 12px;
   width: 48px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -117,6 +118,7 @@ exports[`Button iconPrimary 1`] = `
   border-radius: 12px;
   width: 48px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -185,6 +187,7 @@ exports[`Button iconSecondary 1`] = `
   border-radius: 12px;
   width: 48px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -252,6 +255,7 @@ exports[`Button link 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -313,6 +317,7 @@ exports[`Button linkDisabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -374,6 +379,7 @@ exports[`Button linkSubtle 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -432,6 +438,7 @@ exports[`Button mainButton 1`] = `
   align-items: center;
   height: 38px;
   gap: 6px;
+  white-space: nowrap;
 }
 
 <div
@@ -508,6 +515,7 @@ exports[`Button mainButtonCollapsible 1`] = `
   align-items: center;
   height: 38px;
   gap: 6px;
+  white-space: nowrap;
 }
 
 <div
@@ -596,6 +604,7 @@ exports[`Button outlineDisabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -658,6 +667,7 @@ exports[`Button outlineIconDisabled 1`] = `
   border-radius: 12px;
   width: 48px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -725,6 +735,7 @@ exports[`Button primary 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -786,6 +797,7 @@ exports[`Button primaryDisabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -847,6 +859,7 @@ exports[`Button primaryOutline 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -909,6 +922,7 @@ exports[`Button primaryOutlineIcon 1`] = `
   border-radius: 12px;
   width: 48px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -976,6 +990,7 @@ exports[`Button primaryText 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1038,6 +1053,7 @@ exports[`Button roundButton 1`] = `
   border-radius: 24px;
   height: 48px;
   gap: 6px;
+  white-space: nowrap;
 }
 
 <div
@@ -1112,6 +1128,7 @@ exports[`Button roundButtonColourFeedback 1`] = `
   border-radius: 24px;
   height: 48px;
   gap: 6px;
+  white-space: nowrap;
 }
 
 <div
@@ -1186,6 +1203,7 @@ exports[`Button roundButtonDisabled 1`] = `
   border-radius: 24px;
   height: 48px;
   gap: 6px;
+  white-space: nowrap;
 }
 
 <div
@@ -1259,6 +1277,7 @@ exports[`Button secondary 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1320,6 +1339,7 @@ exports[`Button secondaryOutlineIcon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1382,6 +1402,7 @@ exports[`Button secondaryOutlineIcon 2`] = `
   border-radius: 12px;
   width: 48px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1449,6 +1470,7 @@ exports[`Button secondaryText 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1510,6 +1532,7 @@ exports[`Button subtleButton 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1572,6 +1595,7 @@ exports[`Button subtleIcon 1`] = `
   border-radius: 12px;
   width: 48px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1640,6 +1664,7 @@ exports[`Button subtleIconDisabled 1`] = `
   border-radius: 12px;
   width: 48px;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1707,6 +1732,7 @@ exports[`Button subtleText 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div
@@ -1768,6 +1794,7 @@ exports[`Button textDisabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 48px;
+  white-space: nowrap;
 }
 
 <div

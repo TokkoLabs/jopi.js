@@ -30,6 +30,7 @@ export const Button = (props) => (
         justifyContent: 'center',
         alignItems: 'center',
         height: '48px',
+        whiteSpace: 'nowrap',
       }}
     />
   </Box>
@@ -64,6 +65,7 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, ...props }) => (
         borderRadius: 12,
         width: '48px',
         height: '48px',
+        whiteSpace: 'nowrap',
       }}
     >
       <span className={icon} style={{ height: heightIcon || '24px' }}></span>
@@ -100,6 +102,7 @@ export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) 
         borderRadius: 24,
         height: '48px',
         gap: '6px',
+        whiteSpace: 'nowrap',
       }}
     >
       <span className={icon} style={{ height: heightIcon || '20px', fontSize: fontSizeIcon || '20px' }}></span>
@@ -144,6 +147,7 @@ export const ButtonMain = ({ text, icon, isCollapsible, ...props }) => {
           alignItems: 'center',
           height: '38px',
           gap: '6px',
+          whiteSpace: 'nowrap',
         }}
       >
         <span className={icon} style={{ color: active || hover ? '#DF1E02' : '#707E86', fontSize: '22px', paddingTop: '4px' }}/>

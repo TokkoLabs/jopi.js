@@ -414,41 +414,34 @@ const theme = {
     link: {
       fontSize: fontSize[3],
       color: colors.info,
-      backgroundColor: colors.neutral[0],
-      whiteSpace: 'nowrap',
+      backgroundColor: colors.transparent,
       ':hover': {
         color: colors.lightBlue,
-        backgroundColor: colors.neutral[0],
         textDecoration: 'underline',
       },
       ':focus': {
         color: colors.neutral[8],
-        backgroundColor: colors.neutral[0],
       },
     },
     linkSubtle: {
       fontSize: fontSize[3],
       color: colors.subtle,
-      backgroundColor: colors.neutral[0],
-      whiteSpace: 'nowrap',
+      backgroundColor: colors.transparent,
       ':hover': {
         color: colors.subtleHover,
-        backgroundColor: colors.neutral[0],
         textDecoration: 'underline',
       },
       ':focus': {
         color: colors.subtlePressed,
-        backgroundColor: colors.neutral[0],
       },
     },
     linkDisabled: {
       fontSize: fontSize[3],
       color: colors.disabled,
-      backgroundColor: colors.neutral[0],
+      backgroundColor: colors.transparent,
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
-      whiteSpace: 'nowrap',
     },
     subtleButton: {
       color: colors.subtle,
