@@ -1,7 +1,6 @@
 import React from 'react'
 import { useToggle } from '@oneloop/hooks'
-import { Button } from '@oneloop/button'
-import { ButtonIcon } from '@oneloop/button'
+import { Button, ButtonIcon} from '@oneloop/button'
 import { Text } from '@oneloop/text'
 import { Drawer } from '.'
 
