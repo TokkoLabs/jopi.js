@@ -12,11 +12,12 @@ export default {
 export const normal = () =>
   React.createElement(() => {
     const [isOpen, toggle] = useToggle(false)
+    const overlay = true
 
     return (
       <React.Fragment>
         <Button onClick={toggle}>My awesome Drawer</Button>
-        <Drawer isOpen={isOpen} screenSide={'right'} animationWidth={730} overlay={true}>
+        <Drawer isOpen={isOpen} screenSide={'right'} animationWidth={730} overlay={overlay}>
           <Drawer.Header>
             <Button
               variant="default"
@@ -79,10 +80,11 @@ export const normal = () =>
 export const menu = () =>
   React.createElement(() => {
     const [isOpen, toggle] = useToggle(true)
+    const overlay = false
 
     return (
       <React.Fragment>
-        <Drawer isOpen={isOpen} screenSide={'left'} animationWidth={202} overlay={false}>
+        <Drawer isOpen={isOpen} screenSide={'left'} animationWidth={202} overlay={overlay}>
         <ButtonIcon onClick={toggle} isRounded borderRadius={99999} icon='icon-atras' variant='roundIconArrow' style={{ position: 'absolute', right: '-34px', top: '60px' }}/>
           <Drawer.Header>
           </Drawer.Header>
