@@ -1,6 +1,7 @@
 import React from 'react'
 import { useToggle } from '@oneloop/hooks'
 import { Button } from '@oneloop/button'
+import { ButtonIcon } from '@oneloop/button'
 import { Text } from '@oneloop/text'
 import { Drawer } from '.'
 
@@ -16,7 +17,7 @@ export const normal = () =>
     return (
       <React.Fragment>
         <Button onClick={toggle}>My awesome Drawer</Button>
-        <Drawer isOpen={isOpen} screenSide={'right'} animationWidth={730}>
+        <Drawer isOpen={isOpen} screenSide={'right'} animationWidth={730} overlay={true}>
           <Drawer.Header>
             <Button
               variant="default"
@@ -70,6 +71,25 @@ export const normal = () =>
             >
               Drawer Footer
             </Text>
+          </Drawer.Footer>
+        </Drawer>
+      </React.Fragment>
+    )
+  })
+
+export const menu = () =>
+  React.createElement(() => {
+    const [isOpen, toggle] = useToggle(true)
+
+    return (
+      <React.Fragment>
+        <Drawer isOpen={isOpen} screenSide={'left'} animationWidth={202} overlay={false}>
+        <ButtonIcon onClick={toggle} isRounded borderRadius={99999} icon="icon-atras" variant="roundIconArrow" style={{position: "absolute", right: "-34px", top: "60px"}}/>
+          <Drawer.Header>
+          </Drawer.Header>
+          <Drawer.Body>
+          </Drawer.Body>
+          <Drawer.Footer>
           </Drawer.Footer>
         </Drawer>
       </React.Fragment>
