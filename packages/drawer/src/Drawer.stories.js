@@ -85,7 +85,7 @@ export const menu = () =>
     return (
       <React.Fragment>
         <Drawer isOpen={isOpen} screenSide={'left'} animationWidth={202} overlay={overlay}>
-        <ButtonIcon onClick={toggle} isRounded borderRadius={99999} icon='icon-atras' variant='roundIconArrow' style={{ position: 'absolute', right: '-34px', top: '60px' }}/>
+          <ButtonIcon onClick={toggle} isRounded borderRadius={99999} icon='icon-atras' variant='roundIconArrow' style={{ position: 'absolute', right: '-34px', top: '60px' }}/>
           <Drawer.Header>
           </Drawer.Header>
           <Drawer.Body>
