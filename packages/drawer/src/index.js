@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 import { Box, Flex } from '@oneloop/box'
 import { motion, AnimatePresence } from 'framer-motion/dist/framer-motion'
 
