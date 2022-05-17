@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Flex } from '@oneloop/box'
-import { motion, AnimatePresence } from 'framer-motion/dist/framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export const Drawer = ({
   isOpen,
