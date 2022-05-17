@@ -2,7 +2,7 @@ import React from 'react'
 import { useToggle } from '@oneloop/hooks'
 import { Button, ButtonIcon } from '@oneloop/button'
 import { Text } from '@oneloop/text'
-import { Drawer } from '.'
+import { Drawer, DrawerCollapsible } from '.'
 
 export default {
   component: Drawer,
@@ -84,15 +84,15 @@ export const menu = () =>
 
     return (
       <React.Fragment>
-        <Drawer isOpen={isOpen} screenSide={'left'} animationWidth={202} overlay={overlay}>
-          <ButtonIcon onClick={toggle} isRounded borderRadius={99999} icon='icon-atras' variant='roundIconArrow' style={{ position: 'absolute', right: '-34px', top: '60px' }}/>
+        <DrawerCollapsible isOpen={isOpen} screenSide={'left'} animationWidth={202} animationMinWidth={82} overlay={overlay}>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant='collapseButton' style={{ position: 'absolute', right: '-33px', top: '60px', transform: isOpen ? 0 : 'rotate(-180deg)' }}/>
           <Drawer.Header>
           </Drawer.Header>
           <Drawer.Body>
           </Drawer.Body>
           <Drawer.Footer>
           </Drawer.Footer>
-        </Drawer>
+        </DrawerCollapsible>
       </React.Fragment>
     )
   })

@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 import { Box, Flex } from '@oneloop/box'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion/dist/framer-motion'
 
 export const Drawer = ({
   isOpen,
@@ -14,32 +13,41 @@ export const Drawer = ({
   return (
     <AnimatePresence>
       {isOpen && (
-        <DrawerPortal screenSide={screenSide} animationWidth={animationWidth} overlay={overlay}>
+        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} overlay={overlay}>
           {children}
-        </DrawerPortal>
+        </DrawerMotion>
       )}
     </AnimatePresence>
   )
 }
 
-const DrawerPortal = ({
+export const DrawerCollapsible = ({
+  isOpen,
+  children,
+  screenSide,
+  animationWidth,
+  animationMinWidth,
+  overlay,
+  ...props
+}) => {
+  return (
+    <AnimatePresence>
+      <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isOpen={isOpen}>
+        {children}
+      </DrawerMotion>
+    </AnimatePresence>
+  )
+}
+
+const DrawerMotion = ({
   isOpen,
   children,
   screenSide,
   animationWidth = 1000,
+  animationMinWidth,
   overlay,
   ...props
 }) => {
-  const portalNode = document.createElement('div')
-  portalNode.setAttribute('id', 'drawerPortal')
-
-  useEffect(() => {
-    document.body.appendChild(portalNode)
-    return () => {
-      portalNode.parentNode.removeChild(portalNode)
-    }
-  }, [isOpen])
-
   const variantsOverlay = {
     open: { opacity: 1 },
     closed: { opacity: 0, transition: { delay: 0.3 } },
@@ -51,8 +59,8 @@ const DrawerPortal = ({
   }
 
   const variantsDrawerMenu = {
-    open: { width: 202 },
-    closed: { width: 82 },
+    open: { width: animationWidth },
+    closed: { width: animationMinWidth },
   }
 
   const drawerOverlayInitial = {
@@ -84,6 +92,7 @@ const DrawerPortal = ({
     top: 0,
     height: '100%',
     maxWidth: '100%',
+    width: animationWidth,
     overflowY: 'auto',
     padding: '10px',
     overflow: 'visible',
@@ -101,7 +110,7 @@ const DrawerPortal = ({
   }
 
   if (overlay) {
-    return ReactDOM.createPortal(
+    return (
       <motion.div
         key="drawerOverlay"
         variants={variantsOverlay}
@@ -118,22 +127,19 @@ const DrawerPortal = ({
         >
           {children}
         </motion.div>
-      </motion.div>,
-      portalNode
+      </motion.div>
     )
   } else {
-    return ReactDOM.createPortal(
+    return (
       <motion.div
         key="drawerContent"
         variants={variantsDrawerMenu}
         initial={drawerMenuContentInitial}
-        animate="open"
-        exit="closed"
+        animate={ isOpen ? 'open' : 'closed' }
         transition={{ duration: 0.5 }}
       >
         {children}
-      </motion.div>,
-      portalNode
+      </motion.div>
     )
   }
 }
