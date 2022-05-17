@@ -501,6 +501,20 @@ const theme = {
         color: colors.subtlePressed,
       },
     },
+    collapseButton: {
+      color: colors.primary,
+      backgroundColor: colors.neutral[0],
+      border: colors.neutral[0],
+      boxShadow: '1px 2px 4px rgba(0, 0, 0, 0.15)',
+      textShadow: '1.5px solid #DF1E02',
+      height: '24px',
+      width: '24px', 
+      borderRadius: 99999,
+      fontSize: '14px', 
+      heightIcon: '14px',
+      py: '5px',
+      px: '12px'
+    },
     dropdown: {
       backgroundColor: colors.inputBackground,
       color: colors.inputPlaceholderColor,
