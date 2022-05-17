@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion/dist/framer-motion'
 import { Button } from '@oneloop/button'
 import { Box } from '@oneloop/box'
 
