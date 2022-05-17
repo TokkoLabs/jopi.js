@@ -39,7 +39,7 @@ export const DrawerCollapsible = ({
   )
 }
 
-const DrawerMotion= ({
+const DrawerMotion = ({
   isOpen,
   children,
   screenSide,
@@ -48,7 +48,6 @@ const DrawerMotion= ({
   overlay,
   ...props
 }) => {
-
   const variantsOverlay = {
     open: { opacity: 1 },
     closed: { opacity: 0, transition: { delay: 0.3 } },
@@ -136,7 +135,7 @@ const DrawerMotion= ({
         key="drawerContent"
         variants={variantsDrawerMenu}
         initial={drawerMenuContentInitial}
-        animate={ isOpen ? "open" : "closed" }
+        animate={ isOpen ? 'open' : 'closed' }
         transition={{ duration: 0.5 }}
       >
         {children}
