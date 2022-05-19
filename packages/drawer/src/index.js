@@ -60,9 +60,10 @@ const DrawerMotion = ({
 
   const drawerContentInitial = {
     backgroundColor: 'white',
-    position: 'relative',
+    position: 'absolute',
     height: '100%',
     maxWidth: '100%',
+    width: animationWidth,
     boxShadow: 'none',
     overflowY: 'auto',
     padding: '10px',
