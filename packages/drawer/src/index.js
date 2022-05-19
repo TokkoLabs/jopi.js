@@ -71,7 +71,7 @@ const DrawerMotion = ({
 
   const drawerMenuContentInitial = {
     backgroundColor: 'white',
-    boxShadow: '1px 2px 4px rgba(0, 0, 0, 0.15)',
+    boxShadow: '5px 0 5px -5px rgba(0, 0, 0, 0.15)',
     position: 'relative',
     left: 0,
     top: 0,
