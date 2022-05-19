@@ -2,7 +2,7 @@ import React from 'react'
 import { useToggle } from '@oneloop/hooks'
 import { Button, ButtonIcon } from '@oneloop/button'
 import { Text } from '@oneloop/text'
-import { Drawer, DrawerCollapsible } from '.'
+import { Drawer } from '.'
 
 export default {
   component: Drawer,
@@ -79,20 +79,20 @@ export const normal = () =>
 
 export const menu = () =>
   React.createElement(() => {
-    const [isOpen, toggle] = useToggle(true)
+    const [isCollapse, toggle] = useToggle(true)
     const overlay = false
 
     return (
       <React.Fragment>
-        <DrawerCollapsible isOpen={isOpen} screenSide={'left'} animationWidth={202} animationMinWidth={82} overlay={overlay}>
-          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant='collapseButton' style={{ position: 'absolute', right: '-33px', top: '60px', transform: isOpen ? 0 : 'rotate(-180deg)' }}/>
+        <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={202} animationMinWidth={82} overlay={overlay}>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant='collapseButton' style={{ position: 'absolute', right: '-33px', top: '60px', transform: isCollapse ? 0 : 'rotate(-180deg)' }}/>
           <Drawer.Header>
           </Drawer.Header>
           <Drawer.Body>
           </Drawer.Body>
           <Drawer.Footer>
           </Drawer.Footer>
-        </DrawerCollapsible>
+        </Drawer>
       </React.Fragment>
     )
   })
