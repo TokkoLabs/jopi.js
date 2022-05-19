@@ -5,7 +5,7 @@ import { Button, ButtonIcon, ButtonRound, ButtonMain } from '@oneloop/button'
 import { Checkbox } from '@oneloop/checkbox'
 import { Collapsible } from '@oneloop/collapsible'
 import { Datepicker } from '@oneloop/datepicker'
-import { Drawer } from '@oneloop/drawer'
+import { Drawer, DrawerCollapsible } from '@oneloop/drawer'
 import { Dropdown } from '@oneloop/dropdown'
 import { Fonts } from '@oneloop/fonts'
 import { Image } from '@oneloop/image'
@@ -39,6 +39,7 @@ export {
   Text,
   Heading,
   Drawer,
+  DrawerCollapsible,
   Dropdown,
   Collapsible,
   Loader,
