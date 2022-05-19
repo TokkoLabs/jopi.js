@@ -24,7 +24,6 @@ export const Drawer = ({
 }
 
 const DrawerMotion = ({
-  isOpen,
   isCollapse,
   children,
   screenSide,
@@ -63,6 +62,7 @@ const DrawerMotion = ({
     position: 'absolute',
     height: '100%',
     maxWidth: '100%',
+    minWidth: '0px',
     width: animationWidth,
     boxShadow: 'none',
     overflowY: 'auto',
