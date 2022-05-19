@@ -3,26 +3,8 @@ import { Box, Flex } from '@oneloop/box'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export const Drawer = ({
-  isOpen,
-  children,
-  screenSide,
-  animationWidth,
-  overlay,
-  ...props
-}) => {
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} overlay={overlay}>
-          {children}
-        </DrawerMotion>
-      )}
-    </AnimatePresence>
-  )
-}
-
-export const DrawerCollapsible = ({
-  isOpen,
+  isOpen = true,
+  isCollapse,
   children,
   screenSide,
   animationWidth,
@@ -32,15 +14,18 @@ export const DrawerCollapsible = ({
 }) => {
   return (
     <AnimatePresence>
-      <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isOpen={isOpen}>
-        {children}
-      </DrawerMotion>
+      {isOpen && (
+        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isCollapse={isCollapse}>
+          {children}
+        </DrawerMotion>
+      )}
     </AnimatePresence>
   )
 }
 
 const DrawerMotion = ({
   isOpen,
+  isCollapse,
   children,
   screenSide,
   animationWidth = 1000,
@@ -70,15 +55,15 @@ const DrawerMotion = ({
     top: 0,
     width: '100%',
     height: '100%',
-    zIndex: 100,
+    zIndex: 101,
   }
 
   const drawerContentInitial = {
     backgroundColor: 'white',
-    position: 'relative',
+    position: 'absolute',
     height: '100%',
     maxWidth: '100%',
-    minWidth: '0px',
+    width: animationWidth,
     boxShadow: 'none',
     overflowY: 'auto',
     padding: '10px',
@@ -86,7 +71,7 @@ const DrawerMotion = ({
 
   const drawerMenuContentInitial = {
     backgroundColor: 'white',
-    boxShadow: '1px 2px 4px rgba(0, 0, 0, 0.15)',
+    boxShadow: '5px 0 5px -5px rgba(0, 0, 0, 0.15)',
     position: 'relative',
     left: 0,
     top: 0,
@@ -135,7 +120,7 @@ const DrawerMotion = ({
         key="drawerContent"
         variants={variantsDrawerMenu}
         initial={drawerMenuContentInitial}
-        animate={ isOpen ? 'open' : 'closed' }
+        animate={ isCollapse ? 'open' : 'closed' }
         transition={{ duration: 0.5 }}
       >
         {children}
