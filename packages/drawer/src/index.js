@@ -28,7 +28,7 @@ const DrawerMotion = ({
   children,
   screenSide,
   animationWidth = 1000,
-  animationMinWidth,
+  animationMinWidth = 82,
   overlay,
   ...props
 }) => {
