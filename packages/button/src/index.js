@@ -36,12 +36,21 @@ export const Button = (props) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, isRounded, heightIcon, ...props }) => (
+export const ButtonIcon = ({ icon, isRounded, heightIcon, variant, ...props }) => {
+
+  var px, py, paddingTopIcon = 0;
+  console.log(variant)
+  if ( variant == 'collapseButtonOpen' || variant == 'collapseButtonClosed' ){
+    px = '8px';
+    py = '4px';
+    paddingTopIcon = '14px'
+  }
+  return (
   <Box sx={{ position: 'relative' }}>
     <Box
       as="button"
       tx="buttons"
-      variant="primary"
+      variant={variant}
       {...props}
       __css={{
         appearance: 'none',
@@ -54,8 +63,8 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, ...props }) => (
         textDecoration: 'none',
         cursor: 'pointer',
         outline: 'none',
-        px: '14px',
-        py: '5px',
+        px: px != 0 ? px : '14px',
+        py: py != 0 ? py : '5px',
         color: 'white',
         bg: 'primary',
         border: 0,
@@ -65,13 +74,13 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, ...props }) => (
         borderRadius: 12,
         width: '48px',
         height: '48px',
-        whiteSpace: 'nowrap',
+        whiteSpace: 'nowrap'
       }}
     >
-      <span className={icon} style={{ height: heightIcon || '24px' }}></span>
+      <span className={icon} style={{ height: heightIcon || '24px', paddingTop: paddingTopIcon }}></span>
     </Box>
   </Box>
-)
+)}
 
 export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) => (
   <Box sx={{ position: 'relative' }}>
