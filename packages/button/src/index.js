@@ -36,42 +36,52 @@ export const Button = (props) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, isRounded, heightIcon, ...props }) => (
-  <Box sx={{ position: 'relative' }}>
-    <Box
-      as="button"
-      tx="buttons"
-      variant="primary"
-      {...props}
-      __css={{
-        appearance: 'none',
-        display: 'flex',
-        lineHeight: 'inherit',
-        fontFamily: 'Nunito Sans',
-        fontWeight: 'bold',
-        fontSize: '24px',
-        textAlign: 'center',
-        textDecoration: 'none',
-        cursor: 'pointer',
-        outline: 'none',
-        px: '14px',
-        py: '5px',
-        color: 'white',
-        bg: 'primary',
-        border: 0,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 12,
-        width: '48px',
-        height: '48px',
-        whiteSpace: 'nowrap',
-      }}
-    >
-      <span className={icon} style={{ height: heightIcon || '24px' }}></span>
+export const ButtonIcon = ({ icon, isRounded, heightIcon, variant, ...props }) => {
+  let px = 0
+  let py = 0
+  let paddingTopIcon = 0
+  if (variant === 'collapseButtonOpen' || variant === 'collapseButtonClosed') {
+    px = '8px'
+    py = '4px'
+    paddingTopIcon = '14px'
+  }
+  return (
+    <Box sx={{ position: 'relative' }}>
+      <Box
+        as="button"
+        tx="buttons"
+        variant={variant}
+        {...props}
+        __css={{
+          appearance: 'none',
+          display: 'flex',
+          lineHeight: 'inherit',
+          fontFamily: 'Nunito Sans',
+          fontWeight: 'bold',
+          fontSize: '24px',
+          textAlign: 'center',
+          textDecoration: 'none',
+          cursor: 'pointer',
+          outline: 'none',
+          px: px !== 0 ? px : '14px',
+          py: py !== 0 ? py : '5px',
+          color: 'white',
+          bg: 'primary',
+          border: 0,
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius: 12,
+          width: '48px',
+          height: '48px',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        <span className={icon} style={{ height: heightIcon || '24px', paddingTop: paddingTopIcon }}></span>
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) => (
   <Box sx={{ position: 'relative' }}>

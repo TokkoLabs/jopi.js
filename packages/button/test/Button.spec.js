@@ -218,4 +218,12 @@ describe('Button', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  test('collapseButtonOpen', () => {
+    const tree = renderer
+      .create(<ButtonIcon isRounded icon='icon-atras' variant={'collapseButtonOpen'} style={{ position: 'absolute', right: '-23px', top: '60px' }}/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })
