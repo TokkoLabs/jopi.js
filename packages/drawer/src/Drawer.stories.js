@@ -85,7 +85,7 @@ export const menu = () =>
     return (
       <React.Fragment>
         <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={202} animationMinWidth={82} overlay={overlay}>
-          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '60px'}}/>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '60px' }}/>
           <Drawer.Header>
           </Drawer.Header>
           <Drawer.Body>

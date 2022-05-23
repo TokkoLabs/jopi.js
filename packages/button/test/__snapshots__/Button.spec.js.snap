@@ -62,6 +62,7 @@ exports[`Button iconDisabled 1`] = `
       style={
         Object {
           "height": "24px",
+          "paddingTop": 0,
         }
       }
     />
@@ -131,6 +132,7 @@ exports[`Button iconPrimary 1`] = `
       style={
         Object {
           "height": "24px",
+          "paddingTop": 0,
         }
       }
     />
@@ -200,6 +202,7 @@ exports[`Button iconSecondary 1`] = `
       style={
         Object {
           "height": "24px",
+          "paddingTop": 0,
         }
       }
     />
@@ -680,6 +683,7 @@ exports[`Button outlineIconDisabled 1`] = `
       style={
         Object {
           "height": "24px",
+          "paddingTop": 0,
         }
       }
     />
@@ -935,6 +939,7 @@ exports[`Button primaryOutlineIcon 1`] = `
       style={
         Object {
           "height": "24px",
+          "paddingTop": 0,
         }
       }
     />
@@ -1415,6 +1420,7 @@ exports[`Button secondaryOutlineIcon 2`] = `
       style={
         Object {
           "height": "24px",
+          "paddingTop": 0,
         }
       }
     />
@@ -1608,6 +1614,7 @@ exports[`Button subtleIcon 1`] = `
       style={
         Object {
           "height": "24px",
+          "paddingTop": 0,
         }
       }
     />
@@ -1677,6 +1684,7 @@ exports[`Button subtleIconDisabled 1`] = `
       style={
         Object {
           "height": "24px",
+          "paddingTop": 0,
         }
       }
     />
