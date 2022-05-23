@@ -501,12 +501,27 @@ const theme = {
         color: colors.subtlePressed,
       },
     },
-    collapseButton: {
+    collapseButtonOpen: {
       color: colors.primary,
       backgroundColor: colors.neutral[0],
       border: colors.neutral[0],
       boxShadow: '1px 2px 4px rgba(0, 0, 0, 0.15)',
       borderRadius: 99999,
+      height: 24,
+      width: 24,
+      fontSize: '10px',
+      heightIcon: '10px',
+    },
+    collapseButtonClosed: {
+      color: colors.primary,
+      backgroundColor: colors.neutral[0],
+      border: colors.neutral[0],
+      borderRadius: 99999,
+      height: 24,
+      width: 24,
+      fontSize: '10px',
+      transform: 'rotate(-180deg)',
+      boxShadow: '-2px -1px 4px rgba(0, 0, 0, 0.15)',
     },
     dropdown: {
       backgroundColor: colors.inputBackground,
