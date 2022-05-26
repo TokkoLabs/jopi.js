@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Collapsible } from '.'
+import { Button } from '@oneloop/button'
 
 export default {
   component: Collapsible,
@@ -33,3 +34,26 @@ export const normal = () =>
       </Collapsible>
     )
   })
+
+
+export const menu = () =>
+React.createElement(() => {
+  const [open, setOpen] = React.useState(false)
+  return (
+    <Collapsible width={1 / 3} isOpen={open}>
+      <Collapsible.Button
+        isMainButton
+        onClick={() => setOpen(!open)}
+        variant="mainButtonCollapsible" 
+        icon="icon-emprendimientos" 
+        text={"Emprendimientos"}
+        isExpanded={open}
+      >
+      </Collapsible.Button>
+      <Collapsible.Body>
+        <Button variant="subtleText" style={{ padding: '8px 0 8px 40px', height: '32px', fontSize: '11px', lineHeight: '13px' }}>{'User management'}</Button>
+        <Button variant="subtleText" style={{ padding: '8px 0 8px 40px', height: '32px', fontSize: '11px', lineHeight: '13px' }}>{'Configuration'}</Button>
+      </Collapsible.Body>
+    </Collapsible>
+  )
+})

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Box } from '@oneloop/box'
+import { useToggle } from '@oneloop/hooks'
 import '@oneloop/fonts'
 
 export const Button = (props) => (
@@ -121,16 +122,18 @@ export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) 
   </Box>
 )
 
-export const ButtonMain = ({ text, icon, isCollapsible, ...props }) => {
-  const [hover, setHover] = useState()
-  const [active, setActive] = useState()
+export const ButtonMain = ({ text, icon, isCollapsible, isExpanded = false, ...props }) => {
+  const [hover, setHover] = useToggle(false)
+  const [active, setActive] = useToggle(false)
+  
+  console.log(active)
 
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
         as="button"
         tx="buttons"
-        variant="mainButton"
+        variant="mainButtonCollapsible"
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
         onClick={() => setActive(true)}
@@ -141,7 +144,7 @@ export const ButtonMain = ({ text, icon, isCollapsible, ...props }) => {
           display: 'flex',
           lineHeight: '19px',
           fontFamily: 'Nunito Sans',
-          fontWeight: 'normal',
+          fontWeight: (isExpanded || active) ? 'bold' : 'normal',
           fontSize: 14,
           textAlign: 'center',
           textDecoration: 'none',
@@ -158,11 +161,12 @@ export const ButtonMain = ({ text, icon, isCollapsible, ...props }) => {
           height: '38px',
           gap: '6px',
           whiteSpace: 'nowrap',
+          backgroundColor: hover ? '#E4E8EA' : '#00000000',
         }}
       >
-        <span className={icon} style={{ color: active || hover ? '#DF1E02' : '#707E86', fontSize: '22px', paddingTop: '4px' }}/>
-        <span> {text} </span>
-        { isCollapsible && <span className="icon-dropdown" style={{ color: '#A6B2BA', fontSize: '18px' }}/>}
+        <span className={icon} style={{ color: (isExpanded || active || hover) ? '#DF1E02' : '#707E86', fontSize: '22px', paddingTop: '4px' }}/>
+        <span style={{ color: (hover || isExpanded || active) ? '#4D5B64' : '#6F838D' }}> {text} </span>
+        { isCollapsible && <span className="icon-dropdown" style={{ position:'absolute', right: '10px', color: '#A6B2BA', fontSize: '18px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)' , paddingTop: '4px'}}/>}
       </Box>
     </Box>
   )
