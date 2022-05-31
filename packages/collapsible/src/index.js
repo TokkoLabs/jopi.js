@@ -25,7 +25,7 @@ const useCollapsibleContext = () => {
   return context
 }
 
-const CollapsibleButton = ({ children, isMainButton, icon, text, isExpanded = false, ...props }) => {
+const CollapsibleButton = ({ children, isMainButton = false, isActive = false, icon, text, isExpanded = false, badgeValue, badgeVariant, ...props }) => {
   if(isMainButton){
     return (
       <ButtonMain 
@@ -34,6 +34,9 @@ const CollapsibleButton = ({ children, isMainButton, icon, text, isExpanded = fa
         text={text}
         isCollapsible
         isExpanded={isExpanded}
+        isActive={isActive}
+        badgeValue={badgeValue}
+        badgeVariant={badgeVariant}
         sx={{
           width: '100%',
           '+ .content': {
