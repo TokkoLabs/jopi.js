@@ -4,7 +4,7 @@ import '@oneloop/fonts'
 
 export const Badge = ({ isMedium, hasIcon, isNotButton, ...props }) => (
   <Box
-    as={ isNotButton ? "" : "button" }
+    as={ isNotButton ? '' : 'button' }
     tx="buttons"
     variant="primary"
     {...props}

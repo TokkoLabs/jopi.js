@@ -80,7 +80,7 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, variant, badgeValue = 
         }}
       >
         <span className={icon} style={{ height: heightIcon || '24px', paddingTop: paddingTopIcon }}></span>
-        { badgeValue != 0 && <Badge variant={badgeVariant} isNotButton style={{ position:'absolute', top: '3px', left: '30px' }}>{badgeValue}</Badge> }
+        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '3px', left: '30px' }}>{ badgeValue }</Badge> }
       </Box>
     </Box>
   )
@@ -124,15 +124,13 @@ export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) 
   </Box>
 )
 
-export const ButtonMainIcon = ({ icon, isRounded, heightIcon, variant, isActive = false, isExpanded = false,  badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonMainIcon = ({ icon, isRounded, heightIcon, variant, isActive = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   const [hover, setHover] = useToggle(false)
   let px = 0
   let py = 0
-  let paddingTopIcon = 0
   if (variant === 'collapseButtonOpen' || variant === 'collapseButtonClosed') {
     px = '8px'
     py = '4px'
-    paddingTopIcon = '14px'
   }
   return (
     <Box sx={{ position: 'relative' }}>
@@ -148,7 +146,7 @@ export const ButtonMainIcon = ({ icon, isRounded, heightIcon, variant, isActive 
           display: 'flex',
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
-          fontWeight:  (isExpanded || isActive) ? 'bold' : 'normal',
+          fontWeight: (isExpanded || isActive) ? 'bold' : 'normal',
           fontSize: '24px',
           textAlign: 'center',
           textDecoration: 'none',
@@ -170,7 +168,7 @@ export const ButtonMainIcon = ({ icon, isRounded, heightIcon, variant, isActive 
         }}
       >
         <span className={icon} style={{ color: (isExpanded || isActive || hover) ? '#DF1E02' : '#707E86', fontSize: '22px', paddingTop: '4px' }}/>
-        { badgeValue != 0 && <Badge variant={badgeVariant} isNotButton style={{ position:'absolute', top: '4px', left: '25px' }}>{badgeValue}</Badge> }
+        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '4px', left: '25px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
   )
@@ -215,8 +213,8 @@ export const ButtonMain = ({ text, icon, isCollapsible, isActive = false, isExpa
       >
         <span className={icon} style={{ color: (isExpanded || isActive || hover) ? '#DF1E02' : '#707E86', fontSize: '22px', paddingTop: '4px' }}/>
         <span style={{ color: (hover || isExpanded || isActive) ? '#4D5B64' : '#6F838D' }}> {text} </span>
-        { badgeValue == 0 && isCollapsible && <span className="icon-dropdown" style={{ position:'absolute', right: '10px', color: '#A6B2BA', fontSize: '18px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)' , paddingTop: '4px'}}/>}
-        { badgeValue != 0 && <Badge variant={badgeVariant} isNotButton style={{ position:'absolute', right: '10px' }}>{badgeValue}</Badge> }
+        { badgeValue === 0 && isCollapsible && <span className="icon-dropdown" style={{ position: 'absolute', right: '10px', color: '#A6B2BA', fontSize: '18px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
+        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '10px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
   )

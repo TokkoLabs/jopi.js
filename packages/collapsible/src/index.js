@@ -26,9 +26,9 @@ const useCollapsibleContext = () => {
 }
 
 const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon = false, isActive = false, icon, text, isExpanded = false, badgeValue, badgeVariant, ...props }) => {
-  if(isMainButton){
+  if (isMainButton) {
     return (
-      <ButtonMain 
+      <ButtonMain
         {...props}
         icon={icon}
         text={text}
@@ -45,11 +45,11 @@ const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon =
         }}
       />
     )
-  } else if(isSmallButtonIcon){
+  } else if (isSmallButtonIcon) {
     return (
-      <ButtonMainIcon 
+      <ButtonMainIcon
         {...props}
-        variant="mainButtonCollapsible" 
+        variant="mainButtonCollapsible"
         icon={icon}
         text={text}
         isCollapsible
