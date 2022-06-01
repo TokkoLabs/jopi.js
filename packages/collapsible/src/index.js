@@ -49,7 +49,7 @@ const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon =
     return (
       <ButtonMainIcon
         {...props}
-        variant="mainButtonCollapsible"
+        variant="smallIconMainButton"
         icon={icon}
         text={text}
         isCollapsible
