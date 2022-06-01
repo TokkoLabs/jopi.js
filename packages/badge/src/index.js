@@ -2,9 +2,9 @@ import React from 'react'
 import { Box } from '@oneloop/box'
 import '@oneloop/fonts'
 
-export const Badge = ({ isMedium, hasIcon, ...props }) => (
+export const Badge = ({ isMedium, hasIcon, isNotButton, ...props }) => (
   <Box
-    as="button"
+    as={ isNotButton ? "" : "button" }
     tx="buttons"
     variant="primary"
     {...props}

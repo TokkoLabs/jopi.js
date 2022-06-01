@@ -163,7 +163,7 @@ export const ButtonMain = ({ text, icon, isCollapsible, isActive = false, isExpa
         <span className={icon} style={{ color: (isExpanded || isActive || hover) ? '#DF1E02' : '#707E86', fontSize: '22px', paddingTop: '4px' }}/>
         <span style={{ color: (hover || isExpanded || isActive) ? '#4D5B64' : '#6F838D' }}> {text} </span>
         { badgeValue == 0 && isCollapsible && <span className="icon-dropdown" style={{ position:'absolute', right: '10px', color: '#A6B2BA', fontSize: '18px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)' , paddingTop: '4px'}}/>}
-        { badgeValue != 0 && <Badge variant={badgeVariant} style={{ position:'absolute', right: '10px' }}>{badgeValue}</Badge> }
+        { badgeValue != 0 && <Badge variant={badgeVariant} isNotButton style={{ position:'absolute', right: '10px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
   )

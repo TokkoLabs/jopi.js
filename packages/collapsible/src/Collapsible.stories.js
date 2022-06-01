@@ -55,8 +55,6 @@ React.createElement(() => {
     setActive2(excep == 2 ? true : false)
   }
 
-  // AHORA TENGO QUE AGREGAR EL CASO DE QUE TENGA UN BADGE AL FINAL
-  // por lo que solo le pasare el badgeValue = 23 y el variantBadge
   return (
     <>
       <Collapsible width={1 / 3} isOpen={open0}>
@@ -100,6 +98,75 @@ React.createElement(() => {
           variant="mainButtonCollapsible" 
           icon="icon-emprendimientos" 
           text={"Emprendimientos"}
+          isExpanded={open2}
+          isActive={active2}
+          badgeValue={2}
+        >
+        </Collapsible.Button>
+      </Collapsible>
+    </>
+  )
+})
+
+export const menuCollapsed = () =>
+React.createElement(() => {
+  const [open0, setOpen0] = React.useState(false)
+  const [open1, setOpen1] = React.useState(false)
+  const [open2, setOpen2] = React.useState(false)
+
+  const [active0, setActive0] = React.useState(false)
+  const [active1, setActive1] = React.useState(false)
+  const [active2, setActive2] = React.useState(false)
+
+  const closeAllExcep = (excep) => {
+    setOpen0(excep == 0 ? !open0 : false)
+    setOpen1(excep == 1 ? !open1 : false)
+    setOpen2(excep == 2 ? !open2 : false)
+    setActive0(excep == 0 ? true : false)
+    setActive1(excep == 1 ? true : false)
+    setActive2(excep == 2 ? true : false)
+  }
+
+  return (
+    <>
+      <Collapsible width={1 / 3} isOpen={open0}>
+        <Collapsible.Button
+          isMainButton
+          onClick={() => closeAllExcep(0)}
+          variant="mainButtonCollapsible" 
+          icon="icon-emprendimientos"
+          isExpanded={open0}
+          isActive={active0}
+        >
+        </Collapsible.Button>
+        <Collapsible.Body>
+          <Button variant="subtleText">{'User management'}</Button>
+          <Button variant="subtleText">{'Configuration'}</Button>
+        </Collapsible.Body>
+      </Collapsible>
+
+      <Collapsible width={1 / 3} isOpen={open1}>
+        <Collapsible.Button
+          isMainButton
+          onClick={() => closeAllExcep(1)}
+          variant="mainButtonCollapsible" 
+          icon="icon-emprendimientos" 
+          isExpanded={open1}
+          isActive={active1}
+        >
+        </Collapsible.Button>
+        <Collapsible.Body>
+          <Button variant="subtleText" style={{ padding: '8px 0 8px 40px', height: '32px', fontSize: '11px', lineHeight: '13px' }}>{'User management'}</Button>
+          <Button variant="subtleText" style={{ padding: '8px 0 8px 40px', height: '32px', fontSize: '11px', lineHeight: '13px' }}>{'Configuration'}</Button>
+        </Collapsible.Body>
+      </Collapsible>
+
+      <Collapsible width={1 / 3} isOpen={open2}>
+        <Collapsible.Button
+          isMainButton
+          onClick={() => closeAllExcep(2)}
+          variant="mainButtonCollapsible" 
+          icon="icon-emprendimientos" 
           isExpanded={open2}
           isActive={active2}
           badgeValue={2}
