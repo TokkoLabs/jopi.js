@@ -89,3 +89,388 @@ exports[`Collapsible default 1`] = `
   </div>
 </div>
 `;
+
+exports[`Collapsible main 1`] = `
+Array [
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 33.33333333333333%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 19px;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: #00000000;
+  border: 0;
+  border-radius: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 38px;
+  gap: 6px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.c2 + .content {
+  overflow: hidden;
+}
+
+<div
+    className="c0"
+    width={0.3333333333333333}
+  >
+    <div
+      className="c1"
+    >
+      <button
+        className="c2"
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <span
+          className="icon-emprendimientos"
+          style={
+            Object {
+              "color": "#DF1E02",
+              "fontSize": "22px",
+              "paddingTop": "4px",
+            }
+          }
+        />
+        <span
+          style={
+            Object {
+              "color": "#4D5B64",
+            }
+          }
+        >
+           
+          Emprendimientos
+           
+        </span>
+        <span
+          className="icon-dropdown"
+          style={
+            Object {
+              "color": "#A6B2BA",
+              "fontSize": "18px",
+              "paddingTop": "4px",
+              "position": "absolute",
+              "right": "10px",
+              "transform": "rotate(-180deg)",
+            }
+          }
+        />
+      </button>
+    </div>
+    <div
+      className="content"
+      style={
+        Object {
+          "height": "auto",
+        }
+      }
+    />
+  </div>,
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 33.33333333333333%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 19px;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: #00000000;
+  border: 0;
+  border-radius: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 38px;
+  gap: 6px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.c2 + .content {
+  overflow: hidden;
+}
+
+<div
+    className="c0"
+    width={0.3333333333333333}
+  >
+    <div
+      className="c1"
+    >
+      <button
+        className="c2"
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <span
+          className="icon-emprendimientos"
+          style={
+            Object {
+              "color": "#707E86",
+              "fontSize": "22px",
+              "paddingTop": "4px",
+            }
+          }
+        />
+        <span
+          style={
+            Object {
+              "color": "#6F838D",
+            }
+          }
+        >
+           
+          Emprendimientos
+           
+        </span>
+        <span
+          className="icon-dropdown"
+          style={
+            Object {
+              "color": "#A6B2BA",
+              "fontSize": "18px",
+              "paddingTop": "4px",
+              "position": "absolute",
+              "right": "10px",
+              "transform": "rotate(0deg)",
+            }
+          }
+        />
+      </button>
+    </div>
+  </div>,
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 33.33333333333333%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 19px;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+  background-color: #00000000;
+  border: 0;
+  border-radius: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 38px;
+  gap: 6px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.c2 + .content {
+  overflow: hidden;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 14px;
+  height: 16px;
+  display: inline-block;
+  font-size: 10px;
+  font-family: primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1px 5px;
+  position: static;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+<div
+    className="c0"
+    width={0.3333333333333333}
+  >
+    <div
+      className="c1"
+    >
+      <button
+        className="c2"
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <span
+          className="icon-emprendimientos"
+          style={
+            Object {
+              "color": "#707E86",
+              "fontSize": "22px",
+              "paddingTop": "4px",
+            }
+          }
+        />
+        <span
+          style={
+            Object {
+              "color": "#6F838D",
+            }
+          }
+        >
+           
+          Emprendimientos
+           
+        </span>
+        <div
+          className="c3"
+          style={
+            Object {
+              "position": "absolute",
+              "right": "10px",
+            }
+          }
+        >
+          2
+        </div>
+      </button>
+    </div>
+  </div>,
+]
+`;
