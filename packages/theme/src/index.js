@@ -502,17 +502,12 @@ const theme = {
       },
     },
     mainButtonCollapsible: {
-    //  color: colors.subtle,
       backgroundColor: colors.transparent,
       ':hover': {
         backgroundColor: colors.neutral[7],
-    //    fontWeight: 400,
-    //    color: colors.subtleHover,
       },
       ':focus': {
         backgroundColor: colors.transparent,
-    //    fontWeight: 700,
-    //    color: colors.subtlePressed,
       },
     },
     collapseButtonOpen: {

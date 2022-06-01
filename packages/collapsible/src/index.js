@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Button, ButtonIcon, ButtonMain } from '@oneloop/button'
+import { Button, ButtonMainIcon, ButtonMain } from '@oneloop/button'
 import { Box } from '@oneloop/box'
 
 const CollapsibleContext = createContext()
@@ -47,9 +47,9 @@ const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon =
     )
   } else if(isSmallButtonIcon){
     return (
-      <ButtonIcon 
+      <ButtonMainIcon 
         {...props}
-        variant="iconPrimary" 
+        variant="mainButtonCollapsible" 
         icon={icon}
         text={text}
         isCollapsible
@@ -58,7 +58,6 @@ const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon =
         badgeValue={badgeValue}
         badgeVariant={badgeVariant}
         sx={{
-          width: '100%',
           '+ .content': {
             overflow: 'hidden',
           },

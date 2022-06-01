@@ -38,7 +38,7 @@ export const Button = (props) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, isRounded, heightIcon, variant, ...props }) => {
+export const ButtonIcon = ({ icon, isRounded, heightIcon, variant, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   let px = 0
   let py = 0
   let paddingTopIcon = 0
@@ -80,6 +80,7 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, variant, ...props }) =
         }}
       >
         <span className={icon} style={{ height: heightIcon || '24px', paddingTop: paddingTopIcon }}></span>
+        { badgeValue != 0 && <Badge variant={badgeVariant} isNotButton style={{ position:'absolute', top: '3px', left: '30px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
   )
@@ -122,6 +123,58 @@ export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) 
     </Box>
   </Box>
 )
+
+export const ButtonMainIcon = ({ icon, isRounded, heightIcon, variant, isActive = false, isExpanded = false,  badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+  const [hover, setHover] = useToggle(false)
+  let px = 0
+  let py = 0
+  let paddingTopIcon = 0
+  if (variant === 'collapseButtonOpen' || variant === 'collapseButtonClosed') {
+    px = '8px'
+    py = '4px'
+    paddingTopIcon = '14px'
+  }
+  return (
+    <Box sx={{ position: 'relative' }}>
+      <Box
+        as="button"
+        tx="buttons"
+        variant={variant}
+        onMouseOver={() => setHover(true)}
+        onMouseOut={() => setHover(false)}
+        {...props}
+        __css={{
+          appearance: 'none',
+          display: 'flex',
+          lineHeight: 'inherit',
+          fontFamily: 'Nunito Sans',
+          fontWeight:  (isExpanded || isActive) ? 'bold' : 'normal',
+          fontSize: '24px',
+          textAlign: 'center',
+          textDecoration: 'none',
+          cursor: 'pointer',
+          outline: 'none',
+          px: px !== 0 ? px : '14px',
+          py: py !== 0 ? py : '5px',
+          color: 'white',
+          bg: 'primary',
+          border: 0,
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius: 12,
+          width: '48px',
+          height: '48px',
+          whiteSpace: 'nowrap',
+          backgroundColor: hover ? '#E4E8EA' : '#00000000',
+        }}
+      >
+        <span className={icon} style={{ color: (isExpanded || isActive || hover) ? '#DF1E02' : '#707E86', fontSize: '22px', paddingTop: '4px' }}/>
+        { badgeValue != 0 && <Badge variant={badgeVariant} isNotButton style={{ position:'absolute', top: '4px', left: '25px' }}>{badgeValue}</Badge> }
+      </Box>
+    </Box>
+  )
+}
 
 export const ButtonMain = ({ text, icon, isCollapsible, isActive = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   const [hover, setHover] = useToggle(false)

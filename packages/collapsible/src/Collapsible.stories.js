@@ -131,7 +131,7 @@ React.createElement(() => {
     <>
       <Collapsible width={1 / 3} isOpen={open0}>
         <Collapsible.Button
-          isMainButton
+          isSmallButtonIcon
           onClick={() => closeAllExcep(0)}
           variant="mainButtonCollapsible" 
           icon="icon-emprendimientos"
@@ -147,7 +147,7 @@ React.createElement(() => {
 
       <Collapsible width={1 / 3} isOpen={open1}>
         <Collapsible.Button
-          isMainButton
+          isSmallButtonIcon
           onClick={() => closeAllExcep(1)}
           variant="mainButtonCollapsible" 
           icon="icon-emprendimientos" 
@@ -161,15 +161,15 @@ React.createElement(() => {
         </Collapsible.Body>
       </Collapsible>
 
-      <Collapsible width={1 / 3} isOpen={open2}>
+      <Collapsible width={1 / 10} isOpen={open2}>
         <Collapsible.Button
-          isMainButton
+          isSmallButtonIcon
           onClick={() => closeAllExcep(2)}
           variant="mainButtonCollapsible" 
           icon="icon-emprendimientos" 
           isExpanded={open2}
           isActive={active2}
-          badgeValue={2}
+          badgeValue={200}
         >
         </Collapsible.Button>
       </Collapsible>
