@@ -38,7 +38,55 @@ export const Button = (props) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, isRounded, heightIcon, variant, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+  let heightIcon = '24px';
+  if(variant.includes("iconSmall")) {
+    heightIcon = '22px';
+  } else if (variant.includes("iconExtraSmall22px") || variant.includes("iconExtraSmall")) {
+    heightIcon = '16px';
+  }else if (variant.includes("iconExtraSmall18px")) {
+    heightIcon = '12px';
+  }
+  console.log(heightIcon)
+  return (
+    <Box sx={{ position: 'relative' }}>
+      <Box
+        as="button"
+        tx="buttons"
+        variant={variant}
+        {...props}
+        __css={{
+          appearance: 'none',
+          display: 'flex',
+          lineHeight: 'inherit',
+          fontFamily: 'Nunito Sans',
+          fontWeight: 'bold',
+          fontSize: '24px',
+          textAlign: 'center',
+          textDecoration: 'none',
+          cursor: 'pointer',
+          outline: 'none',
+          color: 'white',
+          bg: 'primary',
+          border: 0,
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius: 12,
+          width: '48px',
+          height: '48px',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        <span className={icon} style={{ height: heightIcon }}></span>
+        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '3px', left: '30px' }}>{ badgeValue }</Badge> }
+      </Box>
+    </Box>
+  )
+}
+
+//// ACA ABAJO ESTA EL BOTON DEL DRAWER, ASEGURAR DE QUE ANDE
+export const ButtonIconDrawer = ({ icon, isRounded, fontSize = '24px', variant, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   let px = 0
   let py = 0
   let paddingTopIcon = 0
@@ -60,7 +108,7 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, variant, badgeValue = 
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
           fontWeight: 'bold',
-          fontSize: '24px',
+          fontSize: {fontSize},
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
@@ -79,12 +127,14 @@ export const ButtonIcon = ({ icon, isRounded, heightIcon, variant, badgeValue = 
           whiteSpace: 'nowrap',
         }}
       >
-        <span className={icon} style={{ height: heightIcon || '24px', paddingTop: paddingTopIcon }}></span>
+        <span className={icon} style={{ height: {fontSize}, paddingTop: paddingTopIcon }}></span>
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '3px', left: '30px' }}>{ badgeValue }</Badge> }
       </Box>
     </Box>
   )
 }
+
+//// ACA ARRIBA ESTA EL BOTON DEL DRAWER; ASEGURAR DE QUE ANDE
 
 export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) => (
   <Box sx={{ position: 'relative' }}>

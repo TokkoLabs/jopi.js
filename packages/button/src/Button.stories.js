@@ -88,7 +88,7 @@ export const iconPrimaryExtraSmall22px = () => (
 )
 
 export const iconPrimaryExtraSmall18px = () => (
-  <ButtonIcon icon="icon-agregar" variant={["iconPrimary", "iconExtraSmall18px"]} py='5px' px='9px' heightIcon='12px'/>
+  <ButtonIcon icon="icon-agregar" variant={["iconPrimary", "iconExtraSmall18px"]}/>
 )
 
 export const iconSecondary = () => (
