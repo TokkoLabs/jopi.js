@@ -16,15 +16,15 @@ export const primaryLarge = () => (
 )
 
 export const primaryMedium = () => (
-  <Button height='38px' borderRadius='10px' fontSize='14px' py='10px' px='24px'>{'Label'}</Button>
+  <Button variant={["primary", "medium"]}>{'Label'}</Button>
 )
 
 export const primarySmall = () => (
-  <Button height='32px' borderRadius='8px' fontSize='12px' py='8px' px='14px'>{'Label'}</Button>
+  <Button variant={["primary", "small"]}>{'Label'}</Button>
 )
 
 export const primaryExtraSmall = () => (
-  <Button height='26px' borderRadius='6px' fontSize='12px' py='5px' px='12px'>{'Label'}</Button>
+  <Button variant={["primary", "extraSmall"]}>{'Label'}</Button>
 )
 
 export const primaryDisabled = () => (
@@ -68,27 +68,27 @@ export const textDisabled = () => (
 )
 
 export const iconPrimaryLarge = () => (
-  <ButtonIcon icon="icon-agregar" variant="iconPrimary" width='48px' height='48px' heightIcon='24px'/>
+  <ButtonIcon icon="icon-agregar" variant={["iconPrimary", "iconLarge"]}/>
 )
 
 export const iconPrimaryMedium = () => (
-  <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='38px' width='38px' borderRadius='10px' heightIcon='24px'/>
+  <ButtonIcon icon="icon-agregar" variant={["iconPrimary", "iconMedium"]}/>
 )
 
 export const iconPrimarySmall = () => (
-  <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='32px' width='32px' borderRadius='9px' fontSize='22px' heightIcon='22px'/>
+  <ButtonIcon icon="icon-agregar" variant={["iconPrimary", "iconSmall"]}/>
 )
 
 export const iconPrimaryExtraSmall = () => (
-  <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='26px' width='26px' borderRadius='6px' fontSize='16px' heightIcon='16px' py='5px' px='13px'/>
+  <ButtonIcon icon="icon-agregar" variant={["iconPrimary", "iconExtraSmall"]}/>
 )
 
 export const iconPrimaryExtraSmall22px = () => (
-  <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='22px' width='22px' borderRadius='6px' fontSize='16px' heightIcon='16px' py='5px' px='11px'/>
+  <ButtonIcon icon="icon-agregar" variant={["iconPrimary", "iconExtraSmall22px"]}/>
 )
 
 export const iconPrimaryExtraSmall18px = () => (
-  <ButtonIcon icon="icon-agregar" variant="iconPrimary" height='18px' width='18px' borderRadius='5px' fontSize='12px' heightIcon='12px' py='5px' px='9px'/>
+  <ButtonIcon icon="icon-agregar" variant={["iconPrimary", "iconExtraSmall18px"]} py='5px' px='9px' heightIcon='12px'/>
 )
 
 export const iconSecondary = () => (
