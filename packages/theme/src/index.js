@@ -250,14 +250,14 @@ const theme = {
       borderRadius: '8px',
       fontSize: '12px',
       py: '8px',
-      px: '14px'
+      px: '14px',
     },
     extraSmall: {
       height: '26px',
       borderRadius: '6px',
       fontSize: '12px',
       py: '5px',
-      px: '12px'
+      px: '12px',
     },
     primaryDisabled: {
       color: colors.disabled,
@@ -450,7 +450,7 @@ const theme = {
       fontSize: '12px',
       py: '5px',
       px: '12px',
-      gap: '4px'
+      gap: '4px',
     },
     iconSecondary: {
       backgroundColor: colors.secondary,
