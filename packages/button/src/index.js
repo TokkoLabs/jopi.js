@@ -136,12 +136,17 @@ export const ButtonIconDrawer = ({ icon, isRounded, fontSize = '24px', variant, 
 
 //// ACA ARRIBA ESTA EL BOTON DEL DRAWER; ASEGURAR DE QUE ANDE
 
-export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) => (
+export const ButtonRound = ({ text, icon, variant, ...props }) => {
+  let heightIcon = '16px'
+  if(variant.includes("roundLarge")) {
+    heightIcon = '20px';
+  }
+  return (
   <Box sx={{ position: 'relative' }}>
     <Box
       as="button"
       tx="buttons"
-      variant="primary"
+      variant={variant}
       {...props}
       __css={{
         appearance: 'none',
@@ -154,8 +159,6 @@ export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) 
         textDecoration: 'none',
         cursor: 'pointer',
         outline: 'none',
-        px: 26,
-        py: 13,
         color: 'white',
         bg: 'primary',
         border: 0,
@@ -168,11 +171,11 @@ export const ButtonRound = ({ text, icon, fontSizeIcon, heightIcon, ...props }) 
         whiteSpace: 'nowrap',
       }}
     >
-      <span className={icon} style={{ height: heightIcon || '20px', fontSize: fontSizeIcon || '20px' }}></span>
+      <span className={icon} style={{ height: heightIcon, fontSize: heightIcon }}></span>
       <span> {text}</span>
     </Box>
   </Box>
-)
+)}
 
 export const ButtonMainIcon = ({ icon, isRounded, heightIcon, variant, isActive = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   const [hover, setHover] = useToggle(false)

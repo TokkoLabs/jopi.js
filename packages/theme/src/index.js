@@ -424,6 +424,34 @@ const theme = {
       py: '4px',
       px: '8px',
     },
+    roundLarge: {
+      py: '13px',
+      px: '26px',
+    },
+    roundMedium: {
+      height: '38px',
+      borderRadius: '20px',
+      fontSize: '14px',
+      py: '10px',
+      px: '24px',
+      gap: '4px',
+    },
+    roundSmall: {
+      height: '32px',
+      borderRadius: '16px',
+      fontSize: '12px',
+      py: '8px',
+      px: '14px',
+      gap: '4px',
+    },
+    roundExtraSmall: {
+      height: '26px',
+      borderRadius: '12px',
+      fontSize: '12px',
+      py: '5px',
+      px: '12px',
+      gap: '4px'
+    },
     iconSecondary: {
       backgroundColor: colors.secondary,
       color: colors.neutral[0],

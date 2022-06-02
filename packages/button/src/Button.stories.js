@@ -164,19 +164,19 @@ export const roundIconDisabled = () => (
 )
 
 export const roundLarge = () => (
-  <ButtonRound text="Label" icon="icon-unificar" variant="primary"/>
+  <ButtonRound text="Label" icon="icon-unificar" variant={["primary", "roundLarge"]}/>
 )
 
 export const roundMedium = () => (
-  <ButtonRound text="Label" icon="icon-unificar" variant="primary" height='38px' borderRadius='20px' fontSize='14px' heightIcon='16px' py='10px' px='24px' fontSizeIcon='16px' gap='4px'/>
+  <ButtonRound text="Label" icon="icon-unificar" variant={["primary", "roundMedium"]}/>
 )
 
 export const roundSmall = () => (
-  <ButtonRound text="Label" icon="icon-unificar" variant="primary" height='32px' borderRadius='16px' fontSize='12px' heightIcon='16px' py='8px' px='14px' fontSizeIcon='16px' gap='4px'/>
+  <ButtonRound text="Label" icon="icon-unificar" variant={["primary", "roundSmall"]}/>
 )
 
 export const roundExtraSmall = () => (
-  <ButtonRound text="Label" icon="icon-unificar" variant="primary" height='26px' borderRadius='12px' fontSize='12px' heightIcon='16px' py='5px' px='12px' fontSizeIcon='16px' gap='4px'/>
+  <ButtonRound text="Label" icon="icon-unificar" variant={["primary", "roundExtraSmall"]}/>
 )
 
 export const roundColourFeedback = () => (
