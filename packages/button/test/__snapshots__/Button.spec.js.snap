@@ -715,7 +715,7 @@ exports[`Button mainIconButton 1`] = `
         Object {
           "color": "#707E86",
           "fontSize": "22px",
-          "paddingTop": "4px",
+          "paddingTop": "8px",
         }
       }
     />
