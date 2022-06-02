@@ -40,14 +40,14 @@ export const Button = (props) => (
 
 export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   let heightIcon = '24px';
-  if(variant.includes("iconSmall")) {
+  if(variant.includes("iconSmall") || variant.includes("roundIconSmall")) {
     heightIcon = '22px';
-  } else if (variant.includes("iconExtraSmall22px") || variant.includes("iconExtraSmall")) {
+  } else if (variant.includes("iconExtraSmall22px") || variant.includes("iconExtraSmall")
+    || variant.includes("roundIconExtraSmall") || variant.includes("roundIconExtraSmall22px")) {
     heightIcon = '16px';
-  }else if (variant.includes("iconExtraSmall18px")) {
+  }else if (variant.includes("iconExtraSmall18px") || variant.includes("roundIconExtraSmall18px")) {
     heightIcon = '12px';
   }
-  console.log(heightIcon)
   return (
     <Box sx={{ position: 'relative' }}>
       <Box

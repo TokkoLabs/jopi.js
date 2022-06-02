@@ -128,39 +128,39 @@ export const subtleIconDisabled = () => (
 )
 
 export const roundIconLarge = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="primary"/>
+  <ButtonIcon isRounded icon="icon-agregar" variant={["iconPrimary", "roundIconLarge"]}/>
 )
 
 export const roundIconMedium = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='38px' width='38px'/>
+  <ButtonIcon isRounded icon="icon-agregar" variant={["iconPrimary", "roundIconMedium"]}/>
 )
 
 export const roundIconSmall = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='32px' width='32px' fontSize='22px' heightIcon='22px'/>
+  <ButtonIcon isRounded icon="icon-agregar" variant={["iconPrimary", "roundIconSmall"]}/>
 )
 
 export const roundIconExtraSmall = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='26px' width='26px' fontSize='16px' heightIcon='16px' py='5px' px='12px'/>
+  <ButtonIcon isRounded icon="icon-agregar" variant={["iconPrimary", "roundIconExtraSmall"]}/>
 )
 
 export const roundIconExtraSmall22px = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='22px' width='22px' fontSize='16px' heightIcon='16px' py='4px' px='10px'/>
+  <ButtonIcon isRounded icon="icon-agregar" variant={["iconPrimary", "roundIconExtraSmall22px"]}/>
 )
 
 export const roundIconExtraSmall18px = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconPrimary" height='18px' width='18px' fontSize='12px' heightIcon='12px' py='4px' px='8px'/>
+  <ButtonIcon isRounded icon="icon-agregar" variant={["iconPrimary", "roundIconExtraSmall18px"]}/>
 )
 
 export const subtleRoundIcon = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="subtleIconButton"/>
+  <ButtonIcon isRounded icon="icon-agregar" variant={["subtleIconButton", "roundIconLarge"]}/>
 )
 
 export const roundIconArrow = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-dropdown" variant="roundIconArrow"/>
+  <ButtonIcon isRounded icon="icon-dropdown" variant={["roundIconArrow", "roundIconLarge"]}/>
 )
 
 export const roundIconDisabled = () => (
-  <ButtonIcon isRounded borderRadius={99999} icon="icon-agregar" variant="iconDisabled"/>
+  <ButtonIcon isRounded icon="icon-agregar" variant={["iconDisabled", "roundIconLarge"]}/>
 )
 
 export const roundLarge = () => (
