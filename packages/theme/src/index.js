@@ -680,6 +680,19 @@ const theme = {
       transform: 'rotate(-180deg)',
       boxShadow: '-2px -1px 4px rgba(0, 0, 0, 0.15)',
     },
+    userButton: {
+      background: colors.transparent,
+      padding: '0px',
+      fontSize: '12px',
+      flexGrow: 0,
+      gap: '8px',
+      ':hover': {
+        color: colors.secondaryHover,
+      },
+      ':focus': {
+        color: colors.secondaryPressed,
+      },
+    },
     dropdown: {
       backgroundColor: colors.inputBackground,
       color: colors.inputPlaceholderColor,

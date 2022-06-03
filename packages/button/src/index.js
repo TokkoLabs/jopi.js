@@ -48,7 +48,7 @@ export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVari
     heightIcon = '16px'
   } else if (variant.includes('iconExtraSmall18px') || variant.includes('roundIconExtraSmall18px')) {
     heightIcon = '12px'
-  }else if (variant.includes('collapseButtonOpen') || variant.includes('collapseButtonClosed')) {
+  } else if (variant.includes('collapseButtonOpen') || variant.includes('collapseButtonClosed')) {
     paddingTopIcon = '14px'
   }
   return (
