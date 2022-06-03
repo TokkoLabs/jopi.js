@@ -1,6 +1,7 @@
 import React from 'react'
 import { Badge } from '@oneloop/badge'
 import { Box } from '@oneloop/box'
+import { Image } from '@oneloop/image'
 import { useToggle } from '@oneloop/hooks'
 import '@oneloop/fonts'
 
@@ -226,3 +227,41 @@ export const ButtonMain = ({ text, icon, isCollapsible, isActive = false, isExpa
     </Box>
   )
 }
+
+export const ButtonUser = ({ variant, srcImage, text, ...props }) => (
+  <Box sx={{ position: 'relative' }}>
+    <Box
+      as='button'
+      tx='buttons'
+      variant={variant}
+      {...props}
+      __css={{
+        appearance: 'none',
+        display: 'flex',
+        lineHeight: 'inherit',
+        fontFamily: 'Nunito Sans',
+        fontWeight: 'bold',
+        fontSize: 16,
+        textAlign: 'center',
+        textDecoration: 'none',
+        cursor: 'pointer',
+        outline: 'none',
+        color: 'white',
+        bg: 'primary',
+        border: 0,
+        borderRadius: '12px',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '48px',
+        whiteSpace: 'nowrap',
+        padding: '13px 26px 13px 26px',
+        gap: '6px',
+      }}
+    >
+      {srcImage && <Image src={srcImage} variant="avatar"/> }
+      {!srcImage && <span className='icon-contacto'/>}
+      {text}
+    </Box>
+  </Box>
+)

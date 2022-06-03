@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, ButtonIcon, ButtonRound, ButtonMain } from '.'
+import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonMainIcon, ButtonUser } from '.'
 import { Image } from '@oneloop/image'
 
 export default {
@@ -213,8 +213,13 @@ export const mainButtonCollapsible = () => (
 )
 
 export const userButton = () => (
-  <Button variant='userButton'>
-    <Image src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" variant="avatar"/>
-    {'Nombre usuario'}
-  </Button>
+  <ButtonUser variant='userButton' text='Nombre Usuario' />
+)
+
+export const userButtonWithImage = () => (
+  <ButtonUser variant='userButton' srcImage='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' text='Nombre Usuario' />
+)
+
+export const mainIconButton = () => (
+  <ButtonMainIcon variant='smallIconMainButton' icon='icon.propiedades' badgeValue='20' badgeVariant='primary'/>
 )
