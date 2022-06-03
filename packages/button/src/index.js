@@ -178,6 +178,7 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
           height: '48px',
           gap: '6px',
           whiteSpace: 'nowrap',
+          padding: '13px 26px 13px 26px',
         }}
       >
         <span className={icon} style={{ height: heightIcon, fontSize: heightIcon }}></span>
