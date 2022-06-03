@@ -4,12 +4,12 @@ import { Box } from '@oneloop/box'
 import { useToggle } from '@oneloop/hooks'
 import '@oneloop/fonts'
 
-export const Button = (props) => (
+export const Button = ({ variant, ...props }) => (
   <Box sx={{ position: 'relative' }}>
     <Box
       as='button'
       tx='buttons'
-      variant='primary'
+      variant={variant}
       {...props}
       __css={{
         appearance: 'none',
@@ -22,17 +22,17 @@ export const Button = (props) => (
         textDecoration: 'none',
         cursor: 'pointer',
         outline: 'none',
-        px: 26,
-        py: 13,
         color: 'white',
         bg: 'primary',
         border: 0,
-        borderRadius: 'button',
+        borderRadius: '12px',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         height: '48px',
         whiteSpace: 'nowrap',
+        padding: '13px 26px 13px 26px',
+        gap: '6px',
       }}
     />
   </Box>
