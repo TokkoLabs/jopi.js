@@ -128,6 +128,10 @@ export const subtleIconDisabled = () => (
   <ButtonIcon icon='icon-agregar' variant='iconDisabled'/>
 )
 
+export const iconSecondaryWithBadge = () => (
+  <ButtonIcon icon='icon-pinup' variant='smallIconButtonTransparent' badgeValue='20' badgeVariant='primary'/>
+)
+
 export const roundIconLarge = () => (
   <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconLarge']}/>
 )
@@ -224,5 +228,9 @@ export const mainIconButtonHoldPressed = () => {
   const [active, setActive] = React.useState(false)
   
   return (
-    <ButtonMainIcon variant='smallIconMainButton' icon='icon-propiedades' isExpanded={active} onClick={() => setActive()} badgeValue='20' badgeVariant='primary'/>
+    <ButtonMainIcon variant='smallIconMainButton' icon='icon-propiedades' isActive={active} onClick={() => setActive(true)} badgeValue='20' badgeVariant='primary'/>
 )}
+
+export const iconWhiteHelp = () => (
+  <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px'/>
+)

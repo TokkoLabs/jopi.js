@@ -83,7 +83,7 @@ export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVari
         }}
       >
         <span className={icon} style={{ height: heightIcon, paddingTop: paddingTopIcon }}></span>
-        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '3px', left: '30px' }}>{ badgeValue }</Badge> }
+        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
       </Box>
     </Box>
   )

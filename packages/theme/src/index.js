@@ -660,6 +660,26 @@ const theme = {
         backgroundColor: colors.transparent,
       },
     },
+    smallIconButtonTransparent: {
+      width: '32px',
+      height: '32px',
+      borderRadius: '9px',
+      gap: '10px',
+      backgroundColor: colors.transparent,
+      color: colors.neutral[0],
+      ':hover': {
+        backgroundColor: colors.secondaryHover,
+      },
+      ':focus': {
+        backgroundColor: colors.secondaryPressed
+      },
+    },
+    whiteExtraSmall24px: {
+      height: '24px',
+      width: '24px',
+      color: colors.neutral[0],
+      backgroundColor: colors.transparent,
+    },
     collapseButtonOpen: {
       color: colors.primary,
       backgroundColor: colors.neutral[0],
