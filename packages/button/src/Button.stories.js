@@ -220,8 +220,9 @@ export const userButtonWithImage = () => (
   <ButtonUser variant='userButton' srcImage='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' text='Nombre Usuario' />
 )
 
-export const mainIconButton = () => (
-  <ButtonMainIcon variant='smallIconMainButton' icon='icon-propiedades' badgeValue='20' badgeVariant='primary'/>
-)
-//const [active0, setActive0] = React.useState(false)
-//isActive={active0}
+export const mainIconButtonHoldPressed = () => {
+  const [active, setActive] = React.useState(false)
+  
+  return (
+    <ButtonMainIcon variant='smallIconMainButton' icon='icon-propiedades' isExpanded={active} onClick={() => setActive()} badgeValue='20' badgeVariant='primary'/>
+)}
