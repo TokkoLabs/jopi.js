@@ -515,6 +515,7 @@ const theme = {
       backgroundColor: colors.neutral[0],
       border: colors.neutral[0],
       color: colors.subtle,
+      colorActive: colors.subtlePressed,
       ':hover': {
         backgroundColor: colors.neutral[7],
         color: colors.subtleHover,
@@ -522,6 +523,7 @@ const theme = {
       ':focus': {
         backgroundColor: colors.neutral[0],
         color: colors.subtlePressed,
+        colorActive: colors.subtlePressed,
       },
     },
     roundIconArrow: {

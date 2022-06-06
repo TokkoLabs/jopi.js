@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonMainIcon, ButtonUser } from '.'
+import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonHoldPressIcon, ButtonUser } from '.'
 import { Image } from '@oneloop/image'
 
 export default {
@@ -228,9 +228,16 @@ export const mainIconButtonHoldPressed = () => {
   const [active, setActive] = React.useState(false)
   
   return (
-    <ButtonMainIcon variant='smallIconMainButton' icon='icon-propiedades' isActive={active} onClick={() => setActive(true)} badgeValue='20' badgeVariant='primary'/>
+    <ButtonHoldPressIcon variant='smallIconMainButton' icon='icon-propiedades' isActive={active} onClick={() => setActive(true)} badgeValue='20' badgeVariant='primary'/>
 )}
 
 export const iconWhiteHelp = () => (
   <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px'/>
 )
+
+export const mainIconSubtleHoldPressed = () => {
+  const [active, setActive] = React.useState(false)
+  
+  return (
+    <ButtonHoldPressIcon variant={['subtleIcon', 'iconExtraSmall']} icon='icon-propiedades' isActive={active} onClick={() => setActive(true)}/>
+)}
