@@ -501,6 +501,29 @@ const theme = {
         color: colors.subtlePressed,
       },
     },
+    mainButtonCollapsible: {
+      backgroundColor: colors.transparent,
+      ':hover': {
+        backgroundColor: colors.neutral[7],
+      },
+      ':focus': {
+        backgroundColor: colors.transparent,
+      },
+    },
+    smallIconMainButton: {
+      width: '32px',
+      height: '32px',
+      borderRadius: '9px',
+      fontSize: '22px',
+      heightIcon: '22px',
+      backgroundColor: colors.transparent,
+      ':hover': {
+        backgroundColor: colors.neutral[7],
+      },
+      ':focus': {
+        backgroundColor: colors.transparent,
+      },
+    },
     collapseButtonOpen: {
       color: colors.primary,
       backgroundColor: colors.neutral[0],

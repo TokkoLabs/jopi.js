@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Button } from '@oneloop/button'
+import { Button, ButtonMainIcon, ButtonMain } from '@oneloop/button'
 import { Box } from '@oneloop/box'
 
 const CollapsibleContext = createContext()
@@ -25,27 +25,67 @@ const useCollapsibleContext = () => {
   return context
 }
 
-const CollapsibleButton = ({ children, ...props }) => {
-  return (
-    <Button
-      {...props}
-      sx={{
-        width: '100%',
-        border: 'none',
-        borderRadius: '0',
-        padding: '10px 0',
-        textAlign: 'left',
-        position: 'relative',
-        display: 'flex',
-        justifyContent: 'space-between',
-        '+ .content': {
-          overflow: 'hidden',
-        },
-      }}
-    >
-      {children}
-    </Button>
-  )
+const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon = false, isActive = false, icon, text, isExpanded = false, badgeValue, badgeVariant, ...props }) => {
+  if (isMainButton) {
+    return (
+      <ButtonMain
+        {...props}
+        icon={icon}
+        text={text}
+        isCollapsible
+        isExpanded={isExpanded}
+        isActive={isActive}
+        badgeValue={badgeValue}
+        badgeVariant={badgeVariant}
+        sx={{
+          width: '100%',
+          '+ .content': {
+            overflow: 'hidden',
+          },
+        }}
+      />
+    )
+  } else if (isSmallButtonIcon) {
+    return (
+      <ButtonMainIcon
+        {...props}
+        variant="smallIconMainButton"
+        icon={icon}
+        text={text}
+        isCollapsible
+        isExpanded={isExpanded}
+        isActive={isActive}
+        badgeValue={badgeValue}
+        badgeVariant={badgeVariant}
+        sx={{
+          '+ .content': {
+            overflow: 'hidden',
+          },
+        }}
+      />
+    )
+  } else {
+    return (
+      <Button
+        {...props}
+        sx={{
+          width: '100%',
+          border: 'none',
+          borderRadius: '0',
+          padding: '10px 0',
+          textAlign: 'left',
+          position: 'relative',
+          display: 'flex',
+          justifyContent: 'space-between',
+          '+ .content': {
+            overflow: 'hidden',
+          },
+        }}
+      >
+        {children}
+      </Button>
+    )
+  }
 }
 
 const CollapsibleBody = ({ children }) => {
