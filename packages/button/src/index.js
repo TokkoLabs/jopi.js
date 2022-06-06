@@ -134,12 +134,7 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
 
 export const ButtonMainIcon = ({ icon, isRounded, heightIcon, variant, isActive = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   const [hover, setHover] = useToggle(false)
-  let px = 0
-  let py = 0
-  if (variant === 'collapseButtonOpen' || variant === 'collapseButtonClosed') {
-    px = '8px'
-    py = '4px'
-  }
+
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -160,8 +155,6 @@ export const ButtonMainIcon = ({ icon, isRounded, heightIcon, variant, isActive 
           textDecoration: 'none',
           cursor: 'pointer',
           outline: 'none',
-          px: px !== 0 ? px : '14px',
-          py: py !== 0 ? py : '5px',
           color: 'white',
           bg: 'primary',
           border: 0,

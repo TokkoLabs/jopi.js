@@ -75,7 +75,7 @@ const DrawerMotion = ({
     position: 'relative',
     left: 0,
     top: 0,
-    height: '100%',
+    height: '500px',
     maxWidth: '100%',
     width: animationWidth,
     overflowY: 'auto',

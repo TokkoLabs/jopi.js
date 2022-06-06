@@ -221,5 +221,7 @@ export const userButtonWithImage = () => (
 )
 
 export const mainIconButton = () => (
-  <ButtonMainIcon variant='smallIconMainButton' icon='icon.propiedades' badgeValue='20' badgeVariant='primary'/>
+  <ButtonMainIcon variant='smallIconMainButton' icon='icon-propiedades' badgeValue='20' badgeVariant='primary'/>
 )
+//const [active0, setActive0] = React.useState(false)
+//isActive={active0}

@@ -652,9 +652,11 @@ const theme = {
       heightIcon: '22px',
       backgroundColor: colors.transparent,
       ':hover': {
+        color: colors.primary,
         backgroundColor: colors.neutral[7],
       },
       ':focus': {
+        color: colors.primary,
         backgroundColor: colors.transparent,
       },
     },
