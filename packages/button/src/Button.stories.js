@@ -238,6 +238,13 @@ export const mainIconButtonHoldPressed = () => {
   const [active, setActive] = React.useState(false)
   
   return (
+    <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' isActive={active} onClick={() => setActive(true)} badgeValue='20' badgeVariant='primary'/>
+)}
+
+export const mainIconButtonHoldPressed3 = () => {
+  const [active, setActive] = React.useState(false)
+  
+  return (
     <ButtonHoldPressIcon variant='smallIconMainButton' icon='icon-propiedades' isActive={active} onClick={() => setActive(true)} badgeValue='20' badgeVariant='primary'/>
 )}
 

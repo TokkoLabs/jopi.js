@@ -665,6 +665,7 @@ const theme = {
       },
     },
     smallIconMainButton: {
+      color: colors.darkGray,
       width: '32px',
       height: '32px',
       borderRadius: '9px',
