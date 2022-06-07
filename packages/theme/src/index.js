@@ -24,6 +24,7 @@ const colors = {
   badgeBackgroundSuccess: '#9EE4CB',
   badgeSuccess: '#048465',
   transparent: '#00000000',
+  neutral3: '#6F838D',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -644,6 +645,23 @@ const theme = {
       },
       ':focus': {
         backgroundColor: colors.transparent,
+      },
+    },
+    mainItemSmall:{
+      backgroundColor: colors.transparent,
+      color: colors.neutral3,
+      height: '28px',
+      fontSize: '12px',
+      fontWeight: '600',
+      lineHeight: '16px',
+      padding: '9px 12px 9px 12px',
+      ':hover': {
+        fontWeight: '600px',
+        color: colors.subtlePressed,
+      },
+      ':focus': {
+        color: colors.subtlePressed,
+        fontWeight: 'bold',
       },
     },
     smallIconMainButton: {

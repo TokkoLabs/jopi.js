@@ -1,7 +1,5 @@
 import React from 'react'
-
-import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonHoldPressIcon, ButtonUser } from '.'
-import { Image } from '@oneloop/image'
+import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonHoldPressIcon, ButtonHoldPress, ButtonUser } from '.'
 
 export default {
   component: Button,
@@ -208,6 +206,17 @@ export const subtleButton = () => (
   <Button variant='subtleButton'>{'Label'}</Button>
 )
 
+export const mainItemSmall = () => (
+  <Button variant='mainItemSmall'>{'Label'}</Button>
+)
+
+export const mainItemSmallHoldPressed = () => {
+  const [active, setActive] = React.useState(false)
+
+  return (
+    <ButtonHoldPress variant='mainItemSmall' isActive={active} onClick={() => setActive(!active)} text={'Label'}/>
+)}
+
 export const mainButton = () => (
   <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos'/>
 )
@@ -239,5 +248,5 @@ export const mainIconSubtleHoldPressed = () => {
   const [active, setActive] = React.useState(false)
   
   return (
-    <ButtonHoldPressIcon variant={['subtleIcon', 'iconExtraSmall']} icon='icon-propiedades' isActive={active} onClick={() => setActive(true)}/>
+    <ButtonHoldPressIcon variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={() => setActive(true)}/>
 )}

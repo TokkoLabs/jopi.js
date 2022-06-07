@@ -3,6 +3,7 @@ import { Badge } from '@oneloop/badge'
 import { Box } from '@oneloop/box'
 import { Image } from '@oneloop/image'
 import { useToggle } from '@oneloop/hooks'
+import theme from '@oneloop/theme'
 import '@oneloop/fonts'
 
 export const Button = ({ variant, ...props }) => (
@@ -143,7 +144,7 @@ export const ButtonHoldPressIcon = ({ icon, isRounded, heightIcon, variant, isAc
     colorIcon = '#384248'
   } else if (variant.includes('smallIconMainButton') || variant.includes('subtleIcon')) {
     colorIcon = '#707E86'
-  } 
+  }
   
   return (
     <Box sx={{ position: 'relative' }}>
@@ -180,6 +181,61 @@ export const ButtonHoldPressIcon = ({ icon, isRounded, heightIcon, variant, isAc
         {colorIcon && <span className={icon} style={{ color: colorIcon, fontSize: '22px', paddingTop: '8px' }}/> }
         {!colorIcon && <span className={icon} style={{ }}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '4px', left: '15px' }}>{badgeValue}</Badge> }
+      </Box>
+    </Box>
+  )
+}
+
+
+export const ButtonHoldPress = ({ variant, isActive = false, text, colorValue, fontWeightValue, ...props }) => {
+  if (isActive) {
+    if (Array.isArray(variant)) {
+      const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
+      colorValue = indexes.map(index => {
+        if (Object.values(theme.buttons)[index][':focus'] !== undefined){
+          return Object.values(theme.buttons)[index][':focus'].color
+        }
+      })
+    } else {
+      const index =  Object.keys(theme.buttons).indexOf(variant)
+      colorValue = Object.values(theme.buttons)[index][':focus'].color
+    }
+  } else {
+    colorValue = undefined
+  }
+
+  return (
+    <Box sx={{ position: 'relative' }}>
+      <Box
+        as='button'
+        tx='buttons'
+        variant={variant}
+        {...props}
+        __css={{
+          'focus': true,
+          appearance: 'none',
+          display: 'flex',
+          lineHeight: 'inherit',
+          fontFamily: 'Nunito Sans',
+          fontWeight: 'normal',
+          fontSize: '24px',
+          textAlign: 'center',
+          textDecoration: 'none',
+          cursor: 'pointer',
+          outline: 'none',
+          color: 'white',
+          bg: 'primary',
+          border: 0,
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius: 12,
+          width: '48px',
+          height: '48px',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        <span style={colorValue && {color: colorValue, fontWeight: 'bold'}}>{text}</span>
       </Box>
     </Box>
   )
