@@ -187,14 +187,14 @@ export const ButtonHoldPressIcon = ({ icon, isRounded, heightIcon, variant, isAc
 }
 
 
-export const ButtonHoldPress = ({ variant, isActive = false, text, fontWeightValue, ...props }) => {
+export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false, text, icon, ...props }) => {
   let colorValue = undefined
   if (isActive) {
     if (Array.isArray(variant)) {
       const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
-      colorValue = indexes.map(index => {
+      indexes.map(index => {
         if (Object.values(theme.buttons)[index][':focus'] !== undefined){
-          return Object.values(theme.buttons)[index][':focus'].color
+          colorValue = Object.values(theme.buttons)[index][':focus'].color
         }
       })
     } else {
@@ -202,7 +202,7 @@ export const ButtonHoldPress = ({ variant, isActive = false, text, fontWeightVal
       colorValue = Object.values(theme.buttons)[index][':focus'].color
     }
   }
-
+  
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -232,9 +232,11 @@ export const ButtonHoldPress = ({ variant, isActive = false, text, fontWeightVal
           width: '48px',
           height: '48px',
           whiteSpace: 'nowrap',
+          paddingTop: '8px'
         }}
       >
-        <span style={colorValue && {color: colorValue, fontWeight: 'bold'}}>{text}</span>
+        {!icon && <span style={colorValue && {color: colorValue, fontWeight: 'bold'}}>{text}</span> }
+        {icon && <span className={icon} style={ colorValue && { color: colorValue }}/> }
       </Box>
     </Box>
   )

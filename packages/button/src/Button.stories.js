@@ -246,8 +246,8 @@ export const iconWhiteHelp = () => (
 )
 
 export const mainIconSubtleHoldPressed = () => {
-  const [active, setActive] = React.useState(false)
+  const [active, setActive] = useToggle(false)
   
   return (
-    <ButtonHoldPressIcon variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={() => setActive(true)}/>
+    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={() => setActive(!active)}/>
 )}
