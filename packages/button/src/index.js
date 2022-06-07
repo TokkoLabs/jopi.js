@@ -133,60 +133,6 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
   )
 }
 
-export const ButtonHoldPressIcon = ({ icon, isRounded, heightIcon, variant, isActive = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
-  const [hover, setHover] = useToggle(false)
-  let colorIcon = ''
-  if (variant.includes('smallIconMainButton') && (isExpanded || isActive || hover)) {
-    colorIcon = '#DF1E02'
-  } else if (variant.includes('subtleIcon') && (hover)) {
-    colorIcon = '#4D5B64'
-  } else if (variant.includes('subtleIcon') && (isActive)) {
-    colorIcon = '#384248'
-  } else if (variant.includes('smallIconMainButton') || variant.includes('subtleIcon')) {
-    colorIcon = '#707E86'
-  }
-  
-  return (
-    <Box sx={{ position: 'relative' }}>
-      <Box
-        as='button'
-        tx='buttons'
-        variant={variant}
-        onMouseOver={() => setHover(true)}
-        onMouseOut={() => setHover(false)}
-        {...props}
-        __css={{
-          appearance: 'none',
-          display: 'flex',
-          lineHeight: 'inherit',
-          fontFamily: 'Nunito Sans',
-          fontWeight: (isExpanded || isActive) ? 'bold' : 'normal',
-          fontSize: '24px',
-          textAlign: 'center',
-          textDecoration: 'none',
-          cursor: 'pointer',
-          outline: 'none',
-          color: 'white',
-          bg: 'primary',
-          border: 0,
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          borderRadius: 12,
-          width: '48px',
-          height: '48px',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        {colorIcon && <span className={icon} style={{ color: colorIcon, fontSize: '22px', paddingTop: '8px' }}/> }
-        {!colorIcon && <span className={icon} style={{ }}/> }
-        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
-      </Box>
-    </Box>
-  )
-}
-
-
 export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   let colorValue = undefined
   if (isActive) {
