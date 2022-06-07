@@ -134,13 +134,14 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
 }
 
 export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
-  let colorValue = undefined
+  let colorValue
   if (isActive) {
     if (Array.isArray(variant)) {
       const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
       indexes.map(index => {
-        if (Object.values(theme.buttons)[index][':focus'] !== undefined){
+        if (Object.values(theme.buttons)[index][':focus'] !== undefined) {
           colorValue = Object.values(theme.buttons)[index][':focus'].color
+          return colorValue
         }
       })
     } else {

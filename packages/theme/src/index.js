@@ -647,7 +647,7 @@ const theme = {
         backgroundColor: colors.transparent,
       },
     },
-    mainItemSmall:{
+    mainItemSmall: {
       backgroundColor: colors.transparent,
       color: colors.neutral3,
       height: '28px',
@@ -692,7 +692,7 @@ const theme = {
         backgroundColor: colors.secondaryHover,
       },
       ':focus': {
-        backgroundColor: colors.secondaryPressed
+        backgroundColor: colors.secondaryPressed,
       },
     },
     whiteExtraSmall24px: {
