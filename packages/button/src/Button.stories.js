@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonHoldPressIcon, ButtonHoldPress, ButtonUser } from '.'
+import { useToggle } from '@oneloop/hooks'
 
 export default {
   component: Button,
@@ -211,7 +212,7 @@ export const mainItemSmall = () => (
 )
 
 export const mainItemSmallHoldPressed = () => {
-  const [active, setActive] = React.useState(false)
+  const [active, setActive] = useToggle(false)
 
   return (
     <ButtonHoldPress variant='mainItemSmall' isActive={active} onClick={() => setActive(!active)} text={'Label'}/>

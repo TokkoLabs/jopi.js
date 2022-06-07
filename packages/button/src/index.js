@@ -187,7 +187,8 @@ export const ButtonHoldPressIcon = ({ icon, isRounded, heightIcon, variant, isAc
 }
 
 
-export const ButtonHoldPress = ({ variant, isActive = false, text, colorValue, fontWeightValue, ...props }) => {
+export const ButtonHoldPress = ({ variant, isActive = false, text, fontWeightValue, ...props }) => {
+  let colorValue = undefined
   if (isActive) {
     if (Array.isArray(variant)) {
       const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
@@ -200,8 +201,6 @@ export const ButtonHoldPress = ({ variant, isActive = false, text, colorValue, f
       const index =  Object.keys(theme.buttons).indexOf(variant)
       colorValue = Object.values(theme.buttons)[index][':focus'].color
     }
-  } else {
-    colorValue = undefined
   }
 
   return (
