@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonMainIcon } from '../src'
+import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonHoldPress } from '../src'
 
 describe('Button', () => {
   test('primary', () => {
@@ -229,7 +229,7 @@ describe('Button', () => {
 
   test('mainIconButton', () => {
     const tree = renderer
-      .create(<ButtonMainIcon variant="mainButtonCollapsible" icon="icon-propiedades"/>)
+      .create(<ButtonHoldPress variant="mainButtonCollapsible" icon="icon-propiedades"/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()

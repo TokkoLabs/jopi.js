@@ -28,10 +28,6 @@ exports[`Button collapseButtonOpen 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
   color: white;
   background-color: primary;
   border: 0;
@@ -106,10 +102,6 @@ exports[`Button iconDisabled 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
   background-color: primary;
   border: 0;
@@ -176,10 +168,6 @@ exports[`Button iconPrimary 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
   background-color: primary;
   border: 0;
@@ -246,10 +234,6 @@ exports[`Button iconSecondary 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
   background-color: primary;
   border: 0;
@@ -316,14 +300,10 @@ exports[`Button link 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -337,6 +317,8 @@ exports[`Button link 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -378,14 +360,10 @@ exports[`Button linkDisabled 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -399,6 +377,8 @@ exports[`Button linkDisabled 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -440,14 +420,10 @@ exports[`Button linkSubtle 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -461,6 +437,8 @@ exports[`Button linkSubtle 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -677,12 +655,8 @@ exports[`Button mainIconButton 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
-  background-color: #00000000;
+  background-color: primary;
   border: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -706,16 +680,12 @@ exports[`Button mainIconButton 1`] = `
 >
   <button
     className="c1"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
   >
     <span
       className="icon-propiedades"
       style={
         Object {
-          "color": "#707E86",
-          "fontSize": "22px",
-          "paddingTop": "8px",
+          "height": undefined,
         }
       }
     />
@@ -751,14 +721,10 @@ exports[`Button outlineDisabled 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -772,6 +738,8 @@ exports[`Button outlineDisabled 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -813,10 +781,6 @@ exports[`Button outlineIconDisabled 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
   background-color: primary;
   border: 0;
@@ -883,14 +847,10 @@ exports[`Button primary 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -904,6 +864,8 @@ exports[`Button primary 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -945,14 +907,10 @@ exports[`Button primaryDisabled 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -966,6 +924,8 @@ exports[`Button primaryDisabled 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -1007,14 +967,10 @@ exports[`Button primaryOutline 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1028,6 +984,8 @@ exports[`Button primaryOutline 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -1069,10 +1027,6 @@ exports[`Button primaryOutlineIcon 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
   background-color: primary;
   border: 0;
@@ -1139,14 +1093,10 @@ exports[`Button primaryText 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1160,6 +1110,8 @@ exports[`Button primaryText 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -1201,10 +1153,6 @@ exports[`Button roundButton 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
@@ -1223,6 +1171,7 @@ exports[`Button roundButton 1`] = `
   height: 48px;
   gap: 6px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
 }
 
 <div
@@ -1235,8 +1184,8 @@ exports[`Button roundButton 1`] = `
       className="icon-unificar"
       style={
         Object {
-          "fontSize": "20px",
-          "height": "20px",
+          "fontSize": "16px",
+          "height": "16px",
         }
       }
     />
@@ -1276,10 +1225,6 @@ exports[`Button roundButtonColourFeedback 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
@@ -1298,6 +1243,7 @@ exports[`Button roundButtonColourFeedback 1`] = `
   height: 48px;
   gap: 6px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
 }
 
 <div
@@ -1310,8 +1256,8 @@ exports[`Button roundButtonColourFeedback 1`] = `
       className="icon-check"
       style={
         Object {
-          "fontSize": "20px",
-          "height": "20px",
+          "fontSize": "16px",
+          "height": "16px",
         }
       }
     />
@@ -1351,10 +1297,6 @@ exports[`Button roundButtonDisabled 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
@@ -1373,6 +1315,7 @@ exports[`Button roundButtonDisabled 1`] = `
   height: 48px;
   gap: 6px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
 }
 
 <div
@@ -1385,8 +1328,8 @@ exports[`Button roundButtonDisabled 1`] = `
       className="icon-unificar"
       style={
         Object {
-          "fontSize": "20px",
-          "height": "20px",
+          "fontSize": "16px",
+          "height": "16px",
         }
       }
     />
@@ -1426,14 +1369,10 @@ exports[`Button secondary 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1447,6 +1386,8 @@ exports[`Button secondary 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -1488,14 +1429,10 @@ exports[`Button secondaryOutlineIcon 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1509,6 +1446,8 @@ exports[`Button secondaryOutlineIcon 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -1550,10 +1489,6 @@ exports[`Button secondaryOutlineIcon 2`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
   background-color: primary;
   border: 0;
@@ -1620,14 +1555,10 @@ exports[`Button secondaryText 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1641,6 +1572,8 @@ exports[`Button secondaryText 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -1682,14 +1615,10 @@ exports[`Button subtleButton 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1703,6 +1632,8 @@ exports[`Button subtleButton 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -1744,10 +1675,6 @@ exports[`Button subtleIcon 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
   background-color: primary;
   border: 0;
@@ -1814,10 +1741,6 @@ exports[`Button subtleIconDisabled 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
   background-color: primary;
   border: 0;
@@ -1884,14 +1807,10 @@ exports[`Button subtleText 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1905,6 +1824,8 @@ exports[`Button subtleText 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
@@ -1946,14 +1867,10 @@ exports[`Button textDisabled 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1967,6 +1884,8 @@ exports[`Button textDisabled 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
 }
 
 <div
