@@ -135,21 +135,26 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
 
 export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   let colorValue
-  if (isActive) {
-    if (Array.isArray(variant)) {
-      const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
-      indexes.map(index => {
-        if (Object.values(theme.buttons)[index][':focus'] !== undefined) {
-          colorValue = Object.values(theme.buttons)[index][':focus'].color
-          return colorValue
-        }
-      })
-    } else {
-      const index =  Object.keys(theme.buttons).indexOf(variant)
+  let heightIcon
+  if (Array.isArray(variant)) {
+    const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
+    indexes.map(index => {
+      if (Object.values(theme.buttons)[index][':focus'] !== undefined && isActive) {
+        colorValue = Object.values(theme.buttons)[index][':focus'].color
+      }
+      if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
+        heightIcon = Object.values(theme.buttons)[index].heightIcon
+      }
+      return colorValue
+    })
+  } else {
+    const index = Object.keys(theme.buttons).indexOf(variant)
+    heightIcon = Object.values(theme.buttons)[index].heightIcon
+    if (isActive) {
       colorValue = Object.values(theme.buttons)[index][':focus'].color
     }
   }
-  
+
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -158,7 +163,6 @@ export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false,
         variant={variant}
         {...props}
         __css={{
-          'focus': true,
           appearance: 'none',
           display: 'flex',
           lineHeight: 'inherit',
@@ -179,11 +183,11 @@ export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false,
           width: '48px',
           height: '48px',
           whiteSpace: 'nowrap',
-          paddingTop: '8px'
         }}
       >
-        {!icon && <span style={colorValue && {color: colorValue, fontWeight: 'bold'}}>{text}</span> }
-        {icon && <span className={icon} style={ colorValue && { color: colorValue }}/> }
+        { !icon && <span style={colorValue && { color: colorValue, fontWeight: 'bold' }}>{text}</span> }
+        { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }
+        { icon && !colorValue && <span className={icon} style={{ height: heightIcon }}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>

@@ -211,12 +211,13 @@ export const mainItemSmall = () => (
   <Button variant='mainItemSmall'>{'Label'}</Button>
 )
 
-export const mainItemSmallHoldPressed = () => {
-  const [active, setActive] = useToggle(false)
+export const MainItemSmallHoldPressed = () => {
+  const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='mainItemSmall' isActive={active} onClick={() => setActive(!active)} text={'Label'}/>
-)}
+    <ButtonHoldPress variant='mainItemSmall' isActive={active} onClick={toggle} text={'Label'}/>
+  )
+}
 
 export const mainButton = () => (
   <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos'/>
@@ -234,20 +235,22 @@ export const userButtonWithImage = () => (
   <ButtonUser variant='userButton' srcImage='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' text='Nombre Usuario' />
 )
 
-export const mainIconButtonHoldPressed = () => {
-  const [active, setActive] = React.useState(false)
-  
+export const MainIconButtonHoldPressed = () => {
+  const [active, toggle] = useToggle(false)
+
   return (
-    <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' isActive={active} onClick={() => setActive(true)} badgeValue='20' badgeVariant='primary'/>
-)}
+    <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' isActive={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
+  )
+}
 
 export const iconWhiteHelp = () => (
   <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px'/>
 )
 
-export const mainIconSubtleHoldPressed = () => {
-  const [active, setActive] = useToggle(false)
-  
+export const MainIconSubtleHoldPressed = () => {
+  const [active, toggle] = useToggle(false)
+
   return (
-    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={() => setActive(!active)}/>
-)}
+    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={toggle}/>
+  )
+}
