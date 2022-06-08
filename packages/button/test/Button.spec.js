@@ -229,7 +229,15 @@ describe('Button', () => {
 
   test('mainIconButton', () => {
     const tree = renderer
-      .create(<ButtonHoldPress variant="mainButtonCollapsible" icon="icon-propiedades"/>)
+      .create(<ButtonHoldPress variant="mainButtonCollapsible" icon="icon-propiedades" isActive/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainIconButtonActive', () => {
+    const tree = renderer
+      .create(<ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()

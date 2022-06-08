@@ -693,6 +693,77 @@ exports[`Button mainIconButton 1`] = `
 </div>
 `;
 
+exports[`Button mainIconButtonActive 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: primary;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <span
+      className="icon-propiedades"
+      style={
+        Object {
+          "color": "#384248",
+          "height": "16px",
+        }
+      }
+    />
+  </button>
+</div>
+`;
+
 exports[`Button outlineDisabled 1`] = `
 .c0 {
   box-sizing: border-box;
