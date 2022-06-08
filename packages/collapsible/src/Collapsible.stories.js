@@ -68,8 +68,8 @@ export const menu = () =>
           >
           </Collapsible.Button>
           <Collapsible.Body>
-            <Button variant="subtleText">{'User management'}</Button>
-            <Button variant="subtleText">{'Configuration'}</Button>
+            <Button variant='mainItemSmall'>{'User management'}</Button>
+            <Button variant='mainItemSmall'>{'Configuration'}</Button>
           </Collapsible.Body>
         </Collapsible>
 
@@ -85,8 +85,8 @@ export const menu = () =>
           >
           </Collapsible.Button>
           <Collapsible.Body>
-            <Button variant="subtleText" style={{ padding: '8px 0 8px 40px', height: '32px', fontSize: '11px', lineHeight: '13px' }}>{'User management'}</Button>
-            <Button variant="subtleText" style={{ padding: '8px 0 8px 40px', height: '32px', fontSize: '11px', lineHeight: '13px' }}>{'Configuration'}</Button>
+            <Button variant='mainItemSmall'>{'User management'}</Button>
+            <Button variant='mainItemSmall'>{'Configuration'}</Button>
           </Collapsible.Body>
         </Collapsible>
 
@@ -139,8 +139,8 @@ export const menuCollapsed = () =>
           >
           </Collapsible.Button>
           <Collapsible.Body>
-            <Button variant="subtleText">{'User management'}</Button>
-            <Button variant="subtleText">{'Configuration'}</Button>
+            <Button variant='mainItemSmall'>{'User management'}</Button>
+            <Button variant='mainItemSmall'>{'Configuration'}</Button>
           </Collapsible.Body>
         </Collapsible>
 
@@ -155,8 +155,8 @@ export const menuCollapsed = () =>
           >
           </Collapsible.Button>
           <Collapsible.Body>
-            <Button variant="subtleText" style={{ padding: '8px 0 8px 40px', height: '32px', fontSize: '11px', lineHeight: '13px' }}>{'User management'}</Button>
-            <Button variant="subtleText" style={{ padding: '8px 0 8px 40px', height: '32px', fontSize: '11px', lineHeight: '13px' }}>{'Configuration'}</Button>
+            <Button variant='mainItemSmall'>{'User management'}</Button>
+            <Button variant='mainItemSmall'>{'Configuration'}</Button>
           </Collapsible.Body>
         </Collapsible>
 

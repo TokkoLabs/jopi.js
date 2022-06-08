@@ -35,14 +35,10 @@ exports[`Dropdown default 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   color: white;
   background-color: primary;
   border: 0;
-  border-radius: button;
+  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -56,6 +52,8 @@ exports[`Dropdown default 1`] = `
   align-items: center;
   height: 48px;
   white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
