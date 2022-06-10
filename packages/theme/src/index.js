@@ -779,6 +779,12 @@ const theme = {
       height: '30px',
       borderRadius: radius.circle,
     },
+    quickdisplay: {
+      borderRadius: '16px',
+    },
+    rows: {
+      borderRadius: '8px',
+    }
   },
 }
 
