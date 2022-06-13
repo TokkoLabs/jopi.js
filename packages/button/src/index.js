@@ -41,18 +41,20 @@ export const Button = ({ variant, ...props }) => (
 )
 
 export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
-  let heightIcon = '24px'
-  let paddingTopIcon = 0
-  if (variant.includes('iconSmall') || variant.includes('roundIconSmall')) {
-    heightIcon = '22px'
-  } else if (variant.includes('iconExtraSmall22px') || variant.includes('iconExtraSmall') ||
-      variant.includes('roundIconExtraSmall') || variant.includes('roundIconExtraSmall22px')) {
-    heightIcon = '16px'
-  } else if (variant.includes('iconExtraSmall18px') || variant.includes('roundIconExtraSmall18px')) {
-    heightIcon = '12px'
-  } else if (variant.includes('collapseButtonOpen') || variant.includes('collapseButtonClosed')) {
-    paddingTopIcon = '14px'
+  let heightIcon
+  if (Array.isArray(variant)) {
+    const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
+    indexes.map(index => {
+      if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
+        heightIcon = Object.values(theme.buttons)[index].heightIcon
+      }
+      return heightIcon
+    })
+  } else {
+    const index = Object.keys(theme.buttons).indexOf(variant)
+    heightIcon = Object.values(theme.buttons)[index].heightIcon
   }
+
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -83,7 +85,7 @@ export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVari
           whiteSpace: 'nowrap',
         }}
       >
-        <span className={icon} style={{ height: heightIcon, paddingTop: paddingTopIcon }}></span>
+        <span className={icon} style={heightIcon && { height: heightIcon }}></span>
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
       </Box>
     </Box>
@@ -187,7 +189,7 @@ export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false,
       >
         { !icon && <span style={colorValue && { color: colorValue, fontWeight: 'bold' }}>{text}</span> }
         { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }
-        { icon && !colorValue && <span className={icon} style={{ height: heightIcon }}/> }
+        { icon && !colorValue && <span className={icon} style={heightIcon && { height: heightIcon }}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
