@@ -182,19 +182,6 @@ Array [
           Emprendimientos
            
         </span>
-        <span
-          className="icon-dropdown"
-          style={
-            Object {
-              "color": "#A6B2BA",
-              "fontSize": "18px",
-              "paddingTop": "4px",
-              "position": "absolute",
-              "right": "10px",
-              "transform": "rotate(-180deg)",
-            }
-          }
-        />
       </button>
     </div>
     <div
@@ -298,19 +285,6 @@ Array [
           Emprendimientos
            
         </span>
-        <span
-          className="icon-dropdown"
-          style={
-            Object {
-              "color": "#A6B2BA",
-              "fontSize": "18px",
-              "paddingTop": "4px",
-              "position": "absolute",
-              "right": "10px",
-              "transform": "rotate(0deg)",
-            }
-          }
-        />
       </button>
     </div>
   </div>,
