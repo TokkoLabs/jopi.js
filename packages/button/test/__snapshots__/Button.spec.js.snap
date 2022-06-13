@@ -65,8 +65,7 @@ exports[`Button collapseButtonOpen 1`] = `
       className="icon-atras"
       style={
         Object {
-          "height": "24px",
-          "paddingTop": "14px",
+          "height": "10px",
         }
       }
     />
@@ -128,14 +127,7 @@ exports[`Button iconDisabled 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -194,14 +186,7 @@ exports[`Button iconPrimary 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -260,14 +245,7 @@ exports[`Button iconSecondary 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -683,11 +661,6 @@ exports[`Button mainIconButton 1`] = `
   >
     <span
       className="icon-propiedades"
-      style={
-        Object {
-          "height": undefined,
-        }
-      }
     />
   </button>
 </div>
@@ -878,14 +851,7 @@ exports[`Button outlineIconDisabled 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -1118,6 +1084,10 @@ exports[`Button primaryOutlineIcon 1`] = `
   white-space: nowrap;
 }
 
+@media screen and (min-width:40em) {
+
+}
+
 <div
   className="c0"
 >
@@ -1128,7 +1098,6 @@ exports[`Button primaryOutlineIcon 1`] = `
       style={
         Object {
           "height": "24px",
-          "paddingTop": 0,
         }
       }
     />
@@ -1586,14 +1555,7 @@ exports[`Button secondaryOutlineIcon 2`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -1772,14 +1734,7 @@ exports[`Button subtleIcon 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -1838,14 +1793,7 @@ exports[`Button subtleIconDisabled 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;

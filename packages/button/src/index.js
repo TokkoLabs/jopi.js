@@ -85,7 +85,7 @@ export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVari
           whiteSpace: 'nowrap',
         }}
       >
-        <span className={icon} style={{ height: heightIcon }}></span>
+        <span className={icon} style={heightIcon && { height: heightIcon }}></span>
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
       </Box>
     </Box>
@@ -189,7 +189,7 @@ export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false,
       >
         { !icon && <span style={colorValue && { color: colorValue, fontWeight: 'bold' }}>{text}</span> }
         { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }
-        { icon && !colorValue && <span className={icon} style={{ height: heightIcon }}/> }
+        { icon && !colorValue && <span className={icon} style={heightIcon && { height: heightIcon }}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
