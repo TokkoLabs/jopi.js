@@ -23,6 +23,7 @@ const colors = {
   tips: '#FFD02A',
   badgeBackgroundSuccess: '#9EE4CB',
   badgeSuccess: '#048465',
+  mainButtonText: '#49565D',
   transparent: '#00000000',
   neutral3: '#6F838D',
   neutral: [
@@ -648,12 +649,16 @@ const theme = {
       },
     },
     mainButtonCollapsible: {
+      color: colors.mainButtonText,
       backgroundColor: colors.transparent,
+      gap: '4px',
       ':hover': {
         backgroundColor: colors.neutral[7],
+        color: colors.neutral[6],
       },
       ':focus': {
         backgroundColor: colors.transparent,
+        color: colors.neutral[6],
       },
     },
     mainItemSmall: {
@@ -661,7 +666,7 @@ const theme = {
       color: colors.neutral3,
       height: '28px',
       fontSize: '12px',
-      fontWeight: '600',
+      fontWeight: '400',
       lineHeight: '16px',
       padding: '9px 12px 9px 12px',
       ':hover': {
