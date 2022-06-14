@@ -135,7 +135,7 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
   )
 }
 
-export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonHoldPress = ({ variant, isActive = false, isInput = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   let colorValue
   let heightIcon
   if (Array.isArray(variant)) {
@@ -143,6 +143,8 @@ export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false,
     indexes.map(index => {
       if (Object.values(theme.buttons)[index][':focus'] !== undefined && isActive) {
         colorValue = Object.values(theme.buttons)[index][':focus'].color
+      } else if (Object.values(theme.buttons)[index].color !== undefined && isInput) {
+        colorValue = Object.values(theme.buttons)[index].color
       }
       if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
         heightIcon = Object.values(theme.buttons)[index].heightIcon
@@ -152,6 +154,9 @@ export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false,
   } else {
     const index = Object.keys(theme.buttons).indexOf(variant)
     heightIcon = Object.values(theme.buttons)[index].heightIcon
+    if (isInput) {
+      colorValue = Object.values(theme.buttons)[index].color
+    }
     if (isActive) {
       colorValue = Object.values(theme.buttons)[index][':focus'].color
     }
