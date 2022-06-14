@@ -592,8 +592,8 @@ exports[`Button mainButtonCollapsible 1`] = `
       className="icon-dropdown"
       style={
         Object {
-          "color": "#A6B2BA",
-          "fontSize": "18px",
+          "color": "#798B97",
+          "fontSize": "14px",
           "paddingTop": "4px",
           "position": "absolute",
           "right": "10px",
@@ -661,6 +661,12 @@ exports[`Button mainIconButton 1`] = `
   >
     <span
       className="icon-propiedades"
+      style={
+        Object {
+          "color": "#384248",
+          "height": undefined,
+        }
+      }
     />
   </button>
 </div>
