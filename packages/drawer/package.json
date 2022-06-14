@@ -7,7 +7,7 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.211",
+    "@oneloop/box": "^1.2.212",
     "framer-motion": "2.9.4"
   },
   "peerDependencies": {

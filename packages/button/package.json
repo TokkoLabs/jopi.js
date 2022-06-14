@@ -7,8 +7,8 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.211",
-    "@oneloop/fonts": "^1.0.32",
+    "@oneloop/box": "^1.2.212",
+    "@oneloop/fonts": "^1.0.33",
     "styled-components": "5.3.5",
     "styled-system": "5.1.5"
   },
