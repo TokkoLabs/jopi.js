@@ -228,7 +228,7 @@ export const mainButtonCollapsible = () => (
 )
 
 export const userButton = () => (
-  <ButtonUser variant='userButton' text='Nombre Usuario' />
+  <ButtonUser variant='userButton' text='Nombre Usuario' style={{ backgroundColor: '#798B97' }}/>
 )
 
 export const userButtonWithImage = () => (
@@ -244,14 +244,14 @@ export const MainIconButtonHoldPressed = () => {
 }
 
 export const iconWhiteHelp = () => (
-  <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px'/>
+  <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px' style={{ backgroundColor: '#798B97', paddingTop: '10px', paddingRight: '7.2px' }}/>
 )
 
 export const MainIconSubtleHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={toggle}/>
+    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={toggle} isInput/>
   )
 }
 
