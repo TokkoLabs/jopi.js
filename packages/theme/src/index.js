@@ -795,9 +795,13 @@ const theme = {
     },
     quickdisplay: {
       borderRadius: '16px',
+      width: '420px',
+      height: '280px',
     },
     rows: {
       borderRadius: '8px',
+      width: '72px',
+      height: '48px',
     }
   },
 }
