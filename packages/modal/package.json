@@ -1,16 +1,16 @@
 {
   "name": "@oneloop/modal",
-  "version": "1.2.222",
+  "version": "1.2.225",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.211",
-    "@oneloop/button": "^1.2.219",
-    "@oneloop/hooks": "^1.2.199",
-    "@oneloop/text": "^1.2.212",
+    "@oneloop/box": "^1.2.214",
+    "@oneloop/button": "^1.2.222",
+    "@oneloop/hooks": "^1.2.202",
+    "@oneloop/text": "^1.2.215",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {

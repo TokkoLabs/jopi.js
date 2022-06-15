@@ -65,8 +65,7 @@ exports[`Button collapseButtonOpen 1`] = `
       className="icon-atras"
       style={
         Object {
-          "height": "24px",
-          "paddingTop": "14px",
+          "height": "10px",
         }
       }
     />
@@ -128,14 +127,7 @@ exports[`Button iconDisabled 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -194,14 +186,7 @@ exports[`Button iconPrimary 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -260,14 +245,7 @@ exports[`Button iconSecondary 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -614,8 +592,8 @@ exports[`Button mainButtonCollapsible 1`] = `
       className="icon-dropdown"
       style={
         Object {
-          "color": "#A6B2BA",
-          "fontSize": "18px",
+          "color": "#798B97",
+          "fontSize": "14px",
           "paddingTop": "4px",
           "position": "absolute",
           "right": "10px",
@@ -685,6 +663,7 @@ exports[`Button mainIconButton 1`] = `
       className="icon-propiedades"
       style={
         Object {
+          "color": "#384248",
           "height": undefined,
         }
       }
@@ -878,14 +857,7 @@ exports[`Button outlineIconDisabled 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -1118,6 +1090,10 @@ exports[`Button primaryOutlineIcon 1`] = `
   white-space: nowrap;
 }
 
+@media screen and (min-width:40em) {
+
+}
+
 <div
   className="c0"
 >
@@ -1128,7 +1104,6 @@ exports[`Button primaryOutlineIcon 1`] = `
       style={
         Object {
           "height": "24px",
-          "paddingTop": 0,
         }
       }
     />
@@ -1586,14 +1561,7 @@ exports[`Button secondaryOutlineIcon 2`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -1772,14 +1740,7 @@ exports[`Button subtleIcon 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;
@@ -1838,14 +1799,7 @@ exports[`Button subtleIconDisabled 1`] = `
   <button
     className="c1"
   >
-    <span
-      style={
-        Object {
-          "height": "24px",
-          "paddingTop": 0,
-        }
-      }
-    />
+    <span />
   </button>
 </div>
 `;

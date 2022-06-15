@@ -67,10 +67,6 @@ export const menu = () =>
             isActive={active0}
           >
           </Collapsible.Button>
-          <Collapsible.Body>
-            <Button variant='mainItemSmall'>{'User management'}</Button>
-            <Button variant='mainItemSmall'>{'Configuration'}</Button>
-          </Collapsible.Body>
         </Collapsible>
 
         <Collapsible width={1 / 3} isOpen={open1}>
@@ -82,6 +78,7 @@ export const menu = () =>
             text={'Emprendimientos'}
             isExpanded={open1}
             isActive={active1}
+            isCollapsible
           >
           </Collapsible.Button>
           <Collapsible.Body>

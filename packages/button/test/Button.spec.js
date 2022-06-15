@@ -109,7 +109,7 @@ describe('Button', () => {
 
   test('primaryOutlineIcon', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="primaryOutlineIcon"/>)
+      .create(<ButtonIcon variant={['primaryOutline', 'iconLarge']}/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()

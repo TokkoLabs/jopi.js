@@ -41,18 +41,20 @@ export const Button = ({ variant, ...props }) => (
 )
 
 export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
-  let heightIcon = '24px'
-  let paddingTopIcon = 0
-  if (variant.includes('iconSmall') || variant.includes('roundIconSmall')) {
-    heightIcon = '22px'
-  } else if (variant.includes('iconExtraSmall22px') || variant.includes('iconExtraSmall') ||
-      variant.includes('roundIconExtraSmall') || variant.includes('roundIconExtraSmall22px')) {
-    heightIcon = '16px'
-  } else if (variant.includes('iconExtraSmall18px') || variant.includes('roundIconExtraSmall18px')) {
-    heightIcon = '12px'
-  } else if (variant.includes('collapseButtonOpen') || variant.includes('collapseButtonClosed')) {
-    paddingTopIcon = '14px'
+  let heightIcon
+  if (Array.isArray(variant)) {
+    const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
+    indexes.map(index => {
+      if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
+        heightIcon = Object.values(theme.buttons)[index].heightIcon
+      }
+      return heightIcon
+    })
+  } else {
+    const index = Object.keys(theme.buttons).indexOf(variant)
+    heightIcon = Object.values(theme.buttons)[index].heightIcon
   }
+
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -83,7 +85,7 @@ export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVari
           whiteSpace: 'nowrap',
         }}
       >
-        <span className={icon} style={{ height: heightIcon, paddingTop: paddingTopIcon }}></span>
+        <span className={icon} style={heightIcon && { height: heightIcon }}></span>
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
       </Box>
     </Box>
@@ -133,7 +135,7 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
   )
 }
 
-export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonHoldPress = ({ variant, isActive = false, isInput = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   let colorValue
   let heightIcon
   if (Array.isArray(variant)) {
@@ -141,6 +143,8 @@ export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false,
     indexes.map(index => {
       if (Object.values(theme.buttons)[index][':focus'] !== undefined && isActive) {
         colorValue = Object.values(theme.buttons)[index][':focus'].color
+      } else if (Object.values(theme.buttons)[index].color !== undefined && isInput) {
+        colorValue = Object.values(theme.buttons)[index].color
       }
       if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
         heightIcon = Object.values(theme.buttons)[index].heightIcon
@@ -150,6 +154,9 @@ export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false,
   } else {
     const index = Object.keys(theme.buttons).indexOf(variant)
     heightIcon = Object.values(theme.buttons)[index].heightIcon
+    if (isInput) {
+      colorValue = Object.values(theme.buttons)[index].color
+    }
     if (isActive) {
       colorValue = Object.values(theme.buttons)[index][':focus'].color
     }
@@ -187,7 +194,7 @@ export const ButtonHoldPress = ({ variant, isActive = false, isExpanded = false,
       >
         { !icon && <span style={colorValue && { color: colorValue, fontWeight: 'bold' }}>{text}</span> }
         { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }
-        { icon && !colorValue && <span className={icon} style={{ height: heightIcon }}/> }
+        { icon && !colorValue && <span className={icon} style={heightIcon && { height: heightIcon }}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
@@ -233,7 +240,7 @@ export const ButtonMain = ({ text, icon, isCollapsible, isActive = false, isExpa
       >
         <span className={icon} style={{ color: (isExpanded || isActive || hover) ? '#DF1E02' : '#707E86', fontSize: '22px', paddingTop: '4px' }}/>
         <span style={{ color: (hover || isExpanded || isActive) ? '#4D5B64' : '#6F838D' }}> {text} </span>
-        { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#A6B2BA', fontSize: '18px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
+        { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '10px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>

@@ -92,43 +92,43 @@ export const iconPrimaryExtraSmall18px = () => (
 )
 
 export const iconSecondary = () => (
-  <ButtonIcon icon='icon-agregar' variant='iconSecondary'/>
+  <ButtonIcon icon='icon-agregar' variant={['iconSecondary', 'iconLarge']}/>
 )
 
 export const iconDisabled = () => (
-  <ButtonIcon icon='icon-agregar' variant='iconDisabled'/>
+  <ButtonIcon icon='icon-agregar' variant={['iconDisabled', 'iconLarge']}/>
 )
 
 export const primaryOutlineIcon = () => (
-  <ButtonIcon icon='icon-agregar' variant='primaryOutline'/>
+  <ButtonIcon icon='icon-agregar' variant={['primaryOutline', 'iconLarge']}/>
 )
 
 export const secondaryOutlineIcon = () => (
-  <ButtonIcon icon='icon-agregar' variant='secondaryOutlineIcon'/>
+  <ButtonIcon icon='icon-agregar' variant={['secondaryOutlineIcon', 'iconLarge']}/>
 )
 
 export const outlineIconDisabled = () => (
-  <ButtonIcon icon='icon-agregar' variant='outlineDisabled'/>
+  <ButtonIcon icon='icon-agregar' variant={['outlineDisabled', 'iconLarge']}/>
 )
 
 export const subtleIcon = () => (
-  <ButtonIcon icon='icon-agregar' variant='subtleIconButton'/>
+  <ButtonIcon icon='icon-agregar' variant={['subtleIconButton', 'iconLarge']}/>
 )
 
 export const subtleTransparentIconClear = () => (
-  <ButtonIcon icon='icon-agregar' variant='subtleTrasnparentIconClearButton'/>
+  <ButtonIcon icon='icon-agregar' variant={['subtleTrasnparentIconClearButton', 'iconLarge']}/>
 )
 
 export const subtleTransparentIconObscure = () => (
-  <ButtonIcon icon='icon-agregar' variant='subtleTrasnparentIconObscureButton'/>
+  <ButtonIcon icon='icon-agregar' variant={['subtleTrasnparentIconObscureButton', 'iconLarge']}/>
 )
 
 export const subtleIconDisabled = () => (
-  <ButtonIcon icon='icon-agregar' variant='iconDisabled'/>
+  <ButtonIcon icon='icon-agregar' variant={['iconDisabled', 'iconLarge']}/>
 )
 
 export const iconSecondaryWithBadge = () => (
-  <ButtonIcon icon='icon-pinup' variant='smallIconButtonTransparent' badgeValue='20' badgeVariant='primary'/>
+  <ButtonIcon icon='icon-pinup' variant={['smallIconButtonTransparent', 'iconLarge']} badgeValue='20' badgeVariant='primary'/>
 )
 
 export const roundIconLarge = () => (
@@ -228,7 +228,7 @@ export const mainButtonCollapsible = () => (
 )
 
 export const userButton = () => (
-  <ButtonUser variant='userButton' text='Nombre Usuario' />
+  <ButtonUser variant='userButton' text='Nombre Usuario' style={{ backgroundColor: '#798B97' }}/>
 )
 
 export const userButtonWithImage = () => (
@@ -244,13 +244,19 @@ export const MainIconButtonHoldPressed = () => {
 }
 
 export const iconWhiteHelp = () => (
-  <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px'/>
+  <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px' style={{ backgroundColor: '#798B97', paddingTop: '10px', paddingRight: '7.2px' }}/>
 )
 
 export const MainIconSubtleHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={toggle}/>
+    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={toggle} isInput/>
+  )
+}
+
+export const iconArrowDrawer = () => {
+  return (
+    <ButtonIcon isRounded icon='icon-atras' variant={'collapseButtonOpen'}/>
   )
 }
