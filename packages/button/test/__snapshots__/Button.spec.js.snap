@@ -458,10 +458,6 @@ exports[`Button mainButton 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 11px;
-  padding-right: 11px;
-  padding-top: 14px;
-  padding-bottom: 14px;
   color: white;
   background-color: #00000000;
   border: 0;
@@ -474,7 +470,6 @@ exports[`Button mainButton 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 38px;
-  gap: 6px;
   white-space: nowrap;
 }
 
@@ -499,7 +494,7 @@ exports[`Button mainButton 1`] = `
     <span
       style={
         Object {
-          "color": "#6F838D",
+          "color": "#49565D",
         }
       }
     >
@@ -539,10 +534,6 @@ exports[`Button mainButtonCollapsible 1`] = `
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 11px;
-  padding-right: 11px;
-  padding-top: 14px;
-  padding-bottom: 14px;
   color: white;
   background-color: #00000000;
   border: 0;
@@ -555,7 +546,6 @@ exports[`Button mainButtonCollapsible 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 38px;
-  gap: 6px;
   white-space: nowrap;
 }
 
@@ -580,7 +570,7 @@ exports[`Button mainButtonCollapsible 1`] = `
     <span
       style={
         Object {
-          "color": "#6F838D",
+          "color": "#49565D",
         }
       }
     >
