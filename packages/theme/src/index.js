@@ -696,11 +696,8 @@ const theme = {
       },
     },
     smallIconButtonTransparent: {
-      width: '32px',
-      height: '32px',
-      borderRadius: '9px',
       gap: '10px',
-      backgroundColor: colors.transparent,
+      backgroundColor: colors.secondary,
       color: colors.neutral[0],
       ':hover': {
         backgroundColor: colors.secondaryHover,
