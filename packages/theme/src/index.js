@@ -802,7 +802,7 @@ const theme = {
       borderRadius: '8px',
       width: '72px',
       height: '48px',
-    }
+    },
   },
 }
 
