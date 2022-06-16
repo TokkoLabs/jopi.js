@@ -261,7 +261,7 @@ export const ButtonUser = ({ variant, srcImage, text, ...props }) => (
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: '14px',
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
