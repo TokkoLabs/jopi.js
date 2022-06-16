@@ -261,7 +261,7 @@ export const ButtonUser = ({ variant, srcImage, text, ...props }) => (
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: '14px',
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
@@ -276,11 +276,11 @@ export const ButtonUser = ({ variant, srcImage, text, ...props }) => (
         height: '48px',
         whiteSpace: 'nowrap',
         padding: '13px 26px 13px 26px',
-        gap: '6px',
+        gap: '8px',
       }}
     >
       {srcImage && <Image src={srcImage} variant="avatar"/> }
-      {!srcImage && <span className='icon-contacto'/>}
+      {!srcImage && <span className='icon-contacto' style={{ fontSize: '24px', height: '24px' }}/>}
       {text}
     </Box>
   </Box>

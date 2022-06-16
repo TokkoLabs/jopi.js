@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/text",
-  "version": "1.2.215",
+  "version": "1.2.216",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.214",
+    "@oneloop/box": "^1.2.215",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {

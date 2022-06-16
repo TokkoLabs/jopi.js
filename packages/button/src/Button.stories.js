@@ -128,7 +128,7 @@ export const subtleIconDisabled = () => (
 )
 
 export const iconSecondaryWithBadge = () => (
-  <ButtonIcon icon='icon-pinup' variant={['smallIconButtonTransparent', 'iconLarge']} badgeValue='20' badgeVariant='primary'/>
+  <ButtonIcon icon='icon-pinup' variant={['smallIconButtonTransparent', 'iconSmall']} badgeValue='20' badgeVariant='primary'/>
 )
 
 export const roundIconLarge = () => (
