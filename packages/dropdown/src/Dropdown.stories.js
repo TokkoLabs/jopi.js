@@ -67,3 +67,17 @@ export const select = () => (
     </Dropdown.Items>
   </Dropdown>
 )
+
+/****** Dropdown Input ******/
+export const dropdownInputDefault = () => (
+  <Dropdown width={1 / 3}>
+    <Dropdown.Button variant="dropdownInputDefault" text="Opción elegida"></Dropdown.Button>
+    <Dropdown.Items>
+      {data.map((user) => (
+        <Dropdown.Item key={user.id} onClick={action('selected')}>
+          {user.content.name}
+        </Dropdown.Item>
+      ))}
+    </Dropdown.Items>
+  </Dropdown>
+)

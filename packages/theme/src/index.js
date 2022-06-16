@@ -25,7 +25,11 @@ const colors = {
   badgeSuccess: '#048465',
   mainButtonText: '#49565D',
   transparent: '#00000000',
-  neutral3: '#6F838D',
+  neutralGray1: '#384248',
+  neutralGray3: '#6F838D',
+  neutralGray4: '#798B97',
+  neutralGray5: '#94A2AB',
+  neutralGray9: '#EFF3F5',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -754,6 +758,20 @@ const theme = {
       fontSize: fontSize[3],
       fontWeight: 400,
       fontFamily: 'primary',
+    },
+    dropdownInputDefault: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.neutralGray9,
+      ':hover': {
+        color: colors.neutralGray1,
+      },
+      ':focus': {
+        color: colors.neutralGray1,
+      },
+    },
+    dropdownDisabled: {
+      color: colors.neutralGray5,
+      backgroundColor: colors.neutralGray9,
     },
     badgeInfo: {
       backgroundColor: colors.info,

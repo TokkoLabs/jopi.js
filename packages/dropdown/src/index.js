@@ -16,7 +16,7 @@ export const Dropdown = ({ children, ...props }) => {
 
   return (
     <DropdownContext.Provider value={value}>
-      <Box {...props} __css={{ position: 'relative' }}>
+      <Box {...props} __css={{ position: 'relative', height: '150px' }}>
         {children}
       </Box>
     </DropdownContext.Provider>
@@ -33,7 +33,7 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = (props) => {
+const DropdownButton = ({ icon, text, ...props }) => {
   const { toggle } = useDropdownContext()
   return (
     <Button
@@ -41,18 +41,26 @@ const DropdownButton = (props) => {
       {...props}
       onClick={toggle}
       sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
         textOverflow: 'ellipsis',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
-        py: '12px',
-        px: '16px',
+        borderRadius: '8px',
         textAlign: 'start',
+        justifyContent: 'start',
         fontSize: 1,
         lineHeight: 0,
-        height: '36px',
-        width: '236px',
+        height: '32px',
+        width: '100%',
+        gap: '4px',
       }}
-    />
+    >
+      { icon && <span className={icon} style={{  }}/> }
+      { text }
+      <span className='icon-dropdown' style={{ position: 'absolute', right: '12px', fontSize: '13.5px', height: '13.5px', transform: 'rotate(0deg)' }}/>
+    </Button>
   )
 }
 
