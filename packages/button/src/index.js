@@ -201,15 +201,19 @@ export const ButtonHoldPress = ({ variant, isActive = false, isInput = false, te
   )
 }
 
-export const ButtonMain = ({ text, icon, isCollapsible, isActive = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonMain = ({ variant, text, icon, isCollapsible, isActive = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   const [hover, setHover] = useToggle(false)
+  const colorFirstIcon = '#707E86'
+  const colorFirstIconActive = '#DF1E02'
+  const colorText = '#49565D'
+  const colorTextActive = '#384248'
 
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
         as='button'
         tx='buttons'
-        variant='mainButtonCollapsible'
+        variant={variant}
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
         {...props}
@@ -224,8 +228,6 @@ export const ButtonMain = ({ text, icon, isCollapsible, isActive = false, isExpa
           textDecoration: 'none',
           cursor: 'pointer',
           outline: 'none',
-          px: 11,
-          py: 14,
           color: 'white',
           bg: 'primary',
           border: 0,
@@ -233,13 +235,12 @@ export const ButtonMain = ({ text, icon, isCollapsible, isActive = false, isExpa
           flexDirection: 'row',
           alignItems: 'center',
           height: '38px',
-          gap: '6px',
           whiteSpace: 'nowrap',
           backgroundColor: hover ? '#E4E8EA' : '#00000000',
         }}
       >
-        <span className={icon} style={{ color: (isExpanded || isActive || hover) ? '#DF1E02' : '#707E86', fontSize: '22px', paddingTop: '4px' }}/>
-        <span style={{ color: (hover || isExpanded || isActive) ? '#4D5B64' : '#6F838D' }}> {text} </span>
+        <span className={icon} style={{ color: (isExpanded || isActive || hover) ? colorFirstIconActive : colorFirstIcon, fontSize: '22px', paddingTop: '4px' }}/>
+        <span style={{ color: (hover || isExpanded || isActive) ? colorTextActive : colorText }}> {text} </span>
         { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '10px' }}>{badgeValue}</Badge> }
       </Box>
@@ -260,7 +261,7 @@ export const ButtonUser = ({ variant, srcImage, text, ...props }) => (
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: '14px',
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
@@ -275,11 +276,11 @@ export const ButtonUser = ({ variant, srcImage, text, ...props }) => (
         height: '48px',
         whiteSpace: 'nowrap',
         padding: '13px 26px 13px 26px',
-        gap: '6px',
+        gap: '8px',
       }}
     >
       {srcImage && <Image src={srcImage} variant="avatar"/> }
-      {!srcImage && <span className='icon-contacto'/>}
+      {!srcImage && <span className='icon-contacto' style={{ fontSize: '24px', height: '24px' }}/>}
       {text}
     </Box>
   </Box>

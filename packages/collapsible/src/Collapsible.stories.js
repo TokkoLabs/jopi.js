@@ -69,7 +69,7 @@ export const menu = () =>
           </Collapsible.Button>
         </Collapsible>
 
-        <Collapsible width={1 / 3} isOpen={open1}>
+        <Collapsible width={1 / 3} isOpen={open1} style={{ gap: '4px' }}>
           <Collapsible.Button
             isMainButton
             onClick={() => closeAllExcep(1)}
