@@ -7,6 +7,14 @@ exports[`Image renders correctly 1`] = `
   min-width: 0;
   max-width: 100%;
   height: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 <img

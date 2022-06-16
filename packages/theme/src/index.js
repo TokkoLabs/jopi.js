@@ -808,6 +808,46 @@ const theme = {
       height: '30px',
       borderRadius: radius.circle,
     },
+    quickdisplay: {
+      borderRadius: '16px',
+      width: '420px',
+      height: '280px',
+    },
+    rows: {
+      borderRadius: '8px',
+      width: '72px',
+      height: '48px',
+    },
+    largeCard: {
+      borderRadius: '12px',
+      width: '291px',
+      height: '194px',
+    },
+    regularCard: {
+      borderRadius: '12px',
+      width: '270px',
+      height: '180px',
+    },
+    smallCard: {
+      borderRadius: '10px',
+      width: '150px',
+      height: '100px',
+    },
+    extraSmallCard: {
+      borderRadius: '6px',
+      width: '60px',
+      height: '40px',
+    },
+    circleSmall: {
+      width: '24px',
+      height: '24px',
+      borderRadius: radius.circle,
+    },
+    circleBig: {
+      width: '82px',
+      height: '82px',
+      borderRadius: radius.circle,
+    },
   },
 }
 
