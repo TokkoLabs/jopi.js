@@ -14,6 +14,13 @@ export const normal = () => (
   />
 )
 
+export const circle = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="avatar"
+  />
+)
+
 export const quickdisplay = () => (
   <Image
     src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -28,9 +35,44 @@ export const rows = () => (
   />
 )
 
-export const circle = () => (
+export const largeCard = () => (
   <Image
     src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-    variant="avatar"
+    variant="largeCard"
+  />
+)
+
+export const regularCard = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="regularCard"
+  />
+)
+
+export const smallCard = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="smallCard"
+  />
+)
+
+export const extraSmallCard = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="extraSmallCard"
+  />
+)
+
+export const circleSmall = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="circleSmall"
+  />
+)
+
+export const circleBig = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="circleBig"
   />
 )
