@@ -29,6 +29,7 @@ const colors = {
   neutralGray3: '#6F838D',
   neutralGray4: '#798B97',
   neutralGray5: '#94A2AB',
+  neutralGray8: '#E4E8EA',
   neutralGray9: '#EFF3F5',
   neutral: [
     '#FFFFFF',
@@ -762,11 +763,15 @@ const theme = {
     dropdownInputDefault: {
       color: colors.neutralGray4,
       backgroundColor: colors.neutralGray9,
+      colorFilled: colors.neutralGray5,
+      backgroundColorFilled: colors.neutralGray9,
       ':hover': {
         color: colors.neutralGray1,
+        backgroundColor: colors.neutralGray8,
       },
       ':focus': {
         color: colors.neutralGray1,
+        backgroundColor: colors.neutralGray8,
       },
     },
     dropdownDisabled: {

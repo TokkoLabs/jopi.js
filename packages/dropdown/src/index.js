@@ -3,6 +3,7 @@ import { Box } from '@oneloop/box'
 import { Button } from '@oneloop/button'
 import { List } from '@oneloop/list'
 import { useToggle, useOnClickOutside } from '@oneloop/hooks'
+import theme from '@oneloop/theme'
 
 const DropdownContext = createContext()
 
@@ -33,13 +34,18 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = ({ icon, text, ...props }) => {
+const DropdownButton = ({ icon, text, filled, variant = "dropdown", disabled = false, ...props }) => {
   const { toggle } = useDropdownContext()
+
+  const index = Object.keys(theme.buttons).indexOf(variant)
+  const colorFilled = Object.values(theme.buttons)[index].colorFilled
+  const backgroundColorFilled = Object.values(theme.buttons)[index].backgroundColorFilled
+
   return (
     <Button
-      variant="dropdown"
+      variant={variant}
       {...props}
-      onClick={toggle}
+      onClick={ !disabled && toggle}
       sx={{
         display: 'flex',
         flexDirection: 'row',
@@ -57,8 +63,9 @@ const DropdownButton = ({ icon, text, ...props }) => {
         gap: '4px',
       }}
     >
-      { icon && <span className={icon} style={{  }}/> }
-      { text }
+      { icon && <span className={icon} style={ filled && {color: colorFilled }}/> }
+      { !filled && <span>{text}</span> }
+      { filled && <span style={{color: colorFilled }}>{ text }</span> }
       <span className='icon-dropdown' style={{ position: 'absolute', right: '12px', fontSize: '13.5px', height: '13.5px', transform: 'rotate(0deg)' }}/>
     </Button>
   )

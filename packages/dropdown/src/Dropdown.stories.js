@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { action } from '@storybook/addon-actions'
 import { Dropdown } from '.'
 import { useFilterData } from '@oneloop/list'
+import { useToggle } from '@oneloop/hooks'
 
 export default {
   component: Dropdown,
@@ -69,15 +70,53 @@ export const select = () => (
 )
 
 /****** Dropdown Input ******/
-export const dropdownInputDefault = () => (
-  <Dropdown width={1 / 3}>
-    <Dropdown.Button variant="dropdownInputDefault" text="Opción elegida"></Dropdown.Button>
-    <Dropdown.Items>
-      {data.map((user) => (
-        <Dropdown.Item key={user.id} onClick={action('selected')}>
-          {user.content.name}
-        </Dropdown.Item>
-      ))}
-    </Dropdown.Items>
-  </Dropdown>
-)
+export const dropdownInputDefault = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  console.log(list)
+  
+  return (
+    <Dropdown width={1 / 3}>
+      <Dropdown.Button variant="dropdownInputDefault" text="Opción elegida" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownInputDefaultDisabled = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 3}>
+      <Dropdown.Button variant="dropdownDisabled" text="Opción elegida" filled={list.length > 0} disabled></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
