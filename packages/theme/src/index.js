@@ -29,8 +29,11 @@ const colors = {
   neutralGray3: '#6F838D',
   neutralGray4: '#798B97',
   neutralGray5: '#94A2AB',
+  neutralGray6: '#AEBAC0',
+  neutralGray7: '#C9D1D5',
   neutralGray8: '#E4E8EA',
   neutralGray9: '#EFF3F5',
+  neutralGray10: '#F3F6F8',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -93,6 +96,7 @@ const borders = {
   secondaryBorder: '1px solid ' + colors.secondary,
   feedbackBorder: '1px solid ' + colors.feedback,
   disabledBorder: '1px solid ' + colors.disabled,
+  neutralGray7: '1px solid ' + colors.neutralGray7
 }
 
 const switches = {
@@ -760,23 +764,82 @@ const theme = {
       fontWeight: 400,
       fontFamily: 'primary',
     },
-    dropdownInputDefault: {
-      color: colors.neutralGray4,
-      backgroundColor: colors.neutralGray9,
-      colorFilled: colors.neutralGray5,
-      backgroundColorFilled: colors.neutralGray9,
+    dropdownDefault: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.neutralGray10,
+      colorFilled: colors.neutralGray1,
+      backgroundColorFilled: colors.neutralGray10,
+      colorArrowFilled: colors.neutralGray5,
+      // colorArrow: colors.neutralGray5,
       ':hover': {
         color: colors.neutralGray1,
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray9,
       },
       ':focus': {
         color: colors.neutralGray1,
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray9,
       },
     },
     dropdownDisabled: {
-      color: colors.neutralGray5,
-      backgroundColor: colors.neutralGray9,
+      color: colors.neutralGray6,
+      backgroundColor: colors.neutralGray10,
+    },
+    dropdownOutlined: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+      border: borders.neutralGray7,
+      colorFilled: colors.neutralGray1,
+      backgroundColorFilled: colors.transparent,
+      colorArrowFilled: colors.neutralGray5,
+      // colorArrow: colors.neutralGray5,
+      ':hover': {
+        color: colors.neutralGray1,
+        backgroundColor: colors.neutralGray10,
+      },
+      ':focus': {
+        color: colors.neutralGray4,
+        backgroundColor: colors.neutralGray10,
+      },
+    },
+    dropdownOutlinedDisabled: {
+      color: colors.neutralGray6,
+      border: borders.neutralGray7,
+      backgroundColor: colors.transparent,
+    },
+    dropdownTransparent: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+      colorFilled: colors.neutralGray1,
+      colorArrowFilled: colors.neutralGray5,
+      // colorArrow: colors.neutralGray5,
+      ':hover': {
+        color: colors.neutralGray1,
+      },
+      ':focus': {
+        color: colors.neutralGray4,
+      },
+    },
+    dropdownTransparentDisabled: {
+      color: colors.neutralGray6,
+      backgroundColor: colors.transparent,
+    },
+    dropdownIcon: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.transparent,
+      colorFilled: colors.neutralGray4,
+      backgroundColorFilled: colors.transparent,
+      ':hover': {
+        color: colors.neutralGray2,
+        backgroundColor: colors.neutralGray9,
+      },
+      ':focus': {
+        color: colors.neutralGray2,
+        backgroundColor: colors.neutralGray9,
+      },
+    },
+    dropdownIconDisabled: {
+      color: colors.neutralGray6,
+      backgroundColor: colors.transparent,
     },
     badgeInfo: {
       backgroundColor: colors.info,

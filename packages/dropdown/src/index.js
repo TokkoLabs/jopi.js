@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react'
 import { Box } from '@oneloop/box'
-import { Button } from '@oneloop/button'
+import { Button, ButtonIcon } from '@oneloop/button'
 import { List } from '@oneloop/list'
 import { useToggle, useOnClickOutside } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
@@ -34,39 +34,51 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = ({ icon, text, filled, variant = "dropdown", disabled = false, ...props }) => {
+const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, filled = false, isButtonIcon = false, ...props }) => {
   const { toggle } = useDropdownContext()
 
-  const index = Object.keys(theme.buttons).indexOf(variant)
-  const colorFilled = Object.values(theme.buttons)[index].colorFilled
-  const backgroundColorFilled = Object.values(theme.buttons)[index].backgroundColorFilled
+  const variantValues = Object.values(theme.buttons)[Object.keys(theme.buttons).indexOf(variant)]
+  const colorFilled = variantValues.colorFilled
+  const backgroundColorFilled = variantValues.backgroundColorFilled
+  const colorArrowFilled = variantValues.colorArrowFilled
+
+  if (isButtonIcon) {
+    return (
+      <ButtonIcon 
+        variant={[variant, 'iconSmall']} 
+        icon={icon} 
+        onClick={ !disabled ? toggle : undefined}
+      />
+    )
+  }
 
   return (
     <Button
       variant={variant}
       {...props}
-      onClick={ !disabled && toggle}
+      onClick={ !disabled ? toggle : undefined}
       sx={{
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         textOverflow: 'ellipsis',
+        fontFamily: 'Nunito Sans',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
         borderRadius: '8px',
         textAlign: 'start',
         justifyContent: 'start',
-        fontSize: 1,
-        lineHeight: 0,
+        fontSize: '14px',
+        lineHeight: '18px',
         height: '32px',
         width: '100%',
-        gap: '4px',
+        gap: '6px',
       }}
     >
-      { icon && <span className={icon} style={ filled && {color: colorFilled }}/> }
-      { !filled && <span>{text}</span> }
-      { filled && <span style={{color: colorFilled }}>{ text }</span> }
-      <span className='icon-dropdown' style={{ position: 'absolute', right: '12px', fontSize: '13.5px', height: '13.5px', transform: 'rotate(0deg)' }}/>
+      { icon && ( !filled ? <span className={icon} style={{ fontSize: "16px", height: "16px" }}/> : <span className={icon} style={{color: colorFilled, backgroundColor: backgroundColorFilled, fontSize: "16px", height: "16px" }}/> )}
+      { !filled ? <span>{text}</span> : <span style={{color: colorFilled, backgroundColor: backgroundColorFilled }}>{ text }</span>}
+      { !filled ? <span className='icon-dropdown' style={{ position: 'absolute', right: '12px', fontSize: '13.5px', height: '13.5px', transform: 'rotate(0deg)' }}/> :
+        <span className='icon-dropdown' style={{ position: 'absolute', right: '12px', fontSize: '13.5px', height: '13.5px', transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
     </Button>
   )
 }

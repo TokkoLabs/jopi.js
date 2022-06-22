@@ -70,7 +70,7 @@ export const select = () => (
 )
 
 /****** Dropdown Input ******/
-export const dropdownInputDefault = () => {
+export const dropdownDefault = () => {
   const [ list, setList ] = useState( [] )
 
   const updateList = ( value ) => {
@@ -80,11 +80,10 @@ export const dropdownInputDefault = () => {
       setList((list) => list.filter((id) => id !== value));
     }
   }
-  console.log(list)
   
   return (
-    <Dropdown width={1 / 3}>
-      <Dropdown.Button variant="dropdownInputDefault" text="Opción elegida" filled={list.length > 0}></Dropdown.Button>
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownDefault" text="Opción elegida" filled={list.length > 0}></Dropdown.Button>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
@@ -96,7 +95,7 @@ export const dropdownInputDefault = () => {
   )
 }
 
-export const dropdownInputDefaultDisabled = () => {
+export const dropdownDefaultDisabled = () => {
   const [ list, setList ] = useState( [] )
 
   const updateList = ( value ) => {
@@ -108,8 +107,208 @@ export const dropdownInputDefaultDisabled = () => {
   }
   
   return (
-    <Dropdown width={1 / 3}>
+    <Dropdown width={1 / 4}>
       <Dropdown.Button variant="dropdownDisabled" text="Opción elegida" filled={list.length > 0} disabled></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownDefaultWithIcon = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownDefault" text="Opción elegida" icon="icon-ubicacion" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownOutlined = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownOutlined" text="Opción elegida" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownOutlinedWithIcon = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownOutlined" text="Opción elegida" icon="icon-ubicacion" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownOutlinedWithIconDisabled = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownOutlinedDisabled" text="Opción elegida" icon="icon-ubicacion" filled={list.length > 0} disabled></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownTransparent = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownTransparent" text="Opción elegida" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownTransparentDisabled = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownTransparentDisabled" disabled text="Opción elegida" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownIcon = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 16}>
+      <Dropdown.Button variant="dropdownIcon" isButtonIcon icon="icon-configuracion" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownIconDisabled = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 16}>
+      <Dropdown.Button variant="dropdownIconDisabled" isButtonIcon icon="icon-configuracion" filled={list.length > 0}></Dropdown.Button>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
