@@ -767,6 +767,7 @@ const theme = {
     dropdownDefault: {
       color: colors.neutralGray3,
       backgroundColor: colors.neutralGray10,
+      borderRadius: '8px',
       colorFilled: colors.neutralGray1,
       backgroundColorFilled: colors.neutralGray10,
       colorArrowFilled: colors.neutralGray5,
@@ -788,6 +789,7 @@ const theme = {
       color: colors.neutralGray3,
       backgroundColor: colors.transparent,
       border: borders.neutralGray7,
+      borderRadius: '8px',
       colorFilled: colors.neutralGray1,
       backgroundColorFilled: colors.transparent,
       colorArrowFilled: colors.neutralGray5,
@@ -840,6 +842,48 @@ const theme = {
     dropdownIconDisabled: {
       color: colors.neutralGray6,
       backgroundColor: colors.transparent,
+    },
+    dropdownButtonPrimary: {
+      color: colors.neutral[0],
+      backgroundColor: colors.primary,
+      colorFilled: colors.neutral[0],
+      backgroundColorFilled: colors.primary,
+      sizeArrow: '16px',
+      gap: '12px',
+      borderRadius: '10px',
+      height: '38px',
+      ':hover': {
+        backgroundColor: colors.primaryHover,
+        color: colors.neutral[0],
+      },
+      ':focus': {
+        backgroundColor: colors.primaryPressed,
+        color: colors.neutral[0],
+      },
+    },
+    dropdownButtonPrimaryDisabled: {
+      color: colors.disabled,
+      backgroundColor: colors.neutral[7],
+      sizeArrow: '16px',
+      gap: '12px',
+      borderRadius: '10px',
+      height: '38px',
+    },
+    dropdownColored: {
+      color: colors.neutral[0],
+      backgroundColor: colors.secondary,
+      colorFilled: colors.neutral[0],
+      colorArrowFilled: colors.neutral[0],
+      backgroundColorFilled: colors.lightBlue,
+      gap: '12px',
+      borderRadius: '16px',
+      ':hover': {
+        color: colors.neutralGray7,
+      },
+      ':focus': {
+        color: colors.neutralGray3,
+        backgroundColor: colors.transparent,
+      },
     },
     badgeInfo: {
       backgroundColor: colors.info,

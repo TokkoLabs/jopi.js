@@ -34,13 +34,17 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, filled = false, isButtonIcon = false, ...props }) => {
+const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, ...props }) => {
   const { toggle } = useDropdownContext()
 
   const variantValues = Object.values(theme.buttons)[Object.keys(theme.buttons).indexOf(variant)]
   const colorFilled = variantValues.colorFilled
   const backgroundColorFilled = variantValues.backgroundColorFilled
   const colorArrowFilled = variantValues.colorArrowFilled
+  let sizeArrow = variantValues.sizeArrow
+  if (sizeArrow === undefined) {
+    sizeArrow = '12px'
+  }
 
   if (isButtonIcon) {
     return (
@@ -51,7 +55,7 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
       />
     )
   }
-
+  // 1. Me faltan las variantes de lo que va dentro del dropdown
   return (
     <Button
       variant={variant}
@@ -65,7 +69,6 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
         fontFamily: 'Nunito Sans',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
-        borderRadius: '8px',
         textAlign: 'start',
         justifyContent: 'start',
         fontSize: '14px',
@@ -73,12 +76,15 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
         height: '32px',
         width: '100%',
         gap: '6px',
+        backgroundColor: filled ? backgroundColorFilled : undefined,
+        justifyContent: isArrowStatic ? 'center' : 'flex-start',
+        padding: '6px 10px 6px 10px',
       }}
     >
       { icon && ( !filled ? <span className={icon} style={{ fontSize: "16px", height: "16px" }}/> : <span className={icon} style={{color: colorFilled, backgroundColor: backgroundColorFilled, fontSize: "16px", height: "16px" }}/> )}
       { !filled ? <span>{text}</span> : <span style={{color: colorFilled, backgroundColor: backgroundColorFilled }}>{ text }</span>}
-      { !filled ? <span className='icon-dropdown' style={{ position: 'absolute', right: '12px', fontSize: '13.5px', height: '13.5px', transform: 'rotate(0deg)' }}/> :
-        <span className='icon-dropdown' style={{ position: 'absolute', right: '12px', fontSize: '13.5px', height: '13.5px', transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
+      { !filled ? <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)' }}/> :
+        <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
     </Button>
   )
 }

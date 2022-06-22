@@ -308,7 +308,82 @@ export const dropdownIconDisabled = () => {
   
   return (
     <Dropdown width={1 / 16}>
-      <Dropdown.Button variant="dropdownIconDisabled" isButtonIcon icon="icon-configuracion" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Button variant="dropdownIconDisabled" isButtonIcon disabled icon="icon-configuracion" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownButton = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 8}>
+      <Dropdown.Button variant="dropdownButtonPrimary" text={"Label"} filled={list.length > 0} isArrowStatic></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownButtonDisabled = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 8}>
+      <Dropdown.Button variant="dropdownButtonPrimaryDisabled" disabled text={"Label"} filled={list.length > 0} isArrowStatic></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownColored = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownColored" text={"Label"} filled={list.length > 0} isArrowStatic></Dropdown.Button>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
