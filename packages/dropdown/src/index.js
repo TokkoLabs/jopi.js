@@ -55,7 +55,7 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
       />
     )
   }
-  // 1. Me faltan las variantes de lo que va dentro del dropdown
+
   return (
     <Button
       variant={variant}
@@ -130,7 +130,20 @@ const DropdownListItem = (props) => (
   />
 )
 
+const DropdownListDefault = (props) => (
+  <List.Default
+    {...props}
+    sx={{
+      cursor: 'pointer',
+      fontSize: '2',
+      color: 'darkGray',
+    }}
+  />
+)
+
+
 Dropdown.Button = DropdownButton
 Dropdown.Items = DropdownList
 Dropdown.Item = DropdownListItem
+Dropdown.Default = DropdownListDefault
 Dropdown.Search = DropdownListSearch

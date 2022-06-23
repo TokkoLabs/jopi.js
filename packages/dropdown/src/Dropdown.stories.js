@@ -394,3 +394,29 @@ export const dropdownColored = () => {
     </Dropdown>
   )
 }
+
+
+export const dropdownStatesDefault = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownDefault" text="Opción elegida" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Default key={user.id} onClick={e => { updateList(user.id) }}>
+            {user.content.name}
+          </Dropdown.Default>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
