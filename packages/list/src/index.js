@@ -50,7 +50,7 @@ const ListItem = ({ children, hover = true, ...props }) => (
   </Box>
 )
 
-const ListDefault = ({ children, hover = true, ...props }) => {
+const ListDefault = ({ children, disabled = false, hover = true, ...props }) => {
   const [active, toggle] = useToggle(false)
 
   return (
@@ -65,7 +65,7 @@ const ListDefault = ({ children, hover = true, ...props }) => {
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonHoldPress variant='mainItemSmallList' isActive={active} onClick={toggle} text={children} isInput />
+        <ButtonHoldPress variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } isActive={active} onClick={toggle} text={children} />
       </div>
     </Box>
   )

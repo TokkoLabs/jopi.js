@@ -789,6 +789,9 @@ const theme = {
     dropdownDisabled: {
       color: colors.neutralGray6,
       backgroundColor: colors.neutralGray10,
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
     dropdownOutlined: {
       color: colors.neutralGray3,
@@ -812,6 +815,9 @@ const theme = {
       color: colors.neutralGray6,
       border: borders.neutralGray7,
       backgroundColor: colors.transparent,
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
     dropdownTransparent: {
       color: colors.neutralGray3,
@@ -829,6 +835,9 @@ const theme = {
     dropdownTransparentDisabled: {
       color: colors.neutralGray6,
       backgroundColor: colors.transparent,
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
     dropdownIcon: {
       color: colors.neutralGray4,
@@ -847,6 +856,9 @@ const theme = {
     dropdownIconDisabled: {
       color: colors.neutralGray6,
       backgroundColor: colors.transparent,
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
     dropdownButtonPrimary: {
       color: colors.neutral[0],
@@ -873,6 +885,9 @@ const theme = {
       gap: '12px',
       borderRadius: '10px',
       height: '38px',
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
     dropdownColored: {
       color: colors.neutral[0],
@@ -911,11 +926,18 @@ const theme = {
       },
     },
     mainItemSmallListDisabled: {
-      color: colors.neutralGray5,
       backgroundColor: colors.transparent,
+      color: colors.neutralGray5,
+      fontWeight: 'normal',
+      fontSize: '12px',
       height: '28px',
       lineHeight: '16px',
+      width: '100%',
+      justifyContent: 'start',
       padding: '9px 12px 9px 12px',
+      cursor: 'default',
+      pointerEvents: 'none',
+      userSelect: 'none',
     },
     badgeInfo: {
       backgroundColor: colors.info,

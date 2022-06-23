@@ -79,7 +79,7 @@ export const searchable = () =>
 
 export const defaultNormal = () => (
   <List width={1 / 3}>
-    <List.Default>Hola</List.Default>
+    <List.Default disabled>Hola</List.Default>
     <List.Default>Good</List.Default>
     <List.Default>Bye</List.Default>
   </List>

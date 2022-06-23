@@ -412,7 +412,7 @@ export const dropdownStatesDefault = () => {
       <Dropdown.Button variant="dropdownDefault" text="Opción elegida" filled={list.length > 0}></Dropdown.Button>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Default key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Default key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} >
             {user.content.name}
           </Dropdown.Default>
         ))}
