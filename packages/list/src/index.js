@@ -4,7 +4,7 @@ import { Input } from '@oneloop/input'
 import { useFilterData } from '@oneloop/hooks'
 import { Checkbox } from '@oneloop/checkbox'
 import { useToggle } from '@oneloop/hooks'
-import { ButtonHoldPress } from '@oneloop/button'
+import { Button, ButtonHoldPress } from '@oneloop/button'
 
 const List = forwardRef(({ children, ...props }, ref) => (
   <Box
@@ -65,7 +65,8 @@ const ListDefault = ({ children, disabled = false, hover = true, ...props }) => 
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonHoldPress variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } isActive={active} onClick={toggle} text={children} />
+        <Button variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } >{children}</Button>
+        {/* <ButtonHoldPress variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } isActive={active} onClick={toggle} text={children} /> */}
       </div>
     </Box>
   )

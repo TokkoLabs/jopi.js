@@ -395,8 +395,26 @@ export const dropdownColored = () => {
   )
 }
 
+// Con estados
 
 export const dropdownStatesDefault = () => {
+  const [ value, setValue ] = useState("Placeholder")
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownDefault" text={value} filled={value != undefined}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
+            {user.content.name}
+          </Dropdown.Default>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownStatesMultiselect = () => {
   const [ list, setList ] = useState( [] )
 
   const updateList = ( value ) => {

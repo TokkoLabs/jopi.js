@@ -135,12 +135,9 @@ const DropdownListDefault = ({ disabled, ...props }) => (
     disabled={disabled}
     {...props}
     sx={{
-
       cursor: disabled ? 'default' : 'pointer',
       pointerEvents: disabled ? 'none' : undefined,
       userSelect: disabled ? 'none' : undefined,
-
-      // cursor: 'pointer',
       fontSize: '2',
       color: 'darkGray',
     }}
