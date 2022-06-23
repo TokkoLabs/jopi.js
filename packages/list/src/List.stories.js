@@ -74,4 +74,13 @@ export const searchable = () =>
         ))}
       </List>
     )
-  })
+  }
+)
+
+export const defaultNormal = () => (
+  <List width={1 / 3}>
+    <List.Default>Hola</List.Default>
+    <List.Default>Good</List.Default>
+    <List.Default>Bye</List.Default>
+  </List>
+)

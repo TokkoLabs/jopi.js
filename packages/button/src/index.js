@@ -135,15 +135,16 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
   )
 }
 
-export const ButtonHoldPress = ({ variant, isActive = false, isInput = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonHoldPress = ({ variant, isActive = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   let colorValue
   let heightIcon
+  let fontWeight
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
     indexes.map(index => {
       if (Object.values(theme.buttons)[index][':focus'] !== undefined && isActive) {
         colorValue = Object.values(theme.buttons)[index][':focus'].color
-      } else if (Object.values(theme.buttons)[index].color !== undefined && isInput) {
+      } else if (Object.values(theme.buttons)[index].color !== undefined) {
         colorValue = Object.values(theme.buttons)[index].color
       }
       if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
@@ -153,12 +154,13 @@ export const ButtonHoldPress = ({ variant, isActive = false, isInput = false, te
     })
   } else {
     const index = Object.keys(theme.buttons).indexOf(variant)
+    colorValue = Object.values(theme.buttons)[index].color
     heightIcon = Object.values(theme.buttons)[index].heightIcon
-    if (isInput) {
-      colorValue = Object.values(theme.buttons)[index].color
-    }
+    fontWeight = Object.values(theme.buttons)[index].fontWeight
     if (isActive) {
       colorValue = Object.values(theme.buttons)[index][':focus'].color
+      fontWeight = Object.values(theme.buttons)[index][':focus'].fontWeight
+    } else {
     }
   }
 
@@ -174,7 +176,6 @@ export const ButtonHoldPress = ({ variant, isActive = false, isInput = false, te
           display: 'flex',
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
-          fontWeight: 'normal',
           fontSize: '24px',
           textAlign: 'center',
           textDecoration: 'none',
@@ -184,15 +185,11 @@ export const ButtonHoldPress = ({ variant, isActive = false, isInput = false, te
           bg: 'primary',
           border: 0,
           flexDirection: 'row',
-          justifyContent: 'center',
           alignItems: 'center',
-          borderRadius: 12,
-          width: '48px',
-          height: '48px',
           whiteSpace: 'nowrap',
         }}
       >
-        { !icon && <span style={colorValue && { color: colorValue, fontWeight: 'bold' }}>{text}</span> }
+        { !icon && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
         { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }
         { icon && !colorValue && <span className={icon} style={heightIcon && { height: heightIcon }}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }

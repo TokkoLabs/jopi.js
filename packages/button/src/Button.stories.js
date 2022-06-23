@@ -251,7 +251,7 @@ export const MainIconSubtleHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={toggle} isInput/>
+    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={toggle}/>
   )
 }
 

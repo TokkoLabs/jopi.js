@@ -3,6 +3,8 @@ import { Box, Flex } from '@oneloop/box'
 import { Input } from '@oneloop/input'
 import { useFilterData } from '@oneloop/hooks'
 import { Checkbox } from '@oneloop/checkbox'
+import { useToggle } from '@oneloop/hooks'
+import { ButtonHoldPress } from '@oneloop/button'
 
 const List = forwardRef(({ children, ...props }, ref) => (
   <Box
@@ -48,6 +50,28 @@ const ListItem = ({ children, hover = true, ...props }) => (
   </Box>
 )
 
+const ListDefault = ({ children, hover = true, ...props }) => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <Box
+      as="li"
+      width={1}
+      {...props}
+      __css={{
+        display: 'inline-flex',
+        justifyContent: 'start',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{ width: '100%' }}>
+        <ButtonHoldPress variant='mainItemSmallList' isActive={active} onClick={toggle} text={children} isInput />
+      </div>
+    </Box>
+  )
+}
+
+List.Default = ListDefault
 List.Search = ListInput
 List.Item = ListItem
 List.displayName = 'List'
