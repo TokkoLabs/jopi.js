@@ -448,20 +448,21 @@ export const dropdownStatesMultiselectSearch = () => {
     setValue(e.target.value)
   }
   const updateList = ( value ) => {
-    if(!list.includes(value)) {
+    if (!list.includes(value)) {
       setList([ ...list, value ])
     } else {
       setList((list) => list.filter((id) => id !== value));
     }
   }
-  
+  // Tengo que hacer que cuando se seleccione una, quede seleccionada
   return (
     <Dropdown width={1 / 4}>
       <Dropdown.Button variant="dropdownDefault" text="Agente" filled={list.length > 0}></Dropdown.Button>
       <Dropdown.Items>
-        <Dropdown.Search placeholder="search something" onChange={onFilter} />
+        <Dropdown.Search placeholder="Search" onChange={onFilter} />
         {filteredData.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} >
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} 
+            isActive={list.includes(user.id)}>
             {user.content.name}
           </Dropdown.Multiselect>
         ))}

@@ -144,9 +144,10 @@ const DropdownListDefault = ({ disabled, ...props }) => (
   />
 )
 
-const DropdownListMultiselect = ({ disabled, ...props }) => (
+const DropdownListMultiselect = ({ disabled, isActive, ...props }) => (
   <List.Multiselect
     disabled={disabled}
+    isActive={isActive}
     {...props}
     sx={{
       cursor: disabled ? 'default' : 'pointer',
