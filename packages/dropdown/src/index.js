@@ -144,9 +144,24 @@ const DropdownListDefault = ({ disabled, ...props }) => (
   />
 )
 
+const DropdownListMultiselect = ({ disabled, ...props }) => (
+  <List.Multiselect
+    disabled={disabled}
+    {...props}
+    sx={{
+      cursor: disabled ? 'default' : 'pointer',
+      pointerEvents: disabled ? 'none' : undefined,
+      userSelect: disabled ? 'none' : undefined,
+      fontSize: '2',
+      color: 'darkGray',
+    }}
+  />
+)
+
 
 Dropdown.Button = DropdownButton
 Dropdown.Items = DropdownList
 Dropdown.Item = DropdownListItem
 Dropdown.Default = DropdownListDefault
+Dropdown.Multiselect = DropdownListMultiselect
 Dropdown.Search = DropdownListSearch

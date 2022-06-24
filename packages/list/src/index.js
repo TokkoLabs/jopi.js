@@ -64,15 +64,38 @@ const ListDefault = ({ children, disabled = false, hover = true, ...props }) => 
         alignItems: 'center',
       }}
     >
+      {/*** QUEDA ARREGLAR EL HOVER; QUE NO ES CUADRADO */}
       <div style={{ width: '100%' }}>
         <Button variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } >{children}</Button>
-        {/* <ButtonHoldPress variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } isActive={active} onClick={toggle} text={children} /> */}
+      </div>
+    </Box>
+  )
+}
+
+
+const ListMultiselect = ({ children, disabled = false, hover = true, ...props }) => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <Box
+      as="li"
+      width={1}
+      {...props}
+      __css={{
+        display: 'inline-flex',
+        justifyContent: 'start',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{ width: '100%' }}>
+        <ButtonHoldPress variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } isActive={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
       </div>
     </Box>
   )
 }
 
 List.Default = ListDefault
+List.Multiselect = ListMultiselect
 List.Search = ListInput
 List.Item = ListItem
 List.displayName = 'List'

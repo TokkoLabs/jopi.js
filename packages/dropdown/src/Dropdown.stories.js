@@ -427,12 +427,43 @@ export const dropdownStatesMultiselect = () => {
   
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant="dropdownDefault" text="Opción elegida" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Button variant="dropdownDefault" text="Seleccione" filled={list.length > 0}></Dropdown.Button>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Default key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} >
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} >
             {user.content.name}
-          </Dropdown.Default>
+          </Dropdown.Multiselect>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+
+export const dropdownStatesMultiselectSearch = () => {
+  const [ list, setList ] = useState( [] )
+  const [filteredData, setValue] = useFilterData(data, 'content')
+
+  const onFilter = (e) => {
+    setValue(e.target.value)
+  }
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownDefault" text="Agente" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Items>
+        <Dropdown.Search placeholder="search something" onChange={onFilter} />
+        {filteredData.map((user) => (
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} >
+            {user.content.name}
+          </Dropdown.Multiselect>
         ))}
       </Dropdown.Items>
     </Dropdown>

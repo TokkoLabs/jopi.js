@@ -915,6 +915,7 @@ const theme = {
       width: '100%',
       justifyContent: 'start',
       padding: '9px 12px 9px 12px',
+      gap: '8px',
       ':hover': {
         backgroundColor: colors.neutralGray9,
         color: colors.neutralGray1,
@@ -938,6 +939,7 @@ const theme = {
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
+      gap: '8px',
     },
     badgeInfo: {
       backgroundColor: colors.info,

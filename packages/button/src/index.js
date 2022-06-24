@@ -1,6 +1,7 @@
 import React from 'react'
 import { Badge } from '@oneloop/badge'
 import { Box } from '@oneloop/box'
+import { Checkbox } from '@oneloop/checkbox'
 import { Image } from '@oneloop/image'
 import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
@@ -135,7 +136,7 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
   )
 }
 
-export const ButtonHoldPress = ({ variant, isActive = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonHoldPress = ({ variant, isActive = false, text, icon, badgeValue = 0, badgeVariant = 'primary', hasCheckbox = false, disabled = false, ...props }) => {
   let colorValue
   let heightIcon
   let fontWeight
@@ -160,10 +161,9 @@ export const ButtonHoldPress = ({ variant, isActive = false, text, icon, badgeVa
     if (isActive) {
       colorValue = Object.values(theme.buttons)[index][':focus'].color
       fontWeight = Object.values(theme.buttons)[index][':focus'].fontWeight
-    } else {
     }
   }
-
+  
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -189,6 +189,8 @@ export const ButtonHoldPress = ({ variant, isActive = false, text, icon, badgeVa
           whiteSpace: 'nowrap',
         }}
       >
+        { hasCheckbox && isActive && <Checkbox defaultChecked={true} disabled={disabled}/>}
+        { hasCheckbox && !isActive && <Checkbox defaultChecked={false} disabled={disabled}/>}
         { !icon && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
         { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }
         { icon && !colorValue && <span className={icon} style={heightIcon && { height: heightIcon }}/> }

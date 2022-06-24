@@ -84,3 +84,11 @@ export const defaultNormal = () => (
     <List.Default>Bye</List.Default>
   </List>
 )
+
+export const multiselect = () => (
+  <List width={1 / 3}>
+    <List.Multiselect disabled>Hola</List.Multiselect>
+    <List.Multiselect>Good</List.Multiselect>
+    <List.Multiselect>Bye</List.Multiselect>
+  </List>
+)
