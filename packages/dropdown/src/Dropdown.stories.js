@@ -447,6 +447,7 @@ export const dropdownStatesMultiselectSearch = () => {
   const onFilter = (e) => {
     setValue(e.target.value)
   }
+
   const updateList = ( value ) => {
     if (!list.includes(value)) {
       setList([ ...list, value ])
@@ -454,13 +455,36 @@ export const dropdownStatesMultiselectSearch = () => {
       setList((list) => list.filter((id) => id !== value));
     }
   }
-  // Tengo que hacer que cuando se seleccione una, quede seleccionada
+  // AL ESCRIBIR EN EL SEARCH y cerrarlo se borra lo que se busco.
+  // tengo que hacer que lo escrito en el input no se borre, porque lo necesito.
+  // o bien perder el filtro, osea que aparezca todo de nuevo.
+  // Creo que eso es mejor
+  // Usar la opcion para que el filtro vuelva al total
+  // DESPUES DE ESTO, QUEDA AGREGAR EL QUE TIENE EL ICONO; EL LUNES LO TERMINO SEGURO
   return (
     <Dropdown width={1 / 4}>
       <Dropdown.Button variant="dropdownDefault" text="Agente" filled={list.length > 0}></Dropdown.Button>
       <Dropdown.Items>
-        <Dropdown.Search placeholder="Search" onChange={onFilter} />
+        <Dropdown.Search placeholder="Search" onChange={onFilter}/>
         {filteredData.map((user) => (
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} 
+            isActive={list.includes(user.id)}>
+            {user.content.name}
+          </Dropdown.Multiselect>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownStatesIcon = () => {
+  const [ value, setValue ] = useState("Placeholder")
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownDefault" text={value} filled={value != undefined}></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} 
             isActive={list.includes(user.id)}>
             {user.content.name}

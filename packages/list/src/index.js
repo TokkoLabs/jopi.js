@@ -72,7 +72,6 @@ const ListDefault = ({ children, disabled = false, hover = true, ...props }) => 
   )
 }
 
-
 const ListMultiselect = ({ children, disabled = false, hover = true, isActive, ...props }) => {
   const [active, toggle] = useToggle(false)
   if (isActive && !active) {
