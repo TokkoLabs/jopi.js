@@ -7,7 +7,7 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.216"
+    "@oneloop/box": "^1.2.217"
   },
   "peerDependencies": {
     "react": "^16.8.0"
