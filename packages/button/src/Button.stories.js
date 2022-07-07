@@ -215,17 +215,25 @@ export const MainItemSmallHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='mainItemSmall' isActive={active} onClick={toggle} text={'Label'}/>
+    <ButtonHoldPress variant='mainItemSmall' active={active} onClick={toggle} text={'Label'}/>
   )
 }
 
-export const mainButton = () => (
-  <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos'/>
-)
+export const MainButton = () => {
+  const [active, setActive] = useToggle(false)
 
-export const mainButtonCollapsible = () => (
-  <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible/>
-)
+  return (
+    <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={setActive}/>
+  )
+}
+
+export const MainButtonCollapsible = () => {
+  const [active, setActive] = useToggle(false)
+
+  return (
+    <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={setActive}/>
+  )
+}
 
 export const userButton = () => (
   <ButtonUser variant='userButton' text='Nombre Usuario' style={{ backgroundColor: '#798B97' }}/>
@@ -239,7 +247,7 @@ export const MainIconButtonHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' isActive={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
+    <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
   )
 }
 
@@ -251,7 +259,7 @@ export const MainIconSubtleHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={toggle} isInput/>
+    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' active={active} onClick={toggle} isInput/>
   )
 }
 

@@ -170,6 +170,7 @@ Array [
           style={
             Object {
               "color": "#384248",
+              "fontWeight": "bold",
             }
           }
         >
@@ -268,6 +269,7 @@ Array [
           style={
             Object {
               "color": "#49565D",
+              "fontWeight": "normal",
             }
           }
         >
@@ -408,6 +410,7 @@ Array [
           style={
             Object {
               "color": "#49565D",
+              "fontWeight": "normal",
             }
           }
         >
