@@ -476,7 +476,7 @@ export const dropdownStatesMultiselectSearch = () => {
     </Dropdown>
   )
 }
-
+/*
 export const dropdownStatesIcon = () => {
   const [ value, setValue ] = useState("Placeholder")
   
@@ -493,4 +493,4 @@ export const dropdownStatesIcon = () => {
       </Dropdown.Items>
     </Dropdown>
   )
-}
+}*/
