@@ -64,7 +64,7 @@ export const menu = () =>
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open0}
-            isActive={active0}
+            active={active0}
           >
           </Collapsible.Button>
         </Collapsible>
@@ -77,7 +77,7 @@ export const menu = () =>
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open1}
-            isActive={active1}
+            active={active1}
             isCollapsible
           >
           </Collapsible.Button>
@@ -95,7 +95,7 @@ export const menu = () =>
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open2}
-            isActive={active2}
+            active={active2}
             badgeValue={2}
           >
           </Collapsible.Button>
@@ -132,7 +132,7 @@ export const menuCollapsed = () =>
             variant="mainButtonCollapsible"
             icon="icon-emprendimientos"
             isExpanded={open0}
-            isActive={active0}
+            active={active0}
           >
           </Collapsible.Button>
           <Collapsible.Body>
@@ -148,7 +148,7 @@ export const menuCollapsed = () =>
             variant="mainButtonCollapsible"
             icon="icon-emprendimientos"
             isExpanded={open1}
-            isActive={active1}
+            active={active1}
           >
           </Collapsible.Button>
           <Collapsible.Body>
@@ -164,7 +164,7 @@ export const menuCollapsed = () =>
             variant="mainButtonCollapsible"
             icon="icon-emprendimientos"
             isExpanded={open2}
-            isActive={active2}
+            active={active2}
             badgeValue={200}
           >
           </Collapsible.Button>
