@@ -495,6 +495,7 @@ exports[`Button mainButton 1`] = `
       style={
         Object {
           "color": "#49565D",
+          "fontWeight": "normal",
         }
       }
     >
@@ -571,6 +572,7 @@ exports[`Button mainButtonCollapsible 1`] = `
       style={
         Object {
           "color": "#49565D",
+          "fontWeight": "normal",
         }
       }
     >
@@ -651,12 +653,6 @@ exports[`Button mainIconButton 1`] = `
   >
     <span
       className="icon-propiedades"
-      style={
-        Object {
-          "color": "#384248",
-          "height": undefined,
-        }
-      }
     />
   </button>
 </div>
@@ -724,7 +720,6 @@ exports[`Button mainIconButtonActive 1`] = `
       className="icon-propiedades"
       style={
         Object {
-          "color": "#384248",
           "height": "16px",
         }
       }

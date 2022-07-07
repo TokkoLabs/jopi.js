@@ -136,14 +136,14 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
   )
 }
 
-export const ButtonHoldPress = ({ variant, isActive = false, text, icon, badgeValue = 0, badgeVariant = 'primary', hasCheckbox = false, disabled = false, ...props }) => {
+export const ButtonHoldPress = ({ variant, active = false, isInput = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   let colorValue
   let heightIcon
   let fontWeight
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
     indexes.map(index => {
-      if (Object.values(theme.buttons)[index][':focus'] !== undefined && isActive) {
+      if (Object.values(theme.buttons)[index][':focus'] !== undefined && active) {
         colorValue = Object.values(theme.buttons)[index][':focus'].color
       } else if (Object.values(theme.buttons)[index].color !== undefined) {
         colorValue = Object.values(theme.buttons)[index].color
@@ -158,7 +158,10 @@ export const ButtonHoldPress = ({ variant, isActive = false, text, icon, badgeVa
     colorValue = Object.values(theme.buttons)[index].color
     heightIcon = Object.values(theme.buttons)[index].heightIcon
     fontWeight = Object.values(theme.buttons)[index].fontWeight
-    if (isActive) {
+    if (isInput) {
+      colorValue = Object.values(theme.buttons)[index].color
+    }
+    if (active) {
       colorValue = Object.values(theme.buttons)[index][':focus'].color
       fontWeight = Object.values(theme.buttons)[index][':focus'].fontWeight
     }
@@ -200,7 +203,7 @@ export const ButtonHoldPress = ({ variant, isActive = false, text, icon, badgeVa
   )
 }
 
-export const ButtonMain = ({ variant, text, icon, isCollapsible, isActive = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonMain = ({ variant, text, icon, isCollapsible, active = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
   const [hover, setHover] = useToggle(false)
   const colorFirstIcon = '#707E86'
   const colorFirstIconActive = '#DF1E02'
@@ -221,7 +224,7 @@ export const ButtonMain = ({ variant, text, icon, isCollapsible, isActive = fals
           display: 'flex',
           lineHeight: '19px',
           fontFamily: 'Nunito Sans',
-          fontWeight: (isExpanded || isActive) ? 'bold' : 'normal',
+          fontWeight: (isExpanded || active) ? 'bold' : 'normal',
           fontSize: 14,
           textAlign: 'center',
           textDecoration: 'none',
@@ -238,8 +241,8 @@ export const ButtonMain = ({ variant, text, icon, isCollapsible, isActive = fals
           backgroundColor: hover ? '#E4E8EA' : '#00000000',
         }}
       >
-        <span className={icon} style={{ color: (isExpanded || isActive || hover) ? colorFirstIconActive : colorFirstIcon, fontSize: '22px', paddingTop: '4px' }}/>
-        <span style={{ color: (hover || isExpanded || isActive) ? colorTextActive : colorText }}> {text} </span>
+        <span className={icon} style={{ color: (isExpanded || active || hover) ? colorFirstIconActive : colorFirstIcon, fontSize: '22px', paddingTop: '4px' }}/>
+        <span style={{ color: (hover || isExpanded || active) ? colorTextActive : colorText, fontWeight: (hover || isExpanded || active) ? 'bold' : 'normal' }}> {text} </span>
         { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '10px' }}>{badgeValue}</Badge> }
       </Box>
