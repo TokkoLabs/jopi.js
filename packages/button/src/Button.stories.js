@@ -219,19 +219,19 @@ export const MainItemSmallHoldPressed = () => {
   )
 }
 
-export const mainButton = () => {
+export const MainButton = () => {
   const [active, setActive] = useToggle(false)
 
   return (
-    <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={() => setActive()}/>
+    <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={setActive}/>
   )
 }
 
-export const mainButtonCollapsible = () => {
-const [active, setActive] = useToggle(false)
+export const MainButtonCollapsible = () => {
+  const [active, setActive] = useToggle(false)
 
-return (
-  <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={() => setActive()}/>
+  return (
+    <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={setActive}/>
   )
 }
 
