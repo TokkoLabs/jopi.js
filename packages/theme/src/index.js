@@ -637,6 +637,7 @@ const theme = {
     mainButton: {
       color: colors.subtle,
       backgroundColor: colors.transparent,
+      gap: '6px',
       ':hover': {
         backgroundColor: colors.neutral[7],
         fontWeight: 'normal',
@@ -651,7 +652,7 @@ const theme = {
     mainButtonCollapsible: {
       color: colors.mainButtonText,
       backgroundColor: colors.transparent,
-      gap: '4px',
+      gap: '6px',
       ':hover': {
         backgroundColor: colors.neutral[7],
         color: colors.neutral[6],
