@@ -468,7 +468,7 @@ export const dropdownStatesMultiselectSearch = () => {
         <Dropdown.Search placeholder="Search" onChange={onFilter}/>
         {filteredData.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} 
-            isActive={list.includes(user.id)}>
+            active={list.includes(user.id)}>
             {user.content.name}
           </Dropdown.Multiselect>
         ))}
@@ -486,7 +486,7 @@ export const dropdownStatesIcon = () => {
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} 
-            isActive={list.includes(user.id)}>
+            active={list.includes(user.id)}>
             {user.content.name}
           </Dropdown.Multiselect>
         ))}

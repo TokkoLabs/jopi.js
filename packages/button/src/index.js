@@ -136,7 +136,7 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
   )
 }
 
-export const ButtonHoldPress = ({ variant, active = false, isInput = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonHoldPress = ({ variant, active = false, isInput = false, text, icon, badgeValue = 0, badgeVariant = 'primary', hasCheckbox = false, disabled = false, ...props }) => {
   let colorValue
   let heightIcon
   let fontWeight
@@ -192,8 +192,8 @@ export const ButtonHoldPress = ({ variant, active = false, isInput = false, text
           whiteSpace: 'nowrap',
         }}
       >
-        { hasCheckbox && isActive && <Checkbox defaultChecked={true} disabled={disabled}/>}
-        { hasCheckbox && !isActive && <Checkbox defaultChecked={false} disabled={disabled}/>}
+        { hasCheckbox && active && <Checkbox defaultChecked={true} disabled={disabled}/>}
+        { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={disabled}/>}
         { !icon && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
         { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }
         { icon && !colorValue && <span className={icon} style={heightIcon && { height: heightIcon }}/> }

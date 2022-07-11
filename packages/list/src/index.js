@@ -90,7 +90,7 @@ const ListMultiselect = ({ children, disabled = false, hover = true, isActive, .
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonHoldPress variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } isActive={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
+        <ButtonHoldPress variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
       </div>
     </Box>
   )

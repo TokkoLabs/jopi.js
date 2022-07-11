@@ -39,7 +39,7 @@ describe('Collapsible', () => {
               icon="icon-emprendimientos"
               text={'Emprendimientos'}
               isExpanded
-              isActive
+              active
             >
             </Collapsible.Button>
             <Collapsible.Body>
@@ -53,7 +53,7 @@ describe('Collapsible', () => {
               icon="icon-emprendimientos"
               text={'Emprendimientos'}
               isExpanded={false}
-              isActive={false}
+              active={false}
             >
             </Collapsible.Button>
             <Collapsible.Body>
@@ -67,7 +67,7 @@ describe('Collapsible', () => {
               icon="icon-emprendimientos"
               text={'Emprendimientos'}
               isExpanded={false}
-              isActive={false}
+              active={false}
               badgeValue={2}
             >
             </Collapsible.Button>
