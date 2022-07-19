@@ -81,8 +81,8 @@ export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, text, bad
           justifyContent: 'center',
           alignItems: 'center',
           borderRadius: 12,
-          width: '48px',
-          height: '48px',
+        //  width: '48px',
+        //  height: '48px',
           whiteSpace: 'nowrap',
         }}
       >

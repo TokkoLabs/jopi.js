@@ -15,6 +15,7 @@ const data = [
     content: {
       name: 'Agustin Iglesias',
       count: 10,
+      icon: 'icon-alerta',
     },
   },
   {
@@ -22,6 +23,7 @@ const data = [
     content: {
       name: 'Josefina Golubicki',
       count: 43,
+      icon: 'icon-adjuntar',
     },
   },
   {
@@ -29,6 +31,7 @@ const data = [
     content: {
       name: 'Wally',
       count: 45,
+      icon: 'icon-agente',
     },
   },
 ]
@@ -476,21 +479,20 @@ export const dropdownStatesMultiselectSearch = () => {
     </Dropdown>
   )
 }
-/*
+
 export const dropdownStatesIcon = () => {
-  const [ value, setValue ] = useState("Placeholder")
+  const [ value, setValue ] = useState("icon-configuracion")
   
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant="dropdownDefault" text={value} filled={value != undefined}></Dropdown.Button>
+      <Dropdown.Button variant="dropdownDefault" icon={value} filled={value != undefined} isButtonIcon></Dropdown.Button>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} 
-            active={list.includes(user.id)}>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
   )
-}*/
+}
