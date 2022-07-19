@@ -904,6 +904,7 @@ const theme = {
       ':focus': {
         color: colors.neutralGray3,
         backgroundColor: colors.transparent,
+        border: borders.neutralGray7,
       },
     },
     mainItemSmallList: {

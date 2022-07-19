@@ -389,9 +389,9 @@ export const dropdownColored = () => {
       <Dropdown.Button variant="dropdownColored" text={"Label"} filled={list.length > 0} isArrowStatic></Dropdown.Button>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Item key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
             {user.content.name}
-          </Dropdown.Item>
+          </Dropdown.Multiselect>
         ))}
       </Dropdown.Items>
     </Dropdown>
