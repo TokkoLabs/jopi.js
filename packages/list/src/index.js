@@ -50,7 +50,7 @@ const ListItem = ({ children, hover = true, ...props }) => (
   </Box>
 )
 
-const ListDefault = ({ children, disabled = false, hover = true, size = 'dropdownSizeNormal', ...props }) => {
+const ListDefault = ({ children, disabled = false, hover = true, variantSize = 'dropdownSizeNormal', ...props }) => {
   return (
     <Box
       as="li"
@@ -63,13 +63,13 @@ const ListDefault = ({ children, disabled = false, hover = true, size = 'dropdow
       }}
     >
       <div style={{ width: '100%' }}>
-        <Button variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', size ]} >{children}</Button>
+        <Button variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize ]} >{children}</Button>
       </div>
     </Box>
   )
 }
 
-const ListMultiselect = ({ children, disabled = false, hover = true, isActive, size = 'dropdownSizeNormal', ...props }) => {
+const ListMultiselect = ({ children, disabled = false, hover = true, isActive, variantSize = 'dropdownSizeNormal', ...props }) => {
   const [active, toggle] = useToggle(false)
   if (isActive && !active) {
     toggle(true)
@@ -87,13 +87,13 @@ const ListMultiselect = ({ children, disabled = false, hover = true, isActive, s
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonHoldPress variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', size ]} active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
+        <ButtonHoldPress variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize ]} active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
       </div>
     </Box>
   )
 }
 
-const ListIcon = ({ children, disabled = false, hover = true, isActive, icon, size = 'dropdownSizeNormal', ...props }) => {
+const ListIcon = ({ children, disabled = false, hover = true, isActive, icon, variantSize = 'dropdownSizeNormal', ...props }) => {
   return (
     <Box
       as="li"
@@ -106,7 +106,7 @@ const ListIcon = ({ children, disabled = false, hover = true, isActive, icon, si
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonIcon variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', size ]} icon={icon} text={children}/>
+        <ButtonIcon variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize ]} icon={icon} text={children}/>
       </div>
     </Box>
   )

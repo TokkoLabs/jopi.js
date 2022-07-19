@@ -130,9 +130,10 @@ const DropdownListItem = (props) => (
   />
 )
 
-const DropdownListDefault = ({ disabled, ...props }) => (
+const DropdownListDefault = ({ disabled, variantSize = 'dropdownSizeNormal', ...props }) => (
   <List.Default
     disabled={disabled}
+    variantSize={variantSize}
     {...props}
     sx={{
       cursor: disabled ? 'default' : 'pointer',
@@ -144,10 +145,11 @@ const DropdownListDefault = ({ disabled, ...props }) => (
   />
 )
 
-const DropdownListMultiselect = ({ disabled, active, ...props }) => (
+const DropdownListMultiselect = ({ disabled, active, variantSize = 'dropdownSizeNormal', ...props }) => (
   <List.Multiselect
     disabled={disabled}
     isActive={active}
+    variantSize={variantSize}
     {...props}
     sx={{
       cursor: disabled ? 'default' : 'pointer',
@@ -159,10 +161,11 @@ const DropdownListMultiselect = ({ disabled, active, ...props }) => (
   />
 )
 
-const DropdownListIcon = ({ disabled, active, icon, ...props }) => (
+const DropdownListIcon = ({ disabled, active, icon, variantSize = 'dropdownSizeNormal', ...props }) => (
   <List.Icon
     disabled={disabled}
     icon={icon}
+    variantSize={variantSize}
     {...props}
     sx={{
       cursor: disabled ? 'default' : 'pointer',
