@@ -1,10 +1,9 @@
 import React, { forwardRef } from 'react'
 import { Box, Flex } from '@oneloop/box'
 import { Input } from '@oneloop/input'
-import { useFilterData } from '@oneloop/hooks'
 import { Checkbox } from '@oneloop/checkbox'
-import { useToggle } from '@oneloop/hooks'
-import { Button, ButtonHoldPress, ButtonIcon, ButtonMain } from '@oneloop/button'
+import { useToggle, useFilterData } from '@oneloop/hooks'
+import { Button, ButtonHoldPress, ButtonIcon } from '@oneloop/button'
 
 const List = forwardRef(({ children, ...props }, ref) => (
   <Box
@@ -63,7 +62,7 @@ const ListDefault = ({ children, disabled = false, hover = true, variantSize = '
       }}
     >
       <div style={{ width: '100%' }}>
-        <Button variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize ]} >{children}</Button>
+        <Button variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} >{children}</Button>
       </div>
     </Box>
   )
@@ -87,7 +86,7 @@ const ListMultiselect = ({ children, disabled = false, hover = true, isActive, v
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonHoldPress variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize ]} active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
+        <ButtonHoldPress variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
       </div>
     </Box>
   )
@@ -106,7 +105,7 @@ const ListIcon = ({ children, disabled = false, hover = true, isActive, icon, va
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonIcon variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize ]} icon={icon} text={children}/>
+        <ButtonIcon variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} icon={icon} text={children}/>
       </div>
     </Box>
   )

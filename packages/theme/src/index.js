@@ -97,7 +97,7 @@ const borders = {
   secondaryBorder: '1px solid ' + colors.secondary,
   feedbackBorder: '1px solid ' + colors.feedback,
   disabledBorder: '1px solid ' + colors.disabled,
-  neutralGray7: '1px solid ' + colors.neutralGray7
+  neutralGray7: '1px solid ' + colors.neutralGray7,
 }
 
 const switches = {
@@ -681,7 +681,6 @@ const theme = {
       color: colors.neutralGray3,
       height: '28px',
       fontSize: '12px',
-      fontWeight: 'normal',
       lineHeight: '16px',
       padding: '9px 12px 9px 12px',
       ':hover': {

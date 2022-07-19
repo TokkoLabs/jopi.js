@@ -34,7 +34,7 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, variantSize = 'dropdownSizeNormal', ...props }) => {
+const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, variantSize = 'dropdownSizeNormal', ...props }) => {
   const { toggle } = useDropdownContext()
 
   const variantValues = Object.values(theme.buttons)[Object.keys(theme.buttons).indexOf(variant)]
@@ -48,9 +48,9 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
 
   if (isButtonIcon) {
     return (
-      <ButtonIcon 
-        variant={[variant, variantSize]} 
-        icon={icon} 
+      <ButtonIcon
+        variant={[variant, variantSize]}
+        icon={icon}
         onClick={ !disabled ? toggle : undefined}
       />
     )
@@ -70,10 +70,8 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
         overflow: 'hidden',
         whiteSpace: 'nowrap',
         textAlign: 'start',
-        justifyContent: 'start',
         fontSize: '14px',
         lineHeight: '18px',
-      //  height: '32px',
         width: '100%',
         gap: '6px',
         backgroundColor: filled ? backgroundColorFilled : undefined,
@@ -81,10 +79,11 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
         padding: '6px 10px 6px 10px',
       }}
     >
-      { icon && ( !filled ? <span className={icon} style={{ fontSize: "16px", height: "16px" }}/> : <span className={icon} style={{color: colorFilled, backgroundColor: backgroundColorFilled, fontSize: "16px", height: "16px" }}/> )}
-      { !filled ? <span>{text}</span> : <span style={{color: colorFilled, backgroundColor: backgroundColorFilled }}>{ text }</span>}
-      { !filled ? <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)' }}/> :
-        <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
+      { icon && (!filled ? <span className={icon} style={{ fontSize: '16px', height: '16px' }}/> : <span className={icon} style={{ color: colorFilled, backgroundColor: backgroundColorFilled, fontSize: '16px', height: '16px' }}/>) }
+      { !filled ? <span>{text}</span> : <span style={{ color: colorFilled, backgroundColor: backgroundColorFilled }}>{text}</span> }
+      { !filled
+        ? <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)' }}/>
+        : <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
     </Button>
   )
 }

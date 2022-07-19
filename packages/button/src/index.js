@@ -81,8 +81,6 @@ export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, text, bad
           justifyContent: 'center',
           alignItems: 'center',
           borderRadius: 12,
-        //  width: '48px',
-        //  height: '48px',
           whiteSpace: 'nowrap',
         }}
       >
@@ -167,7 +165,7 @@ export const ButtonHoldPress = ({ variant, active = false, isInput = false, text
       fontWeight = Object.values(theme.buttons)[index][':focus'].fontWeight
     }
   }
-  
+
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -193,7 +191,7 @@ export const ButtonHoldPress = ({ variant, active = false, isInput = false, text
           whiteSpace: 'nowrap',
         }}
       >
-        { hasCheckbox && active && <Checkbox defaultChecked={true} disabled={disabled}/>}
+        { hasCheckbox && active && <Checkbox defaultChecked disabled={disabled}/>}
         { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={disabled}/>}
         { !icon && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
         { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }

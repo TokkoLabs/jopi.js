@@ -75,7 +75,7 @@ export const searchable = () =>
       </List>
     )
   }
-)
+  )
 
 export const defaultNormal = () => (
   <List width={1 / 3}>
