@@ -41,7 +41,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, text, badgeVariant = 'primary', ...props }) => {
   let heightIcon
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
@@ -86,8 +86,9 @@ export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVari
           whiteSpace: 'nowrap',
         }}
       >
-        <span className={icon} style={heightIcon && { height: heightIcon }}></span>
+        <span className={icon} style={heightIcon && { height: heightIcon, fontSize: heightIcon }}></span>
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
+        { text && <span>{text}</span> }
       </Box>
     </Box>
   )

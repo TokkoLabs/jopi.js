@@ -4,7 +4,7 @@ import { Input } from '@oneloop/input'
 import { useFilterData } from '@oneloop/hooks'
 import { Checkbox } from '@oneloop/checkbox'
 import { useToggle } from '@oneloop/hooks'
-import { Button, ButtonHoldPress } from '@oneloop/button'
+import { Button, ButtonHoldPress, ButtonIcon, ButtonMain } from '@oneloop/button'
 
 const List = forwardRef(({ children, ...props }, ref) => (
   <Box
@@ -50,9 +50,7 @@ const ListItem = ({ children, hover = true, ...props }) => (
   </Box>
 )
 
-const ListDefault = ({ children, disabled = false, hover = true, ...props }) => {
-  const [active, toggle] = useToggle(false)
-
+const ListDefault = ({ children, disabled = false, hover = true, size = 'dropdownSizeNormal', ...props }) => {
   return (
     <Box
       as="li"
@@ -64,15 +62,14 @@ const ListDefault = ({ children, disabled = false, hover = true, ...props }) => 
         alignItems: 'center',
       }}
     >
-      {/*** QUEDA ARREGLAR EL HOVER; QUE NO ES CUADRADO */}
       <div style={{ width: '100%' }}>
-        <Button variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } >{children}</Button>
+        <Button variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', size ]} >{children}</Button>
       </div>
     </Box>
   )
 }
 
-const ListMultiselect = ({ children, disabled = false, hover = true, isActive, ...props }) => {
+const ListMultiselect = ({ children, disabled = false, hover = true, isActive, size = 'dropdownSizeNormal', ...props }) => {
   const [active, toggle] = useToggle(false)
   if (isActive && !active) {
     toggle(true)
@@ -90,7 +87,26 @@ const ListMultiselect = ({ children, disabled = false, hover = true, isActive, .
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonHoldPress variant={ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList' } active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
+        <ButtonHoldPress variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', size ]} active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
+      </div>
+    </Box>
+  )
+}
+
+const ListIcon = ({ children, disabled = false, hover = true, isActive, icon, size = 'dropdownSizeNormal', ...props }) => {
+  return (
+    <Box
+      as="li"
+      width={1}
+      {...props}
+      __css={{
+        display: 'inline-flex',
+        justifyContent: 'start',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{ width: '100%' }}>
+        <ButtonIcon variant={[ disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', size ]} icon={icon} text={children}/>
       </div>
     </Box>
   )
@@ -98,6 +114,7 @@ const ListMultiselect = ({ children, disabled = false, hover = true, isActive, .
 
 List.Default = ListDefault
 List.Multiselect = ListMultiselect
+List.Icon = ListIcon
 List.Search = ListInput
 List.Item = ListItem
 List.displayName = 'List'

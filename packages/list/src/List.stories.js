@@ -79,16 +79,24 @@ export const searchable = () =>
 
 export const defaultNormal = () => (
   <List width={1 / 3}>
-    <List.Default disabled>Hola</List.Default>
-    <List.Default>Good</List.Default>
-    <List.Default>Bye</List.Default>
+    <List.Default disabled>Item 1</List.Default>
+    <List.Default>Item 2</List.Default>
+    <List.Default>Item 3</List.Default>
   </List>
 )
 
 export const multiselect = () => (
   <List width={1 / 3}>
-    <List.Multiselect disabled>Hola</List.Multiselect>
-    <List.Multiselect>Good</List.Multiselect>
-    <List.Multiselect>Bye</List.Multiselect>
+    <List.Multiselect disabled>Item 1</List.Multiselect>
+    <List.Multiselect>Item 2</List.Multiselect>
+    <List.Multiselect>Item 3</List.Multiselect>
+  </List>
+)
+
+export const icon = () => (
+  <List width={1 / 3}>
+    <List.Icon icon="icon-agente" disabled>Item 1</List.Icon>
+    <List.Icon icon="icon-agente" >Item 2</List.Icon>
+    <List.Icon icon="icon-agente" >Item 3</List.Icon>
   </List>
 )

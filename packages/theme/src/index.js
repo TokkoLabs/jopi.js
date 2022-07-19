@@ -916,6 +916,7 @@ const theme = {
       width: '100%',
       justifyContent: 'start',
       padding: '9px 12px 9px 12px',
+      borderRadius: '0px',
       gap: '8px',
       ':hover': {
         backgroundColor: colors.neutralGray9,
@@ -940,7 +941,20 @@ const theme = {
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
+      borderRadius: '0px',
       gap: '8px',
+    },
+    dropdownSizeNormal: {
+      height: '32px',
+      heightIcon: '20px',
+    },
+    dropdownSizeSmall: {
+      height: '28px',
+      heightIcon: '18px',
+    },
+    dropdownSizeExtraSmall: {
+      height: '22px',
+      heightIcon: '16px',
     },
     badgeInfo: {
       backgroundColor: colors.info,
