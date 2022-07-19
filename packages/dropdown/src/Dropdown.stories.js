@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
-import { action } from '@storybook/addon-actions'
 import { Dropdown } from '.'
 import { useFilterData } from '@oneloop/list'
-import { useToggle } from '@oneloop/hooks'
 
 export default {
   component: Dropdown,
@@ -286,7 +284,7 @@ export const dropdownIcon = () => {
   
   return (
     <Dropdown width={1 / 16}>
-      <Dropdown.Button variant="dropdownIcon" isButtonIcon icon="icon-configuracion" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Button variant="dropdownIcon" isButtonIcon icon="icon-configuracion" filled={list.length > 0} variantSize='iconSmall' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
@@ -311,7 +309,7 @@ export const dropdownIconDisabled = () => {
   
   return (
     <Dropdown width={1 / 16}>
-      <Dropdown.Button variant="dropdownIconDisabled" isButtonIcon disabled icon="icon-configuracion" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Button variant="dropdownIconDisabled" isButtonIcon disabled icon="icon-configuracion" filled={list.length > 0} variantSize='iconSmall' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
@@ -485,7 +483,7 @@ export const dropdownStatesIcon = () => {
   
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant="dropdownDefault" icon={value} filled={value != undefined} isButtonIcon></Dropdown.Button>
+      <Dropdown.Button variant="dropdownDefault" icon={value} filled={value != undefined} isButtonIcon variantSize='iconSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon}>
@@ -499,15 +497,65 @@ export const dropdownStatesIcon = () => {
 
 /** Other Sizes**/
 
+export const dropdownDefaultSmall = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownDefault" text="Opción elegida" filled={list.length > 0} variantSize = 'dropdownSizeSmall'/>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} variantSize = 'dropdownSizeSmall'>
+            {user.content.name}
+          </Dropdown.Multiselect>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const dropdownDefaultExtramall = () => {
+  const [ list, setList ] = useState( [] )
+
+  const updateList = ( value ) => {
+    if(!list.includes(value)) {
+      setList([ ...list, value ])
+    } else {
+      setList((list) => list.filter((id) => id !== value));
+    }
+  }
+  
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant="dropdownDefault" text="Opción elegida" filled={list.length > 0} variantSize = 'dropdownSizeExtraSmall'/>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} variantSize = 'dropdownSizeSmall'>
+            {user.content.name}
+          </Dropdown.Multiselect>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
 export const dropdownStatesIconSmall = () => {
   const [ value, setValue ] = useState("icon-configuracion")
   
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant="dropdownDefault" icon={value} filled={value != undefined} isButtonIcon></Dropdown.Button>
+      <Dropdown.Button variant="dropdownDefault" icon={value} filled={value != undefined} isButtonIcon variantSize='iconSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon} variantSize = 'dropdownSizeSmall'>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon} variantSize='dropdownSizeSmall'>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -521,10 +569,10 @@ export const dropdownStatesIconExtraSmall = () => {
   
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant="dropdownDefault" icon={value} filled={value != undefined} isButtonIcon></Dropdown.Button>
+      <Dropdown.Button variant="dropdownDefault" icon={value} filled={value != undefined} isButtonIcon variantSize='iconExtraSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon} variantSize = 'dropdownSizeExtraSmall'>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon} variantSize='dropdownSizeExtraSmall'>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -546,7 +594,7 @@ export const dropdownStatesMultiselectSmall = () => {
   
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant="dropdownDefault" text="Seleccione" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Button variant="dropdownDefault" text="Seleccione" filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} variantSize = 'dropdownSizeSmall'>
@@ -571,7 +619,7 @@ export const dropdownStatesMultiselectExtraSmall = () => {
   
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant="dropdownDefault" text="Seleccione" filled={list.length > 0}></Dropdown.Button>
+      <Dropdown.Button variant="dropdownDefault" text="Seleccione" filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={user.id==23} variantSize = 'dropdownSizeExtraSmall'>

@@ -948,14 +948,20 @@ const theme = {
     dropdownSizeNormal: {
       height: '32px',
       heightIcon: '20px',
+      fontSize: '14px',
+      lineHeight: '18px',
     },
     dropdownSizeSmall: {
       height: '28px',
       heightIcon: '18px',
+      fontSize: '12px',
+      lineHeight: '16px',
     },
     dropdownSizeExtraSmall: {
       height: '22px',
       heightIcon: '16px',
+      fontSize: '11px',
+      lineHeight: '13px',
     },
     badgeInfo: {
       backgroundColor: colors.info,

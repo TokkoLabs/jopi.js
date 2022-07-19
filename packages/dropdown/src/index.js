@@ -34,7 +34,7 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, ...props }) => {
+const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, variantSize = 'dropdownSizeNormal', ...props }) => {
   const { toggle } = useDropdownContext()
 
   const variantValues = Object.values(theme.buttons)[Object.keys(theme.buttons).indexOf(variant)]
@@ -49,7 +49,7 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
   if (isButtonIcon) {
     return (
       <ButtonIcon 
-        variant={[variant, 'iconSmall']} 
+        variant={[variant, variantSize]} 
         icon={icon} 
         onClick={ !disabled ? toggle : undefined}
       />
@@ -58,7 +58,7 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
 
   return (
     <Button
-      variant={variant}
+      variant={[variant, variantSize]}
       {...props}
       onClick={ !disabled ? toggle : undefined}
       sx={{
@@ -73,7 +73,7 @@ const DropdownButton = ({ icon, text, variant = "dropdown", disabled = false, fi
         justifyContent: 'start',
         fontSize: '14px',
         lineHeight: '18px',
-        height: '32px',
+      //  height: '32px',
         width: '100%',
         gap: '6px',
         backgroundColor: filled ? backgroundColorFilled : undefined,
