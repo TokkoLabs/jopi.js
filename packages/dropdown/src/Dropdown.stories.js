@@ -34,7 +34,7 @@ const data = [
   },
 ]
 
-/* ANTES DE SUBIR CHEQUEAR CON BRA, LA COMENTACION DE ESTOS DOS DROPDOWN
+/* 
 export const search = () =>
   React.createElement(() => {
     const [filteredData, setValue] = useFilterData(data, 'content')
