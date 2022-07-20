@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react'
 import { Box, Flex } from '@oneloop/box'
 import { Input } from '@oneloop/input'
-import { useFilterData } from '@oneloop/hooks'
 import { Checkbox } from '@oneloop/checkbox'
+import { useToggle, useFilterData } from '@oneloop/hooks'
+import { Button, ButtonHoldPress, ButtonIcon } from '@oneloop/button'
 
 const List = forwardRef(({ children, ...props }, ref) => (
   <Box
@@ -48,6 +49,71 @@ const ListItem = ({ children, hover = true, ...props }) => (
   </Box>
 )
 
+const ListDefault = ({ children, disabled = false, hover = true, variantSize = 'dropdownSizeNormal', ...props }) => {
+  return (
+    <Box
+      as="li"
+      width={1}
+      {...props}
+      __css={{
+        display: 'inline-flex',
+        justifyContent: 'start',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{ width: '100%' }}>
+        <Button variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} >{children}</Button>
+      </div>
+    </Box>
+  )
+}
+
+const ListMultiselect = ({ children, disabled = false, hover = true, isActive, variantSize = 'dropdownSizeNormal', ...props }) => {
+  const [active, toggle] = useToggle(false)
+  if (isActive && !active) {
+    toggle(true)
+  }
+
+  return (
+    <Box
+      as="li"
+      width={1}
+      {...props}
+      __css={{
+        display: 'inline-flex',
+        justifyContent: 'start',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{ width: '100%' }}>
+        <ButtonHoldPress variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
+      </div>
+    </Box>
+  )
+}
+
+const ListIcon = ({ children, disabled = false, hover = true, isActive, icon, variantSize = 'dropdownSizeNormal', ...props }) => {
+  return (
+    <Box
+      as="li"
+      width={1}
+      {...props}
+      __css={{
+        display: 'inline-flex',
+        justifyContent: 'start',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{ width: '100%' }}>
+        <ButtonIcon variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} icon={icon} text={children}/>
+      </div>
+    </Box>
+  )
+}
+
+List.Default = ListDefault
+List.Multiselect = ListMultiselect
+List.Icon = ListIcon
 List.Search = ListInput
 List.Item = ListItem
 List.displayName = 'List'

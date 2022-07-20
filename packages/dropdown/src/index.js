@@ -1,8 +1,9 @@
 import React, { createContext, useContext } from 'react'
 import { Box } from '@oneloop/box'
-import { Button } from '@oneloop/button'
+import { Button, ButtonIcon } from '@oneloop/button'
 import { List } from '@oneloop/list'
 import { useToggle, useOnClickOutside } from '@oneloop/hooks'
+import theme from '@oneloop/theme'
 
 const DropdownContext = createContext()
 
@@ -16,7 +17,7 @@ export const Dropdown = ({ children, ...props }) => {
 
   return (
     <DropdownContext.Provider value={value}>
-      <Box {...props} __css={{ position: 'relative' }}>
+      <Box {...props} __css={{ position: 'relative', height: '150px' }}>
         {children}
       </Box>
     </DropdownContext.Provider>
@@ -33,26 +34,57 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = (props) => {
+const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, variantSize = 'dropdownSizeNormal', ...props }) => {
   const { toggle } = useDropdownContext()
+
+  const variantValues = Object.values(theme.buttons)[Object.keys(theme.buttons).indexOf(variant)]
+  const colorFilled = variantValues.colorFilled
+  const backgroundColorFilled = variantValues.backgroundColorFilled
+  const colorArrowFilled = variantValues.colorArrowFilled
+  let sizeArrow = variantValues.sizeArrow
+  if (sizeArrow === undefined) {
+    sizeArrow = '12px'
+  }
+
+  if (isButtonIcon) {
+    return (
+      <ButtonIcon
+        variant={[variant, variantSize]}
+        icon={icon}
+        onClick={ !disabled ? toggle : undefined}
+      />
+    )
+  }
+
   return (
     <Button
-      variant="dropdown"
+      variant={[variant, variantSize]}
       {...props}
-      onClick={toggle}
+      onClick={ !disabled ? toggle : undefined}
       sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
         textOverflow: 'ellipsis',
+        fontFamily: 'Nunito Sans',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
-        py: '12px',
-        px: '16px',
         textAlign: 'start',
-        fontSize: 1,
-        lineHeight: 0,
-        height: '36px',
-        width: '236px',
+        fontSize: '14px',
+        lineHeight: '18px',
+        width: '100%',
+        gap: '6px',
+        backgroundColor: filled ? backgroundColorFilled : undefined,
+        justifyContent: isArrowStatic ? 'center' : 'flex-start',
+        padding: '6px 10px 6px 10px',
       }}
-    />
+    >
+      { icon && (!filled ? <span className={icon} style={{ fontSize: '16px', height: '16px' }}/> : <span className={icon} style={{ color: colorFilled, backgroundColor: backgroundColorFilled, fontSize: '16px', height: '16px' }}/>) }
+      { !filled ? <span>{text}</span> : <span style={{ color: colorFilled, backgroundColor: backgroundColorFilled }}>{text}</span> }
+      { !filled
+        ? <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)' }}/>
+        : <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
+    </Button>
   )
 }
 
@@ -97,7 +129,57 @@ const DropdownListItem = (props) => (
   />
 )
 
+const DropdownListDefault = ({ disabled, variantSize = 'dropdownSizeNormal', ...props }) => (
+  <List.Default
+    disabled={disabled}
+    variantSize={variantSize}
+    {...props}
+    sx={{
+      cursor: disabled ? 'default' : 'pointer',
+      pointerEvents: disabled ? 'none' : undefined,
+      userSelect: disabled ? 'none' : undefined,
+      fontSize: '2',
+      color: 'darkGray',
+    }}
+  />
+)
+
+const DropdownListMultiselect = ({ disabled, active, variantSize = 'dropdownSizeNormal', ...props }) => (
+  <List.Multiselect
+    disabled={disabled}
+    isActive={active}
+    variantSize={variantSize}
+    {...props}
+    sx={{
+      cursor: disabled ? 'default' : 'pointer',
+      pointerEvents: disabled ? 'none' : undefined,
+      userSelect: disabled ? 'none' : undefined,
+      fontSize: '2',
+      color: 'darkGray',
+    }}
+  />
+)
+
+const DropdownListIcon = ({ disabled, active, icon, variantSize = 'dropdownSizeNormal', ...props }) => (
+  <List.Icon
+    disabled={disabled}
+    icon={icon}
+    variantSize={variantSize}
+    {...props}
+    sx={{
+      cursor: disabled ? 'default' : 'pointer',
+      pointerEvents: disabled ? 'none' : undefined,
+      userSelect: disabled ? 'none' : undefined,
+      fontSize: '2',
+      color: 'darkGray',
+    }}
+  />
+)
+
 Dropdown.Button = DropdownButton
 Dropdown.Items = DropdownList
 Dropdown.Item = DropdownListItem
+Dropdown.Default = DropdownListDefault
+Dropdown.Multiselect = DropdownListMultiselect
+Dropdown.Icon = DropdownListIcon
 Dropdown.Search = DropdownListSearch
