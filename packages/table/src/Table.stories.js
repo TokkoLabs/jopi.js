@@ -33,3 +33,32 @@ export const normal = () => (
     </Table.Rows>
   </Table>
 )
+
+export const secondary = () => (
+  <div style={{ background: '#E4E8EA', padding: '20px', borderRadius: '10px' }}>
+    <Table>
+      <Table.HeaderDefault>
+        <Table.HeaderItemDefault>Agency</Table.HeaderItemDefault>
+        <Table.HeaderItemDefault>Country</Table.HeaderItemDefault>
+        <Table.HeaderItemDefault>Paid</Table.HeaderItemDefault>
+      </Table.HeaderDefault>
+      <Table.Rows>
+        <Table.RowDefault>
+          <Table.RowItemDefault>InmoMex</Table.RowItemDefault>
+          <Table.RowItemDefault>Mexico</Table.RowItemDefault>
+          <Table.RowItemDefault>Yes</Table.RowItemDefault>
+        </Table.RowDefault>
+        <Table.RowDefault>
+          <Table.RowItemDefault>RGM</Table.RowItemDefault>
+          <Table.RowItemDefault>Argentina</Table.RowItemDefault>
+          <Table.RowItemDefault>Yes</Table.RowItemDefault>
+        </Table.RowDefault>
+        <Table.RowDefault>
+          <Table.RowItemDefault>Urbania</Table.RowItemDefault>
+          <Table.RowItemDefault>Peru</Table.RowItemDefault>
+          <Table.RowItemDefault>Yes</Table.RowItemDefault>
+        </Table.RowDefault>
+      </Table.Rows>
+    </Table>
+  </div>
+)

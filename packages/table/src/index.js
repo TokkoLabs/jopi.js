@@ -56,8 +56,73 @@ const TableRowItem = (props) => (
   />
 )
 
+const TableHeaderDefault = ({ children, ...props }) => (
+  <Box as="thead">
+    <Box
+      as="tr"
+      {...props}
+      __css={{
+        backgroundColor: '#49565D'
+      }}
+      >
+      {children}
+    </Box>
+  </Box>
+)
+
+
+const TableHeaderItemDefault = (props) => (
+  <Box
+    as="th"
+    {...props}
+    __css={{
+      py: '16px',
+      color: 'white',
+      mb: '5px',
+      backgroundColor: '#49565D',
+      // ':firstchild': {
+      //   borderRadius: 'input',
+      // },
+    }}
+  />
+)
+
+const TableRowDefault = (props) => (
+  <Box 
+    as="tr" 
+    {...props} 
+    __css={{
+      padding: '6px 12px 6px 12px',
+      gap: '12px',
+      backgroundColor: '#FFFFFF',
+      borderRadius: '8px',
+    }}
+  />
+)
+
+const TableRowItemDefault = (props) => (
+  <Box
+    as="td"
+    {...props}
+    __css={{
+      color: 'darkGrey',
+      mb: '5px',
+      gap: '12px',
+      height: '60px',
+      ':firstchild': {
+         borderRadius: '8px',
+      },
+    }}
+  />
+)
+
 Table.Header = TableHeader
 Table.HeaderItem = TableHeaderItem
 Table.Rows = TableBody
 Table.Row = TableRow
 Table.RowItem = TableRowItem
+
+Table.HeaderDefault = TableHeaderDefault
+Table.HeaderItemDefault = TableHeaderItemDefault
+Table.RowDefault = TableRowDefault
+Table.RowItemDefault = TableRowItemDefault
