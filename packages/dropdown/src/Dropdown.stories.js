@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { action } from '@storybook/addon-actions'
 import { Dropdown } from '.'
 import { useFilterData } from '@oneloop/list'
 
@@ -36,35 +35,35 @@ const data = [
 ]
 
 export const Search = () => {
-const [list, setList] = useState([])
-const [filteredData, setValue] = useFilterData(data, 'content')
-const [text, setText] = useState('')
+  const [list, setList] = useState([])
+  const [filteredData, setValue] = useFilterData(data, 'content')
+  const [text, setText] = useState('')
 
-const onFilter = (e) => {
-  setValue(e.target.value)
-  setText(e.target.value)
-}
-
-const updateList = (value) => {
-  if (!list.includes(value)) {
-    setList([...list, value])
-  } else {
-    setList((list) => list.filter((id) => id !== value))
+  const onFilter = (e) => {
+    setValue(e.target.value)
+    setText(e.target.value)
   }
-}
 
-return (
-  <Dropdown width={1 / 4}>
-    <Dropdown.Button variant='dropdownDefault' text='Agente' filled={ list.length > 0 }></Dropdown.Button>
-    <Dropdown.Items>
-      <Dropdown.Search placeholder='Search' onChange={onFilter} value={text}/>
-      {filteredData.map((user) => (
-        <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } active={list.includes(user.id)}>
-          {user.content.name}
-        </Dropdown.Multiselect>
-      ))}
-    </Dropdown.Items>
-  </Dropdown>
+  const updateList = (value) => {
+    if (!list.includes(value)) {
+      setList([...list, value])
+    } else {
+      setList((list) => list.filter((id) => id !== value))
+    }
+  }
+
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant='dropdownDefault' text='Agente' filled={ list.length > 0 }></Dropdown.Button>
+      <Dropdown.Items>
+        <Dropdown.Search placeholder='Search' onChange={onFilter} value={text}/>
+        {filteredData.map((user) => (
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } active={list.includes(user.id)}>
+            {user.content.name}
+          </Dropdown.Multiselect>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
   )
 }
 
