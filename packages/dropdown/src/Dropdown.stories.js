@@ -35,41 +35,63 @@ const data = [
   },
 ]
 
-export const search = () =>
-  React.createElement(() => {
-    const [filteredData, setValue] = useFilterData(data, 'content')
+export const Search = () => {
+const [list, setList] = useState([])
+const [filteredData, setValue] = useFilterData(data, 'content')
+const [text, setText] = useState('')
 
-    const onFilter = (e) => {
-      setValue(e.target.value)
-    }
+const onFilter = (e) => {
+  setValue(e.target.value)
+  setText(e.target.value)
+}
 
-    return (
-      <Dropdown width={1 / 3}>
-        <Dropdown.Button text='Placeholder'></Dropdown.Button>
-        <Dropdown.Items>
-          <Dropdown.Search placeholder='search something' onChange={onFilter} />
-          {filteredData.map((user) => (
-            <Dropdown.Item key={user.id} onClick={action('selected')}>
-              {user.content.name}
-            </Dropdown.Item>
-          ))}
-        </Dropdown.Items>
-      </Dropdown>
-    )
-  })
+const updateList = (value) => {
+  if (!list.includes(value)) {
+    setList([...list, value])
+  } else {
+    setList((list) => list.filter((id) => id !== value))
+  }
+}
 
-export const select = () => (
-  <Dropdown width={1 / 3}>
-    <Dropdown.Button text='Opción elegida'></Dropdown.Button>
+return (
+  <Dropdown width={1 / 4}>
+    <Dropdown.Button variant='dropdownDefault' text='Agente' filled={ list.length > 0 }></Dropdown.Button>
     <Dropdown.Items>
-      {data.map((user) => (
-        <Dropdown.Item key={user.id} onClick={action('selected')}>
+      <Dropdown.Search placeholder='Search' onChange={onFilter} value={text}/>
+      {filteredData.map((user) => (
+        <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } active={list.includes(user.id)}>
           {user.content.name}
-        </Dropdown.Item>
+        </Dropdown.Multiselect>
       ))}
     </Dropdown.Items>
   </Dropdown>
-)
+  )
+}
+
+export const Select = () => {
+  const [list, setList] = useState([])
+
+  const updateList = (value) => {
+    if (!list.includes(value)) {
+      setList([...list, value])
+    } else {
+      setList((list) => list.filter((id) => id !== value))
+    }
+  }
+
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant='dropdownDefault' text='Seleccione' filled={ list.length > 0 }></Dropdown.Button>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } >
+            {user.content.name}
+          </Dropdown.Multiselect>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
 
 export const DropdownDefault = () => {
   const [list, setList] = useState([])
@@ -407,62 +429,6 @@ export const DropdownStatesDefault = () => {
           <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
           </Dropdown.Default>
-        ))}
-      </Dropdown.Items>
-    </Dropdown>
-  )
-}
-
-export const DropdownStatesMultiselect = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
-
-  return (
-    <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Seleccione' filled={ list.length > 0 }></Dropdown.Button>
-      <Dropdown.Items>
-        {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } >
-            {user.content.name}
-          </Dropdown.Multiselect>
-        ))}
-      </Dropdown.Items>
-    </Dropdown>
-  )
-}
-
-export const DropdownStatesMultiselectSearch = () => {
-  const [list, setList] = useState([])
-  const [filteredData, setValue] = useFilterData(data, 'content')
-
-  const onFilter = (e) => {
-    setValue(e.target.value)
-  }
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
-
-  return (
-    <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Agente' filled={ list.length > 0 }></Dropdown.Button>
-      <Dropdown.Items>
-        <Dropdown.Search placeholder='Search' onChange={onFilter}/>
-        {filteredData.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } active={list.includes(user.id)}>
-            {user.content.name}
-          </Dropdown.Multiselect>
         ))}
       </Dropdown.Items>
     </Dropdown>
