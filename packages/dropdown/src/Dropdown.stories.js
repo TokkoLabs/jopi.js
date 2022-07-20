@@ -453,12 +453,7 @@ export const DropdownStatesMultiselectSearch = () => {
       setList((list) => list.filter((id) => id !== value))
     }
   }
-  // AL ESCRIBIR EN EL SEARCH y cerrarlo se borra lo que se busco.
-  // tengo que hacer que lo escrito en el input no se borre, porque lo necesito.
-  // o bien perder el filtro, osea que aparezca todo de nuevo.
-  // Creo que eso es mejor
-  // Usar la opcion para que el filtro vuelva al total
-  // DESPUES DE ESTO, QUEDA AGREGAR EL QUE TIENE EL ICONO; EL LUNES LO TERMINO SEGURO
+
   return (
     <Dropdown width={1 / 4}>
       <Dropdown.Button variant='dropdownDefault' text='Agente' filled={ list.length > 0 }></Dropdown.Button>
@@ -490,8 +485,6 @@ export const DropdownStatesIcon = () => {
     </Dropdown>
   )
 }
-
-/** Other Sizes**/
 
 export const DropdownDefaultSmall = () => {
   const [list, setList] = useState([])
