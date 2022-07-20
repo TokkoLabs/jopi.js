@@ -6,6 +6,7 @@ exports[`Dropdown default 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
+  height: 150px;
 }
 
 .c1 {
@@ -54,18 +55,35 @@ exports[`Dropdown default 1`] = `
   white-space: nowrap;
   padding: 13px 26px 13px 26px;
   gap: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-overflow: ellipsis;
+  font-family: Nunito Sans;
   overflow: hidden;
   white-space: nowrap;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 16px;
-  padding-right: 16px;
   text-align: start;
   font-size: 14px;
-  line-height: 0;
-  height: 36px;
-  width: 236px;
+  line-height: 18px;
+  width: 100%;
+  gap: 6px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 6px 10px 6px 10px;
+}
+
+@media screen and (min-width:40em) {
+
 }
 
 <div
@@ -78,7 +96,215 @@ exports[`Dropdown default 1`] = `
       className="c2"
       onClick={[Function]}
     >
-      Opción elegida
+      <span />
+      <span
+        className="icon-dropdown"
+        style={
+          Object {
+            "fontSize": "12px",
+            "height": "12px",
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DropdownMultiselect default 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 150px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 12px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 48px;
+  white-space: nowrap;
+  padding: 13px 26px 13px 26px;
+  gap: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-overflow: ellipsis;
+  font-family: Nunito Sans;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: start;
+  font-size: 14px;
+  line-height: 18px;
+  width: 100%;
+  gap: 6px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 6px 10px 6px 10px;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <span />
+      <span
+        className="icon-dropdown"
+        style={
+          Object {
+            "fontSize": "12px",
+            "height": "12px",
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DropdownMultiselect default 2`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 150px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: primary;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <span
+        className="icon-configuracion"
+        style={
+          Object {
+            "fontSize": "20px",
+            "height": "20px",
+          }
+        }
+      />
     </button>
   </div>
 </div>
