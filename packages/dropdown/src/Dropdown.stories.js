@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import { action } from '@storybook/addon-actions'
+import { action } from '@storybook/addon-actions'
 import { Dropdown } from '.'
 import { useFilterData } from '@oneloop/list'
 
@@ -35,7 +35,7 @@ const data = [
   },
 ]
 
-/* export const search = () =>
+export const search = () =>
   React.createElement(() => {
     const [filteredData, setValue] = useFilterData(data, 'content')
 
@@ -69,7 +69,7 @@ export const select = () => (
       ))}
     </Dropdown.Items>
   </Dropdown>
-) */
+)
 
 export const DropdownDefault = () => {
   const [list, setList] = useState([])
