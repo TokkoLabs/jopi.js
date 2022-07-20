@@ -43,8 +43,6 @@ exports[`Button collapseButtonOpen 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -65,6 +63,7 @@ exports[`Button collapseButtonOpen 1`] = `
       className="icon-atras"
       style={
         Object {
+          "fontSize": "10px",
           "height": "10px",
         }
       }
@@ -116,8 +115,6 @@ exports[`Button iconDisabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -175,8 +172,6 @@ exports[`Button iconPrimary 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -234,8 +229,6 @@ exports[`Button iconSecondary 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -618,7 +611,6 @@ exports[`Button mainIconButton 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: normal;
   font-size: 24px;
   text-align: center;
   -webkit-text-decoration: none;
@@ -631,17 +623,10 @@ exports[`Button mainIconButton 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -653,6 +638,12 @@ exports[`Button mainIconButton 1`] = `
   >
     <span
       className="icon-propiedades"
+      style={
+        Object {
+          "color": "#384248",
+          "height": undefined,
+        }
+      }
     />
   </button>
 </div>
@@ -679,7 +670,6 @@ exports[`Button mainIconButtonActive 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: normal;
   font-size: 24px;
   text-align: center;
   -webkit-text-decoration: none;
@@ -692,17 +682,10 @@ exports[`Button mainIconButtonActive 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -720,6 +703,7 @@ exports[`Button mainIconButtonActive 1`] = `
       className="icon-propiedades"
       style={
         Object {
+          "color": "#384248",
           "height": "16px",
         }
       }
@@ -831,8 +815,6 @@ exports[`Button outlineIconDisabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -1070,8 +1052,6 @@ exports[`Button primaryOutlineIcon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -1088,6 +1068,7 @@ exports[`Button primaryOutlineIcon 1`] = `
     <span
       style={
         Object {
+          "fontSize": "24px",
           "height": "24px",
         }
       }
@@ -1535,8 +1516,6 @@ exports[`Button secondaryOutlineIcon 2`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -1714,8 +1693,6 @@ exports[`Button subtleIcon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
@@ -1773,8 +1750,6 @@ exports[`Button subtleIconDisabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 12px;
-  width: 48px;
-  height: 48px;
   white-space: nowrap;
 }
 
