@@ -198,16 +198,47 @@ const theme = {
         fontWeight: 700,
       },
     ],
-    body: [
-      {
-        fontSize: fontSize[2],
+    body: {
+      fontSize09: {
+        fontSize: '9px',
         fontWeight: 400,
       },
-      {
-        fontSize: fontSize[1],
+      fontSize10: {
+        fontSize: '10px',
         fontWeight: 400,
       },
-    ],
+      fontSize11: {
+        fontSize: '11px',
+        fontWeight: 400,
+      },
+      fontSize12: {
+        fontSize: '12px',
+        fontWeight: 400,
+      },
+      fontSize13: {
+        fontSize: '13px',
+        fontWeight: 400,
+      },
+      fontSize14: {
+        fontSize: '14px',
+        fontWeight: 400,
+      },
+      fontSize15: {
+        fontSize: '15px',
+        fontWeight: 400,
+      },
+      fontSize16: {
+        fontSize: '16px',
+        fontWeight: 400,
+      },
+    },
+    bodyBold: {
+      fontSize11: {
+        fontSize: '11px',
+        fontWeight: 700,
+        lineHeight: '13px',
+      },
+    },
     success: [
       {
         fontSize: fontSize[5],
@@ -233,6 +264,26 @@ const theme = {
         color: colors.error,
       },
     ],
+    white: [
+      {
+        color: colors.neutral[0],
+        fontWeight: 700,
+        fontSize: '12px',
+        fontStyle: 'normal',
+        lineHeight: '16px',
+      //  display: 'flex',
+      //  alignItems: 'center',
+      },
+      {
+        color: colors.neutral[0],
+        fontWeight: 700,
+        fontSize: '10px',
+        fontStyle: 'normal',
+        lineHeight: '11px',
+      //  display: 'flex',
+      //  alignItems: 'center',
+      },
+    ]
     // small: { fontSize: fontSize[0] },
   },
   colors: colors,

@@ -32,8 +32,8 @@ export const all = () => (
     <Text variant="caption.0">Caption 1</Text>
     <Text variant="caption.1">Caption 2</Text>
     <Text variant="caption.2">Caption 3</Text>
-    <Text variant="body.0">Body 1</Text>
-    <Text variant="body.1">Body 2</Text>
+    <Text variant="body.fontSize10">Body 1</Text>
+    <Text variant="body.fontSize09">Body 2</Text>
     {/* <Text variant="small">Small text</Text>
     <Text variant="label">Label</Text>
     <Text variant="button.0">Button 1</Text>

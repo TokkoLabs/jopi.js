@@ -62,7 +62,14 @@ const TableHeaderDefault = ({ children, ...props }) => (
       as="tr"
       {...props}
       __css={{
-        backgroundColor: '#49565D'
+        padding: '12px 16px 12px 16px',
+        gap: '8px',
+        backgroundColor: 'neutralGray2',
+        borderRadius: '8px',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        mb: '3px',
       }}
       >
       {children}
@@ -76,13 +83,23 @@ const TableHeaderItemDefault = (props) => (
     as="th"
     {...props}
     __css={{
-      py: '16px',
+    //  py: '12px',
       color: 'white',
-      mb: '5px',
-      backgroundColor: '#49565D',
-      // ':firstchild': {
-      //   borderRadius: 'input',
-      // },
+  //    m: '8px',
+      backgroundColor: 'neutralGray2',
+      '&:first-child': {
+        borderBottomLeftRadius: '8px',
+        borderTopLeftRadius: '8px',
+      },
+      '&:last-child': {
+        borderBottomRightRadius: '8px',
+        borderTopRightRadius: '8px',
+      },
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      padding: '0px',
     }}
   />
 )
@@ -96,6 +113,10 @@ const TableRowDefault = (props) => (
       gap: '12px',
       backgroundColor: '#FFFFFF',
       borderRadius: '8px',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      mb: '3px',
     }}
   />
 )
@@ -105,13 +126,23 @@ const TableRowItemDefault = (props) => (
     as="td"
     {...props}
     __css={{
-      color: 'darkGrey',
-      mb: '5px',
-      gap: '12px',
-      height: '60px',
-      ':firstchild': {
-         borderRadius: '8px',
+      color: 'neutralGray2',
+    //  mb: '5px',
+      gap: '2px',
+      height: '54px',
+      '&:first-child': {
+        borderBottomLeftRadius: '8px',
+        borderTopLeftRadius: '8px',
       },
+      '&:last-child': {
+        borderBottomRightRadius: '8px',
+        borderTopRightRadius: '8px',
+      },
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      padding: '0px',
     }}
   />
 )
