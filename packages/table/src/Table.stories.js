@@ -83,12 +83,32 @@ export const secondary = () => (
           />
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize10">IHO4362866</Text>
+            <Text variant="body.fontSize12">IHO4362866</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize10">Av. Libertador 5687 5to A</Text>
+            <Text variant="body.fontSize12">Av. Libertador 5687 5to A</Text>
             <Text variant="bodyBold.fontSize11">Departamento en Palermo</Text>
           </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Venta</Text>
+            <Text variant="bodyBold.fontSize11">USD 200.000</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">2 Dorm</Text>
+            <Text variant="body.fontSize11">2 Baños</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">87m° Cub</Text>
+            <Text variant="body.fontSize11">0m° Tot</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">3 Amb</Text>
+            <Text variant="body.fontSize11">0.00</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">120m° Semi</Text>
+            <Text variant="body.fontSize11">0m° Total</Text>
+          </Table.RowItemDefault>
         </Table.RowDefault>
         <Table.RowDefault>
           <Table.RowItemDefault>
@@ -100,8 +120,33 @@ export const secondary = () => (
             variant="rows"
           />
           </Table.RowItemDefault>
-          <Table.RowItemDefault>Argentina</Table.RowItemDefault>
-          <Table.RowItemDefault>Yes</Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">IHO4362866</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Av. Libertador 5687 5to A</Text>
+            <Text variant="bodyBold.fontSize11">Departamento en Palermo</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Venta</Text>
+            <Text variant="bodyBold.fontSize11">USD 200.000</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">2 Dorm</Text>
+            <Text variant="body.fontSize11">2 Baños</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">87m° Cub</Text>
+            <Text variant="body.fontSize11">0m° Tot</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">3 Amb</Text>
+            <Text variant="body.fontSize11">0.00</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">120m° Semi</Text>
+            <Text variant="body.fontSize11">0m° Total</Text>
+          </Table.RowItemDefault>
         </Table.RowDefault>
         <Table.RowDefault>
           <Table.RowItemDefault>
@@ -113,8 +158,33 @@ export const secondary = () => (
             variant="rows"
           />
           </Table.RowItemDefault>
-          <Table.RowItemDefault>Peru</Table.RowItemDefault>
-          <Table.RowItemDefault>Yes</Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">IHO4362866</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Av. Libertador 5687 5to A</Text>
+            <Text variant="bodyBold.fontSize11">Departamento en Palermo</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Venta</Text>
+            <Text variant="bodyBold.fontSize11">USD 200.000</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">2 Dorm</Text>
+            <Text variant="body.fontSize11">2 Baños</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">87m° Cub</Text>
+            <Text variant="body.fontSize11">0m° Tot</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">3 Amb</Text>
+            <Text variant="body.fontSize11">0.00</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">120m° Semi</Text>
+            <Text variant="body.fontSize11">0m° Total</Text>
+          </Table.RowItemDefault>
         </Table.RowDefault>
       </Table.Rows>
     </Table>

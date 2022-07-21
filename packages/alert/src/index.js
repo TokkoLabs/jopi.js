@@ -47,7 +47,7 @@ export const Alert = ({ type = 'success', text, ...props }) => (
         mr={5}
       />
     )}
-    <Text variant="body.fontSize10" display="flex" alignItems="center" flexGrow={1}>
+    <Text variant="body.fontSize12" display="flex" alignItems="center" flexGrow={1}>
       {text}
     </Text>
     <Button

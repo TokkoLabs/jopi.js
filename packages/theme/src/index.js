@@ -210,10 +210,12 @@ const theme = {
       fontSize11: {
         fontSize: '11px',
         fontWeight: 400,
+        lineHeight: '13px',
       },
       fontSize12: {
         fontSize: '12px',
         fontWeight: 400,
+        lineHeight: '16px',
       },
       fontSize13: {
         fontSize: '13px',
