@@ -87,7 +87,7 @@ export const secondary = () => (
             <Text variant="body.fontSize12">IHO4362866</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12">Av. Libertador 5687 5to A</Text>
+            <Text variant="body.fontSize12Ellipsis" width='150px'>Av. Libertador 5687 5to A - Lote 1232</Text>
             <Text variant="bodyBold.fontSize11">Departamento en Palermo</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>

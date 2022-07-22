@@ -233,6 +233,14 @@ const theme = {
         fontSize: '16px',
         fontWeight: 400,
       },
+      fontSize12Ellipsis: {
+        fontSize: '12px',
+        fontWeight: 400,
+        lineHeight: '16px',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+      },
     },
     bodyBold: {
       fontSize11: {
@@ -273,8 +281,6 @@ const theme = {
         fontSize: '12px',
         fontStyle: 'normal',
         lineHeight: '16px',
-      //  display: 'flex',
-      //  alignItems: 'center',
       },
       {
         color: colors.neutral[0],
@@ -282,11 +288,8 @@ const theme = {
         fontSize: '10px',
         fontStyle: 'normal',
         lineHeight: '11px',
-      //  display: 'flex',
-      //  alignItems: 'center',
       },
     ]
-    // small: { fontSize: fontSize[0] },
   },
   colors: colors,
   space: space,
