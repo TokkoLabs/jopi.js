@@ -78,10 +78,10 @@ export const secondary = () => (
             <Checkbox />
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-          <Image
-            src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            variant="rows"
-          />
+            <Image
+              src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              variant="rows"
+            />
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">IHO4362866</Text>
@@ -116,10 +116,10 @@ export const secondary = () => (
             <Checkbox />
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-          <Image
-            src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            variant="rows"
-          />
+            <Image
+              src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              variant="rows"
+            />
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">IHO4362866</Text>
@@ -154,10 +154,10 @@ export const secondary = () => (
             <Checkbox />
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-          <Image
-            src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            variant="rows"
-          />
+            <Image
+              src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              variant="rows"
+            />
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">IHO4362866</Text>

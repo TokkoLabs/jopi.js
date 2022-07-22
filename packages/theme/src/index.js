@@ -289,7 +289,7 @@ const theme = {
         fontStyle: 'normal',
         lineHeight: '11px',
       },
-    ]
+    ],
   },
   colors: colors,
   space: space,

@@ -77,7 +77,6 @@ const TableHeaderDefault = ({ children, ...props }) => (
   </Box>
 )
 
-
 const TableHeaderItemDefault = ({ children, ...props }) => (
   <Box
     as="th"
@@ -97,7 +96,7 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
         borderTopRightRadius: '8px',
       },
     }}
-  > 
+  >
     <Box
       __css={{
         display: 'flex',
@@ -112,9 +111,9 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
 )
 
 const TableRowDefault = (props) => (
-  <Box 
-    as="tr" 
-    {...props} 
+  <Box
+    as="tr"
+    {...props}
     __css={{
       padding: '6px 12px 6px 12px',
       gap: '12px',
@@ -133,7 +132,6 @@ const TableRowItemDefault = ({ children, ...props }) => (
     __css={{
       color: 'neutralGray2',
       gap: '1px',
-      height: '52px',
       '&:first-child': {
         paddingLeft: '12px',
         borderBottomLeftRadius: '8px',
@@ -145,18 +143,18 @@ const TableRowItemDefault = ({ children, ...props }) => (
         borderTopRightRadius: '8px',
       },
     }}
-    > 
-      <Box
-        __css={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
-          alignItems: 'flex-start',
-        }}
-      >
-        {children}
-      </Box>
+  >
+    <Box
+      __css={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+      }}
+    >
+      {children}
     </Box>
+  </Box>
 )
 
 Table.Header = TableHeader
