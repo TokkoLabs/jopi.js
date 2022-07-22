@@ -87,10 +87,12 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
       py: '12px',
       backgroundColor: 'neutralGray2',
       '&:first-child': {
+        paddingLeft: '12px',
         borderBottomLeftRadius: '8px',
         borderTopLeftRadius: '8px',
       },
       '&:last-child': {
+        paddingRight: '12px',
         borderBottomRightRadius: '8px',
         borderTopRightRadius: '8px',
       },

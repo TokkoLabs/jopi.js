@@ -1,8 +1,9 @@
 import React from 'react'
+import { Badge } from '@oneloop/badge'
 import { Checkbox } from '@oneloop/checkbox'
 import { Image } from '@oneloop/image'
 import { Table } from '.'
-import { Heading, Text } from '@oneloop/text'
+import { Text } from '@oneloop/text'
 
 export default {
   component: Table,
@@ -160,6 +161,7 @@ export const secondary = () => (
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">IHO4362866</Text>
+            <Text variant="body.fontSize11">AP4468985</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">Av. Libertador 5687 5to A</Text>
@@ -182,7 +184,7 @@ export const secondary = () => (
             <Text variant="body.fontSize11">0.00</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12">120m° Semi</Text>
+            <Badge variant="badgeTips">COHIM</Badge>
             <Text variant="body.fontSize11">0m° Total</Text>
           </Table.RowItemDefault>
         </Table.RowDefault>
