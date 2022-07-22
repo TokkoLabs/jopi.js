@@ -192,3 +192,87 @@ export const secondary = () => (
     </Table>
   </div>
 )
+
+export const groupContacts = () => (
+  <div style={{ background: '#E4E8EA', padding: '20px', borderRadius: '10px' }}>
+    <Table>
+      <Table.HeaderDefault>
+        <Table.HeaderItemDefault>
+          <Text variant="white.0">Contacto</Text>
+        </Table.HeaderItemDefault>
+        <Table.HeaderItemDefault>
+          <Text variant="white.0">Celular</Text>
+          <Text variant="white.1">Mail</Text>
+        </Table.HeaderItemDefault>
+        <Table.HeaderItemDefault>
+          <Text variant="white.0">Agente</Text>
+        </Table.HeaderItemDefault>
+        <Table.HeaderItemDefault>
+          <Text variant="white.0">Estado</Text>
+        </Table.HeaderItemDefault>
+        <Table.HeaderItemDefault>
+          <Text variant="white.0">Num 1</Text>
+        </Table.HeaderItemDefault>
+        <Table.HeaderItemDefault>
+          <Text variant="white.0">Num 2</Text>
+        </Table.HeaderItemDefault>
+        <Table.HeaderItemDefault>
+          <Text variant="white.0">Fecha</Text>
+          <Text variant="white.1">Hora</Text>
+        </Table.HeaderItemDefault>
+      </Table.HeaderDefault>
+      <Table.Rows>
+        <Table.RowDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Nombre Contacto</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Cel: +54 911 30196212</Text>
+            <Text variant="body.fontSize11">garavaglia.juana@navent.con</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Nombre Agente</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">SE</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">15</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">8</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">30-06-2022</Text>
+            <Text variant="body.fontSize11">15:50</Text>
+          </Table.RowItemDefault>
+        </Table.RowDefault>
+        <Table.RowDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Nombre Contacto</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Cel: +54 911 30196212</Text>
+            <Text variant="body.fontSize11">garavaglia.juana@navent.con</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">Nombre Agente</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">SE</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">15</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">8</Text>
+          </Table.RowItemDefault>
+          <Table.RowItemDefault>
+            <Text variant="body.fontSize12">30-06-2022</Text>
+            <Text variant="body.fontSize11">15:50</Text>
+          </Table.RowItemDefault>
+        </Table.RowDefault>
+      </Table.Rows>
+    </Table>
+  </div>
+)

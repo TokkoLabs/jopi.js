@@ -461,13 +461,17 @@ const theme = {
     },
     roundIconLarge: {
       borderRadius: 99999,
-      heightIcon: '24px',
+      height: '48px',
+      width: '48px',
+      heightIcon: '30px',
+      fontSize: '30px',
     },
     roundIconMedium: {
       borderRadius: 99999,
       height: '38px',
       width: '38px',
       heightIcon: '24px',
+      fontSize: '24px',
     },
     roundIconSmall: {
       borderRadius: 99999,
