@@ -66,10 +66,10 @@ const TableHeaderDefault = ({ children, ...props }) => (
         gap: '8px',
         backgroundColor: 'neutralGray2',
         borderRadius: '8px',
-        display: 'flex',
+        display: 'table-row',
         flexDirection: 'row',
         alignItems: 'center',
-        mb: '3px',
+        mb: '8px',
       }}
       >
       {children}
@@ -83,9 +83,8 @@ const TableHeaderItemDefault = (props) => (
     as="th"
     {...props}
     __css={{
-    //  py: '12px',
       color: 'white',
-  //    m: '8px',
+      py: '12px',
       backgroundColor: 'neutralGray2',
       '&:first-child': {
         borderBottomLeftRadius: '8px',
@@ -95,11 +94,10 @@ const TableHeaderItemDefault = (props) => (
         borderBottomRightRadius: '8px',
         borderTopRightRadius: '8px',
       },
-      display: 'flex',
+      display: 'table-cell',
       flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'flex-start',
-      padding: '0px',
+      justifyContent: 'flex-start',
+      align: 'left',
     }}
   />
 )
@@ -113,9 +111,10 @@ const TableRowDefault = (props) => (
       gap: '12px',
       backgroundColor: '#FFFFFF',
       borderRadius: '8px',
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
+      height: '54px',
+  //    display: 'flex',
+  //    flexDirection: 'row',
+  //    alignItems: 'center',
       mb: '3px',
     }}
   />
@@ -127,22 +126,22 @@ const TableRowItemDefault = (props) => (
     {...props}
     __css={{
       color: 'neutralGray2',
-    //  mb: '5px',
-      gap: '2px',
-      height: '54px',
+      gap: '1px',
+      height: '52px',
       '&:first-child': {
+        paddingLeft: '12px',
         borderBottomLeftRadius: '8px',
         borderTopLeftRadius: '8px',
       },
       '&:last-child': {
+        paddingRight: '12px',
         borderBottomRightRadius: '8px',
         borderTopRightRadius: '8px',
       },
-      display: 'flex',
+  //    display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
-      padding: '0px',
     }}
   />
 )
