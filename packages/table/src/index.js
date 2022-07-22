@@ -78,7 +78,7 @@ const TableHeaderDefault = ({ children, ...props }) => (
 )
 
 
-const TableHeaderItemDefault = (props) => (
+const TableHeaderItemDefault = ({ children, ...props }) => (
   <Box
     as="th"
     {...props}
@@ -94,12 +94,19 @@ const TableHeaderItemDefault = (props) => (
         borderBottomRightRadius: '8px',
         borderTopRightRadius: '8px',
       },
-      display: 'table-cell',
-      flexDirection: 'column',
-      justifyContent: 'flex-start',
-      align: 'left',
     }}
-  />
+  > 
+    <Box
+      __css={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+      }}
+    >
+      {children}
+    </Box>
+  </Box>
 )
 
 const TableRowDefault = (props) => (
@@ -112,9 +119,6 @@ const TableRowDefault = (props) => (
       backgroundColor: '#FFFFFF',
       borderRadius: '8px',
       height: '54px',
-  //    display: 'flex',
-  //    flexDirection: 'row',
-  //    alignItems: 'center',
       mb: '3px',
     }}
   />
