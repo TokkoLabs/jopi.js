@@ -124,7 +124,7 @@ const TableRowDefault = (props) => (
   />
 )
 
-const TableRowItemDefault = (props) => (
+const TableRowItemDefault = ({ children, ...props }) => (
   <Box
     as="td"
     {...props}
@@ -142,12 +142,19 @@ const TableRowItemDefault = (props) => (
         borderBottomRightRadius: '8px',
         borderTopRightRadius: '8px',
       },
-  //    display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'flex-start',
     }}
-  />
+    > 
+      <Box
+        __css={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+        }}
+      >
+        {children}
+      </Box>
+    </Box>
 )
 
 Table.Header = TableHeader
