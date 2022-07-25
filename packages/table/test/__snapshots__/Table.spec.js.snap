@@ -305,6 +305,16 @@ input:focus ~ .c0 {
   min-width: 0;
   max-width: 100%;
   height: auto;
+  position: relative;
+  text-align: center;
+}
+
+.c22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -315,7 +325,7 @@ input:focus ~ .c0 {
   justify-content: center;
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -622,10 +632,15 @@ input:disabled:not(:checked) ~ .c17 {
         <div
           className="c0 c5"
         >
-          <img
+          <div
             className="c0 c21"
             src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          />
+          >
+            <img
+              className="c0 c22"
+              src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            />
+          </div>
         </div>
       </td>
       <td
@@ -648,7 +663,7 @@ input:disabled:not(:checked) ~ .c17 {
           className="c0 c5"
         >
           <p
-            className="c0 c22"
+            className="c0 c23"
             width="150px"
           >
             Av. Libertador 5687 5to A - Lote 1232
@@ -868,10 +883,15 @@ input:disabled:not(:checked) ~ .c17 {
         <div
           className="c0 c5"
         >
-          <img
+          <div
             className="c0 c21"
             src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          />
+          >
+            <img
+              className="c0 c22"
+              src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            />
+          </div>
         </div>
       </td>
       <td
