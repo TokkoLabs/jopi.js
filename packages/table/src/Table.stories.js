@@ -111,7 +111,7 @@ export const secondary = () => (
             <Text variant="body.fontSize11">0m° Total</Text>
           </Table.RowItemDefault>
         </Table.RowDefault>
-        <Table.RowDefault>
+        <Table.RowDefault disabled>
           <Table.RowItemDefault>
             <Checkbox />
           </Table.RowItemDefault>
@@ -234,7 +234,9 @@ export const groupContacts = () => (
             <Text variant="body.fontSize12">Nombre Agente</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12">SE</Text>
+            <Badge variant="badgeInfo" isMedium hasIcon>
+              <span>SE</span>
+            </Badge>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">15</Text>
@@ -259,7 +261,9 @@ export const groupContacts = () => (
             <Text variant="body.fontSize12">Nombre Agente</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12">SE</Text>
+            <Badge variant="badgeInfo" isMedium hasIcon>
+              <span>SE</span>
+            </Badge>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">15</Text>

@@ -62,6 +62,7 @@ const TableHeaderDefault = ({ children, ...props }) => (
       as="tr"
       {...props}
       __css={{
+        fontFamily: 'Nunito Sans',
         padding: '12px 16px 12px 16px',
         gap: '8px',
         backgroundColor: 'neutralGray2',
@@ -110,17 +111,19 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
   </Box>
 )
 
-const TableRowDefault = (props) => (
+const TableRowDefault = ({ disabled = false, ...props })  => (
   <Box
     as="tr"
     {...props}
     __css={{
+      fontFamily: 'Nunito Sans',
       padding: '6px 12px 6px 12px',
       gap: '12px',
       backgroundColor: '#FFFFFF',
       borderRadius: '8px',
       height: '54px',
       mb: '3px',
+      color: disabled ? 'neutralGray4' : 'neutralGray2',
     }}
   />
 )
@@ -130,7 +133,6 @@ const TableRowItemDefault = ({ children, ...props }) => (
     as="td"
     {...props}
     __css={{
-      color: 'neutralGray2',
       gap: '1px',
       '&:first-child': {
         paddingLeft: '12px',
