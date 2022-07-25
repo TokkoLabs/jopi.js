@@ -1025,6 +1025,11 @@ const theme = {
     badgeInfo: {
       backgroundColor: colors.info,
     },
+    badgeInfoRow: {
+      backgroundColor: colors.info,
+      borderTopLeftRadius: '0px',
+      borderTopRightRadius: '0px',
+    },
     badgeTips: {
       backgroundColor: colors.tips,
       color: colors.subtlePressed,
