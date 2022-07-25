@@ -6,7 +6,6 @@ exports[`Text renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
-  color: neutral.6;
 }
 
 <p

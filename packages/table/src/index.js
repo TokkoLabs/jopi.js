@@ -111,7 +111,7 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
   </Box>
 )
 
-const TableRowDefault = ({ disabled = false, ...props })  => (
+const TableRowDefault = ({ disabled = false, ...props }) => (
   <Box
     as="tr"
     {...props}
