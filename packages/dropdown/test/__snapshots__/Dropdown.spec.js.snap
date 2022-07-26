@@ -29,8 +29,7 @@ exports[`Dropdown default 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -51,10 +50,7 @@ exports[`Dropdown default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
   white-space: nowrap;
-  padding: 13px 26px 13px 26px;
-  gap: 6px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -72,14 +68,11 @@ exports[`Dropdown default 1`] = `
   white-space: nowrap;
   text-align: start;
   font-size: 14px;
-  line-height: 18px;
   width: 100%;
-  gap: 6px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  padding: 6px 10px 6px 10px;
 }
 
 @media screen and (min-width:40em) {
@@ -143,8 +136,7 @@ exports[`DropdownMultiselect default 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -165,10 +157,7 @@ exports[`DropdownMultiselect default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
   white-space: nowrap;
-  padding: 13px 26px 13px 26px;
-  gap: 6px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -186,14 +175,11 @@ exports[`DropdownMultiselect default 1`] = `
   white-space: nowrap;
   text-align: start;
   font-size: 14px;
-  line-height: 18px;
   width: 100%;
-  gap: 6px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  padding: 6px 10px 6px 10px;
 }
 
 @media screen and (min-width:40em) {

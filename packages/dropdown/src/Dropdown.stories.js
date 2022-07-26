@@ -116,7 +116,7 @@ export const DropdownDefault = () => {
     </Dropdown>
   )
 }
-////////////////////////////////////// QUEDA LO DE ARRIBA
+
 export const DropdownDefaultDisabled = () => {
   const [list, setList] = useState([])
 

@@ -20,8 +20,8 @@ const List = forwardRef(({ children, ...props }, ref) => (
 ))
 
 const ListInput = (props) => (
-  <Flex as="span" 
-    sx={{ 
+  <Flex as="span"
+    sx={{
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -33,12 +33,12 @@ const ListInput = (props) => (
     <Input
       prefix={
         <span className='icon-buscar' style={{
-          color: 'neutralGray3'
+          color: 'neutralGray3',
         }}/>
       }
       width={1}
       {...props}
-      sx={{ 
+      sx={{
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'flex-start',
