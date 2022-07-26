@@ -20,11 +20,39 @@ const List = forwardRef(({ children, ...props }, ref) => (
 ))
 
 const ListInput = (props) => (
-  <Flex as="span" sx={{ px: '16px', py: '14px' }}>
+  <Flex as="span"
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: '10px 6px 12px',
+      gap: '8px',
+    }}
+  >
     <Input
+      prefix={
+        <span className='icon-buscar' style={{
+          color: 'neutralGray3',
+        }}/>
+      }
       width={1}
       {...props}
-      sx={{ borderRadius: 'circle', bg: 'rgba(0, 0, 0, 0.04)', mb: 0 }}
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        gap: '4px',
+        backgroundColor: 'white',
+        borderRadius: '8px',
+        border: '1px solid #C9D1D5',
+        height: '28px',
+        color: 'neutralGray3',
+        fontFamily: 'Nunito Sans',
+        fontWeight: 400,
+        fontSize: '12px',
+        lineHeight: '16px',
+      }}
     />
   </Flex>
 )

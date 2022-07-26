@@ -71,16 +71,13 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
         whiteSpace: 'nowrap',
         textAlign: 'start',
         fontSize: '14px',
-        lineHeight: '18px',
         width: '100%',
-        gap: '6px',
         backgroundColor: filled ? backgroundColorFilled : undefined,
         justifyContent: isArrowStatic ? 'center' : 'flex-start',
-        padding: '6px 10px 6px 10px',
       }}
     >
       { icon && (!filled ? <span className={icon} style={{ fontSize: '16px', height: '16px' }}/> : <span className={icon} style={{ color: colorFilled, backgroundColor: backgroundColorFilled, fontSize: '16px', height: '16px' }}/>) }
-      { !filled ? <span>{text}</span> : <span style={{ color: colorFilled, backgroundColor: backgroundColorFilled }}>{text}</span> }
+      { !filled ? <span>{text}</span> : <span style={{ color: colorFilled }}>{text}</span> }
       { !filled
         ? <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)' }}/>
         : <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
@@ -88,7 +85,7 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
   )
 }
 
-const DropdownList = ({ children, ...props }) => {
+const DropdownList = ({ children, width = '236px', ...props }) => {
   const { open, ref } = useDropdownContext()
   return (
     open && (
@@ -99,15 +96,14 @@ const DropdownList = ({ children, ...props }) => {
           display: 'flex',
           flexDirection: 'column',
           flexGrow: 1,
-          mt: '5px',
           py: '5px',
-          backgroundColor: 'inputBackground',
+          backgroundColor: 'white',
           boxShadow: 'active',
           borderRadius: 'input',
           position: 'absolute',
           top: '42px',
           zIndex: 1,
-          width: '236px',
+          width: width,
         }}
       >
         {children}
