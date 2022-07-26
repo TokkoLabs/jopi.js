@@ -98,7 +98,7 @@ const DropdownList = ({ children, ...props }) => {
           flexGrow: 1,
           mt: '5px',
           py: '5px',
-          backgroundColor: 'inputBackground',
+          backgroundColor: 'white',
           boxShadow: 'active',
           borderRadius: 'input',
           position: 'absolute',

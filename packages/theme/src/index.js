@@ -35,6 +35,7 @@ const colors = {
   neutralGray8: '#E4E8EA',
   neutralGray9: '#EFF3F5',
   neutralGray10: '#F3F6F8',
+  white: '#FFFFFF',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
