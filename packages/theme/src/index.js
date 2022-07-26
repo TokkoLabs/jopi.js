@@ -852,6 +852,7 @@ const theme = {
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
+      borderRadius: '8px',
     },
     dropdownOutlined: {
       color: colors.neutralGray3,
