@@ -116,7 +116,7 @@ export const DropdownDefault = () => {
     </Dropdown>
   )
 }
-
+////////////////////////////////////// QUEDA LO DE ARRIBA
 export const DropdownDefaultDisabled = () => {
   const [list, setList] = useState([])
 
@@ -355,7 +355,7 @@ export const DropdownButton = () => {
 
   return (
     <Dropdown width={1 / 8}>
-      <Dropdown.Button variant='dropdownButtonPrimary' text={'Label'} filled={ list.length > 0 } isArrowStatic></Dropdown.Button>
+      <Dropdown.Button variant='dropdownButtonPrimary' variantSize='dropdownSizeButton' text={'Label'} filled={ list.length > 0 } isArrowStatic></Dropdown.Button>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
@@ -380,7 +380,7 @@ export const DropdownButtonDisabled = () => {
 
   return (
     <Dropdown width={1 / 8}>
-      <Dropdown.Button variant='dropdownButtonPrimaryDisabled' disabled text={'Label'} filled={ list.length > 0 } isArrowStatic />
+      <Dropdown.Button variant='dropdownButtonPrimaryDisabled' variantSize='dropdownSizeButton' disabled text={'Label'} filled={ list.length > 0 } isArrowStatic />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
@@ -405,7 +405,7 @@ export const DropdownColored = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownColored' text={'Label'} filled={ list.length > 0 } isArrowStatic />
+      <Dropdown.Button variant='dropdownColored' text={'Placeholder'} filled={ list.length > 0 } />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
