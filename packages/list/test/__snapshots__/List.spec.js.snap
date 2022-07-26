@@ -13,10 +13,23 @@ exports[`List renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 6px 12px;
+  gap: 8px;
 }
 
 .c4 {
@@ -27,6 +40,12 @@ exports[`List renders correctly 1`] = `
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.c4 > *:first-child {
+  position: absolute;
+  top: 9px;
+  left: 12px;
 }
 
 .c5 {
@@ -40,15 +59,33 @@ exports[`List renders correctly 1`] = `
   display: block;
   font-size: 14px;
   height: 36px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-top: 11px;
   padding-bottom: 11px;
   outline: none;
   background-color: inputBackground;
-  border-radius: circle;
-  background-color: rgba(0,0,0,0.04);
-  margin-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #C9D1D5;
+  height: 28px;
+  color: neutralGray3;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
   width: 100%;
 }
 
@@ -192,6 +229,14 @@ input:disabled:not(:checked) ~ .c15 {
     <div
       className="c0 c4"
     >
+      <span
+        className="icon-buscar"
+        style={
+          Object {
+            "color": "neutralGray3",
+          }
+        }
+      />
       <input
         className="c0 c5"
         disabled={false}
@@ -570,8 +615,7 @@ exports[`ListDefault renders correctly 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -592,10 +636,7 @@ exports[`ListDefault renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
   white-space: nowrap;
-  padding: 13px 26px 13px 26px;
-  gap: 6px;
 }
 
 @media screen and (min-width:40em) {

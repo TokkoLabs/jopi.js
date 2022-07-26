@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/textarea",
-  "version": "1.0.169",
+  "version": "1.0.170",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [

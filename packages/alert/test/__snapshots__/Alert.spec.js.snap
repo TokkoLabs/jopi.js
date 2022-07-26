@@ -67,8 +67,7 @@ exports[`Alert danger 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -89,10 +88,7 @@ exports[`Alert danger 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
   white-space: nowrap;
-  padding: 13px 26px 13px 26px;
-  gap: 6px;
   padding: 16px;
   margin-right: 8px;
   background-color: #F6F2F2;
@@ -240,8 +236,7 @@ exports[`Alert primary default 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -262,10 +257,7 @@ exports[`Alert primary default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
   white-space: nowrap;
-  padding: 13px 26px 13px 26px;
-  gap: 6px;
   padding: 16px;
   margin-right: 8px;
   background-color: #F6F2F2;
@@ -417,8 +409,7 @@ exports[`Alert warning 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -439,10 +430,7 @@ exports[`Alert warning 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
   white-space: nowrap;
-  padding: 13px 26px 13px 26px;
-  gap: 6px;
   padding: 16px;
   margin-right: 8px;
   background-color: #F6F2F2;

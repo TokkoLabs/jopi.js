@@ -27,8 +27,7 @@ exports[`Collapsible default 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -49,10 +48,7 @@ exports[`Collapsible default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
   white-space: nowrap;
-  padding: 13px 26px 13px 26px;
-  gap: 6px;
   width: 100%;
   border: none;
   border-radius: 0;
