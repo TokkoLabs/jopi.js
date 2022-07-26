@@ -56,8 +56,116 @@ const TableRowItem = (props) => (
   />
 )
 
+const TableHeaderDefault = ({ children, ...props }) => (
+  <Box as="thead">
+    <Box
+      as="tr"
+      {...props}
+      __css={{
+        fontFamily: 'Nunito Sans',
+        padding: '12px 16px 12px 16px',
+        gap: '8px',
+        backgroundColor: 'neutralGray2',
+        borderRadius: '8px',
+        display: 'table-row',
+        flexDirection: 'row',
+        alignItems: 'center',
+        mb: '8px',
+      }}
+      >
+      {children}
+    </Box>
+  </Box>
+)
+
+const TableHeaderItemDefault = ({ children, ...props }) => (
+  <Box
+    as="th"
+    {...props}
+    __css={{
+      color: 'white',
+      py: '12px',
+      backgroundColor: 'neutralGray2',
+      '&:first-child': {
+        paddingLeft: '12px',
+        borderBottomLeftRadius: '8px',
+        borderTopLeftRadius: '8px',
+      },
+      '&:last-child': {
+        paddingRight: '12px',
+        borderBottomRightRadius: '8px',
+        borderTopRightRadius: '8px',
+      },
+    }}
+  >
+    <Box
+      __css={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+      }}
+    >
+      {children}
+    </Box>
+  </Box>
+)
+
+const TableRowDefault = ({ disabled = false, ...props }) => (
+  <Box
+    as="tr"
+    {...props}
+    __css={{
+      fontFamily: 'Nunito Sans',
+      padding: '6px 12px 6px 12px',
+      gap: '12px',
+      backgroundColor: '#FFFFFF',
+      borderRadius: '8px',
+      height: '54px',
+      mb: '3px',
+      color: disabled ? 'neutralGray4' : 'neutralGray2',
+    }}
+  />
+)
+
+const TableRowItemDefault = ({ children, ...props }) => (
+  <Box
+    as="td"
+    {...props}
+    __css={{
+      gap: '1px',
+      '&:first-child': {
+        paddingLeft: '12px',
+        borderBottomLeftRadius: '8px',
+        borderTopLeftRadius: '8px',
+      },
+      '&:last-child': {
+        paddingRight: '12px',
+        borderBottomRightRadius: '8px',
+        borderTopRightRadius: '8px',
+      },
+    }}
+  >
+    <Box
+      __css={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+      }}
+    >
+      {children}
+    </Box>
+  </Box>
+)
+
 Table.Header = TableHeader
 Table.HeaderItem = TableHeaderItem
 Table.Rows = TableBody
 Table.Row = TableRow
 Table.RowItem = TableRowItem
+
+Table.HeaderDefault = TableHeaderDefault
+Table.HeaderItemDefault = TableHeaderItemDefault
+Table.RowDefault = TableRowDefault
+Table.RowItemDefault = TableRowItemDefault

@@ -8,7 +8,6 @@ export const Text = (props) => (
     {...props}
     __css={{
       fontFamily: 'primary',
-      color: 'neutral.6',
     }}
   />
 )

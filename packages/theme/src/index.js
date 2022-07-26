@@ -198,16 +198,57 @@ const theme = {
         fontWeight: 700,
       },
     ],
-    body: [
-      {
-        fontSize: fontSize[2],
+    body: {
+      fontSize09: {
+        fontSize: '9px',
         fontWeight: 400,
       },
-      {
-        fontSize: fontSize[1],
+      fontSize10: {
+        fontSize: '10px',
         fontWeight: 400,
       },
-    ],
+      fontSize11: {
+        fontSize: '11px',
+        fontWeight: 400,
+        lineHeight: '13px',
+      },
+      fontSize12: {
+        fontSize: '12px',
+        fontWeight: 400,
+        lineHeight: '16px',
+      },
+      fontSize13: {
+        fontSize: '13px',
+        fontWeight: 400,
+      },
+      fontSize14: {
+        fontSize: '14px',
+        fontWeight: 400,
+      },
+      fontSize15: {
+        fontSize: '15px',
+        fontWeight: 400,
+      },
+      fontSize16: {
+        fontSize: '16px',
+        fontWeight: 400,
+      },
+      fontSize12Ellipsis: {
+        fontSize: '12px',
+        fontWeight: 400,
+        lineHeight: '16px',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+      },
+    },
+    bodyBold: {
+      fontSize11: {
+        fontSize: '11px',
+        fontWeight: 700,
+        lineHeight: '13px',
+      },
+    },
     success: [
       {
         fontSize: fontSize[5],
@@ -233,7 +274,22 @@ const theme = {
         color: colors.error,
       },
     ],
-    // small: { fontSize: fontSize[0] },
+    white: [
+      {
+        color: colors.neutral[0],
+        fontWeight: 700,
+        fontSize: '12px',
+        fontStyle: 'normal',
+        lineHeight: '16px',
+      },
+      {
+        color: colors.neutral[0],
+        fontWeight: 700,
+        fontSize: '10px',
+        fontStyle: 'normal',
+        lineHeight: '11px',
+      },
+    ],
   },
   colors: colors,
   space: space,
@@ -405,13 +461,17 @@ const theme = {
     },
     roundIconLarge: {
       borderRadius: 99999,
-      heightIcon: '24px',
+      height: '48px',
+      width: '48px',
+      heightIcon: '30px',
+      fontSize: '30px',
     },
     roundIconMedium: {
       borderRadius: 99999,
       height: '38px',
       width: '38px',
       heightIcon: '24px',
+      fontSize: '24px',
     },
     roundIconSmall: {
       borderRadius: 99999,
@@ -964,6 +1024,11 @@ const theme = {
     },
     badgeInfo: {
       backgroundColor: colors.info,
+    },
+    badgeInfoRow: {
+      backgroundColor: colors.info,
+      borderTopLeftRadius: '0px',
+      borderTopRightRadius: '0px',
     },
     badgeTips: {
       backgroundColor: colors.tips,
