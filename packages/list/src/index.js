@@ -31,6 +31,11 @@ const ListInput = (props) => (
     }}
   >
     <Input
+      prefix={
+        <span className='icon-buscar' style={{
+          color: 'neutralGray3'
+        }}/>
+      }
       width={1}
       {...props}
       sx={{ 
