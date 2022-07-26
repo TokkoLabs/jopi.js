@@ -97,7 +97,6 @@ exports[`Textarea styled type renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
-  color: neutral.6;
   margin-left: 5px;
 }
 
