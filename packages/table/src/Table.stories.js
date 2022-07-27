@@ -37,6 +37,8 @@ export const normal = () => (
   </Table>
 )
 
+// Tengo que agregar la funcionalidad de que al seleccionar el primer checkbox, 
+// seleccione o deseleccione a todos los demas
 export const secondary = () => (
   <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
     <Table>

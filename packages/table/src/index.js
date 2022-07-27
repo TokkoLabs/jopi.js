@@ -71,6 +71,7 @@ const TableHeaderDefault = ({ children, ...props }) => (
         flexDirection: 'row',
         alignItems: 'center',
         mb: '8px',
+        height: '60px',
       }}
       >
       {children}
