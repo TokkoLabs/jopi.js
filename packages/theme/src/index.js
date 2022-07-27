@@ -12,7 +12,7 @@ const colors = {
   disabled: '#C1CCD0',
   success: '#068B5B',
   error: '#B21702',
-  backgroundError: '#FDDDD8',
+  backgroundError: '#FFF8F6',
   info: '#386DF4',
   lightBlue: '#6A88F2',
   inputErrors: '#FFF2F0',
@@ -72,17 +72,79 @@ const shadows = {
 
 const forms = {
   input: {
-    borderRadius: radius.input,
-    fontSize: fontSize[3],
+    color: 'neutralGray3',
+    backgroundColor: 'neutralGray10',
+    '&:hover': {
+      color: 'neutraylGray1',
+      backgroundColor: 'neutralGray10',
+    },
+   /* 
+    '&:active': {
+    },
+    '&:filled': {
+      border: 'none',
+      backgroundColor: 'neutralGray10',
+    },
+    '&:readOnly': {
+    },*/
+  },
+  inputFocus: {
+    border: '1px solid #386DF4',
+    boxShadow: '2px 2px 6px rgba(56, 109, 244, 0.2)',
+    backgroundColor: 'neutralGray10',
+  },
+  inputError: {
+    border: '0.5px solid #B21702',
+    backgroundColor: 'backgroundError',
+    color: 'error',
+  },
+  inputActive: {
+    border: '1px solid #AEBAC0',
+    backgroundColor: 'neutralGray10',
+  },
+  inputDisabled: {
+    color: 'neutralGray5',
+    cursor: 'not-allowed',
+    pointerEvents: 'none',
+    userSelect: 'none',
+    backgroundColor: 'neutralGray10',
+  },
+  inputReadonly: {
+    border: 'none',
+    backgroundColor: 'none',
+    cursor: 'not-allowed',
+    pointerEvents: 'none',
+    userSelect: 'none',
+  },
+  inputLarge: {
+    fontFamily: 'Nunito Sans',
     fontWeight: 400,
-    '&:focus': {
-      border: '1px solid #386DF4',
-    },
-    '&:disabled': {
-      color: '#999999',
-      backgroundColor: '#EBEBEB',
-      cursor: 'not-allowed',
-    },
+    gap: '6px',
+    padding: '7px 10px 7px 10px',
+    height: '32px',
+    borderRadius: '8px',
+    fontSize: '14px',
+    lineHeight: '18px',
+  },
+  inputMedium: {
+    fontFamily: 'Nunito Sans',
+    fontWeight: 400,
+    gap: '6px',
+    padding: '6px 8px 6px 8px',
+    height: '28px',
+    borderRadius: '7px',
+    fontSize: '12px',
+    lineHeight: '16px',
+  },
+  inputSmall: {
+    fontFamily: 'Nunito Sans',
+    fontWeight: 400,
+    gap: '4px',
+    padding: '3px 6px 3px 6px',
+    height: '22px',
+    borderRadius: '5px',
+    fontSize: '11px',
+    lineHeight: '13px',
   },
   label: {
     color: colors.disabled,
@@ -268,13 +330,18 @@ const theme = {
         color: colors.info,
       },
     ],
-    inputMessageErrors: [
-      {
-        fontSize: fontSize[1],
-        fontWeight: 400,
-        color: colors.error,
-      },
-    ],
+    inputMessageErrors: {
+      fontSize: '11px',
+      lineHeight: '13px',
+      fontWeight: 400,
+      color: colors.error,
+    },
+    inputMessageInfoAlert: {
+      fontSize: '11px',
+      lineHeight: '13px',
+      fontWeight: 400,
+      color: colors.info,
+    },
     white: [
       {
         color: colors.neutral[0],
