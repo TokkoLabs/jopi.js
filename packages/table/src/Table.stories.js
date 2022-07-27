@@ -38,38 +38,40 @@ export const normal = () => (
 )
 
 export const secondary = () => (
-  <div style={{ background: '#E4E8EA', padding: '20px', borderRadius: '10px' }}>
+  <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
     <Table>
       <Table.HeaderDefault>
-        <Table.HeaderItemDefault></Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Foto</Text>
+          <Checkbox />
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Cód. Ref</Text>
+          <Text variant="bodyBold.fontSize12">Foto</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Dirección</Text>
-          <Text variant="white.1">Ubicación</Text>
+          <Text variant="bodyBold.fontSize12">Cód. Ref</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Valor</Text>
+          <Text variant="bodyBold.fontSize12">Dirección</Text>
+          <Text variant="body.fontSize11">Ubicación</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Dorm</Text>
-          <Text variant="white.1">Baños</Text>
+          <Text variant="bodyBold.fontSize12">Valor</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">S. Cubierta</Text>
-          <Text variant="white.1">Total</Text>
+          <Text variant="bodyBold.fontSize12">Dorm</Text>
+          <Text variant="body.fontSize11">Baños</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Fondo</Text>
-          <Text variant="white.1">Frente</Text>
+          <Text variant="bodyBold.fontSize12">S. Cubierta</Text>
+          <Text variant="body.fontSize11">Total</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">S. Descrub</Text>
-          <Text variant="white.1">S. Descrub</Text>
+          <Text variant="bodyBold.fontSize12">Fondo</Text>
+          <Text variant="body.fontSize11">Frente</Text>
+        </Table.HeaderItemDefault>
+        <Table.HeaderItemDefault>
+          <Text variant="bodyBold.fontSize12">S. Descrub</Text>
+          <Text variant="body.fontSize11">S. Descrub</Text>
         </Table.HeaderItemDefault>
       </Table.HeaderDefault>
       <Table.Rows>
@@ -87,12 +89,12 @@ export const secondary = () => (
             <Text variant="body.fontSize12">IHO4362866</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12Ellipsis" width='150px'>Av. Libertador 5687 5to A - Lote 1232</Text>
-            <Text variant="bodyBold.fontSize11">Departamento en Palermo</Text>
+            <Text variant={["bodyBold.fontSize12", "ellipsis"]} width='150px'>Av. Libertador 5687 5to A - Lote 1232</Text>
+            <Text variant="body.fontSize11">Departamento en Palermo</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12">Venta</Text>
-            <Text variant="bodyBold.fontSize11">USD 200.000</Text>
+            <Text variant="bodyBold.fontSize12">Venta</Text>
+            <Text variant="body.fontSize11">USD 200.000</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">2 Dorm</Text>
@@ -126,12 +128,12 @@ export const secondary = () => (
             <Text variant="body.fontSize12">IHO4362866</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12">Av. Libertador 5687 5to A</Text>
-            <Text variant="bodyBold.fontSize11">Departamento en Palermo</Text>
+            <Text variant="bodyBold.fontSize12">Av. Libertador 5687 5to A</Text>
+            <Text variant="body.fontSize11">Departamento en Palermo</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12">Venta</Text>
-            <Text variant="bodyBold.fontSize11">USD 200.000</Text>
+            <Text variant="bodyBold.fontSize12">Venta</Text>
+            <Text variant="body.fontSize11">USD 200.000</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">2 Dorm</Text>
@@ -165,12 +167,12 @@ export const secondary = () => (
             <Text variant="body.fontSize11">AP4468985</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12">Av. Libertador 5687 5to A</Text>
-            <Text variant="bodyBold.fontSize11">Departamento en Palermo</Text>
+            <Text variant="bodyBold.fontSize12">Av. Libertador 5687 5to A</Text>
+            <Text variant="body.fontSize11">Departamento en Palermo</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
-            <Text variant="body.fontSize12">Venta</Text>
-            <Text variant="bodyBold.fontSize11">USD 200.000</Text>
+            <Text variant="bodyBold.fontSize12">Venta</Text>
+            <Text variant="body.fontSize11">USD 200.000</Text>
           </Table.RowItemDefault>
           <Table.RowItemDefault>
             <Text variant="body.fontSize12">2 Dorm</Text>
@@ -195,31 +197,31 @@ export const secondary = () => (
 )
 
 export const groupContacts = () => (
-  <div style={{ background: '#E4E8EA', padding: '20px', borderRadius: '10px' }}>
+  <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
     <Table>
       <Table.HeaderDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Contacto</Text>
+          <Text variant="bodyBold.fontSize12">Contacto</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Celular</Text>
-          <Text variant="white.1">Mail</Text>
+          <Text variant="bodyBold.fontSize12">Celular</Text>
+          <Text variant="body.fontSize11">Mail</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Agente</Text>
+          <Text variant="bodyBold.fontSize12">Agente</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Estado</Text>
+          <Text variant="bodyBold.fontSize12">Estado</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Num 1</Text>
+          <Text variant="bodyBold.fontSize12">Num 1</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Num 2</Text>
+          <Text variant="bodyBold.fontSize12">Num 2</Text>
         </Table.HeaderItemDefault>
         <Table.HeaderItemDefault>
-          <Text variant="white.0">Fecha</Text>
-          <Text variant="white.1">Hora</Text>
+          <Text variant="bodyBold.fontSize12">Fecha</Text>
+          <Text variant="body.fontSize11">Hora</Text>
         </Table.HeaderItemDefault>
       </Table.HeaderDefault>
       <Table.Rows>

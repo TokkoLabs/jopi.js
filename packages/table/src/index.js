@@ -122,7 +122,7 @@ const TableRowDefault = ({ disabled = false, ...props }) => (
       backgroundColor: '#FFFFFF',
       borderRadius: '8px',
       height: '54px',
-      mb: '3px',
+      mb: '2px',
       color: disabled ? 'neutralGray4' : 'neutralGray2',
     }}
   />

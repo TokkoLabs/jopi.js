@@ -201,54 +201,88 @@ const theme = {
     ],
     body: {
       fontSize09: {
-        fontSize: '9px',
         fontWeight: 400,
+        fontSize: '9px',
       },
       fontSize10: {
-        fontSize: '10px',
         fontWeight: 400,
+        fontSize: '10px',
+        lineHeight: '11px',
       },
       fontSize11: {
-        fontSize: '11px',
         fontWeight: 400,
+        fontSize: '11px',
         lineHeight: '13px',
       },
       fontSize12: {
-        fontSize: '12px',
         fontWeight: 400,
+        fontSize: '12px',
         lineHeight: '16px',
       },
       fontSize13: {
-        fontSize: '13px',
         fontWeight: 400,
+        fontSize: '13px',
+        lineHeight: '18px',
       },
       fontSize14: {
-        fontSize: '14px',
         fontWeight: 400,
+        fontSize: '14px',
+        lineHeight: '18px',
       },
       fontSize15: {
-        fontSize: '15px',
         fontWeight: 400,
+        fontSize: '15px',
       },
       fontSize16: {
+        fontWeight: 400,
         fontSize: '16px',
-        fontWeight: 400,
-      },
-      fontSize12Ellipsis: {
-        fontSize: '12px',
-        fontWeight: 400,
-        lineHeight: '16px',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
-        overflow: 'hidden',
+        lineHeight: '24px',
       },
     },
     bodyBold: {
-      fontSize11: {
-        fontSize: '11px',
+      fontSize09: {
         fontWeight: 700,
+        fontSize: '9px',
+      },
+      fontSize10: {
+        fontWeight: 700,
+        fontSize: '10px',
+        lineHeight: '11px',
+      },
+      fontSize11: {
+        fontWeight: 700,
+        fontSize: '11px',
         lineHeight: '13px',
       },
+      fontSize12: {
+        fontWeight: 700,
+        fontSize: '12px',
+        lineHeight: '16px',
+      },
+      fontSize13: {
+        fontWeight: 700,
+        fontSize: '13px',
+        lineHeight: '18px',
+      },
+      fontSize14: {
+        fontWeight: 700,
+        fontSize: '14px',
+        lineHeight: '18px',
+      },
+      fontSize15: {
+        fontWeight: 700,
+        fontSize: '15px',
+      },
+      fontSize16: {
+        fontWeight: 700,
+        fontSize: '16px',
+        lineHeight: '24px',
+      },
+    },
+    ellipsis: {
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
     },
     success: [
       {
@@ -273,22 +307,6 @@ const theme = {
         fontSize: fontSize[1],
         fontWeight: 400,
         color: colors.error,
-      },
-    ],
-    white: [
-      {
-        color: colors.neutral[0],
-        fontWeight: 700,
-        fontSize: '12px',
-        fontStyle: 'normal',
-        lineHeight: '16px',
-      },
-      {
-        color: colors.neutral[0],
-        fontWeight: 700,
-        fontSize: '10px',
-        fontStyle: 'normal',
-        lineHeight: '11px',
       },
     ],
   },
