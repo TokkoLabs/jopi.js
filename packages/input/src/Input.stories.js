@@ -10,14 +10,6 @@ export default {
 
 export const input = () => <Input placeholder="Placeholder text" />
 
-export const inputWithIcon = () => (
-  <Input prefix={<Add />} placeholder="Hello World!" />
-)
-
-export const inputWithLabel = () => (
-  <Input label="Label de prueba" placeholder="Hello World!" />
-)
-
 export const inputWithErrors = () => (
   <Input errors="Minimo 8 caracteres." placeholder="Placeholder text" />
 )
@@ -30,6 +22,18 @@ export const disabled = () => <Input disabled placeholder="Hello World!" />
 
 export const readOnly = () => <Input readonly placeholder="Hello World!" />
 
+export const inputMedium = () => <Input placeholder="Placeholder text" variantSize='inputMedium' />
+
+export const inputSmall = () => <Input placeholder="Placeholder text" variantSize='inputSmall' />
+
+
+export const inputWithIcon = () => (
+  <Input prefix={<Add />} placeholder="Hello World!" />
+)
+
+export const inputWithLabel = () => (
+  <Input label="Label de prueba" placeholder="Hello World!" />
+)
 // export const error = () => (
 //   <Input placeholder="Hello World!" borderColor="danger" />
 // )

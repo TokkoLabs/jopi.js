@@ -6,9 +6,10 @@ import { useToggle } from '@oneloop/hooks'
 
 export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, ...props }) => {
   const [hover, setHover] = useToggle(false)
-  const [active, setActive] = useToggle(false)
+  const [focused, setFocused] = useToggle(false)
   let backgroundColor = "neutralGray10"
   let colorPlaceholder = "neutralGray3"
+  let valueText = ''
   if (infoAlert != undefined){
     variant = "inputFocus"
   } else if (errors != undefined) {
@@ -19,10 +20,11 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
   if (hover) {
     colorPlaceholder = "neutralGray1"
   }
-  if (active) {
+  if (focused) {
     variant = "inputActive"
-  }
-  if (disabled) {
+  } else if (!focused && valueText != ''){
+    variant = "inputFilled"
+  } else if (disabled) {
     variant = "inputDisabled"
     colorPlaceholder = "neutralGray5"
   } else if (readonly) {
@@ -30,16 +32,10 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
     colorPlaceholder = "neutralGray1"
     backgroundColor = "none"
   }
-  let filled = false
   const changeText = (e) => {
-    filled = e.target.value != ''
-    if (filled) {
-      variant = "inputFilled"
-    }
+    valueText = e.target.value
   }
-  // Tareas Estados
-  // 1. tengo que agregar una forma de quitar el active, osea una vez que clickeo afuera, deja de estar activo
-  // 2. Una vez que el usuario escribio algo, se tiene que considerar que esta Filled y cambiar la variant
+
   return (
     <>
       {label && (
@@ -74,8 +70,9 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
           variant={[variant, variantSize]}
           onMouseOver={() => setHover(true)}
           onMouseOut={() => setHover(false)}
-          onClick={() => setActive(true)}
           onChange={e => changeText(e)}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
           {...props}
           __css={{
             border: 'none',
