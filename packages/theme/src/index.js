@@ -78,15 +78,6 @@ const forms = {
       color: 'neutraylGray1',
       backgroundColor: 'neutralGray10',
     },
-   /* 
-    '&:active': {
-    },
-    '&:filled': {
-      border: 'none',
-      backgroundColor: 'neutralGray10',
-    },
-    '&:readOnly': {
-    },*/
   },
   inputFocus: {
     border: '1px solid #386DF4',
@@ -115,6 +106,10 @@ const forms = {
     cursor: 'not-allowed',
     pointerEvents: 'none',
     userSelect: 'none',
+  },
+  inputFilled: {
+    border: 'none',
+    backgroundColor: 'neutralGray10',
   },
   inputLarge: {
     fontFamily: 'Nunito Sans',

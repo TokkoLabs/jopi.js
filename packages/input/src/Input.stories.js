@@ -8,7 +8,7 @@ export default {
   title: 'Input',
 }
 
-export const input = () => <Input placeholder="Placeholder text" variant={["input", "inputLarge"]} />
+export const input = () => <Input placeholder="Placeholder text" />
 
 export const inputWithIcon = () => (
   <Input prefix={<Add />} placeholder="Hello World!" />

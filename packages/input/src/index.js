@@ -30,10 +30,16 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
     colorPlaceholder = "neutralGray1"
     backgroundColor = "none"
   }
+  let filled = false
+  const changeText = (e) => {
+    filled = e.target.value != ''
+    if (filled) {
+      variant = "inputFilled"
+    }
+  }
   // Tareas Estados
   // 1. tengo que agregar una forma de quitar el active, osea una vez que clickeo afuera, deja de estar activo
   // 2. Una vez que el usuario escribio algo, se tiene que considerar que esta Filled y cambiar la variant
-  // 3. Agregar estado Read Only
   return (
     <>
       {label && (
@@ -69,6 +75,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
           onMouseOver={() => setHover(true)}
           onMouseOut={() => setHover(false)}
           onClick={() => setActive(true)}
+          onChange={e => changeText(e)}
           {...props}
           __css={{
             border: 'none',
