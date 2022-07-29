@@ -40,6 +40,10 @@ export const inputWithIconSmall = () => (
 export const inputWithLabel = () => (
   <Input label="Label de prueba" placeholder="Hello World!" />
 )
+
+export const inputWithLabelIcon = () => (
+  <Input prefix={<span className='icon-email'/>} label="Label de prueba" placeholder="Hello World!" />
+)
 // export const error = () => (
 //   <Input placeholder="Hello World!" borderColor="danger" />
 // )

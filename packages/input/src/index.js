@@ -46,13 +46,12 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
       {label && (
         <Box
           __css={{
-            px: 16,
-            py: 1,
+            mb: '4px'
           }}
         >
-          <Heading as="h6" variant="heading.5">
+          <Text variant="body600.fontSize12">
             {label}
-          </Heading>
+          </Text>
         </Box>
       )}
       <Box

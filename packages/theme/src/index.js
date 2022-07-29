@@ -312,6 +312,42 @@ const theme = {
         overflow: 'hidden',
       },
     },
+    body600: {
+      fontSize09: {
+        fontSize: '9px',
+        fontWeight: 600,
+      },
+      fontSize10: {
+        fontSize: '10px',
+        fontWeight: 600,
+      },
+      fontSize11: {
+        fontSize: '11px',
+        fontWeight: 600,
+        lineHeight: '13px',
+      },
+      fontSize12: {
+        fontSize: '12px',
+        fontWeight: 600,
+        lineHeight: '16px',
+      },
+      fontSize13: {
+        fontSize: '13px',
+        fontWeight: 600,
+      },
+      fontSize14: {
+        fontSize: '14px',
+        fontWeight: 600,
+      },
+      fontSize15: {
+        fontSize: '15px',
+        fontWeight: 600,
+      },
+      fontSize16: {
+        fontSize: '16px',
+        fontWeight: 600,
+      },
+    },
     bodyBold: {
       fontSize11: {
         fontSize: '11px',
