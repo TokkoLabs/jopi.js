@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Box } from '@oneloop/box'
 import { Heading, Text } from '@oneloop/text'
 import { useToggle } from '@oneloop/hooks'
+import theme from '@oneloop/theme'
 
 export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, ...props }) => {
   const [hover, setHover] = useToggle(false)
@@ -36,6 +37,10 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
     valueText = e.target.value
   }
 
+  const index = Object.keys(theme.forms).indexOf(variantSize)
+  const paddingLeft = prefix ? Object.values(theme.forms)[index].paddingLeftPrefix
+                        : Object.values(theme.forms)[index].paddingLeftNoPrefix
+  console.log(paddingLeft)
   return (
     <>
       {label && (
@@ -54,8 +59,13 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
         __css={{
           position: 'relative',
           height: 'fit-content',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: '6px',
+          color: colorPlaceholder,
           '> *:first-child': prefix
-            ? { position: 'absolute', top: '9px', left: '12px' }
+            ? { position: 'absolute', height: '14px', left: '7px' }
             : {},
           '> *:last-child': suffix
             ? { position: 'absolute', top: '9px', right: '12px' }
@@ -79,8 +89,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
             boxShadow: 'none',
             fontFamily: 'primary',
             display: 'block',
-            px: suffix || prefix ? 40 : 16,
-          //  py: 11,
+            paddingLeft: paddingLeft,
             outline: 'none',
             backgroundColor: backgroundColor,
             '::placeholder': {

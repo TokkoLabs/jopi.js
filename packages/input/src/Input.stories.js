@@ -28,7 +28,7 @@ export const inputSmall = () => <Input placeholder="Placeholder text" variantSiz
 
 
 export const inputWithIcon = () => (
-  <Input prefix={<Add />} placeholder="Hello World!" />
+  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" />
 )
 
 export const inputWithLabel = () => (
