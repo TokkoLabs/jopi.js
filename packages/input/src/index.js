@@ -38,9 +38,9 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
   }
 
   const index = Object.keys(theme.forms).indexOf(variantSize)
-  const paddingLeft = prefix ? Object.values(theme.forms)[index].paddingLeftPrefix
-                        : Object.values(theme.forms)[index].paddingLeftNoPrefix
-  console.log(paddingLeft)
+  const paddingLeft = prefix ? Object.values(theme.forms)[index].paddingLeftPrefix : Object.values(theme.forms)[index].paddingLeftNoPrefix
+  const fontSizePrefix = Object.values(theme.forms)[index].fontSize
+
   return (
     <>
       {label && (
@@ -65,7 +65,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
           gap: '6px',
           color: colorPlaceholder,
           '> *:first-child': prefix
-            ? { position: 'absolute', height: '14px', left: '7px' }
+            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, left: '7px', mt: '2px' }
             : {},
           '> *:last-child': suffix
             ? { position: 'absolute', top: '9px', right: '12px' }

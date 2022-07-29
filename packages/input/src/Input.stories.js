@@ -30,6 +30,12 @@ export const inputSmall = () => <Input placeholder="Placeholder text" variantSiz
 export const inputWithIcon = () => (
   <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" />
 )
+export const inputWithIconMedium = () => (
+  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" variantSize='inputMedium' />
+)
+export const inputWithIconSmall = () => (
+  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" variantSize='inputSmall' />
+)
 
 export const inputWithLabel = () => (
   <Input label="Label de prueba" placeholder="Hello World!" />
