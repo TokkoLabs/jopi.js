@@ -79,8 +79,21 @@ const forms = {
     hover: {
       color: colors.neutralGray1,
       backgroundColor: colors.neutralGray10,
+      '::placeholder': {
+        color: colors.neutralGray1,
+      }
+    },
+    active: {
+      border: '1px solid #AEBAC0',
+      backgroundColor: colors.neutralGray10,
+    },
+    filled: {
+      color: colors.neutralGray1,
+      border: 'none',
+      backgroundColor: colors.neutralGray10,
     },
   },
+  // LOS DE ABAJO CONSIDERO QUE SON IGUALES PARA TODO
   inputFocus: {
     border: '1px solid #386DF4',
     boxShadow: '2px 2px 6px rgba(56, 109, 244, 0.2)',
@@ -90,10 +103,6 @@ const forms = {
     border: '0.5px solid #B21702',
     backgroundColor: colors.backgroundError,
     color: colors.error,
-  },
-  inputActive: {
-    border: '1px solid #AEBAC0',
-    backgroundColor: colors.neutralGray10,
   },
   inputDisabled: {
     color: colors.neutralGray5,
@@ -110,11 +119,7 @@ const forms = {
     userSelect: 'none',
     color: colors.neutralGray1
   },
-  inputFilled: {
-    color: colors.neutralGray1,
-    border: 'none',
-    backgroundColor: colors.neutralGray10,
-  },
+  // HASTA ACA
   inputTransparent: {
     normal: {
       color: colors.neutralGray3,
@@ -123,6 +128,24 @@ const forms = {
     hover: {
       color: colors.neutralGray1,
     },
+  },
+  inputSearch: {
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.neutralGray10,
+    },
+    hover: {
+      color: colors.neutralGray4,
+    },
+    active: {
+      color: colors.neutralGray5,
+    },
+    loading: {
+      color: colors.neutralGray3
+    },
+    filled: {
+      color: colors.neutralGray3
+    }
   },
   inputLarge: {
     fontFamily: 'Nunito Sans',

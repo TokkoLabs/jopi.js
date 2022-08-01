@@ -1,44 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from '@oneloop/box'
-import { Heading, Text } from '@oneloop/text'
+import { Text } from '@oneloop/text'
 import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
 
 export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, inline, password, ...props }) => {
   const [hover, setHover] = useToggle(false)
   const [focused, setFocused] = useToggle(false)
-  let valueText = ''
+  const [text, setText] = React.useState('')
   const indexVariant = Object.keys(theme.forms).indexOf(variant)
-
-  let backgroundColor = Object.values(theme.forms)[indexVariant].normal.backgroundColor
+  
+  let finalVariant = variant+".normal"
   let colorPlaceholder = Object.values(theme.forms)[indexVariant].normal.color
   if (hover) {
-    backgroundColor = Object.values(theme.forms)[indexVariant].hover.backgroundColor
+    finalVariant = variant+".hover"
     colorPlaceholder = Object.values(theme.forms)[indexVariant].hover.color
   }
   if (infoAlert != undefined){
-    variant = "inputFocus"
+    finalVariant = "inputFocus"
   } else if (errors != undefined) {
-    variant = "inputError"
-    backgroundColor = "backgroundError"
+    finalVariant = "inputError"
     colorPlaceholder = "error"
   }
-
+  
   if (focused) {
-    variant = "inputActive"
-  } else if (!focused && valueText != ''){
-    variant = "inputFilled"
+    finalVariant = variant+".active"
+    colorPlaceholder = Object.values(theme.forms)[indexVariant].active.color
+  } else if (!focused && text != ''){
+    finalVariant = variant+".filled"
+    colorPlaceholder = Object.values(theme.forms)[indexVariant].filled.color
   } else if (disabled) {
-    variant = "inputDisabled"
+    finalVariant = "inputDisabled"
     colorPlaceholder = "neutralGray5"
   } else if (readonly) {
-    variant = "inputReadonly"
+    finalVariant = "inputReadonly"
     colorPlaceholder = "neutralGray1"
-    backgroundColor = "none"
-  }
-  const changeText = (e) => {
-    valueText = e.target.value
   }
 
   const index = Object.keys(theme.forms).indexOf(variantSize)
@@ -87,10 +84,10 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
           as="input"
           type={ password ? "password" : "text" }
           tx="forms"
-          variant={[variant, variantSize]}
+          variant={[finalVariant, variantSize]}
           onMouseOver={() => setHover(true)}
           onMouseOut={() => setHover(false)}
-          onChange={e => changeText(e)}
+          onChange={e => setText(e.target.value)}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           {...props}
@@ -101,10 +98,6 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
             display: 'block',
             paddingLeft: paddingLeft,
             outline: 'none',
-            backgroundColor: backgroundColor,
-            '::placeholder': {
-              color: colorPlaceholder,
-            },
           }}
         />
         {suffix}
