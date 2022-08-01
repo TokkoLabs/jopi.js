@@ -1,5 +1,4 @@
 import React from 'react'
-import { Add } from '@oneloop/icons'
 
 import { Input } from '.'
 
@@ -25,7 +24,6 @@ export const readOnly = () => <Input readonly placeholder="Hello World!" />
 export const inputMedium = () => <Input placeholder="Placeholder text" variantSize='inputMedium' />
 
 export const inputSmall = () => <Input placeholder="Placeholder text" variantSize='inputSmall' />
-
 
 export const inputWithIcon = () => (
   <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" />

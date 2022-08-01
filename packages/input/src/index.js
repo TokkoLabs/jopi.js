@@ -5,37 +5,37 @@ import { Text } from '@oneloop/text'
 import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
 
-export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, inline, password, bold, ...props }) => {
+export const Input = ({ prefix, suffix, label, errors, variant = 'input', variantSize = 'inputLarge', infoAlert, disabled, readonly, inline, password, bold, ...props }) => {
   const [hover, setHover] = useToggle(false)
   const [focused, setFocused] = useToggle(false)
   const [text, setText] = React.useState('')
   const indexVariant = Object.keys(theme.forms).indexOf(variant)
-  
-  let finalVariant = variant+".normal"
+
+  let finalVariant = variant + '.normal'
   let colorPlaceholder = Object.values(theme.forms)[indexVariant].normal.color
   if (hover) {
-    finalVariant = variant+".hover"
+    finalVariant = variant + '.hover'
     colorPlaceholder = Object.values(theme.forms)[indexVariant].hover.color
   }
-  if (infoAlert != undefined){
-    finalVariant = "inputFocus"
-  } else if (errors != undefined) {
-    finalVariant = "inputError"
-    colorPlaceholder = "error"
+  if (infoAlert !== undefined) {
+    finalVariant = 'inputFocus'
+  } else if (errors !== undefined) {
+    finalVariant = 'inputError'
+    colorPlaceholder = 'error'
   }
-  
+
   if (focused) {
-    finalVariant = variant+".active"
+    finalVariant = variant + '.active'
     colorPlaceholder = Object.values(theme.forms)[indexVariant].active.color
-  } else if (!focused && text != ''){
-    finalVariant = variant+".filled"
+  } else if (!focused && text !== '') {
+    finalVariant = variant + '.filled'
     colorPlaceholder = Object.values(theme.forms)[indexVariant].filled.color
   } else if (disabled) {
-    finalVariant = "inputDisabled"
-    colorPlaceholder = "neutralGray5"
+    finalVariant = 'inputDisabled'
+    colorPlaceholder = 'neutralGray5'
   } else if (readonly) {
-    finalVariant = "inputReadonly"
-    colorPlaceholder = "neutralGray1"
+    finalVariant = 'inputReadonly'
+    colorPlaceholder = 'neutralGray1'
   }
 
   const index = Object.keys(theme.forms).indexOf(variantSize)
@@ -54,10 +54,10 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
       {label && (
         <Box
           __css={{
-            mb: '4px'
+            mb: '4px',
           }}
         >
-          <Text variant="body600.fontSize12">
+          <Text variant='body600.fontSize12'>
             {label}
           </Text>
         </Box>
@@ -83,9 +83,9 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
       >
         {prefix}
         <Box
-          as="input"
-          type={ password ? "password" : "text" }
-          tx="forms"
+          as='input'
+          type={ password ? 'password' : 'text' }
+          tx='forms'
           variant={[finalVariant, variantSize]}
           onMouseOver={() => setHover(true)}
           onMouseOut={() => setHover(false)}
@@ -112,7 +112,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
             py: 1,
           }}
         >
-          <Text variant="inputMessageErrors">{errors}</Text>
+          <Text variant='inputMessageErrors'>{errors}</Text>
         </Box>
       )}
       {infoAlert && (
@@ -122,7 +122,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
             py: 1,
           }}
         >
-          <Text variant="inputMessageInfoAlert">{infoAlert}</Text>
+          <Text variant='inputMessageInfoAlert'>{infoAlert}</Text>
         </Box>
       )}
     </Box>

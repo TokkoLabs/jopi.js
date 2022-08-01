@@ -5,55 +5,66 @@ exports[`Input disabled 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 10px;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: neutralGray5;
+  font-family: Nunito Sans;
+  font-weight: 400;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
   border: none;
   box-shadow: none;
   font-family: primary;
   display: block;
-  font-size: 14px;
-  height: 36px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-left: 7px;
   outline: none;
-  background-color: inputBackground;
 }
 
-.c1::-webkit-input-placeholder {
-  color: inputPlaceholderColor;
-}
+@media screen and (min-width:40em) {
 
-.c1::-moz-placeholder {
-  color: inputPlaceholderColor;
-}
-
-.c1:-ms-input-placeholder {
-  color: inputPlaceholderColor;
-}
-
-.c1::placeholder {
-  color: inputPlaceholderColor;
 }
 
 <div
   className="c0"
 >
-  <input
+  <div
     className="c1"
-    disabled={true}
-    type="text"
-  />
+  >
+    <input
+      className="c2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="text"
+    />
+  </div>
 </div>
 `;
 
@@ -62,56 +73,67 @@ exports[`Input placeholder 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 10px;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
+  font-family: Nunito Sans;
+  font-weight: 400;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
   border: none;
   box-shadow: none;
   font-family: primary;
   display: block;
-  font-size: 14px;
-  height: 36px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-left: 7px;
   outline: none;
-  background-color: inputBackground;
 }
 
-.c1::-webkit-input-placeholder {
-  color: inputPlaceholderColor;
-}
+@media screen and (min-width:40em) {
 
-.c1::-moz-placeholder {
-  color: inputPlaceholderColor;
-}
-
-.c1:-ms-input-placeholder {
-  color: inputPlaceholderColor;
-}
-
-.c1::placeholder {
-  color: inputPlaceholderColor;
 }
 
 <div
   className="c0"
 >
-  <input
+  <div
     className="c1"
-    disabled={false}
-    placeholder="test"
-    type="text"
-  />
+  >
+    <input
+      className="c2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="test"
+      type="text"
+    />
+  </div>
 </div>
 `;
 
@@ -120,54 +142,65 @@ exports[`Input renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 10px;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
+  font-family: Nunito Sans;
+  font-weight: 400;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
   border: none;
   box-shadow: none;
   font-family: primary;
   display: block;
-  font-size: 14px;
-  height: 36px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-left: 7px;
   outline: none;
-  background-color: inputBackground;
 }
 
-.c1::-webkit-input-placeholder {
-  color: inputPlaceholderColor;
-}
+@media screen and (min-width:40em) {
 
-.c1::-moz-placeholder {
-  color: inputPlaceholderColor;
-}
-
-.c1:-ms-input-placeholder {
-  color: inputPlaceholderColor;
-}
-
-.c1::placeholder {
-  color: inputPlaceholderColor;
 }
 
 <div
   className="c0"
 >
-  <input
+  <div
     className="c1"
-    disabled={false}
-    type="text"
-  />
+  >
+    <input
+      className="c2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="text"
+    />
+  </div>
 </div>
 `;

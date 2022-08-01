@@ -36,35 +36,16 @@ exports[`List renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.c4 > *:first-child {
-  position: absolute;
-  top: 9px;
-  left: 12px;
 }
 
 .c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 10px;
-  border: none;
-  box-shadow: none;
-  font-family: primary;
-  display: block;
-  font-size: 14px;
-  height: 36px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  outline: none;
-  background-color: inputBackground;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -72,40 +53,38 @@ exports[`List renders correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 4px;
-  background-color: white;
-  border-radius: 8px;
-  border: 1px solid #C9D1D5;
-  height: 28px;
-  color: neutralGray3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
   font-family: Nunito Sans;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  width: 100%;
 }
 
-.c5::-webkit-input-placeholder {
-  color: inputPlaceholderColor;
-}
-
-.c5::-moz-placeholder {
-  color: inputPlaceholderColor;
-}
-
-.c5:-ms-input-placeholder {
-  color: inputPlaceholderColor;
-}
-
-.c5::placeholder {
-  color: inputPlaceholderColor;
+.c5 > *:first-child {
+  position: absolute;
+  height: 14px;
+  font-size: 14px;
+  left: 7px;
 }
 
 .c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 26px;
+  outline: none;
+  width: 100%;
+}
+
+.c7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -125,7 +104,7 @@ exports[`List renders correctly 1`] = `
   width: 100%;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -134,7 +113,7 @@ exports[`List renders correctly 1`] = `
   height: 18px;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -145,7 +124,7 @@ exports[`List renders correctly 1`] = `
   height: 100%;
 }
 
-.c12 {
+.c13 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -162,7 +141,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c9 {
+.c10 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -188,36 +167,40 @@ input:focus ~ .c0 {
   display: flex;
 }
 
-.c11 {
+.c12 {
   display: none;
 }
 
-input:checked:not(:disabled) ~ .c10 {
+input:checked:not(:disabled) ~ .c11 {
   display: block;
 }
 
-.c14 {
+.c15 {
   display: none;
 }
 
-input:not(:checked):not(:disabled) ~ .c13 {
+input:not(:checked):not(:disabled) ~ .c14 {
   display: block;
 }
 
-.c18 {
+.c19 {
   display: none;
 }
 
-input:checked:disabled ~ .c17 {
+input:checked:disabled ~ .c18 {
   display: block;
 }
 
-.c16 {
+.c17 {
   display: none;
 }
 
-input:disabled:not(:checked) ~ .c15 {
+input:disabled:not(:checked) ~ .c16 {
   display: block;
+}
+
+@media screen and (min-width:40em) {
+
 }
 
 <ul
@@ -229,36 +212,40 @@ input:disabled:not(:checked) ~ .c15 {
     <div
       className="c0 c4"
     >
-      <span
-        className="icon-buscar"
-        style={
-          Object {
-            "color": "neutralGray3",
-          }
-        }
-      />
-      <input
+      <div
         className="c0 c5"
-        disabled={false}
-        type="text"
-        width={1}
-      />
+      >
+        <span
+          className="icon-buscar"
+        />
+        <input
+          className="c0 c6"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          placeholder="Search"
+          type="text"
+          width={1}
+        />
+      </div>
     </div>
   </span>
   <li
-    className="c0 c6"
+    className="c0 c7"
     width={1}
   >
     <div
-      className="c0 c7"
+      className="c0 c8"
     >
       <input
-        className="c0 c8"
+        className="c0 c9"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        className="c0 c9 c10 c11 c0 c12"
+        className="c0 c10 c11 c12 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -284,7 +271,7 @@ input:disabled:not(:checked) ~ .c15 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c9 c13 c14 c0 c12"
+        className="c0 c10 c14 c15 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -304,7 +291,7 @@ input:disabled:not(:checked) ~ .c15 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c9 c15 c16 c0 c12"
+        className="c0 c10 c16 c17 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -324,7 +311,7 @@ input:disabled:not(:checked) ~ .c15 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c9 c17 c18 c0 c12"
+        className="c0 c10 c18 c19 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -352,19 +339,19 @@ input:disabled:not(:checked) ~ .c15 {
     One
   </li>
   <li
-    className="c0 c6"
+    className="c0 c7"
     width={1}
   >
     <div
-      className="c0 c7"
+      className="c0 c8"
     >
       <input
-        className="c0 c8"
+        className="c0 c9"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        className="c0 c9 c10 c11 c0 c12"
+        className="c0 c10 c11 c12 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -390,7 +377,7 @@ input:disabled:not(:checked) ~ .c15 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c9 c13 c14 c0 c12"
+        className="c0 c10 c14 c15 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -410,7 +397,7 @@ input:disabled:not(:checked) ~ .c15 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c9 c15 c16 c0 c12"
+        className="c0 c10 c16 c17 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -430,7 +417,7 @@ input:disabled:not(:checked) ~ .c15 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c9 c17 c18 c0 c12"
+        className="c0 c10 c18 c19 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -458,19 +445,19 @@ input:disabled:not(:checked) ~ .c15 {
     Two
   </li>
   <li
-    className="c0 c6"
+    className="c0 c7"
     width={1}
   >
     <div
-      className="c0 c7"
+      className="c0 c8"
     >
       <input
-        className="c0 c8"
+        className="c0 c9"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        className="c0 c9 c10 c11 c0 c12"
+        className="c0 c10 c11 c12 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -496,7 +483,7 @@ input:disabled:not(:checked) ~ .c15 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c9 c13 c14 c0 c12"
+        className="c0 c10 c14 c15 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -516,7 +503,7 @@ input:disabled:not(:checked) ~ .c15 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c9 c15 c16 c0 c12"
+        className="c0 c10 c16 c17 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -536,7 +523,7 @@ input:disabled:not(:checked) ~ .c15 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c9 c17 c18 c0 c12"
+        className="c0 c10 c18 c19 c0 c13"
         fill="none"
         height={16}
         viewBox="0 0 16 16"

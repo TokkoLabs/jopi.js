@@ -81,7 +81,7 @@ const forms = {
       backgroundColor: colors.neutralGray10,
       '::placeholder': {
         color: colors.neutralGray1,
-      }
+      },
     },
     active: {
       border: '1px solid #AEBAC0',
@@ -93,7 +93,6 @@ const forms = {
       backgroundColor: colors.neutralGray10,
     },
   },
-  // LOS DE ABAJO CONSIDERO QUE SON IGUALES PARA TODO
   inputFocus: {
     border: '1px solid #386DF4',
     boxShadow: '2px 2px 6px rgba(56, 109, 244, 0.2)',
@@ -117,9 +116,8 @@ const forms = {
     cursor: 'not-allowed',
     pointerEvents: 'none',
     userSelect: 'none',
-    color: colors.neutralGray1
+    color: colors.neutralGray1,
   },
-  // HASTA ACA
   inputTransparent: {
     normal: {
       color: colors.neutralGray3,
@@ -158,7 +156,7 @@ const forms = {
     filled: {
       color: colors.neutralGray1,
       backgroundColor: colors.neutralGray10,
-    }
+    },
   },
   inputSearchTransparent: {
     normal: {
@@ -180,7 +178,7 @@ const forms = {
     filled: {
       color: colors.neutralGray1,
       backgroundColor: colors.transparent,
-    }
+    },
   },
   inputSearchOutlined: {
     normal: {
@@ -207,12 +205,12 @@ const forms = {
       color: colors.neutralGray1,
       backgroundColor: colors.transparent,
       border: '1px solid #94A2AB',
-    }
+    },
   },
   inputLarge: {
     gap: '6px',
-    paddingLeftPrefix:'26px',
-    paddingLeftNoPrefix:'7px',
+    paddingLeftPrefix: '26px',
+    paddingLeftNoPrefix: '7px',
     paddingRigth: '7px',
     paddingTop: '10px',
     paddingBottom: '10px',
@@ -223,8 +221,8 @@ const forms = {
   },
   inputMedium: {
     gap: '6px',
-    paddingLeftPrefix:'23px',
-    paddingLeftNoPrefix:'6px',
+    paddingLeftPrefix: '23px',
+    paddingLeftNoPrefix: '6px',
     paddingRigth: '6px',
     paddingTop: '8px',
     paddingBottom: '8px',
@@ -235,8 +233,8 @@ const forms = {
   },
   inputSmall: {
     gap: '4px',
-    paddingLeftPrefix:'20px',
-    paddingLeftNoPrefix:'3px',
+    paddingLeftPrefix: '20px',
+    paddingLeftNoPrefix: '3px',
     paddingRigth: '3px',
     paddingTop: '6px',
     paddingBottom: '6px',
