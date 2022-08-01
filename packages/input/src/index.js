@@ -94,6 +94,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
           onBlur={() => setFocused(false)}
           {...props}
           __css={{
+            fontWeight: bold ? 700 : 400,
             border: 'none',
             boxShadow: 'none',
             fontFamily: 'primary',
