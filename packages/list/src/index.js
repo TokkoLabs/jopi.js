@@ -31,14 +31,12 @@ const ListInput = (props) => (
     }}
   >
     <Input
-      prefix={
-        <span className='icon-buscar' style={{
-          color: 'neutralGray3',
-        }}/>
-      }
+      prefix={<span className='icon-buscar'/>}
+      placeholder="Search"
+      variant='inputSearchOutlined'
       width={1}
       {...props}
-      sx={{
+      /*sx={{
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'flex-start',
@@ -52,7 +50,7 @@ const ListInput = (props) => (
         fontWeight: 400,
         fontSize: '12px',
         lineHeight: '16px',
-      }}
+      }}*/
     />
   </Flex>
 )
