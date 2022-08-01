@@ -17,12 +17,6 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
     finalVariant = variant + '.hover'
     colorPlaceholder = Object.values(theme.forms)[indexVariant].hover.color
   }
-  if (infoAlert !== undefined) {
-    finalVariant = 'inputFocus'
-  } else if (errors !== undefined) {
-    finalVariant = 'inputError'
-    colorPlaceholder = 'error'
-  }
 
   if (focused) {
     finalVariant = variant + '.active'
@@ -36,6 +30,13 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
   } else if (readonly) {
     finalVariant = 'inputReadonly'
     colorPlaceholder = 'neutralGray1'
+  }
+
+  if (infoAlert !== undefined) {
+    finalVariant = 'inputFocus'
+  } else if (errors !== undefined) {
+    finalVariant = 'inputError'
+    colorPlaceholder = 'error'
   }
 
   const index = Object.keys(theme.forms).indexOf(variantSize)

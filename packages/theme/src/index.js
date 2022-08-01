@@ -129,7 +129,7 @@ const forms = {
     },
     active: {
       border: '1px solid #AEBAC0',
-      backgroundColor: colors.transparent,
+      backgroundColor: colors.neutralGray10,
     },
     filled: {
       color: colors.neutralGray1,
@@ -171,7 +171,7 @@ const forms = {
     active: {
       border: '1px solid #AEBAC0',
       color: colors.neutralGray1,
-      backgroundColor: colors.transparent,
+      backgroundColor: colors.neutralGray10,
     },
     loading: {
       color: colors.neutralGray1,
@@ -511,7 +511,9 @@ const theme = {
       },
     },
     large: {
+      height: '48px',
       borderRadius: '12px',
+      fontSize: '16px',
       padding: '13px 26px 13px 26px',
       gap: '6px',
     },
