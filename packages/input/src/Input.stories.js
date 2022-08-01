@@ -55,20 +55,40 @@ export const inputWithPassword = () => (
   <Input label="Label de prueba" placeholder="Hello World!" password />
 )
 
-// export const error = () => (
-//   <Input placeholder="Hello World!" borderColor="danger" />
-// )
-
-// export const success = () => (
-//   <Input placeholder="Hello World!" borderColor="success" />
-// )
-
-// export const warning = () => (
-//   <Input placeholder="Hello World!" borderColor="warning" />
-// )
-
-
 export const search = () => (
+  <Input
+    prefix={<span className='icon-buscar'/>}
+    placeholder="Search"
+    variant='inputSearch'
+  />
+)
+
+export const searchTransparent = () => (
+  <Input
+    prefix={<span className='icon-buscar'/>}
+    placeholder="Search"
+    variant='inputSearchTransparent'
+  />
+)
+
+export const searchOutlined = () => (
+  <Input
+    prefix={<span className='icon-buscar'/>}
+    placeholder="Search"
+    variant='inputSearchOutlined'
+  />
+)
+
+export const searchBold = () => (
+  <Input
+    prefix={<span className='icon-buscar'/>}
+    placeholder="Search"
+    variant='inputSearch'
+    bold
+  />
+)
+
+export const inputPrefixSuffix = () => (
   <Input
     prefix={<Add />}
     suffix={<Add />}

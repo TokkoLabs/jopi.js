@@ -5,7 +5,7 @@ import { Text } from '@oneloop/text'
 import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
 
-export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, inline, password, ...props }) => {
+export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, inline, password, bold, ...props }) => {
   const [hover, setHover] = useToggle(false)
   const [focused, setFocused] = useToggle(false)
   const [text, setText] = React.useState('')
@@ -71,6 +71,8 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
           alignItems: 'center',
           gap: '6px',
           color: colorPlaceholder,
+          fontFamily: 'Nunito Sans',
+          fontWeight: bold ? 700 : 400,
           '> *:first-child': prefix
             ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, left: '7px', mt: '2px' }
             : {},

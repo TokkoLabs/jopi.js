@@ -128,6 +128,15 @@ const forms = {
     hover: {
       color: colors.neutralGray1,
     },
+    active: {
+      border: '1px solid #AEBAC0',
+      backgroundColor: colors.neutralGray10,
+    },
+    filled: {
+      color: colors.neutralGray1,
+      border: 'none',
+      backgroundColor: colors.neutralGray10,
+    },
   },
   inputSearch: {
     normal: {
@@ -136,20 +145,71 @@ const forms = {
     },
     hover: {
       color: colors.neutralGray4,
+      backgroundColor: colors.neutralGray10,
     },
     active: {
-      color: colors.neutralGray5,
+      color: colors.neutralGray1,
+      backgroundColor: colors.neutralGray10,
     },
     loading: {
-      color: colors.neutralGray3
+      color: colors.neutralGray1,
+      backgroundColor: colors.neutralGray10,
     },
     filled: {
-      color: colors.neutralGray3
+      color: colors.neutralGray1,
+      backgroundColor: colors.neutralGray10,
+    }
+  },
+  inputSearchTransparent: {
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+    },
+    hover: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.transparent,
+    },
+    active: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+    },
+    loading: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+    },
+    filled: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+    }
+  },
+  inputSearchOutlined: {
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
+    },
+    hover: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
+    },
+    active: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
+    },
+    loading: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
+    },
+    filled: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
     }
   },
   inputLarge: {
-    fontFamily: 'Nunito Sans',
-    fontWeight: 400,
     gap: '6px',
     paddingLeftPrefix:'26px',
     paddingLeftNoPrefix:'7px',
@@ -162,8 +222,6 @@ const forms = {
     lineHeight: '18px',
   },
   inputMedium: {
-    fontFamily: 'Nunito Sans',
-    fontWeight: 400,
     gap: '6px',
     paddingLeftPrefix:'23px',
     paddingLeftNoPrefix:'6px',
@@ -176,8 +234,6 @@ const forms = {
     lineHeight: '16px',
   },
   inputSmall: {
-    fontFamily: 'Nunito Sans',
-    fontWeight: 400,
     gap: '4px',
     paddingLeftPrefix:'20px',
     paddingLeftNoPrefix:'3px',
@@ -203,6 +259,7 @@ const borders = {
   secondaryBorder: '1px solid ' + colors.secondary,
   feedbackBorder: '1px solid ' + colors.feedback,
   disabledBorder: '1px solid ' + colors.disabled,
+  neutralGray5: '1px solid ' + colors.neutralGray5,
   neutralGray7: '1px solid ' + colors.neutralGray7,
 }
 
