@@ -5,7 +5,7 @@ import { Heading, Text } from '@oneloop/text'
 import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
 
-export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, inline, ...props }) => {
+export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, inline, password, ...props }) => {
   const [hover, setHover] = useToggle(false)
   const [focused, setFocused] = useToggle(false)
   let valueText = ''
@@ -85,7 +85,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
         {prefix}
         <Box
           as="input"
-          type="text"
+          type={ password ? "password" : "text" }
           tx="forms"
           variant={[variant, variantSize]}
           onMouseOver={() => setHover(true)}

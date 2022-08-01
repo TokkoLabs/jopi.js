@@ -51,6 +51,10 @@ export const inputInlineLabel = () => (
   <Input label="Label" placeholder="Hello World!" inline />
 )
 
+export const inputWithPassword = () => (
+  <Input label="Label de prueba" placeholder="Hello World!" password />
+)
+
 // export const error = () => (
 //   <Input placeholder="Hello World!" borderColor="danger" />
 // )
