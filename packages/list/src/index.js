@@ -36,21 +36,6 @@ const ListInput = (props) => (
       variant='inputSearchOutlined'
       width={1}
       {...props}
-      /*sx={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'flex-start',
-        gap: '4px',
-        backgroundColor: 'white',
-        borderRadius: '8px',
-        border: '1px solid #C9D1D5',
-        height: '28px',
-        color: 'neutralGray3',
-        fontFamily: 'Nunito Sans',
-        fontWeight: 400,
-        fontSize: '12px',
-        lineHeight: '16px',
-      }}*/
     />
   </Flex>
 )
