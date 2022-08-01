@@ -88,20 +88,14 @@ export const searchBold = () => (
   />
 )
 
-export const inputPrefixSuffix = () => (
+export const searchPrefixSuffix = () => (
   <Input
-    prefix={<Add />}
-    suffix={<Add />}
+    prefix={<span className='icon-buscar'/>}
+    suffix={<span className='icon-propiedades'/>}
     placeholder="Buscar contactos, propiedades, emprendimientos o usuarios..."
+    variant='inputSearchOutlined'
     sx={{
-      borderRadius: 'input',
-      mb: 0,
-      bg: '#FFF',
-      border: 'none',
       width: '100%',
-      '::placeholder': {
-        color: '#6C4B47',
-      },
     }}
   />
 )

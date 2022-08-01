@@ -74,10 +74,10 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
           fontFamily: 'Nunito Sans',
           fontWeight: bold ? 700 : 400,
           '> *:first-child': prefix
-            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, left: '7px', mt: '2px' }
+            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, left: '7px' }
             : {},
           '> *:last-child': suffix
-            ? { position: 'absolute', top: '9px', right: '12px' }
+            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, right: '7px' }
             : {},
         }}
       >
