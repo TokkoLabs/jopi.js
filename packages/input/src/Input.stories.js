@@ -44,6 +44,9 @@ export const inputWithLabel = () => (
 export const inputWithLabelIcon = () => (
   <Input prefix={<span className='icon-email'/>} label="Label de prueba" placeholder="Hello World!" />
 )
+
+export const inputTransparent = () => <Input placeholder="Placeholder text" variant="inputTransparent" />
+
 // export const error = () => (
 //   <Input placeholder="Hello World!" borderColor="danger" />
 // )

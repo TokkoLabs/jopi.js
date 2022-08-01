@@ -8,9 +8,15 @@ import theme from '@oneloop/theme'
 export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, ...props }) => {
   const [hover, setHover] = useToggle(false)
   const [focused, setFocused] = useToggle(false)
-  let backgroundColor = "neutralGray10"
-  let colorPlaceholder = "neutralGray3"
   let valueText = ''
+  const indexVariant = Object.keys(theme.forms).indexOf(variant)
+
+  let backgroundColor = Object.values(theme.forms)[indexVariant].normal.backgroundColor
+  let colorPlaceholder = Object.values(theme.forms)[indexVariant].normal.color
+  if (hover) {
+    backgroundColor = Object.values(theme.forms)[indexVariant].hover.backgroundColor
+    colorPlaceholder = Object.values(theme.forms)[indexVariant].hover.color
+  }
   if (infoAlert != undefined){
     variant = "inputFocus"
   } else if (errors != undefined) {
@@ -18,9 +24,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
     backgroundColor = "backgroundError"
     colorPlaceholder = "error"
   }
-  if (hover) {
-    colorPlaceholder = "neutralGray1"
-  }
+  
   if (focused) {
     variant = "inputActive"
   } else if (!focused && valueText != ''){

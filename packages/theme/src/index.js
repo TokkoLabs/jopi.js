@@ -72,33 +72,35 @@ const shadows = {
 
 const forms = {
   input: {
-    color: 'neutralGray3',
-    backgroundColor: 'neutralGray10',
-    '&:hover': {
-      color: 'neutraylGray1',
-      backgroundColor: 'neutralGray10',
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.neutralGray10,
+    },
+    hover: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.neutralGray10,
     },
   },
   inputFocus: {
     border: '1px solid #386DF4',
     boxShadow: '2px 2px 6px rgba(56, 109, 244, 0.2)',
-    backgroundColor: 'neutralGray10',
+    backgroundColor: colors.neutralGray10,
   },
   inputError: {
     border: '0.5px solid #B21702',
-    backgroundColor: 'backgroundError',
-    color: 'error',
+    backgroundColor: colors.backgroundError,
+    color: colors.error,
   },
   inputActive: {
     border: '1px solid #AEBAC0',
-    backgroundColor: 'neutralGray10',
+    backgroundColor: colors.neutralGray10,
   },
   inputDisabled: {
-    color: 'neutralGray5',
+    color: colors.neutralGray5,
     cursor: 'not-allowed',
     pointerEvents: 'none',
     userSelect: 'none',
-    backgroundColor: 'neutralGray10',
+    backgroundColor: colors.neutralGray10,
   },
   inputReadonly: {
     border: 'none',
@@ -106,10 +108,21 @@ const forms = {
     cursor: 'not-allowed',
     pointerEvents: 'none',
     userSelect: 'none',
+    color: colors.neutralGray1
   },
   inputFilled: {
+    color: colors.neutralGray1,
     border: 'none',
-    backgroundColor: 'neutralGray10',
+    backgroundColor: colors.neutralGray10,
+  },
+  inputTransparent: {
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+    },
+    hover: {
+      color: colors.neutralGray1,
+    },
   },
   inputLarge: {
     fontFamily: 'Nunito Sans',
