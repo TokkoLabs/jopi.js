@@ -47,6 +47,10 @@ export const inputWithLabelIcon = () => (
 
 export const inputTransparent = () => <Input placeholder="Placeholder text" variant="inputTransparent" />
 
+export const inputInlineLabel = () => (
+  <Input label="Label" placeholder="Hello World!" inline />
+)
+
 // export const error = () => (
 //   <Input placeholder="Hello World!" borderColor="danger" />
 // )

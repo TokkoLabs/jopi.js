@@ -5,7 +5,7 @@ import { Heading, Text } from '@oneloop/text'
 import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
 
-export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, ...props }) => {
+export const Input = ({ prefix, suffix, label, errors, variant = "input", variantSize = "inputLarge", infoAlert, disabled, readonly, inline, ...props }) => {
   const [hover, setHover] = useToggle(false)
   const [focused, setFocused] = useToggle(false)
   let valueText = ''
@@ -24,7 +24,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
     backgroundColor = "backgroundError"
     colorPlaceholder = "error"
   }
-  
+
   if (focused) {
     variant = "inputActive"
   } else if (!focused && valueText != ''){
@@ -46,7 +46,14 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
   const fontSizePrefix = Object.values(theme.forms)[index].fontSize
 
   return (
-    <>
+    <Box
+      __css={{
+        display: inline && 'flex',
+        flexDirection: inline && 'row',
+        alignItems: inline && 'center',
+        gap: inline && '16px',
+      }}
+    >
       {label && (
         <Box
           __css={{
@@ -122,7 +129,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = "input", varian
           <Text variant="inputMessageInfoAlert">{infoAlert}</Text>
         </Box>
       )}
-    </>
+    </Box>
   )
 }
 
