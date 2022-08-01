@@ -125,15 +125,16 @@ const forms = {
     },
     hover: {
       color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
     },
     active: {
       border: '1px solid #AEBAC0',
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.transparent,
     },
     filled: {
       color: colors.neutralGray1,
       border: 'none',
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.transparent,
     },
   },
   inputSearch: {
@@ -168,6 +169,7 @@ const forms = {
       backgroundColor: colors.transparent,
     },
     active: {
+      border: '1px solid #AEBAC0',
       color: colors.neutralGray1,
       backgroundColor: colors.transparent,
     },
