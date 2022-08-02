@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Input checkStates 1`] = `ShallowWrapper {}`;
+
 exports[`Input disabled 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -68,6 +70,677 @@ exports[`Input disabled 1`] = `
       onMouseOver={[Function]}
       type="text"
       width="100%"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input errors 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: error;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  width: 300px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 7px;
+  outline: none;
+  width: 100%;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="100%"
+>
+  <div
+    className="c1"
+  >
+    <input
+      className="c2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="Placeholder text"
+      type="text"
+      width="100%"
+    />
+  </div>
+  <div
+    className="c3"
+  >
+    <p
+      className="c4"
+    >
+      Minimo 8 caracteres.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Input infoAlert 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  width: 300px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 7px;
+  outline: none;
+  width: 100%;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="100%"
+>
+  <div
+    className="c1"
+  >
+    <input
+      className="c2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="Placeholder text"
+      type="text"
+      width="100%"
+    />
+  </div>
+  <div
+    className="c3"
+  >
+    <p
+      className="c4"
+    >
+      Campo Requerido
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Input inputInlineLabel 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-bottom: 4px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  width: 300px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 7px;
+  outline: none;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="100%"
+>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      Label
+    </p>
+  </div>
+  <div
+    className="c3"
+  >
+    <input
+      className="c4"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="Hello World!"
+      type="text"
+      width="100%"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input inputMedium 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  width: 300px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 6px;
+  outline: none;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="100%"
+>
+  <div
+    className="c1"
+  >
+    <input
+      className="c2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="Placeholder text"
+      type="text"
+      width="100%"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input inputWithIcon 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  width: 300px;
+}
+
+.c1 > *:first-child {
+  position: absolute;
+  height: 14px;
+  font-size: 14px;
+  left: 7px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 26px;
+  outline: none;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="100%"
+>
+  <div
+    className="c1"
+  >
+    <span
+      className="icon-email"
+    />
+    <input
+      className="c2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="Hello World!"
+      type="text"
+      width="100%"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input inputWithLabel 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-bottom: 4px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  width: 300px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 7px;
+  outline: none;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="100%"
+>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      Label de prueba
+    </p>
+  </div>
+  <div
+    className="c3"
+  >
+    <input
+      className="c4"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="Hello World!"
+      type="text"
+      width="100%"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input inputWithPassword 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-bottom: 4px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  width: 300px;
+}
+
+.c3 > *:last-child {
+  position: absolute;
+  height: 14px;
+  font-size: 14px;
+  right: 7px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 7px;
+  outline: none;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="100%"
+>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      Label de prueba
+    </p>
+  </div>
+  <div
+    className="c3"
+  >
+    <input
+      className="c4"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="Hello World!"
+      type="password"
+      width="100%"
+    />
+    <span
+      className="icon-ocultar"
     />
   </div>
 </div>
@@ -147,6 +820,80 @@ exports[`Input placeholder 1`] = `
 </div>
 `;
 
+exports[`Input readonly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: neutralGray1;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  width: 300px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 7px;
+  outline: none;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="100%"
+>
+  <div
+    className="c1"
+  >
+    <input
+      className="c2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="Hello World!"
+      type="text"
+      width="100%"
+    />
+  </div>
+</div>
+`;
+
 exports[`Input renders correctly 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -213,6 +960,90 @@ exports[`Input renders correctly 1`] = `
       onFocus={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
+      type="text"
+      width="100%"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input searchBold 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #6F838D;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  width: 300px;
+}
+
+.c1 > *:first-child {
+  position: absolute;
+  height: 14px;
+  font-size: 14px;
+  left: 7px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 700;
+  border: none;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 26px;
+  outline: none;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="100%"
+>
+  <div
+    className="c1"
+  >
+    <span
+      className="icon-buscar"
+    />
+    <input
+      className="c2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      placeholder="Search"
       type="text"
       width="100%"
     />
