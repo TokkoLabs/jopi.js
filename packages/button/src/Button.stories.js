@@ -8,11 +8,11 @@ export default {
 }
 
 export const primary = () => (
-  <Button>{'Label'}</Button>
+  <Button variant={['primary', 'large']}>{'Label'}</Button>
 )
 
 export const primaryLarge = () => (
-  <Button>{'Label'}</Button>
+  <Button variant={['primary', 'large']}>{'Label'}</Button>
 )
 
 export const primaryMedium = () => (
@@ -28,27 +28,27 @@ export const primaryExtraSmall = () => (
 )
 
 export const primaryDisabled = () => (
-  <Button variant='primaryDisabled'>{'Label'}</Button>
+  <Button variant={['primaryDisabled', 'large']}>{'Label'}</Button>
 )
 
 export const secondary = () => (
-  <Button variant='secondary'>{'Label'}</Button>
+  <Button variant={['secondary', 'large']}>{'Label'}</Button>
 )
 
 export const secondaryDisabled = () => (
-  <Button variant='primaryDisabled'>{'Label'}</Button>
+  <Button variant={['primaryDisabled', 'large']}>{'Label'}</Button>
 )
 
 export const primaryOutline = () => (
-  <Button variant='primaryOutline'>{'Label'}</Button>
+  <Button variant={['primaryOutline', 'large']}>{'Label'}</Button>
 )
 
 export const secondaryOutline = () => (
-  <Button variant='secondaryOutlineIcon'>{'Label'}</Button>
+  <Button variant={['secondaryOutlineIcon', 'large']}>{'Label'}</Button>
 )
 
 export const outlineDisabled = () => (
-  <Button variant='outlineDisabled'>{'Label'}</Button>
+  <Button variant={['outlineDisabled', 'large']}>{'Label'}</Button>
 )
 
 export const primaryText = () => (

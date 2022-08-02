@@ -12,7 +12,7 @@ const colors = {
   disabled: '#C1CCD0',
   success: '#068B5B',
   error: '#B21702',
-  backgroundError: '#FDDDD8',
+  backgroundError: '#FFF8F6',
   info: '#386DF4',
   lightBlue: '#6A88F2',
   inputErrors: '#FFF2F0',
@@ -72,17 +72,178 @@ const shadows = {
 
 const forms = {
   input: {
-    borderRadius: radius.input,
-    fontSize: fontSize[3],
-    fontWeight: 400,
-    '&:focus': {
-      border: '1px solid #386DF4',
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.neutralGray10,
     },
-    '&:disabled': {
-      color: '#999999',
-      backgroundColor: '#EBEBEB',
-      cursor: 'not-allowed',
+    hover: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.neutralGray10,
+      '::placeholder': {
+        color: colors.neutralGray1,
+      },
     },
+    active: {
+      border: '1px solid #AEBAC0',
+      backgroundColor: colors.neutralGray10,
+    },
+    filled: {
+      color: colors.neutralGray1,
+      border: 'none',
+      backgroundColor: colors.neutralGray10,
+    },
+  },
+  inputFocus: {
+    border: '1px solid #386DF4',
+    boxShadow: '2px 2px 6px rgba(56, 109, 244, 0.2)',
+    backgroundColor: colors.neutralGray10,
+  },
+  inputError: {
+    border: '0.5px solid #B21702',
+    backgroundColor: colors.backgroundError,
+    color: colors.error,
+  },
+  inputDisabled: {
+    color: colors.neutralGray5,
+    cursor: 'not-allowed',
+    pointerEvents: 'none',
+    userSelect: 'none',
+    backgroundColor: colors.neutralGray10,
+  },
+  inputReadonly: {
+    border: 'none',
+    backgroundColor: 'none',
+    cursor: 'not-allowed',
+    pointerEvents: 'none',
+    userSelect: 'none',
+    color: colors.neutralGray1,
+  },
+  inputTransparent: {
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+    },
+    hover: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+    },
+    active: {
+      border: '1px solid #AEBAC0',
+      backgroundColor: colors.neutralGray10,
+    },
+    filled: {
+      color: colors.neutralGray1,
+      border: 'none',
+      backgroundColor: colors.transparent,
+    },
+  },
+  inputSearch: {
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.neutralGray10,
+    },
+    hover: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.neutralGray10,
+    },
+    active: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.neutralGray10,
+    },
+    loading: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.neutralGray10,
+    },
+    filled: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.neutralGray10,
+    },
+  },
+  inputSearchTransparent: {
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+    },
+    hover: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.transparent,
+    },
+    active: {
+      border: '1px solid #AEBAC0',
+      color: colors.neutralGray1,
+      backgroundColor: colors.neutralGray10,
+    },
+    loading: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+    },
+    filled: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+    },
+  },
+  inputSearchOutlined: {
+    normal: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
+    },
+    hover: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
+    },
+    active: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
+    },
+    loading: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
+    },
+    filled: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+      border: '1px solid #94A2AB',
+    },
+  },
+  inputLarge: {
+    gap: '6px',
+    paddingLeftPrefix: '26px',
+    paddingLeftNoPrefix: '7px',
+    paddingRigth: '7px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    height: '32px',
+    borderRadius: '8px',
+    fontSize: '14px',
+    lineHeight: '18px',
+  },
+  inputMedium: {
+    gap: '6px',
+    paddingLeftPrefix: '23px',
+    paddingLeftNoPrefix: '6px',
+    paddingRigth: '6px',
+    paddingTop: '8px',
+    paddingBottom: '8px',
+    height: '28px',
+    borderRadius: '7px',
+    fontSize: '12px',
+    lineHeight: '16px',
+  },
+  inputSmall: {
+    gap: '4px',
+    paddingLeftPrefix: '20px',
+    paddingLeftNoPrefix: '3px',
+    paddingRigth: '3px',
+    paddingTop: '6px',
+    paddingBottom: '6px',
+    height: '22px',
+    borderRadius: '5px',
+    fontSize: '11px',
+    lineHeight: '13px',
   },
   label: {
     color: colors.disabled,
@@ -98,6 +259,7 @@ const borders = {
   secondaryBorder: '1px solid ' + colors.secondary,
   feedbackBorder: '1px solid ' + colors.feedback,
   disabledBorder: '1px solid ' + colors.disabled,
+  neutralGray5: '1px solid ' + colors.neutralGray5,
   neutralGray7: '1px solid ' + colors.neutralGray7,
 }
 
@@ -243,6 +405,42 @@ const theme = {
         overflow: 'hidden',
       },
     },
+    body600: {
+      fontSize09: {
+        fontSize: '9px',
+        fontWeight: 600,
+      },
+      fontSize10: {
+        fontSize: '10px',
+        fontWeight: 600,
+      },
+      fontSize11: {
+        fontSize: '11px',
+        fontWeight: 600,
+        lineHeight: '13px',
+      },
+      fontSize12: {
+        fontSize: '12px',
+        fontWeight: 600,
+        lineHeight: '16px',
+      },
+      fontSize13: {
+        fontSize: '13px',
+        fontWeight: 600,
+      },
+      fontSize14: {
+        fontSize: '14px',
+        fontWeight: 600,
+      },
+      fontSize15: {
+        fontSize: '15px',
+        fontWeight: 600,
+      },
+      fontSize16: {
+        fontSize: '16px',
+        fontWeight: 600,
+      },
+    },
     bodyBold: {
       fontSize11: {
         fontSize: '11px',
@@ -268,13 +466,18 @@ const theme = {
         color: colors.info,
       },
     ],
-    inputMessageErrors: [
-      {
-        fontSize: fontSize[1],
-        fontWeight: 400,
-        color: colors.error,
-      },
-    ],
+    inputMessageErrors: {
+      fontSize: '11px',
+      lineHeight: '13px',
+      fontWeight: 400,
+      color: colors.error,
+    },
+    inputMessageInfoAlert: {
+      fontSize: '11px',
+      lineHeight: '13px',
+      fontWeight: 400,
+      color: colors.info,
+    },
     white: [
       {
         color: colors.neutral[0],
@@ -308,7 +511,9 @@ const theme = {
       },
     },
     large: {
+      height: '48px',
       borderRadius: '12px',
+      fontSize: '16px',
       padding: '13px 26px 13px 26px',
       gap: '6px',
     },
