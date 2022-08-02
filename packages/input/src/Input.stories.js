@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Input } from '.'
+import { useToggle } from '@oneloop/hooks'
 
 export default {
   component: Input,
@@ -49,9 +50,18 @@ export const inputInlineLabel = () => (
   <Input label="Label" placeholder="Hello World!" inline />
 )
 
-export const inputWithPassword = () => (
-  <Input label="Label de prueba" placeholder="Hello World!" password />
-)
+export const InputWithPassword = () => {
+  const [pass, setPass] = useToggle(true)
+
+  return (
+    <Input
+      suffix={<span className={pass ? 'icon-ocultar' : 'icon-mostrar'} onClick={() => setPass()}/>}
+      label="Label de prueba"
+      placeholder="Hello World!"
+      password={pass}
+    />
+  )
+}
 
 export const search = () => (
   <Input
@@ -92,8 +102,6 @@ export const searchPrefixSuffix = () => (
     suffix={<span className='icon-propiedades'/>}
     placeholder="Buscar contactos, propiedades, emprendimientos o usuarios..."
     variant='inputSearchOutlined'
-    sx={{
-      width: '100%',
-    }}
+    width='500px'
   />
 )
