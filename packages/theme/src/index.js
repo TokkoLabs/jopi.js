@@ -1398,7 +1398,14 @@ const theme = {
     },
     error: {
       backgroundColor: colors.backgroundError,
-      border: '1px solid #FDDDD8',
+      borderTop: '1px solid #FDDDD8',
+      borderBottom: '1px solid #FDDDD8',
+      '&:first-child': {
+        borderLeft: '1px solid #FDDDD8',
+      },
+      '&:last-child': {
+        borderRight: '1px solid #FDDDD8',
+      },
     },
     infoAlert: {
       backgroundColor: '#EEF4FE',
