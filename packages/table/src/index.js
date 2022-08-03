@@ -12,7 +12,7 @@ export const Table = (props) => (
     }}
   />
 )
-
+/*
 const TableHeaderItem = (props) => (
   <Box
     as="th"
@@ -27,10 +27,10 @@ const TableHeaderItem = (props) => (
       // },
     }}
   />
-)
+)*/
 
 const TableBody = (props) => <Box as="tbody" {...props} />
-
+/*
 const TableHeader = ({ children, ...props }) => (
   <Box as="thead">
     <Box as="tr" {...props}>
@@ -54,9 +54,9 @@ const TableRowItem = (props) => (
       // },
     }}
   />
-)
+)*/
 
-const TableHeaderDefault = ({ children, ...props }) => (
+const TableHeader = ({ children, ...props }) => (
   <Box as="thead">
     <Box
       as="tr"
@@ -79,7 +79,7 @@ const TableHeaderDefault = ({ children, ...props }) => (
   </Box>
 )
 
-const TableHeaderItemDefault = ({ children, ...props }) => (
+const TableHeaderItem = ({ children, ...props }) => (
   <Box
     as="th"
     {...props}
@@ -112,7 +112,7 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
   </Box>
 )
 
-const TableRowDefault = ({ disabled = false, ...props }) => (
+const TableRow = ({ disabled = false, ...props }) => (
   <Box
     as="tr"
     {...props}
@@ -129,7 +129,7 @@ const TableRowDefault = ({ disabled = false, ...props }) => (
   />
 )
 
-const TableRowItemDefault = ({ children, ...props }) => (
+const TableRowItem = ({ children, ...props }) => (
   <Box
     as="td"
     {...props}
@@ -165,8 +165,9 @@ Table.HeaderItem = TableHeaderItem
 Table.Rows = TableBody
 Table.Row = TableRow
 Table.RowItem = TableRowItem
-
+/*
 Table.HeaderDefault = TableHeaderDefault
 Table.HeaderItemDefault = TableHeaderItemDefault
 Table.RowDefault = TableRowDefault
 Table.RowItemDefault = TableRowItemDefault
+*/
