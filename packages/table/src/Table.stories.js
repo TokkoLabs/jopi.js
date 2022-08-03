@@ -40,7 +40,7 @@ export const normal = () => (
 // Tengo que agregar la funcionalidad de que al seleccionar el primer checkbox, 
 // seleccione o deseleccione a todos los demas
 export const normal = () => (
-  <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
+  <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '10px' }}>
     <Table>
       <Table.Header>
         <Table.HeaderItem>
@@ -154,7 +154,46 @@ export const normal = () => (
             <Text variant="body.fontSize11">0m° Total</Text>
           </Table.RowItem>
         </Table.Row>
-        <Table.Row>
+        <Table.Row variant='error'>
+          <Table.RowItem>
+            <Checkbox />
+          </Table.RowItem>
+          <Table.RowItem>
+            <Image
+              src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              variant="rows"
+            />
+          </Table.RowItem>
+          <Table.RowItem>
+            <Text variant="body.fontSize12">IHO4362866</Text>
+            <Text variant="body.fontSize11">AP4468985</Text>
+          </Table.RowItem>
+          <Table.RowItem>
+            <Text variant="bodyBold.fontSize12">Av. Libertador 5687 5to A</Text>
+            <Text variant="body.fontSize11">Departamento en Palermo</Text>
+          </Table.RowItem>
+          <Table.RowItem>
+            <Text variant="bodyBold.fontSize12">Venta</Text>
+            <Text variant="body.fontSize11">USD 200.000</Text>
+          </Table.RowItem>
+          <Table.RowItem>
+            <Text variant="body.fontSize12">2 Dorm</Text>
+            <Text variant="body.fontSize11">2 Baños</Text>
+          </Table.RowItem>
+          <Table.RowItem>
+            <Text variant="body.fontSize12">87m° Cub</Text>
+            <Text variant="body.fontSize11">0m° Tot</Text>
+          </Table.RowItem>
+          <Table.RowItem>
+            <Text variant="body.fontSize12">3 Amb</Text>
+            <Text variant="body.fontSize11">0.00</Text>
+          </Table.RowItem>
+          <Table.RowItem>
+            <Badge variant="badgeTips">COHIM</Badge>
+            <Text variant="body.fontSize11">0m° Total</Text>
+          </Table.RowItem>
+        </Table.Row>
+        <Table.Row variant='infoAlert'>
           <Table.RowItem>
             <Checkbox />
           </Table.RowItem>
@@ -227,7 +266,7 @@ export const groupContacts = () => (
         </Table.HeaderItem>
       </Table.Header>
       <Table.Rows>
-        <Table.Row>
+        <Table.Row variant='secondary'>
           <Table.RowItem>
             <Text variant="body.fontSize12">Nombre Contacto</Text>
           </Table.RowItem>
@@ -254,7 +293,7 @@ export const groupContacts = () => (
             <Text variant="body.fontSize11">15:50</Text>
           </Table.RowItem>
         </Table.Row>
-        <Table.Row>
+        <Table.Row variant='secondary'>
           <Table.RowItem>
             <Text variant="body.fontSize12">Nombre Contacto</Text>
           </Table.RowItem>

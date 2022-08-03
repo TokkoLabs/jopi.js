@@ -1383,6 +1383,27 @@ const theme = {
       borderRadius: radius.circle,
     },
   },
+  rows: {
+    primary: {
+      backgroundColor: colors.neutralGray10,
+      ':hover': {
+        backgroundColor: colors.white,
+      },
+    },
+    secondary: {
+      backgroundColor: colors.white,
+      ':hover': {
+        backgroundColor: colors.neutralGray10,
+      },
+    },
+    error: {
+      backgroundColor: colors.backgroundError,
+      border: '1px solid #FDDDD8',
+    },
+    infoAlert: {
+      backgroundColor: '#EEF4FE',
+    },
+  },
 }
 
 export default theme

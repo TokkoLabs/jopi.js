@@ -112,11 +112,14 @@ const TableHeaderItem = ({ children, ...props }) => (
   </Box>
 )
 
-const TableRow = ({ disabled = false, ...props }) => (
+const TableRow = ({ disabled, variant = 'primary', selected, pressed, error, infoAlert, ...props }) => (
   <Box
     as="tr"
+    tx='rows'
+    variant={variant}
     {...props}
     __css={{
+      border: '5px solid #FDDDD8',
       fontFamily: 'Nunito Sans',
       padding: '6px 12px 6px 12px',
       gap: '12px',
