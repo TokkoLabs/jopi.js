@@ -123,7 +123,7 @@ export const normal = () => (
             <Image
               src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               variant="rows"
-              textBadge="Enviada"
+              textBadge="Por validar"
             />
           </Table.RowItem>
           <Table.RowItem>
@@ -162,6 +162,8 @@ export const normal = () => (
             <Image
               src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               variant="rows"
+              textBadge="Reportada"
+              variantBadge="badgeErrorRow"
             />
           </Table.RowItem>
           <Table.RowItem error>
