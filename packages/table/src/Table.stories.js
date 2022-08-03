@@ -46,12 +46,19 @@ export const normal = () => {
   const [selected2, setSelected2] = useToggle(false)
   const [selected3, setSelected3] = useToggle(false)
 
+  const selectAll = () => {
+    setSelected0()
+    setSelected1()
+    setSelected2()
+    setSelected3()
+  }
+
   return (
     <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '10px' }}>
       <Table>
         <Table.Header>
           <Table.HeaderItem>
-            <Checkbox />
+            <Checkbox onClick={() => selectAll()}/>
           </Table.HeaderItem>
           <Table.HeaderItem>
             <Text variant="bodyBold.fontSize12">Foto</Text>
@@ -86,7 +93,7 @@ export const normal = () => {
         <Table.Rows>
           <Table.Row selected={selected0} >
             <Table.RowItem>
-              <Checkbox onClick={() => setSelected0()}/>
+              <Checkbox onClick={() => setSelected0()} checked={selected0} />
             </Table.RowItem>
             <Table.RowItem>
               <Image
@@ -124,7 +131,7 @@ export const normal = () => {
           </Table.Row>
           <Table.Row selected={selected1} disabled >
             <Table.RowItem>
-              <Checkbox onClick={() => setSelected1()}/>
+              <Checkbox onClick={() => setSelected1()} checked={selected1} />
             </Table.RowItem>
             <Table.RowItem>
               <Image
@@ -161,9 +168,9 @@ export const normal = () => {
               <Text variant="body.fontSize11">0m° Total</Text>
             </Table.RowItem>
           </Table.Row>
-          <Table.Row selected={selected2} >
+          <Table.Row selected={selected2} variant="errorPrimary">
             <Table.RowItem error>
-              <Checkbox onClick={() => setSelected2()}/>
+              <Checkbox onClick={() => setSelected2()} checked={selected2} />
             </Table.RowItem>
             <Table.RowItem error>
               <Image
@@ -204,7 +211,7 @@ export const normal = () => {
           </Table.Row>
           <Table.Row selected={selected3} variant='infoAlertPrimary' >
             <Table.RowItem>
-              <Checkbox onClick={() => setSelected3()}/>
+              <Checkbox onClick={() => setSelected3()} checked={selected3} />
             </Table.RowItem>
             <Table.RowItem>
               <Image

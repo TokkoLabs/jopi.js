@@ -262,6 +262,7 @@ const borders = {
   disabledBorder: '1px solid ' + colors.disabled,
   neutralGray5: '1px solid ' + colors.neutralGray5,
   neutralGray7: '1px solid ' + colors.neutralGray7,
+  neutralGray9: '1px solid ' + colors.neutralGray9,
 }
 
 const switches = {
@@ -1429,10 +1430,12 @@ const theme = {
       backgroundColor: colors.neutralGray10,
       ':hover': {
         backgroundColor: colors.white,
+        border: borders.neutralGray9,
       },
     },
     primarySelected: {
       backgroundColor: colors.white,
+      border: borders.neutralGray9,
     },
     errorPrimary: {
       backgroundColor: colors.backgroundError,
