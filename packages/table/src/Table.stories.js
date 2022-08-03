@@ -131,7 +131,7 @@ export const normal = () => {
           </Table.Row>
           <Table.Row selected={selected1} disabled >
             <Table.RowItem>
-              <Checkbox onClick={() => setSelected1()} checked={selected1} />
+              <Checkbox disabled />
             </Table.RowItem>
             <Table.RowItem>
               <Image
@@ -168,7 +168,7 @@ export const normal = () => {
               <Text variant="body.fontSize11">0m° Total</Text>
             </Table.RowItem>
           </Table.Row>
-          <Table.Row selected={selected2} variant="errorPrimary">
+          <Table.Row selected={selected2} variant="errorPrimary" >
             <Table.RowItem error>
               <Checkbox onClick={() => setSelected2()} checked={selected2} />
             </Table.RowItem>

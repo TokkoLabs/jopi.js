@@ -1471,6 +1471,9 @@ const theme = {
     infoAlertPrimarySelected: {
       backgroundColor: '#EEF4FE',
     },
+    primaryDisabled: {
+      backgroundColor: colors.neutralGray10,
+    },
     secondary: {
       backgroundColor: colors.white,
       ':hover': {
@@ -1513,6 +1516,9 @@ const theme = {
     },
     infoAlertSecondarySelected: {
       backgroundColor: '#EEF4FE',
+    },
+    secondaryDisabled: {
+      backgroundColor: colors.white,
     },
   },
 }
