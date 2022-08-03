@@ -1431,13 +1431,24 @@ const theme = {
         backgroundColor: colors.white,
       },
     },
-    secondary: {
+    primarySelected: {
       backgroundColor: colors.white,
+    },
+    errorPrimary: {
+      backgroundColor: colors.backgroundError,
+      borderTop: '1px solid ' + colors.backgroundError2,
+      borderBottom: '1px solid ' + colors.backgroundError2,
+      '&:first-child': {
+        borderLeft: '1px solid ' + colors.backgroundError2,
+      },
+      '&:last-child': {
+        borderRight: '1px solid ' + colors.backgroundError2,
+      },
       ':hover': {
-        backgroundColor: colors.neutralGray10,
+        backgroundColor: colors.white,
       },
     },
-    error: {
+    errorPrimarySelected: {
       backgroundColor: colors.backgroundError,
       borderTop: '1px solid ' + colors.backgroundError2,
       borderBottom: '1px solid ' + colors.backgroundError2,
@@ -1448,7 +1459,56 @@ const theme = {
         borderRight: '1px solid ' + colors.backgroundError2,
       },
     },
-    infoAlert: {
+    infoAlertPrimary: {
+      backgroundColor: '#EEF4FE',
+      ':hover': {
+        backgroundColor: colors.white,
+      },
+    },
+    infoAlertPrimarySelected: {
+      backgroundColor: '#EEF4FE',
+    },
+    secondary: {
+      backgroundColor: colors.white,
+      ':hover': {
+        backgroundColor: colors.neutralGray10,
+      },
+    },
+    secondarySelected: {
+      backgroundColor: colors.neutralGray10,
+    },
+    errorSecondary: {
+      backgroundColor: colors.backgroundError,
+      borderTop: '1px solid ' + colors.backgroundError2,
+      borderBottom: '1px solid ' + colors.backgroundError2,
+      '&:first-child': {
+        borderLeft: '1px solid ' + colors.backgroundError2,
+      },
+      '&:last-child': {
+        borderRight: '1px solid ' + colors.backgroundError2,
+      },
+      ':hover': {
+        backgroundColor: colors.neutralGray10,
+      },
+    },
+    errorSecondarySelected: {
+      backgroundColor: colors.backgroundError,
+      borderTop: '1px solid ' + colors.backgroundError2,
+      borderBottom: '1px solid ' + colors.backgroundError2,
+      '&:first-child': {
+        borderLeft: '1px solid ' + colors.backgroundError2,
+      },
+      '&:last-child': {
+        borderRight: '1px solid ' + colors.backgroundError2,
+      },
+    },
+    infoAlertSecondary: {
+      backgroundColor: '#EEF4FE',
+      ':hover': {
+        backgroundColor: colors.neutralGray10,
+      },
+    },
+    infoAlertSecondarySelected: {
       backgroundColor: '#EEF4FE',
     },
   },

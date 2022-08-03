@@ -112,26 +112,29 @@ const TableHeaderItem = ({ children, ...props }) => (
   </Box>
 )
 
-const TableRow = ({ children, disabled, variant = 'primary', selected, pressed, error, infoAlert, ...props }) => (
-  <Box
-    as="tr"
-    tx='rows'
-    variant={variant}
-    {...props}
-    __css={{
-      fontFamily: 'Nunito Sans',
-      padding: '6px 12px 6px 12px',
-      gap: '12px',
-      backgroundColor: '#FFFFFF',
-      borderRadius: '8px',
-      height: '54px',
-      mb: '2px',
-      color: disabled ? 'neutralGray4' : 'neutralGray2',
-    }}
-    >
-    {children}
-  </Box>
-)
+const TableRow = ({ children, disabled, variant = 'primary', selected, pressed, error, infoAlert, ...props }) => {
+  
+  return (
+    <Box
+      as="tr"
+      tx='rows'
+      variant={ selected ? variant+'Selected' : variant}
+      {...props}
+      __css={{
+        fontFamily: 'Nunito Sans',
+        padding: '6px 12px 6px 12px',
+        gap: '12px',
+        backgroundColor: '#FFFFFF',
+        borderRadius: '8px',
+        height: '54px',
+        mb: '2px',
+        color: disabled ? 'neutralGray4' : 'neutralGray2',
+      }}
+      >
+      {children}
+    </Box>
+  )
+}
 
 const TableRowItem = ({ children, error, ...props }) => (
   <Box

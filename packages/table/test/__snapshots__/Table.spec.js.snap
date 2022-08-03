@@ -20,22 +20,97 @@ exports[`Table renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  color: white;
-  margin-bottom: 5px;
-  background-color: secondary;
+  font-family: Nunito Sans;
+  padding: 12px 16px 12px 16px;
+  gap: 8px;
+  background-color: neutralGray2;
+  border-radius: 8px;
+  display: table-row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+  height: 60px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  color: darkGrey;
-  margin-bottom: 5px;
-  background-color: inputBackground;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: neutralGray2;
+}
+
+.c3:first-child {
+  padding-left: 12px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.c3:last-child {
+  padding-right: 12px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: Nunito Sans;
+  padding: 6px 12px 6px 12px;
+  gap: 12px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  height: 54px;
+  margin-bottom: 2px;
+  color: neutralGray2;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  gap: 1px;
+}
+
+.c6:first-child {
+  padding-left: 12px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.c6:last-child {
+  padding-right: 12px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 <table
@@ -45,80 +120,128 @@ exports[`Table renders correctly 1`] = `
     className="c1"
   >
     <tr
-      className="c1"
+      className="c2"
     >
       <th
-        className="c2"
+        className="c3"
       >
-        Agency
+        <div
+          className="c4"
+        >
+          Agency
+        </div>
       </th>
       <th
-        className="c2"
+        className="c3"
       >
-        Country
+        <div
+          className="c4"
+        >
+          Country
+        </div>
       </th>
       <th
-        className="c2"
+        className="c3"
       >
-        Paid
+        <div
+          className="c4"
+        >
+          Paid
+        </div>
       </th>
     </tr>
   </thead>
   <tr
-    className="c1"
+    className="c5"
   >
     <td
-      className="c3"
+      className="c6"
     >
-      InmoMex
+      <div
+        className="c4"
+      >
+        InmoMex
+      </div>
     </td>
     <td
-      className="c3"
+      className="c6"
     >
-      Mexico
+      <div
+        className="c4"
+      >
+        Mexico
+      </div>
     </td>
     <td
-      className="c3"
+      className="c6"
     >
-      Yes
+      <div
+        className="c4"
+      >
+        Yes
+      </div>
     </td>
   </tr>
   <tr
-    className="c1"
+    className="c5"
   >
     <td
-      className="c3"
+      className="c6"
     >
-      RGM
+      <div
+        className="c4"
+      >
+        RGM
+      </div>
     </td>
     <td
-      className="c3"
+      className="c6"
     >
-      Argentina
+      <div
+        className="c4"
+      >
+        Argentina
+      </div>
     </td>
     <td
-      className="c3"
+      className="c6"
     >
-      Yes
+      <div
+        className="c4"
+      >
+        Yes
+      </div>
     </td>
   </tr>
   <tr
-    className="c1"
+    className="c5"
   >
     <td
-      className="c3"
+      className="c6"
     >
-      Urbania
+      <div
+        className="c4"
+      >
+        Urbania
+      </div>
     </td>
     <td
-      className="c3"
+      className="c6"
     >
-      Peru
+      <div
+        className="c4"
+      >
+        Peru
+      </div>
     </td>
     <td
-      className="c3"
+      className="c6"
     >
-      Yes
+      <div
+        className="c4"
+      >
+        Yes
+      </div>
     </td>
   </tr>
 </table>
