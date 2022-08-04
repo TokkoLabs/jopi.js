@@ -12,7 +12,7 @@ export const Table = (props) => (
     }}
   />
 )
-/*
+
 const TableHeaderItem = (props) => (
   <Box
     as="th"
@@ -27,10 +27,10 @@ const TableHeaderItem = (props) => (
       // },
     }}
   />
-)*/
+)
 
 const TableBody = (props) => <Box as="tbody" {...props} />
-/*
+
 const TableHeader = ({ children, ...props }) => (
   <Box as="thead">
     <Box as="tr" {...props}>
@@ -54,9 +54,9 @@ const TableRowItem = (props) => (
       // },
     }}
   />
-)*/
+)
 
-const TableHeader = ({ children, ...props }) => (
+const TableHeaderDefault = ({ children, ...props }) => (
   <Box as="thead">
     <Box
       as="tr"
@@ -79,7 +79,7 @@ const TableHeader = ({ children, ...props }) => (
   </Box>
 )
 
-const TableHeaderItem = ({ children, ...props }) => (
+const TableHeaderItemDefault = ({ children, ...props }) => (
   <Box
     as="th"
     {...props}
@@ -112,7 +112,7 @@ const TableHeaderItem = ({ children, ...props }) => (
   </Box>
 )
 
-const TableRow = ({ children, disabled, variant = 'primary', selected, pressed, error, infoAlert, ...props }) => {
+const TableRowDefault = ({ children, disabled, variant = 'primary', selected, pressed, error, infoAlert, ...props }) => {
   if (disabled) {
     variant = variant + 'Disabled'
   }
@@ -141,7 +141,7 @@ const TableRow = ({ children, disabled, variant = 'primary', selected, pressed, 
   )
 }
 
-const TableRowItem = ({ children, error, center, ...props }) => (
+const TableRowItemDefault = ({ children, error, center, ...props }) => (
   <Box
     as="td"
   //  tx='rows'
@@ -180,9 +180,9 @@ Table.HeaderItem = TableHeaderItem
 Table.Rows = TableBody
 Table.Row = TableRow
 Table.RowItem = TableRowItem
-/*
+
 Table.HeaderDefault = TableHeaderDefault
 Table.HeaderItemDefault = TableHeaderItemDefault
 Table.RowDefault = TableRowDefault
 Table.RowItemDefault = TableRowItemDefault
-*/
+
