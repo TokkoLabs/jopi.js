@@ -132,8 +132,10 @@ const TableRow = ({ children, disabled, variant = 'primary', selected, pressed, 
         height: '54px',
         mb: '2px',
         color: disabled ? 'neutralGray4' : 'neutralGray2',
+        borderTop: '1px solid #000000',
+        borderBottom: '1px solid #000000',
       }}
-      >
+    >
       {children}
     </Box>
   )
@@ -161,6 +163,7 @@ const TableRowItem = ({ children, error, ...props }) => (
   >
     <Box
       __css={{
+        gap: '2px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
