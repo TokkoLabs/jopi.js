@@ -507,9 +507,9 @@ export const groupContacts = () => (
           <Table.RowItem>
             <Text variant="body.fontSize12">Nombre Agente</Text>
           </Table.RowItem>
-          <Table.RowItem>
-            <Badge variant="badgeInfo" isMedium hasIcon>
-              <span>SE</span>
+          <Table.RowItem center>
+            <Badge variant="badgeInfo" isBig isRounded>
+              <Text variatn="bodyBold.fontSize12">SE</Text>
             </Badge>
           </Table.RowItem>
           <Table.RowItem>
@@ -534,9 +534,9 @@ export const groupContacts = () => (
           <Table.RowItem>
             <Text variant="body.fontSize12">Nombre Agente</Text>
           </Table.RowItem>
-          <Table.RowItem>
-            <Badge variant="badgeInfo" isMedium hasIcon>
-              <span>SE</span>
+          <Table.RowItem center>
+            <Badge variant="badgeInfo" isBig isRounded>
+              <Text variatn="bodyBold.fontSize12">SE</Text>
             </Badge>
           </Table.RowItem>
           <Table.RowItem>

@@ -141,7 +141,7 @@ const TableRow = ({ children, disabled, variant = 'primary', selected, pressed, 
   )
 }
 
-const TableRowItem = ({ children, error, ...props }) => (
+const TableRowItem = ({ children, error, center, ...props }) => (
   <Box
     as="td"
   //  tx='rows'
@@ -166,8 +166,8 @@ const TableRowItem = ({ children, error, ...props }) => (
         gap: '2px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
+        justifyContent: center ? 'center' : 'flex-start',
+        alignItems: center ? 'center' : 'flex-start',
       }}
     >
       {children}

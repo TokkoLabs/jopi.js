@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@oneloop/box'
 import '@oneloop/fonts'
 
-export const Badge = ({ isMedium, hasIcon, isNotButton, ...props }) => (
+export const Badge = ({ isMedium, hasIcon, isNotButton, isRounded, isBig, ...props }) => (
   <Box
     as={ isNotButton ? '' : 'button' }
     tx="buttons"
@@ -10,7 +10,8 @@ export const Badge = ({ isMedium, hasIcon, isNotButton, ...props }) => (
     {...props}
     __css={{
       lineHeight: '14px',
-      height: isMedium ? '22px' : '16px',
+      height: isMedium ? '22px' : (isBig ? '30px' : '16px'),
+      width: isBig && '30px',
       display: 'inline-block',
       fontSize: '10px',
       fontFamily: 'primary',
@@ -23,7 +24,7 @@ export const Badge = ({ isMedium, hasIcon, isNotButton, ...props }) => (
       color: 'white',
       bg: 'primary',
       border: 0,
-      borderRadius: isMedium ? '14px' : '8px',
+      borderRadius: isMedium ? '14px' : (isRounded ? 99999 : '8px'),
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
