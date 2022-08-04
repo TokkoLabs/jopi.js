@@ -93,7 +93,7 @@ export const normal = () => {
         <Table.Rows>
           <Table.Row selected={selected0} >
             <Table.RowItem>
-              <Checkbox onClick={() => setSelected0()} checked={selected0} />
+              <Checkbox onClick={() => setSelected0()} isChecked={selected0} />
             </Table.RowItem>
             <Table.RowItem>
               <Image
@@ -170,7 +170,7 @@ export const normal = () => {
           </Table.Row>
           <Table.Row selected={selected2} variant="errorPrimary" >
             <Table.RowItem error>
-              <Checkbox onClick={() => setSelected2()} checked={selected2} />
+              <Checkbox onClick={() => setSelected2()} isChecked={selected2} />
             </Table.RowItem>
             <Table.RowItem error>
               <Image
@@ -211,7 +211,7 @@ export const normal = () => {
           </Table.Row>
           <Table.Row selected={selected3} variant='infoAlertPrimary' >
             <Table.RowItem>
-              <Checkbox onClick={() => setSelected3()} checked={selected3} />
+              <Checkbox onClick={() => setSelected3()} isChecked={selected3} />
             </Table.RowItem>
             <Table.RowItem>
               <Image
@@ -306,7 +306,7 @@ export const secondary = () => {
         <Table.Rows>
           <Table.Row selected={selected0} variant='secondary' >
             <Table.RowItem>
-              <Checkbox onClick={() => setSelected0()} checked={selected0} />
+              <Checkbox onClick={() => setSelected0()} isChecked={selected0} />
             </Table.RowItem>
             <Table.RowItem>
               <Image
@@ -383,7 +383,7 @@ export const secondary = () => {
           </Table.Row>
           <Table.Row selected={selected2} variant="errorSecondary" >
             <Table.RowItem error>
-              <Checkbox onClick={() => setSelected2()} checked={selected2} />
+              <Checkbox onClick={() => setSelected2()} isChecked={selected2} />
             </Table.RowItem>
             <Table.RowItem error>
               <Image
@@ -424,7 +424,7 @@ export const secondary = () => {
           </Table.Row>
           <Table.Row selected={selected3} variant='infoAlertSecondary' >
             <Table.RowItem>
-              <Checkbox onClick={() => setSelected3()} checked={selected3} />
+              <Checkbox onClick={() => setSelected3()} isChecked={selected3} />
             </Table.RowItem>
             <Table.RowItem>
               <Image
