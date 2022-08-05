@@ -2,7 +2,7 @@ import React from 'react'
 import { Badge } from '@oneloop/badge'
 import { Box } from '@oneloop/box'
 
-export const Image = ({ textBadge, variantBadge = "badgeInfoRow", ...props }) => (
+export const Image = ({ textBadge, variantBadge = 'badgeInfoRow', ...props }) => (
   <Box
     {...props}
     __css={{
