@@ -144,7 +144,7 @@ export const Checkbox = ({
       }}
     />
     }
-    { isChecked && 
+    { isChecked &&
       <Box
         as={CheckboxChecked}
         aria-hidden="true"
