@@ -7,10 +7,10 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.223",
+    "@oneloop/box": "^1.2.224",
     "@oneloop/button": "^1.2.233",
-    "@oneloop/icons": "^1.2.223",
-    "@oneloop/text": "^1.2.224"
+    "@oneloop/icons": "^1.2.224",
+    "@oneloop/text": "^1.2.225"
   },
   "peerDependencies": {
     "react": "^16.8.0"

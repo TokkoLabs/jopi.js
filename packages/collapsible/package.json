@@ -7,7 +7,7 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.223",
+    "@oneloop/box": "^1.2.224",
     "@oneloop/button": "^1.2.233",
     "framer-motion": "2.9.4"
   },
