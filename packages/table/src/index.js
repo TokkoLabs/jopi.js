@@ -8,7 +8,10 @@ export const Table = (props) => (
     __css={{
       fontFamily: 'primary',
       width: '100%',
-      borderSpacing: '0 4px',
+      //  borderSpacing: '0px',
+      borderSpacing: '0px 4px',
+      //  borderCollapse: 'collapse',
+      // borderCollapse: 'separate',
     }}
   />
 )
@@ -29,7 +32,12 @@ const TableHeaderItem = (props) => (
   />
 )
 
-const TableBody = (props) => <Box as="tbody" {...props} />
+const TableBody = (props) => (
+  <Box
+    as="tbody"
+    {...props}
+  />
+)
 
 const TableHeader = ({ children, ...props }) => (
   <Box as="thead">
@@ -112,7 +120,7 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
   </Box>
 )
 
-const TableRowDefault = ({ children, disabled, variant = 'primary', selected, pressed, error, infoAlert, ...props }) => {
+const TableRowDefault = ({ children, disabled, variant = 'primary', selected, ...props }) => {
   if (disabled) {
     variant = variant + 'Disabled'
   }
@@ -130,10 +138,10 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, pr
         backgroundColor: '#FFFFFF',
         borderRadius: '8px',
         height: '54px',
-        mb: '2px',
+        mb: '8px',
         color: disabled ? 'neutralGray4' : 'neutralGray2',
-        borderTop: '1px solid #000000',
-        borderBottom: '1px solid #000000',
+        border: '1px solid #000000',
+        paddingBottom: '1em',
       }}
     >
       {children}
@@ -144,11 +152,14 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, pr
 const TableRowItemDefault = ({ children, error, center, ...props }) => (
   <Box
     as="td"
-  //  tx='rows'
-  //  variant= {error && 'error'}
     {...props}
     __css={{
+      paddingTop: '5px',
       gap: '1px',
+      /* ':hover': {
+      borderTop: '10px solid #000000',
+      borderBottom: '10px solid #000000',
+      }, */
       '&:first-child': {
         paddingLeft: '12px',
         borderBottomLeftRadius: '8px',
@@ -185,4 +196,3 @@ Table.HeaderDefault = TableHeaderDefault
 Table.HeaderItemDefault = TableHeaderItemDefault
 Table.RowDefault = TableRowDefault
 Table.RowItemDefault = TableRowItemDefault
-
