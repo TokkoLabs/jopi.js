@@ -78,7 +78,7 @@ describe('TableDefault', () => {
             </Table.HeaderItemDefault>
           </Table.HeaderDefault>
           <Table.Rows>
-            <Table.RowDefault>
+            <Table.RowDefault disabled>
               <Table.RowItemDefault>
                 <Checkbox />
               </Table.RowItemDefault>
@@ -116,7 +116,7 @@ describe('TableDefault', () => {
                 <Text variant="body.fontSize11">0m° Total</Text>
               </Table.RowItemDefault>
             </Table.RowDefault>
-            <Table.RowDefault>
+            <Table.RowDefault selected>
               <Table.RowItemDefault>
                 <Checkbox />
               </Table.RowItemDefault>
@@ -126,7 +126,7 @@ describe('TableDefault', () => {
                   variant="rows"
                 />
               </Table.RowItemDefault>
-              <Table.RowItemDefault>
+              <Table.RowItemDefault center>
                 <Text variant="body.fontSize12">IHO4362866</Text>
               </Table.RowItemDefault>
               <Table.RowItemDefault>

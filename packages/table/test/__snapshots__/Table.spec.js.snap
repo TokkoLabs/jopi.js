@@ -7,7 +7,7 @@ exports[`Table renders correctly 1`] = `
   min-width: 0;
   font-family: primary;
   width: 100%;
-  border-spacing: 0 4px;
+  border-spacing: 0px 4px;
 }
 
 .c1 {
@@ -131,7 +131,7 @@ exports[`TableDefault renders correctly 1`] = `
   min-width: 0;
   font-family: primary;
   width: 100%;
-  border-spacing: 0 4px;
+  border-spacing: 0px 4px;
 }
 
 .c2 {
@@ -158,6 +158,7 @@ exports[`TableDefault renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 8px;
+  height: 60px;
 }
 
 .c4 {
@@ -220,14 +221,17 @@ exports[`TableDefault renders correctly 1`] = `
   background-color: #FFFFFF;
   border-radius: 8px;
   height: 54px;
-  margin-bottom: 3px;
-  color: neutralGray2;
+  margin-bottom: 8px;
+  color: neutralGray4;
+  border: 1px solid #000000;
+  padding-bottom: 1em;
 }
 
 .c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  padding-top: 5px;
   gap: 1px;
 }
 
@@ -247,12 +251,34 @@ exports[`TableDefault renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  gap: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   position: relative;
   width: 18px;
   height: 18px;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -263,7 +289,7 @@ exports[`TableDefault renders correctly 1`] = `
   height: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -280,7 +306,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c11 {
+.c12 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -299,7 +325,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -309,7 +335,7 @@ input:focus ~ .c0 {
   text-align: center;
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -325,7 +351,7 @@ input:focus ~ .c0 {
   justify-content: center;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -333,35 +359,73 @@ input:focus ~ .c0 {
   width: 150px;
 }
 
-.c13 {
+.c25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: Nunito Sans;
+  padding: 6px 12px 6px 12px;
+  gap: 12px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  height: 54px;
+  margin-bottom: 8px;
+  color: neutralGray2;
+  border: 1px solid #000000;
+  padding-bottom: 1em;
+}
+
+.c26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  gap: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c14 {
   display: none;
 }
 
-input:checked:not(:disabled) ~ .c12 {
+input:checked:not(:disabled) ~ .c13 {
   display: block;
 }
 
-.c16 {
+.c17 {
   display: none;
 }
 
-input:not(:checked):not(:disabled) ~ .c15 {
+input:not(:checked):not(:disabled) ~ .c16 {
   display: block;
 }
 
-.c20 {
+.c21 {
   display: none;
 }
 
-input:checked:disabled ~ .c19 {
+input:checked:disabled ~ .c20 {
   display: block;
 }
 
-.c18 {
+.c19 {
   display: none;
 }
 
-input:disabled:not(:checked) ~ .c17 {
+input:disabled:not(:checked) ~ .c18 {
   display: block;
 }
 
@@ -522,18 +586,18 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <div
-            className="c0 c9"
+            className="c0 c10"
           >
             <input
-              className="c0 c10"
+              className="c0 c11"
               type="checkbox"
             />
             <svg
               aria-hidden="true"
-              className="c0 c11 c12 c13 c0 c14"
+              className="c0 c12 c13 c14 c0 c15"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -559,7 +623,7 @@ input:disabled:not(:checked) ~ .c17 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c11 c15 c16 c0 c14"
+              className="c0 c12 c16 c17 c0 c15"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -579,7 +643,7 @@ input:disabled:not(:checked) ~ .c17 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c11 c17 c18 c0 c14"
+              className="c0 c12 c18 c19 c0 c15"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -599,7 +663,7 @@ input:disabled:not(:checked) ~ .c17 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c11 c19 c20 c0 c14"
+              className="c0 c12 c20 c21 c0 c15"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -630,14 +694,14 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <div
-            className="c0 c21"
+            className="c0 c22"
             src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           >
             <img
-              className="c0 c22"
+              className="c0 c23"
               src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
@@ -647,7 +711,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -660,10 +724,10 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
-            className="c0 c23"
+            className="c0 c24"
             width="150px"
           >
             Av. Libertador 5687 5to A - Lote 1232
@@ -679,7 +743,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -697,7 +761,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -715,7 +779,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -733,7 +797,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -751,7 +815,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -767,24 +831,24 @@ input:disabled:not(:checked) ~ .c17 {
       </td>
     </tr>
     <tr
-      className="c0 c7"
+      className="c0 c25"
     >
       <td
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <div
-            className="c0 c9"
+            className="c0 c10"
           >
             <input
-              className="c0 c10"
+              className="c0 c11"
               type="checkbox"
             />
             <svg
               aria-hidden="true"
-              className="c0 c11 c12 c13 c0 c14"
+              className="c0 c12 c13 c14 c0 c15"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -810,7 +874,7 @@ input:disabled:not(:checked) ~ .c17 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c11 c15 c16 c0 c14"
+              className="c0 c12 c16 c17 c0 c15"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -830,7 +894,7 @@ input:disabled:not(:checked) ~ .c17 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c11 c17 c18 c0 c14"
+              className="c0 c12 c18 c19 c0 c15"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -850,7 +914,7 @@ input:disabled:not(:checked) ~ .c17 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c11 c19 c20 c0 c14"
+              className="c0 c12 c20 c21 c0 c15"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -881,14 +945,14 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <div
-            className="c0 c21"
+            className="c0 c22"
             src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           >
             <img
-              className="c0 c22"
+              className="c0 c23"
               src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
@@ -898,7 +962,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c26"
         >
           <p
             className="c0 c6"
@@ -911,7 +975,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -929,7 +993,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -947,7 +1011,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -965,7 +1029,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -983,7 +1047,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"
@@ -1001,7 +1065,7 @@ input:disabled:not(:checked) ~ .c17 {
         className="c0 c8"
       >
         <div
-          className="c0 c5"
+          className="c0 c9"
         >
           <p
             className="c0 c6"

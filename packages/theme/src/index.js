@@ -13,6 +13,7 @@ const colors = {
   success: '#068B5B',
   error: '#B21702',
   backgroundError: '#FFF8F6',
+  backgroundError2: '#FDDDD8',
   info: '#386DF4',
   lightBlue: '#6A88F2',
   inputErrors: '#FFF2F0',
@@ -259,8 +260,10 @@ const borders = {
   secondaryBorder: '1px solid ' + colors.secondary,
   feedbackBorder: '1px solid ' + colors.feedback,
   disabledBorder: '1px solid ' + colors.disabled,
+  backgroundError2: '1px solid ' + colors.backgroundError2,
   neutralGray5: '1px solid ' + colors.neutralGray5,
   neutralGray7: '1px solid ' + colors.neutralGray7,
+  neutralGray9: '1px solid ' + colors.neutralGray9,
 }
 
 const switches = {
@@ -363,46 +366,42 @@ const theme = {
     ],
     body: {
       fontSize09: {
-        fontSize: '9px',
         fontWeight: 400,
+        fontSize: '9px',
       },
       fontSize10: {
-        fontSize: '10px',
         fontWeight: 400,
+        fontSize: '10px',
+        lineHeight: '11px',
       },
       fontSize11: {
-        fontSize: '11px',
         fontWeight: 400,
+        fontSize: '11px',
         lineHeight: '13px',
       },
       fontSize12: {
-        fontSize: '12px',
         fontWeight: 400,
+        fontSize: '12px',
         lineHeight: '16px',
       },
       fontSize13: {
-        fontSize: '13px',
         fontWeight: 400,
+        fontSize: '13px',
+        lineHeight: '18px',
       },
       fontSize14: {
-        fontSize: '14px',
         fontWeight: 400,
+        fontSize: '14px',
+        lineHeight: '18px',
       },
       fontSize15: {
-        fontSize: '15px',
         fontWeight: 400,
+        fontSize: '15px',
       },
       fontSize16: {
+        fontWeight: 400,
         fontSize: '16px',
-        fontWeight: 400,
-      },
-      fontSize12Ellipsis: {
-        fontSize: '12px',
-        fontWeight: 400,
-        lineHeight: '16px',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
-        overflow: 'hidden',
+        lineHeight: '24px',
       },
     },
     body600: {
@@ -442,11 +441,49 @@ const theme = {
       },
     },
     bodyBold: {
-      fontSize11: {
-        fontSize: '11px',
+      fontSize09: {
         fontWeight: 700,
+        fontSize: '9px',
+      },
+      fontSize10: {
+        fontWeight: 700,
+        fontSize: '10px',
+        lineHeight: '11px',
+      },
+      fontSize11: {
+        fontWeight: 700,
+        fontSize: '11px',
         lineHeight: '13px',
       },
+      fontSize12: {
+        fontWeight: 700,
+        fontSize: '12px',
+        lineHeight: '16px',
+      },
+      fontSize13: {
+        fontWeight: 700,
+        fontSize: '13px',
+        lineHeight: '18px',
+      },
+      fontSize14: {
+        fontWeight: 700,
+        fontSize: '14px',
+        lineHeight: '18px',
+      },
+      fontSize15: {
+        fontWeight: 700,
+        fontSize: '15px',
+      },
+      fontSize16: {
+        fontWeight: 700,
+        fontSize: '16px',
+        lineHeight: '24px',
+      },
+    },
+    ellipsis: {
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
     },
     success: [
       {
@@ -1272,9 +1309,49 @@ const theme = {
       backgroundColor: colors.info,
     },
     badgeInfoRow: {
-      backgroundColor: colors.info,
+      color: colors.white,
+      backgroundColor: colors.lightBlue,
       borderTopLeftRadius: '0px',
       borderTopRightRadius: '0px',
+      fontWeight: 700,
+      fontSize: '11px',
+      lineHeight: '13px',
+    },
+    badgeReportRow: {
+      color: colors.error,
+      backgroundColor: colors.backgroundError2,
+      borderTopLeftRadius: '0px',
+      borderTopRightRadius: '0px',
+      fontWeight: 700,
+      fontSize: '11px',
+      lineHeight: '13px',
+    },
+    badgeSendRow: {
+      color: '#287A46',
+      backgroundColor: '#B4EBC8',
+      borderTopLeftRadius: '0px',
+      borderTopRightRadius: '0px',
+      fontWeight: 700,
+      fontSize: '11px',
+      lineHeight: '13px',
+    },
+    badgeErrorRow: {
+      color: colors.white,
+      backgroundColor: colors.error,
+      borderTopLeftRadius: '0px',
+      borderTopRightRadius: '0px',
+      fontWeight: 700,
+      fontSize: '11px',
+      lineHeight: '13px',
+    },
+    badgeSupportRow: {
+      color: '#7F4D80',
+      backgroundColor: '#F4E2F5',
+      borderTopLeftRadius: '0px',
+      borderTopRightRadius: '0px',
+      fontWeight: 700,
+      fontSize: '11px',
+      lineHeight: '13px',
     },
     badgeTips: {
       backgroundColor: colors.tips,
@@ -1347,6 +1424,124 @@ const theme = {
       width: '82px',
       height: '82px',
       borderRadius: radius.circle,
+    },
+  },
+  rows: {
+    primary: {
+      backgroundColor: colors.neutralGray10,
+      ':hover': {
+        backgroundColor: colors.white,
+        borderTop: borders.neutralGray9,
+        borderBottom: borders.neutralGray9,
+        '&:first-child': {
+          borderLeft: borders.neutralGray9,
+        },
+        '&:last-child': {
+          borderRight: borders.neutralGray9,
+        },
+      },
+    },
+    primarySelected: {
+      backgroundColor: colors.white,
+      borderTop: borders.neutralGray9,
+      borderBottom: borders.neutralGray9,
+      '&:first-child': {
+        borderLeft: borders.neutralGray9,
+      },
+      '&:last-child': {
+        borderRight: borders.neutralGray9,
+      },
+    },
+    errorPrimary: {
+      backgroundColor: colors.backgroundError,
+      borderTop: borders.backgroundError2,
+      borderBottom: borders.backgroundError2,
+      '&:first-child': {
+        borderLeft: borders.backgroundError2,
+      },
+      '&:last-child': {
+        borderRight: borders.backgroundError2,
+      },
+      ':hover': {
+        backgroundColor: colors.white,
+      },
+    },
+    errorPrimarySelected: {
+      backgroundColor: colors.backgroundError,
+      borderTop: borders.backgroundError2,
+      borderBottom: borders.backgroundError2,
+      '&:first-child': {
+        borderLeft: borders.backgroundError2,
+      },
+      '&:last-child': {
+        borderRight: borders.backgroundError2,
+      },
+    },
+    infoAlertPrimary: {
+      backgroundColor: '#EEF4FE',
+      ':hover': {
+        backgroundColor: colors.white,
+        borderTop: borders.neutralGray9,
+        borderBottom: borders.neutralGray9,
+        '&:first-child': {
+          borderLeft: borders.neutralGray9,
+        },
+        '&:last-child': {
+          borderRight: borders.neutralGray9,
+        },
+      },
+    },
+    infoAlertPrimarySelected: {
+      backgroundColor: '#EEF4FE',
+    },
+    primaryDisabled: {
+      backgroundColor: colors.neutralGray10,
+    },
+    secondary: {
+      backgroundColor: colors.white,
+      ':hover': {
+        backgroundColor: colors.neutralGray9,
+      },
+    },
+    secondarySelected: {
+      backgroundColor: colors.neutralGray9,
+    },
+    errorSecondary: {
+      backgroundColor: colors.backgroundError,
+      borderTop: '1px solid ' + colors.backgroundError2,
+      borderBottom: '1px solid ' + colors.backgroundError2,
+      '&:first-child': {
+        borderLeft: '1px solid ' + colors.backgroundError2,
+      },
+      '&:last-child': {
+        borderRight: '1px solid ' + colors.backgroundError2,
+      },
+      ':hover': {
+        backgroundColor: colors.neutralGray9,
+      },
+    },
+    errorSecondarySelected: {
+      backgroundColor: colors.backgroundError,
+      borderTop: '1px solid ' + colors.backgroundError2,
+      borderBottom: '1px solid ' + colors.backgroundError2,
+      '&:first-child': {
+        borderLeft: '1px solid ' + colors.backgroundError2,
+      },
+      '&:last-child': {
+        borderRight: '1px solid ' + colors.backgroundError2,
+      },
+    },
+    infoAlertSecondary: {
+      backgroundColor: '#EEF4FE',
+      ':hover': {
+        backgroundColor: colors.neutralGray9,
+      },
+    },
+    infoAlertSecondarySelected: {
+      backgroundColor: '#EEF4FE',
+    },
+    secondaryDisabled: {
+      backgroundColor: colors.white,
     },
   },
 }
