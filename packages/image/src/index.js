@@ -2,7 +2,7 @@ import React from 'react'
 import { Badge } from '@oneloop/badge'
 import { Box } from '@oneloop/box'
 
-export const Image = ({ textBadge, ...props }) => (
+export const Image = ({ textBadge, variantBadge = 'badgeInfoRow', ...props }) => (
   <Box
     {...props}
     __css={{
@@ -22,6 +22,6 @@ export const Image = ({ textBadge, ...props }) => (
         justifyContent: 'center',
       }}
     />
-    {textBadge && <Badge variant="badgeInfoRow" style={{ position: 'absolute', left: '0px', bottom: '0px', width: '100%' }}>{textBadge}</Badge> }
+    {textBadge && <Badge variant={variantBadge} style={{ position: 'absolute', left: '0px', bottom: '-1px', width: '100%', textTransform: 'none' }}>{textBadge}</Badge> }
   </Box>
 )

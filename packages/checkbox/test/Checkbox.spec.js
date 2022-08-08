@@ -16,4 +16,10 @@ describe('Checkbox', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  test('isChecked', () => {
+    const tree = renderer.create(<Checkbox isMedium isChecked />).toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })

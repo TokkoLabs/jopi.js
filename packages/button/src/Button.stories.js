@@ -132,39 +132,39 @@ export const iconSecondaryWithBadge = () => (
 )
 
 export const roundIconLarge = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconLarge']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconLarge']}/>
 )
 
 export const roundIconMedium = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconMedium']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconMedium']}/>
 )
 
 export const roundIconSmall = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconSmall']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconSmall']}/>
 )
 
 export const roundIconExtraSmall = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall']}/>
 )
 
 export const roundIconExtraSmall22px = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall22px']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall22px']}/>
 )
 
 export const roundIconExtraSmall18px = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall18px']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall18px']}/>
 )
 
 export const subtleRoundIcon = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['subtleIconButton', 'roundIconLarge']}/>
+  <ButtonIcon icon='icon-agregar' variant={['subtleIconButton', 'roundIconLarge']}/>
 )
 
 export const roundIconArrow = () => (
-  <ButtonIcon isRounded icon='icon-dropdown' variant={['roundIconArrow', 'roundIconLarge']}/>
+  <ButtonIcon icon='icon-dropdown' variant={['roundIconArrow', 'roundIconLarge']}/>
 )
 
 export const roundIconDisabled = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconDisabled', 'roundIconLarge']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconDisabled', 'roundIconLarge']}/>
 )
 
 export const roundLarge = () => (
@@ -265,6 +265,6 @@ export const MainIconSubtleHoldPressed = () => {
 
 export const iconArrowDrawer = () => {
   return (
-    <ButtonIcon isRounded icon='icon-atras' variant={'collapseButtonOpen'}/>
+    <ButtonIcon icon='icon-atras' variant={'collapseButtonOpen'}/>
   )
 }

@@ -37,7 +37,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, text, badgeVariant = 'primary', ...props }) => {
+export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant = 'primary', ...props }) => {
   let heightIcon
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))

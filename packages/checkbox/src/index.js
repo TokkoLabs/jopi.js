@@ -107,6 +107,7 @@ const CheckboxIcon = ({ isMedium, ...props }) => (
 export const Checkbox = ({
   isMedium = false,
   sx,
+  isChecked,
   variant = 'checkbox',
   ...props
 }) => (
@@ -123,7 +124,7 @@ export const Checkbox = ({
         height: '100%',
       }}
     />
-    <Box
+    { !isChecked && <Box
       as={CheckboxIcon}
       aria-hidden="true"
       tx="forms"
@@ -142,5 +143,27 @@ export const Checkbox = ({
         },
       }}
     />
+    }
+    { isChecked &&
+      <Box
+        as={CheckboxChecked}
+        aria-hidden="true"
+        tx="forms"
+        variant={variant}
+        isMedium={isMedium}
+        sx={sx}
+        __css={{
+          mr: 2,
+          borderRadius: 2,
+          color: 'gray',
+          'input:checked ~ &': {
+            color: 'primary',
+          },
+          'input:focus ~ &': {
+            boxShadow: 'active',
+          },
+        }}
+      />
+    }
   </Box>
 )

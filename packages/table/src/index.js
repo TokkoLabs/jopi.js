@@ -8,7 +8,10 @@ export const Table = (props) => (
     __css={{
       fontFamily: 'primary',
       width: '100%',
-      borderSpacing: '0 4px',
+      //  borderSpacing: '0px',
+      borderSpacing: '0px 4px',
+      //  borderCollapse: 'collapse',
+      // borderCollapse: 'separate',
     }}
   />
 )
@@ -29,7 +32,12 @@ const TableHeaderItem = (props) => (
   />
 )
 
-const TableBody = (props) => <Box as="tbody" {...props} />
+const TableBody = (props) => (
+  <Box
+    as="tbody"
+    {...props}
+  />
+)
 
 const TableHeader = ({ children, ...props }) => (
   <Box as="thead">
@@ -71,6 +79,7 @@ const TableHeaderDefault = ({ children, ...props }) => (
         flexDirection: 'row',
         alignItems: 'center',
         mb: '8px',
+        height: '60px',
       }}
       >
       {children}
@@ -111,29 +120,46 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
   </Box>
 )
 
-const TableRowDefault = ({ disabled = false, ...props }) => (
-  <Box
-    as="tr"
-    {...props}
-    __css={{
-      fontFamily: 'Nunito Sans',
-      padding: '6px 12px 6px 12px',
-      gap: '12px',
-      backgroundColor: '#FFFFFF',
-      borderRadius: '8px',
-      height: '54px',
-      mb: '3px',
-      color: disabled ? 'neutralGray4' : 'neutralGray2',
-    }}
-  />
-)
+const TableRowDefault = ({ children, disabled, variant = 'primary', selected, ...props }) => {
+  if (disabled) {
+    variant = variant + 'Disabled'
+  }
 
-const TableRowItemDefault = ({ children, ...props }) => (
+  return (
+    <Box
+      as="tr"
+      tx='rows'
+      variant={ (selected && !disabled) ? variant + 'Selected' : variant }
+      {...props}
+      __css={{
+        fontFamily: 'Nunito Sans',
+        padding: '6px 12px 6px 12px',
+        gap: '12px',
+        backgroundColor: '#FFFFFF',
+        borderRadius: '8px',
+        height: '54px',
+        mb: '8px',
+        color: disabled ? 'neutralGray4' : 'neutralGray2',
+        border: '1px solid #000000',
+        paddingBottom: '1em',
+      }}
+    >
+      {children}
+    </Box>
+  )
+}
+
+const TableRowItemDefault = ({ children, error, center, ...props }) => (
   <Box
     as="td"
     {...props}
     __css={{
+      paddingTop: '5px',
       gap: '1px',
+      /* ':hover': {
+      borderTop: '10px solid #000000',
+      borderBottom: '10px solid #000000',
+      }, */
       '&:first-child': {
         paddingLeft: '12px',
         borderBottomLeftRadius: '8px',
@@ -148,10 +174,11 @@ const TableRowItemDefault = ({ children, ...props }) => (
   >
     <Box
       __css={{
+        gap: '2px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
+        justifyContent: center ? 'center' : 'flex-start',
+        alignItems: center ? 'center' : 'flex-start',
       }}
     >
       {children}
