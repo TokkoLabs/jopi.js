@@ -977,6 +977,12 @@ const theme = {
         color: colors.neutral[6],
       },
     },
+    submenuTitle: {
+      fontWeight: 700,
+      fontSize: '14px',
+      lineHeight: '18px',
+      color: colors.neutralGray2,
+    },
     mainItemSmall: {
       justifyContent: 'center',
       fontWeight: 'normal',
