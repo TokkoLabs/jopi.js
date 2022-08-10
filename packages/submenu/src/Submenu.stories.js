@@ -30,12 +30,16 @@ export const submenu = () => {
   const [hover, setHover] = useToggle(false)
   const [active, setActive] = useToggle(false)
   return (
-    <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '100px', borderRadius: '10px', height: '500px' }}>
+    <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '125px', borderRadius: '10px', height: '135px' }}>
       <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent2" aria-describedby="tooltip2"/>
       <div id="tooltip2" role="tooltip2" hidden={!active && !hover}>
         <Submenu parentId='parent2' childrenId='tooltip2' title='Crear'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contacto' text='Contacto' maxWidth/>
+          <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
+          <ButtonIcon variant='submenu' icon='icon-propiedades' text='Propiedad' maxWidth/>
+          <ButtonIcon variant='submenu' icon='icon-emprendimiento' text='Emprendimiento' maxWidth/>
+          <ButtonIcon variant='submenu' icon='icon-email' text='Email' maxWidth/>
         </Submenu>
       </div>
     </div>
