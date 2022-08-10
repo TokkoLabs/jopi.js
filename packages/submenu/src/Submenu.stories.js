@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonHoldPress, ButtonMain } from '@oneloop/button'
+import { ButtonHoldPress, ButtonIcon } from '@oneloop/button'
 import { useToggle } from '@oneloop/hooks'
 import { Text } from '@oneloop/text'
 import { createPopper } from '@popperjs/core'
@@ -35,7 +35,7 @@ export const submenu = () => {
       <div id="tooltip2" role="tooltip2" hidden={!active && !hover}>
         <Submenu parentId='parent2' childrenId='tooltip2' title='Crear'>
           <Text variant='submenuTitle'>Crear</Text>
-          <ButtonMain variant='submenuTitle' icon='icon-contacto' text='Contacto' />
+          <ButtonIcon variant='submenu' icon='icon-contacto' text='Contacto' maxWidth/>
         </Submenu>
       </div>
     </div>

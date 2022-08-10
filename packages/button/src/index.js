@@ -37,7 +37,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant = 'primary', ...props }) => {
+export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant = 'primary', maxWidth, ...props }) => {
   let heightIcon
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
@@ -53,7 +53,7 @@ export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant =
   }
 
   return (
-    <Box sx={{ position: 'relative' }}>
+    <Box sx={ maxWidth ? { position: 'relative',  width: '100%' } : { position: 'relative' }}>
       <Box
         as='button'
         tx='buttons'

@@ -962,6 +962,27 @@ const theme = {
         color: colors.neutral[7],
       },
     },
+    submenu: {
+      fontWeight: 400,
+      fontSize: '12px',
+      lineHeight: '16px',
+      color: colors.neutralGray2,
+      justifyContent: 'flex-start',
+      padding: '9px 12px',
+      gap: '8px',
+      heightIcon: '14px',
+      backgroundColor: colors.transparent,
+      borderRadius: '0px',
+      width: '100%',
+      ':hover': {
+        backgroundColor: colors.neutralGray10,
+        color: colors.neutralGray1,
+      },
+      ':focus': {
+        backgroundColor: colors.transparent,
+        color: colors.neutralGray1,
+      },
+    },
     mainButton: {
       color: colors.subtle,
       backgroundColor: colors.transparent,
