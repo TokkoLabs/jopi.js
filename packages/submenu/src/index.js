@@ -50,7 +50,7 @@ export const Tooltip = ({ variant, parentId, childrenId, placement = 'right', ..
   )
 }
 
-export const Submenu = ({ variant, parentId, childrenId, placement = 'right', ...props })  => {
+export const Submenu = ({ variant, parentId, childrenId, placement = 'right', title, ...props })  => {
   const popcorn = document.querySelector('#' + parentId)
   const tooltip = document.querySelector('#' + childrenId)
   if (popcorn != null && tooltip != null) {
@@ -70,8 +70,8 @@ export const Submenu = ({ variant, parentId, childrenId, placement = 'right', ..
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
-        as='button'
-        tx='buttons'
+      //  as='button'
+        tx='submenu'
         {...props}
         __css={{
           appearance: 'none',
