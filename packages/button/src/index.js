@@ -53,7 +53,7 @@ export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant =
   }
 
   return (
-    <Box sx={ maxWidth ? { position: 'relative',  width: '100%' } : { position: 'relative' }}>
+    <Box sx={ maxWidth ? { position: 'relative', width: '100%' } : { position: 'relative' }}>
       <Box
         as='button'
         tx='buttons'
@@ -164,7 +164,7 @@ export const ButtonHoldPress = ({ variant, active = false, isInput = false, text
   }
 
   return (
-    <Box sx={ maxWidth ? { position: 'relative',  width: '100%' } : { position: 'relative' }}>
+    <Box sx={ maxWidth ? { position: 'relative', width: '100%' } : { position: 'relative' }}>
       <Box
         as='button'
         tx='buttons'

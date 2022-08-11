@@ -9,7 +9,7 @@ export default {
   title: 'Submenu',
 }
 
-export const normal = () => {
+export const Tooltip = () => {
   const [hover, setHover] = useToggle(false)
   const [active, setActive] = useToggle(false)
 
@@ -25,7 +25,7 @@ export const normal = () => {
   )
 }
 
-export const submenu = () => {
+export const SubmenuNormal = () => {
   const [hover, setHover] = useToggle(false)
   const [active, setActive] = useToggle(false)
   return (
@@ -45,8 +45,7 @@ export const submenu = () => {
   )
 }
 
-
-export const submenuWithOutIcon = () => {
+export const SubmenuWithOutIcon = () => {
   const [hover, setHover] = useToggle(false)
   const [active, setActive] = useToggle(false)
   return (

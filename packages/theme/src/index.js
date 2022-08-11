@@ -538,7 +538,6 @@ const theme = {
       color: colors.neutralGray2,
       display: 'flex',
       alignItems: 'center',
-      alignItems: 'center',
       padding: '9px 10px',
       gap: '6px',
       borderBottom: borders.neutralGray9,
@@ -1589,10 +1588,10 @@ const theme = {
     tooltip: {
       padding: '4px 10px 4px 10px',
       gap: '14px',
-      height: '26px',
       boxShadow: '4px 4px 4px rgba(112, 126, 134, 0.15)',
       borderRadius: '6px',
       flexDirection: 'row',
+      height: '26px',
     },
   },
 }
