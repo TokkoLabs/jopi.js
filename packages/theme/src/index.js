@@ -1578,6 +1578,23 @@ const theme = {
       backgroundColor: colors.white,
     },
   },
+  panelSubmenu: {
+    submenu: {
+      padding: '0px 0px 8px',
+      gap: '6px',
+      boxShadow: '4px 4px 12px rgba(87, 95, 99, 0.1)',
+      borderRadius: '10px',
+      flexDirection: 'column',
+    },
+    tooltip: {
+      padding: '4px 10px 4px 10px',
+      gap: '14px',
+      height: '26px',
+      boxShadow: '4px 4px 4px rgba(112, 126, 134, 0.15)',
+      borderRadius: '6px',
+      flexDirection: 'row',
+    },
+  },
 }
 
 export default theme

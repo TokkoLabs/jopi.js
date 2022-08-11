@@ -2,7 +2,7 @@ import React from 'react'
 import { ButtonHoldPress } from '@oneloop/button'
 import { useToggle } from '@oneloop/hooks'
 import { Text } from '@oneloop/text'
-import { Submenu, Tooltip } from '.'
+import { Submenu } from '.'
 
 export default {
   component: Submenu,
@@ -17,9 +17,9 @@ export const normal = () => {
     <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
       <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent" aria-describedby="tooltip"/>
       <div id="tooltip" role="tooltip" hidden={!active && !hover}>
-        <Tooltip parentId='parent' childrenId='tooltip'>
+        <Submenu parentId='parent' childrenId='tooltip' variant='tooltip'>
           <Text variant='body.fontSiz13'>Sitios Webs</Text>
-        </Tooltip>
+        </Submenu>
       </div>
     </div>
   )
@@ -32,7 +32,7 @@ export const submenu = () => {
     <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '125px', borderRadius: '10px', height: '135px' }}>
       <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent2" aria-describedby="tooltip2"/>
       <div id="tooltip2" role="tooltip2" hidden={!active && !hover}>
-        <Submenu parentId='parent2' childrenId='tooltip2' title='Crear'>
+        <Submenu parentId='parent2' childrenId='tooltip2' width='202px'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonHoldPress variant='submenu' icon='icon-contacto' text='Contacto' maxWidth/>
           <ButtonHoldPress variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -53,7 +53,7 @@ export const submenuWithOutIcon = () => {
     <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '125px', borderRadius: '10px', height: '135px' }}>
       <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent3" aria-describedby="tooltip3"/>
       <div id="tooltip3" role="tooltip3" hidden={!active && !hover}>
-        <Submenu parentId='parent3' childrenId='tooltip3' title='Crear'>
+        <Submenu parentId='parent3' childrenId='tooltip3' width='202px'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonHoldPress variant='submenu' text='Contacto' maxWidth/>
           <ButtonHoldPress variant='submenu' text='Empresa' maxWidth/>
