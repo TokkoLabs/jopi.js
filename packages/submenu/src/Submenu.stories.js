@@ -8,7 +8,7 @@ export default {
   component: Submenu,
   title: 'Submenu',
 }
-
+/*
 export const Tooltip = () => {
   const [hover, setHover] = useToggle(false)
   const [active, setActive] = useToggle(false)
@@ -23,16 +23,16 @@ export const Tooltip = () => {
       </div>
     </div>
   )
-}
+}*/
 
 export const SubmenuNormal = () => {
   const [hover, setHover] = useToggle(false)
   const [active, setActive] = useToggle(false)
   return (
     <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '125px', borderRadius: '10px', height: '135px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent2" aria-describedby="tooltip2"/>
-      <div id="tooltip2" role="tooltip2" hidden={!active && !hover}>
-        <Submenu parentId='parent2' childrenId='tooltip2' width='202px'>
+      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent0" aria-describedby="tooltip0"/>
+      <div id="tooltip0" role="tooltip0" hidden={!active && !hover}>
+        <Submenu parentId='parent0' childrenId='tooltip0' width='202px'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonHoldPress variant='submenu' icon='icon-contacto' text='Contacto' maxWidth/>
           <ButtonHoldPress variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -50,15 +50,31 @@ export const SubmenuWithOutIcon = () => {
   const [active, setActive] = useToggle(false)
   return (
     <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '125px', borderRadius: '10px', height: '135px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent3" aria-describedby="tooltip3"/>
-      <div id="tooltip3" role="tooltip3" hidden={!active && !hover}>
-        <Submenu parentId='parent3' childrenId='tooltip3' width='202px'>
+      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent1" aria-describedby="tooltip1"/>
+      <div id="tooltip1" role="tooltip1" hidden={!active && !hover}>
+        <Submenu parentId='parent1' childrenId='tooltip1' width='202px'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonHoldPress variant='submenu' text='Contacto' maxWidth/>
           <ButtonHoldPress variant='submenu' text='Empresa' maxWidth/>
           <ButtonHoldPress variant='submenu' text='Propiedad' maxWidth/>
           <ButtonHoldPress variant='submenu' text='Emprendimiento' maxWidth badgeValue={1850} />
           <ButtonHoldPress variant='submenu' text='Email' maxWidth badgeValue={30} />
+        </Submenu>
+      </div>
+    </div>
+  )
+}
+
+export const Tooltip = () => {
+  const [hover, setHover] = useToggle(false)
+  const [active, setActive] = useToggle(false)
+
+  return (
+    <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
+      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent2" aria-describedby="tooltip2"/>
+      <div id="tooltip2" role="tooltip2" hidden={!active && !hover}>
+        <Submenu parentId='parent2' childrenId='tooltip2' variant='tooltip'>
+          <Text variant='body.fontSiz13'>Sitios Webs</Text>
         </Submenu>
       </div>
     </div>
