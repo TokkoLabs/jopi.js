@@ -120,3 +120,124 @@ exports[`Submenu renders correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`Submenu renders correctly2 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-size: 24px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: primary;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  white-space: nowrap;
+  border: none;
+  font-family: Nunito Sans;
+  background: #FFFFFF;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+<div
+  style={
+    Object {
+      "background": "#F3F6F8",
+      "borderRadius": "10px",
+      "padding": "20px",
+    }
+  }
+>
+  <div
+    className="c0"
+  >
+    <button
+      aria-describedby="tooltipTest"
+      className="c1"
+      id="parentTest"
+    >
+      <span
+        className="icon-propiedades"
+        style={
+          Object {
+            "color": "#6D777D",
+            "height": "22px",
+          }
+        }
+      />
+    </button>
+  </div>
+  <div
+    id="tooltipTest"
+    role="tooltipTest"
+  >
+    <div
+      className="c0"
+    >
+      <div
+        className="c2"
+      >
+        <p
+          className="c3"
+        >
+          Sitios Webs
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -82,7 +82,7 @@ export const Tooltip = () => {
       <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent2" aria-describedby="tooltip2"/>
       <div id="tooltip2" role="tooltip2" hidden={!active && !hover}>
         <Submenu parentId='parent2' childrenId='tooltip2' variant='tooltip'>
-          <Text variant='body.fontSiz13'>Sitios Webs</Text>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Submenu>
       </div>
     </div>

@@ -12,7 +12,7 @@ describe('Submenu', () => {
       <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
         <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' badgeVariant='primary' id="parentTest" aria-describedby="tooltipTest"/>
         <div id="tooltipTest" role="tooltipTest" >
-          <Submenu parentId='parent' childrenId='tooltipTest' variant='tooltip'>
+          <Submenu parentId='parentTest' childrenId='tooltipTest'>
             <Text variant='body.fontSiz13'>Sitios Webs</Text>
           </Submenu>
         </div>
