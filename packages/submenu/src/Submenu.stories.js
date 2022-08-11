@@ -7,23 +7,31 @@ import { Submenu } from '.'
 export default {
   component: Submenu,
   title: 'Submenu',
+  argTypes: {
+    variant: {
+      name: 'variant',
+      description: 'Variantes disponibles del submenu: [ \'submenu\', \'tooltip\' ]',
+    },
+    placement: {
+      name: 'placement',
+      description: 'Posición del tooltip o submenu: [ \'right\', \'left\', \'up\', \'down\' ]',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    parentId: {
+      name: 'parentId',
+      required: true,
+      description: 'Es el Id del componente desde donde saldra el submenu.',
+      type: 'text',
+    },
+    childrenId: {
+      name: 'childrenId',
+      required: true,
+      description: 'Es el Id del componente que encapsula el Submenu.',
+      type: 'text',
+    },
+  },
 }
-/*
-export const Tooltip = () => {
-  const [hover, setHover] = useToggle(false)
-  const [active, setActive] = useToggle(false)
-
-  return (
-    <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent" aria-describedby="tooltip"/>
-      <div id="tooltip" role="tooltip" hidden={!active && !hover}>
-        <Submenu parentId='parent' childrenId='tooltip' variant='tooltip'>
-          <Text variant='body.fontSiz13'>Sitios Webs</Text>
-        </Submenu>
-      </div>
-    </div>
-  )
-}*/
 
 export const SubmenuNormal = () => {
   const [hover, setHover] = useToggle(false)

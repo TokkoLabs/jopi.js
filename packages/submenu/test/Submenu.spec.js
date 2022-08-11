@@ -10,9 +10,9 @@ describe('Submenu', () => {
   test('renders correctly', () => {
     const tree = renderer.create(
       <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
-        <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' badgeVariant='primary' id="parent" aria-describedby="tooltip"/>
-        <div id="tooltip" role="tooltip" >
-          <Submenu parentId='parent' childrenId='tooltip' variant='tooltip'>
+        <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' badgeVariant='primary' id="parentTest" aria-describedby="tooltipTest"/>
+        <div id="tooltipTest" role="tooltipTest" >
+          <Submenu parentId='parent' childrenId='tooltipTest' variant='tooltip'>
             <Text variant='body.fontSiz13'>Sitios Webs</Text>
           </Submenu>
         </div>
