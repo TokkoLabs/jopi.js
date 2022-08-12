@@ -37,7 +37,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant = 'primary', ...props }) => {
+export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant = 'primary', maxWidth, ...props }) => {
   let heightIcon
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
@@ -53,7 +53,7 @@ export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant =
   }
 
   return (
-    <Box sx={{ position: 'relative' }}>
+    <Box sx={ maxWidth ? { position: 'relative', width: '100%' } : { position: 'relative' }}>
       <Box
         as='button'
         tx='buttons'
@@ -131,7 +131,7 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
   )
 }
 
-export const ButtonHoldPress = ({ variant, active = false, isInput = false, text, icon, badgeValue = 0, badgeVariant = 'primary', hasCheckbox = false, disabled = false, ...props }) => {
+export const ButtonHoldPress = ({ variant, active = false, isInput = false, text, icon, badgeValue = 0, badgeVariant = 'primary', hasCheckbox = false, disabled = false, maxWidth, ...props }) => {
   let colorValue
   let heightIcon
   let fontWeight
@@ -151,6 +151,7 @@ export const ButtonHoldPress = ({ variant, active = false, isInput = false, text
   } else {
     const index = Object.keys(theme.buttons).indexOf(variant)
     colorValue = Object.values(theme.buttons)[index].color
+    colorValue = Object.values(theme.buttons)[index].color
     heightIcon = Object.values(theme.buttons)[index].heightIcon
     fontWeight = Object.values(theme.buttons)[index].fontWeight
     if (isInput) {
@@ -163,7 +164,7 @@ export const ButtonHoldPress = ({ variant, active = false, isInput = false, text
   }
 
   return (
-    <Box sx={{ position: 'relative' }}>
+    <Box sx={ maxWidth ? { position: 'relative', width: '100%' } : { position: 'relative' }}>
       <Box
         as='button'
         tx='buttons'
@@ -189,10 +190,11 @@ export const ButtonHoldPress = ({ variant, active = false, isInput = false, text
       >
         { hasCheckbox && active && <Checkbox defaultChecked disabled={disabled}/>}
         { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={disabled}/>}
-        { !icon && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
         { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }
         { icon && !colorValue && <span className={icon} style={heightIcon && { height: heightIcon }}/> }
-        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
+        { text && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
+        { badgeValue !== 0 && !text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
+        { badgeValue !== 0 && text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '8.5px', right: '16px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
   )
