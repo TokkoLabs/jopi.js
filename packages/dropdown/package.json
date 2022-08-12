@@ -7,9 +7,9 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.224",
+    "@oneloop/box": "^1.2.225",
     "@oneloop/button": "^1.2.234",
-    "@oneloop/hooks": "^1.2.212",
+    "@oneloop/hooks": "^1.2.213",
     "@oneloop/list": "^1.2.233"
   },
   "peerDependencies": {
