@@ -17,6 +17,7 @@ import { Modal } from '@oneloop/modal'
 import { Paginator } from '@oneloop/paginator'
 import { Radio } from '@oneloop/radio'
 import { Switch } from '@oneloop/switch'
+import { Submenu } from '@oneloop/submenu'
 import { Table } from '@oneloop/table'
 import { Tabs } from '@oneloop/tabs'
 import { Text, Heading } from '@oneloop/text'
@@ -53,4 +54,5 @@ export {
   Datepicker,
   ThemeProvider,
   Fonts,
+  Submenu,
 }

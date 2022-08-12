@@ -531,6 +531,18 @@ const theme = {
         lineHeight: '11px',
       },
     ],
+    submenuTitle: {
+      fontWeight: 700,
+      fontSize: '14px',
+      lineHeight: '18px',
+      color: colors.neutralGray2,
+      display: 'flex',
+      alignItems: 'center',
+      padding: '9px 10px',
+      gap: '6px',
+      borderBottom: borders.neutralGray9,
+      width: '100%',
+    },
   },
   colors: colors,
   space: space,
@@ -947,6 +959,27 @@ const theme = {
       },
       ':focus': {
         color: colors.neutral[7],
+      },
+    },
+    submenu: {
+      fontWeight: 400,
+      fontSize: '12px',
+      lineHeight: '16px',
+      color: colors.neutralGray2,
+      justifyContent: 'flex-start',
+      padding: '9px 12px',
+      gap: '8px',
+      heightIcon: '14px',
+      backgroundColor: colors.transparent,
+      borderRadius: '0px',
+      width: '100%',
+      ':hover': {
+        backgroundColor: colors.neutralGray10,
+        color: colors.neutralGray1,
+      },
+      ':focus': {
+        backgroundColor: colors.transparent,
+        color: colors.neutralGray1,
       },
     },
     mainButton: {
@@ -1542,6 +1575,23 @@ const theme = {
     },
     secondaryDisabled: {
       backgroundColor: colors.white,
+    },
+  },
+  panelSubmenu: {
+    submenu: {
+      padding: '0px 0px 8px',
+      gap: '6px',
+      boxShadow: '4px 4px 12px rgba(87, 95, 99, 0.1)',
+      borderRadius: '10px',
+      flexDirection: 'column',
+    },
+    tooltip: {
+      padding: '4px 10px 4px 10px',
+      gap: '14px',
+      boxShadow: '4px 4px 4px rgba(112, 126, 134, 0.15)',
+      borderRadius: '6px',
+      flexDirection: 'row',
+      height: '26px',
     },
   },
 }
