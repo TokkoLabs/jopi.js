@@ -87,11 +87,11 @@ export const searchOutlined = () => (
   />
 )
 
-export const searchBold = () => (
+export const searchTransparentBold = () => (
   <Input
     prefix={<span className='icon-buscar'/>}
     placeholder="Search"
-    variant='inputSearch'
+    variant='inputSearchTransparent'
     bold
   />
 )
@@ -101,7 +101,7 @@ export const searchPrefixSuffix = () => (
     prefix={<span className='icon-buscar'/>}
     suffix={<span className='icon-propiedades'/>}
     placeholder="Buscar contactos, propiedades, emprendimientos o usuarios..."
-    variant='inputSearchOutlined'
+    variant='inputSearchTransparent'
     width='500px'
   />
 )

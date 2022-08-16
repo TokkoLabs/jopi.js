@@ -90,9 +90,11 @@ const forms = {
     normal: {
       color: colors.neutralGray5,
       backgroundColor: colors.neutralGray10,
+      '::placeholder': {
+        color: colors.neutralGray5,
+      },
     },
     hover: {
-      color: colors.neutralGray1,
       backgroundColor: colors.neutralGray10,
       '::placeholder': {
         color: colors.neutralGray1,
@@ -117,6 +119,9 @@ const forms = {
     color: colors.error,
     border: borders.error,
     backgroundColor: colors.backgroundError,
+    '::placeholder': {
+      color: '#B21702',
+    },
   },
   inputDisabled: {
     color: colors.neutralGray6,
@@ -124,6 +129,9 @@ const forms = {
     pointerEvents: 'none',
     userSelect: 'none',
     backgroundColor: colors.neutralGray10,
+    '::placeholder': {
+      color: colors.neutralGray6,
+    },
   },
   inputReadonly: {
     border: 'none',
@@ -132,6 +140,9 @@ const forms = {
     pointerEvents: 'none',
     userSelect: 'none',
     color: colors.neutralGray1,
+    '::placeholder': {
+      color: colors.neutralGray1,
+    },
   },
   inputTransparent: {
     normal: {
@@ -156,14 +167,23 @@ const forms = {
     normal: {
       color: colors.neutralGray3,
       backgroundColor: colors.neutralGray10,
+      '::placeholder': {
+        color: colors.neutralGray3,
+      },
     },
     hover: {
       color: colors.neutralGray4,
       backgroundColor: colors.neutralGray10,
+      '::placeholder': {
+        color: colors.neutralGray4,
+      },
     },
     active: {
       color: colors.neutralGray1,
       backgroundColor: colors.neutralGray10,
+      '::placeholder': {
+        color: colors.neutralGray5,
+      },
     },
     loading: {
       color: colors.neutralGray1,
@@ -178,15 +198,24 @@ const forms = {
     normal: {
       color: colors.neutralGray3,
       backgroundColor: colors.transparent,
+      '::placeholder': {
+        color: colors.neutralGray3,
+      },
     },
     hover: {
       color: colors.neutralGray4,
       backgroundColor: colors.transparent,
+      '::placeholder': {
+        color: colors.neutralGray4,
+      },
     },
     active: {
       border: '1px solid #AEBAC0',
       color: colors.neutralGray1,
       backgroundColor: colors.neutralGray10,
+      '::placeholder': {
+        color: colors.neutralGray5,
+      },
     },
     loading: {
       color: colors.neutralGray1,
@@ -202,16 +231,25 @@ const forms = {
       color: colors.neutralGray3,
       backgroundColor: colors.transparent,
       border: '1px solid #94A2AB',
+      '::placeholder': {
+        color: colors.neutralGray3,
+      },
     },
     hover: {
       color: colors.neutralGray4,
       backgroundColor: colors.transparent,
       border: '1px solid #94A2AB',
+      '::placeholder': {
+        color: colors.neutralGray4,
+      },
     },
     active: {
       color: colors.neutralGray1,
       backgroundColor: colors.transparent,
       border: '1px solid #94A2AB',
+      '::placeholder': {
+        color: colors.neutralGray5,
+      },
     },
     loading: {
       color: colors.neutralGray1,
