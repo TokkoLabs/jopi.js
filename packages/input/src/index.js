@@ -62,7 +62,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
             mb: '4px',
           }}
         >
-          <Text variant='body600.fontSize12' style={{ color: '#384248'}}>
+          <Text variant='body600.fontSize12' style={{ color: '#384248' }}>
             {label}
           </Text>
         </Box>

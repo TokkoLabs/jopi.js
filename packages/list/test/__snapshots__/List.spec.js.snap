@@ -69,7 +69,7 @@ exports[`List renders correctly 1`] = `
   position: absolute;
   height: 14px;
   font-size: 14px;
-  left: 7px;
+  left: 12px;
 }
 
 .c6 {
@@ -81,7 +81,8 @@ exports[`List renders correctly 1`] = `
   box-shadow: none;
   font-family: primary;
   display: block;
-  padding-left: 26px;
+  padding-left: 30px;
+  padding-rigth: 12px;
   outline: none;
   width: 100%;
 }
