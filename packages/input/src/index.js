@@ -37,10 +37,13 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
   } else if (errors !== undefined) {
     finalVariant = 'inputError'
     colorPlaceholder = 'error'
+    suffix = <span className='icon-error'/>
   }
 
   const index = Object.keys(theme.forms).indexOf(variantSize)
   const paddingLeft = prefix ? Object.values(theme.forms)[index].paddingLeftPrefix : Object.values(theme.forms)[index].paddingLeftNoPrefix
+  const paddingRigth = suffix ? Object.values(theme.forms)[index].paddingRigthSuffix : Object.values(theme.forms)[index].paddingRigthNoSuffix
+  const paddingIcons = Object.values(theme.forms)[index].paddingIcons
   const fontSizePrefix = Object.values(theme.forms)[index].fontSize
 
   return (
@@ -59,7 +62,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
             mb: '4px',
           }}
         >
-          <Text variant='body600.fontSize12'>
+          <Text variant='body600.fontSize12' style={{ color: '#384248'}}>
             {label}
           </Text>
         </Box>
@@ -77,10 +80,10 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
           fontWeight: bold ? 700 : 400,
           width: width,
           '> *:first-child': prefix
-            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, left: '7px' }
+            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, left: paddingIcons }
             : {},
           '> *:last-child': suffix
-            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, right: '7px' }
+            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, right: paddingIcons }
             : {},
         }}
       >
@@ -104,6 +107,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
             fontFamily: 'primary',
             display: 'block',
             paddingLeft: paddingLeft,
+            paddingRigth: paddingRigth,
             outline: 'none',
           }}
         />

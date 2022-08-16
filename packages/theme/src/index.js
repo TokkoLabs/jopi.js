@@ -58,6 +58,20 @@ space.small = space[2]
 space.medium = space[6]
 space.large = space[8]
 
+const borders = {
+  light: '1px solid rgba(255, 255, 255, 0.5)',
+  dark: '1px solid rgba(0, 0, 0, 0.24)',
+  primaryBorder: '1px solid ' + colors.primary,
+  secondaryBorder: '1px solid ' + colors.secondary,
+  feedbackBorder: '1px solid ' + colors.feedback,
+  disabledBorder: '1px solid ' + colors.disabled,
+  error: '1px solid ' + colors.error,
+  backgroundError2: '1px solid ' + colors.backgroundError2,
+  neutralGray5: '1px solid ' + colors.neutralGray5,
+  neutralGray7: '1px solid ' + colors.neutralGray7,
+  neutralGray9: '1px solid ' + colors.neutralGray9,
+}
+
 const fontSize = [9, 10, 12, 14, 16, 20, 24, 28]
 
 const radius = {
@@ -74,7 +88,7 @@ const shadows = {
 const forms = {
   input: {
     normal: {
-      color: colors.neutralGray3,
+      color: colors.neutralGray5,
       backgroundColor: colors.neutralGray10,
     },
     hover: {
@@ -100,12 +114,12 @@ const forms = {
     backgroundColor: colors.neutralGray10,
   },
   inputError: {
-    border: '0.5px solid #B21702',
-    backgroundColor: colors.backgroundError,
     color: colors.error,
+    border: borders.error,
+    backgroundColor: colors.backgroundError,
   },
   inputDisabled: {
-    color: colors.neutralGray5,
+    color: colors.neutralGray6,
     cursor: 'not-allowed',
     pointerEvents: 'none',
     userSelect: 'none',
@@ -212,9 +226,11 @@ const forms = {
   },
   inputLarge: {
     gap: '6px',
-    paddingLeftPrefix: '26px',
-    paddingLeftNoPrefix: '7px',
-    paddingRigth: '7px',
+    paddingLeftPrefix: '30px',
+    paddingRigthSuffix: '30px',
+    paddingLeftNoPrefix: '12px',
+    paddingRigthNoSuffix: '12px',
+    paddingIcons: '12px',
     paddingTop: '10px',
     paddingBottom: '10px',
     height: '32px',
@@ -224,9 +240,11 @@ const forms = {
   },
   inputMedium: {
     gap: '6px',
-    paddingLeftPrefix: '23px',
-    paddingLeftNoPrefix: '6px',
-    paddingRigth: '6px',
+    paddingLeftPrefix: '26px',
+    paddingRigthSuffix: '26px',
+    paddingLeftNoPrefix: '10px',
+    paddingRigthNoSuffix: '10px',
+    paddingIcons: '10px',
     paddingTop: '8px',
     paddingBottom: '8px',
     height: '28px',
@@ -237,8 +255,10 @@ const forms = {
   inputSmall: {
     gap: '4px',
     paddingLeftPrefix: '20px',
-    paddingLeftNoPrefix: '3px',
-    paddingRigth: '3px',
+    paddingRigthSuffix: '20px',
+    paddingLeftNoPrefix: '6px',
+    paddingRigthNoSuffix: '6px',
+    paddingIcons: '6px',
     paddingTop: '6px',
     paddingBottom: '6px',
     height: '22px',
@@ -251,19 +271,6 @@ const forms = {
     fontSize: fontSize[1],
     fontWeight: 'bold',
   },
-}
-
-const borders = {
-  light: '1px solid rgba(255, 255, 255, 0.5)',
-  dark: '1px solid rgba(0, 0, 0, 0.24)',
-  primaryBorder: '1px solid ' + colors.primary,
-  secondaryBorder: '1px solid ' + colors.secondary,
-  feedbackBorder: '1px solid ' + colors.feedback,
-  disabledBorder: '1px solid ' + colors.disabled,
-  backgroundError2: '1px solid ' + colors.backgroundError2,
-  neutralGray5: '1px solid ' + colors.neutralGray5,
-  neutralGray7: '1px solid ' + colors.neutralGray7,
-  neutralGray9: '1px solid ' + colors.neutralGray9,
 }
 
 const switches = {
