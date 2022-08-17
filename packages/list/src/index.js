@@ -73,7 +73,7 @@ const ListDefault = ({ children, disabled = false, hover = true, variantSize = '
       }}
     >
       <div style={{ width: '100%' }}>
-        <Button variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} >{children}</Button>
+        <Button variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} style={{ borderRadius: '0px' }} >{children}</Button>
       </div>
     </Box>
   )
@@ -97,7 +97,7 @@ const ListMultiselect = ({ children, disabled = false, hover = true, isActive, v
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonHoldPress variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled}/>
+        <ButtonHoldPress variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled} style={{ borderRadius: '0px' }}/>
       </div>
     </Box>
   )
@@ -116,7 +116,7 @@ const ListIcon = ({ children, disabled = false, hover = true, isActive, icon, va
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonIcon variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} icon={icon} text={children}/>
+        <ButtonIcon variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} icon={icon} text={children} style={{ borderRadius: '0px' }}/>
       </div>
     </Box>
   )

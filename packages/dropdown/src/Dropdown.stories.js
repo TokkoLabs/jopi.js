@@ -405,7 +405,7 @@ export const DropdownColored = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownColored' text={'Placeholder'} filled={ list.length > 0 } />
+      <Dropdown.Button variant='dropdownColored' variantSize='dropdownSizeLargeColored' text={'Placeholder'} filled={ list.length > 0 } />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
@@ -476,7 +476,7 @@ export const DropdownDefaultSmall = () => {
   )
 }
 
-export const DropdownDefaultExtramall = () => {
+export const DropdownDefaultExtraSmall = () => {
   const [list, setList] = useState([])
 
   const updateList = (value) => {
@@ -492,7 +492,7 @@ export const DropdownDefaultExtramall = () => {
       <Dropdown.Button variant='dropdownDefault' text='Opción elegida' filled={ list.length > 0 } variantSize = 'dropdownSizeExtraSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} variantSize = 'dropdownSizeSmall'>
+          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} variantSize = 'dropdownSizeExtraSmall'>
             {user.content.name}
           </Dropdown.Multiselect>
         ))}
