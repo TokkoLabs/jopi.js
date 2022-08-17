@@ -8,46 +8,46 @@ export default {
   title: 'Input',
 }
 
-export const input = () => <Input placeholder="Placeholder text" />
+export const input = () => <Input placeholder="Placeholder text" width='300px'/>
 
 export const inputWithErrors = () => (
-  <Input errors="Minimo 8 caracteres." placeholder="Placeholder text" />
+  <Input errors="Minimo 8 caracteres." placeholder="Placeholder text" width='300px'/>
 )
 
 export const inputWithInfoAlert = () => (
-  <Input infoAlert="Campo Requerido" placeholder="Placeholder text" />
+  <Input infoAlert="Campo Requerido" placeholder="Placeholder text" width='300px'/>
 )
 
-export const disabled = () => <Input disabled placeholder="Hello World!" />
+export const disabled = () => <Input disabled placeholder="Hello World!" width='300px'/>
 
-export const readOnly = () => <Input readonly placeholder="Hello World!" />
+export const readOnly = () => <Input readonly placeholder="Hello World!" width='300px'/>
 
-export const inputMedium = () => <Input placeholder="Placeholder text" variantSize='inputMedium' />
+export const inputMedium = () => <Input placeholder="Placeholder text" variantSize='inputMedium' width='300px'/>
 
-export const inputSmall = () => <Input placeholder="Placeholder text" variantSize='inputSmall' />
+export const inputSmall = () => <Input placeholder="Placeholder text" variantSize='inputSmall' width='300px'/>
 
 export const inputWithIcon = () => (
-  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" />
+  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" width='300px'/>
 )
 export const inputWithIconMedium = () => (
-  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" variantSize='inputMedium' />
+  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" variantSize='inputMedium' width='300px'/>
 )
 export const inputWithIconSmall = () => (
-  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" variantSize='inputSmall' />
+  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" variantSize='inputSmall' width='300px'/>
 )
 
 export const inputWithLabel = () => (
-  <Input label="Label de prueba" placeholder="Hello World!" />
+  <Input label="Label de prueba" placeholder="Hello World!" width='300px'/>
 )
 
 export const inputWithLabelIcon = () => (
-  <Input prefix={<span className='icon-email'/>} label="Label de prueba" placeholder="Hello World!" />
+  <Input prefix={<span className='icon-email'/>} label="Label de prueba" placeholder="Hello World!" width='300px'/>
 )
 
-export const inputTransparent = () => <Input placeholder="Placeholder text" variant="inputTransparent" />
+export const inputTransparent = () => <Input placeholder="Placeholder text" variant="inputTransparent" width='300px'/>
 
 export const inputInlineLabel = () => (
-  <Input label="Label" placeholder="Hello World!" inline />
+  <Input label="Label" placeholder="Hello World!" inline width='300px'/>
 )
 
 export const InputWithPassword = () => {
@@ -59,6 +59,7 @@ export const InputWithPassword = () => {
       label="Label de prueba"
       placeholder="Hello World!"
       password={pass}
+      width='300px'
     />
   )
 }
@@ -68,6 +69,7 @@ export const search = () => (
     prefix={<span className='icon-buscar'/>}
     placeholder="Search"
     variant='inputSearch'
+    width='300px'
   />
 )
 
@@ -76,6 +78,7 @@ export const searchTransparent = () => (
     prefix={<span className='icon-buscar'/>}
     placeholder="Search"
     variant='inputSearchTransparent'
+    width='300px'
   />
 )
 
@@ -84,6 +87,7 @@ export const searchOutlined = () => (
     prefix={<span className='icon-buscar'/>}
     placeholder="Search"
     variant='inputSearchOutlined'
+    width='300px'
   />
 )
 
@@ -92,6 +96,7 @@ export const searchTransparentBold = () => (
     prefix={<span className='icon-buscar'/>}
     placeholder="Search"
     variant='inputSearchTransparent'
+    width='300px'
     bold
   />
 )
