@@ -52,7 +52,7 @@ export const searchable = () =>
 
     return (
       <List width={1 / 3}>
-        <List.Search onChange={(e) => setValue(e.target.value)} />
+        <List.Search onChange={(e) => setValue(e.target.value)} placeholder='Search' />
         {filteredData.map((user) => (
           <List.Multiselect key={user.id}>{user.content.name}</List.Multiselect>
         ))}

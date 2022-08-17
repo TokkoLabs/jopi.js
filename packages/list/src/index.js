@@ -34,7 +34,6 @@ const ListInput = (props) => (
       prefix={<span className='icon-buscar'/>}
       placeholder="Search"
       variant='inputSearchOutlined'
-      width={1}
       {...props}
     />
   </Flex>

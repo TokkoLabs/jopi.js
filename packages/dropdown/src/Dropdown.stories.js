@@ -54,7 +54,7 @@ export const Search = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Agente' filled={ list.length > 0 }></Dropdown.Button>
+      <Dropdown.Button variant='dropdownDefault' text='Agente' filled={ list.length > 0 }/>
       <Dropdown.Items>
         <Dropdown.Search placeholder='Search' onChange={onFilter} value={text}/>
         {filteredData.map((user) => (
