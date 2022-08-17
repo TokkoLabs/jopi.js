@@ -62,7 +62,6 @@ exports[`List renders correctly 1`] = `
   color: #6F838D;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 1px;
 }
 
 .c5 > *:first-child {
@@ -654,6 +653,11 @@ exports[`ListDefault renders correctly 1`] = `
       >
         <button
           className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
         >
           Item 1
         </button>
@@ -676,6 +680,11 @@ exports[`ListDefault renders correctly 1`] = `
       >
         <button
           className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
         >
           Item 2
         </button>
@@ -698,6 +707,11 @@ exports[`ListDefault renders correctly 1`] = `
       >
         <button
           className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
         >
           Item 3
         </button>
@@ -805,6 +819,11 @@ exports[`ListIcon renders correctly 1`] = `
       >
         <button
           className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
         >
           <span
             className="icon-agente"
@@ -838,6 +857,11 @@ exports[`ListIcon renders correctly 1`] = `
       >
         <button
           className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
         >
           <span
             className="icon-agente"
@@ -871,6 +895,11 @@ exports[`ListIcon renders correctly 1`] = `
       >
         <button
           className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
         >
           <span
             className="icon-agente"
@@ -1072,6 +1101,11 @@ input:disabled:not(:checked) ~ .c13 {
         <button
           className="c0 c4"
           onClick={[Function]}
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
         >
           <div
             className="c0 c5"
@@ -1206,6 +1240,11 @@ input:disabled:not(:checked) ~ .c13 {
         <button
           className="c0 c4"
           onClick={[Function]}
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
         >
           <div
             className="c0 c5"
@@ -1340,6 +1379,11 @@ input:disabled:not(:checked) ~ .c13 {
         <button
           className="c0 c4"
           onClick={[Function]}
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
         >
           <div
             className="c0 c5"

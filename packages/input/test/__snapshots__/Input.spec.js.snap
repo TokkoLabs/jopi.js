@@ -33,7 +33,6 @@ exports[`Input disabled 1`] = `
   color: neutralGray5;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c2 {
@@ -107,7 +106,6 @@ exports[`Input errors 1`] = `
   color: error;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c1 > *:last-child {
@@ -218,7 +216,6 @@ exports[`Input infoAlert 1`] = `
   color: #94A2AB;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c2 {
@@ -345,7 +342,6 @@ exports[`Input inputInlineLabel 1`] = `
   color: #94A2AB;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c4 {
@@ -434,7 +430,6 @@ exports[`Input inputMedium 1`] = `
   color: #94A2AB;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c2 {
@@ -509,7 +504,6 @@ exports[`Input inputWithIcon 1`] = `
   color: #94A2AB;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c1 > *:first-child {
@@ -608,7 +602,6 @@ exports[`Input inputWithLabel 1`] = `
   color: #94A2AB;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c4 {
@@ -711,7 +704,6 @@ exports[`Input inputWithPassword 1`] = `
   color: #94A2AB;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c3 > *:last-child {
@@ -810,7 +802,6 @@ exports[`Input placeholder 1`] = `
   color: #94A2AB;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c2 {
@@ -885,7 +876,6 @@ exports[`Input readonly 1`] = `
   color: neutralGray1;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c2 {
@@ -960,7 +950,6 @@ exports[`Input renders correctly 1`] = `
   color: #94A2AB;
   font-family: Nunito Sans;
   font-weight: 400;
-  width: 300px;
 }
 
 .c2 {
@@ -1034,7 +1023,6 @@ exports[`Input searchBold 1`] = `
   color: #6F838D;
   font-family: Nunito Sans;
   font-weight: 700;
-  width: 300px;
 }
 
 .c1 > *:first-child {
