@@ -51,10 +51,13 @@ export const Search = () => {
       setList((list) => list.filter((id) => id !== value))
     }
   }
+  const valueTextButton = list.length > 0
+    ? data.filter(user => user.id === list[0])[0].content.name + (list.length > 1 ? ' + ' + (list.length - 1) : '')
+    : 'Agente'
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Agente' filled={ list.length > 0 }/>
+      <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={ list.length > 0 }/>
       <Dropdown.Items>
         <Dropdown.Search placeholder='Search' onChange={onFilter} value={text}/>
         {filteredData.map((user) => (

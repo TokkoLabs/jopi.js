@@ -148,7 +148,7 @@ export const ButtonHoldPress = ({ variant, active = false, isInput = false, text
       if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
         heightIcon = Object.values(theme.buttons)[index].heightIcon
       }
-      
+
       return colorValue
     })
   } else {
