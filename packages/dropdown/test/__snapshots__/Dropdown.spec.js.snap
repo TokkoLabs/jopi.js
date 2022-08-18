@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dropdown default 1`] = `
+exports[`Dropdown DropdownMultiselect 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
@@ -107,114 +107,7 @@ exports[`Dropdown default 1`] = `
 </div>
 `;
 
-exports[`DropdownMultiselect default 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-  height: 150px;
-}
-
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: inherit;
-  font-family: Nunito Sans;
-  font-weight: normal;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  color: white;
-  background-color: primary;
-  border: 0;
-  border-radius: 12px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-overflow: ellipsis;
-  font-family: Nunito Sans;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: start;
-  font-size: 14px;
-  width: 100%;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-@media screen and (min-width:40em) {
-
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <button
-      className="c2"
-      onClick={[Function]}
-    >
-      <span />
-      <span
-        className="icon-dropdown"
-        style={
-          Object {
-            "fontSize": "12px",
-            "height": "12px",
-            "position": "absolute",
-            "right": "12px",
-            "transform": "rotate(0deg)",
-          }
-        }
-      />
-    </button>
-  </div>
-</div>
-`;
-
-exports[`DropdownMultiselect default 2`] = `
+exports[`Dropdown DropdownMultiselect 2`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
@@ -295,3 +188,87 @@ exports[`DropdownMultiselect default 2`] = `
   </div>
 </div>
 `;
+
+exports[`Dropdown DropdownMultiselect 3`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 150px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: primary;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <span
+        className="icon-configuracion"
+        style={
+          Object {
+            "fontSize": "20px",
+            "height": "20px",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Dropdown default 1`] = `ShallowWrapper {}`;
