@@ -261,24 +261,16 @@ export const DropdownButton = () => {
 }
 
 export const DropdownButtonDisabled = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Label')
 
   return (
     <Dropdown width={1 / 8}>
-      <Dropdown.Button variant='dropdownButtonPrimaryDisabled' variantSize='dropdownSizeButton' disabled text={'Label'} filled={ list.length > 0 } isArrowStatic />
+      <Dropdown.Button variant='dropdownButtonPrimaryDisabled' variantSize='dropdownSizeButton' disabled text={value} filled={ value !== undefined } isArrowStatic />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -286,24 +278,16 @@ export const DropdownButtonDisabled = () => {
 }
 
 export const DropdownColored = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Placeholder')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownColored' variantSize='dropdownSizeLargeColored' text={'Placeholder'} filled={ list.length > 0 } />
+      <Dropdown.Button variant='dropdownColored' variantSize='dropdownSizeLargeColored' text={value} filled={ value !== undefined } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -345,24 +329,16 @@ export const DropdownStatesIcon = () => {
 }
 
 export const DropdownDefaultSmall = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Opción elegida')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Opción elegida' filled={ list.length > 0 } variantSize = 'dropdownSizeSmall'/>
+      <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== undefined } variantSize = 'dropdownSizeSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} variantSize = 'dropdownSizeSmall'>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Default>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -370,24 +346,16 @@ export const DropdownDefaultSmall = () => {
 }
 
 export const DropdownDefaultExtraSmall = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Opción elegida')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Opción elegida' filled={ list.length > 0 } variantSize = 'dropdownSizeExtraSmall'/>
+      <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== undefined } variantSize = 'dropdownSizeExtraSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} variantSize = 'dropdownSizeExtraSmall'>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Default>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -438,10 +406,13 @@ export const DropdownStatesMultiselectSmall = () => {
       setList((list) => list.filter((id) => id !== value))
     }
   }
+  const valueTextButton = list.length > 0
+    ? data.filter(user => user.id === list[0])[0].content.name + (list.length > 1 ? ' + ' + (list.length - 1) : '')
+    : 'Seleccione'
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Seleccione' filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
+      <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } variantSize = 'dropdownSizeSmall'>
@@ -463,10 +434,13 @@ export const DropdownStatesMultiselectExtraSmall = () => {
       setList((list) => list.filter((id) => id !== value))
     }
   }
+  const valueTextButton = list.length > 0
+    ? data.filter(user => user.id === list[0])[0].content.name + (list.length > 1 ? ' + ' + (list.length - 1) : '')
+    : 'Seleccione'
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Seleccione' filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
+      <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } variantSize = 'dropdownSizeExtraSmall'>
