@@ -14,7 +14,7 @@ describe('Dropdown', () => {
       <Dropdown width={1 / 4}>
         <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
         <Dropdown.Items>
-          <Dropdown.Search />
+          <Dropdown.Search/>
           <Dropdown.Default>One</Dropdown.Default>
           <Dropdown.Default>Two</Dropdown.Default>
           <Dropdown.Default>Three</Dropdown.Default>
@@ -71,7 +71,6 @@ describe('Dropdown', () => {
     const tree = renderer
       .create(
         <Dropdown>
-          <Dropdown.Button icon='icon-configuracion' isButtonIcon />
           <Dropdown.Items>
             <Dropdown.Item icon='icon-agente' disabled>One</Dropdown.Item>
             <Dropdown.Item icon='icon-agente' variantSize='dropdownSizeNormal'>Two</Dropdown.Item>
