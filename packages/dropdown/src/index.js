@@ -71,7 +71,7 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
         whiteSpace: 'nowrap',
         textAlign: 'start',
         fontSize: '14px',
-        width: '100%',
+        // width: '100%',
         backgroundColor: filled ? backgroundColorFilled : undefined,
         justifyContent: isArrowStatic ? 'center' : 'flex-start',
       }}
