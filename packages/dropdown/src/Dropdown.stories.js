@@ -7,7 +7,7 @@ export default {
   title: 'Dropdown',
 }
 
-const data = [
+let data = [
   {
     id: 22,
     content: {
@@ -37,7 +37,7 @@ const data = [
     content: {
       name: 'Walter',
       count: 42,
-      icon: 'icon-agente',
+      icon: 'icon-propiedades',
     },
   },
   {
@@ -45,10 +45,11 @@ const data = [
     content: {
       name: 'Marcos',
       count: 4,
-      icon: 'icon-agente',
+      icon: 'icon-ambientes',
     },
   },
 ]
+
 
 export const Search = () => {
   const [list, setList] = useState([])
@@ -60,11 +61,31 @@ export const Search = () => {
     setText(e.target.value)
   }
 
+  const orderList = (list) => {
+    return list.sort(function(user1, user2) {
+      var nameA = user1.content.name.toUpperCase();
+      var nameB = user2.content.name.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    })
+  }
+
   const updateList = (value) => {
     if (!list.includes(value)) {
       setList([...list, value])
+      const firstItems = orderList((data.filter(user => user.id === value)).concat(data.filter(user => list.find(id => id === user.id) !== undefined)))
+      const lastItems = orderList(data.filter(user => list.find(id => id === user.id) === undefined && user.id !== value))
+      data = firstItems.concat(lastItems)
     } else {
       setList((list) => list.filter((id) => id !== value))
+      const firstItems = orderList(data.filter(user => (list.find(id => id === user.id) !== undefined  && user.id !== value)))
+      const lastItems = orderList(data.filter(user => user.id === value).concat(data.filter(user => list.find(id => id === user.id) === undefined)))
+      data = firstItems.concat(lastItems)
     }
   }
   const valueTextButton = list.length > 0
