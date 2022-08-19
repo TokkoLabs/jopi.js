@@ -5,6 +5,26 @@ import { useFilterData } from '@oneloop/list'
 export default {
   component: Dropdown,
   title: 'Dropdown',
+  argTypes: {
+    observacionesGenerales: {
+      name: 'observaciones generales',
+      description: 'El primer Search contiene metodos para organizar las listas por nombres. ' + 
+      'Hay dos tipos de dropdown seleccionable o multiple.',
+    },
+    variant: {
+      name: 'variant',
+      description: 'Variantes de color disponibles: ' +
+      '[ \'dropdownDefault\', \'dropdownDisabled\', \'dropdownOutlined\', \'dropdownOutlinedDisabled\',' +
+      '\'dropdownTransparent\', \'dropdownTransparentDisabled\', \'dropdownIcon\', \'dropdownIconDisabled\', ' +
+      '\'dropdownButtonPrimary\', \'dropdownButtonPrimaryDisabled\', \'dropdownColored\', \'dropdownColoredTransparent\' ]',
+      control: { type: 'none' },
+    },
+    variantSize: {
+      name: 'variantSize',
+      description: 'Variantes de tamaño disponibles: [ \'dropdownSizeNormal\', \'dropdownSizeSmall\', \'dropdownSizeExtraSmall\' ]',
+      control: { type: 'none' },
+    },
+  },
 }
 
 let data = [
