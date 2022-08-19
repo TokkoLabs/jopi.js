@@ -32,6 +32,22 @@ const data = [
       icon: 'icon-agente',
     },
   },
+  {
+    id: 7,
+    content: {
+      name: 'Walter',
+      count: 42,
+      icon: 'icon-agente',
+    },
+  },
+  {
+    id: 6,
+    content: {
+      name: 'Marcos',
+      count: 4,
+      icon: 'icon-agente',
+    },
+  },
 ]
 
 export const Search = () => {
@@ -113,7 +129,7 @@ export const DropdownDefaultWithIcon = () => {
       <Dropdown.Button variant='dropdownDefault' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon="icon-agente" onClick={e => { setValue(user.content.name); setIcon('icon-agente')}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon)}}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -148,7 +164,7 @@ export const DropdownOutlinedWithIcon = () => {
       <Dropdown.Button variant='dropdownOutlined' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon="icon-agente" onClick={e => { setValue(user.content.name); setIcon('icon-agente')}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon)}}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -166,7 +182,7 @@ export const DropdownOutlinedWithIconDisabled = () => {
       <Dropdown.Button variant='dropdownOutlinedDisabled' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon="icon-agente" onClick={e => { setValue(user.content.name); setIcon('icon-agente')}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon)}}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -217,7 +233,7 @@ export const DropdownIcon = () => {
       <Dropdown.Button variant='dropdownIcon' isButtonIcon icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconSmall' />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon="icon-agente" onClick={e => { setIcon('icon-agente')}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon)}}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -234,7 +250,7 @@ export const DropdownIconDisabled = () => {
       <Dropdown.Button variant='dropdownIconDisabled' isButtonIcon disabled icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconSmall' />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon="icon-agente" onClick={e => { setIcon('icon-agente')}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon)}}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
