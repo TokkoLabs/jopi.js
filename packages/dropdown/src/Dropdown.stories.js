@@ -8,7 +8,7 @@ export default {
   argTypes: {
     observacionesGenerales: {
       name: 'observaciones generales',
-      description: 'El primer Search contiene metodos para organizar las listas por nombres. ' + 
+      description: 'El primer Search contiene metodos para organizar las listas por nombres. ' +
       'Hay dos tipos de dropdown seleccionable o multiple.',
     },
     variant: {
@@ -70,7 +70,6 @@ let data = [
   },
 ]
 
-
 export const Search = () => {
   const [list, setList] = useState([])
   const [filteredData, setValue] = useFilterData(data, 'content')
@@ -82,16 +81,16 @@ export const Search = () => {
   }
 
   const orderList = (list) => {
-    return list.sort(function(user1, user2) {
-      var nameA = user1.content.name.toUpperCase();
-      var nameB = user2.content.name.toUpperCase();
+    return list.sort(function (user1, user2) {
+      const nameA = user1.content.name.toUpperCase()
+      const nameB = user2.content.name.toUpperCase()
       if (nameA < nameB) {
-        return -1;
+        return -1
       }
       if (nameA > nameB) {
-        return 1;
+        return 1
       }
-      return 0;
+      return 0
     })
   }
 
@@ -103,7 +102,7 @@ export const Search = () => {
       data = firstItems.concat(lastItems)
     } else {
       setList((list) => list.filter((id) => id !== value))
-      const firstItems = orderList(data.filter(user => (list.find(id => id === user.id) !== undefined  && user.id !== value)))
+      const firstItems = orderList(data.filter(user => (list.find(id => id === user.id) !== undefined && user.id !== value)))
       const lastItems = orderList(data.filter(user => user.id === value).concat(data.filter(user => list.find(id => id === user.id) === undefined)))
       data = firstItems.concat(lastItems)
     }
@@ -170,7 +169,7 @@ export const DropdownDefaultWithIcon = () => {
       <Dropdown.Button variant='dropdownDefault' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon)}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon) }}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -205,7 +204,7 @@ export const DropdownOutlinedWithIcon = () => {
       <Dropdown.Button variant='dropdownOutlined' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon)}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon) }}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -223,7 +222,7 @@ export const DropdownOutlinedWithIconDisabled = () => {
       <Dropdown.Button variant='dropdownOutlinedDisabled' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon)}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon) }}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -274,7 +273,7 @@ export const DropdownIcon = () => {
       <Dropdown.Button variant='dropdownIcon' isButtonIcon icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconSmall' />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon)}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon) }}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
@@ -291,7 +290,7 @@ export const DropdownIconDisabled = () => {
       <Dropdown.Button variant='dropdownIconDisabled' isButtonIcon disabled icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconSmall' />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon)}}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon) }}>
             {user.content.name}
           </Dropdown.Icon>
         ))}
