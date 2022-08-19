@@ -1300,6 +1300,7 @@ const theme = {
       backgroundColorFilled: colors.lightBlue,
       ':hover': {
         color: colors.neutralGray7,
+        backgroundColor: colors.secondary,
       },
       ':focus': {
         color: colors.neutralGray3,
