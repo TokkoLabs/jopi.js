@@ -17,7 +17,7 @@ export const Dropdown = ({ children, ...props }) => {
 
   return (
     <DropdownContext.Provider value={value}>
-      <Box {...props} __css={{ position: 'relative', height: '150px' }}>
+      <Box {...props} __css={{ position: 'relative', height: '200px' }}>
         {children}
       </Box>
     </DropdownContext.Provider>
@@ -104,6 +104,7 @@ const DropdownList = ({ children, width = '236px', ...props }) => {
           top: '42px',
           zIndex: 1,
           width: width,
+          height: '150px',
         }}
       >
         {children}

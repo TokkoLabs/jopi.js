@@ -13,6 +13,7 @@ const List = forwardRef(({ children, ...props }, ref) => (
     __css={{
       listStyleType: 'none',
       p: 0,
+      overflowY: 'scroll',
     }}
   >
     {children}
