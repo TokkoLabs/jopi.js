@@ -1308,6 +1308,23 @@ const theme = {
         border: borders.neutralGray7,
       },
     },
+    dropdownColoredTransparent: {
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+      border: borders.neutralGray7,
+      colorFilled: colors.neutral[0],
+      colorArrowFilled: colors.neutral[0],
+      backgroundColorFilled: colors.lightBlue,
+      ':hover': {
+        color: colors.neutralGray7,
+        backgroundColor: colors.transparent,
+        border: borders.neutralGray7,
+      },
+      ':focus': {
+        color: colors.neutral[0],
+        backgroundColor: colors.lightBlue,
+      },
+    },
     mainItemSmallList: {
       backgroundColor: colors.transparent,
       color: colors.neutralGray2,

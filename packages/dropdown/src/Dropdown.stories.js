@@ -294,6 +294,23 @@ export const DropdownColored = () => {
   )
 }
 
+export const DropdownColoredTransparent = () => {
+  const [value, setValue] = useState('Placeholder')
+
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant='dropdownColoredTransparent' variantSize='dropdownSizeLargeColored' text={value} filled={ value !== 'Placeholder' } />
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
+            {user.content.name}
+          </Dropdown.Icon>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
 export const DropdownStatesDefault = () => {
   const [value, setValue] = useState('Placeholder')
 
