@@ -6,7 +6,7 @@ exports[`Dropdown DropdownMultiselect 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  height: 150px;
+  height: 200px;
 }
 
 .c1 {
@@ -68,7 +68,6 @@ exports[`Dropdown DropdownMultiselect 1`] = `
   white-space: nowrap;
   text-align: start;
   font-size: 14px;
-  width: 100%;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -113,7 +112,7 @@ exports[`Dropdown DropdownMultiselect 2`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  height: 150px;
+  height: 200px;
 }
 
 .c1 {
@@ -195,7 +194,7 @@ exports[`Dropdown DropdownMultiselect 3`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  height: 150px;
+  height: 200px;
 }
 
 <div

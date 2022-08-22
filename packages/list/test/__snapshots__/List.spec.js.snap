@@ -7,6 +7,28 @@ exports[`List renders correctly 1`] = `
   min-width: 0;
   list-style-type: none;
   padding: 0;
+  overflow: hidden;
+}
+
+.c1:hover {
+  pointer-events: auto;
+  overflow-y: scroll;
+}
+
+.c1::-webkit-scrollbar {
+  width: 8px;
+}
+
+.c1::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  background: #F3F6F8;
+  border-radius: 10px;
+}
+
+.c1::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #94A2AB;
 }
 
 .c2 {
@@ -563,7 +585,29 @@ exports[`ListDefault renders correctly 1`] = `
   min-width: 0;
   list-style-type: none;
   padding: 0;
+  overflow: hidden;
   width: 33.33333333333333%;
+}
+
+.c0:hover {
+  pointer-events: auto;
+  overflow-y: scroll;
+}
+
+.c0::-webkit-scrollbar {
+  width: 8px;
+}
+
+.c0::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  background: #F3F6F8;
+  border-radius: 10px;
+}
+
+.c0::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #94A2AB;
 }
 
 .c1 {
@@ -728,7 +772,29 @@ exports[`ListIcon renders correctly 1`] = `
   min-width: 0;
   list-style-type: none;
   padding: 0;
+  overflow: hidden;
   width: 33.33333333333333%;
+}
+
+.c0:hover {
+  pointer-events: auto;
+  overflow-y: scroll;
+}
+
+.c0::-webkit-scrollbar {
+  width: 8px;
+}
+
+.c0::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  background: #F3F6F8;
+  border-radius: 10px;
+}
+
+.c0::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #94A2AB;
 }
 
 .c1 {
@@ -927,7 +993,29 @@ exports[`ListMultiselect renders correctly 1`] = `
   min-width: 0;
   list-style-type: none;
   padding: 0;
+  overflow: hidden;
   width: 33.33333333333333%;
+}
+
+.c1:hover {
+  pointer-events: auto;
+  overflow-y: scroll;
+}
+
+.c1::-webkit-scrollbar {
+  width: 8px;
+}
+
+.c1::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  background: #F3F6F8;
+  border-radius: 10px;
+}
+
+.c1::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #94A2AB;
 }
 
 .c2 {
@@ -1213,7 +1301,7 @@ input:disabled:not(:checked) ~ .c13 {
             style={
               Object {
                 "color": "#94A2AB",
-                "fontWeight": undefined,
+                "fontWeight": "normal",
               }
             }
           >
@@ -1352,7 +1440,7 @@ input:disabled:not(:checked) ~ .c13 {
             style={
               Object {
                 "color": "#49565D",
-                "fontWeight": undefined,
+                "fontWeight": "normal",
               }
             }
           >
@@ -1491,7 +1579,7 @@ input:disabled:not(:checked) ~ .c13 {
             style={
               Object {
                 "color": "#49565D",
-                "fontWeight": undefined,
+                "fontWeight": "normal",
               }
             }
           >
