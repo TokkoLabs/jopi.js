@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Dropdown } from '.'
 import { useFilterData } from '@oneloop/list'
-import { Text } from '@oneloop/text'
 
 export default {
   component: Dropdown,
@@ -122,7 +121,7 @@ export const Search = () => {
             {user.content.name}
           </Dropdown.Multiselect>
         ))}
-        {filteredData.length == 0 &&
+        {filteredData.length === 0 &&
           <Dropdown.Text>
             No se encontraron resultados.
           </Dropdown.Text>

@@ -174,8 +174,10 @@ const DropdownListIcon = ({ disabled, active, icon, variantSize = 'dropdownSizeN
   />
 )
 
-const DropdownText = ({children}) => (
-  <Text variant='body.fontSize12' style={{padding: '9px 12px 9px 12px'}}>{children}</Text>
+const DropdownText = ({ children }) => (
+  <Text variant='body.fontSize12' style={{ padding: '9px 12px 9px 12px' }}>
+    {children}
+  </Text>
 )
 
 Dropdown.Button = DropdownButton

@@ -6,32 +6,36 @@ exports[`List renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-}
-
-.c1:hover {
-  pointer-events: auto;
-  overflow-y: scroll;
-}
-
-.c1::-webkit-scrollbar {
-  width: 8px;
-}
-
-.c1::-webkit-scrollbar-track {
-  -webkit-border-radius: 10px;
-  background: #F3F6F8;
-  border-radius: 10px;
-}
-
-.c1::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #94A2AB;
+  padding: 4px;
 }
 
 .c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow-y: scroll;
+  padding-right: 4px;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.c2::-webkit-scrollbar {
+  width: 4px;
+}
+
+.c2::-webkit-scrollbar-track {
+  -webkit-border-radius: 4px;
+  background: #E4E8EA;
+}
+
+.c2::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  background: #6F838D;
+}
+
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -54,14 +58,14 @@ exports[`List renders correctly 1`] = `
   gap: 8px;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   width: 100%;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -86,14 +90,14 @@ exports[`List renders correctly 1`] = `
   font-weight: 400;
 }
 
-.c5 > *:first-child {
+.c6 > *:first-child {
   position: absolute;
   height: 14px;
   font-size: 14px;
   left: 12px;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -108,7 +112,7 @@ exports[`List renders correctly 1`] = `
   width: 100%;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -128,7 +132,7 @@ exports[`List renders correctly 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -137,7 +141,7 @@ exports[`List renders correctly 1`] = `
   height: 18px;
 }
 
-.c9 {
+.c10 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -148,7 +152,7 @@ exports[`List renders correctly 1`] = `
   height: 100%;
 }
 
-.c13 {
+.c14 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -165,7 +169,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -184,42 +188,42 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c12 {
+.c13 {
   display: none;
 }
 
-input:checked:not(:disabled) ~ .c11 {
+input:checked:not(:disabled) ~ .c12 {
   display: block;
 }
 
-.c15 {
+.c16 {
   display: none;
 }
 
-input:not(:checked):not(:disabled) ~ .c14 {
+input:not(:checked):not(:disabled) ~ .c15 {
   display: block;
 }
 
-.c19 {
+.c20 {
   display: none;
 }
 
-input:checked:disabled ~ .c18 {
+input:checked:disabled ~ .c19 {
   display: block;
 }
 
-.c17 {
+.c18 {
   display: none;
 }
 
-input:disabled:not(:checked) ~ .c16 {
+input:disabled:not(:checked) ~ .c17 {
   display: block;
 }
 
@@ -230,351 +234,355 @@ input:disabled:not(:checked) ~ .c16 {
 <ul
   className="c0 c1"
 >
-  <span
-    className="c0 c2 c3"
+  <div
+    className="c0 c2"
   >
-    <div
-      className="c0 c4"
-      width="100%"
+    <span
+      className="c0 c3 c4"
     >
       <div
         className="c0 c5"
+        width="100%"
       >
-        <span
-          className="icon-buscar"
-        />
-        <input
+        <div
           className="c0 c6"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          placeholder="Search"
-          type="text"
-          width="100%"
-        />
+        >
+          <span
+            className="icon-buscar"
+          />
+          <input
+            className="c0 c7"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            placeholder="Search"
+            type="text"
+            width="100%"
+          />
+        </div>
       </div>
-    </div>
-  </span>
-  <li
-    className="c0 c7"
-    width={1}
-  >
-    <div
+    </span>
+    <li
       className="c0 c8"
+      width={1}
     >
-      <input
+      <div
         className="c0 c9"
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c11 c12 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          fill="#6A88F2"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#6A88F2"
-          width="15"
-          x="0.5"
-          y="0.5"
+        <input
+          className="c0 c10"
+          type="checkbox"
         />
-        <path
-          d="M 5,8 L 7,10 L 12,5"
-          stroke="white"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c14 c15 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          fill="white"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#C1CCD0"
-          width="15"
-          x="0.5"
-          y="0.5"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c16 c17 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          fill="#EFF2F3"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#EFF2F3"
-          width="15"
-          x="0.5"
-          y="0.5"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c18 c19 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          fill="#EFF2F3"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#EFF2F3"
-          width="15"
-          x="0.5"
-          y="0.5"
-        />
-        <path
-          d="M 5,8 L 7,10 L 12,5"
-          stroke="#C1CCD0"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-        />
-      </svg>
-    </div>
-    One
-  </li>
-  <li
-    className="c0 c7"
-    width={1}
-  >
-    <div
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c12 c13 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#6A88F2"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#6A88F2"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+          <path
+            d="M 5,8 L 7,10 L 12,5"
+            stroke="white"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c15 c16 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="white"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#C1CCD0"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c17 c18 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#EFF2F3"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#EFF2F3"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c19 c20 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#EFF2F3"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#EFF2F3"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+          <path
+            d="M 5,8 L 7,10 L 12,5"
+            stroke="#C1CCD0"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+          />
+        </svg>
+      </div>
+      One
+    </li>
+    <li
       className="c0 c8"
+      width={1}
     >
-      <input
+      <div
         className="c0 c9"
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c11 c12 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          fill="#6A88F2"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#6A88F2"
-          width="15"
-          x="0.5"
-          y="0.5"
+        <input
+          className="c0 c10"
+          type="checkbox"
         />
-        <path
-          d="M 5,8 L 7,10 L 12,5"
-          stroke="white"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c14 c15 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          fill="white"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#C1CCD0"
-          width="15"
-          x="0.5"
-          y="0.5"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c16 c17 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          fill="#EFF2F3"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#EFF2F3"
-          width="15"
-          x="0.5"
-          y="0.5"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c18 c19 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          fill="#EFF2F3"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#EFF2F3"
-          width="15"
-          x="0.5"
-          y="0.5"
-        />
-        <path
-          d="M 5,8 L 7,10 L 12,5"
-          stroke="#C1CCD0"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-        />
-      </svg>
-    </div>
-    Two
-  </li>
-  <li
-    className="c0 c7"
-    width={1}
-  >
-    <div
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c12 c13 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#6A88F2"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#6A88F2"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+          <path
+            d="M 5,8 L 7,10 L 12,5"
+            stroke="white"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c15 c16 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="white"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#C1CCD0"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c17 c18 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#EFF2F3"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#EFF2F3"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c19 c20 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#EFF2F3"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#EFF2F3"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+          <path
+            d="M 5,8 L 7,10 L 12,5"
+            stroke="#C1CCD0"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+          />
+        </svg>
+      </div>
+      Two
+    </li>
+    <li
       className="c0 c8"
+      width={1}
     >
-      <input
+      <div
         className="c0 c9"
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c11 c12 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          fill="#6A88F2"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#6A88F2"
-          width="15"
-          x="0.5"
-          y="0.5"
+        <input
+          className="c0 c10"
+          type="checkbox"
         />
-        <path
-          d="M 5,8 L 7,10 L 12,5"
-          stroke="white"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c14 c15 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          fill="white"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#C1CCD0"
-          width="15"
-          x="0.5"
-          y="0.5"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c16 c17 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          fill="#EFF2F3"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#EFF2F3"
-          width="15"
-          x="0.5"
-          y="0.5"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="c0 c10 c18 c19 c0 c13"
-        fill="none"
-        height={16}
-        viewBox="0 0 16 16"
-        width={16}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          fill="#EFF2F3"
-          height="15"
-          rx="4"
-          ry="4"
-          stroke="#EFF2F3"
-          width="15"
-          x="0.5"
-          y="0.5"
-        />
-        <path
-          d="M 5,8 L 7,10 L 12,5"
-          stroke="#C1CCD0"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-        />
-      </svg>
-    </div>
-    Three
-  </li>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c12 c13 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#6A88F2"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#6A88F2"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+          <path
+            d="M 5,8 L 7,10 L 12,5"
+            stroke="white"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c15 c16 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="white"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#C1CCD0"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c17 c18 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#EFF2F3"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#EFF2F3"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          className="c0 c11 c19 c20 c0 c14"
+          fill="none"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#EFF2F3"
+            height="15"
+            rx="4"
+            ry="4"
+            stroke="#EFF2F3"
+            width="15"
+            x="0.5"
+            y="0.5"
+          />
+          <path
+            d="M 5,8 L 7,10 L 12,5"
+            stroke="#C1CCD0"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+          />
+        </svg>
+      </div>
+      Three
+    </li>
+  </div>
 </ul>
 `;
 
@@ -584,33 +592,37 @@ exports[`ListDefault renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  padding: 0;
-  overflow: hidden;
+  padding: 4px;
   width: 33.33333333333333%;
 }
 
-.c0:hover {
-  pointer-events: auto;
-  overflow-y: scroll;
-}
-
-.c0::-webkit-scrollbar {
-  width: 8px;
-}
-
-.c0::-webkit-scrollbar-track {
-  -webkit-border-radius: 10px;
-  background: #F3F6F8;
-  border-radius: 10px;
-}
-
-.c0::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #94A2AB;
-}
-
 .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow-y: scroll;
+  padding-right: 4px;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.c1::-webkit-scrollbar {
+  width: 4px;
+}
+
+.c1::-webkit-scrollbar-track {
+  -webkit-border-radius: 4px;
+  background: #E4E8EA;
+}
+
+.c1::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  background: #6F838D;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -629,14 +641,14 @@ exports[`ListDefault renders correctly 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -681,87 +693,91 @@ exports[`ListDefault renders correctly 1`] = `
   className="c0"
   width={0.3333333333333333}
 >
-  <li
+  <div
     className="c1"
-    width={1}
   >
-    <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    <li
+      className="c2"
+      width={1}
     >
       <div
-        className="c2"
-      >
-        <button
-          className="c3"
-          style={
-            Object {
-              "borderRadius": "0px",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
-        >
-          Item 1
-        </button>
-      </div>
-    </div>
-  </li>
-  <li
-    className="c1"
-    width={1}
-  >
-    <div
-      style={
-        Object {
-          "width": "100%",
         }
-      }
+      >
+        <div
+          className="c3"
+        >
+          <button
+            className="c4"
+            style={
+              Object {
+                "borderRadius": "0px",
+              }
+            }
+          >
+            Item 1
+          </button>
+        </div>
+      </div>
+    </li>
+    <li
+      className="c2"
+      width={1}
     >
       <div
-        className="c2"
-      >
-        <button
-          className="c3"
-          style={
-            Object {
-              "borderRadius": "0px",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
-        >
-          Item 2
-        </button>
-      </div>
-    </div>
-  </li>
-  <li
-    className="c1"
-    width={1}
-  >
-    <div
-      style={
-        Object {
-          "width": "100%",
         }
-      }
+      >
+        <div
+          className="c3"
+        >
+          <button
+            className="c4"
+            style={
+              Object {
+                "borderRadius": "0px",
+              }
+            }
+          >
+            Item 2
+          </button>
+        </div>
+      </div>
+    </li>
+    <li
+      className="c2"
+      width={1}
     >
       <div
-        className="c2"
-      >
-        <button
-          className="c3"
-          style={
-            Object {
-              "borderRadius": "0px",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
+        }
+      >
+        <div
+          className="c3"
         >
-          Item 3
-        </button>
+          <button
+            className="c4"
+            style={
+              Object {
+                "borderRadius": "0px",
+              }
+            }
+          >
+            Item 3
+          </button>
+        </div>
       </div>
-    </div>
-  </li>
+    </li>
+  </div>
 </ul>
 `;
 
@@ -771,33 +787,37 @@ exports[`ListIcon renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  padding: 0;
-  overflow: hidden;
+  padding: 4px;
   width: 33.33333333333333%;
 }
 
-.c0:hover {
-  pointer-events: auto;
-  overflow-y: scroll;
-}
-
-.c0::-webkit-scrollbar {
-  width: 8px;
-}
-
-.c0::-webkit-scrollbar-track {
-  -webkit-border-radius: 10px;
-  background: #F3F6F8;
-  border-radius: 10px;
-}
-
-.c0::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #94A2AB;
-}
-
 .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow-y: scroll;
+  padding-right: 4px;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.c1::-webkit-scrollbar {
+  width: 4px;
+}
+
+.c1::-webkit-scrollbar-track {
+  -webkit-border-radius: 4px;
+  background: #E4E8EA;
+}
+
+.c1::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  background: #6F838D;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -816,14 +836,14 @@ exports[`ListIcon renders correctly 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -869,120 +889,124 @@ exports[`ListIcon renders correctly 1`] = `
   className="c0"
   width={0.3333333333333333}
 >
-  <li
+  <div
     className="c1"
-    width={1}
   >
-    <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    <li
+      className="c2"
+      width={1}
     >
       <div
-        className="c2"
-      >
-        <button
-          className="c3"
-          style={
-            Object {
-              "borderRadius": "0px",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
+        }
+      >
+        <div
+          className="c3"
         >
-          <span
-            className="icon-agente"
+          <button
+            className="c4"
             style={
               Object {
-                "fontSize": "20px",
-                "height": "20px",
+                "borderRadius": "0px",
               }
             }
-          />
-          <span>
-            Item 1
-          </span>
-        </button>
+          >
+            <span
+              className="icon-agente"
+              style={
+                Object {
+                  "fontSize": "20px",
+                  "height": "20px",
+                }
+              }
+            />
+            <span>
+              Item 1
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
-  </li>
-  <li
-    className="c1"
-    width={1}
-  >
-    <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    </li>
+    <li
+      className="c2"
+      width={1}
     >
       <div
-        className="c2"
-      >
-        <button
-          className="c3"
-          style={
-            Object {
-              "borderRadius": "0px",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
+        }
+      >
+        <div
+          className="c3"
         >
-          <span
-            className="icon-agente"
+          <button
+            className="c4"
             style={
               Object {
-                "fontSize": "20px",
-                "height": "20px",
+                "borderRadius": "0px",
               }
             }
-          />
-          <span>
-            Item 2
-          </span>
-        </button>
+          >
+            <span
+              className="icon-agente"
+              style={
+                Object {
+                  "fontSize": "20px",
+                  "height": "20px",
+                }
+              }
+            />
+            <span>
+              Item 2
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
-  </li>
-  <li
-    className="c1"
-    width={1}
-  >
-    <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    </li>
+    <li
+      className="c2"
+      width={1}
     >
       <div
-        className="c2"
-      >
-        <button
-          className="c3"
-          style={
-            Object {
-              "borderRadius": "0px",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
+        }
+      >
+        <div
+          className="c3"
         >
-          <span
-            className="icon-agente"
+          <button
+            className="c4"
             style={
               Object {
-                "fontSize": "20px",
-                "height": "20px",
+                "borderRadius": "0px",
               }
             }
-          />
-          <span>
-            Item 3
-          </span>
-        </button>
+          >
+            <span
+              className="icon-agente"
+              style={
+                Object {
+                  "fontSize": "20px",
+                  "height": "20px",
+                }
+              }
+            />
+            <span>
+              Item 3
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
-  </li>
+    </li>
+  </div>
 </ul>
 `;
 
@@ -992,33 +1016,37 @@ exports[`ListMultiselect renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  padding: 0;
-  overflow: hidden;
+  padding: 4px;
   width: 33.33333333333333%;
 }
 
-.c1:hover {
-  pointer-events: auto;
-  overflow-y: scroll;
-}
-
-.c1::-webkit-scrollbar {
-  width: 8px;
-}
-
-.c1::-webkit-scrollbar-track {
-  -webkit-border-radius: 10px;
-  background: #F3F6F8;
-  border-radius: 10px;
-}
-
-.c1::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #94A2AB;
-}
-
 .c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow-y: scroll;
+  padding-right: 4px;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.c2::-webkit-scrollbar {
+  width: 4px;
+}
+
+.c2::-webkit-scrollbar-track {
+  -webkit-border-radius: 4px;
+  background: #E4E8EA;
+}
+
+.c2::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  background: #6F838D;
+}
+
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1037,14 +1065,14 @@ exports[`ListMultiselect renders correctly 1`] = `
   width: 100%;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1076,7 +1104,7 @@ exports[`ListMultiselect renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1085,7 +1113,7 @@ exports[`ListMultiselect renders correctly 1`] = `
   height: 18px;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1096,7 +1124,7 @@ exports[`ListMultiselect renders correctly 1`] = `
   height: 100%;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1113,7 +1141,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1132,35 +1160,35 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c9 {
+.c10 {
   display: none;
 }
 
-input:checked:not(:disabled) ~ .c8 {
+input:checked:not(:disabled) ~ .c9 {
   display: block;
 }
 
-.c12 {
+.c13 {
   display: none;
 }
 
-input:not(:checked):not(:disabled) ~ .c11 {
+input:not(:checked):not(:disabled) ~ .c12 {
   display: block;
 }
 
-.c16 {
+.c17 {
   display: none;
 }
 
-input:checked:disabled ~ .c15 {
+input:checked:disabled ~ .c16 {
   display: block;
 }
 
-.c14 {
+.c15 {
   display: none;
 }
 
-input:disabled:not(:checked) ~ .c13 {
+input:disabled:not(:checked) ~ .c14 {
   display: block;
 }
 
@@ -1172,422 +1200,426 @@ input:disabled:not(:checked) ~ .c13 {
   className="c0 c1"
   width={0.3333333333333333}
 >
-  <li
+  <div
     className="c0 c2"
-    width={1}
   >
-    <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    <li
+      className="c0 c3"
+      width={1}
     >
       <div
-        className="c0 c3"
-      >
-        <button
-          className="c0 c4"
-          onClick={[Function]}
-          style={
-            Object {
-              "borderRadius": "0px",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
+        }
+      >
+        <div
+          className="c0 c4"
         >
-          <div
+          <button
             className="c0 c5"
-          >
-            <input
-              className="c0 c6"
-              defaultChecked={false}
-              disabled={true}
-              type="checkbox"
-            />
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c8 c9 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#6A88F2"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#6A88F2"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-              <path
-                d="M 5,8 L 7,10 L 12,5"
-                stroke="white"
-                strokeLinecap="round"
-                strokeWidth="1.5"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c11 c12 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="white"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#C1CCD0"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c13 c14 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#EFF2F3"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#EFF2F3"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c15 c16 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#EFF2F3"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#EFF2F3"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-              <path
-                d="M 5,8 L 7,10 L 12,5"
-                stroke="#C1CCD0"
-                strokeLinecap="round"
-                strokeWidth="1.5"
-              />
-            </svg>
-          </div>
-          <span
+            onClick={[Function]}
             style={
               Object {
-                "color": "#94A2AB",
-                "fontWeight": "normal",
+                "borderRadius": "0px",
               }
             }
           >
-            Item 1
-          </span>
-        </button>
+            <div
+              className="c0 c6"
+            >
+              <input
+                className="c0 c7"
+                defaultChecked={false}
+                disabled={true}
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c9 c10 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#6A88F2"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#6A88F2"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+                <path
+                  d="M 5,8 L 7,10 L 12,5"
+                  stroke="white"
+                  strokeLinecap="round"
+                  strokeWidth="1.5"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c12 c13 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="white"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#C1CCD0"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c14 c15 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#EFF2F3"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#EFF2F3"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c16 c17 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#EFF2F3"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#EFF2F3"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+                <path
+                  d="M 5,8 L 7,10 L 12,5"
+                  stroke="#C1CCD0"
+                  strokeLinecap="round"
+                  strokeWidth="1.5"
+                />
+              </svg>
+            </div>
+            <span
+              style={
+                Object {
+                  "color": "#94A2AB",
+                  "fontWeight": "normal",
+                }
+              }
+            >
+              Item 1
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
-  </li>
-  <li
-    className="c0 c2"
-    width={1}
-  >
-    <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    </li>
+    <li
+      className="c0 c3"
+      width={1}
     >
       <div
-        className="c0 c3"
-      >
-        <button
-          className="c0 c4"
-          onClick={[Function]}
-          style={
-            Object {
-              "borderRadius": "0px",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
+        }
+      >
+        <div
+          className="c0 c4"
         >
-          <div
+          <button
             className="c0 c5"
-          >
-            <input
-              className="c0 c6"
-              defaultChecked={false}
-              disabled={false}
-              type="checkbox"
-            />
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c8 c9 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#6A88F2"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#6A88F2"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-              <path
-                d="M 5,8 L 7,10 L 12,5"
-                stroke="white"
-                strokeLinecap="round"
-                strokeWidth="1.5"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c11 c12 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="white"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#C1CCD0"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c13 c14 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#EFF2F3"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#EFF2F3"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c15 c16 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#EFF2F3"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#EFF2F3"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-              <path
-                d="M 5,8 L 7,10 L 12,5"
-                stroke="#C1CCD0"
-                strokeLinecap="round"
-                strokeWidth="1.5"
-              />
-            </svg>
-          </div>
-          <span
+            onClick={[Function]}
             style={
               Object {
-                "color": "#49565D",
-                "fontWeight": "normal",
+                "borderRadius": "0px",
               }
             }
           >
-            Item 2
-          </span>
-        </button>
+            <div
+              className="c0 c6"
+            >
+              <input
+                className="c0 c7"
+                defaultChecked={false}
+                disabled={false}
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c9 c10 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#6A88F2"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#6A88F2"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+                <path
+                  d="M 5,8 L 7,10 L 12,5"
+                  stroke="white"
+                  strokeLinecap="round"
+                  strokeWidth="1.5"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c12 c13 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="white"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#C1CCD0"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c14 c15 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#EFF2F3"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#EFF2F3"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c16 c17 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#EFF2F3"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#EFF2F3"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+                <path
+                  d="M 5,8 L 7,10 L 12,5"
+                  stroke="#C1CCD0"
+                  strokeLinecap="round"
+                  strokeWidth="1.5"
+                />
+              </svg>
+            </div>
+            <span
+              style={
+                Object {
+                  "color": "#49565D",
+                  "fontWeight": "normal",
+                }
+              }
+            >
+              Item 2
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
-  </li>
-  <li
-    className="c0 c2"
-    width={1}
-  >
-    <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    </li>
+    <li
+      className="c0 c3"
+      width={1}
     >
       <div
-        className="c0 c3"
-      >
-        <button
-          className="c0 c4"
-          onClick={[Function]}
-          style={
-            Object {
-              "borderRadius": "0px",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
+        }
+      >
+        <div
+          className="c0 c4"
         >
-          <div
+          <button
             className="c0 c5"
-          >
-            <input
-              className="c0 c6"
-              defaultChecked={false}
-              disabled={false}
-              type="checkbox"
-            />
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c8 c9 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#6A88F2"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#6A88F2"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-              <path
-                d="M 5,8 L 7,10 L 12,5"
-                stroke="white"
-                strokeLinecap="round"
-                strokeWidth="1.5"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c11 c12 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="white"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#C1CCD0"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c13 c14 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#EFF2F3"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#EFF2F3"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              className="c0 c7 c15 c16 c0 c10"
-              fill="none"
-              height={16}
-              viewBox="0 0 16 16"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#EFF2F3"
-                height="15"
-                rx="4"
-                ry="4"
-                stroke="#EFF2F3"
-                width="15"
-                x="0.5"
-                y="0.5"
-              />
-              <path
-                d="M 5,8 L 7,10 L 12,5"
-                stroke="#C1CCD0"
-                strokeLinecap="round"
-                strokeWidth="1.5"
-              />
-            </svg>
-          </div>
-          <span
+            onClick={[Function]}
             style={
               Object {
-                "color": "#49565D",
-                "fontWeight": "normal",
+                "borderRadius": "0px",
               }
             }
           >
-            Item 3
-          </span>
-        </button>
+            <div
+              className="c0 c6"
+            >
+              <input
+                className="c0 c7"
+                defaultChecked={false}
+                disabled={false}
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c9 c10 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#6A88F2"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#6A88F2"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+                <path
+                  d="M 5,8 L 7,10 L 12,5"
+                  stroke="white"
+                  strokeLinecap="round"
+                  strokeWidth="1.5"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c12 c13 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="white"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#C1CCD0"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c14 c15 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#EFF2F3"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#EFF2F3"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                className="c0 c8 c16 c17 c0 c11"
+                fill="none"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#EFF2F3"
+                  height="15"
+                  rx="4"
+                  ry="4"
+                  stroke="#EFF2F3"
+                  width="15"
+                  x="0.5"
+                  y="0.5"
+                />
+                <path
+                  d="M 5,8 L 7,10 L 12,5"
+                  stroke="#C1CCD0"
+                  strokeLinecap="round"
+                  strokeWidth="1.5"
+                />
+              </svg>
+            </div>
+            <span
+              style={
+                Object {
+                  "color": "#49565D",
+                  "fontWeight": "normal",
+                }
+              }
+            >
+              Item 3
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
-  </li>
+    </li>
+  </div>
 </ul>
 `;
