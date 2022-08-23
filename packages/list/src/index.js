@@ -19,6 +19,7 @@ const List = forwardRef(({ children, ...props }, ref) => (
       __css={{
         overflowY: 'scroll',
         paddingRight: '4px',
+        overflow: 'auto',
         'scroll-behavior': 'smooth',
         '::-webkit-scrollbar': {
           width: '4px',
