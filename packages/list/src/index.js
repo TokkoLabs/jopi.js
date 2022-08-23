@@ -7,33 +7,34 @@ import { Button, ButtonHoldPress, ButtonIcon } from '@oneloop/button'
 
 const List = forwardRef(({ children, ...props }, ref) => (
   <Box
-    ref={ref}
-    as="ul"
-    {...props}
-    __css={{
-      listStyleType: 'none',
-      p: 0,
-      overflow: 'hidden',
-      ':hover': {
-        pointerEvents: 'auto',
-        overflowY: 'scroll',
-      },
-      '::-webkit-scrollbar': {
-        width: '8px',
-      },
-      '::-webkit-scrollbar-track': {
-        '-webkit-border-radius': '10px',
-        background: '#F3F6F8',
-        borderRadius: '10px',
-      },
-      '::-webkit-scrollbar-thumb': {
-        '-webkit-border-radius': '10px',
-        borderRadius: '10px',
-        background: '#94A2AB',
-      },
-    }}
+  ref={ref}
+  as="ul"
+  {...props}
+  __css={{
+    listStyleType: 'none',
+    padding: '4px',
+  }}
   >
-    {children}
+    <Box
+      __css={{
+        overflowY: 'scroll',
+        paddingRight: '4px',
+        'scroll-behavior': 'smooth',
+        '::-webkit-scrollbar': {
+          width: '4px',
+        },
+        '::-webkit-scrollbar-track': {
+          '-webkit-border-radius': '4px',
+          background: '#E4E8EA',
+        },
+        '::-webkit-scrollbar-thumb': {
+          '-webkit-border-radius': '4px',
+          background: '#6F838D',
+        },
+      }}
+    >
+      {children}
+    </Box>
   </Box>
 ))
 

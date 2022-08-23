@@ -124,7 +124,7 @@ export const Search = () => {
         ))}
         {filteredData.length == 0 &&
           <Dropdown.Text>
-            No se encontraron resultados
+            No se encontraron resultados.
           </Dropdown.Text>
         }
       </Dropdown.Items>
