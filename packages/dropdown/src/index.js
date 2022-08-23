@@ -3,6 +3,7 @@ import { Box } from '@oneloop/box'
 import { Button, ButtonIcon } from '@oneloop/button'
 import { List } from '@oneloop/list'
 import { useToggle, useOnClickOutside } from '@oneloop/hooks'
+import { Text } from '@oneloop/text'
 import theme from '@oneloop/theme'
 
 const DropdownContext = createContext()
@@ -173,10 +174,15 @@ const DropdownListIcon = ({ disabled, active, icon, variantSize = 'dropdownSizeN
   />
 )
 
+const DropdownText = ({children}) => (
+  <Text variant='body.fontSize12' style={{padding: '9px 12px 9px 12px'}}>{children}</Text>
+)
+
 Dropdown.Button = DropdownButton
 Dropdown.Items = DropdownList
 Dropdown.Item = DropdownListItem
 Dropdown.Default = DropdownListDefault
 Dropdown.Multiselect = DropdownListMultiselect
 Dropdown.Icon = DropdownListIcon
+Dropdown.Text = DropdownText
 Dropdown.Search = DropdownListSearch
