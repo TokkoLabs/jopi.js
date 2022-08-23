@@ -83,7 +83,8 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
             ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, left: paddingIcons }
             : {},
           '> *:last-child': suffix
-            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, right: paddingIcons }
+            ? suffix.type === 'span' ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, right: paddingIcons } :
+              { position: 'absolute', right: paddingIcons }
             : {},
         }}
       >

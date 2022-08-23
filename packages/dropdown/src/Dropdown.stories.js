@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Dropdown } from '.'
 import { useFilterData } from '@oneloop/list'
+import { ButtonIcon } from '@oneloop/button'
 
 export default {
   component: Dropdown,
@@ -75,9 +76,9 @@ export const Search = () => {
   const [filteredData, setValue] = useFilterData(data, 'content')
   const [text, setText] = useState('')
 
-  const onFilter = (e) => {
-    setValue(e.target.value)
-    setText(e.target.value)
+  const onFilter = (value) => {
+    setValue(value)
+    setText(value)
   }
 
   const orderList = (list) => {
@@ -115,7 +116,8 @@ export const Search = () => {
     <Dropdown width={1 / 4}>
       <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={ list.length > 0 }/>
       <Dropdown.Items>
-        <Dropdown.Search placeholder='Search' onChange={onFilter} value={text}/>
+        <Dropdown.Search placeholder='Search' onChange={e => onFilter(e.target.value)} value={text} 
+          suffix={text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => onFilter('')}/> : undefined}/>
         {filteredData.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } active={list.includes(user.id)}>
             {user.content.name}

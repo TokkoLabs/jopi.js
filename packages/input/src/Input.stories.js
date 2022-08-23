@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Input } from '.'
+import { ButtonIcon } from '@oneloop/button'
 import { useToggle } from '@oneloop/hooks'
 
 export default {
@@ -64,42 +65,70 @@ export const InputWithPassword = () => {
   )
 }
 
-export const search = () => (
-  <Input
-    prefix={<span className='icon-buscar'/>}
-    placeholder="Search"
-    variant='inputSearch'
-    width='300px'
-  />
-)
+export const search = () => {
+  const [text, setText] = React.useState('')
 
-export const searchTransparent = () => (
-  <Input
-    prefix={<span className='icon-buscar'/>}
-    placeholder="Search"
-    variant='inputSearchTransparent'
-    width='300px'
-  />
-)
+  return (
+    <Input
+      prefix={<span className='icon-buscar'/>}
+      suffix={ text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => setText('')}/> : undefined }
+      placeholder="Search"
+      variant='inputSearch'
+      width='300px'
+      onChange={e => setText(e.target.value)}
+      value={text}
+    />
+  )
+}
 
-export const searchOutlined = () => (
-  <Input
-    prefix={<span className='icon-buscar'/>}
-    placeholder="Search"
-    variant='inputSearchOutlined'
-    width='300px'
-  />
-)
+export const searchTransparent = () => {
+  const [text, setText] = React.useState('')
 
-export const searchTransparentBold = () => (
-  <Input
-    prefix={<span className='icon-buscar'/>}
-    placeholder="Search"
-    variant='inputSearchTransparent'
-    width='300px'
-    bold
-  />
-)
+  return (
+    <Input
+      prefix={<span className='icon-buscar'/>}
+      suffix={ text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => setText('')}/> : undefined }
+      placeholder="Search"
+      variant='inputSearchTransparent'
+      width='300px'
+      onChange={e => setText(e.target.value)}
+      value={text}
+    />
+  )
+}
+
+export const searchOutlined = () => {
+  const [text, setText] = React.useState('')
+
+  return (
+    <Input
+      prefix={<span className='icon-buscar'/>}
+      suffix={ text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => setText('')}/> : undefined }
+      placeholder="Search"
+      variant='inputSearchOutlined'
+      width='300px'
+      onChange={e => setText(e.target.value)}
+      value={text}
+    />
+  )
+}
+
+export const searchTransparentBold = () => {
+  const [text, setText] = React.useState('')
+
+  return (
+    <Input
+      prefix={<span className='icon-buscar'/>}
+      suffix={ text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => setText('')}/> : undefined }
+      placeholder="Search"
+      variant='inputSearchTransparent'
+      bold
+      width='300px'
+      onChange={e => setText(e.target.value)}
+      value={text}
+    />
+  )
+}
 
 export const searchPrefixSuffix = () => (
   <Input

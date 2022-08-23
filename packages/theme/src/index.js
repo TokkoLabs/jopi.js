@@ -909,6 +909,22 @@ const theme = {
         colorActive: colors.subtlePressed,
       },
     },
+    transparentIcon: {
+      backgroundColor: colors.transparent,
+      color: colors.subtle,
+      colorActive: colors.subtlePressed,
+      justifyContent: 'center',
+      borderRadius: '12px',
+      ':hover': {
+        backgroundColor: colors.neutral[7],
+        color: colors.subtleHover,
+      },
+      ':focus': {
+        backgroundColor: colors.transparent,
+        color: colors.subtlePressed,
+        colorActive: colors.subtlePressed,
+      },
+    },
     roundIconArrow: {
       backgroundColor: colors.neutral[7],
       border: colors.neutral[7],
