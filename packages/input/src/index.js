@@ -42,7 +42,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
 
   const index = Object.keys(theme.forms).indexOf(variantSize)
   const paddingLeft = prefix ? Object.values(theme.forms)[index].paddingLeftPrefix : Object.values(theme.forms)[index].paddingLeftNoPrefix
-  const paddingRigth = suffix ? Object.values(theme.forms)[index].paddingRigthSuffix : Object.values(theme.forms)[index].paddingRigthNoSuffix
+  const paddingRight = suffix ? Object.values(theme.forms)[index].paddingRightSuffix : Object.values(theme.forms)[index].paddingRightNoSuffix
   const paddingIcons = Object.values(theme.forms)[index].paddingIcons
   const fontSizePrefix = Object.values(theme.forms)[index].fontSize
 
@@ -108,7 +108,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
             fontFamily: 'primary',
             display: 'block',
             paddingLeft: paddingLeft,
-            paddingRigth: paddingRigth,
+            paddingRight: paddingRight,
             outline: 'none',
           }}
         />
