@@ -64,7 +64,7 @@ export const SubmenuNormalLeft = () => {
   const [active, setActive] = useToggle(false)
   return (
     <div style={{ background: '#F3F6F8', paddingLeft: '400px', paddingTop: '140px', borderRadius: '10px', height: '180px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'left'))} id="parent1" aria-describedby="tooltip1"/>
+      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'left'))} id="parent1" aria-describedby="tooltip1" style={{ position: 'absolute', right: '200px' }}/>
       <div id="tooltip1" role="tooltip1" hidden={!active && !hover} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'left'))}>
         <Submenu parentId='parent1' childrenId='tooltip1' width='202px' placement='left'>
           <Text variant='submenuTitle'>Crear</Text>
