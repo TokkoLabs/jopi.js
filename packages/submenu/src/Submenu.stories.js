@@ -30,6 +30,12 @@ export default {
       description: 'Es el Id del componente que encapsula el Submenu.',
       type: 'text',
     },
+    offset: {
+      name: 'offset',
+      required: true,
+      description: 'El valor del distanciamiento entre el submenu y el objeto de referencia.',
+      type: 'number',
+    },
   },
 }
 
