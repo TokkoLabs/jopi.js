@@ -39,19 +39,25 @@ export default {
   },
 }
 
+// Este metodo que esta aparte, lo pongo en el hook y nos retorna un booleano, que usamos para determinar el hover
+
 export const SubmenuNormal = () => {
   //const [hover, setHover] = useToggle(false)
   const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
 
   const checkOver = (e) => {
+    const tooltipId = 'tooltip0'
     const parentId = 'parent0'
     const placement = 'right'
     const x = e.clientX - e.target.offsetLeft
     const y = e.clientY - e.target.offsetTop
     const positionParent = document.getElementById(parentId).getBoundingClientRect()
-  //  console.log('x: ' + x + '\ny: ' + y)
-    if ((placement === 'right' && x <= positionParent.right) ||
+    const positionTooltip = document.getElementById(tooltipId).getBoundingClientRect()
+    // console.log('x: ' + x + '\ny: ' + y)
+    console.log(positionTooltip)
+    console.log('x: ' + x + '\ny: ' + y)
+    if ((placement === 'right' && (x <= positionParent.right || x > positionTooltip.right || y < positionTooltip.top || y > positionTooltip.bottom )) ||
       (placement === 'left' && x >= positionParent.left) ||
       (placement === 'top' && y <= positionParent.up) ||
       (placement === 'bottom' && y >= positionParent.bottom)) {
@@ -62,7 +68,7 @@ export const SubmenuNormal = () => {
     <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '125px', borderRadius: '10px', height: '150px' }}>
       <div style={{ width: 'fit-content', height: 'fit-content' }} onMouseOver={() => setHover(true)}>
         <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => checkOver(e)} id="parent0" aria-describedby="tooltip0"/>
-        <div id="tooltip0" role="tooltip0" hidden={!active && !hover}>
+        <div id="tooltip0" role="tooltip0" hidden={!active && !hover} onMouseOut={(e) => checkOver(e)}>
           <Submenu parentId='parent0' childrenId='tooltip0' width='202px'>
             <Text variant='submenuTitle'>Crear</Text>
             <ButtonHoldPress variant='submenu' icon='icon-contacto' text='Contacto' maxWidth/>
