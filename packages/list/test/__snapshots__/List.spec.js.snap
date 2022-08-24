@@ -15,6 +15,7 @@ exports[`List renders correctly 1`] = `
   min-width: 0;
   overflow-y: scroll;
   padding-right: 4px;
+  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
@@ -92,9 +93,9 @@ exports[`List renders correctly 1`] = `
 
 .c6 > *:first-child {
   position: absolute;
+  left: 12px;
   height: 14px;
   font-size: 14px;
-  left: 12px;
 }
 
 .c7 {
@@ -107,7 +108,7 @@ exports[`List renders correctly 1`] = `
   font-family: primary;
   display: block;
   padding-left: 30px;
-  padding-rigth: 12px;
+  padding-right: 12px;
   outline: none;
   width: 100%;
 }
@@ -602,6 +603,7 @@ exports[`ListDefault renders correctly 1`] = `
   min-width: 0;
   overflow-y: scroll;
   padding-right: 4px;
+  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
@@ -797,6 +799,7 @@ exports[`ListIcon renders correctly 1`] = `
   min-width: 0;
   overflow-y: scroll;
   padding-right: 4px;
+  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
@@ -1026,6 +1029,7 @@ exports[`ListMultiselect renders correctly 1`] = `
   min-width: 0;
   overflow-y: scroll;
   padding-right: 4px;
+  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;

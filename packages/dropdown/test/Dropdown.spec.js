@@ -101,4 +101,18 @@ describe('Dropdown', () => {
       expect(e.message).toBe('Dropdown compound components cannot be rendered outside the Dropdown component')
     }
   })
+
+  test('DropdownText', () => {
+    const tree = renderer
+      .create(
+        <Dropdown>
+          <Dropdown.Items>
+            <Dropdown.Text>One</Dropdown.Text>
+          </Dropdown.Items>
+        </Dropdown>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })

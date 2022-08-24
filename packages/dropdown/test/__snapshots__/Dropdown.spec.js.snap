@@ -202,4 +202,18 @@ exports[`Dropdown DropdownMultiselect 3`] = `
 />
 `;
 
+exports[`Dropdown DropdownText 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`Dropdown default 1`] = `ShallowWrapper {}`;
