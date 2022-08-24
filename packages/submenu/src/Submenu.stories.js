@@ -14,7 +14,7 @@ export default {
     },
     placement: {
       name: 'placement',
-      description: 'Posición del tooltip o submenu: [ \'right\', \'left\', \'up\', \'down\' ]',
+      description: 'Posición del tooltip o submenu: [ \'right\', \'left\', \'top\', \'bottom\' ]',
       type: 'text',
       control: { type: 'none' },
     },
@@ -40,20 +40,38 @@ export default {
 }
 
 export const SubmenuNormal = () => {
-  const [hover, setHover] = useToggle(false)
+  //const [hover, setHover] = useToggle(false)
+  const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
+
+  const checkOver = (e) => {
+    const parentId = 'parent0'
+    const placement = 'right'
+    const x = e.clientX - e.target.offsetLeft
+    const y = e.clientY - e.target.offsetTop
+    const positionParent = document.getElementById(parentId).getBoundingClientRect()
+  //  console.log('x: ' + x + '\ny: ' + y)
+    if ((placement === 'right' && x <= positionParent.right) ||
+      (placement === 'left' && x >= positionParent.left) ||
+      (placement === 'top' && y <= positionParent.up) ||
+      (placement === 'bottom' && y >= positionParent.bottom)) {
+      setHover(false);
+    }
+  }
   return (
-    <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '125px', borderRadius: '10px', height: '135px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} id="parent0" aria-describedby="tooltip0"/>
-      <div id="tooltip0" role="tooltip0" hidden={!active && !hover}>
-        <Submenu parentId='parent0' childrenId='tooltip0' width='202px'>
-          <Text variant='submenuTitle'>Crear</Text>
-          <ButtonHoldPress variant='submenu' icon='icon-contacto' text='Contacto' maxWidth/>
-          <ButtonHoldPress variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
-          <ButtonHoldPress variant='submenu' icon='icon-propiedades' text='Propiedad' maxWidth/>
-          <ButtonHoldPress variant='submenu' icon='icon-emprendimiento' text='Emprendimiento' maxWidth/>
-          <ButtonHoldPress variant='submenu' icon='icon-email' text='Email' maxWidth/>
-        </Submenu>
+    <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '125px', borderRadius: '10px', height: '150px' }}>
+      <div style={{ width: 'fit-content', height: 'fit-content' }} onMouseOver={() => setHover(true)}>
+        <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => checkOver(e)} id="parent0" aria-describedby="tooltip0"/>
+        <div id="tooltip0" role="tooltip0" hidden={!active && !hover}>
+          <Submenu parentId='parent0' childrenId='tooltip0' width='202px'>
+            <Text variant='submenuTitle'>Crear</Text>
+            <ButtonHoldPress variant='submenu' icon='icon-contacto' text='Contacto' maxWidth/>
+            <ButtonHoldPress variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
+            <ButtonHoldPress variant='submenu' icon='icon-propiedades' text='Propiedad' maxWidth/>
+            <ButtonHoldPress variant='submenu' icon='icon-emprendimiento' text='Emprendimiento' maxWidth/>
+            <ButtonHoldPress variant='submenu' icon='icon-email' text='Email' maxWidth/>
+          </Submenu>
+        </div>
       </div>
     </div>
   )
