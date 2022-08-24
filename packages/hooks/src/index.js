@@ -39,3 +39,14 @@ export const useFilterData = (data, key) => {
 
   return [handleFilter, setValue]
 }
+
+export const isMouseOutTooltip = (e, tooltipId, parentId, placement) => {
+  const x = e.clientX - e.target.offsetLeft
+  const y = e.clientY - e.target.offsetTop
+  const positionParent = document.getElementById(parentId).getBoundingClientRect()
+  const positionTooltip = document.getElementById(tooltipId).getBoundingClientRect()
+  return !((placement === 'right' && (x <= positionParent.right || x > positionTooltip.right || y < positionTooltip.top || y > positionTooltip.bottom)) ||
+    (placement === 'left' && (x >= positionParent.left || x < positionTooltip.left || y < positionTooltip.top || y > positionTooltip.bottom)) ||
+    (placement === 'top' && (y >= positionParent.top || y < positionTooltip.top || x < positionTooltip.left || x > positionTooltip.right)) ||
+    (placement === 'bottom' && (y < positionParent.bottom || y > positionTooltip.bottom || x < positionTooltip.left || x > positionTooltip.right)))
+}
