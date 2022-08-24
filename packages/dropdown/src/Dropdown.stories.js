@@ -116,7 +116,7 @@ export const Search = () => {
     <Dropdown width={1 / 4}>
       <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={ list.length > 0 }/>
       <Dropdown.Items>
-        <Dropdown.Search placeholder='Search' onChange={e => onFilter(e.target.value)} value={text} 
+        <Dropdown.Search placeholder='Search' onChange={e => onFilter(e.target.value)} value={text}
           suffix={text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => onFilter('')}/> : undefined}/>
         {filteredData.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } active={list.includes(user.id)}>

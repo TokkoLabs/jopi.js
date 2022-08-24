@@ -65,7 +65,7 @@ export const InputWithPassword = () => {
   )
 }
 
-export const search = () => {
+export const Search = () => {
   const [text, setText] = React.useState('')
 
   return (
@@ -81,7 +81,7 @@ export const search = () => {
   )
 }
 
-export const searchTransparent = () => {
+export const SearchTransparent = () => {
   const [text, setText] = React.useState('')
 
   return (
@@ -97,7 +97,7 @@ export const searchTransparent = () => {
   )
 }
 
-export const searchOutlined = () => {
+export const SearchOutlined = () => {
   const [text, setText] = React.useState('')
 
   return (
@@ -113,7 +113,7 @@ export const searchOutlined = () => {
   )
 }
 
-export const searchTransparentBold = () => {
+export const SearchTransparentBold = () => {
   const [text, setText] = React.useState('')
 
   return (
@@ -130,7 +130,7 @@ export const searchTransparentBold = () => {
   )
 }
 
-export const searchPrefixSuffix = () => (
+export const SearchPrefixSuffix = () => (
   <Input
     prefix={<span className='icon-buscar'/>}
     suffix={<span className='icon-propiedades'/>}

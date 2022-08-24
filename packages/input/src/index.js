@@ -45,7 +45,9 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
   const paddingRight = suffix ? Object.values(theme.forms)[index].paddingRightSuffix : Object.values(theme.forms)[index].paddingRightNoSuffix
   const paddingIcons = Object.values(theme.forms)[index].paddingIcons
   const fontSizePrefix = Object.values(theme.forms)[index].fontSize
-
+  if (suffix && suffix.type !== 'span') {
+    suffix = <div>{suffix}</div>
+  }
   return (
     <Box
       width='100%'
@@ -80,11 +82,14 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
           fontWeight: bold ? 700 : 400,
           width: width,
           '> *:first-child': prefix
-            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, left: paddingIcons }
+            ? prefix.type === 'span'
+                ? { position: 'absolute', left: paddingIcons, height: fontSizePrefix, fontSize: fontSizePrefix }
+                : { position: 'absolute', left: paddingIcons }
             : {},
           '> *:last-child': suffix
-            ? suffix.type === 'span' ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, right: paddingIcons } :
-              { position: 'absolute', right: paddingIcons }
+            ? suffix.type === 'span'
+                ? { position: 'absolute', right: paddingIcons, height: fontSizePrefix, fontSize: fontSizePrefix }
+                : { position: 'absolute', right: paddingIcons }
             : {},
         }}
       >
