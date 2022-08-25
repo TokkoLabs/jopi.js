@@ -45,9 +45,57 @@ export const TooltipRight = () => {
 
   return (
     <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip5', 'parent5', 'right'))} id="parent5" aria-describedby="tooltip5"/>
-      <div id="tooltip5" role="tooltip5" hidden={!active && !hover}>
-        <Tooltip parentId='parent5' childrenId='tooltip5'>
+      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip0', 'parent0', 'right'))} id="parent0" aria-describedby="tooltip0"/>
+      <div id="tooltip0" role="tooltip0" hidden={!active && !hover}>
+        <Tooltip parentId='parent0' childrenId='tooltip0'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipLeft = () => {
+  const [hover, setHover] = useToggle(false)
+  const [active, setActive] = useToggle(false)
+
+  return (
+    <div style={{ background: '#F3F6F8', paddingTop: '10px', borderRadius: '10px', height: '50px' }}>
+      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'left'))} id="parent1" aria-describedby="tooltip1" style={{ position: 'absolute', right: '200px' }}/>
+      <div id="tooltip1" role="tooltip1" hidden={!active && !hover}>
+        <Tooltip parentId='parent1' childrenId='tooltip1' placement='left'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipTop = () => {
+  const [hover, setHover] = useToggle(false)
+  const [active, setActive] = useToggle(false)
+
+  return (
+    <div style={{ background: '#F3F6F8', padding: '40px', borderRadius: '10px' }}>
+      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip2', 'parent2', 'top'))} id="parent2" aria-describedby="tooltip2"/>
+      <div id="tooltip2" role="tooltip2" hidden={!active && !hover}>
+        <Tooltip parentId='parent2' childrenId='tooltip2' placement='top'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipBottom = () => {
+  const [hover, setHover] = useToggle(false)
+  const [active, setActive] = useToggle(false)
+
+  return (
+    <div style={{ background: '#F3F6F8', padding: '40px', borderRadius: '10px' }}>
+      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip3', 'parent3', 'bottom'))} id="parent3" aria-describedby="tooltip3"/>
+      <div id="tooltip3" role="tooltip3" hidden={!active && !hover}>
+        <Tooltip parentId='parent3' childrenId='tooltip3' placement='bottom'>
           <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Tooltip>
       </div>
