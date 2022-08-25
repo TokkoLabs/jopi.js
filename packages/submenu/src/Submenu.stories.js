@@ -10,11 +10,11 @@ export default {
   argTypes: {
     variant: {
       name: 'variant',
-      description: 'Variantes disponibles del submenu: [ \'submenu\', \'tooltip\' ]',
+      description: 'Variantes disponibles del submenu: [ \'submenu\' ]',
     },
     placement: {
       name: 'placement',
-      description: 'Posición del tooltip o submenu: [ \'right\', \'left\', \'top\', \'bottom\' ]',
+      description: 'Posición del submenu: [ \'right\', \'left\', \'top\', \'bottom\' ]',
       type: 'text',
       control: { type: 'none' },
     },
@@ -133,22 +133,6 @@ export const SubmenuWithOutIcon = () => {
           <ButtonHoldPress variant='submenu' text='Propiedad' maxWidth/>
           <ButtonHoldPress variant='submenu' text='Emprendimiento' maxWidth badgeValue={1850} />
           <ButtonHoldPress variant='submenu' text='Email' maxWidth badgeValue={30} />
-        </Submenu>
-      </div>
-    </div>
-  )
-}
-
-export const Tooltip = () => {
-  const [hover, setHover] = useToggle(false)
-  const [active, setActive] = useToggle(false)
-
-  return (
-    <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip5', 'parent5', 'right'))} id="parent5" aria-describedby="tooltip5"/>
-      <div id="tooltip5" role="tooltip5" hidden={!active && !hover}>
-        <Submenu parentId='parent5' childrenId='tooltip5' variant='tooltip'>
-          <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Submenu>
       </div>
     </div>

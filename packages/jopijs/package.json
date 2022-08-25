@@ -24,11 +24,13 @@
     "@oneloop/modal": "^1.2.238",
     "@oneloop/paginator": "^1.0.83",
     "@oneloop/radio": "^1.2.226",
+    "@oneloop/submenu": "^1.0.1",
     "@oneloop/switch": "^1.2.229",
     "@oneloop/table": "^1.2.226",
     "@oneloop/tabs": "^1.4.201",
     "@oneloop/text": "^1.2.227",
     "@oneloop/textarea": "^1.0.174",
+    "@oneloop/tooltip": "^1.0.0",
     "styled-components": "^5.3.5"
   },
   "peerDependencies": {
