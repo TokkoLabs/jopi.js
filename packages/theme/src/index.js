@@ -1639,6 +1639,15 @@ const theme = {
       height: '26px',
     },
   },
+  card: {
+    red: {
+      padding: '8px 10px 8px 10px',
+      gap: '8px',
+      height: '59px',
+      backgroundColor: colors.neutralGray10,
+      borderRadius: '10px',
+    }
+  }
 }
 
 export default theme
