@@ -1,36 +1,24 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
+import theme from '@oneloop/theme'
 
-export const Card = ({ variant, ...props }) => (
-  <Box sx={{ position: 'relative' }}>
-    <Box
-      tx='card'
-      variant={variant}
-      {...props}
-      __css={{
-        fontFamily: 'primary',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-      //  width: '224px',
-      //  borderSpacing: '4px 0px',
-      }}
-      />
-  </Box>
-)
-/*
-const CardRowItem = (props) => (
-  <Box
-    as="td"
-    {...props}
-    __css={{
-      py: '16px',
-      color: 'darkGrey',
-      mb: '5px',
-      backgroundColor: 'inputBackground',
-    }}
-  />
-)*/
-
-// Card.Row = CardRow
-// Card.RowItem = CardRowItem
+export const Card = ({ variant, active = false, ...props }) => {
+  const variantValues = Object.values(theme.card)[Object.keys(theme.card).indexOf(variant)]
+  let backgroundColor = active ? variantValues[":focus"].backgroundColor : variantValues.backgroundColorValue
+  return (
+    <Box sx={{ position: 'relative' }}>
+      <Box
+        tx='card'
+        variant={variant}
+        {...props}
+        __css={{
+          fontFamily: 'primary',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          backgroundColor: backgroundColor,
+        }}
+        />
+    </Box>
+  )
+}

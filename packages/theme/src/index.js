@@ -1640,12 +1640,18 @@ const theme = {
     },
   },
   card: {
-    red: {
+    normal: {
       padding: '8px 10px 8px 10px',
       gap: '8px',
       height: '59px',
-      backgroundColor: colors.neutralGray10,
+      backgroundColorValue: colors.neutralGray10,
       borderRadius: '10px',
+      ':hover': {
+        backgroundColor: colors.neutralGray8,
+      },
+      ':focus': {
+        backgroundColor: colors.neutralGray8,
+      },
     }
   }
 }
