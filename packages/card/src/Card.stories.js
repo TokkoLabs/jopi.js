@@ -10,6 +10,14 @@ import { useToggle } from '@oneloop/hooks'
 export default {
   component: Card,
   title: 'Card',
+  argTypes: {
+    variant: {
+      name: 'variant',
+      description: 'Variantes disponibles del card: [ \'normal\', \'contacts\' ]',
+      type: 'text',
+      control: { type: 'none' },
+    },
+  },
 }
 
 export const card = () => {
@@ -33,7 +41,7 @@ export const cardContactosMailWhatsapp = () => {
   const [active, setActive] = useToggle(false)
 
   return (
-    <Card id='0' variant='normal' width='224px' onClick={() => setActive()} active={active}>
+    <Card id='0' variant='contacts' width='224px' onClick={() => setActive()} active={active}>
       <Checkbox onClick={() => setActive()} isChecked={active} />
       <Image variant="avatar" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
       <Box sx={{ position: 'relative' }}>
@@ -50,9 +58,9 @@ export const cardContactosEmpresa = () => {
   const [active, setActive] = useToggle(false)
 
   return (
-    <Card id='0' variant='normal' width='224px' onClick={() => setActive()} active={active}>
+    <Card id='0' variant='contacts' width='224px' onClick={() => setActive()} active={active}>
       <Checkbox onClick={() => setActive()} isChecked={active} />
-      <Image variant="avatar" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width='30px' />
+      <Image variant="avatar" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
       <Box sx={{ position: 'relative' }}>
         <Text variant='body600.fontSize12'>Marian Prueba</Text>
         <Text variant={[ 'body.fontSize11', 'ellipsis' ]} style={{ color: '#6F838D' }}>Motomami Company</Text>
