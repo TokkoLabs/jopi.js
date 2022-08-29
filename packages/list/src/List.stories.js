@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { List, useFilterData } from '.'
+import { ButtonIcon } from '@oneloop/button'
 
 export default {
   component: List,
@@ -49,10 +50,21 @@ export const selectable = () => (
 export const searchable = () =>
   React.createElement(() => {
     const [filteredData, setValue] = useFilterData(data, 'content')
+    const [text, setText] = useState('')
+
+    const onFilter = (value) => {
+      setValue(value)
+      setText(value)
+    }
 
     return (
       <List width={1 / 3}>
-        <List.Search onChange={(e) => setValue(e.target.value)} />
+        <List.Search
+          onChange={(e) => onFilter(e.target.value)}
+          placeholder='Search'
+          value={text}
+          suffix={text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => onFilter('')}/> : undefined }
+        />
         {filteredData.map((user) => (
           <List.Multiselect key={user.id}>{user.content.name}</List.Multiselect>
         ))}

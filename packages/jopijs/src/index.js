@@ -22,6 +22,7 @@ import { Table } from '@oneloop/table'
 import { Tabs } from '@oneloop/tabs'
 import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
+import { Tooltip } from '@oneloop/tooltip'
 import { ThemeProvider } from 'styled-components'
 export {
   Alert,
@@ -55,4 +56,5 @@ export {
   ThemeProvider,
   Fonts,
   Submenu,
+  Tooltip,
 }
