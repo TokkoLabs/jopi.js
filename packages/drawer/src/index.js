@@ -47,6 +47,11 @@ const DrawerMotion = ({
     closed: { width: animationMinWidth },
   }
 
+  const variantsDrawerMenuRight = {
+    open: { width: animationWidth, backgroundColor: 'white' },
+    closed: { width: animationMinWidth, backgroundColor: 'white' }, // backgroundColor: 'transparent'
+  }
+
   const drawerOverlayInitial = {
     backgroundColor: 'rgba(4, 4, 4, 0.79)',
     position: 'fixed',
@@ -74,6 +79,21 @@ const DrawerMotion = ({
     boxShadow: '5px 0 5px -5px rgba(0, 0, 0, 0.15)',
     position: 'relative',
     left: 0,
+    top: 0,
+    height: '100%',
+    maxWidth: '100%',
+    width: animationWidth,
+    overflowY: 'auto',
+    padding: '10px',
+    overflow: 'visible',
+    zIndex: 100,
+  }
+
+  const drawerMenuContentInitialRight = {
+    backgroundColor: 'white',
+    position: 'absolute',
+    boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0.05)',
+    right: 0,
     top: 0,
     height: '100%',
     maxWidth: '100%',
@@ -115,17 +135,32 @@ const DrawerMotion = ({
       </motion.div>
     )
   } else {
-    return (
-      <motion.div
-        key="drawerContent"
-        variants={variantsDrawerMenu}
-        initial={drawerMenuContentInitial}
-        animate={ isCollapse ? 'open' : 'closed' }
-        transition={{ duration: 0.5 }}
-      >
-        {children}
-      </motion.div>
-    )
+    if (screenSide === 'left') {
+      return (
+        <motion.div
+          key="drawerContent"
+          variants={variantsDrawerMenu}
+          initial={drawerMenuContentInitial}
+          animate={ isCollapse ? 'open' : 'closed' }
+          transition={{ duration: 0.5 }}
+        >
+          {children}
+        </motion.div>
+      )
+    } else {
+      return (
+        <motion.div
+          key="drawerContent"
+          variants={variantsDrawerMenuRight}
+          initial={drawerMenuContentInitialRight}
+          animate={ isCollapse ? 'open' : 'closed' }
+          transition={{ duration: 0.8 }}
+          position='absolute'
+        >
+          {children}
+        </motion.div>
+      )
+    }
   }
 }
 

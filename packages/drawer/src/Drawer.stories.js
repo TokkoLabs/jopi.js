@@ -1,4 +1,5 @@
 import React from 'react'
+import { Box } from '@oneloop/box'
 import { useToggle } from '@oneloop/hooks'
 import { Button, ButtonIcon } from '@oneloop/button'
 import { Text } from '@oneloop/text'
@@ -84,15 +85,40 @@ export const menu = () =>
 
     return (
       <React.Fragment>
-        <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={304} animationMinWidth={82} overlay={overlay}>
-          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '60px' }}/>
-          <Drawer.Header>
-          </Drawer.Header>
-          <Drawer.Body>
-          </Drawer.Body>
-          <Drawer.Footer>
-          </Drawer.Footer>
-        </Drawer>
+        <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
+          <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={304} animationMinWidth={82} overlay={overlay}>
+            <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '60px' }}/>
+            <Drawer.Header>
+            </Drawer.Header>
+            <Drawer.Body>
+            </Drawer.Body>
+            <Drawer.Footer>
+            </Drawer.Footer>
+          </Drawer>
+        </Box>
+      </React.Fragment>
+    )
+  })
+
+
+  export const menuRight = () =>
+  React.createElement(() => {
+    const [isCollapse, toggle] = useToggle(true)
+    const overlay = false
+
+    return (
+      <React.Fragment>
+        <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
+          <Drawer isCollapse={isCollapse} screenSide={'right'} animationWidth={304} animationMinWidth={70} overlay={overlay}>
+            <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonClosed' : 'collapseButtonOpen'} style={{ position: 'absolute', right: '304px', top: '40px' }}/>
+            <Drawer.Header>
+            </Drawer.Header>
+            <Drawer.Body>
+            </Drawer.Body>
+            <Drawer.Footer>
+            </Drawer.Footer>
+          </Drawer>
+        </Box>
       </React.Fragment>
     )
   })
