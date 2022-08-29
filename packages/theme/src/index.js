@@ -1643,7 +1643,6 @@ const theme = {
     normal: {
       padding: '8px 10px 8px 10px',
       gap: '8px',
-      height: '59px',
       backgroundColorValue: colors.neutralGray10,
       borderRadius: '10px',
       ':hover': {
@@ -1652,8 +1651,20 @@ const theme = {
       ':focus': {
         backgroundColor: colors.neutralGray8,
       },
-    }
-  }
+    },
+    contacts: {
+      padding: '6px 10px 6px 10px',
+      gap: '8px',
+      backgroundColorValue: colors.neutralGray10,
+      borderRadius: '10px',
+      ':hover': {
+        backgroundColor: colors.neutralGray8,
+      },
+      ':focus': {
+        backgroundColor: colors.neutralGray8,
+      },
+    },
+  },
 }
 
 export default theme
