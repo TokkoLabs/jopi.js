@@ -1,13 +1,34 @@
 import React, { useState } from 'react'
 import { Dropdown } from '.'
 import { useFilterData } from '@oneloop/list'
+import { ButtonIcon } from '@oneloop/button'
 
 export default {
   component: Dropdown,
   title: 'Dropdown',
+  argTypes: {
+    observacionesGenerales: {
+      name: 'observaciones generales',
+      description: 'El primer Search contiene metodos para organizar las listas por nombres. ' +
+      'Hay dos tipos de dropdown seleccionable o multiple.',
+    },
+    variant: {
+      name: 'variant',
+      description: 'Variantes de color disponibles: ' +
+      '[ \'dropdownDefault\', \'dropdownDisabled\', \'dropdownOutlined\', \'dropdownOutlinedDisabled\',' +
+      '\'dropdownTransparent\', \'dropdownTransparentDisabled\', \'dropdownIcon\', \'dropdownIconDisabled\', ' +
+      '\'dropdownButtonPrimary\', \'dropdownButtonPrimaryDisabled\', \'dropdownColored\', \'dropdownColoredTransparent\' ]',
+      control: { type: 'none' },
+    },
+    variantSize: {
+      name: 'variantSize',
+      description: 'Variantes de tamaño disponibles: [ \'dropdownSizeNormal\', \'dropdownSizeSmall\', \'dropdownSizeExtraSmall\' ]',
+      control: { type: 'none' },
+    },
+  },
 }
 
-const data = [
+let data = [
   {
     id: 22,
     content: {
@@ -32,6 +53,22 @@ const data = [
       icon: 'icon-agente',
     },
   },
+  {
+    id: 7,
+    content: {
+      name: 'Walter',
+      count: 42,
+      icon: 'icon-propiedades',
+    },
+  },
+  {
+    id: 6,
+    content: {
+      name: 'Marcos',
+      count: 4,
+      icon: 'icon-ambientes',
+    },
+  },
 ]
 
 export const Search = () => {
@@ -39,78 +76,74 @@ export const Search = () => {
   const [filteredData, setValue] = useFilterData(data, 'content')
   const [text, setText] = useState('')
 
-  const onFilter = (e) => {
-    setValue(e.target.value)
-    setText(e.target.value)
+  const onFilter = (value) => {
+    setValue(value)
+    setText(value)
+  }
+
+  const orderList = (list) => {
+    return list.sort(function (user1, user2) {
+      const nameA = user1.content.name.toUpperCase()
+      const nameB = user2.content.name.toUpperCase()
+      if (nameA < nameB) {
+        return -1
+      }
+      if (nameA > nameB) {
+        return 1
+      }
+      return 0
+    })
   }
 
   const updateList = (value) => {
     if (!list.includes(value)) {
       setList([...list, value])
+      const firstItems = orderList((data.filter(user => user.id === value)).concat(data.filter(user => list.find(id => id === user.id) !== undefined)))
+      const lastItems = orderList(data.filter(user => list.find(id => id === user.id) === undefined && user.id !== value))
+      data = firstItems.concat(lastItems)
     } else {
       setList((list) => list.filter((id) => id !== value))
+      const firstItems = orderList(data.filter(user => (list.find(id => id === user.id) !== undefined && user.id !== value)))
+      const lastItems = orderList(data.filter(user => user.id === value).concat(data.filter(user => list.find(id => id === user.id) === undefined)))
+      data = firstItems.concat(lastItems)
     }
   }
+  const valueTextButton = list.length > 0
+    ? data.filter(user => user.id === list[0])[0].content.name + (list.length > 1 ? ' + ' + (list.length - 1) : '')
+    : 'Agente'
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Agente' filled={ list.length > 0 }></Dropdown.Button>
+      <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={ list.length > 0 }/>
       <Dropdown.Items>
-        <Dropdown.Search placeholder='Search' onChange={onFilter} value={text}/>
+        <Dropdown.Search placeholder='Search' onChange={e => onFilter(e.target.value)} value={text}
+          suffix={text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => onFilter('')}/> : undefined}/>
         {filteredData.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } active={list.includes(user.id)}>
             {user.content.name}
           </Dropdown.Multiselect>
         ))}
-      </Dropdown.Items>
-    </Dropdown>
-  )
-}
-
-export const Select = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
-
-  return (
-    <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Seleccione' filled={ list.length > 0 }></Dropdown.Button>
-      <Dropdown.Items>
-        {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } >
-            {user.content.name}
-          </Dropdown.Multiselect>
-        ))}
+        {filteredData.length === 0 &&
+          <Dropdown.Text>
+            No se encontraron resultados.
+          </Dropdown.Text>
+        }
       </Dropdown.Items>
     </Dropdown>
   )
 }
 
 export const DropdownDefault = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Seleccione')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Opción elegida' filled={ list.length > 0 } />
+      <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== 'Seleccione' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Default>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -118,24 +151,16 @@ export const DropdownDefault = () => {
 }
 
 export const DropdownDefaultDisabled = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Seleccione')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDisabled' text='Opción elegida' filled={ list.length > 0 } disabled />
+      <Dropdown.Button variant='dropdownDisabled' text={value} filled={ value !== 'Seleccione' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Default>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -143,24 +168,17 @@ export const DropdownDefaultDisabled = () => {
 }
 
 export const DropdownDefaultWithIcon = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Opción elegida')
+  const [icon, setIcon] = useState('icon-ubicacion')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Opción elegida' icon='icon-ubicacion' filled={ list.length > 0 } />
+      <Dropdown.Button variant='dropdownDefault' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -168,24 +186,16 @@ export const DropdownDefaultWithIcon = () => {
 }
 
 export const DropdownOutlined = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Opción elegida')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownOutlined' text='Opción elegida' filled={ list.length > 0 } />
+      <Dropdown.Button variant='dropdownOutlined' text={value} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Default>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -193,24 +203,17 @@ export const DropdownOutlined = () => {
 }
 
 export const DropdownOutlinedWithIcon = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Opción elegida')
+  const [icon, setIcon] = useState('icon-ubicacion')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownOutlined' text='Opción elegida' icon='icon-ubicacion' filled={list.length > 0} />
+      <Dropdown.Button variant='dropdownOutlined' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -218,24 +221,17 @@ export const DropdownOutlinedWithIcon = () => {
 }
 
 export const DropdownOutlinedWithIconDisabled = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Opción elegida')
+  const [icon, setIcon] = useState('icon-ubicacion')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownOutlinedDisabled' text='Opción elegida' icon='icon-ubicacion' filled={ list.length > 0 } disabled />
+      <Dropdown.Button variant='dropdownOutlinedDisabled' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setValue(user.content.name); setIcon(user.content.icon) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -243,24 +239,16 @@ export const DropdownOutlinedWithIconDisabled = () => {
 }
 
 export const DropdownTransparent = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Opción elegida')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownTransparent' text='Opción elegida' filled={ list.length > 0 } />
+      <Dropdown.Button variant='dropdownTransparent' text={value} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -268,24 +256,16 @@ export const DropdownTransparent = () => {
 }
 
 export const DropdownTransparentDisabled = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Opción elegida')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownTransparentDisabled' disabled text='Opción elegida' filled={ list.length > 0 } />
+      <Dropdown.Button variant='dropdownTransparentDisabled' disabled text={value} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -293,24 +273,16 @@ export const DropdownTransparentDisabled = () => {
 }
 
 export const DropdownIcon = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [icon, setIcon] = useState('icon-configuracion')
 
   return (
     <Dropdown width={1 / 16}>
-      <Dropdown.Button variant='dropdownIcon' isButtonIcon icon='icon-configuracion' filled={ list.length > 0 } variantSize='iconSmall' />
+      <Dropdown.Button variant='dropdownIcon' isButtonIcon icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconSmall' />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -318,24 +290,16 @@ export const DropdownIcon = () => {
 }
 
 export const DropdownIconDisabled = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [icon, setIcon] = useState('icon-configuracion')
 
   return (
     <Dropdown width={1 / 16}>
-      <Dropdown.Button variant='dropdownIconDisabled' isButtonIcon disabled icon='icon-configuracion' filled={ list.length > 0 } variantSize='iconSmall' />
+      <Dropdown.Button variant='dropdownIconDisabled' isButtonIcon disabled icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconSmall' />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -343,24 +307,16 @@ export const DropdownIconDisabled = () => {
 }
 
 export const DropdownButton = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Label opcion')
 
   return (
     <Dropdown width={1 / 8}>
-      <Dropdown.Button variant='dropdownButtonPrimary' variantSize='dropdownSizeButton' text={'Label'} filled={ list.length > 0 } isArrowStatic></Dropdown.Button>
+      <Dropdown.Button variant='dropdownButtonPrimary' variantSize='dropdownSizeButton' text={value} filled={ value !== 'Label opcion' } isArrowStatic />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -368,24 +324,16 @@ export const DropdownButton = () => {
 }
 
 export const DropdownButtonDisabled = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Label')
 
   return (
     <Dropdown width={1 / 8}>
-      <Dropdown.Button variant='dropdownButtonPrimaryDisabled' variantSize='dropdownSizeButton' disabled text={'Label'} filled={ list.length > 0 } isArrowStatic />
+      <Dropdown.Button variant='dropdownButtonPrimaryDisabled' variantSize='dropdownSizeButton' disabled text={value} filled={ value !== 'Label' } isArrowStatic />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -393,24 +341,33 @@ export const DropdownButtonDisabled = () => {
 }
 
 export const DropdownColored = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Placeholder')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownColored' text={'Placeholder'} filled={ list.length > 0 } />
+      <Dropdown.Button variant='dropdownColored' variantSize='dropdownSizeLargeColored' text={value} filled={ value !== 'Placeholder' } />
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }}>
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Icon>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const DropdownColoredTransparent = () => {
+  const [value, setValue] = useState('Placeholder')
+
+  return (
+    <Dropdown width={1 / 4}>
+      <Dropdown.Button variant='dropdownColoredTransparent' variantSize='dropdownSizeLargeColored' text={value} filled={ value !== 'Placeholder' } />
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
+            {user.content.name}
+          </Dropdown.Icon>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -422,7 +379,7 @@ export const DropdownStatesDefault = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== undefined } />
+      <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== 'Placeholder' } />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
@@ -439,7 +396,7 @@ export const DropdownStatesIcon = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' icon={value} filled={ value !== undefined } isButtonIcon variantSize='iconSmall'/>
+      <Dropdown.Button variant='dropdownDefault' icon={value} filled={ value !== 'icon-configuracion' } isButtonIcon variantSize='iconSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon}>
@@ -452,49 +409,33 @@ export const DropdownStatesIcon = () => {
 }
 
 export const DropdownDefaultSmall = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+  const [value, setValue] = useState('Opción elegida')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Opción elegida' filled={ list.length > 0 } variantSize = 'dropdownSizeSmall'/>
+      <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== 'Opción elegida' } variantSize = 'dropdownSizeSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} variantSize = 'dropdownSizeSmall'>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Default>
         ))}
       </Dropdown.Items>
     </Dropdown>
   )
 }
 
-export const DropdownDefaultExtramall = () => {
-  const [list, setList] = useState([])
-
-  const updateList = (value) => {
-    if (!list.includes(value)) {
-      setList([...list, value])
-    } else {
-      setList((list) => list.filter((id) => id !== value))
-    }
-  }
+export const DropdownDefaultExtraSmall = () => {
+  const [value, setValue] = useState('Opción elegida')
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Opción elegida' filled={ list.length > 0 } variantSize = 'dropdownSizeExtraSmall'/>
+      <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== 'Opción elegida' } variantSize = 'dropdownSizeExtraSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} variantSize = 'dropdownSizeSmall'>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
             {user.content.name}
-          </Dropdown.Multiselect>
+          </Dropdown.Default>
         ))}
       </Dropdown.Items>
     </Dropdown>
@@ -506,7 +447,7 @@ export const DropdownStatesIconSmall = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' icon={value} filled={value !== undefined} isButtonIcon variantSize='iconSmall'/>
+      <Dropdown.Button variant='dropdownDefault' icon={value} filled={value !== 'icon-configuracion'} isButtonIcon variantSize='iconSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon} variantSize='dropdownSizeSmall'>
@@ -523,7 +464,7 @@ export const DropdownStatesIconExtraSmall = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' icon={value} filled={value !== undefined} isButtonIcon variantSize='iconExtraSmall'/>
+      <Dropdown.Button variant='dropdownDefault' icon={value} filled={value !== 'icon-configuracion'} isButtonIcon variantSize='iconExtraSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon} variantSize='dropdownSizeExtraSmall'>
@@ -545,10 +486,13 @@ export const DropdownStatesMultiselectSmall = () => {
       setList((list) => list.filter((id) => id !== value))
     }
   }
+  const valueTextButton = list.length > 0
+    ? data.filter(user => user.id === list[0])[0].content.name + (list.length > 1 ? ' + ' + (list.length - 1) : '')
+    : 'Seleccione'
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Seleccione' filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
+      <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } variantSize = 'dropdownSizeSmall'>
@@ -570,10 +514,13 @@ export const DropdownStatesMultiselectExtraSmall = () => {
       setList((list) => list.filter((id) => id !== value))
     }
   }
+  const valueTextButton = list.length > 0
+    ? data.filter(user => user.id === list[0])[0].content.name + (list.length > 1 ? ' + ' + (list.length - 1) : '')
+    : 'Seleccione'
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text='Seleccione' filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
+      <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } variantSize = 'dropdownSizeExtraSmall'>

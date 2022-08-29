@@ -5,7 +5,7 @@ import { Text } from '@oneloop/text'
 import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
 
-export const Input = ({ prefix, suffix, label, errors, variant = 'input', variantSize = 'inputLarge', infoAlert, disabled, readonly, inline, password, bold, width = '300px', ...props }) => {
+export const Input = ({ prefix, suffix, label, errors, variant = 'input', variantSize = 'inputLarge', infoAlert, disabled, readonly, inline, password, bold, width, ...props }) => {
   const [hover, setHover] = useToggle(false)
   const [focused, setFocused] = useToggle(false)
   const [text, setText] = React.useState('')
@@ -42,10 +42,12 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
 
   const index = Object.keys(theme.forms).indexOf(variantSize)
   const paddingLeft = prefix ? Object.values(theme.forms)[index].paddingLeftPrefix : Object.values(theme.forms)[index].paddingLeftNoPrefix
-  const paddingRigth = suffix ? Object.values(theme.forms)[index].paddingRigthSuffix : Object.values(theme.forms)[index].paddingRigthNoSuffix
+  const paddingRight = suffix ? Object.values(theme.forms)[index].paddingRightSuffix : Object.values(theme.forms)[index].paddingRightNoSuffix
   const paddingIcons = Object.values(theme.forms)[index].paddingIcons
   const fontSizePrefix = Object.values(theme.forms)[index].fontSize
-
+  if (suffix && suffix.type !== 'span') {
+    suffix = <div>{suffix}</div>
+  }
   return (
     <Box
       width='100%'
@@ -80,10 +82,14 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
           fontWeight: bold ? 700 : 400,
           width: width,
           '> *:first-child': prefix
-            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, left: paddingIcons }
+            ? prefix.type === 'span'
+                ? { position: 'absolute', left: paddingIcons, height: fontSizePrefix, fontSize: fontSizePrefix }
+                : { position: 'absolute', left: paddingIcons }
             : {},
           '> *:last-child': suffix
-            ? { position: 'absolute', height: fontSizePrefix, fontSize: fontSizePrefix, right: paddingIcons }
+            ? suffix.type === 'span'
+                ? { position: 'absolute', right: paddingIcons, height: fontSizePrefix, fontSize: fontSizePrefix }
+                : { position: 'absolute', right: paddingIcons }
             : {},
         }}
       >
@@ -107,7 +113,7 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
             fontFamily: 'primary',
             display: 'block',
             paddingLeft: paddingLeft,
-            paddingRigth: paddingRigth,
+            paddingRight: paddingRight,
             outline: 'none',
           }}
         />

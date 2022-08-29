@@ -1,18 +1,20 @@
 {
-  "name": "@oneloop/image",
-  "version": "1.2.227",
+  "name": "@oneloop/tooltip",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.227"
+    "@oneloop/box": "^1.2.226",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "react": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "589f87f6781012bf3946450745c22ab975d04d1a"
 }
