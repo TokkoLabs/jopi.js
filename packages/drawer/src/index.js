@@ -10,12 +10,13 @@ export const Drawer = ({
   animationWidth,
   animationMinWidth,
   overlay,
+  height,
   ...props
 }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isCollapse={isCollapse}>
+        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isCollapse={isCollapse} height={height}>
           {children}
         </DrawerMotion>
       )}
@@ -30,6 +31,7 @@ const DrawerMotion = ({
   animationWidth = 1000,
   animationMinWidth = 82,
   overlay,
+  height,
   ...props
 }) => {
   const variantsOverlay = {
@@ -48,8 +50,8 @@ const DrawerMotion = ({
   }
 
   const variantsDrawerMenuRight = {
-    open: { width: animationWidth, backgroundColor: 'white' },
-    closed: { width: animationMinWidth, backgroundColor: 'white' }, // backgroundColor: 'transparent'
+    open: { width: animationWidth, backgroundColor: 'white', height: '100%' },
+    closed: { width: animationMinWidth, backgroundColor: 'white', height: height }, // backgroundColor: 'transparent'
   }
 
   const drawerOverlayInitial = {
@@ -95,7 +97,6 @@ const DrawerMotion = ({
     boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0.05)',
     right: 0,
     top: 0,
-    height: '100%',
     maxWidth: '100%',
     width: animationWidth,
     overflowY: 'auto',
