@@ -140,12 +140,15 @@ export const ButtonHoldPress = ({ variant, active = false, isInput = false, text
     indexes.map(index => {
       if (Object.values(theme.buttons)[index][':focus'] !== undefined && active) {
         colorValue = Object.values(theme.buttons)[index][':focus'].color
+        fontWeight = Object.values(theme.buttons)[index][':focus'].fontWeight
       } else if (Object.values(theme.buttons)[index].color !== undefined) {
         colorValue = Object.values(theme.buttons)[index].color
+        fontWeight = Object.values(theme.buttons)[index].fontWeight
       }
       if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
         heightIcon = Object.values(theme.buttons)[index].heightIcon
       }
+
       return colorValue
     })
   } else {
