@@ -151,24 +151,23 @@ export const menu = () =>
   })
 
 
-  export const menuRight = () =>
-  React.createElement(() => {
-    const [isCollapse, toggle] = useToggle(false)
-    const overlay = false
+export const menuRight = () => React.createElement(() => {
+  const [isCollapse, toggle] = useToggle(false)
+  const overlay = false
 
-    return (
-      <React.Fragment>
-        <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
-          <Drawer isCollapse={isCollapse} screenSide={'right'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px'>
-            <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonClosed' : 'collapseButtonOpen'} style={{ position: 'absolute', left: '-23px', top: '40px' }}/>
-            <Drawer.Header>
-            </Drawer.Header>
-            <Drawer.Body>
-            </Drawer.Body>
-            <Drawer.Footer>
-            </Drawer.Footer>
-          </Drawer>
-        </Box>
-      </React.Fragment>
-    )
-  })
+  return (
+    <React.Fragment>
+      <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
+        <Drawer isCollapse={isCollapse} screenSide={'right'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px'>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonClosed' : 'collapseButtonOpen'} style={{ position: 'absolute', left: '-23px', top: '40px' }}/>
+          <Drawer.Header>
+          </Drawer.Header>
+          <Drawer.Body>
+          </Drawer.Body>
+          <Drawer.Footer>
+          </Drawer.Footer>
+        </Drawer>
+      </Box>
+    </React.Fragment>
+  )
+})
