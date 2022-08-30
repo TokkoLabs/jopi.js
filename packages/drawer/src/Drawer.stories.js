@@ -8,6 +8,56 @@ import { Drawer } from '.'
 export default {
   component: Drawer,
   title: 'Drawer',
+  argTypes: {
+    overlay: {
+      name: 'overlay',
+      description: 'Determina si va por encima de la pagina.',
+      type: 'bool',
+      control: { type: 'none' },
+    },
+    isOpen: {
+      name: 'isOpen',
+      description: 'Determina si el drawer esta abierto o no. (se usa solo cuando el tipo de drawer es overlay)',
+      type: 'bool',
+      control: { type: 'none' },
+    },
+    isCollapse: {
+      name: 'isCollapse',
+      description: 'Determina si el drawer esta colapsado o no.',
+      type: 'bool',
+      control: { type: 'none' },
+    },
+    screenSide: {
+      name: 'screenSide',
+      description: 'Posición del drawer: [ \'right\', \'left\' ].',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    animationWidth: {
+      name: 'animationWidth',
+      description: 'El width maximo del drawer.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    animationMinWidth: {
+      name: 'animationMinWidth',
+      description: 'El width minimo del drawer.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    heightMin: {
+      name: 'heightMin',
+      description: 'Height minimo del drawer.',
+      type: 'bool',
+      control: { type: 'none' },
+    },
+    heightMax: {
+      name: 'heightMin',
+      description: 'Height maximo del drawer, por default es 100%.',
+      type: 'bool',
+      control: { type: 'none' },
+    },
+  },
 }
 
 export const normal = () =>
