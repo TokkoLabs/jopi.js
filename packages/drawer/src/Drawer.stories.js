@@ -109,7 +109,7 @@ export const menu = () =>
     return (
       <React.Fragment>
         <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
-          <Drawer isCollapse={isCollapse} screenSide={'right'} animationWidth={304} animationMinWidth={70} overlay={overlay} height='147px'>
+          <Drawer isCollapse={isCollapse} screenSide={'right'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px'>
             <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonClosed' : 'collapseButtonOpen'} style={{ position: 'absolute', left: '-23px', top: '40px' }}/>
             <Drawer.Header>
             </Drawer.Header>

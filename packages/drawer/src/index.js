@@ -10,13 +10,14 @@ export const Drawer = ({
   animationWidth,
   animationMinWidth,
   overlay,
-  height,
+  heightMin,
+  heightMax,
   ...props
 }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isCollapse={isCollapse} height={height}>
+        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isCollapse={isCollapse} heightMin={heightMin} heightMax={heightMax}>
           {children}
         </DrawerMotion>
       )}
@@ -31,7 +32,8 @@ const DrawerMotion = ({
   animationWidth = 1000,
   animationMinWidth = 82,
   overlay,
-  height,
+  heightMin,
+  heightMax = '100%',
   ...props
 }) => {
   const variantsOverlay = {
@@ -50,8 +52,8 @@ const DrawerMotion = ({
   }
 
   const variantsDrawerMenuRight = {
-    open: { width: animationWidth, backgroundColor: 'white', height: '100%' },
-    closed: { width: animationMinWidth, backgroundColor: 'white', height: height }, // backgroundColor: 'transparent'
+    open: { width: animationWidth, backgroundColor: ['hsla(255, 255, 255, 1)', 'hsla(255, 255, 255, 0)'], height: heightMax, boxShadow: 'none' },
+    closed: { width: animationMinWidth, backgroundColor: ['hsla(255, 255, 255, 0)', 'hsla(255, 255, 255, 1)'], height: heightMin, boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0.05)', }, // backgroundColor: 'transparent'
   }
 
   const drawerOverlayInitial = {
@@ -94,7 +96,6 @@ const DrawerMotion = ({
   const drawerMenuContentInitialRight = {
     backgroundColor: 'white',
     position: 'absolute',
-    boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0.05)',
     right: 0,
     top: 0,
     maxWidth: '100%',
@@ -155,7 +156,8 @@ const DrawerMotion = ({
           variants={variantsDrawerMenuRight}
           initial={drawerMenuContentInitialRight}
           animate={ isCollapse ? 'open' : 'closed' }
-          transition={{ duration: 0.8 }}
+          transformTemplate={{ backgroundColor: 'transparent' }}
+          transition={{ duration: 1 }}
           position='absolute'
         >
           {children}
