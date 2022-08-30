@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/submenu",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,6 +8,7 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.227",
+    "@popperjs/core": "^2.11.5",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
