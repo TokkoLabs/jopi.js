@@ -12,12 +12,13 @@ export const Drawer = ({
   overlay,
   heightMin,
   heightMax,
+  transparent,
   ...props
 }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isCollapse={isCollapse} heightMin={heightMin} heightMax={heightMax}>
+        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isCollapse={isCollapse} heightMin={heightMin} heightMax={heightMax} transparent={transparent}>
           {children}
         </DrawerMotion>
       )}
@@ -34,6 +35,7 @@ const DrawerMotion = ({
   overlay,
   heightMin,
   heightMax = '100%',
+  transparent,
   ...props
 }) => {
   const variantsOverlay = {
@@ -81,8 +83,8 @@ const DrawerMotion = ({
   const drawerMenuContentInitial = {
     backgroundColor: 'white',
     boxShadow: '5px 0 5px -5px rgba(0, 0, 0, 0.15)',
-    position: 'relative',
-    left: 0,
+  //  position: 'relative',
+  //  left: 0,
     top: 0,
     height: '100%',
     maxWidth: '100%',
@@ -111,9 +113,13 @@ const DrawerMotion = ({
   if (screenSide === 'left') {
     drawerContentInitial.x = animationWidth * -1
     variantsDrawer.closed.x = animationWidth * -1
+    drawerMenuContentInitial.left = 0
+    drawerMenuContentInitial.position = 'relative'
   } else {
     drawerContentInitial.x = animationWidth
     variantsDrawer.closed.x = animationWidth
+    drawerMenuContentInitial.right = 0
+    drawerMenuContentInitial.position = 'absolute'
   }
 
   if (overlay) {
@@ -136,6 +142,22 @@ const DrawerMotion = ({
         </motion.div>
       </motion.div>
     )
+  } else if (transparent) {
+    if (screenSide === 'right') {
+      return (
+        <motion.div
+          key="drawerContent"
+          variants={variantsDrawerMenuRight}
+          initial={drawerMenuContentInitialRight}
+          animate={ isCollapse ? 'open' : 'closed' }
+          transformTemplate={{ backgroundColor: 'transparent' }}
+          transition={{ duration: 1 }}
+          position='absolute'
+        >
+          {children}
+        </motion.div>
+      )
+    }
   } else {
     if (screenSide === 'left') {
       return (
@@ -153,11 +175,10 @@ const DrawerMotion = ({
       return (
         <motion.div
           key="drawerContent"
-          variants={variantsDrawerMenuRight}
-          initial={drawerMenuContentInitialRight}
+          variants={variantsDrawerMenu}
+          initial={drawerMenuContentInitial}
           animate={ isCollapse ? 'open' : 'closed' }
-          transformTemplate={{ backgroundColor: 'transparent' }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           position='absolute'
         >
           {children}
