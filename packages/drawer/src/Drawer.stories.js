@@ -182,11 +182,11 @@ export const transparentRight = () => React.createElement(() => {
   return (
     <React.Fragment>
       <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
-        <Drawer isCollapse={isCollapse} screenSide={'right'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px' transparent={true}>
-          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonClosed' : 'collapseButtonOpen'} style={{ position: 'absolute', left: '-23px', top: '40px', zIndex: '100' }}/>
+        <Drawer isCollapse={isCollapse} screenSide={'right'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px' transparent={true} borderRadiusClosed='5px' topClosed='60px'>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonClosed' : 'collapseButtonOpen'} style={{ position: 'absolute', left: '-23px', top: '20px', zIndex: '100' }}/>
           <Drawer.Header>
           </Drawer.Header>
-          <Drawer.Body style={{ paddingTop: '35px', left: '0px', position: 'absolute' }}>
+          <Drawer.Body style={{ paddingTop: '15px', left: '0px', position: 'absolute' }}>
             { isCollapse &&
               <>
                 <Box __css={{ backgroundColor: '#FFFFFF', width: '252px', height: '100px' }}>              
@@ -211,11 +211,11 @@ export const transparentLeft = () => React.createElement(() => {
   return (
     <React.Fragment>
       <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
-        <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px' transparent={true}>
-          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '40px', zIndex: '100' }}/>
+        <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px' transparent={true} borderRadiusClosed='5px' topClosed='60px'>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '20px', zIndex: '100' }}/>
           <Drawer.Header>
           </Drawer.Header>
-          <Drawer.Body style={{ paddingTop: '35px', right: '0px', position: 'absolute' }}>
+          <Drawer.Body style={{ paddingTop: '15px', right: '0px', position: 'absolute' }}>
             { isCollapse &&
               <>
                 <Box __css={{ backgroundColor: '#FFFFFF', width: '300px', height: '100px' }}>              

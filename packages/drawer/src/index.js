@@ -13,12 +13,16 @@ export const Drawer = ({
   heightMin,
   heightMax,
   transparent,
+  borderRadiusClosed,
+  topClosed,
   ...props
 }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isCollapse={isCollapse} heightMin={heightMin} heightMax={heightMax} transparent={transparent}>
+        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth}
+          overlay={overlay} isCollapse={isCollapse} heightMin={heightMin} heightMax={heightMax} transparent={transparent}
+          borderRadiusClosed={borderRadiusClosed} topClosed={topClosed} {...props}>
           {children}
         </DrawerMotion>
       )}
@@ -36,6 +40,8 @@ const DrawerMotion = ({
   heightMin,
   heightMax = '100%',
   transparent,
+  borderRadiusClosed,
+  topClosed,
   ...props
 }) => {
   const variantsOverlay = {
@@ -54,8 +60,19 @@ const DrawerMotion = ({
   }
 
   const variantsDrawerTransparent = {
-    open: { width: animationWidth, backgroundColor: ['hsla(255, 255, 255, 1)', 'hsla(255, 255, 255, 0)'], height: heightMax, boxShadow: 'none' },
-    closed: { width: animationMinWidth, backgroundColor: ['hsla(255, 255, 255, 0)', 'hsla(255, 255, 255, 1)'], height: heightMin, boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0.05)', }, // backgroundColor: 'transparent'
+    open: {
+      width: animationWidth,
+      backgroundColor: ['hsla(255, 255, 255, 1)', 'hsla(255, 255, 255, 0)'],
+      height: heightMax,
+      boxShadow: 'none'
+    },
+    closed: {
+      width: animationMinWidth,
+      backgroundColor: ['hsla(255, 255, 255, 0)', 'hsla(255, 255, 255, 1)'],
+      height: heightMin, boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0.05)',
+      borderRadius: borderRadiusClosed,
+      top: topClosed
+    },
   }
 
   const drawerOverlayInitial = {
