@@ -25,6 +25,7 @@
     "@oneloop/paginator": "^1.0.84",
     "@oneloop/radio": "^1.2.227",
     "@oneloop/switch": "^1.2.230",
+    "@oneloop/submenu": "^1.0.5",
     "@oneloop/table": "^1.2.227",
     "@oneloop/tabs": "^1.4.202",
     "@oneloop/text": "^1.2.228",
