@@ -75,6 +75,12 @@ export default {
       type: 'text',
       control: { type: 'none' },
     },
+    animationDuration: {
+      name: 'animationDuration',
+      description: 'Determina la duracion (o velocidad) de la animación, por default esta en 0.5.',
+      type: 'text',
+      control: { type: 'none' },
+    },
   },
 }
 
@@ -224,6 +230,35 @@ export const transparentLeft = () => React.createElement(() => {
     <React.Fragment>
       <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
         <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px' transparent={true} borderRadiusClosed='5px' topClosed='60px'>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '20px', zIndex: '100' }}/>
+          <Drawer.Header>
+          </Drawer.Header>
+          <Drawer.Body style={{ paddingTop: '15px', right: '0px', position: 'absolute' }}>
+            { isCollapse &&
+              <>
+                <Box __css={{ backgroundColor: '#FFFFFF', width: '300px', height: '100px' }}>              
+                </Box>
+                <Box __css={{ backgroundColor: '#FFFFFF', width: '300px', marginTop: '10px', height: '100px' }}>              
+                </Box>
+              </>
+            }
+          </Drawer.Body>
+          <Drawer.Footer>
+          </Drawer.Footer>
+        </Drawer>
+      </Box>
+    </React.Fragment>
+  )
+})
+
+export const transparentLeftDuration2 = () => React.createElement(() => {
+  const [isCollapse, toggle] = useToggle(false)
+  const overlay = false
+
+  return (
+    <React.Fragment>
+      <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
+        <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px' transparent={true} borderRadiusClosed='5px' topClosed='60px' animationDuration={2}>
           <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '20px', zIndex: '100' }}/>
           <Drawer.Header>
           </Drawer.Header>

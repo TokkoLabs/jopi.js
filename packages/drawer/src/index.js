@@ -15,6 +15,7 @@ export const Drawer = ({
   transparent,
   borderRadiusClosed,
   topClosed,
+  animationDuration,
   ...props
 }) => {
   return (
@@ -22,7 +23,7 @@ export const Drawer = ({
       {isOpen && (
         <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth}
           overlay={overlay} isCollapse={isCollapse} heightMin={heightMin} heightMax={heightMax} transparent={transparent}
-          borderRadiusClosed={borderRadiusClosed} topClosed={topClosed} {...props}>
+          borderRadiusClosed={borderRadiusClosed} topClosed={topClosed} animationDuration={animationDuration} {...props}>
           {children}
         </DrawerMotion>
       )}
@@ -42,6 +43,7 @@ const DrawerMotion = ({
   transparent,
   borderRadiusClosed,
   topClosed,
+  animationDuration = 0.5,
   ...props
 }) => {
   const variantsOverlay = {
@@ -139,32 +141,20 @@ const DrawerMotion = ({
           variants={variantsDrawer}
           initial={drawerContentInitial}
           exit="closed"
-          transition={{ duration: 0.5 }}
+          transition={{ duration: animationDuration }}
         >
           {children}
         </motion.div>
-      </motion.div>
-    )
-  } else if (transparent) {
-    return (
-      <motion.div
-        key="drawerContent"
-        variants={variantsDrawerTransparent}
-        initial={drawerMenuContentInitial}
-        animate={ isCollapse ? 'open' : 'closed' }
-        transition={{ duration: 1 }}
-      >
-        {children}
       </motion.div>
     )
   } else {
     return (
       <motion.div
         key="drawerContent"
-        variants={variantsDrawerMenu}
+        variants={ transparent ? variantsDrawerTransparent : variantsDrawerMenu}
         initial={drawerMenuContentInitial}
         animate={ isCollapse ? 'open' : 'closed' }
-        transition={{ duration: 0.5 }}
+        transition={{ duration: animationDuration }}
       >
         {children}
       </motion.div>
