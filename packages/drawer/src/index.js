@@ -53,7 +53,7 @@ const DrawerMotion = ({
     closed: { width: animationMinWidth },
   }
 
-  const variantsDrawerMenuRight = {
+  const variantsDrawerTransparent = {
     open: { width: animationWidth, backgroundColor: ['hsla(255, 255, 255, 1)', 'hsla(255, 255, 255, 0)'], height: heightMax, boxShadow: 'none' },
     closed: { width: animationMinWidth, backgroundColor: ['hsla(255, 255, 255, 0)', 'hsla(255, 255, 255, 1)'], height: heightMin, boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0.05)', }, // backgroundColor: 'transparent'
   }
@@ -82,24 +82,8 @@ const DrawerMotion = ({
 
   const drawerMenuContentInitial = {
     backgroundColor: 'white',
-    boxShadow: '5px 0 5px -5px rgba(0, 0, 0, 0.15)',
-  //  position: 'relative',
-  //  left: 0,
     top: 0,
     height: '100%',
-    maxWidth: '100%',
-    width: animationWidth,
-    overflowY: 'auto',
-    padding: '10px',
-    overflow: 'visible',
-    zIndex: 100,
-  }
-
-  const drawerMenuContentInitialRight = {
-    backgroundColor: 'white',
-    position: 'absolute',
-    right: 0,
-    top: 0,
     maxWidth: '100%',
     width: animationWidth,
     overflowY: 'auto',
@@ -115,11 +99,13 @@ const DrawerMotion = ({
     variantsDrawer.closed.x = animationWidth * -1
     drawerMenuContentInitial.left = 0
     drawerMenuContentInitial.position = 'relative'
+    drawerMenuContentInitial.boxShadow = '5px 0 5px -5px rgba(0, 0, 0, 0.15)'
   } else {
     drawerContentInitial.x = animationWidth
     variantsDrawer.closed.x = animationWidth
     drawerMenuContentInitial.right = 0
     drawerMenuContentInitial.position = 'absolute'
+    drawerMenuContentInitial.boxShadow = '0px 5px 5px rgba(0, 0, 0, 0.05)'
   }
 
   if (overlay) {
@@ -143,48 +129,29 @@ const DrawerMotion = ({
       </motion.div>
     )
   } else if (transparent) {
-    if (screenSide === 'right') {
-      return (
-        <motion.div
-          key="drawerContent"
-          variants={variantsDrawerMenuRight}
-          initial={drawerMenuContentInitialRight}
-          animate={ isCollapse ? 'open' : 'closed' }
-          transformTemplate={{ backgroundColor: 'transparent' }}
-          transition={{ duration: 1 }}
-          position='absolute'
-        >
-          {children}
-        </motion.div>
-      )
-    }
+    return (
+      <motion.div
+        key="drawerContent"
+        variants={variantsDrawerTransparent}
+        initial={drawerMenuContentInitial}
+        animate={ isCollapse ? 'open' : 'closed' }
+        transition={{ duration: 1 }}
+      >
+        {children}
+      </motion.div>
+    )
   } else {
-    if (screenSide === 'left') {
-      return (
-        <motion.div
-          key="drawerContent"
-          variants={variantsDrawerMenu}
-          initial={drawerMenuContentInitial}
-          animate={ isCollapse ? 'open' : 'closed' }
-          transition={{ duration: 0.5 }}
-        >
-          {children}
-        </motion.div>
-      )
-    } else {
-      return (
-        <motion.div
-          key="drawerContent"
-          variants={variantsDrawerMenu}
-          initial={drawerMenuContentInitial}
-          animate={ isCollapse ? 'open' : 'closed' }
-          transition={{ duration: 0.5 }}
-          position='absolute'
-        >
-          {children}
-        </motion.div>
-      )
-    }
+    return (
+      <motion.div
+        key="drawerContent"
+        variants={variantsDrawerMenu}
+        initial={drawerMenuContentInitial}
+        animate={ isCollapse ? 'open' : 'closed' }
+        transition={{ duration: 0.5 }}
+      >
+        {children}
+      </motion.div>
+    )
   }
 }
 

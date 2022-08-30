@@ -193,9 +193,9 @@ export const transparentRight = () => React.createElement(() => {
           <Drawer.Body style={{ paddingTop: '35px', left: '0px', position: 'absolute' }}>
             { isCollapse &&
               <>
-                <Box __css={{ backgroundColor: '#FFFFFF', width: '252px', height: '325px' }}>              
+                <Box __css={{ backgroundColor: '#FFFFFF', width: '252px', height: '100px' }}>              
                 </Box>
-                <Box __css={{ backgroundColor: '#FFFFFF', width: '252px', marginTop: '10px', height: '325px' }}>              
+                <Box __css={{ backgroundColor: '#FFFFFF', width: '252px', marginTop: '10px', height: '100px' }}>              
                 </Box>
               </>
             }
