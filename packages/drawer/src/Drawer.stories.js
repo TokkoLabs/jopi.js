@@ -54,13 +54,25 @@ export default {
     heightMin: {
       name: 'heightMin',
       description: 'Height minimo del drawer.',
-      type: 'bool',
+      type: 'text',
       control: { type: 'none' },
     },
     heightMax: {
-      name: 'heightMin',
+      name: 'heightMax',
       description: 'Height maximo del drawer, por default es 100%.',
-      type: 'bool',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    borderRadiusClosed: {
+      name: 'borderRadiusClosed',
+      description: 'Determina el border radius cuando esta cerrado o colapsado',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    topClosed: {
+      name: 'topClosed',
+      description: 'Determina la distancia del top cuando esta cerrado o colapsado',
+      type: 'text',
       control: { type: 'none' },
     },
   },
