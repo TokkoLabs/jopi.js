@@ -66,118 +66,114 @@ export default {
   },
 }
 
-export const normal = () =>
-  React.createElement(() => {
-    const [isOpen, toggle] = useToggle(false)
-    const overlay = true
+export const normal = () => React.createElement(() => {
+  const [isOpen, toggle] = useToggle(false)
+  const overlay = true
 
-    return (
-      <React.Fragment>
-        <Button onClick={toggle}>My awesome Drawer</Button>
-        <Drawer isOpen={isOpen} screenSide={'right'} animationWidth={730} overlay={overlay}>
+  return (
+    <React.Fragment>
+      <Button onClick={toggle}>My awesome Drawer</Button>
+      <Drawer isOpen={isOpen} screenSide={'right'} animationWidth={730} overlay={overlay}>
+        <Drawer.Header>
+          <Button
+            variant="default"
+            size="small"
+            onClick={toggle}
+            sx={{ bg: 'inherit', border: 0 }}
+          >
+            X
+          </Button>
+          <Text
+            sx={{
+              textDecoration: 'underline',
+            }}
+          >
+            Drawer Title
+          </Text>
+        </Drawer.Header>
+        <Drawer.Body>
+          <Text
+            sx={{
+              textDecoration: 'underline',
+              mb: '5px',
+            }}
+          >
+            Drawer Body
+          </Text>
+          <Text sx={{ mb: '5px' }}>This is a Drawer component</Text>
+          <Text sx={{ mb: '5px' }}>
+            Drawer consists of an Overlay that animates from{' '}
+            <em>opacity:0</em> to <em>opacity:1</em>
+          </Text>
+          <Text sx={{ mb: '5px' }}>
+            Inside the Overlay there is a Drawer Content that handles Drawer
+            animation on <em>translate</em>
+          </Text>
+          <Text>Drawer Content has 3 children:</Text>
+          <ul>
+            <li>Drawer Title</li>
+            <li>Drawer Body</li>
+            <li>Drawer Footer</li>
+          </ul>
+          <Text>
+            Drawer has a <button onClick={toggle}>close button (x) </button>
+          </Text>
+        </Drawer.Body>
+        <Drawer.Footer>
+          <Text
+            sx={{
+              textDecoration: 'underline',
+            }}
+          >
+            Drawer Footer
+          </Text>
+        </Drawer.Footer>
+      </Drawer>
+    </React.Fragment>
+  )
+})
+
+export const menu = () => React.createElement(() => {
+  const [isCollapse, toggle] = useToggle(true)
+  const overlay = false
+
+  return (
+    <React.Fragment>
+      <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
+        <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={304} animationMinWidth={82} overlay={overlay}>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '60px' }}/>
           <Drawer.Header>
-            <Button
-              variant="default"
-              size="small"
-              onClick={toggle}
-              sx={{ bg: 'inherit', border: 0 }}
-            >
-              X
-            </Button>
-            <Text
-              sx={{
-                textDecoration: 'underline',
-              }}
-            >
-              Drawer Title
-            </Text>
           </Drawer.Header>
           <Drawer.Body>
-            <Text
-              sx={{
-                textDecoration: 'underline',
-                mb: '5px',
-              }}
-            >
-              Drawer Body
-            </Text>
-            <Text sx={{ mb: '5px' }}>This is a Drawer component</Text>
-            <Text sx={{ mb: '5px' }}>
-              Drawer consists of an Overlay that animates from{' '}
-              <em>opacity:0</em> to <em>opacity:1</em>
-            </Text>
-            <Text sx={{ mb: '5px' }}>
-              Inside the Overlay there is a Drawer Content that handles Drawer
-              animation on <em>translate</em>
-            </Text>
-            <Text>Drawer Content has 3 children:</Text>
-            <ul>
-              <li>Drawer Title</li>
-              <li>Drawer Body</li>
-              <li>Drawer Footer</li>
-            </ul>
-            <Text>
-              Drawer has a <button onClick={toggle}>close button (x) </button>
-            </Text>
           </Drawer.Body>
           <Drawer.Footer>
-            <Text
-              sx={{
-                textDecoration: 'underline',
-              }}
-            >
-              Drawer Footer
-            </Text>
           </Drawer.Footer>
         </Drawer>
-      </React.Fragment>
-    )
-  })
+      </Box>
+    </React.Fragment>
+  )
+})
 
-export const menu = () =>
-  React.createElement(() => {
-    const [isCollapse, toggle] = useToggle(true)
-    const overlay = false
-
-    return (
-      <React.Fragment>
-        <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
-          <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={304} animationMinWidth={82} overlay={overlay}>
-            <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '60px' }}/>
-            <Drawer.Header>
-            </Drawer.Header>
-            <Drawer.Body>
-            </Drawer.Body>
-            <Drawer.Footer>
-            </Drawer.Footer>
-          </Drawer>
-        </Box>
-      </React.Fragment>
-    )
-  })
-
-  export const menuRight = () =>
-    React.createElement(() => {
-      const [isCollapse, toggle] = useToggle(true)
-      const overlay = false
+export const menuRight = () => React.createElement(() => {
+  const [isCollapse, toggle] = useToggle(true)
+  const overlay = false
   
-      return (
-        <React.Fragment>
-          <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
-            <Drawer isCollapse={isCollapse} screenSide={'right'} animationWidth={304} animationMinWidth={82} overlay={overlay}>
-              <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonClosed' : 'collapseButtonOpen'} style={{ position: 'absolute', left: '-23px', top: '60px' }}/>
-              <Drawer.Header>
-              </Drawer.Header>
-              <Drawer.Body>
-              </Drawer.Body>
-              <Drawer.Footer>
-              </Drawer.Footer>
-            </Drawer>
-          </Box>
-        </React.Fragment>
-      )
-    })
-
+  return (
+    <React.Fragment>
+      <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
+        <Drawer isCollapse={isCollapse} screenSide={'right'} animationWidth={304} animationMinWidth={82} overlay={overlay}>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonClosed' : 'collapseButtonOpen'} style={{ position: 'absolute', left: '-23px', top: '60px' }}/>
+          <Drawer.Header>
+          </Drawer.Header>
+          <Drawer.Body>
+          </Drawer.Body>
+          <Drawer.Footer>
+          </Drawer.Footer>
+        </Drawer>
+      </Box>
+    </React.Fragment>
+  )
+})
 
 export const transparentRight = () => React.createElement(() => {
   const [isCollapse, toggle] = useToggle(false)
@@ -196,6 +192,35 @@ export const transparentRight = () => React.createElement(() => {
                 <Box __css={{ backgroundColor: '#FFFFFF', width: '252px', height: '100px' }}>              
                 </Box>
                 <Box __css={{ backgroundColor: '#FFFFFF', width: '252px', marginTop: '10px', height: '100px' }}>              
+                </Box>
+              </>
+            }
+          </Drawer.Body>
+          <Drawer.Footer>
+          </Drawer.Footer>
+        </Drawer>
+      </Box>
+    </React.Fragment>
+  )
+})
+
+export const transparentLeft = () => React.createElement(() => {
+  const [isCollapse, toggle] = useToggle(false)
+  const overlay = false
+
+  return (
+    <React.Fragment>
+      <Box __css={{ backgroundColor: '#F3F6F8', height: '500px' }}>
+        <Drawer isCollapse={isCollapse} screenSide={'left'} animationWidth={304} animationMinWidth={70} overlay={overlay} heightMin='147px' transparent={true}>
+          <ButtonIcon onClick={toggle} isRounded icon='icon-atras' variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ position: 'absolute', right: '-23px', top: '40px', zIndex: '100' }}/>
+          <Drawer.Header>
+          </Drawer.Header>
+          <Drawer.Body style={{ paddingTop: '35px', right: '0px', position: 'absolute' }}>
+            { isCollapse &&
+              <>
+                <Box __css={{ backgroundColor: '#FFFFFF', width: '300px', height: '100px' }}>              
+                </Box>
+                <Box __css={{ backgroundColor: '#FFFFFF', width: '300px', marginTop: '10px', height: '100px' }}>              
                 </Box>
               </>
             }
