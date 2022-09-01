@@ -2,7 +2,7 @@ import React from 'react'
 import { createPopper } from '@popperjs/core'
 import { Box } from '@oneloop/box'
 
-export const Submenu = ({ parentId, childrenId, variant = 'submenu', placement = 'right', offset = 8, ...props }) => {
+export const Submenu = ({ parentId, childrenId, variant = 'submenu', placement = 'right', offset = 8, document, ...props }) => {
   const popcorn = document.querySelector('#' + parentId)
   const tooltip = document.querySelector('#' + childrenId)
   if (popcorn != null && tooltip != null) {
