@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/drawer",
-  "version": "1.0.189",
+  "version": "1.0.190",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
