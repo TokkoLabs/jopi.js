@@ -1688,6 +1688,44 @@ const theme = {
       height: '26px',
     },
   },
+  card: {
+    normal: {
+      padding: '8px 10px 8px 10px',
+      gap: '8px',
+      backgroundColorValue: colors.neutralGray10,
+      borderRadius: '10px',
+      ':hover': {
+        backgroundColor: colors.neutralGray8,
+      },
+      ':focus': {
+        backgroundColor: colors.neutralGray8,
+      },
+    },
+    contacts: {
+      padding: '6px 10px 6px 10px',
+      gap: '8px',
+      backgroundColorValue: colors.neutralGray10,
+      borderRadius: '10px',
+      ':hover': {
+        backgroundColor: colors.neutralGray8,
+      },
+      ':focus': {
+        backgroundColor: colors.neutralGray8,
+      },
+    },
+    search: {
+      padding: '8px 12px 8px 12px',
+      gap: '8px',
+      backgroundColorValue: colors.neutralGray10,
+      borderRadius: '10px',
+      ':hover': {
+        backgroundColor: colors.neutralGray8,
+      },
+      ':focus': {
+        backgroundColor: colors.neutralGray8,
+      },
+    },
+  },
 }
 
 export default theme
