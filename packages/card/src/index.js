@@ -4,7 +4,7 @@ import theme from '@oneloop/theme'
 
 export const Card = ({ variant, active, ...props }) => {
   const variantValues = Object.values(theme.card)[Object.keys(theme.card).indexOf(variant)]
-  let backgroundColor = active ? variantValues[":focus"].backgroundColor : variantValues.backgroundColorValue
+  const backgroundColor = active ? variantValues[':focus'].backgroundColor : variantValues.backgroundColorValue
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
