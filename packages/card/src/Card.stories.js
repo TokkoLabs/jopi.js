@@ -111,3 +111,20 @@ export const cardSearchTwoLines = () => {
     </Card>
   )
 }
+
+export const cardEmprendimiento = () => {
+  const [active, setActive] = useToggle(false)
+
+  return (
+    <Card id='0' variant='contacts' width='224px' active={active}>
+      <Checkbox onClick={setActive} isChecked={active} />
+      <Image variant="rows" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+      <Box sx={{ position: 'relative' }}>
+        <Text variant='bodyBold.fontSize10' style={{ color: '#056C53' }}>Comercializando</Text>
+        <Text variant='body.fontSize12' style={{ color: '#49565D' }}>Mirabilia belgrano</Text>
+        <Text variant='body.fontSize11' style={{ color: '#6F838D' }}>Arcos y Roosevelt</Text>
+      </Box>
+    </Card>
+  )
+}
+
