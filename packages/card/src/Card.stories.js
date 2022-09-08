@@ -92,7 +92,7 @@ export const CardSearch = () => {
   const [active, setActive] = useToggle(false)
 
   return (
-    <Card id='0' variant='contacts' width='224px' active={active}>
+    <Card id='0' variant='search' width='224px' active={active}>
       <Checkbox onClick={setActive} isChecked={active} />
       <Text variant='body.fontSize12' style={{ color: '#49565D' }}>Búsqueda favorita de prueba</Text>
       <span className='icon-ambientes' style={{ color: '#6F838D', paddingTop: '5px' }}/>
@@ -104,7 +104,7 @@ export const CardSearchTwoLines = () => {
   const [active, setActive] = useToggle(false)
 
   return (
-    <Card id='0' variant='contacts' width='224px' active={active}>
+    <Card id='0' variant='search' width='224px' active={active}>
       <Checkbox onClick={setActive} isChecked={active} />
       <Text variant='body.fontSize12' style={{ color: '#49565D', paddingLeft: '10px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Búsqueda favorita de prueba con un texto que es mas largo produciendo</Text>
       <span className='icon-ambientes' style={{ color: '#6F838D', paddingTop: '5px' }}/>
@@ -116,7 +116,7 @@ export const CardEmprendimiento = () => {
   const [active, setActive] = useToggle(false)
 
   return (
-    <Card id='0' variant='contacts' width='224px' active={active}>
+    <Card id='0' variant='normal' width='224px' active={active}>
       <Checkbox onClick={setActive} isChecked={active} />
       <Image variant="rows" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
       <Box sx={{ position: 'relative' }}>
