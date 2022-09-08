@@ -2,6 +2,7 @@ import { Alert } from '@oneloop/alert'
 import { Badge } from '@oneloop/badge'
 import { Box, Flex } from '@oneloop/box'
 import { Button, ButtonIcon, ButtonRound, ButtonMain } from '@oneloop/button'
+import { Card } from '@oneloop/card'
 import { Checkbox } from '@oneloop/checkbox'
 import { Collapsible } from '@oneloop/collapsible'
 import { Datepicker } from '@oneloop/datepicker'
@@ -33,6 +34,7 @@ export {
   ButtonIcon,
   ButtonRound,
   ButtonMain,
+  Card,
   Checkbox,
   Input,
   Label,
