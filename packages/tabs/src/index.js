@@ -1,5 +1,6 @@
 import React, { useState, createContext, useContext } from 'react'
 import { Box } from '@oneloop/box'
+import theme from '@oneloop/theme'
 
 const TabsContext = createContext()
 
@@ -35,24 +36,26 @@ const useTabsContext = () => {
   return context
 }
 
-const Tab = ({ id, children, ...props }) => {
+const Tab = ({ id, children, variant = 'normal', ...props }) => {
   const { active, setActive } = useTabsContext()
+  const variantValues = Object.values(theme.tab)[Object.keys(theme.tab).indexOf(variant)]
+  const color = variantValues.color
+  const colorActive = variantValues[':focus'].color
   return (
     <Box
+      tx='tab'
+      variant={variant}
       onClick={() => setActive(id)}
       {...props}
       __css={{
-        padding: 'auto 38px',
         position: 'relative',
         cursor: 'pointer',
         fontFamily: 'heading',
         textTransform: 'uppercase',
         textAlign: 'center',
-        fontWeight: '600',
-        fontSize: 1,
         '*': {
           textDecoration: 'none',
-          color: active === id ? 'white' : '#EBA49A',
+          color: active === id ? colorActive : color,
         },
         a: {
           display: 'block',
@@ -70,10 +73,11 @@ const Tab = ({ id, children, ...props }) => {
         <Box
           as="span"
           __css={{
-            borderRadius: '4px 4px 0 0',
+            borderRadius: variant === 'normal' ? '4px 4px 0 0' : '4px',
+            height: variant === 'normal' ? '4px' : undefined,
             display: 'block',
-            backgroundColor: 'white',
-            height: '4px',
+            backgroundColor: colorActive,
+            border: variant === 'normal' ? undefined : '2px solid #DF1E02',
             position: 'absolute',
             right: '10px',
             left: '10px',

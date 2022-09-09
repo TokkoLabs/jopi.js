@@ -1726,6 +1726,31 @@ const theme = {
       },
     },
   },
+  tab: {
+    normal: {
+      padding: 'auto 38px',
+      color: '#EBA49A',
+      fontSize: '10px',
+      fontWeight: '600',
+      ':focus': {
+        color: colors.white,
+      },
+    },
+    default: {
+      padding: '5px 8px 5px 8px',
+      gap: '6px',
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+      fontSize: '12px',
+      fontWeight: '600',
+      ':hover': {
+        color: colors.neutralGray2,
+      },
+      ':focus': {
+        color: colors.primary,
+      },
+    }
+  },
 }
 
 export default theme
