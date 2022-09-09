@@ -88,8 +88,8 @@ const Tab = ({ id, children, variant = 'normal', ...props }) => {
             backgroundColor: color,
             border: variant === 'normal' ? undefined : '2px solid ' + color,
             position: 'absolute',
-            right: '10px',
-            left: '10px',
+            right: variant === 'normal' ? '10px' : '8px',
+            left: variant === 'normal' ? '10px' : '8px',
             bottom: 0,
           }}
         />

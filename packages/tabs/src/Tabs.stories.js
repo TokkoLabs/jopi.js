@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
 import { Table } from '@oneloop/table'
-import { Text } from '@oneloop/text'
 import { Tabs } from '.'
 
 export default {

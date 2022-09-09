@@ -16,14 +16,11 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding: auto 38px;
   position: relative;
   cursor: pointer;
   font-family: heading;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 600;
-  font-size: 14px;
 }
 
 .c1 * {
@@ -49,24 +46,32 @@ Array [
     <div
       className="c1"
       onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       One
     </div>
     <div
       className="c1"
       onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       Two
     </div>
     <div
       className="c1"
       onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       Three
     </div>
     <div
       className="c1"
       onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       Four
     </div>
@@ -99,14 +104,11 @@ exports[`Tabs renders correctly with only headers 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding: auto 38px;
   position: relative;
   cursor: pointer;
   font-family: heading;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 600;
-  font-size: 14px;
 }
 
 .c1 * {
@@ -132,26 +134,36 @@ exports[`Tabs renders correctly with only headers 1`] = `
   <div
     className="c1"
     onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
     One
   </div>
   <div
     className="c1"
     onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
     Two
   </div>
   <div
     className="c1"
     onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
     Three
   </div>
   <div
     className="c1"
     onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
     Four
   </div>
 </div>
 `;
+
+exports[`Tabs renders correctly with variant default 1`] = `ShallowWrapper {}`;

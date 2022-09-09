@@ -1752,7 +1752,7 @@ const theme = {
       ':focus': {
         color: colors.primary,
       },
-    }
+    },
   },
 }
 
