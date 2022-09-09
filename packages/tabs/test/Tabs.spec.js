@@ -56,6 +56,8 @@ describe('Tabs', () => {
 
     component.find(Tabs.Tab).at(0).simulate('mouseover')
     component.find(Tabs.Tab).at(0).simulate('mouseout')
+    component.find(Tabs.Tab).at(0).simulate('focus')
+    component.find(Tabs.Tab).at(0).simulate('blur')
     component.find(Tabs.Tab).at(0).simulate('click')
 
     expect(component).toMatchSnapshot()

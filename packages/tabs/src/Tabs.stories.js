@@ -6,6 +6,12 @@ import { Tabs } from '.'
 export default {
   component: Tabs,
   title: 'Tabs',
+  argTypes: {
+    variant: {
+      name: 'variant',
+      description: 'Variantes disponibles del tab: [ \'normal\', \'default\' ]',
+    },
+  },
 }
 
 export const normal = () => (
