@@ -1,5 +1,6 @@
 import React, { useState, createContext, useContext } from 'react'
 import { Box } from '@oneloop/box'
+import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
 
 const TabsContext = createContext()
@@ -38,14 +39,22 @@ const useTabsContext = () => {
 
 const Tab = ({ id, children, variant = 'normal', ...props }) => {
   const { active, setActive } = useTabsContext()
+  const [hover, setHover] = useToggle(false)
   const variantValues = Object.values(theme.tab)[Object.keys(theme.tab).indexOf(variant)]
-  const color = variantValues.color
-  const colorActive = variantValues[':focus'].color
+  let color = variantValues.color
+  if (active === id) {
+    color = variantValues[':focus'].color
+  } else if (hover) {
+    color = variantValues[':hover'].color
+  }
+
   return (
     <Box
       tx='tab'
       variant={variant}
       onClick={() => setActive(id)}
+      onMouseOver={() => setHover(true)}
+      onMouseOut={() => setHover(false)}
       {...props}
       __css={{
         position: 'relative',
@@ -55,7 +64,7 @@ const Tab = ({ id, children, variant = 'normal', ...props }) => {
         textAlign: 'center',
         '*': {
           textDecoration: 'none',
-          color: active === id ? colorActive : color,
+          color: color,
         },
         a: {
           display: 'block',
@@ -69,15 +78,15 @@ const Tab = ({ id, children, variant = 'normal', ...props }) => {
       }}
     >
       {children}
-      {active === id && (
+      {(active === id || (variant !== 'normal' && hover)) && (
         <Box
           as="span"
           __css={{
             borderRadius: variant === 'normal' ? '4px 4px 0 0' : '4px',
             height: variant === 'normal' ? '4px' : undefined,
             display: 'block',
-            backgroundColor: colorActive,
-            border: variant === 'normal' ? undefined : '2px solid #DF1E02',
+            backgroundColor: color,
+            border: variant === 'normal' ? undefined : '2px solid ' + color,
             position: 'absolute',
             right: '10px',
             left: '10px',

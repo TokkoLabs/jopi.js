@@ -1732,6 +1732,9 @@ const theme = {
       color: '#EBA49A',
       fontSize: '10px',
       fontWeight: '600',
+      ':hover': {
+        color: '#EBA49A',
+      },
       ':focus': {
         color: colors.white,
       },
