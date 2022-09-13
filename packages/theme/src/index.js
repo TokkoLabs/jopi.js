@@ -1744,8 +1744,6 @@ const theme = {
       gap: '6px',
       color: colors.neutralGray3,
       backgroundColor: colors.transparent,
-      fontSize: '12px',
-      fontWeight: '600',
       ':hover': {
         color: colors.neutralGray2,
       },

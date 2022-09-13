@@ -37,11 +37,22 @@ const useTabsContext = () => {
   return context
 }
 
-const Tab = ({ id, children, variant = 'normal', ...props }) => {
+const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', variantFont = 'fontSize12', ...props }) => {
   const { active, setActive } = useTabsContext()
   const [hover, setHover] = useToggle(false)
-  const variantValues = Object.values(theme.tab)[Object.keys(theme.tab).indexOf(variant)]
-  let color = variantValues.color
+  const fontText = Object.values(theme.text[variantBody][variantFont])
+  let color
+  let variantValues = Object.values(theme.tab)[Object.keys(theme.tab).indexOf(variant)]
+  if (Array.isArray(variant)) {
+    const indexes = variant.map(v => Object.keys(theme.tab).indexOf(v))
+    indexes.map(index => {
+      if (index !== -1 && Object.values(theme.tab)[index].color !== undefined) {
+        variantValues = Object.values(theme.tab)[index]
+      }
+      return color
+    })
+  }
+  color = variantValues.color
   if (active === id) {
     color = variantValues[':focus'].color
   } else if (hover) {
@@ -75,6 +86,9 @@ const Tab = ({ id, children, variant = 'normal', ...props }) => {
         'a > *:first-child': {
           marginRight: '10px',
         },
+        fontSize: fontText[0],
+        fontWeight: fontText[1],
+        lineHeight: fontText[2],
       }}
     >
       {children}
