@@ -10,6 +10,20 @@ export default {
     variant: {
       name: 'variant',
       description: 'Variantes disponibles del tab: [ \'normal\', \'default\' ]',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    variantBody: {
+      name: 'variantBody',
+      description: 'Variantes disponibles del texto: [ \'body\', \'body600\', \'bold\' ]',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    variantFont: {
+      name: 'variantFont',
+      description: 'Variantes disponibles de la fuente: [ \'fontSize09\', \'fontSize10\', \'fontSize11\', \'fontSize12\', \'fontSize13\', \'fontSize14\', \'fontSize15\', \'fontSize16\' ]',
+      type: 'text',
+      control: { type: 'none' },
     },
   },
 }
