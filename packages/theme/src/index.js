@@ -634,7 +634,6 @@ const theme = {
     extraSmall: {
       height: '26px',
       borderRadius: '6px',
-      fontSize: '12px',
       padding: '5px 12px 5px 12px',
       gap: '4px',
       fontWeight: 700,

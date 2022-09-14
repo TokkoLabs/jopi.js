@@ -42,16 +42,7 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
   const [hover, setHover] = useToggle(false)
   const fontText = Object.values(theme.text[variantBody][variantFont])
   let color
-  let variantValues = Object.values(theme.tab)[Object.keys(theme.tab).indexOf(variant)]
-  if (Array.isArray(variant)) {
-    const indexes = variant.map(v => Object.keys(theme.tab).indexOf(v))
-    indexes.map(index => {
-      if (index !== -1 && Object.values(theme.tab)[index].color !== undefined) {
-        variantValues = Object.values(theme.tab)[index]
-      }
-      return color
-    })
-  }
+  const variantValues = Object.values(theme.tab)[Object.keys(theme.tab).indexOf(variant)]
   color = variantValues.color
   if (active === id) {
     color = variantValues[':focus'].color

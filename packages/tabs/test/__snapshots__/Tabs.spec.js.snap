@@ -21,6 +21,9 @@ Array [
   font-family: heading;
   text-transform: uppercase;
   text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
 }
 
 .c1 * {
@@ -109,6 +112,9 @@ exports[`Tabs renders correctly with only headers 1`] = `
   font-family: heading;
   text-transform: uppercase;
   text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
 }
 
 .c1 * {
