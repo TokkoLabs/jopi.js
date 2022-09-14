@@ -1760,6 +1760,12 @@ const theme = {
       },
     },
   },
+  containerMenu: {
+    normal: {
+      backgroundColor: colors.white,
+      borderRadius: '12px',
+    },
+  },
 }
 
 export default theme
