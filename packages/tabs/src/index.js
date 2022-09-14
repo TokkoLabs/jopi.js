@@ -1,5 +1,7 @@
 import React, { useState, createContext, useContext } from 'react'
 import { Box } from '@oneloop/box'
+import { useToggle } from '@oneloop/hooks'
+import theme from '@oneloop/theme'
 
 const TabsContext = createContext()
 
@@ -35,24 +37,36 @@ const useTabsContext = () => {
   return context
 }
 
-const Tab = ({ id, children, ...props }) => {
+const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', variantFont = 'fontSize12', ...props }) => {
   const { active, setActive } = useTabsContext()
+  const [hover, setHover] = useToggle(false)
+  const fontText = Object.values(theme.text[variantBody][variantFont])
+  let color
+  const variantValues = Object.values(theme.tab)[Object.keys(theme.tab).indexOf(variant)]
+  color = variantValues.color
+  if (active === id) {
+    color = variantValues[':focus'].color
+  } else if (hover) {
+    color = variantValues[':hover'].color
+  }
+
   return (
     <Box
+      tx='tab'
+      variant={variant}
       onClick={() => setActive(id)}
+      onMouseOver={() => setHover(true)}
+      onMouseOut={() => setHover(false)}
       {...props}
       __css={{
-        padding: 'auto 38px',
         position: 'relative',
         cursor: 'pointer',
         fontFamily: 'heading',
         textTransform: 'uppercase',
         textAlign: 'center',
-        fontWeight: '600',
-        fontSize: 1,
         '*': {
           textDecoration: 'none',
-          color: active === id ? 'white' : '#EBA49A',
+          color: color,
         },
         a: {
           display: 'block',
@@ -63,20 +77,24 @@ const Tab = ({ id, children, ...props }) => {
         'a > *:first-child': {
           marginRight: '10px',
         },
+        fontSize: fontText[0],
+        fontWeight: fontText[1],
+        lineHeight: fontText[2],
       }}
     >
       {children}
-      {active === id && (
+      {(active === id || (variant !== 'normal' && hover)) && (
         <Box
           as="span"
           __css={{
-            borderRadius: '4px 4px 0 0',
+            borderRadius: variant === 'normal' ? '4px 4px 0 0' : '4px',
+            height: variant === 'normal' ? '4px' : undefined,
             display: 'block',
-            backgroundColor: 'white',
-            height: '4px',
+            backgroundColor: color,
+            border: variant === 'normal' ? undefined : '2px solid ' + color,
             position: 'absolute',
-            right: '10px',
-            left: '10px',
+            right: variant === 'normal' ? '10px' : '8px',
+            left: variant === 'normal' ? '10px' : '8px',
             bottom: 0,
           }}
         />

@@ -607,30 +607,38 @@ const theme = {
     large: {
       height: '48px',
       borderRadius: '12px',
-      fontSize: '16px',
       padding: '13px 26px 13px 26px',
       gap: '6px',
+      fontWeight: 700,
+      fontSize: '16px',
+      lineHeight: '24px',
     },
     medium: {
       height: '38px',
       borderRadius: '10px',
-      fontSize: '14px',
       padding: '10px 24px 10px 24px',
       gap: '4px',
+      fontWeight: 700,
+      fontSize: '14px',
+      lineHeight: '18px',
     },
     small: {
       height: '32px',
       borderRadius: '8px',
-      fontSize: '12px',
       padding: '8px 14px 8px 14px',
       gap: '4px',
+      fontWeight: 700,
+      fontSize: '12px',
+      lineHeight: '16px',
     },
     extraSmall: {
       height: '26px',
       borderRadius: '6px',
-      fontSize: '12px',
       padding: '5px 12px 5px 12px',
       gap: '4px',
+      fontWeight: 700,
+      fontSize: '12px',
+      lineHeight: '16px',
     },
     primaryDisabled: {
       color: colors.disabled,
@@ -1723,6 +1731,32 @@ const theme = {
       },
       ':focus': {
         backgroundColor: colors.neutralGray8,
+      },
+    },
+  },
+  tab: {
+    normal: {
+      padding: 'auto 38px',
+      color: '#EBA49A',
+      fontSize: '10px',
+      fontWeight: '600',
+      ':hover': {
+        color: '#EBA49A',
+      },
+      ':focus': {
+        color: colors.white,
+      },
+    },
+    default: {
+      padding: '5px 8px 5px 8px',
+      gap: '6px',
+      color: colors.neutralGray3,
+      backgroundColor: colors.transparent,
+      ':hover': {
+        color: colors.neutralGray2,
+      },
+      ':focus': {
+        color: colors.primary,
       },
     },
   },
