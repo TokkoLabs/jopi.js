@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/theme",
-  "version": "1.2.231",
+  "version": "1.2.232",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -9,5 +9,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "589f87f6781012bf3946450745c22ab975d04d1a"
+  "gitHead": "72a0f20bcd92b31c78b2c632634fafea25760d5b"
 }

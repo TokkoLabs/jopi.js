@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/tooltip",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -16,5 +16,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "589f87f6781012bf3946450745c22ab975d04d1a"
+  "gitHead": "72a0f20bcd92b31c78b2c632634fafea25760d5b"
 }
