@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/containerMenu",
+  "name": "@oneloop/containermenu",
   "version": "1.0.2",
   "main": "lib/index.js",
   "module": "src/index.js",
