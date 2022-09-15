@@ -1,8 +1,9 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
-import { ButtonIcon, ButtonMain } from '@oneloop/button'
+import { ButtonIcon } from '@oneloop/button'
 import { ContainerMenu } from '.'
 import { List } from '@oneloop/list'
+import { Tabs } from '@oneloop/tabs'
 
 export default {
   component: ContainerMenu,
@@ -40,6 +41,32 @@ export const normal = () => (
     <ContainerMenu width='252px' height='325px' prefixIcon='icon-favoritos' titleText='Favoritos'
       suffix={ <ButtonIcon icon='icon-configuracion' variant={['subtleTrasnparentIconClearButton', 'iconSmall']}/> }
     >
+      <Tabs>
+        <Tabs.Tab variant='default' id="texto">
+          <Box>
+            <span className='icon-buscar'/> 12
+          </Box>
+        </Tabs.Tab >
+        <Tabs.Tab variant='default' id="texto2">
+          <Box>
+            <span className='icon-propiedades'/> 12
+          </Box>
+        </Tabs.Tab>
+        <Tabs.Tab variant='default' id="texto3">
+          <Box>
+            <span className='icon-contacto'/> 12
+          </Box>
+        </Tabs.Tab>
+        <Tabs.Tab variant='default' id="texto4">
+          <Box>
+            <span className='icon-emprendimiento'/> 12
+          </Box>
+        </Tabs.Tab>
+        <Tabs.Content id="texto">Hola!</Tabs.Content>
+        <Tabs.Content id="texto2">Segundo Tab</Tabs.Content>
+        <Tabs.Content id="texto3">Tercer Tab</Tabs.Content>
+        <Tabs.Content id="texto4">Ultimo Tab</Tabs.Content>
+      </Tabs>
     </ContainerMenu>
   </Box>
 )
