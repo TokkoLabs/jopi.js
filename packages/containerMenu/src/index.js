@@ -17,7 +17,7 @@ export const ContainerMenu = ({ children, variant = 'normal', titleText, prefixI
     }}
   >
     <Box __css={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '10px' }}>
-      <span className={prefixIcon} style={{ color: '#DF1E02', fontSize: '14px', height: '14px' }}/>
+      <span className={prefixIcon} style={{ color: '#DF1E02', fontSize: '18px', height: '18px' }}/>
       <Text variant='bodyBold.fontSize14'>{titleText}</Text>
       <Box __css={{ position: 'absolute', right: '5.41%' }}>
         {suffix}

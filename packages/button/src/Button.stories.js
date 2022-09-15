@@ -268,3 +268,9 @@ export const iconArrowDrawer = () => {
     <ButtonIcon icon='icon-atras' variant={'collapseButtonOpen'}/>
   )
 }
+
+export const mainButtonSubtle = () => {
+  return (
+    <ButtonIcon icon='icon-emprendimiento' variant={'collapseButtonOpen'}/>
+  )
+}
