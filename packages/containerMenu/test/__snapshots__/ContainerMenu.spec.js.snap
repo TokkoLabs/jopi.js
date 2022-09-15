@@ -112,8 +112,8 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
       style={
         Object {
           "color": "#DF1E02",
-          "fontSize": "14px",
-          "height": "14px",
+          "fontSize": "18px",
+          "height": "18px",
         }
       }
     />
