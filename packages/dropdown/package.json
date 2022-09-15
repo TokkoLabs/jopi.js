@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/dropdown",
-  "version": "1.2.256",
+  "version": "1.2.257",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,14 +8,15 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.227",
-    "@oneloop/button": "^1.2.245",
-    "@oneloop/hooks": "^1.2.224",
-    "@oneloop/list": "^1.2.244"
+    "@oneloop/button": "^1.2.246",
+    "@oneloop/hooks": "^1.2.225",
+    "@oneloop/list": "^1.2.245"
   },
   "peerDependencies": {
     "react": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "72a0f20bcd92b31c78b2c632634fafea25760d5b"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/alert",
-  "version": "1.2.245",
+  "version": "1.2.246",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.227",
-    "@oneloop/button": "^1.2.245",
+    "@oneloop/button": "^1.2.246",
     "@oneloop/icons": "^1.2.227",
     "@oneloop/text": "^1.2.228"
   },
@@ -17,5 +17,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "72a0f20bcd92b31c78b2c632634fafea25760d5b"
 }
