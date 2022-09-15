@@ -15,7 +15,7 @@ export default {
     },
     variantBody: {
       name: 'variantBody',
-      description: 'Variantes disponibles del texto: [ \'body\', \'body600\', \'bold\' ]',
+      description: 'Variantes disponibles del texto: [ \'body\', \'body600\', \'bodyBold\' ]',
       type: 'text',
       control: { type: 'none' },
     },
