@@ -37,7 +37,7 @@ export default {
   },
 }
 
-export const normal = () => {
+export const Normal = () => {
   const [active, setActive] = useToggle(false)
 
   return (
