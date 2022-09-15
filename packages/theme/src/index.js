@@ -1395,6 +1395,28 @@ const theme = {
       borderRadius: '0px',
       gap: '8px',
     },
+    mainButtonList: {
+      backgroundColor: colors.transparent,
+      color: colors.neutralGray2,
+      height: '28px',
+      width: '100%',
+      justifyContent: 'start',
+      padding: '9px 12px 9px 12px',
+      borderRadius: '8px',
+      gap: '8px',
+      fontWeight: 'normal',
+      fontSize: '13px',
+      heightIcon: '16px',
+      ':hover': {
+        backgroundColor: colors.neutralGray8,
+        color: colors.neutralGray1,
+      },
+      ':focus': {
+        backgroundColor: colors.transparent,
+        color: colors.neutralGray1,
+        fontWeight: 'bold',
+      },
+    },
     dropdownSizeButton: {
       padding: '10px 16px 10px 18px',
       height: '38px',
@@ -1758,6 +1780,12 @@ const theme = {
       ':focus': {
         color: colors.primary,
       },
+    },
+  },
+  containerMenu: {
+    normal: {
+      backgroundColor: colors.white,
+      borderRadius: '12px',
     },
   },
 }

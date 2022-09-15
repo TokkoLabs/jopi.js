@@ -5,6 +5,7 @@ import { Button, ButtonIcon, ButtonRound, ButtonMain } from '@oneloop/button'
 import { Card } from '@oneloop/card'
 import { Checkbox } from '@oneloop/checkbox'
 import { Collapsible } from '@oneloop/collapsible'
+import { ContainerMenu } from '../../containerMenu/src'
 import { Datepicker } from '@oneloop/datepicker'
 import { Drawer } from '@oneloop/drawer'
 import { Dropdown } from '@oneloop/dropdown'
@@ -36,6 +37,7 @@ export {
   ButtonMain,
   Card,
   Checkbox,
+  ContainerMenu,
   Input,
   Label,
   List,
