@@ -225,7 +225,7 @@ export const iconPropiedades = () => <span className='icon-propiedades' style={{
 
 export const iconPropiedadessinmovimiento = () => <span className='icon-propiedadessinmovimiento' style={{ fontSize: '24px' }}/>
 
-export const iconPropietario= () => <span className='icon-propietario' style={{ fontSize: '24px' }}/>
+export const iconPropietario = () => <span className='icon-propietario' style={{ fontSize: '24px' }}/>
 
 export const iconQuitardestaque = () => <span className='icon-quitardestaque' style={{ fontSize: '24px' }}/>
 
@@ -282,8 +282,6 @@ export const iconTotalconstruido = () => <span className='icon-totalconstruido' 
 export const iconTrespunticos = () => <span className='icon-trespunticos' style={{ fontSize: '24px' }}/>
 
 export const iconUbicacion = () => <span className='icon-ubicacion' style={{ fontSize: '24px' }}/>
-
-export const iconUnificar = () => <span className='icon-unificar' style={{ fontSize: '24px' }}/>
 
 export const iconVer = () => <span className='icon-ver' style={{ fontSize: '24px' }}/>
 
