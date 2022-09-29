@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonHoldPress, ButtonUser } from '.'
+import { Button, ButtonIcon, ButtonMain, ButtonHoldPress, ButtonUser } from '.'
 import { useToggle } from '@oneloop/hooks'
 
 export default {
@@ -168,27 +168,27 @@ export const roundIconDisabled = () => (
 )
 
 export const roundLarge = () => (
-  <ButtonRound text='Label' icon='icon-link' variant={['primary', 'roundLarge']}/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primary', 'roundLarge']}/>
 )
 
 export const roundMedium = () => (
-  <ButtonRound text='Label' icon='icon-link' variant={['primary', 'roundMedium']}/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primary', 'roundMedium']}/>
 )
 
 export const roundSmall = () => (
-  <ButtonRound text='Label' icon='icon-link' variant={['primary', 'roundSmall']}/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primary', 'roundSmall']}/>
 )
 
 export const roundExtraSmall = () => (
-  <ButtonRound text='Label' icon='icon-link' variant={['primary', 'roundExtraSmall']}/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primary', 'roundExtraSmall']}/>
 )
 
 export const roundColourFeedback = () => (
-  <ButtonRound text='Label' icon='icon-check' variant='colourFeedback'/>
+  <ButtonIcon text='Label' icon='icon-check' variant={['colourFeedback', 'roundLarge']}/>
 )
 
 export const roundDisabled = () => (
-  <ButtonRound text='Label' icon='icon-link' variant={['primaryDisabled', 'roundLarge']}/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primaryDisabled', 'roundLarge']}/>
 )
 
 export const link = () => (

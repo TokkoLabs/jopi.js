@@ -38,19 +38,19 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant = 'primary', maxWidth, ...props }) => {
-  let heightIcon
+export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, ...props }) => {
+  let fontSize
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
     indexes.map(index => {
-      if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
-        heightIcon = Object.values(theme.buttons)[index].heightIcon
+      if (Object.values(theme.buttons)[index].fontSize !== undefined) {
+        fontSize = Object.values(theme.buttons)[index].fontSize
       }
-      return heightIcon
+      return fontSize
     })
   } else {
     const index = Object.keys(theme.buttons).indexOf(variant)
-    heightIcon = Object.values(theme.buttons)[index].heightIcon
+    fontSize = Object.values(theme.buttons)[index].fontSize
   }
 
   return (
@@ -70,67 +70,17 @@ export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant =
           textDecoration: 'none',
           cursor: 'pointer',
           outline: 'none',
-          color: 'white',
-          bg: 'primary',
           border: 0,
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
-          borderRadius: 12,
           whiteSpace: 'nowrap',
           position: 'relative',
         }}
       >
-        <Icon icon={icon} fontSize={heightIcon}/>
+        { icon && <Icon icon={icon} fontSize={fontSize}/> }
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
         { text && <span>{text}</span> }
-      </Box>
-    </Box>
-  )
-}
-
-export const ButtonRound = ({ text, icon, variant, ...props }) => {
-  let heightIcon
-  if (Array.isArray(variant)) {
-    const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
-    indexes.map(index => {
-      if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
-        heightIcon = Object.values(theme.buttons)[index].fontSize
-      }
-      return heightIcon
-    })
-  } else {
-    const index = Object.keys(theme.buttons).indexOf(variant)
-    heightIcon = Object.values(theme.buttons)[index].fontSize
-  }
-
-  return (
-    <Box sx={{ position: 'relative' }}>
-      <Box
-        as='button'
-        tx='buttons'
-        variant={variant}
-        {...props}
-        __css={{
-          appearance: 'none',
-          display: 'flex',
-          lineHeight: 'inherit',
-          fontFamily: 'Nunito Sans',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          textDecoration: 'none',
-          cursor: 'pointer',
-          outline: 'none',
-          color: 'white',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          whiteSpace: 'nowrap',
-          border: 0,
-        }}
-      >
-        <Icon icon={icon} fontSize={heightIcon}/>
-        <span> {text}</span>
       </Box>
     </Box>
   )
