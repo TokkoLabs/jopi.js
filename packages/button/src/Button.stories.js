@@ -168,19 +168,19 @@ export const roundIconDisabled = () => (
 )
 
 export const roundLarge = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant={['primary', 'roundLarge']}/>
+  <ButtonRound text='Label' icon='icon-link' variant={['primary', 'roundLarge']}/>
 )
 
 export const roundMedium = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant={['primary', 'roundMedium']}/>
+  <ButtonRound text='Label' icon='icon-link' variant={['primary', 'roundMedium']}/>
 )
 
 export const roundSmall = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant={['primary', 'roundSmall']}/>
+  <ButtonRound text='Label' icon='icon-link' variant={['primary', 'roundSmall']}/>
 )
 
 export const roundExtraSmall = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant={['primary', 'roundExtraSmall']}/>
+  <ButtonRound text='Label' icon='icon-link' variant={['primary', 'roundExtraSmall']}/>
 )
 
 export const roundColourFeedback = () => (
@@ -188,7 +188,7 @@ export const roundColourFeedback = () => (
 )
 
 export const roundDisabled = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant='primaryDisabled'/>
+  <ButtonRound text='Label' icon='icon-link' variant={['primaryDisabled', 'roundLarge']}/>
 )
 
 export const link = () => (

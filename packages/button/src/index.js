@@ -90,10 +90,20 @@ export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant =
 }
 
 export const ButtonRound = ({ text, icon, variant, ...props }) => {
-  let heightIcon = '16px'
-  if (variant.includes('roundLarge')) {
-    heightIcon = '20px'
+  let heightIcon
+  if (Array.isArray(variant)) {
+    const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
+    indexes.map(index => {
+      if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
+        heightIcon = Object.values(theme.buttons)[index].fontSize
+      }
+      return heightIcon
+    })
+  } else {
+    const index = Object.keys(theme.buttons).indexOf(variant)
+    heightIcon = Object.values(theme.buttons)[index].fontSize
   }
+
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -107,25 +117,19 @@ export const ButtonRound = ({ text, icon, variant, ...props }) => {
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
           fontWeight: 'bold',
-          fontSize: 16,
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
           outline: 'none',
           color: 'white',
-          bg: 'primary',
-          border: 0,
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
-          borderRadius: 24,
-          height: '48px',
-          gap: '6px',
           whiteSpace: 'nowrap',
-          padding: '13px 26px 13px 26px',
+          border: 0,
         }}
       >
-        <span className={icon} style={{ height: heightIcon, fontSize: heightIcon }}></span>
+        <Icon icon={icon} fontSize={heightIcon}/>
         <span> {text}</span>
       </Box>
     </Box>
