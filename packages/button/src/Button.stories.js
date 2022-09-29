@@ -5,6 +5,15 @@ import { useToggle } from '@oneloop/hooks'
 export default {
   component: Button,
   title: 'Button',
+  argTypes: {
+    variant: {
+      name: 'variant',
+      description: 'Variantes de color disponibles: [ \'primary\', \'primaryDisabled\', \'secondary\', \'secondaryDisabled\', \'primaryOutlined\', \'secondaryOutlined\', \'outlinedDisabled\' ]'
+        + '\nVariantes de tamaño disponibles: [ \'large\', \'medium\', \'small\', \'extraSmall\' ]',
+        type: 'text',
+        control: { type: 'none' },
+    },
+  },
 }
 
 export const primary = () => (
@@ -36,19 +45,19 @@ export const secondary = () => (
 )
 
 export const secondaryDisabled = () => (
-  <Button variant={['primaryDisabled', 'large']}>{'Label'}</Button>
+  <Button variant={['secondaryDisabled', 'large']}>{'Label'}</Button>
 )
 
-export const primaryOutline = () => (
-  <Button variant={['primaryOutline', 'large']}>{'Label'}</Button>
+export const primaryOutlined = () => (
+  <Button variant={['primaryOutlined', 'large']}>{'Label'}</Button>
 )
 
-export const secondaryOutline = () => (
-  <Button variant={['secondaryOutlineIcon', 'large']}>{'Label'}</Button>
+export const secondaryOutlined = () => (
+  <Button variant={['secondaryOutlined', 'large']}>{'Label'}</Button>
 )
 
-export const outlineDisabled = () => (
-  <Button variant={['outlineDisabled', 'large']}>{'Label'}</Button>
+export const outlinedDisabled = () => (
+  <Button variant={['outlinedDisabled', 'large']}>{'Label'}</Button>
 )
 
 export const primaryText = () => (
@@ -99,16 +108,16 @@ export const iconDisabled = () => (
   <ButtonIcon icon='icon-agregar' variant={['iconDisabled', 'iconLarge']}/>
 )
 
-export const primaryOutlineIcon = () => (
-  <ButtonIcon icon='icon-agregar' variant={['primaryOutline', 'iconLarge']}/>
+export const primaryOutlinedIcon = () => (
+  <ButtonIcon icon='icon-agregar' variant={['primaryOutlined', 'iconLarge']}/>
 )
 
-export const secondaryOutlineIcon = () => (
-  <ButtonIcon icon='icon-agregar' variant={['secondaryOutlineIcon', 'iconLarge']}/>
+export const secondaryOutlinedIcon = () => (
+  <ButtonIcon icon='icon-agregar' variant={['secondaryOutlined', 'iconLarge']}/>
 )
 
-export const outlineIconDisabled = () => (
-  <ButtonIcon icon='icon-agregar' variant={['outlineDisabled', 'iconLarge']}/>
+export const outlinedIconDisabled = () => (
+  <ButtonIcon icon='icon-agregar' variant={['outlinedDisabled', 'iconLarge']}/>
 )
 
 export const subtleIcon = () => (

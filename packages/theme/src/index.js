@@ -642,7 +642,7 @@ const theme = {
     },
     primaryDisabled: {
       color: colors.disabled,
-      backgroundColor: colors.neutral[7],
+      backgroundColor: colors.neutralGray8,
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
@@ -661,8 +661,7 @@ const theme = {
     },
     secondaryDisabled: {
       color: colors.disabled,
-      backgroundColor: colors.neutral[0],
-      border: borders.secondaryBorder,
+      backgroundColor: colors.neutralGray8,
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
@@ -870,7 +869,7 @@ const theme = {
       pointerEvents: 'none',
       userSelect: 'none',
     },
-    primaryOutline: {
+    primaryOutlined: {
       backgroundColor: colors.neutral[0],
       color: colors.primary,
       border: borders.primaryBorder,
@@ -885,7 +884,7 @@ const theme = {
         border: 'none',
       },
     },
-    secondaryOutlineIcon: {
+    secondaryOutlined: {
       backgroundColor: colors.neutral[0],
       color: colors.secondary,
       border: borders.secondaryBorder,
@@ -900,7 +899,7 @@ const theme = {
         border: 'none',
       },
     },
-    outlineDisabled: {
+    outlinedDisabled: {
       color: colors.disabled,
       backgroundColor: colors.neutral[0],
       border: borders.disabledBorder,
