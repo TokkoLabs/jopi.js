@@ -2,6 +2,7 @@ import React from 'react'
 import { Badge } from '@oneloop/badge'
 import { Box } from '@oneloop/box'
 import { Checkbox } from '@oneloop/checkbox'
+import { Icon } from '@oneloop/icons'
 import { Image } from '@oneloop/image'
 import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
@@ -65,7 +66,6 @@ export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant =
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
           fontWeight: 'bold',
-          fontSize: '24px',
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
@@ -78,9 +78,10 @@ export const ButtonIcon = ({ icon, variant, badgeValue = 0, text, badgeVariant =
           alignItems: 'center',
           borderRadius: 12,
           whiteSpace: 'nowrap',
+          position: 'relative',
         }}
       >
-        <span className={icon} style={heightIcon && { height: heightIcon, fontSize: heightIcon }}></span>
+        <Icon icon={icon} fontSize={heightIcon}/>
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
         { text && <span>{text}</span> }
       </Box>

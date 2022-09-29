@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Times, Check, Exclamation } from '.'
+import { Times, Check, Exclamation, Icon } from '.'
 
 export default {
   component: Times,
@@ -24,6 +24,8 @@ export const iconAceptar = () => <span className='icon-aceptar' style={{ fontSiz
 export const iconAcciones = () => <span className='icon-acciones' style={{ fontSize: '24px' }}/>
 
 export const iconAdicionales = () => <span className='icon-adicionales' style={{ fontSize: '24px' }}/>
+
+export const iconAdicionales2 = () => <Icon icon='icon-adicionales' fontSize={24}/>
 
 export const iconAdjuntar = () => <span className='icon-adjuntar' style={{ fontSize: '24px' }}/>
 
