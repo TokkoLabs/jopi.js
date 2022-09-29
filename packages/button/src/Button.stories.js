@@ -8,8 +8,43 @@ export default {
   argTypes: {
     variant: {
       name: 'variant',
-      description: 'Variantes de color disponibles: [ \'primary\', \'primaryDisabled\', \'secondary\', \'secondaryDisabled\', \'primaryOutlined\', \'secondaryOutlined\', \'outlinedDisabled\' ]'
-        + '\nVariantes de tamaño disponibles: [ \'large\', \'medium\', \'small\', \'extraSmall\' ]',
+      description: 'Variantes de color disponibles: [ \'primary\', \'primaryDisabled\', \'secondary\', '
+        + '\'secondaryDisabled\', \'primaryOutlined\', \'secondaryOutlined\', \'outlinedDisabled\', \'iconPrimary\', '
+        + '\'iconSecondary\', \'iconDisabled\', \'subtleIconButton\', \'subtleTrasnparentIconClearButton\', '
+        + '\'subtleTrasnparentIconObscureButton\', \'smallIconButtonTransparent\', \'roundIconArrow\', '
+        + '\'colourFeedback\', \'mainItemSmall\' ]'
+        + '\nVariantes de tamaño disponibles: [ \'large\', \'medium\', \'small\', \'extraSmall\', \'iconLarge\', '
+        + '\'iconMedium\', \'iconSmall\', \'iconExtraSmall\', \'iconExtraSmall22px\', \'iconExtraSmall18px\','
+        + '\'roundIconLarge\', \'roundIconMedium\', \'roundIconSmall\', \'roundIconExtraSmall\', '
+        + '\'roundIconExtraSmall22px\', \'roundIconExtraSmall18px\', \'roundLarge\', \'roundMedium\', \'roundSmall\', '
+        + '\'roundExtraSmall\' ]'
+        + '\nVariantes de texto disponibles: [ \'primaryText\', \'secondaryText\', \'subtleText\', \'textDisabled\' '
+        + '\'link\', \'linkSubtle\', \'linkDisabled\', \'subtleButton\' ]'
+        + '***Observación: las variantes de color y tamaño se usan en conjunto.***',
+        type: 'text',
+        control: { type: 'none' },
+    },
+    icon: {
+      name: 'icon',
+      description: 'Valor del icono a agregar (Se debe usar el tipo ButtonIcon)',
+        type: 'text',
+        control: { type: 'none' },
+    },
+    text: {
+      name: 'text',
+      description: 'El texto asignado al button.',
+        type: 'text',
+        control: { type: 'none' },
+    },
+    active: {
+      name: 'active',
+      description: 'Determina si el boton esta activo. (Solo disponible para ButtonHoldPress)',
+        type: 'text',
+        control: { type: 'none' },
+    },
+    onClick: {
+      name: 'onClick',
+      description: 'Pasamos la accion por parametro, que seteara que se activo el boton.',
         type: 'text',
         control: { type: 'none' },
     },
