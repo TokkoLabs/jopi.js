@@ -773,7 +773,6 @@ const theme = {
       borderRadius: 99999,
       height: '48px',
       width: '48px',
-      heightIcon: '30px',
       fontSize: '16px',
       heightIcon: '24px',
     },

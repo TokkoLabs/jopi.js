@@ -90,16 +90,16 @@ export const Icon = ({ icon, fontSize, ...props }) => (
       height: fontSize,
     }}
   >
-      <span className={icon} style={{ 
-        position: 'absolute',
-        top: '-1px',
-        right: '0px',
-        bottom: '0px',
-        left: '-0.5px',
-        fontSize: fontSize,
-        width: fontSize,
-        height: fontSize,
-        }}
-      />
+    <span className={icon} style={{
+      position: 'absolute',
+      top: '-1px',
+      right: '0px',
+      bottom: '0px',
+      left: '-0.5px',
+      fontSize: fontSize,
+      width: fontSize,
+      height: fontSize,
+    }}
+    />
   </Box>
 )
