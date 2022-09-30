@@ -1,4 +1,5 @@
 import React from 'react'
+import { Box } from '@oneloop/box'
 import { Button, ButtonIcon, ButtonHoldPress, ButtonUser } from '.'
 import { useToggle } from '@oneloop/hooks'
 
@@ -12,7 +13,7 @@ export default {
         '\'secondaryDisabled\', \'primaryOutlined\', \'secondaryOutlined\', \'outlinedDisabled\', \'iconPrimary\', ' +
         '\'iconSecondary\', \'iconDisabled\', \'subtleIconButton\', \'subtleTrasnparentIconClearButton\', ' +
         '\'subtleTrasnparentIconObscureButton\', \'smallIconButtonTransparent\', \'roundIconArrow\', ' +
-        '\'colourFeedback\', \'mainItemSmall\', \'mainButton\', \'mainButtonIcon\' ]' +
+        '\'colourFeedback\', \'mainItemSmall\', \'mainButton\', \'mainButtonIcon\', \'userButton\' ]' +
         '\nVariantes de tamaño disponibles: [ \'large\', \'medium\', \'small\', \'extraSmall\', \'iconLarge\', ' +
         '\'iconMedium\', \'iconSmall\', \'iconExtraSmall\', \'iconExtraSmall22px\', \'iconExtraSmall18px\',' +
         '\'roundIconLarge\', \'roundIconMedium\', \'roundIconSmall\', \'roundIconExtraSmall\', ' +
@@ -275,7 +276,19 @@ export const MainButtonHoldPressedCollapsible = () => {
   const [active, setActive] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={setActive}/>
+    <Box __css={{ width: '200px' }}>
+      <ButtonHoldPress variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={setActive} maxWidth/>
+    </Box>
+  )
+}
+
+export const MainButtonHoldPressedWithBadge = () => {
+  const [active, setActive] = useToggle(false)
+
+  return (
+    <Box __css={{ width: '200px' }}>
+      <ButtonHoldPress variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={setActive} maxWidth badgeValue='20' badgeVariant='primary'/>
+    </Box>
   )
 }
 
@@ -283,7 +296,23 @@ export const MainButtonIconHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant={['mainButtonIcon', 'iconSmall']} icon='icon-propiedades' active={active} onClick={toggle}/>
+    <ButtonHoldPress variant='mainButtonIcon' icon='icon-propiedades' active={active} onClick={toggle}/>
+  )
+}
+
+export const MainButtonIconHoldPressedWithBadge = () => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <ButtonHoldPress variant='mainButtonIcon' icon='icon-propiedades' active={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
+  )
+}
+
+export const MainIconSubtleHoldPressed = () => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' active={active} onClick={toggle} isInput/>
   )
 }
 
@@ -295,25 +324,9 @@ export const userButtonWithImage = () => (
   <ButtonUser variant='userButton' srcImage='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' text='Nombre Usuario' />
 )
 
-export const MainIconButtonHoldPressed = () => {
-  const [active, toggle] = useToggle(false)
-
-  return (
-    <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
-  )
-}
-
 export const iconWhiteHelp = () => (
   <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px' style={{ backgroundColor: '#798B97', paddingTop: '10px', paddingRight: '7.2px' }}/>
 )
-
-export const MainIconSubtleHoldPressed = () => {
-  const [active, toggle] = useToggle(false)
-
-  return (
-    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' active={active} onClick={toggle} isInput/>
-  )
-}
 
 export const iconArrowDrawer = () => {
   return (

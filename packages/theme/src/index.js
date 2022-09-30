@@ -1058,21 +1058,6 @@ const theme = {
         color: colors.neutralGray1,
       },
     },
-  /*  mainButton: {
-      color: colors.subtle,
-      backgroundColor: colors.transparent,
-      gap: '6px',
-      ':hover': {
-        backgroundColor: colors.neutral[7],
-        fontWeight: 'normal',
-        color: colors.subtlePressed,
-      },
-      ':focus': {
-        backgroundColor: colors.transparent,
-        fontWeight: 'bold',
-        color: colors.subtlePressed,
-      },
-    },*/
     mainButtonCollapsible: {
       color: colors.mainButtonText,
       backgroundColor: colors.transparent,
@@ -1109,6 +1094,8 @@ const theme = {
     },
     mainButtonIcon: {
       justifyContent: 'center',
+      height: '32px',
+      width: '32px',
       fontSize: '14px',
       lineHeight: '18px',
       fontWeight: 'normal',
@@ -1117,6 +1104,7 @@ const theme = {
       padding: '5px',
       gap: '10px',
       colorIcon: colors.neutralGray2,
+      borderRadius: '9px',
       ':hover': {
         color: colors.neutralGray1,
         backgroundColor: colors.neutralGray8,
@@ -1145,7 +1133,7 @@ const theme = {
         fontWeight: 'bold',
       },
     },
-    smallIconMainButton: {
+  /*  smallIconMainButton: {
       color: colors.darkGray,
       width: '32px',
       height: '32px',
@@ -1161,7 +1149,7 @@ const theme = {
         color: colors.primary,
         backgroundColor: colors.transparent,
       },
-    },
+    },*/
     smallIconButtonTransparent: {
       gap: '10px',
       backgroundColor: colors.secondary,

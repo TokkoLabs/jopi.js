@@ -86,7 +86,7 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
   )
 }
 
-export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValue = 0, badgeVariant = 'primary', hasCheckbox = false, disabled = false, maxWidth, ...props }) => {
+export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValue = 0, badgeVariant = 'primary', isCollapsible, hasCheckbox = false, disabled = false, maxWidth, ...props }) => {
   let colorValue
   let colorValueIcon
   let fontSize
@@ -102,9 +102,10 @@ export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValu
         }
       } else if (Object.values(theme.buttons)[index].color !== undefined) {
         colorValue = Object.values(theme.buttons)[index].color
-        fontWeight = Object.values(theme.buttons)[index].fontWeight
       } else if (Object.values(theme.buttons)[index].colorIcon !== undefined) {
         colorValueIcon = Object.values(theme.buttons)[index].colorIcon
+      } else if (Object.values(theme.buttons)[index].fontWeight !== undefined) {
+        fontWeight = Object.values(theme.buttons)[index].fontWeight
       }
       if (Object.values(theme.buttons)[index].fontSize !== undefined) {
         fontSize = Object.values(theme.buttons)[index].fontSize
@@ -136,7 +137,7 @@ export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValu
           display: 'flex',
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
-          //  fontWeight: 'bold',
+          fontWeight: {fontWeight},
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
@@ -144,17 +145,18 @@ export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValu
           border: 0,
           flexDirection: 'row',
           //  justifyContent: 'center',
+          width: maxWidth &&'100%',
           alignItems: 'center',
           whiteSpace: 'nowrap',
-          position: 'relative',
         }}
       >
         { hasCheckbox && active && <Checkbox defaultChecked disabled={disabled}/>}
         { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={disabled}/>}
         { icon && <Icon icon={icon} fontSize={fontSize} style={{ color: ( colorValueIcon || colorValue ) }}/> }
         { text && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
+        { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: active ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
         { badgeValue !== 0 && !text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
-        { badgeValue !== 0 && text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '8.5px', right: '16px' }}>{badgeValue}</Badge> }
+        { badgeValue !== 0 && text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '16px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
   )
