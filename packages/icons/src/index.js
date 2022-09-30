@@ -84,6 +84,7 @@ export const ChevronRight = ({ color = 'black', ...props }) => (
 
 export const Icon = ({ icon, fontSize, ...props }) => (
   <Box
+    {...props}
     __css={{
       position: 'relative',
       width: fontSize,

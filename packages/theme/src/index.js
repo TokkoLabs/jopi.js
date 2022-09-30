@@ -1,4 +1,5 @@
 const colors = {
+  black: '#272E33',
   primary: '#DF1E02',
   primaryHover: '#FD2B0C',
   primaryPressed: '#FD4E34',
@@ -1057,7 +1058,7 @@ const theme = {
         color: colors.neutralGray1,
       },
     },
-    mainButton: {
+  /*  mainButton: {
       color: colors.subtle,
       backgroundColor: colors.transparent,
       gap: '6px',
@@ -1071,7 +1072,7 @@ const theme = {
         fontWeight: 'bold',
         color: colors.subtlePressed,
       },
-    },
+    },*/
     mainButtonCollapsible: {
       color: colors.mainButtonText,
       backgroundColor: colors.transparent,
@@ -1083,6 +1084,47 @@ const theme = {
       ':focus': {
         backgroundColor: colors.transparent,
         color: colors.neutral[6],
+      },
+    },
+    mainButton: {
+      height: '38px',
+      fontSize: '14px',
+      lineHeight: '18px',
+      borderRadius: '8px',
+      fontWeight: 'normal',
+      backgroundColor: colors.transparent,
+      color: colors.neutralGray2,
+      padding: '9px 10px 9px 10px',
+      gap: '6px',
+      colorIcon: colors.neutralGray2,
+      ':hover': {
+        color: colors.neutralGray1,
+        backgroundColor: colors.neutralGray8,
+      },
+      ':focus': {
+        fontWeight: 'bold',
+        color: colors.neutralGray1,
+        colorIcon: colors.primary,
+      },
+    },
+    mainButtonIcon: {
+      justifyContent: 'center',
+      fontSize: '14px',
+      lineHeight: '18px',
+      fontWeight: 'normal',
+      backgroundColor: colors.transparent,
+      color: colors.neutralGray2,
+      padding: '5px',
+      gap: '10px',
+      colorIcon: colors.neutralGray2,
+      ':hover': {
+        color: colors.neutralGray1,
+        backgroundColor: colors.neutralGray8,
+      },
+      ':focus': {
+        fontWeight: 'bold',
+        color: colors.neutralGray1,
+        colorIcon: colors.primary,
       },
     },
     mainItemSmall: {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonIcon, ButtonMain, ButtonHoldPress, ButtonUser } from '.'
+import { Button, ButtonIcon, ButtonHoldPress, ButtonUser } from '.'
 import { useToggle } from '@oneloop/hooks'
 
 export default {
@@ -12,7 +12,7 @@ export default {
         '\'secondaryDisabled\', \'primaryOutlined\', \'secondaryOutlined\', \'outlinedDisabled\', \'iconPrimary\', ' +
         '\'iconSecondary\', \'iconDisabled\', \'subtleIconButton\', \'subtleTrasnparentIconClearButton\', ' +
         '\'subtleTrasnparentIconObscureButton\', \'smallIconButtonTransparent\', \'roundIconArrow\', ' +
-        '\'colourFeedback\', \'mainItemSmall\' ]' +
+        '\'colourFeedback\', \'mainItemSmall\', \'mainButton\', \'mainButtonIcon\' ]' +
         '\nVariantes de tamaño disponibles: [ \'large\', \'medium\', \'small\', \'extraSmall\', \'iconLarge\', ' +
         '\'iconMedium\', \'iconSmall\', \'iconExtraSmall\', \'iconExtraSmall22px\', \'iconExtraSmall18px\',' +
         '\'roundIconLarge\', \'roundIconMedium\', \'roundIconSmall\', \'roundIconExtraSmall\', ' +
@@ -263,19 +263,27 @@ export const MainItemSmallHoldPressed = () => {
   )
 }
 
-export const MainButton = () => {
-  const [active, setActive] = useToggle(false)
+export const MainButtonHoldPressed = () => {
+  const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={setActive}/>
+    <ButtonHoldPress variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={toggle}/>
   )
 }
 
-export const MainButtonCollapsible = () => {
+export const MainButtonHoldPressedCollapsible = () => {
   const [active, setActive] = useToggle(false)
 
   return (
-    <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={setActive}/>
+    <ButtonHoldPress variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={setActive}/>
+  )
+}
+
+export const MainButtonIconHoldPressed = () => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <ButtonHoldPress variant={['mainButtonIcon', 'iconSmall']} icon='icon-propiedades' active={active} onClick={toggle}/>
   )
 }
 
