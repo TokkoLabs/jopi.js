@@ -1161,11 +1161,15 @@ const theme = {
         backgroundColor: colors.secondaryPressed,
       },
     },
-    whiteExtraSmall24px: {
-      height: '24px',
-      width: '24px',
+    whiteSmallIcon: {
+      height: '32px',
+      width: '32px',
       color: colors.neutral[0],
       backgroundColor: colors.transparent,
+      fontSize: '16px',
+      padding: '5px',
+      gap: '10px',
+      borderRadius: '9px',
     },
     collapseButtonOpen: {
       color: colors.primary,

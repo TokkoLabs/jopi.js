@@ -325,11 +325,13 @@ export const userButtonWithImage = () => (
 )
 
 export const iconWhiteHelp = () => (
-  <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px' style={{ backgroundColor: '#798B97', paddingTop: '10px', paddingRight: '7.2px' }}/>
+  <ButtonIcon icon='icon-dudas' variant='whiteSmallIcon' style={{ backgroundColor: '#798B97' }}/>
 )
 
 export const iconArrowDrawer = () => {
+  const [isCollapse, setCollapse] = useToggle(false)
+
   return (
-    <ButtonIcon icon='icon-atras' variant={'collapseButtonOpen'}/>
+    <ButtonIcon icon='icon-atras' onClick={setCollapse} variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ transition: '0.5s'}}/>
   )
 }
