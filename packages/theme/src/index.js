@@ -1195,10 +1195,15 @@ const theme = {
     },
     userButton: {
       background: colors.transparent,
-      padding: '0px',
+      color: colors.white,
       fontSize: '12px',
       flexGrow: 0,
+      padding: '0px',
       gap: '8px',
+      borderRadius: '12px',
+      fontWeight: 'bold',
+      fontSize: '14px',
+      height: '48px',
       ':hover': {
         color: colors.secondaryHover,
       },

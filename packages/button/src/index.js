@@ -38,7 +38,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, ...props }) => {
+export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, ...props }) => {
   let fontSize
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
@@ -79,6 +79,8 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
         }}
       >
         { icon && <Icon icon={icon} fontSize={fontSize}/> }
+        { userImage && srcImage && <Image src={srcImage} variant="avatar"/> }
+        { userImage && !srcImage && <span className='icon-contactos' style={{ fontSize: '24px' }}/>}
         { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
         { text && <span>{text}</span> }
       </Box>
@@ -161,41 +163,3 @@ export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValu
     </Box>
   )
 }
-
-export const ButtonUser = ({ variant, srcImage, text, ...props }) => (
-  <Box sx={{ position: 'relative' }}>
-    <Box
-      as='button'
-      tx='buttons'
-      variant={variant}
-      {...props}
-      __css={{
-        appearance: 'none',
-        display: 'flex',
-        lineHeight: 'inherit',
-        fontFamily: 'Nunito Sans',
-        fontWeight: 'bold',
-        fontSize: '14px',
-        textAlign: 'center',
-        textDecoration: 'none',
-        cursor: 'pointer',
-        outline: 'none',
-        color: 'white',
-        bg: 'primary',
-        border: 0,
-        borderRadius: '12px',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '48px',
-        whiteSpace: 'nowrap',
-        padding: '13px 26px 13px 26px',
-        gap: '8px',
-      }}
-    >
-      {srcImage && <Image src={srcImage} variant="avatar"/> }
-      {!srcImage && <span className='icon-contacto' style={{ fontSize: '24px', height: '24px' }}/>}
-      {text}
-    </Box>
-  </Box>
-)
