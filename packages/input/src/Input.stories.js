@@ -8,6 +8,86 @@ import { Icon } from '@oneloop/icons'
 export default {
   component: Input,
   title: 'Input',
+  argTypes: {
+    variant: {
+      name: 'variant',
+      description: '**Variantes de color disponibles:** [ \'input\', \'inputSearch\', \'inputSearchTransparent\', \'inputSearchOutlined\']',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    variantSize: {
+      name: 'variant',
+      description: '**Variantes de tamaño disponibles:** [ \'inputLarge\', \'inputMedium\', \'inputSmall\']',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    placeholder: {
+      name: 'placeholder',
+      description: 'Texto del placeholder.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    width: {
+      name: 'width',
+      description: 'Width del input.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    errors: {
+      name: 'errors',
+      description: 'Texto que indica el error.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    infoAlert: {
+      name: 'infoAlert',
+      description: 'Texto que sirve para alertar al usuario.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    disabled: {
+      name: 'disabled',
+      description: 'Booleano que indica si esta deshabilitado o no.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    readonly: {
+      name: 'readonly',
+      description: 'Booleano que indica si el input es solo de lectura.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    prefix: {
+      name: 'prefix',
+      description: 'El prefix es lo que va adelante del input, puede ser un icono, botón, etc.',
+      type: 'object',
+      control: { type: 'none' },
+    },
+    suffix: {
+      name: 'suffix',
+      description: 'El suffix es lo que va al final del input, puede ser un icono, botón, etc.',
+      type: 'object',
+      control: { type: 'none' },
+    },
+    label: {
+      name: 'label',
+      description: 'El label es el texto que indica de que es el input.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    inline: {
+      name: 'inline',
+      description: 'Booleano que indica si el label tiene que ir en la misma linea que el input.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    password: {
+      name: 'password',
+      description: 'Booleano que indica si se oculta o muestra el input en el formato de contraseña.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+  },
 }
 
 export const input = () => <Input placeholder="Placeholder text" width='300px'/>
