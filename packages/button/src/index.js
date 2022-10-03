@@ -51,15 +51,20 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
         if (Object.values(theme.buttons)[index].colorIcon !== undefined) {
           colorValueIcon = Object.values(theme.buttons)[index][':focus'].colorIcon
         }
-      } else if (Object.values(theme.buttons)[index].color !== undefined) {
+      }
+      if (colorValue === undefined && Object.values(theme.buttons)[index].color !== undefined) {
         colorValue = Object.values(theme.buttons)[index].color
-      } else if (Object.values(theme.buttons)[index].colorIcon !== undefined) {
+      }
+      if (colorValueIcon === undefined && Object.values(theme.buttons)[index].colorIcon !== undefined) {
         colorValueIcon = Object.values(theme.buttons)[index].colorIcon
-      } else if (Object.values(theme.buttons)[index].fontWeight !== undefined) {
+      }
+      if (fontWeight === undefined && Object.values(theme.buttons)[index].fontWeight !== undefined) {
         fontWeight = Object.values(theme.buttons)[index].fontWeight
-      } else if (Object.values(theme.buttons)[index].fontSize !== undefined) {
+      }
+      if (fontSize === undefined && Object.values(theme.buttons)[index].fontSize !== undefined) {
         fontSize = Object.values(theme.buttons)[index].fontSize
       }
+      console.log(fontWeight)
       return colorValue
     })
   } else {
