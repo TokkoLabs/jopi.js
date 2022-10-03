@@ -9,20 +9,19 @@ export default {
   argTypes: {
     variant: {
       name: 'variant',
-      description: 'Variantes de color disponibles: [ \'primary\', \'primaryDisabled\', \'secondary\', ' +
+      description: '\n* **Variantes de color disponibles:** [ \'primary\', \'primaryDisabled\', \'secondary\', ' +
         '\'secondaryDisabled\', \'primaryOutlined\', \'secondaryOutlined\', \'outlinedDisabled\', \'iconPrimary\', ' +
         '\'iconSecondary\', \'iconDisabled\', \'subtleIconButton\', \'subtleTrasnparentIconClearButton\', ' +
         '\'subtleTrasnparentIconObscureButton\', \'smallIconButtonTransparent\', \'roundIconArrow\', ' +
         '\'colourFeedback\', \'mainItemSmall\', \'mainButton\', \'mainButtonIcon\', \'userButton\', \'collapseButtonOpen\', ' +
         '\'collapseButtonClosed\' ]' +
-        '\nVariantes de tamaño disponibles: [ \'large\', \'medium\', \'small\', \'extraSmall\', \'iconLarge\', ' +
+        '\n*       **Variantes de tamaño disponibles:** [ \'large\', \'medium\', \'small\', \'extraSmall\', \'iconLarge\', ' +
         '\'iconMedium\', \'iconSmall\', \'iconExtraSmall\', \'iconExtraSmall22px\', \'iconExtraSmall18px\',' +
         '\'roundIconLarge\', \'roundIconMedium\', \'roundIconSmall\', \'roundIconExtraSmall\', ' +
         '\'roundIconExtraSmall22px\', \'roundIconExtraSmall18px\', \'roundLarge\', \'roundMedium\', \'roundSmall\', ' +
         '\'roundExtraSmall\' ]' +
-        '\nVariantes de texto disponibles: [ \'primaryText\', \'secondaryText\', \'subtleText\', \'textDisabled\' ' +
-        '\'link\', \'linkSubtle\', \'linkDisabled\', \'subtleButton\' ]' +
-        '***Observación: las variantes de color y tamaño se usan en conjunto.***',
+        '\n* **Variantes de texto disponibles:** [ \'primaryText\', \'secondaryText\', \'subtleText\', \'textDisabled\' ' +
+        '\'link\', \'linkSubtle\', \'linkDisabled\', \'subtleButton\' ]',
       type: 'text',
       control: { type: 'none' },
     },
@@ -40,7 +39,7 @@ export default {
     },
     active: {
       name: 'active',
-      description: 'Determina si el boton esta activo. (Solo disponible para ButtonHoldPress)',
+      description: 'Determina si el boton esta activo. (para los casos que se quiere que el boton quede activado)',
       type: 'text',
       control: { type: 'none' },
     },
@@ -48,6 +47,49 @@ export default {
       name: 'onClick',
       description: 'Pasamos la accion por parametro, que seteara que se activo el boton.',
       type: 'text',
+      control: { type: 'none' },
+    },
+    badgeValue: {
+      name: 'badgeValue',
+      description: 'Valor numérico de la cantidad a mostrar en el badge.',
+      type: 'number',
+      control: { type: 'none' },
+    },
+    badgeVariant: {
+      name: 'badgeVariant',
+      description: 'Variant del badge (variants disponibles en el componente Badge).',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    maxWidth: {
+      name: 'maxWidth',
+      description: 'Booleano que determina si usa el maximo width posible.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    srcImage: {
+      name: 'srcImage',
+      description: 'Ruta de la imagen.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    hasCheckbox: {
+      name: 'hasCheckbox',
+      description: 'Booleano que determina si el boton al principio tiene un checkbox.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    isCollapsible: {
+      name: 'isCollapsible',
+      description: 'Booleano que determina si el boton es colapsible, en ese caso se agrega el icono al final ' +
+        'que indica que se puede desplegar.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    disabled: {
+      name: 'disabled',
+      description: 'Booleano para determinar que el checkbox quede disabled.',
+      type: 'boolean',
       control: { type: 'none' },
     },
   },
@@ -329,10 +371,10 @@ export const iconWhiteHelp = () => (
   <ButtonIcon icon='icon-dudas' variant='whiteSmallIcon' style={{ backgroundColor: '#798B97' }}/>
 )
 
-export const iconArrowDrawer = () => {
+export const IconArrowDrawer = () => {
   const [isCollapse, setCollapse] = useToggle(false)
 
   return (
-    <ButtonIcon icon='icon-atras' onClick={setCollapse} variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ transition: '0.5s'}}/>
+    <ButtonIcon icon='icon-atras' onClick={setCollapse} variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ transition: '0.5s' }}/>
   )
 }

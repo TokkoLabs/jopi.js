@@ -1133,7 +1133,7 @@ const theme = {
         fontWeight: 'bold',
       },
     },
-  /*  smallIconMainButton: {
+    smallIconMainButton: {
       color: colors.darkGray,
       width: '32px',
       height: '32px',
@@ -1149,7 +1149,7 @@ const theme = {
         color: colors.primary,
         backgroundColor: colors.transparent,
       },
-    },*/
+    },
     smallIconButtonTransparent: {
       gap: '10px',
       backgroundColor: colors.secondary,
@@ -1196,7 +1196,6 @@ const theme = {
     userButton: {
       background: colors.transparent,
       color: colors.white,
-      fontSize: '12px',
       flexGrow: 0,
       padding: '0px',
       gap: '8px',

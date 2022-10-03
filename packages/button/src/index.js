@@ -4,7 +4,6 @@ import { Box } from '@oneloop/box'
 import { Checkbox } from '@oneloop/checkbox'
 import { Icon } from '@oneloop/icons'
 import { Image } from '@oneloop/image'
-import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
 import '@oneloop/fonts'
 
@@ -38,7 +37,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, ...props }) => {
+export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, ...props }) => {
   let colorValue
   let colorValueIcon
   let fontSize
@@ -89,7 +88,7 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
           display: 'flex',
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
-          fontWeight: {fontWeight},
+          fontWeight: { fontWeight },
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
@@ -103,9 +102,9 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
           position: 'relative',
         }}
       >
-        { hasCheckbox && active && <Checkbox defaultChecked disabled={disabled}/>}
-        { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={disabled}/>}
-        { icon && <Icon icon={icon} fontSize={fontSize} style={{ color: ( colorValueIcon || colorValue ) }}/> }
+        { hasCheckbox && active && <Checkbox defaultChecked disabled={ disabled }/>}
+        { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={ disabled }/>}
+        { icon && <Icon icon={icon} fontSize={fontSize} style={{ color: (colorValueIcon || colorValue) }}/> }
         { userImage && srcImage && <Image src={srcImage} variant="avatar"/> }
         { userImage && !srcImage && <span className='icon-contactos' style={{ fontSize: '24px' }}/>}
         { text && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
@@ -168,7 +167,7 @@ export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValu
           display: 'flex',
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
-          fontWeight: {fontWeight},
+          fontWeight: { fontWeight },
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
@@ -176,14 +175,14 @@ export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValu
           border: 0,
           flexDirection: 'row',
           //  justifyContent: 'center',
-          width: maxWidth &&'100%',
+          width: maxWidth && '100%',
           alignItems: 'center',
           whiteSpace: 'nowrap',
         }}
       >
-        { hasCheckbox && active && <Checkbox defaultChecked disabled={disabled}/>}
-        { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={disabled}/>}
-        { icon && <Icon icon={icon} fontSize={fontSize} style={{ color: ( colorValueIcon || colorValue ) }}/> }
+        { hasCheckbox && active && <Checkbox defaultChecked disabled={ disabled }/>}
+        { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={ disabled }/>}
+        { icon && <Icon icon={icon} fontSize={fontSize} style={{ color: (colorValueIcon || colorValue) }}/> }
         { text && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
         { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: active ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
         { badgeValue !== 0 && !text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
