@@ -957,9 +957,6 @@ const theme = {
       backgroundColor: colors.feedback,
       border: borders.feedbackBorder,
       color: colors.neutral[0],
-      cursor: 'default',
-      pointerEvents: 'none',
-      userSelect: 'none',
     },
     link: {
       fontSize: fontSize[3],

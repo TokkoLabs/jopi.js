@@ -92,6 +92,12 @@ export default {
       type: 'boolean',
       control: { type: 'none' },
     },
+    holdPress: {
+      name: 'holdPress',
+      description: 'Booleano que se utiliza en los botones que requieran quedar activos, hasta que se los vuelva a seleccionar.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
   },
 }
 
@@ -303,7 +309,7 @@ export const MainItemSmallHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonIcon variant='mainItemSmall' active={active} onClick={toggle} text={'Label'}/>
+    <ButtonIcon variant='mainItemSmall' holdPress active={active} onClick={toggle} text={'Label'}/>
   )
 }
 
@@ -311,7 +317,7 @@ export const MainButtonHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonIcon variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={toggle}/>
+    <ButtonIcon variant='mainButton' icon='icon-propiedades' holdPress text='Emprendimientos' active={active} onClick={toggle}/>
   )
 }
 
@@ -320,7 +326,7 @@ export const MainButtonHoldPressedCollapsible = () => {
 
   return (
     <Box __css={{ width: '200px' }}>
-      <ButtonIcon variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={setActive} maxWidth/>
+      <ButtonIcon variant='mainButton' icon='icon-propiedades' holdPress text='Emprendimientos' isCollapsible active={active} onClick={setActive} maxWidth/>
     </Box>
   )
 }
@@ -330,7 +336,7 @@ export const MainButtonHoldPressedWithBadge = () => {
 
   return (
     <Box __css={{ width: '200px' }}>
-      <ButtonIcon variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={setActive} maxWidth badgeValue='20' badgeVariant='primary'/>
+      <ButtonIcon variant='mainButton' icon='icon-propiedades' holdPress text='Emprendimientos' active={active} onClick={setActive} maxWidth badgeValue='20' badgeVariant='primary'/>
     </Box>
   )
 }
@@ -339,7 +345,7 @@ export const MainButtonIconHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' active={active} onClick={toggle}/>
+    <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} onClick={toggle}/>
   )
 }
 
@@ -347,7 +353,7 @@ export const MainButtonIconHoldPressedWithBadge = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' active={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
+    <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
   )
 }
 
@@ -355,7 +361,7 @@ export const MainIconSubtleHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonIcon variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' active={active} onClick={toggle} isInput/>
+    <ButtonIcon variant={['subtleIcon', 'iconExtraSmall22px']} holdPress icon='icon-propiedades' active={active} onClick={toggle} isInput/>
   )
 }
 
