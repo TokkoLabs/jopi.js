@@ -1055,19 +1055,6 @@ const theme = {
         color: colors.neutralGray1,
       },
     },
-    mainButtonCollapsible: {
-      color: colors.mainButtonText,
-      backgroundColor: colors.transparent,
-      gap: '6px',
-      ':hover': {
-        backgroundColor: colors.neutral[7],
-        color: colors.neutral[6],
-      },
-      ':focus': {
-        backgroundColor: colors.transparent,
-        color: colors.neutral[6],
-      },
-    },
     mainButton: {
       height: '38px',
       fontSize: '14px',

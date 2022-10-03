@@ -60,11 +60,13 @@ export const menu = () =>
           <Collapsible.Button
             isMainButton
             onClick={() => closeAllExcep(0)}
-            variant="mainButtonCollapsible"
+            variant="mainButton"
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open0}
             active={active0}
+            maxWidth
+            holdPress
           >
           </Collapsible.Button>
         </Collapsible>
@@ -73,12 +75,14 @@ export const menu = () =>
           <Collapsible.Button
             isMainButton
             onClick={() => closeAllExcep(1)}
-            variant="mainButtonCollapsible"
+            variant="mainButton"
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open1}
             active={active1}
             isCollapsible
+            maxWidth
+            holdPress
           >
           </Collapsible.Button>
           <Collapsible.Body>
@@ -91,12 +95,14 @@ export const menu = () =>
           <Collapsible.Button
             isMainButton
             onClick={() => closeAllExcep(2)}
-            variant="mainButtonCollapsible"
+            variant="mainButton"
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open2}
             active={active2}
             badgeValue={2}
+            maxWidth
+            holdPress
           >
           </Collapsible.Button>
         </Collapsible>
@@ -129,7 +135,7 @@ export const menuCollapsed = () =>
           <Collapsible.Button
             isSmallButtonIcon
             onClick={() => closeAllExcep(0)}
-            variant="mainButtonCollapsible"
+            variant="mainButtonIcon"
             icon="icon-emprendimientos"
             isExpanded={open0}
             active={active0}
@@ -145,7 +151,7 @@ export const menuCollapsed = () =>
           <Collapsible.Button
             isSmallButtonIcon
             onClick={() => closeAllExcep(1)}
-            variant="mainButtonCollapsible"
+            variant="mainButtonIcon"
             icon="icon-emprendimientos"
             isExpanded={open1}
             active={active1}
@@ -161,7 +167,7 @@ export const menuCollapsed = () =>
           <Collapsible.Button
             isSmallButtonIcon
             onClick={() => closeAllExcep(2)}
-            variant="mainButtonCollapsible"
+            variant="mainButtonIcon"
             icon="icon-emprendimientos"
             isExpanded={open2}
             active={active2}
