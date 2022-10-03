@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from '@oneloop/box'
+import { Icon } from '@oneloop/icons'
 import { Text } from '@oneloop/text'
 import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
@@ -32,14 +33,6 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
     colorPlaceholder = 'neutralGray1'
   }
 
-  if (infoAlert !== undefined) {
-    finalVariant = 'inputFocus'
-  } else if (errors !== undefined) {
-    finalVariant = 'inputError'
-    colorPlaceholder = 'error'
-    suffix = <span className='icon-error'/>
-  }
-
   const index = Object.keys(theme.forms).indexOf(variantSize)
   const paddingLeft = prefix ? Object.values(theme.forms)[index].paddingLeftPrefix : Object.values(theme.forms)[index].paddingLeftNoPrefix
   const paddingRight = suffix ? Object.values(theme.forms)[index].paddingRightSuffix : Object.values(theme.forms)[index].paddingRightNoSuffix
@@ -48,6 +41,14 @@ export const Input = ({ prefix, suffix, label, errors, variant = 'input', varian
   if (suffix && suffix.type !== 'span') {
     suffix = <div>{suffix}</div>
   }
+  if (infoAlert !== undefined) {
+    finalVariant = 'inputFocus'
+  } else if (errors !== undefined) {
+    finalVariant = 'inputError'
+    colorPlaceholder = 'error'
+    suffix = <Icon icon='icon-error' fontSize={fontSizePrefix}/>
+  }
+
   return (
     <Box
       width='100%'

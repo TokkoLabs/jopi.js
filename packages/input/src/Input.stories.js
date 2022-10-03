@@ -3,6 +3,7 @@ import React from 'react'
 import { Input } from '.'
 import { ButtonIcon } from '@oneloop/button'
 import { useToggle } from '@oneloop/hooks'
+import { Icon } from '@oneloop/icons'
 
 export default {
   component: Input,
@@ -28,13 +29,13 @@ export const inputMedium = () => <Input placeholder="Placeholder text" variantSi
 export const inputSmall = () => <Input placeholder="Placeholder text" variantSize='inputSmall' width='300px'/>
 
 export const inputWithIcon = () => (
-  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" width='300px'/>
+  <Input prefix={<Icon icon='icon-email' fontSize='14px'/>} placeholder="Hello World!" width='300px'/>
 )
 export const inputWithIconMedium = () => (
-  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" variantSize='inputMedium' width='300px'/>
+  <Input prefix={<Icon icon='icon-email' fontSize='12px'/>} placeholder="Hello World!" variantSize='inputMedium' width='300px'/>
 )
 export const inputWithIconSmall = () => (
-  <Input prefix={<span className='icon-email'/>} placeholder="Hello World!" variantSize='inputSmall' width='300px'/>
+  <Input prefix={<Icon icon='icon-email' fontSize='11px'/>} placeholder="Hello World!" variantSize='inputSmall' width='300px'/>
 )
 
 export const inputWithLabel = () => (
@@ -42,7 +43,7 @@ export const inputWithLabel = () => (
 )
 
 export const inputWithLabelIcon = () => (
-  <Input prefix={<span className='icon-email'/>} label="Label de prueba" placeholder="Hello World!" width='300px'/>
+  <Input prefix={<Icon icon='icon-email' fontSize='14px'/>} label="Label de prueba" placeholder="Hello World!" width='300px'/>
 )
 
 export const inputTransparent = () => <Input placeholder="Placeholder text" variant="inputTransparent" width='300px'/>
@@ -56,7 +57,7 @@ export const InputWithPassword = () => {
 
   return (
     <Input
-      suffix={<span className={pass ? 'icon-ocultar' : 'icon-mostrar'} onClick={() => setPass()}/>}
+      suffix={<Icon icon={pass ? 'icon-ocultar' : 'icon-ver'} fontSize='14px' onClick={() => setPass()}/>}
       label="Label de prueba"
       placeholder="Hello World!"
       password={pass}
@@ -70,7 +71,7 @@ export const Search = () => {
 
   return (
     <Input
-      prefix={<span className='icon-buscar'/>}
+      prefix={<Icon icon='icon-buscar' fontSize='14px'/>}
       suffix={ text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => setText('')}/> : undefined }
       placeholder="Search"
       variant='inputSearch'
@@ -86,7 +87,7 @@ export const SearchTransparent = () => {
 
   return (
     <Input
-      prefix={<span className='icon-buscar'/>}
+      prefix={<Icon icon='icon-buscar' fontSize='14px'/>}
       suffix={ text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => setText('')}/> : undefined }
       placeholder="Search"
       variant='inputSearchTransparent'
@@ -102,7 +103,7 @@ export const SearchOutlined = () => {
 
   return (
     <Input
-      prefix={<span className='icon-buscar'/>}
+      prefix={<Icon icon='icon-buscar' fontSize='14px'/>}
       suffix={ text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => setText('')}/> : undefined }
       placeholder="Search"
       variant='inputSearchOutlined'
@@ -118,7 +119,7 @@ export const SearchTransparentBold = () => {
 
   return (
     <Input
-      prefix={<span className='icon-buscar'/>}
+      prefix={<Icon icon='icon-buscar' fontSize='14px'/>}
       suffix={ text !== '' ? <ButtonIcon variant={['transparentIcon', 'iconExtraSmall22px']} icon='icon-cerrar' onClick={e => setText('')}/> : undefined }
       placeholder="Search"
       variant='inputSearchTransparent'
@@ -132,8 +133,8 @@ export const SearchTransparentBold = () => {
 
 export const SearchPrefixSuffix = () => (
   <Input
-    prefix={<span className='icon-buscar'/>}
-    suffix={<span className='icon-propiedades'/>}
+    prefix={<Icon icon='icon-buscar' fontSize='14px'/>}
+    suffix={<Icon icon='icon-propiedades' fontSize='14px'/>}
     placeholder="Buscar contactos, propiedades, emprendimientos o usuarios..."
     variant='inputSearchTransparent'
     width='500px'
