@@ -19,19 +19,17 @@ export const Button = ({ variant, ...props }) => (
         display: 'flex',
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
-        fontWeight: 'normal',
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
         outline: 'none',
-        color: 'white',
-        bg: 'primary',
         border: 0,
-        borderRadius: '12px',
         flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
         whiteSpace: 'nowrap',
+        justifyContent: 'center',
+        fontWeight: 'bold',
+        borderRadius: '12px',
       }}
     />
   </Box>
