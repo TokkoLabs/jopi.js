@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
-import { Button, ButtonIcon, ButtonHoldPress, ButtonUser } from '.'
+import { Button, ButtonIcon } from '.'
 import { useToggle } from '@oneloop/hooks'
 
 export default {
@@ -13,7 +13,8 @@ export default {
         '\'secondaryDisabled\', \'primaryOutlined\', \'secondaryOutlined\', \'outlinedDisabled\', \'iconPrimary\', ' +
         '\'iconSecondary\', \'iconDisabled\', \'subtleIconButton\', \'subtleTrasnparentIconClearButton\', ' +
         '\'subtleTrasnparentIconObscureButton\', \'smallIconButtonTransparent\', \'roundIconArrow\', ' +
-        '\'colourFeedback\', \'mainItemSmall\', \'mainButton\', \'mainButtonIcon\', \'userButton\' ]' +
+        '\'colourFeedback\', \'mainItemSmall\', \'mainButton\', \'mainButtonIcon\', \'userButton\', \'collapseButtonOpen\', ' +
+        '\'collapseButtonClosed\' ]' +
         '\nVariantes de tamaño disponibles: [ \'large\', \'medium\', \'small\', \'extraSmall\', \'iconLarge\', ' +
         '\'iconMedium\', \'iconSmall\', \'iconExtraSmall\', \'iconExtraSmall22px\', \'iconExtraSmall18px\',' +
         '\'roundIconLarge\', \'roundIconMedium\', \'roundIconSmall\', \'roundIconExtraSmall\', ' +
@@ -260,7 +261,7 @@ export const MainItemSmallHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='mainItemSmall' active={active} onClick={toggle} text={'Label'}/>
+    <ButtonIcon variant='mainItemSmall' active={active} onClick={toggle} text={'Label'}/>
   )
 }
 
@@ -268,7 +269,7 @@ export const MainButtonHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={toggle}/>
+    <ButtonIcon variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={toggle}/>
   )
 }
 
@@ -277,7 +278,7 @@ export const MainButtonHoldPressedCollapsible = () => {
 
   return (
     <Box __css={{ width: '200px' }}>
-      <ButtonHoldPress variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={setActive} maxWidth/>
+      <ButtonIcon variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active={active} onClick={setActive} maxWidth/>
     </Box>
   )
 }
@@ -287,7 +288,7 @@ export const MainButtonHoldPressedWithBadge = () => {
 
   return (
     <Box __css={{ width: '200px' }}>
-      <ButtonHoldPress variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={setActive} maxWidth badgeValue='20' badgeVariant='primary'/>
+      <ButtonIcon variant='mainButton' icon='icon-propiedades' text='Emprendimientos' active={active} onClick={setActive} maxWidth badgeValue='20' badgeVariant='primary'/>
     </Box>
   )
 }
@@ -296,7 +297,7 @@ export const MainButtonIconHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='mainButtonIcon' icon='icon-propiedades' active={active} onClick={toggle}/>
+    <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' active={active} onClick={toggle}/>
   )
 }
 
@@ -304,7 +305,7 @@ export const MainButtonIconHoldPressedWithBadge = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='mainButtonIcon' icon='icon-propiedades' active={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
+    <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' active={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
   )
 }
 
@@ -312,7 +313,7 @@ export const MainIconSubtleHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' active={active} onClick={toggle} isInput/>
+    <ButtonIcon variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' active={active} onClick={toggle} isInput/>
   )
 }
 

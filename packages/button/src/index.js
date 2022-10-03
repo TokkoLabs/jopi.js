@@ -38,19 +38,43 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, ...props }) => {
+export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, ...props }) => {
+  let colorValue
+  let colorValueIcon
   let fontSize
+  let fontWeight
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
     indexes.map(index => {
+      if (Object.values(theme.buttons)[index][':focus'] !== undefined && active) {
+        colorValue = Object.values(theme.buttons)[index][':focus'].color
+        fontWeight = Object.values(theme.buttons)[index][':focus'].fontWeight
+        if (Object.values(theme.buttons)[index].colorIcon !== undefined) {
+          colorValueIcon = Object.values(theme.buttons)[index][':focus'].colorIcon
+        }
+      } else if (Object.values(theme.buttons)[index].color !== undefined) {
+        colorValue = Object.values(theme.buttons)[index].color
+      } else if (Object.values(theme.buttons)[index].colorIcon !== undefined) {
+        colorValueIcon = Object.values(theme.buttons)[index].colorIcon
+      } else if (Object.values(theme.buttons)[index].fontWeight !== undefined) {
+        fontWeight = Object.values(theme.buttons)[index].fontWeight
+      }
       if (Object.values(theme.buttons)[index].fontSize !== undefined) {
         fontSize = Object.values(theme.buttons)[index].fontSize
       }
-      return fontSize
+      return colorValue
     })
   } else {
     const index = Object.keys(theme.buttons).indexOf(variant)
+    colorValue = Object.values(theme.buttons)[index].color
+    colorValueIcon = Object.values(theme.buttons)[index].colorIcon
     fontSize = Object.values(theme.buttons)[index].fontSize
+    fontWeight = Object.values(theme.buttons)[index].fontWeight
+    if (active) {
+      colorValue = Object.values(theme.buttons)[index][':focus'].color
+      colorValueIcon = Object.values(theme.buttons)[index][':focus'].colorIcon
+      fontWeight = Object.values(theme.buttons)[index][':focus'].fontWeight
+    }
   }
 
   return (
@@ -65,30 +89,35 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
           display: 'flex',
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
-          fontWeight: 'bold',
+          fontWeight: {fontWeight},
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
           outline: 'none',
           border: 0,
           flexDirection: 'row',
-          justifyContent: 'center',
+          justifyContent: !maxWidth && 'center',
+          width: maxWidth && '100%',
           alignItems: 'center',
           whiteSpace: 'nowrap',
           position: 'relative',
         }}
       >
-        { icon && <Icon icon={icon} fontSize={fontSize}/> }
+        { hasCheckbox && active && <Checkbox defaultChecked disabled={disabled}/>}
+        { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={disabled}/>}
+        { icon && <Icon icon={icon} fontSize={fontSize} style={{ color: ( colorValueIcon || colorValue ) }}/> }
         { userImage && srcImage && <Image src={srcImage} variant="avatar"/> }
         { userImage && !srcImage && <span className='icon-contactos' style={{ fontSize: '24px' }}/>}
-        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
-        { text && <span>{text}</span> }
+        { text && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span>}
+        { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: active ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
+        { badgeValue !== 0 && !text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
+        { badgeValue !== 0 && text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '16px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
   )
 }
 
-export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValue = 0, badgeVariant = 'primary', isCollapsible, hasCheckbox = false, disabled = false, maxWidth, ...props }) => {
+export const ButtonHoldPress = ({ variant, active = false, text, icon, badgeValue = 0, badgeVariant = 'primary', isCollapsible, disabled = false, maxWidth, hasCheckbox, ...props }) => {
   let colorValue
   let colorValueIcon
   let fontSize
