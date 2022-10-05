@@ -2,6 +2,24 @@ import React from 'react'
 import { createPopper } from '@popperjs/core'
 import { Box } from '@oneloop/box'
 
+export const Parent = ({ children, placement = 'right', ...props }) => {
+  return (
+    <Box sx={{ position: 'relative' }}>
+      <Box
+        {...props}
+        __css={{
+          backgroundColor: 'red',
+          display: 'flex',
+          width: 'fit-content',
+        }}
+      >
+        {children}
+      </Box>
+    </Box>
+  )
+}
+
+
 export const Submenu = ({ parentId, childrenId, variant = 'submenu', placement = 'right', offset = 8, ...props }) => {
   const popcorn = document.querySelector('#' + parentId)
   const tooltip = document.querySelector('#' + childrenId)

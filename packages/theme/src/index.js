@@ -1122,8 +1122,7 @@ const theme = {
       width: '32px',
       height: '32px',
       borderRadius: '9px',
-      fontSize: '22px',
-      heightIcon: '22px',
+      fontSize: '18px',
       backgroundColor: colors.transparent,
       ':hover': {
         color: colors.primary,

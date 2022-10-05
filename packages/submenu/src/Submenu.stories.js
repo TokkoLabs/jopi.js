@@ -1,8 +1,8 @@
 import React from 'react'
 import { ButtonIcon } from '@oneloop/button'
-import { useToggle, isMouseOutTooltip } from '@oneloop/hooks'
+import { useToggle, isMouseOutTooltip, isMouseOutJoin, isMouseOutParent } from '@oneloop/hooks'
 import { Text } from '@oneloop/text'
-import { Submenu } from '.'
+import { Parent, Submenu } from '.'
 
 export default {
   component: Submenu,
@@ -42,11 +42,24 @@ export default {
 export const SubmenuNormalRight = () => {
   const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
+  // Crear un Parent en el submenu, que se le pase el objeto por parametro y el Parent del submenu, se encarga de crear el join
+  // Segun corresponda en las posiciones laterales #F3F6F8
+  // <ButtonIcon variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent0', 'right'))} id="parent0" aria-describedby="tooltip0" style={{ backgroundColor: 'black'}}/>
+  // <div style={{ backgroundColor: 'red', display: 'flex', width: 'fit-content' }}>
   return (
-    <div style={{ background: '#F3F6F8', paddingLeft: '400px', paddingTop: '110px', borderRadius: '10px', height: '150px' }}>
-      <ButtonIcon variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip0', 'parent0', 'right'))} id="parent0" aria-describedby="tooltip0"/>
-      <div id="tooltip0" role="tooltip0" hidden={!active && !hover} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip0', 'parent0', 'right'))}>
-        <Submenu parentId='parent0' childrenId='tooltip0' width='202px'>
+    <div style={{ backgroundColor: '#F3F6F8', paddingLeft: '400px', paddingTop: '110px', borderRadius: '10px', height: '550px' }}>
+      
+      <Parent onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent0', 'right'))} id="parent0" aria-describedby="tooltip0">
+        <ButtonIcon variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} style={{ backgroundColor: 'black'}}/>
+      
+        <div id='join0' role="join0"
+          onMouseOut={(e) => setHover(isMouseOutJoin(e, 'join0', 'right'))}
+          style={{ width: '20px', height: '32px', position: 'absolute', marginLeft: '32px' }}
+        />
+      </Parent>
+
+      <div id="tooltip0" role="tooltip0" hidden={!active && !hover} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip0', 'parent0', 'right'))} style={{ backgroundColor: 'red', width: 'fit-content' }}>
+        <Submenu parentId='parent0' childrenId='tooltip0' width='202px' offset={20} placement='right'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>

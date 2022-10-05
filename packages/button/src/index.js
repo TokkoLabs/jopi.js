@@ -62,7 +62,7 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
       if (fontSize === undefined && Object.values(theme.buttons)[index].fontSize !== undefined) {
         fontSize = Object.values(theme.buttons)[index].fontSize
       }
-      console.log(fontWeight)
+
       return colorValue
     })
   } else {
