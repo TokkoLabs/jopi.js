@@ -3,17 +3,19 @@ import { createPopper } from '@popperjs/core'
 import { Box } from '@oneloop/box'
 import { isMouseOutJoin } from '@oneloop/hooks'
 
-export const Parent = ({ children, placement = 'right', setHover, hover, offset = 8, ...props }) => {
+export const Parent = ({ children, setHover, hover, placement = 'right', offset = 8, ...props }) => {
   let styles = { position: 'absolute', width: offset + 'px' }
   if (document.getElementById(props.id) !== null) {
      const values = document.getElementById(props.id).getBoundingClientRect()
      if (placement === 'right') {
-      styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: values.width, background: 'blue' }
+      styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: values.width }
      } else if (placement === 'bottom') {
-      styles = { position: 'absolute', width: values.width, height: offset + 'px', marginTop: values.width, background: 'red' }
+      styles = { position: 'absolute', width: values.width, height: offset + 'px', marginTop: values.width }
      } else if (placement === 'left') {
-      styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: -offset + 'px', background: 'green' }
-     }
+      styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: -offset + 'px' }
+     } else if (placement === 'top') {
+      styles = { position: 'absolute', width: values.width, height: offset + 'px', marginTop: -offset + 'px' }
+     } 
   }
   return (
     <Box sx={{ position: 'relative' }}>
@@ -22,7 +24,6 @@ export const Parent = ({ children, placement = 'right', setHover, hover, offset 
         __css={{
           display: 'flex',
           width: 'fit-content',
-          background: 'black'
         }}
       >
         {children}

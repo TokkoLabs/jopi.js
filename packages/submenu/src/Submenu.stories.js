@@ -236,15 +236,17 @@ export const SubmenuNormalLeftEnd = () => {
     </div>
   )
 }
-/*
-export const SubmenuNormalLeft = () => {
+
+export const SubmenuNormalTopStart = () => {
   const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
   return (
-    <div style={{ background: '#F3F6F8', paddingLeft: '400px', paddingTop: '140px', borderRadius: '10px', height: '180px' }}>
-      <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'left'))} id="parent1" aria-describedby="tooltip1" style={{ position: 'absolute', right: '200px' }}/>
-      <div id="tooltip1" role="tooltip1" hidden={!active && !hover} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'left'))}>
-        <Submenu parentId='parent1' childrenId='tooltip1' width='202px' placement='left'>
+    <div style={{ backgroundColor: '#F3F6F8', paddingLeft: '400px', paddingTop: '310px', borderRadius: '10px', height: '300px' }}>
+      <Parent onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent9', 'top'))} id="parent9" aria-describedby="tooltip9" setHover={setHover} hover={hover} offset={20} placement='top'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </Parent>
+      <div id="tooltip9" role="tooltip9" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip9', 'parent9', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Submenu parentId='parent9' childrenId='tooltip9' width='202px' offset={20} placement='top-start'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -261,10 +263,12 @@ export const SubmenuNormalTop = () => {
   const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
   return (
-    <div style={{ background: '#F3F6F8', paddingLeft: '400px', paddingTop: '270px', borderRadius: '10px', height: '150px' }}>
-      <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip2', 'parent2', 'top'))} id="parent2" aria-describedby="tooltip2"/>
-      <div id="tooltip2" role="tooltip2" hidden={!active && !hover} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip2', 'parent2', 'top'))}>
-        <Submenu parentId='parent2' childrenId='tooltip2' width='202px' placement='top'>
+    <div style={{ backgroundColor: '#F3F6F8', paddingLeft: '400px', paddingTop: '310px', borderRadius: '10px', height: '300px' }}>
+      <Parent onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent10', 'top'))} id="parent10" aria-describedby="tooltip10" setHover={setHover} hover={hover} offset={20} placement='top'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </Parent>
+      <div id="tooltip10" role="tooltip10" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip10', 'parent10', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Submenu parentId='parent10' childrenId='tooltip10' width='202px' offset={20} placement='top'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -277,14 +281,16 @@ export const SubmenuNormalTop = () => {
   )
 }
 
-export const SubmenuNormalBottom = () => {
+export const SubmenuNormalTopEnd = () => {
   const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
   return (
-    <div style={{ background: '#F3F6F8', paddingLeft: '400px', paddingTop: '5px', borderRadius: '10px', height: '300px' }}>
-      <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip3', 'parent3', 'bottom'))} id="parent3" aria-describedby="tooltip3"/>
-      <div id="tooltip3" role="tooltip3" hidden={!active && !hover} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip3', 'parent3', 'bottom'))}>
-        <Submenu parentId='parent3' childrenId='tooltip3' width='202px' placement='bottom'>
+    <div style={{ backgroundColor: '#F3F6F8', paddingLeft: '400px', paddingTop: '310px', borderRadius: '10px', height: '300px' }}>
+      <Parent onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent11', 'top'))} id="parent11" aria-describedby="tooltip11" setHover={setHover} hover={hover} offset={20} placement='top'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </Parent>
+      <div id="tooltip11" role="tooltip11" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip11', 'parent11', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Submenu parentId='parent11' childrenId='tooltip11' width='202px' offset={20} placement='top-end'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -298,13 +304,15 @@ export const SubmenuNormalBottom = () => {
 }
 
 export const SubmenuWithOutIcon = () => {
-  const [hover, setHover] = useToggle(false)
+  const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
   return (
-    <div style={{ background: '#F3F6F8', padding: '20px', paddingTop: '125px', borderRadius: '10px', height: '135px' }}>
-      <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip4', 'parent4', 'right'))} id="parent4" aria-describedby="tooltip4"/>
-      <div id="tooltip4" role="tooltip4" hidden={!active && !hover} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip4', 'parent4', 'right'))}>
-        <Submenu parentId='parent4' childrenId='tooltip4' width='202px'>
+    <div style={{ backgroundColor: '#F3F6F8', paddingLeft: '400px', paddingTop: '110px', borderRadius: '10px', height: '300px' }}>
+      <Parent onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent12', 'right'))} id="parent12" aria-describedby="tooltip12" setHover={setHover} hover={hover} offset={20}>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </Parent>
+      <div id="tooltip12" role="tooltip12" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip12', 'parent12', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Submenu parentId='parent12' childrenId='tooltip12' width='202px' offset={20} placement='right'>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' text='Contactos' maxWidth/>
           <ButtonIcon variant='submenu' text='Empresa' maxWidth/>
@@ -316,4 +324,3 @@ export const SubmenuWithOutIcon = () => {
     </div>
   )
 }
-*/
