@@ -14,7 +14,6 @@ export const Parent = ({ children, placement = 'right', setHover, hover, offset 
       <Box
         {...props}
         __css={{
-          backgroundColor: 'red',
           display: 'flex',
           width: 'fit-content',
         }}
