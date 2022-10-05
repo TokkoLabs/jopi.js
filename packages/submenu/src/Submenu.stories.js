@@ -42,20 +42,11 @@ export default {
 export const SubmenuNormalRight = () => {
   const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
-  // Crear un Parent en el submenu, que se le pase el objeto por parametro y el Parent del submenu, se encarga de crear el join
-  // Segun corresponda en las posiciones laterales #F3F6F8
-  // <ButtonIcon variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent0', 'right'))} id="parent0" aria-describedby="tooltip0" style={{ backgroundColor: 'black'}}/>
-  // <div style={{ backgroundColor: 'red', display: 'flex', width: 'fit-content' }}>
   return (
     <div style={{ backgroundColor: '#F3F6F8', paddingLeft: '400px', paddingTop: '110px', borderRadius: '10px', height: '550px' }}>
       
-      <Parent onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent0', 'right'))} id="parent0" aria-describedby="tooltip0">
-        <ButtonIcon variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} style={{ backgroundColor: 'black'}}/>
-      
-        <div id='join0' role="join0"
-          onMouseOut={(e) => setHover(isMouseOutJoin(e, 'join0', 'right'))}
-          style={{ width: '20px', height: '32px', position: 'absolute', marginLeft: '32px' }}
-        />
+      <Parent onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent0', 'right'))} id="parent0" aria-describedby="tooltip0" setHover={setHover} hover={hover} offset={20}>
+        <ButtonIcon variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </Parent>
 
       <div id="tooltip0" role="tooltip0" hidden={!active && !hover} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip0', 'parent0', 'right'))} style={{ backgroundColor: 'red', width: 'fit-content' }}>

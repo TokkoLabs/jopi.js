@@ -1,8 +1,14 @@
 import React from 'react'
 import { createPopper } from '@popperjs/core'
 import { Box } from '@oneloop/box'
+import { isMouseOutJoin } from '@oneloop/hooks'
 
-export const Parent = ({ children, placement = 'right', ...props }) => {
+export const Parent = ({ children, placement = 'right', setHover, hover, offset = 8, ...props }) => {
+  let styles = { position: 'absolute', width: offset + 'px' }
+  if (document.getElementById(props.id) !== null) {
+     const values = document.getElementById(props.id).getBoundingClientRect()
+     styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: values.width }
+  }
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -14,6 +20,12 @@ export const Parent = ({ children, placement = 'right', ...props }) => {
         }}
       >
         {children}
+        { hover &&
+          <div id='join0' role="join0"
+            onMouseOut={(e) => setHover(isMouseOutJoin(e, 'join0', 'right'))}
+            style={styles}
+          />
+        }
       </Box>
     </Box>
   )

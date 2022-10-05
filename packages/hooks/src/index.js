@@ -45,10 +45,10 @@ export const isMouseOutTooltip = (e, tooltipId, parentId, placement) => {
   const y = e.clientY //- e.target.offsetTop
   const positionParent = document.getElementById(parentId).getBoundingClientRect()
   const positionTooltip = document.getElementById(tooltipId).getBoundingClientRect()
-  console.log('y: ' + y + ' ; top:' + positionParent.top)
+  /*console.log('y: ' + y + ' ; top:' + positionParent.top)
   console.log('y: ' + y + ' ; bottom:' + positionParent.bottom)
   console.log(x < positionTooltip.left && (y < positionParent.top || y > positionParent.bottom))
-  // x < positionTooltip.left && y < positionTooltip.top && y > positionTooltip.bottom
+  // x < positionTooltip.left && y < positionTooltip.top && y > positionTooltip.bottom*/
   return !((placement === 'right' && 
     ((x > positionTooltip.right || y < positionTooltip.top || y > positionTooltip.bottom) ||
     (x < positionTooltip.left && (y < positionParent.top || y > positionParent.bottom))))) /*||
@@ -76,7 +76,7 @@ export const isMouseOutParent = (e, parentId, placement) => {
   const x = e.clientX //- e.target.offsetLeft
   const y = e.clientY //- e.target.offsetTop
   const positionParent = document.getElementById(parentId).getBoundingClientRect()
-  console.log(positionParent)
+  //console.log(positionParent)
   /*console.log('y: ' + y + ' ; top:' + positionParent.top)
   console.log('y: ' + y + ' ; bottom:' + positionParent.bottom)
   console.log(x < positionParent.left)*/
