@@ -7,7 +7,13 @@ export const Parent = ({ children, placement = 'right', setHover, hover, offset 
   let styles = { position: 'absolute', width: offset + 'px' }
   if (document.getElementById(props.id) !== null) {
      const values = document.getElementById(props.id).getBoundingClientRect()
-     styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: values.width }
+     if (placement === 'right') {
+      styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: values.width, background: 'blue' }
+     } else if (placement === 'bottom') {
+      styles = { position: 'absolute', width: values.width, height: offset + 'px', marginTop: values.width, background: 'red' }
+     } else if (placement === 'left') {
+      styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: -offset + 'px', background: 'green' }
+     }
   }
   return (
     <Box sx={{ position: 'relative' }}>
@@ -16,12 +22,13 @@ export const Parent = ({ children, placement = 'right', setHover, hover, offset 
         __css={{
           display: 'flex',
           width: 'fit-content',
+          background: 'black'
         }}
       >
         {children}
         { hover &&
-          <div id='join0' role="join0"
-            onMouseOut={(e) => setHover(isMouseOutJoin(e, 'join0', 'right'))}
+          <div id={ 'join' + props.id } role={ 'join' + props.id }
+            onMouseOut={(e) => setHover(isMouseOutJoin(e, 'join' + props.id, placement))}
             style={styles}
           />
         }

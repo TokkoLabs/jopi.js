@@ -49,12 +49,17 @@ export const isMouseOutTooltip = (e, tooltipId, parentId, placement) => {
   console.log('y: ' + y + ' ; bottom:' + positionParent.bottom)
   console.log(x < positionTooltip.left && (y < positionParent.top || y > positionParent.bottom))
   // x < positionTooltip.left && y < positionTooltip.top && y > positionTooltip.bottom*/
-  return !((placement === 'right' && 
-    ((x > positionTooltip.right || y < positionTooltip.top || y > positionTooltip.bottom) ||
-    (x < positionTooltip.left && (y < positionParent.top || y > positionParent.bottom))))) /*||
-    (placement === 'left' && (x > positionParent.left || x < positionTooltip.left || y < positionTooltip.top || y > positionTooltip.bottom)) ||
-    (placement === 'top' && (y > positionParent.top || y < positionTooltip.top || x < positionTooltip.left || x > positionTooltip.right)) ||
-    (placement === 'bottom' && (y < positionParent.bottom || y > positionTooltip.bottom || x < positionTooltip.left || x > positionTooltip.right)))*/
+  return !((placement === 'right' && ((x > positionTooltip.right || y < positionTooltip.top || y > positionTooltip.bottom) ||
+    (x < positionTooltip.left && (y < positionParent.top || y > positionParent.bottom)))) ||
+
+    (placement === 'left' && ((x < positionTooltip.left || y < positionTooltip.top || y > positionTooltip.bottom) ||
+    (x > positionTooltip.right && (y < positionParent.top || y > positionParent.bottom)))) ||
+
+    (placement === 'bottom' && ((y > positionTooltip.bottom || x < positionTooltip.left || x > positionTooltip.right) ||
+    (y < positionTooltip.top && (x < positionParent.left || x > positionParent.right)))) ||
+
+    (placement === 'top' && ((y < positionTooltip.top || x < positionTooltip.left || x > positionTooltip.right) ||
+    (y > positionTooltip.bottom && (x < positionParent.left || x > positionParent.right)))))
 }
 
 
@@ -62,34 +67,19 @@ export const isMouseOutJoin = (e, joinId, placement) => {
   const x = e.clientX //- e.target.offsetLeft
   const y = e.clientY //- e.target.offsetTop
   const positionJoin = document.getElementById(joinId).getBoundingClientRect()
-  /*console.log(positionJoin)
-  console.log('y: ' + y + ' ; top:' + positionJoin.top)
-  console.log('y: ' + y + ' ; bottom:' + positionJoin.bottom)*/
-  
-  return !((placement === 'right' && (y < positionJoin.top || y > positionJoin.bottom)))/* ||
-    (placement === 'left' && (x > joinParentTootip.left || x < joinParentTootip.left || y < joinParentTootip.top || y > joinParentTootip.bottom)) ||
-    (placement === 'top' && (y > joinParentTootip.top || y < joinParentTootip.top || x < joinParentTootip.left || x > joinParentTootip.right)) ||
-    (placement === 'bottom' && (y < joinParentTootip.bottom || y > joinParentTootip.bottom || x < joinParentTootip.left || x > joinParentTootip.right)))*/
+  console.log('y: ' + y + ' < top: ' + (positionJoin.top))
+  console.log('y: ' + y + ' > bottom: ' + (positionJoin.bottom - 1))
+  return !(((placement === 'right' || placement === 'left') && (y < positionJoin.top || y > (positionJoin.bottom - 1))) ||
+    ((placement === 'bottom' || placement === 'top') && (x < positionJoin.left || x > positionJoin.right)))
 }
 
 export const isMouseOutParent = (e, parentId, placement) => {
   const x = e.clientX //- e.target.offsetLeft
   const y = e.clientY //- e.target.offsetTop
   const positionParent = document.getElementById(parentId).getBoundingClientRect()
-  //console.log(positionParent)
-  /*console.log('y: ' + y + ' ; top:' + positionParent.top)
-  console.log('y: ' + y + ' ; bottom:' + positionParent.bottom)
-  console.log(x < positionParent.left)*/
 
-  return !((placement === 'right' && (x < positionParent.left || y < positionParent.top || y > positionParent.bottom)))/* ||
-    /*(placement === 'left' && (x > positionParent.left || x < positionTooltip.left || y < positionTooltip.top || y > positionTooltip.bottom)) ||
-    (placement === 'top' && (y > positionParent.top || y < positionTooltip.top || x < positionTooltip.left || x > positionTooltip.right)) ||
-    (placement === 'bottom' && (y < positionParent.bottom || y > positionTooltip.bottom || x < positionTooltip.left || x > positionTooltip.right)))*/
+  return !((placement === 'right' && (x < positionParent.left || y < positionParent.top || y > positionParent.bottom)) ||
+    (placement === 'bottom' && (y < positionParent.top || x < positionParent.left || x > positionParent.right)) ||
+    (placement === 'left' && (x > positionParent.right || y < positionParent.top || y > (positionParent.bottom - 1))) ||
+    (placement === 'top' && (y > positionParent.bottom || x < positionParent.left || x > positionParent.right)))
 }
-
-
-  /*document.getElementById(parentId).append(
-    <div id='joinParentTootip'
-      style={{ backgroundColor: 'green' , width: '18px', height: '32px', position: absolute }}
-    />
-    );*/
