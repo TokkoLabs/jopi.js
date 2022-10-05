@@ -14,7 +14,8 @@ export default {
     },
     placement: {
       name: 'placement',
-      description: 'Posición del submenu: [ \'right\', \'right-end\', \'left\', \'top\', \'bottom\' ]',
+      description: 'Posición del submenu: [ \'right-start\', \'right\', \'right-end\', \'left-start\', \'left\', \'left-end\', ' +
+      '\'top-start\', \'top\', \'top-end\', \'bottom-start\', \'bottom\', \'bottom-end\' ]',
       type: 'text',
       control: { type: 'none' },
     },
