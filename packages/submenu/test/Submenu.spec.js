@@ -40,7 +40,7 @@ describe('Submenu', () => {
   test('renders correctly', () => {
     const wrapper = mount(
       <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
-        <Parent id="parent1" aria-describedby="tooltip1" offset={20} placement='left'>
+        <Parent id="parent1" aria-describedby="tooltip1" offset={20} placement='left' hover>
           <ButtonIcon id="button" variant='mainButtonIcon' icon='icon-propiedades' holdPress badgeVariant='primary'/>
         </Parent>
         <div id="tooltip1" role="tooltip1" style={{ width: 'fit-content', visibility: 'visible' }}>
@@ -58,7 +58,11 @@ describe('Submenu', () => {
       })
     expect(wrapper).toMatchSnapshot()
     const parent1 = document.getElementById('parent1')
+    parent1.blur()
     parent1.click()
+    const join1 = document.getElementById('joinparent1')
+    join1.focus()
+    join1.blur()
     const tooltip1 = document.getElementById('tooltip1')
     tooltip1.click()
     const btn = document.getElementById('button')
