@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme, { shallow, mount } from 'enzyme'
+import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import 'jest-styled-components'
 
@@ -9,11 +9,10 @@ import { List } from '../src'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('List', () => {
-
   beforeAll(() => {
-    const div = document.createElement('div');
-    window.domNode = div;
-    document.body.appendChild(div);
+    const div = document.createElement('div')
+    window.domNode = div
+    document.body.appendChild(div)
   })
 
   test('renders correctly', () => {
@@ -73,11 +72,11 @@ describe('ListMultiselectClick', () => {
         <List.Multiselect>Item 3</List.Multiselect>
       </List>
       , {
-      attachTo: window.domNode
-    })
+        attachTo: window.domNode,
+      })
     expect(wrapper).toMatchSnapshot()
     const itemToClick = document.getElementById('itemToClick')
-    itemToClick.click();
+    itemToClick.click()
   })
 })
 

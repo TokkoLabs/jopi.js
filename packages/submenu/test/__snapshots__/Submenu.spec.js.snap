@@ -362,4 +362,4 @@ exports[`Submenu first case 1`] = `
 </div>
 `;
 
-exports[`Submenu renders correctly 1`] = `ShallowWrapper {}`;
+exports[`Submenu renders correctly 1`] = `ReactWrapper {}`;

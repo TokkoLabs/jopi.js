@@ -9,11 +9,10 @@ import { Dropdown } from '../src'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('Dropdown', () => {
-
   beforeAll(() => {
-    const div = document.createElement('div');
-    window.domNode = div;
-    document.body.appendChild(div);
+    const div = document.createElement('div')
+    window.domNode = div
+    document.body.appendChild(div)
   })
 
   test('default', () => {
@@ -77,26 +76,19 @@ describe('Dropdown', () => {
   test('DropdownMultiselect', () => {
     const wrapper = mount(
       <Dropdown>
-          <Dropdown.Button id='button' variant='dropdownButtonPrimary' variantSize='dropdownSizeButton' filled='Label opcion' isArrowStatic />
-          <Dropdown.Items>
-            <Dropdown.Item icon='icon-agente' disabled>One</Dropdown.Item>
-            <Dropdown.Item icon='icon-agente' variantSize='dropdownSizeNormal'>Two</Dropdown.Item>
-            <Dropdown.Item icon='icon-agente'>Three</Dropdown.Item>
-          </Dropdown.Items>
-        </Dropdown>
+        <Dropdown.Button id='button' variant='dropdownButtonPrimary' variantSize='dropdownSizeButton' filled isArrowStatic />
+        <Dropdown.Items>
+          <Dropdown.Item icon='icon-agente' disabled>One</Dropdown.Item>
+          <Dropdown.Item icon='icon-agente' variantSize='dropdownSizeNormal'>Two</Dropdown.Item>
+          <Dropdown.Item icon='icon-agente'>Three</Dropdown.Item>
+        </Dropdown.Items>
+      </Dropdown>
       , {
-      attachTo: window.domNode
-    })
+        attachTo: window.domNode,
+      })
     expect(wrapper).toMatchSnapshot()
     const itemToClick = document.getElementById('button')
-    itemToClick.click();
-    /*const tree = renderer
-      .create(
-        
-      )
-      .toJSON()
-
-    expect(tree).toMatchSnapshot()*/
+    itemToClick.click()
   })
 
   test('DropdownExpectError', () => {
@@ -104,7 +96,7 @@ describe('Dropdown', () => {
       renderer
         .create(
           <>
-            <Dropdown.Button icon='icon-configuracion' isButtonIcon />
+            <Dropdown.Button icon='icon-configuracion' isButtonIcon/>
             <Dropdown.Items>
               <Dropdown.Item icon='icon-agente' disabled>One</Dropdown.Item>
               <Dropdown.Item icon='icon-agente'>Two</Dropdown.Item>
@@ -136,6 +128,7 @@ describe('Dropdown', () => {
     const tree = renderer
       .create(
         <Dropdown>
+          <Dropdown.Button id='button' variant='dropdownButtonPrimary' variantSize='dropdownSizeButton' filled={false} isArrowStatic icon='icon-cerrar'/>
           <Dropdown.Item>
             <Dropdown.Text disabled>One</Dropdown.Text>
           </Dropdown.Item>
@@ -153,6 +146,7 @@ describe('Dropdown', () => {
     const tree = renderer
       .create(
         <Dropdown>
+          <Dropdown.Button id='button' variant='dropdownColored' variantSize='dropdownSizeButton' filled icon='icon-cerrar' disabled/>
           <Dropdown.Default disabled>
             <Dropdown.Text>One</Dropdown.Text>
           </Dropdown.Default>
@@ -170,6 +164,7 @@ describe('Dropdown', () => {
     const tree = renderer
       .create(
         <Dropdown>
+          <Dropdown.Button id='button' variant='dropdownColored' variantSize='dropdownSizeButton' filled isButtonIcon icon='icon-cerrar'/>
           <Dropdown.Multiselect disabled>
             <Dropdown.Text>One</Dropdown.Text>
           </Dropdown.Multiselect>

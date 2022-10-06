@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme, { shallow } from 'enzyme'
+import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import 'jest-styled-components'
 
@@ -10,6 +10,12 @@ import { Parent, Submenu } from '../src'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('Submenu', () => {
+  beforeAll(() => {
+    const div = document.createElement('div')
+    window.domNode = div
+    document.body.appendChild(div)
+  })
+
   test('first case', () => {
     const tree = renderer.create(
       <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
@@ -32,10 +38,10 @@ describe('Submenu', () => {
   })
 
   test('renders correctly', () => {
-    const component = shallow(
+    const wrapper = mount(
       <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
         <Parent id="parent1" aria-describedby="tooltip1" offset={20} placement='left'>
-          <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress badgeVariant='primary'/>
+          <ButtonIcon id="button" variant='mainButtonIcon' icon='icon-propiedades' holdPress badgeVariant='primary'/>
         </Parent>
         <div id="tooltip1" role="tooltip1" style={{ width: 'fit-content', visibility: 'visible' }}>
           <Submenu parentId='tooltip1' childrenId='tooltip1' placement='left'>
@@ -47,16 +53,15 @@ describe('Submenu', () => {
           </Submenu>
         </div>
       </div>
-    )
-    expect(component.find(<Parent/>).exists).toBeTruthy()
-
-    component.find(ButtonIcon).at(0).simulate('mouseover')
-    component.find(ButtonIcon).at(0).simulate('mouseout')
-    component.find(ButtonIcon).at(0).simulate('focus')
-    component.find(ButtonIcon).at(0).simulate('blur')
-    component.find(ButtonIcon).at(0).simulate('click')
-    component.find(Submenu).simulate('mouseover')
-
-    expect(component).toMatchSnapshot()
+      , {
+        attachTo: window.domNode,
+      })
+    expect(wrapper).toMatchSnapshot()
+    const parent1 = document.getElementById('parent1')
+    parent1.click()
+    const tooltip1 = document.getElementById('tooltip1')
+    tooltip1.click()
+    const btn = document.getElementById('button')
+    btn.click()
   })
 })
