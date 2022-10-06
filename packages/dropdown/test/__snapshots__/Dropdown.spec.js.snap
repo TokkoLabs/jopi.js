@@ -1,5 +1,1285 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dropdown DropdownDefault 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <li
+    className="c1"
+    width={1}
+  >
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c2"
+      >
+        <button
+          className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
+        >
+          <p
+            className="c4"
+            style={
+              Object {
+                "padding": "9px 12px 9px 12px",
+              }
+            }
+          >
+            One
+          </p>
+        </button>
+      </div>
+    </div>
+  </li>
+  <li
+    className="c5"
+    width={1}
+  >
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c2"
+      >
+        <button
+          className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
+        >
+          <p
+            className="c4"
+            style={
+              Object {
+                "padding": "9px 12px 9px 12px",
+              }
+            }
+          >
+            Two
+          </p>
+        </button>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`Dropdown DropdownItem 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: primary;
+  cursor: pointer;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c7 {
+  display: none;
+}
+
+input:checked:not(:disabled) ~ .c6 {
+  display: block;
+}
+
+.c10 {
+  display: none;
+}
+
+input:not(:checked):not(:disabled) ~ .c9 {
+  display: block;
+}
+
+.c14 {
+  display: none;
+}
+
+input:checked:disabled ~ .c13 {
+  display: block;
+}
+
+.c12 {
+  display: none;
+}
+
+input:disabled:not(:checked) ~ .c11 {
+  display: block;
+}
+
+<div
+  className="c0 c1"
+>
+  <li
+    className="c0 c2"
+    width={1}
+  >
+    <div
+      className="c0 c3"
+    >
+      <input
+        className="c0 c4"
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c6 c7 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#6A88F2"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#6A88F2"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c9 c10 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="white"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#C1CCD0"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c11 c12 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c13 c14 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="#C1CCD0"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+    </div>
+    <p
+      className="c0 c15"
+      style={
+        Object {
+          "padding": "9px 12px 9px 12px",
+        }
+      }
+    >
+      One
+    </p>
+  </li>
+  <li
+    className="c0 c2"
+    width={1}
+  >
+    <div
+      className="c0 c3"
+    >
+      <input
+        className="c0 c4"
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c6 c7 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#6A88F2"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#6A88F2"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c9 c10 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="white"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#C1CCD0"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c11 c12 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c13 c14 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="#C1CCD0"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+    </div>
+    <p
+      className="c0 c15"
+      style={
+        Object {
+          "padding": "9px 12px 9px 12px",
+        }
+      }
+    >
+      Two
+    </p>
+  </li>
+</div>
+`;
+
+exports[`Dropdown DropdownListIcon 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <li
+    className="c1"
+    width={1}
+  >
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c2"
+      >
+        <button
+          className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
+        >
+          <span>
+            <p
+              className="c4"
+              style={
+                Object {
+                  "padding": "9px 12px 9px 12px",
+                }
+              }
+            >
+              One
+            </p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </li>
+  <li
+    className="c5"
+    width={1}
+  >
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c2"
+      >
+        <button
+          className="c3"
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
+        >
+          <span>
+            <p
+              className="c4"
+              style={
+                Object {
+                  "padding": "9px 12px 9px 12px",
+                }
+              }
+            >
+              Two
+            </p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`Dropdown DropdownListMultiselect 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 100%;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c9 {
+  display: none;
+}
+
+input:checked:not(:disabled) ~ .c8 {
+  display: block;
+}
+
+.c12 {
+  display: none;
+}
+
+input:not(:checked):not(:disabled) ~ .c11 {
+  display: block;
+}
+
+.c16 {
+  display: none;
+}
+
+input:checked:disabled ~ .c15 {
+  display: block;
+}
+
+.c14 {
+  display: none;
+}
+
+input:disabled:not(:checked) ~ .c13 {
+  display: block;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0 c1"
+>
+  <li
+    className="c0 c2"
+    width={1}
+  >
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c0 c3"
+      >
+        <button
+          className="c0 c4"
+          onClick={[Function]}
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
+        >
+          <div
+            className="c0 c5"
+          >
+            <input
+              className="c0 c6"
+              defaultChecked={false}
+              disabled={true}
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              className="c0 c7 c8 c9 c0 c10"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#6A88F2"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#6A88F2"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="white"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c7 c11 c12 c0 c10"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="white"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#C1CCD0"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c7 c13 c14 c0 c10"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c7 c15 c16 c0 c10"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="#C1CCD0"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+          </div>
+          <span
+            style={
+              Object {
+                "color": "#94A2AB",
+                "fontWeight": "normal",
+              }
+            }
+          >
+            <p
+              className="c0 c17"
+              style={
+                Object {
+                  "padding": "9px 12px 9px 12px",
+                }
+              }
+            >
+              One
+            </p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </li>
+  <li
+    className="c0 c18"
+    width={1}
+  >
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c0 c3"
+      >
+        <button
+          className="c0 c19"
+          onClick={[Function]}
+          style={
+            Object {
+              "borderRadius": "0px",
+            }
+          }
+        >
+          <div
+            className="c0 c5"
+          >
+            <input
+              className="c0 c6"
+              defaultChecked={true}
+              disabled={false}
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              className="c0 c7 c8 c9 c0 c10"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#6A88F2"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#6A88F2"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="white"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c7 c11 c12 c0 c10"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="white"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#C1CCD0"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c7 c13 c14 c0 c10"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c7 c15 c16 c0 c10"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="#C1CCD0"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+          </div>
+          <span
+            style={
+              Object {
+                "color": "#384248",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            <p
+              className="c0 c17"
+              style={
+                Object {
+                  "padding": "9px 12px 9px 12px",
+                }
+              }
+            >
+              Two
+            </p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
 exports[`Dropdown DropdownMultiselect 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -176,7 +1456,6 @@ exports[`Dropdown DropdownMultiselect 2`] = `
   >
     <button
       className="c2"
-      onClick={[Function]}
     >
       <div
         className="c3"
@@ -202,19 +1481,7 @@ exports[`Dropdown DropdownMultiselect 2`] = `
 </div>
 `;
 
-exports[`Dropdown DropdownMultiselect 3`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-  height: 200px;
-}
-
-<div
-  className="c0"
-/>
-`;
+exports[`Dropdown DropdownMultiselect 3`] = `ReactWrapper {}`;
 
 exports[`Dropdown DropdownText 1`] = `
 .c0 {

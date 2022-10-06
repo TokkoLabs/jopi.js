@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme, { shallow } from 'enzyme'
+import Enzyme, { mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import 'jest-styled-components'
 
@@ -9,6 +9,13 @@ import { Dropdown } from '../src'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('Dropdown', () => {
+
+  beforeAll(() => {
+    const div = document.createElement('div');
+    window.domNode = div;
+    document.body.appendChild(div);
+  })
+
   test('default', () => {
     const component = shallow(
       <Dropdown width={1 / 4}>
@@ -53,7 +60,7 @@ describe('Dropdown', () => {
     const tree = renderer
       .create(
         <Dropdown>
-          <Dropdown.Button icon='icon-configuracion' isButtonIcon />
+          <Dropdown.Button icon='icon-configuracion' isButtonIcon disabled/>
           <Dropdown.Items>
             <Dropdown.Search />
             <Dropdown.Icon icon='icon-agente' disabled>One</Dropdown.Icon>
@@ -68,19 +75,28 @@ describe('Dropdown', () => {
   })
 
   test('DropdownMultiselect', () => {
-    const tree = renderer
-      .create(
-        <Dropdown>
+    const wrapper = mount(
+      <Dropdown>
+          <Dropdown.Button id='button' variant='dropdownButtonPrimary' variantSize='dropdownSizeButton' filled='Label opcion' isArrowStatic />
           <Dropdown.Items>
             <Dropdown.Item icon='icon-agente' disabled>One</Dropdown.Item>
             <Dropdown.Item icon='icon-agente' variantSize='dropdownSizeNormal'>Two</Dropdown.Item>
             <Dropdown.Item icon='icon-agente'>Three</Dropdown.Item>
           </Dropdown.Items>
         </Dropdown>
+      , {
+      attachTo: window.domNode
+    })
+    expect(wrapper).toMatchSnapshot()
+    const itemToClick = document.getElementById('button')
+    itemToClick.click();
+    /*const tree = renderer
+      .create(
+        
       )
       .toJSON()
 
-    expect(tree).toMatchSnapshot()
+    expect(tree).toMatchSnapshot()*/
   })
 
   test('DropdownExpectError', () => {
@@ -109,6 +125,74 @@ describe('Dropdown', () => {
           <Dropdown.Items>
             <Dropdown.Text>One</Dropdown.Text>
           </Dropdown.Items>
+        </Dropdown>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('DropdownItem', () => {
+    const tree = renderer
+      .create(
+        <Dropdown>
+          <Dropdown.Item>
+            <Dropdown.Text disabled>One</Dropdown.Text>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Dropdown.Text active>Two</Dropdown.Text>
+          </Dropdown.Item>
+        </Dropdown>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('DropdownDefault', () => {
+    const tree = renderer
+      .create(
+        <Dropdown>
+          <Dropdown.Default disabled>
+            <Dropdown.Text>One</Dropdown.Text>
+          </Dropdown.Default>
+          <Dropdown.Default>
+            <Dropdown.Text active>Two</Dropdown.Text>
+          </Dropdown.Default>
+        </Dropdown>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('DropdownListMultiselect', () => {
+    const tree = renderer
+      .create(
+        <Dropdown>
+          <Dropdown.Multiselect disabled>
+            <Dropdown.Text>One</Dropdown.Text>
+          </Dropdown.Multiselect>
+          <Dropdown.Multiselect active>
+            <Dropdown.Text>Two</Dropdown.Text>
+          </Dropdown.Multiselect>
+        </Dropdown>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('DropdownListIcon', () => {
+    const tree = renderer
+      .create(
+        <Dropdown>
+          <Dropdown.Icon disabled>
+            <Dropdown.Text>One</Dropdown.Text>
+          </Dropdown.Icon>
+          <Dropdown.Icon active>
+            <Dropdown.Text>Two</Dropdown.Text>
+          </Dropdown.Icon>
         </Dropdown>
       )
       .toJSON()
