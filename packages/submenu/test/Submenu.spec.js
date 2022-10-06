@@ -2,18 +2,23 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { ButtonHoldPress } from '@oneloop/button'
-import { Submenu } from '../src'
-import { Text } from '@oneloop/text'
+import { ButtonIcon } from '@oneloop/button'
+import { Parent, Submenu } from '../src'
 
 describe('Submenu', () => {
   test('renders correctly', () => {
     const tree = renderer.create(
       <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
-        <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' badgeVariant='primary' id="parentTest" aria-describedby="tooltipTest"/>
-        <div id="tooltipTest" role="tooltipTest" >
+        <Parent id="parent0" aria-describedby="tooltip0" offset={20}>
+          <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress badgeVariant='primary'/>
+        </Parent>
+        <div id="tooltip0" role="tooltip0" style={{ width: 'fit-content', visibility: 'visible' }}>
           <Submenu parentId='parentTest' childrenId='tooltipTest'>
-            <Text variant='body.fontSiz13'>Sitios Webs</Text>
+            <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
+            <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
+            <ButtonIcon variant='submenu' icon='icon-propiedades' text='Propiedad' maxWidth/>
+            <ButtonIcon variant='submenu' icon='icon-emprendimientos' text='Emprendimiento' maxWidth/>
+            <ButtonIcon variant='submenu' icon='icon-email' text='Email' maxWidth/>
           </Submenu>
         </div>
       </div>

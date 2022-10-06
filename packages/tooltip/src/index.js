@@ -6,16 +6,16 @@ import { isMouseOutJoin } from '@oneloop/hooks'
 export const Parent = ({ children, setHover, hover, placement = 'right', offset = 8, ...props }) => {
   let styles = { position: 'absolute', width: offset + 'px' }
   if (document.getElementById(props.id) !== null) {
-     const values = document.getElementById(props.id).getBoundingClientRect()
-     if (placement === 'right') {
+    const values = document.getElementById(props.id).getBoundingClientRect()
+    if (placement === 'right') {
       styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: values.width }
-     } else if (placement === 'bottom') {
+    } else if (placement === 'bottom') {
       styles = { position: 'absolute', width: values.width, height: offset + 'px', marginTop: values.width }
-     } else if (placement === 'left') {
+    } else if (placement === 'left') {
       styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: -offset + 'px' }
-     } else if (placement === 'top') {
+    } else if (placement === 'top') {
       styles = { position: 'absolute', width: values.width, height: offset + 'px', marginTop: -offset + 'px' }
-     } 
+    }
   }
   return (
     <Box sx={{ position: 'relative' }}>

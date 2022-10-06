@@ -55,7 +55,6 @@ export const isMouseOutTooltip = (e, tooltipId, parentId, placement) => {
     (y > positionTooltip.bottom && (x < positionParent.left || x > positionParent.right)))))
 }
 
-
 export const isMouseOutJoin = (e, joinId, placement) => {
   const x = e.clientX
   const y = e.clientY
