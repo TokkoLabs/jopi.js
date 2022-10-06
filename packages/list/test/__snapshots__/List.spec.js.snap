@@ -1694,3 +1694,5 @@ input:disabled:not(:checked) ~ .c14 {
   </div>
 </ul>
 `;
+
+exports[`ListMultiselectClick renders correctly 1`] = `ReactWrapper {}`;
