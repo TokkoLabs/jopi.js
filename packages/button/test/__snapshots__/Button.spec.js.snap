@@ -511,7 +511,7 @@ exports[`Button mainButtonCollapsible 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: normal;
+  font-weight: bold;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -579,6 +579,208 @@ exports[`Button mainButtonCollapsible 1`] = `
           "paddingTop": "4px",
           "position": "absolute",
           "right": "10px",
+          "transform": "rotate(-180deg)",
+        }
+      }
+    />
+  </button>
+</div>
+`;
+
+exports[`Button mainButtonCollapsibleLarge 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <span
+        className="icon-propiedades"
+        style={
+          Object {
+            "bottom": "0px",
+            "fontSize": "14px",
+            "height": "14px",
+            "left": "-0.5px",
+            "position": "absolute",
+            "right": "0px",
+            "top": "-1px",
+            "width": "14px",
+          }
+        }
+      />
+    </div>
+    <span>
+      Emprendimientos
+    </span>
+    <span
+      className="icon-dropdown"
+      style={
+        Object {
+          "color": "#798B97",
+          "fontSize": "14px",
+          "paddingTop": "4px",
+          "position": "absolute",
+          "right": "10px",
+          "transform": "rotate(-180deg)",
+        }
+      }
+    />
+  </button>
+</div>
+`;
+
+exports[`Button mainButtonCollapsibleNotActive 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <span
+        className="icon-propiedades"
+        style={
+          Object {
+            "bottom": "0px",
+            "fontSize": "14px",
+            "height": "14px",
+            "left": "-0.5px",
+            "position": "absolute",
+            "right": "0px",
+            "top": "-1px",
+            "width": "14px",
+          }
+        }
+      />
+    </div>
+    <span>
+      Emprendimientos
+    </span>
+    <span
+      className="icon-dropdown"
+      style={
+        Object {
+          "color": "#798B97",
+          "fontSize": "14px",
+          "paddingTop": "4px",
+          "position": "absolute",
+          "right": "10px",
           "transform": "rotate(0deg)",
         }
       }
@@ -587,7 +789,7 @@ exports[`Button mainButtonCollapsible 1`] = `
 </div>
 `;
 
-exports[`Button mainIconButton 1`] = `
+exports[`Button mainButtonIconActive 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
@@ -647,6 +849,11 @@ exports[`Button mainIconButton 1`] = `
   >
     <div
       className="c2"
+      style={
+        Object {
+          "color": "#DF1E02",
+        }
+      }
     >
       <span
         className="icon-propiedades"
@@ -664,11 +871,21 @@ exports[`Button mainIconButton 1`] = `
         }
       />
     </div>
+    <span
+      style={
+        Object {
+          "color": "#384248",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      test
+    </span>
   </button>
 </div>
 `;
 
-exports[`Button mainIconButtonActive 1`] = `
+exports[`Button mainButtonIconBadge 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
@@ -716,12 +933,58 @@ exports[`Button mainIconButtonActive 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
 }
 
-@media screen and (min-width:40em) {
-
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 14px;
+  height: 16px;
+  display: inline-block;
+  font-size: 10px;
+  font-family: primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1px 5px;
+  position: static;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
 }
 
 <div
@@ -732,6 +995,727 @@ exports[`Button mainIconButtonActive 1`] = `
   >
     <div
       className="c2"
+      style={
+        Object {
+          "color": "#DF1E02",
+        }
+      }
+    >
+      <span
+        className="icon-propiedades"
+        style={
+          Object {
+            "bottom": "0px",
+            "fontSize": "14px",
+            "height": "14px",
+            "left": "-0.5px",
+            "position": "absolute",
+            "right": "0px",
+            "top": "-1px",
+            "width": "14px",
+          }
+        }
+      />
+    </div>
+    <div
+      className="c3"
+      style={
+        Object {
+          "left": "16px",
+          "position": "absolute",
+          "top": "2px",
+        }
+      }
+    >
+      20
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button mainButtonIconBadgeWithText 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 14px;
+  height: 16px;
+  display: inline-block;
+  font-size: 10px;
+  font-family: primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1px 5px;
+  position: static;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <div
+      className="c2"
+      style={
+        Object {
+          "color": "#DF1E02",
+        }
+      }
+    >
+      <span
+        className="icon-propiedades"
+        style={
+          Object {
+            "bottom": "0px",
+            "fontSize": "14px",
+            "height": "14px",
+            "left": "-0.5px",
+            "position": "absolute",
+            "right": "0px",
+            "top": "-1px",
+            "width": "14px",
+          }
+        }
+      />
+    </div>
+    <span
+      style={
+        Object {
+          "color": "#384248",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      test
+    </span>
+    <div
+      className="c3"
+      style={
+        Object {
+          "position": "absolute",
+          "right": "16px",
+        }
+      }
+    >
+      20
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button mainIconButton 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.c7 {
+  display: none;
+}
+
+input:checked:not(:disabled) ~ .c6 {
+  display: block;
+}
+
+.c10 {
+  display: none;
+}
+
+input:not(:checked):not(:disabled) ~ .c9 {
+  display: block;
+}
+
+.c14 {
+  display: none;
+}
+
+input:checked:disabled ~ .c13 {
+  display: block;
+}
+
+.c12 {
+  display: none;
+}
+
+input:disabled:not(:checked) ~ .c11 {
+  display: block;
+}
+
+<div
+  className="c0 c1"
+>
+  <button
+    className="c0 c2"
+  >
+    <div
+      className="c0 c3"
+    >
+      <input
+        className="c0 c4"
+        defaultChecked={false}
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c6 c7 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#6A88F2"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#6A88F2"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c9 c10 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="white"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#C1CCD0"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c11 c12 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c13 c14 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="#C1CCD0"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+    </div>
+    <div
+      className="c0 c15"
+    >
+      <span
+        className="icon-propiedades"
+        style={
+          Object {
+            "bottom": "0px",
+            "fontSize": "14px",
+            "height": "14px",
+            "left": "-0.5px",
+            "position": "absolute",
+            "right": "0px",
+            "top": "-1px",
+            "width": "14px",
+          }
+        }
+      />
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button mainIconButtonActive 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 100%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+.c7 {
+  display: none;
+}
+
+input:checked:not(:disabled) ~ .c6 {
+  display: block;
+}
+
+.c10 {
+  display: none;
+}
+
+input:not(:checked):not(:disabled) ~ .c9 {
+  display: block;
+}
+
+.c14 {
+  display: none;
+}
+
+input:checked:disabled ~ .c13 {
+  display: block;
+}
+
+.c12 {
+  display: none;
+}
+
+input:disabled:not(:checked) ~ .c11 {
+  display: block;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0 c1"
+>
+  <button
+    className="c0 c2"
+  >
+    <div
+      className="c0 c3"
+    >
+      <input
+        className="c0 c4"
+        defaultChecked={true}
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c6 c7 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#6A88F2"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#6A88F2"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c9 c10 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="white"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#C1CCD0"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c11 c12 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c5 c13 c14 c0 c8"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="#C1CCD0"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+    </div>
+    <div
+      className="c0 c15"
+      style={
+        Object {
+          "color": "#384248",
+        }
+      }
     >
       <span
         className="icon-propiedades"
@@ -1857,6 +2841,166 @@ exports[`Button textDisabled 1`] = `
     className="c1"
   >
     Test
+  </button>
+</div>
+`;
+
+exports[`Button userButton 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+    style={
+      Object {
+        "backgroundColor": "#798B97",
+      }
+    }
+  >
+    <span
+      className="icon-contactos"
+      style={
+        Object {
+          "fontSize": "24px",
+        }
+      }
+    />
+    <span>
+      Nombre Usuario
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button userButtonWithImage 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <div
+      className="c2"
+      src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    >
+      <img
+        className="c3"
+        src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      />
+    </div>
+    <span>
+      Nombre Usuario
+    </span>
   </button>
 </div>
 `;

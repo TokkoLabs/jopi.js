@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Submenu renders correctly 1`] = `
+exports[`Submenu first case 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
@@ -361,3 +361,5 @@ exports[`Submenu renders correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`Submenu renders correctly 1`] = `ShallowWrapper {}`;

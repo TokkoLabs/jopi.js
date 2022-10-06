@@ -213,7 +213,23 @@ describe('Button', () => {
 
   test('mainButtonCollapsible', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="mainButton" icon="icon-propiedades" text="Emprendimientos" isCollapsible/>)
+      .create(<ButtonIcon variant="mainButton" icon="icon-propiedades" text="Emprendimientos" isCollapsible active/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonCollapsibleNotActive', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant={["mainButton", "large"]} icon="icon-propiedades" text="Emprendimientos" isCollapsible/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonCollapsibleLarge', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant={["mainButton", "large"]} icon="icon-propiedades" text="Emprendimientos" isCollapsible active/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -229,7 +245,7 @@ describe('Button', () => {
 
   test('mainIconButton', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="mainButtonIcon" icon="icon-propiedades" active/>)
+      .create(<ButtonIcon variant="mainButtonIcon" icon="icon-propiedades" hover hasCheckbox/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -237,7 +253,47 @@ describe('Button', () => {
 
   test('mainIconButtonActive', () => {
     const tree = renderer
-      .create(<ButtonIcon variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' active/>)
+      .create(<ButtonIcon variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' hasCheckbox active maxWidth holdPress/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('userButton', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='userButton' userImage text='Nombre Usuario' style={{ backgroundColor: '#798B97' }}/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('userButtonWithImage', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='userButton' userImage srcImage='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' text='Nombre Usuario' />)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonIconActive', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' text='test' holdPress active/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonIconBadgeWithText', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' badgeValue='20' badgeVariant='primary' text='test' holdPress active/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonIconBadge', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' badgeValue='20' badgeVariant='primary' holdPress active/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
