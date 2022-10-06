@@ -111,8 +111,6 @@ exports[`Input errors 1`] = `
 .c1 > *:last-child {
   position: absolute;
   right: 12px;
-  height: 14px;
-  font-size: 14px;
 }
 
 .c2 {
@@ -125,12 +123,21 @@ exports[`Input errors 1`] = `
   font-family: primary;
   display: block;
   padding-left: 12px;
-  padding-right: 32px;
+  padding-right: 12px;
   outline: none;
   width: 100%;
 }
 
 .c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -140,7 +147,7 @@ exports[`Input errors 1`] = `
   padding-bottom: 4px;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -169,15 +176,31 @@ exports[`Input errors 1`] = `
       type="text"
       width="100%"
     />
-    <span
-      className="icon-error"
-    />
+    <div
+      className="c3"
+    >
+      <span
+        className="icon-error"
+        style={
+          Object {
+            "bottom": "0px",
+            "fontSize": "14px",
+            "height": "14px",
+            "left": "-0.5px",
+            "position": "absolute",
+            "right": "0px",
+            "top": "-1px",
+            "width": "14px",
+          }
+        }
+      />
+    </div>
   </div>
   <div
-    className="c3"
+    className="c4"
   >
     <p
-      className="c4"
+      className="c5"
     >
       Minimo 8 caracteres.
     </p>

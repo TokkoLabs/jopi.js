@@ -29,28 +29,26 @@ exports[`Dropdown DropdownMultiselect 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  color: white;
-  background-color: primary;
   border: 0;
-  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,15 +133,12 @@ exports[`Dropdown DropdownMultiselect 2`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 24px;
+  font-weight: 400;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  color: white;
-  background-color: primary;
   border: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -156,8 +151,17 @@ exports[`Dropdown DropdownMultiselect 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 12px;
   white-space: nowrap;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
 }
 
 @media screen and (min-width:40em) {
@@ -174,15 +178,25 @@ exports[`Dropdown DropdownMultiselect 2`] = `
       className="c2"
       onClick={[Function]}
     >
-      <span
-        className="icon-configuracion"
-        style={
-          Object {
-            "fontSize": "20px",
-            "height": "20px",
+      <div
+        className="c3"
+      >
+        <span
+          className="icon-configuracion"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": 14,
+              "height": 14,
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": 14,
+            }
           }
-        }
-      />
+        />
+      </div>
     </button>
   </div>
 </div>

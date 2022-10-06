@@ -73,14 +73,11 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
   line-height: inherit;
   font-family: Nunito Sans;
   font-weight: bold;
-  font-size: 24px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  color: white;
-  background-color: primary;
   border: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -93,8 +90,17 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 12px;
   white-space: nowrap;
+  position: relative;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
 }
 
 @media screen and (min-width:40em) {
@@ -131,15 +137,25 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
         <button
           className="c5"
         >
-          <span
-            className="icon-configuracion"
-            style={
-              Object {
-                "fontSize": "16px",
-                "height": "16px",
+          <div
+            className="c6"
+          >
+            <span
+              className="icon-configuracion"
+              style={
+                Object {
+                  "bottom": "0px",
+                  "fontSize": "12px",
+                  "height": "12px",
+                  "left": "-0.5px",
+                  "position": "absolute",
+                  "right": "0px",
+                  "top": "-1px",
+                  "width": "12px",
+                }
               }
-            }
-          />
+            />
+          </div>
         </button>
       </div>
     </div>

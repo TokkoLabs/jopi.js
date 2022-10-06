@@ -35,9 +35,9 @@ describe('Button', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test('secondaryOutlineIcon', () => {
+  test('secondaryOutlinedIcon', () => {
     const tree = renderer
-      .create(<Button variant="secondaryOutlineIcon">{'Test'}</Button>)
+      .create(<Button variant="secondaryOutlined">{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -109,7 +109,7 @@ describe('Button', () => {
 
   test('primaryOutlineIcon', () => {
     const tree = renderer
-      .create(<ButtonIcon variant={['primaryOutline', 'iconLarge']}/>)
+      .create(<ButtonIcon variant={['primaryOutlined', 'iconLarge']}/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -117,15 +117,15 @@ describe('Button', () => {
 
   test('secondaryOutlineIcon', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="secondaryOutlineIcon"/>)
+      .create(<ButtonIcon variant={['secondaryOutlined', 'iconLarge']}/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
-  test('outlineIconDisabled', () => {
+  test('outlinedDisabled', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="outlineDisabled"/>)
+      .create(<ButtonIcon variant="outlinedDisabled"/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
