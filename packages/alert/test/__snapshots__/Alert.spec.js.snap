@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Alert closed 1`] = `ShallowWrapper {}`;
+
 exports[`Alert danger 1`] = `
 .c0 {
   box-sizing: border-box;
