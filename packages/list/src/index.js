@@ -1,9 +1,10 @@
 import React, { forwardRef } from 'react'
 import { Box, Flex } from '@oneloop/box'
+import { Icon } from '@oneloop/icons'
 import { Input } from '@oneloop/input'
 import { Checkbox } from '@oneloop/checkbox'
 import { useToggle, useFilterData } from '@oneloop/hooks'
-import { Button, ButtonHoldPress, ButtonIcon } from '@oneloop/button'
+import { Button, ButtonIcon } from '@oneloop/button'
 
 const List = forwardRef(({ children, ...props }, ref) => (
   <Box
@@ -51,7 +52,7 @@ const ListInput = (props) => (
     }}
   >
     <Input
-      prefix={<span className='icon-buscar'/>}
+      prefix={<Icon icon='icon-buscar' fontSize='14px'/>}
       placeholder="Search"
       variant='inputSearchOutlined'
       {...props}
@@ -116,7 +117,7 @@ const ListMultiselect = ({ children, disabled = false, hover = true, isActive, v
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonHoldPress variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} active={active} onClick={toggle} text={children} hasCheckbox disabled={disabled} style={{ borderRadius: '0px' }}/>
+        <ButtonIcon variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} active={active} onClick={toggle} text={children} hasCheckbox maxWidth holdPress disabled={disabled} style={{ borderRadius: '0px' }}/>
       </div>
     </Box>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import { Icon } from '@oneloop/icons'
 import { Box } from '@oneloop/box'
 import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -81,9 +82,31 @@ describe('Input', () => {
     expect(tree).toMatchSnapshot()
   })
 
+  test('inputWithPasswordIcon', () => {
+    const tree = renderer.create(<Input
+      suffix={<Icon icon='icon-ocultar' />}
+      label="Label de prueba"
+      placeholder="Hello World!"
+      password
+    />).toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
   test('searchBold', () => {
     const tree = renderer.create(<Input
       prefix={<span className='icon-buscar'/>}
+      placeholder="Search"
+      variant='inputSearch'
+      bold
+    />).toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('searchBoldIcon', () => {
+    const tree = renderer.create(<Input
+      prefix={<Icon icon='icon-buscar'/>}
       placeholder="Search"
       variant='inputSearch'
       bold

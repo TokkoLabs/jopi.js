@@ -94,11 +94,18 @@ exports[`List renders correctly 1`] = `
 .c6 > *:first-child {
   position: absolute;
   left: 12px;
-  height: 14px;
-  font-size: 14px;
 }
 
 .c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -113,7 +120,7 @@ exports[`List renders correctly 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -133,7 +140,7 @@ exports[`List renders correctly 1`] = `
   width: 100%;
 }
 
-.c9 {
+.c10 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -142,7 +149,7 @@ exports[`List renders correctly 1`] = `
   height: 18px;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -153,7 +160,7 @@ exports[`List renders correctly 1`] = `
   height: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -170,7 +177,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c11 {
+.c12 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -196,35 +203,35 @@ input:focus ~ .c0 {
   display: flex;
 }
 
-.c13 {
+.c14 {
   display: none;
 }
 
-input:checked:not(:disabled) ~ .c12 {
+input:checked:not(:disabled) ~ .c13 {
   display: block;
 }
 
-.c16 {
+.c17 {
   display: none;
 }
 
-input:not(:checked):not(:disabled) ~ .c15 {
+input:not(:checked):not(:disabled) ~ .c16 {
   display: block;
 }
 
-.c20 {
+.c21 {
   display: none;
 }
 
-input:checked:disabled ~ .c19 {
+input:checked:disabled ~ .c20 {
   display: block;
 }
 
-.c18 {
+.c19 {
   display: none;
 }
 
-input:disabled:not(:checked) ~ .c17 {
+input:disabled:not(:checked) ~ .c18 {
   display: block;
 }
 
@@ -248,11 +255,27 @@ input:disabled:not(:checked) ~ .c17 {
         <div
           className="c0 c6"
         >
-          <span
-            className="icon-buscar"
-          />
-          <input
+          <div
             className="c0 c7"
+          >
+            <span
+              className="icon-buscar"
+              style={
+                Object {
+                  "bottom": "0px",
+                  "fontSize": "14px",
+                  "height": "14px",
+                  "left": "-0.5px",
+                  "position": "absolute",
+                  "right": "0px",
+                  "top": "-1px",
+                  "width": "14px",
+                }
+              }
+            />
+          </div>
+          <input
+            className="c0 c8"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -266,19 +289,19 @@ input:disabled:not(:checked) ~ .c17 {
       </div>
     </span>
     <li
-      className="c0 c8"
+      className="c0 c9"
       width={1}
     >
       <div
-        className="c0 c9"
+        className="c0 c10"
       >
         <input
-          className="c0 c10"
+          className="c0 c11"
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          className="c0 c11 c12 c13 c0 c14"
+          className="c0 c12 c13 c14 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -304,7 +327,7 @@ input:disabled:not(:checked) ~ .c17 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c11 c15 c16 c0 c14"
+          className="c0 c12 c16 c17 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -324,7 +347,7 @@ input:disabled:not(:checked) ~ .c17 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c11 c17 c18 c0 c14"
+          className="c0 c12 c18 c19 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -344,7 +367,7 @@ input:disabled:not(:checked) ~ .c17 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c11 c19 c20 c0 c14"
+          className="c0 c12 c20 c21 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -372,19 +395,19 @@ input:disabled:not(:checked) ~ .c17 {
       One
     </li>
     <li
-      className="c0 c8"
+      className="c0 c9"
       width={1}
     >
       <div
-        className="c0 c9"
+        className="c0 c10"
       >
         <input
-          className="c0 c10"
+          className="c0 c11"
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          className="c0 c11 c12 c13 c0 c14"
+          className="c0 c12 c13 c14 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -410,7 +433,7 @@ input:disabled:not(:checked) ~ .c17 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c11 c15 c16 c0 c14"
+          className="c0 c12 c16 c17 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -430,7 +453,7 @@ input:disabled:not(:checked) ~ .c17 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c11 c17 c18 c0 c14"
+          className="c0 c12 c18 c19 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -450,7 +473,7 @@ input:disabled:not(:checked) ~ .c17 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c11 c19 c20 c0 c14"
+          className="c0 c12 c20 c21 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -478,19 +501,19 @@ input:disabled:not(:checked) ~ .c17 {
       Two
     </li>
     <li
-      className="c0 c8"
+      className="c0 c9"
       width={1}
     >
       <div
-        className="c0 c9"
+        className="c0 c10"
       >
         <input
-          className="c0 c10"
+          className="c0 c11"
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          className="c0 c11 c12 c13 c0 c14"
+          className="c0 c12 c13 c14 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -516,7 +539,7 @@ input:disabled:not(:checked) ~ .c17 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c11 c15 c16 c0 c14"
+          className="c0 c12 c16 c17 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -536,7 +559,7 @@ input:disabled:not(:checked) ~ .c17 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c11 c17 c18 c0 c14"
+          className="c0 c12 c18 c19 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -556,7 +579,7 @@ input:disabled:not(:checked) ~ .c17 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c11 c19 c20 c0 c14"
+          className="c0 c12 c20 c21 c0 c15"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -663,28 +686,26 @@ exports[`ListDefault renders correctly 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  color: white;
-  background-color: primary;
   border: 0;
-  border-radius: 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
 }
 
 @media screen and (min-width:40em) {
@@ -859,15 +880,12 @@ exports[`ListIcon renders correctly 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 24px;
+  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  color: white;
-  background-color: primary;
   border: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -880,8 +898,26 @@ exports[`ListIcon renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 12px;
   white-space: nowrap;
+  position: relative;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
 }
 
 @media screen and (min-width:40em) {
@@ -917,15 +953,25 @@ exports[`ListIcon renders correctly 1`] = `
               }
             }
           >
-            <span
-              className="icon-agente"
-              style={
-                Object {
-                  "fontSize": "20px",
-                  "height": "20px",
+            <div
+              className="c5"
+            >
+              <span
+                className="icon-agente"
+                style={
+                  Object {
+                    "bottom": "0px",
+                    "fontSize": "12px",
+                    "height": "12px",
+                    "left": "-0.5px",
+                    "position": "absolute",
+                    "right": "0px",
+                    "top": "-1px",
+                    "width": "12px",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <span>
               Item 1
             </span>
@@ -955,15 +1001,25 @@ exports[`ListIcon renders correctly 1`] = `
               }
             }
           >
-            <span
-              className="icon-agente"
-              style={
-                Object {
-                  "fontSize": "20px",
-                  "height": "20px",
+            <div
+              className="c6"
+            >
+              <span
+                className="icon-agente"
+                style={
+                  Object {
+                    "bottom": "0px",
+                    "fontSize": "14px",
+                    "height": "14px",
+                    "left": "-0.5px",
+                    "position": "absolute",
+                    "right": "0px",
+                    "top": "-1px",
+                    "width": "14px",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <span>
               Item 2
             </span>
@@ -993,15 +1049,25 @@ exports[`ListIcon renders correctly 1`] = `
               }
             }
           >
-            <span
-              className="icon-agente"
-              style={
-                Object {
-                  "fontSize": "20px",
-                  "height": "20px",
+            <div
+              className="c6"
+            >
+              <span
+                className="icon-agente"
+                style={
+                  Object {
+                    "bottom": "0px",
+                    "fontSize": "14px",
+                    "height": "14px",
+                    "left": "-0.5px",
+                    "position": "absolute",
+                    "right": "0px",
+                    "top": "-1px",
+                    "width": "14px",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <span>
               Item 3
             </span>
@@ -1074,6 +1140,7 @@ exports[`ListMultiselect renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
+  width: 100%;
 }
 
 .c5 {
@@ -1089,23 +1156,23 @@ exports[`ListMultiselect renders correctly 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-size: 24px;
+  font-weight: normal;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  color: white;
-  background-color: primary;
   border: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   white-space: nowrap;
+  position: relative;
 }
 
 .c6 {
@@ -1627,3 +1694,5 @@ input:disabled:not(:checked) ~ .c14 {
   </div>
 </ul>
 `;
+
+exports[`ListMultiselectClick renders correctly 1`] = `ReactWrapper {}`;
