@@ -5,19 +5,28 @@ import theme from '@oneloop/theme'
 
 const TabsContext = createContext()
 
-export const Tabs = ({ children, ...props }) => {
-  const [active, setActive] = useState()
-  const value = React.useMemo(() => ({ active, setActive }), [active])
+export const Tabs = ({ children, firstTabSelected = true, ...props }) => {
   const tabChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Tab'
   )
+  const [active, setActive] = useState(firstTabSelected && tabChildren[0] !== undefined && tabChildren[0].props.id)
+  const value = React.useMemo(() => ({ active, setActive }), [active])
   const contentChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Content'
   )
 
   return (
     <TabsContext.Provider value={value}>
-      <Box {...props} __css={{ display: 'inline-flex' }}>
+      <Box
+        {...props}
+        __css={{
+          alignItems: 'center',
+          alignContent: 'stretch',
+          justifyContent: 'center',
+          display: 'grid',
+          gridGap: 'var(--grid-gap, 0)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(0, 1fr))',
+        }}>
         {tabChildren}
       </Box>
       {contentChildren.length > 0 && (
@@ -61,9 +70,13 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
       __css={{
         position: 'relative',
         cursor: 'pointer',
-        fontFamily: 'heading',
+        fontFamily: 'Nunito Sans',
         textTransform: 'uppercase',
         textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
         '*': {
           textDecoration: 'none',
           color: color,
@@ -91,10 +104,10 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
             height: variant === 'normal' ? '4px' : undefined,
             display: 'block',
             backgroundColor: color,
-            border: variant === 'normal' ? undefined : '2px solid ' + color,
+            border: variant === 'normal' ? undefined : '1px solid ' + color,
             position: 'absolute',
-            right: variant === 'normal' ? '10px' : '8px',
-            left: variant === 'normal' ? '10px' : '8px',
+            right: variant === 'normal' ? '10px' : 'calc(25%)',
+            left: variant === 'normal' ? '10px' : 'calc(25%)',
             bottom: 0,
           }}
         />
