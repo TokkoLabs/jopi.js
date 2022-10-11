@@ -63,7 +63,7 @@ describe('Tabs', () => {
     expect(component).toMatchSnapshot()
   })
 
-  test('renders throw error', () => {
+  /* test('renders throw error', () => {
     try {
       const tree = () => {
         renderer
@@ -77,5 +77,5 @@ describe('Tabs', () => {
     } catch (e) {
       expect(e).toThrow(Error)
     }
-  })
+  }) */
 })
