@@ -20,23 +20,12 @@ export const Tabs = ({ children, firstTabSelected = true, ...props }) => {
       <Box
         {...props}
         __css={{
-         // display: 'inline-flex',
-        //    display: 'flex',
-        //  flexDirection: 'row',
           alignItems: 'center',
           alignContent: 'stretch',
           justifyContent: 'center',
-          width: '100%',
-        //  gridGap: 'initial',
-        //  padding: 'var(--space-md)',
-          // justifyBetween,
-        //  '--gap': '13px',
-        //  gap: 'var(--gap)',
-        
           display: 'grid',
           gridGap: 'var(--grid-gap, 0)',
           gridTemplateColumns: 'repeat(auto-fit, minmax(0, 1fr))',
-
         }}>
         {tabChildren}
       </Box>
@@ -117,8 +106,8 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
             backgroundColor: color,
             border: variant === 'normal' ? undefined : '1px solid ' + color,
             position: 'absolute',
-            right: variant === 'normal' ? '10px' : '8px',
-            left: variant === 'normal' ? '10px' : '8px',
+            right: variant === 'normal' ? '10px' : 'calc(25%)',
+            left: variant === 'normal' ? '10px' : 'calc(25%)',
             bottom: 0,
           }}
         />
