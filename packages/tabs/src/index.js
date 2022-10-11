@@ -5,19 +5,39 @@ import theme from '@oneloop/theme'
 
 const TabsContext = createContext()
 
-export const Tabs = ({ children, ...props }) => {
-  const [active, setActive] = useState()
-  const value = React.useMemo(() => ({ active, setActive }), [active])
+export const Tabs = ({ children, firstTabSelected = true, ...props }) => {
   const tabChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Tab'
   )
+  const [active, setActive] = useState(firstTabSelected && tabChildren.at(0).props.id)
+  const value = React.useMemo(() => ({ active, setActive }), [active])
   const contentChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Content'
   )
 
   return (
     <TabsContext.Provider value={value}>
-      <Box {...props} __css={{ display: 'inline-flex' }}>
+      <Box
+        {...props}
+        __css={{
+         // display: 'inline-flex',
+        //    display: 'flex',
+        //  flexDirection: 'row',
+          alignItems: 'center',
+          alignContent: 'stretch',
+          justifyContent: 'center',
+          width: '100%',
+        //  gridGap: 'initial',
+        //  padding: 'var(--space-md)',
+          // justifyBetween,
+        //  '--gap': '13px',
+        //  gap: 'var(--gap)',
+        
+          display: 'grid',
+          gridGap: 'var(--grid-gap, 0)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(0, 1fr))',
+
+        }}>
         {tabChildren}
       </Box>
       {contentChildren.length > 0 && (
@@ -61,9 +81,13 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
       __css={{
         position: 'relative',
         cursor: 'pointer',
-        fontFamily: 'heading',
+        fontFamily: 'Nunito Sans',
         textTransform: 'uppercase',
         textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
         '*': {
           textDecoration: 'none',
           color: color,
