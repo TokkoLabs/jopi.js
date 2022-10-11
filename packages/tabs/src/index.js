@@ -6,11 +6,14 @@ import theme from '@oneloop/theme'
 const TabsContext = createContext()
 
 export const Tabs = ({ children, firstTabSelected = true, ...props }) => {
+  const firstId = React.Children.toArray(children).filter(
+    child => child.type.name === 'Tab'
+  ).at(0).props.id
+  const [active, setActive] = useState(firstTabSelected && firstId)
+  const value = React.useMemo(() => ({ active, setActive }), [active])
   const tabChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Tab'
   )
-  const [active, setActive] = useState(firstTabSelected && tabChildren.at(0) !== undefined && tabChildren.at(0).props.id)
-  const value = React.useMemo(() => ({ active, setActive }), [active])
   const contentChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Content'
   )
