@@ -91,7 +91,6 @@ export const Paginator = ({
       total % perPage !== 0 &&
       currentPage > 1 + total / perPage)
   ) {
-    console.error('Error in paginator parameters')
     return (
       <Box>
         {'<'} {'>'}{' '}

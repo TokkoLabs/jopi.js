@@ -414,6 +414,7 @@ const theme = {
       fontSize09: {
         fontWeight: 400,
         fontSize: '9px',
+        lineHeight: '11px',
       },
       fontSize10: {
         fontWeight: 400,
@@ -443,6 +444,7 @@ const theme = {
       fontSize15: {
         fontWeight: 400,
         fontSize: '15px',
+        lineHeight: '18px',
       },
       fontSize16: {
         fontWeight: 400,
@@ -454,10 +456,12 @@ const theme = {
       fontSize09: {
         fontSize: '9px',
         fontWeight: 600,
+        lineHeight: '11px',
       },
       fontSize10: {
         fontSize: '10px',
         fontWeight: 600,
+        lineHeight: '11px',
       },
       fontSize11: {
         fontSize: '11px',
@@ -472,24 +476,29 @@ const theme = {
       fontSize13: {
         fontSize: '13px',
         fontWeight: 600,
+        lineHeight: '18px',
       },
       fontSize14: {
         fontSize: '14px',
         fontWeight: 600,
+        lineHeight: '18px',
       },
       fontSize15: {
         fontSize: '15px',
         fontWeight: 600,
+        lineHeight: '18px',
       },
       fontSize16: {
         fontSize: '16px',
         fontWeight: 600,
+        lineHeight: '24px',
       },
     },
     bodyBold: {
       fontSize09: {
         fontWeight: 700,
         fontSize: '9px',
+        lineHeight: '11px',
       },
       fontSize10: {
         fontWeight: 700,
@@ -519,6 +528,7 @@ const theme = {
       fontSize15: {
         fontWeight: 700,
         fontSize: '15px',
+        lineHeight: '18px',
       },
       fontSize16: {
         fontWeight: 700,

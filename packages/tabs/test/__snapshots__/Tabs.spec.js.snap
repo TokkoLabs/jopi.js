@@ -6,10 +6,20 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: grid;
+  grid-gap: var(--grid-gap,0);
+  grid-template-columns: repeat(auto-fit,minmax(0,1fr));
 }
 
 .c1 {
@@ -18,9 +28,24 @@ Array [
   min-width: 0;
   position: relative;
   cursor: pointer;
-  font-family: heading;
+  font-family: Nunito Sans;
   text-transform: uppercase;
   text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
@@ -29,7 +54,7 @@ Array [
 .c1 * {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #EBA49A;
+  color: #FFFFFF;
 }
 
 .c1 a {
@@ -43,6 +68,66 @@ Array [
   margin-right: 10px;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-radius: 4px 4px 0 0;
+  height: 4px;
+  display: block;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  bottom: 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  cursor: pointer;
+  font-family: Nunito Sans;
+  text-transform: uppercase;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.c3 * {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #EBA49A;
+}
+
+.c3 a {
+  display: block;
+  width: 148px;
+  height: 52px;
+  line-height: 52px;
+}
+
+.c3 a > *:first-child {
+  margin-right: 10px;
+}
+
 <div
     className="c0"
   >
@@ -53,9 +138,12 @@ Array [
       onMouseOver={[Function]}
     >
       One
+      <span
+        className="c2"
+      />
     </div>
     <div
-      className="c1"
+      className="c3"
       onClick={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
@@ -63,7 +151,7 @@ Array [
       Two
     </div>
     <div
-      className="c1"
+      className="c3"
       onClick={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
@@ -71,7 +159,7 @@ Array [
       Three
     </div>
     <div
-      className="c1"
+      className="c3"
       onClick={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
@@ -86,9 +174,21 @@ Array [
   padding: 10px;
 }
 
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
 <div
     className="c0"
-  />,
+  >
+    <div
+      className="c1"
+    >
+      One Content One
+    </div>
+  </div>,
 ]
 `;
 
@@ -97,10 +197,20 @@ exports[`Tabs renders correctly with only headers 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: grid;
+  grid-gap: var(--grid-gap,0);
+  grid-template-columns: repeat(auto-fit,minmax(0,1fr));
 }
 
 .c1 {
@@ -109,9 +219,24 @@ exports[`Tabs renders correctly with only headers 1`] = `
   min-width: 0;
   position: relative;
   cursor: pointer;
-  font-family: heading;
+  font-family: Nunito Sans;
   text-transform: uppercase;
   text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
@@ -120,7 +245,7 @@ exports[`Tabs renders correctly with only headers 1`] = `
 .c1 * {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #EBA49A;
+  color: #FFFFFF;
 }
 
 .c1 a {
@@ -134,6 +259,66 @@ exports[`Tabs renders correctly with only headers 1`] = `
   margin-right: 10px;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-radius: 4px 4px 0 0;
+  height: 4px;
+  display: block;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  bottom: 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  cursor: pointer;
+  font-family: Nunito Sans;
+  text-transform: uppercase;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.c3 * {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #EBA49A;
+}
+
+.c3 a {
+  display: block;
+  width: 148px;
+  height: 52px;
+  line-height: 52px;
+}
+
+.c3 a > *:first-child {
+  margin-right: 10px;
+}
+
 <div
   className="c0"
 >
@@ -144,9 +329,12 @@ exports[`Tabs renders correctly with only headers 1`] = `
     onMouseOver={[Function]}
   >
     One
+    <span
+      className="c2"
+    />
   </div>
   <div
-    className="c1"
+    className="c3"
     onClick={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -154,7 +342,7 @@ exports[`Tabs renders correctly with only headers 1`] = `
     Two
   </div>
   <div
-    className="c1"
+    className="c3"
     onClick={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -162,7 +350,7 @@ exports[`Tabs renders correctly with only headers 1`] = `
     Three
   </div>
   <div
-    className="c1"
+    className="c3"
     onClick={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
