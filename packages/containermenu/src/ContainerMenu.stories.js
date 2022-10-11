@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
-import { ButtonIcon, ButtonHoldPress } from '@oneloop/button'
+import { ButtonIcon } from '@oneloop/button'
 import { ContainerMenu } from '.'
 import { List } from '@oneloop/list'
 import { Tabs } from '@oneloop/tabs'
@@ -43,7 +43,7 @@ export const Normal = () => {
   return (
     <Box __css={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
       <ContainerMenu width='252px' height='325px' prefixIcon='icon-favoritos' titleText='Favoritos'
-        suffix={ <ButtonHoldPress icon='icon-configuracion' variant={['subtleIcon', 'iconSmall']} active={active} onClick={() => setActive()}/> }
+        suffix={ <ButtonIcon icon='icon-configuracion' holdPress variant={['subtleIcon', 'iconSmall']} active={active} onClick={() => setActive()}/> }
       >
         <Tabs>
           <Tabs.Tab variant='default' id="texto">

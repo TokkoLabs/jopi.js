@@ -1,10 +1,20 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import Enzyme, { mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import 'jest-styled-components'
 
 import { List } from '../src'
 
+Enzyme.configure({ adapter: new Adapter() })
+
 describe('List', () => {
+  beforeAll(() => {
+    const div = document.createElement('div')
+    window.domNode = div
+    document.body.appendChild(div)
+  })
+
   test('renders correctly', () => {
     const tree = renderer
       .create(
@@ -50,6 +60,23 @@ describe('ListMultiselect', () => {
       .toJSON()
 
     expect(tree).toMatchSnapshot()
+  })
+})
+
+describe('ListMultiselectClick', () => {
+  test('renders correctly', () => {
+    const wrapper = mount(
+      <List width={1 / 3}>
+        <List.Multiselect disabled>Item 1</List.Multiselect>
+        <List.Multiselect id='itemToClick' isActive>Item 2</List.Multiselect>
+        <List.Multiselect>Item 3</List.Multiselect>
+      </List>
+      , {
+        attachTo: window.domNode,
+      })
+    expect(wrapper).toMatchSnapshot()
+    const itemToClick = document.getElementById('itemToClick')
+    itemToClick.click()
   })
 })
 
