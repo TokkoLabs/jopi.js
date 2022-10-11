@@ -66,11 +66,11 @@ describe('Tabs', () => {
   test('renders throw error', () => {
     const tree = () => {
       renderer
-      .create(
-        <Tabs.Tab>
-        </Tabs.Tab>
-      )
-      .toJSON()
+        .create(
+          <Tabs.Tab>
+          </Tabs.Tab>
+        )
+        .toJSON()
     }
 
     expect(tree).toThrow(Error)

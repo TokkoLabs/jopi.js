@@ -9,7 +9,7 @@ export const Tabs = ({ children, firstTabSelected = true, ...props }) => {
   const tabChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Tab'
   )
-  const [active, setActive] = useState(firstTabSelected && tabChildren.at(0) != undefined && tabChildren.at(0).props.id)
+  const [active, setActive] = useState(firstTabSelected && tabChildren.at(0) !== undefined && tabChildren.at(0).props.id)
   const value = React.useMemo(() => ({ active, setActive }), [active])
   const contentChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Content'
