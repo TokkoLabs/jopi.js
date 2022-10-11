@@ -64,15 +64,18 @@ describe('Tabs', () => {
   })
 
   test('renders throw error', () => {
-    const tree = () => {
-      renderer
-        .create(
-          <Tabs.Tab>
-          </Tabs.Tab>
-        )
-        .toJSON()
+    try {
+      const tree = () => {
+        renderer
+          .create(
+            <Tabs.Tab>
+            </Tabs.Tab>
+          )
+          .toJSON()
+      }
+      expect(tree).toThrow(Error)
+    } catch (e) {
+      expect(e).toThrow(Error)
     }
-
-    expect(tree).toThrow(Error)
   })
 })
