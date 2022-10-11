@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/tabs",
-  "version": "1.4.206",
+  "version": "1.4.207",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.227"
+    "@oneloop/box": "^1.2.228"
   },
   "peerDependencies": {
     "react": "^16.8.0"
