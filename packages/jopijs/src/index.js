@@ -1,7 +1,7 @@
 import { Alert } from '@oneloop/alert'
 import { Badge } from '@oneloop/badge'
 import { Box, Flex } from '@oneloop/box'
-import { Button, ButtonIcon, ButtonRound, ButtonMain } from '@oneloop/button'
+import { Button, ButtonIcon } from '@oneloop/button'
 import { Card } from '@oneloop/card'
 import { Checkbox } from '@oneloop/checkbox'
 import { Collapsible } from '@oneloop/collapsible'
@@ -19,12 +19,12 @@ import { Modal } from '@oneloop/modal'
 import { Paginator } from '@oneloop/paginator'
 import { Radio } from '@oneloop/radio'
 import { Switch } from '@oneloop/switch'
-import { Submenu } from '@oneloop/submenu'
+import { Submenu, Parent } from '@oneloop/submenu'
 import { Table } from '@oneloop/table'
 import { Tabs } from '@oneloop/tabs'
 import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
-import { Tooltip } from '@oneloop/tooltip'
+import { Tooltip, ParentTooltip } from '@oneloop/tooltip'
 import { ThemeProvider } from 'styled-components'
 export {
   Alert,
@@ -33,8 +33,6 @@ export {
   Flex,
   Button,
   ButtonIcon,
-  ButtonRound,
-  ButtonMain,
   Card,
   Checkbox,
   ContainerMenu,
@@ -61,4 +59,6 @@ export {
   Fonts,
   Submenu,
   Tooltip,
+  Parent,
+  ParentTooltip,
 }

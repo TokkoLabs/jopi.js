@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonHoldPress } from '../src'
+import { Button, ButtonIcon } from '../src'
 
 describe('Button', () => {
   test('primary', () => {
@@ -13,7 +13,7 @@ describe('Button', () => {
 
   test('primaryDisabled', () => {
     const tree = renderer
-      .create(<Button variant="primaryDisabled">{'Test'}</Button>)
+      .create(<Button variant='primaryDisabled'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -21,7 +21,7 @@ describe('Button', () => {
 
   test('secondary', () => {
     const tree = renderer
-      .create(<Button variant="secondary">{'Test'}</Button>)
+      .create(<Button variant='secondary'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -29,15 +29,15 @@ describe('Button', () => {
 
   test('primaryOutline', () => {
     const tree = renderer
-      .create(<Button variant="primaryOutline">{'Test'}</Button>)
+      .create(<Button variant='primaryOutline'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
-  test('secondaryOutlineIcon', () => {
+  test('secondaryOutlinedIcon', () => {
     const tree = renderer
-      .create(<Button variant="secondaryOutlineIcon">{'Test'}</Button>)
+      .create(<Button variant='secondaryOutlined'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -45,7 +45,7 @@ describe('Button', () => {
 
   test('outlineDisabled', () => {
     const tree = renderer
-      .create(<Button variant="outlineDisabled">{'Test'}</Button>)
+      .create(<Button variant='outlineDisabled'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -53,7 +53,7 @@ describe('Button', () => {
 
   test('primaryText', () => {
     const tree = renderer
-      .create(<Button variant="primaryText">{'Test'}</Button>)
+      .create(<Button variant='primaryText'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -61,7 +61,7 @@ describe('Button', () => {
 
   test('secondaryText', () => {
     const tree = renderer
-      .create(<Button variant="secondaryText">{'Test'}</Button>)
+      .create(<Button variant='secondaryText'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -69,7 +69,7 @@ describe('Button', () => {
 
   test('subtleText', () => {
     const tree = renderer
-      .create(<Button variant="subtleText">{'Test'}</Button>)
+      .create(<Button variant='subtleText'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -77,7 +77,7 @@ describe('Button', () => {
 
   test('textDisabled', () => {
     const tree = renderer
-      .create(<Button variant="textDisabled">{'Test'}</Button>)
+      .create(<Button variant='textDisabled'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -85,7 +85,7 @@ describe('Button', () => {
 
   test('iconPrimary', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="iconPrimary"/>)
+      .create(<ButtonIcon variant='iconPrimary'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -93,7 +93,7 @@ describe('Button', () => {
 
   test('iconSecondary', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="iconSecondary"/>)
+      .create(<ButtonIcon variant='iconSecondary'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -101,7 +101,7 @@ describe('Button', () => {
 
   test('iconDisabled', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="iconDisabled"/>)
+      .create(<ButtonIcon variant='iconDisabled'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -109,7 +109,7 @@ describe('Button', () => {
 
   test('primaryOutlineIcon', () => {
     const tree = renderer
-      .create(<ButtonIcon variant={['primaryOutline', 'iconLarge']}/>)
+      .create(<ButtonIcon variant={['primaryOutlined', 'iconLarge']}/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -117,15 +117,15 @@ describe('Button', () => {
 
   test('secondaryOutlineIcon', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="secondaryOutlineIcon"/>)
+      .create(<ButtonIcon variant={['secondaryOutlined', 'iconLarge']}/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
-  test('outlineIconDisabled', () => {
+  test('outlinedDisabled', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="outlineDisabled"/>)
+      .create(<ButtonIcon variant='outlinedDisabled'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -133,7 +133,7 @@ describe('Button', () => {
 
   test('subtleIcon', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="subtleIcon"/>)
+      .create(<ButtonIcon variant='subtleIcon'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -141,7 +141,7 @@ describe('Button', () => {
 
   test('subtleIconDisabled', () => {
     const tree = renderer
-      .create(<ButtonIcon variant="iconDisabled"/>)
+      .create(<ButtonIcon variant='iconDisabled'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -149,7 +149,7 @@ describe('Button', () => {
 
   test('roundButton', () => {
     const tree = renderer
-      .create(<ButtonRound text="Label" icon="icon-unificar" variant="primary"/>)
+      .create(<ButtonIcon text='Label' icon='icon-unificar' variant='primary'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -157,7 +157,7 @@ describe('Button', () => {
 
   test('roundButtonColourFeedback', () => {
     const tree = renderer
-      .create(<ButtonRound text="Label" icon="icon-check" variant="colourFeedback"/>)
+      .create(<ButtonIcon text='Label' icon='icon-check' variant='colourFeedback'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -165,7 +165,7 @@ describe('Button', () => {
 
   test('roundButtonDisabled', () => {
     const tree = renderer
-      .create(<ButtonRound text="Label" icon="icon-unificar" variant="primaryDisabled"/>)
+      .create(<ButtonIcon text='Label' icon='icon-unificar' variant='primaryDisabled'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -173,7 +173,7 @@ describe('Button', () => {
 
   test('link', () => {
     const tree = renderer
-      .create(<Button variant="link">{'Test'}</Button>)
+      .create(<Button variant='link'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -181,7 +181,7 @@ describe('Button', () => {
 
   test('linkSubtle', () => {
     const tree = renderer
-      .create(<Button variant="linkSubtle">{'Test'}</Button>)
+      .create(<Button variant='linkSubtle'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -189,7 +189,7 @@ describe('Button', () => {
 
   test('linkDisabled', () => {
     const tree = renderer
-      .create(<Button variant="linkDisabled">{'Test'}</Button>)
+      .create(<Button variant='linkDisabled'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -197,7 +197,7 @@ describe('Button', () => {
 
   test('subtleButton', () => {
     const tree = renderer
-      .create(<Button variant="subtleButton">{'Test'}</Button>)
+      .create(<Button variant='subtleButton'>{'Test'}</Button>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -205,7 +205,7 @@ describe('Button', () => {
 
   test('mainButton', () => {
     const tree = renderer
-      .create(<ButtonMain variant="mainButton" icon="icon-propiedades" text="Emprendimientos"/>)
+      .create(<ButtonIcon variant='mainButton' icon='icon-propiedades' text='Emprendimientos'/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -213,7 +213,23 @@ describe('Button', () => {
 
   test('mainButtonCollapsible', () => {
     const tree = renderer
-      .create(<ButtonMain variant="mainButton" icon="icon-propiedades" text="Emprendimientos" isCollapsible/>)
+      .create(<ButtonIcon variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible active/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonCollapsibleNotActive', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant={['mainButton', 'large']} icon='icon-propiedades' text='Emprendimientos' isCollapsible/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonCollapsibleLarge', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant={['mainButton', 'large']} icon='icon-propiedades' text='Emprendimientos' isCollapsible active/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -229,7 +245,7 @@ describe('Button', () => {
 
   test('mainIconButton', () => {
     const tree = renderer
-      .create(<ButtonHoldPress variant="mainButtonCollapsible" icon="icon-propiedades" active/>)
+      .create(<ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' hover hasCheckbox/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -237,7 +253,47 @@ describe('Button', () => {
 
   test('mainIconButtonActive', () => {
     const tree = renderer
-      .create(<ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' active/>)
+      .create(<ButtonIcon variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' hasCheckbox active maxWidth holdPress/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('userButton', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='userButton' userImage text='Nombre Usuario' style={{ backgroundColor: '#798B97' }}/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('userButtonWithImage', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='userButton' userImage srcImage='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' text='Nombre Usuario' />)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonIconActive', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' text='test' holdPress active/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonIconBadgeWithText', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' badgeValue='20' badgeVariant='primary' text='test' holdPress active/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonIconBadge', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' badgeValue='20' badgeVariant='primary' holdPress active/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()

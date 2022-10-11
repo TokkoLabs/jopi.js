@@ -35,7 +35,7 @@ describe('Collapsible', () => {
           <Collapsible width={1 / 3} isOpen>
             <Collapsible.Button
               isMainButton
-              variant="mainButtonCollapsible"
+              variant="mainButton"
               icon="icon-emprendimientos"
               text={'Emprendimientos'}
               isExpanded
@@ -49,7 +49,7 @@ describe('Collapsible', () => {
           <Collapsible width={1 / 3} isOpen={false}>
             <Collapsible.Button
               isMainButton
-              variant="mainButtonCollapsible"
+              variant="mainButton"
               icon="icon-emprendimientos"
               text={'Emprendimientos'}
               isExpanded={false}
@@ -63,7 +63,7 @@ describe('Collapsible', () => {
           <Collapsible width={1 / 3} isOpen={false}>
             <Collapsible.Button
               isMainButton
-              variant="mainButtonCollapsible"
+              variant="mainButton"
               icon="icon-emprendimientos"
               text={'Emprendimientos'}
               isExpanded={false}

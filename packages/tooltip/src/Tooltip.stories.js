@@ -1,8 +1,8 @@
 import React from 'react'
-import { ButtonHoldPress } from '@oneloop/button'
-import { useToggle, isMouseOutTooltip } from '@oneloop/hooks'
+import { ButtonIcon } from '@oneloop/button'
+import { useToggle, isMouseOutTooltip, isMouseOutParent } from '@oneloop/hooks'
 import { Text } from '@oneloop/text'
-import { Tooltip } from '.'
+import { ParentTooltip, Tooltip } from '.'
 
 export default {
   component: Tooltip,
@@ -14,7 +14,8 @@ export default {
     },
     placement: {
       name: 'placement',
-      description: 'Posición del tooltip: [ \'right\', \'left\', \'top\', \'bottom\' ]',
+      description: 'Posición del tooltip: [ \'right-start\', \'right\', \'right-end\', \'left-start\', \'left\', \'left-end\', ' +
+      '\'top-start\', \'top\', \'top-end\', \'bottom-start\', \'bottom\', \'bottom-end\' ]',
       type: 'text',
       control: { type: 'none' },
     },
@@ -39,15 +40,33 @@ export default {
   },
 }
 
+export const TooltipRightStart = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', borderRadius: '10px', height: '50px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent0', 'right'))} id="parent0" aria-describedby="tooltip0" setHover={setHover} hover={hover}>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip0" role="tooltip0" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip0', 'parent0', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent0' childrenId='tooltip0' placement='right-start'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
 export const TooltipRight = () => {
-  const [hover, setHover] = useToggle(false)
+  const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
-
   return (
-    <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip0', 'parent0', 'right'))} id="parent0" aria-describedby="tooltip0"/>
-      <div id="tooltip0" role="tooltip0" hidden={!active && !hover}>
-        <Tooltip parentId='parent0' childrenId='tooltip0'>
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', borderRadius: '10px', height: '50px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent1', 'right'))} id="parent1" aria-describedby="tooltip1" setHover={setHover} hover={hover}>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip1" role="tooltip1" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent1' childrenId='tooltip1' placement='right'>
           <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Tooltip>
       </div>
@@ -55,15 +74,16 @@ export const TooltipRight = () => {
   )
 }
 
-export const TooltipLeft = () => {
-  const [hover, setHover] = useToggle(false)
+export const TooltipRightEnd = () => {
+  const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
-
   return (
-    <div style={{ background: '#F3F6F8', paddingTop: '10px', borderRadius: '10px', height: '50px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'left'))} id="parent1" aria-describedby="tooltip1" style={{ position: 'absolute', right: '200px' }}/>
-      <div id="tooltip1" role="tooltip1" hidden={!active && !hover}>
-        <Tooltip parentId='parent1' childrenId='tooltip1' placement='left'>
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', borderRadius: '10px', height: '50px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent2', 'right'))} id="parent2" aria-describedby="tooltip2" setHover={setHover} hover={hover}>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip2" role="tooltip2" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip2', 'parent2', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent2' childrenId='tooltip2' placement='right-end'>
           <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Tooltip>
       </div>
@@ -71,15 +91,16 @@ export const TooltipLeft = () => {
   )
 }
 
-export const TooltipTop = () => {
-  const [hover, setHover] = useToggle(false)
+export const TooltipBottomStart = () => {
+  const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
-
   return (
-    <div style={{ background: '#F3F6F8', padding: '40px', borderRadius: '10px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip2', 'parent2', 'top'))} id="parent2" aria-describedby="tooltip2"/>
-      <div id="tooltip2" role="tooltip2" hidden={!active && !hover}>
-        <Tooltip parentId='parent2' childrenId='tooltip2' placement='top'>
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', paddingLeft: '100px', borderRadius: '10px', height: '50px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent3', 'bottom'))} id="parent3" aria-describedby="tooltip3" setHover={setHover} hover={hover} placement='bottom'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip3" role="tooltip3" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip3', 'parent3', 'bottom'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent3' childrenId='tooltip3' placement='bottom-start'>
           <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Tooltip>
       </div>
@@ -88,14 +109,134 @@ export const TooltipTop = () => {
 }
 
 export const TooltipBottom = () => {
-  const [hover, setHover] = useToggle(false)
+  const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
-
   return (
-    <div style={{ background: '#F3F6F8', padding: '40px', borderRadius: '10px' }}>
-      <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' active={active} badgeVariant='primary' onClick={() => setActive(active)} onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip3', 'parent3', 'bottom'))} id="parent3" aria-describedby="tooltip3"/>
-      <div id="tooltip3" role="tooltip3" hidden={!active && !hover}>
-        <Tooltip parentId='parent3' childrenId='tooltip3' placement='bottom'>
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', paddingLeft: '100px', borderRadius: '10px', height: '50px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent4', 'bottom'))} id="parent4" aria-describedby="tooltip4" setHover={setHover} hover={hover} placement='bottom'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip4" role="tooltip4" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip4', 'parent4', 'bottom'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent4' childrenId='tooltip4' placement='bottom'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipBottomEnd = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', paddingLeft: '100px', borderRadius: '10px', height: '50px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent5', 'bottom'))} id="parent5" aria-describedby="tooltip5" setHover={setHover} hover={hover} placement='bottom'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip5" role="tooltip5" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip5', 'parent5', 'bottom'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent5' childrenId='tooltip5' placement='bottom-end'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipLeftStart = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', paddingLeft: '200px', borderRadius: '10px', height: '50px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent6', 'left'))} id="parent6" aria-describedby="tooltip6" setHover={setHover} hover={hover} placement='left'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip6" role="tooltip6" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip6', 'parent6', 'left'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent6' childrenId='tooltip6' placement='left-start'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipLeft = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', paddingLeft: '200px', borderRadius: '10px', height: '50px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent7', 'left'))} id="parent7" aria-describedby="tooltip7" setHover={setHover} hover={hover} placement='left'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip7" role="tooltip7" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip7', 'parent7', 'left'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent7' childrenId='tooltip7' placement='left'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipLeftEnd = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', paddingLeft: '200px', borderRadius: '10px', height: '60px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent8', 'left'))} id="parent8" aria-describedby="tooltip8" setHover={setHover} hover={hover} placement='left'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip8" role="tooltip8" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip8', 'parent8', 'left'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent8' childrenId='tooltip8' placement='left-end'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipTopStart = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', paddingTop: '40px', paddingLeft: '200px', borderRadius: '10px', height: '60px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent9', 'top'))} id="parent9" aria-describedby="tooltip9" setHover={setHover} hover={hover} placement='top'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip9" role="tooltip9" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip9', 'parent9', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent9' childrenId='tooltip9' placement='top-start'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipTop = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', paddingTop: '40px', paddingLeft: '200px', borderRadius: '10px', height: '60px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent10', 'top'))} id="parent10" aria-describedby="tooltip10" setHover={setHover} hover={hover} placement='top'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip10" role="tooltip10" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip10', 'parent10', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent10' childrenId='tooltip10' placement='top'>
+          <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipTopEnd = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', paddingTop: '40px', paddingLeft: '200px', borderRadius: '10px', height: '60px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent11', 'top'))} id="parent11" aria-describedby="tooltip11" setHover={setHover} hover={hover} placement='top'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip11" role="tooltip11" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip11', 'parent11', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip parentId='parent11' childrenId='tooltip11' placement='top-end'>
           <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Tooltip>
       </div>
