@@ -92,20 +92,20 @@ export const tabDefault = () => (
   <Box __css={{ backgroundColor: 'lightgray', width: '250px', height: '80px', padding: '5px' }}>
     <Tabs className='grid gap-xs'>
       <Tabs.Tab variant='default' id="item0">
-          <Icon icon='icon-buscar' fontSize='12px'/>
-          <Text variantBody='body600' variantFont='fontSize12'>12</Text>
+        <Icon icon='icon-buscar' fontSize='12px'/>
+        <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab >
       <Tabs.Tab variant='default' id="item1">
-          <Icon icon='icon-propiedades' fontSize='12px'/>
-          <Text variantBody='body600' variantFont='fontSize12'>12</Text>
+        <Icon icon='icon-propiedades' fontSize='12px'/>
+        <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Tab variant='default' id="item2">
-          <Icon icon='icon-contactos' fontSize='12px'/>
-          <Text variantBody='body600' variantFont='fontSize12'>12</Text>
+        <Icon icon='icon-contactos' fontSize='12px'/>
+        <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Tab variant='default' id="item3">
-          <Icon icon='icon-emprendimientos' fontSize='12px'/>
-          <Text variantBody='body600' variantFont='fontSize12'>12</Text>
+        <Icon icon='icon-emprendimientos' fontSize='12px'/>
+        <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Content id="item0">Hola!</Tabs.Content>
       <Tabs.Content id="item1">Segundo item</Tabs.Content>
@@ -119,20 +119,20 @@ export const tabDefaultWithMoreWidth = () => (
   <Box __css={{ backgroundColor: 'lightgray', width: '350px', height: '80px', padding: '5px' }}>
     <Tabs className='grid gap-xs'>
       <Tabs.Tab variant='default' id="item0">
-          <Icon icon='icon-buscar' fontSize='12px'/>
-          <Text variantBody='body600' variantFont='fontSize12'>12</Text>
+        <Icon icon='icon-buscar' fontSize='12px'/>
+        <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab >
       <Tabs.Tab variant='default' id="item1">
-          <Icon icon='icon-propiedades' fontSize='12px'/>
-          <Text variantBody='body600' variantFont='fontSize12'>12</Text>
+        <Icon icon='icon-propiedades' fontSize='12px'/>
+        <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Tab variant='default' id="item2">
-          <Icon icon='icon-contactos' fontSize='12px'/>
-          <Text variantBody='body600' variantFont='fontSize12'>12</Text>
+        <Icon icon='icon-contactos' fontSize='12px'/>
+        <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Tab variant='default' id="item3">
-          <Icon icon='icon-emprendimientos' fontSize='12px'/>
-          <Text variantBody='body600' variantFont='fontSize12'>12</Text>
+        <Icon icon='icon-emprendimientos' fontSize='12px'/>
+        <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Content id="item0">Hola!</Tabs.Content>
       <Tabs.Content id="item1">Segundo item</Tabs.Content>

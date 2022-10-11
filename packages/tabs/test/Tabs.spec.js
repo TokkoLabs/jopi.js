@@ -62,4 +62,17 @@ describe('Tabs', () => {
 
     expect(component).toMatchSnapshot()
   })
+
+  test('renders throw error', () => {
+    const tree = () => {
+      renderer
+      .create(
+        <Tabs.Tab>
+        </Tabs.Tab>
+      )
+      .toJSON()
+    }
+
+    expect(tree).toThrow(Error)
+  })
 })
