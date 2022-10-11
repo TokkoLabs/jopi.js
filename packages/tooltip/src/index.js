@@ -3,7 +3,7 @@ import { createPopper } from '@popperjs/core'
 import { Box } from '@oneloop/box'
 import { isMouseOutJoin } from '@oneloop/hooks'
 
-export const Parent = ({ children, setHover, hover, placement = 'right', offset = 8, ...props }) => {
+export const ParentTooltip = ({ children, setHover, hover, placement = 'right', offset = 8, ...props }) => {
   let styles = { position: 'absolute', width: offset + 'px' }
   if (document.getElementById(props.id) !== null) {
     const values = document.getElementById(props.id).getBoundingClientRect()
