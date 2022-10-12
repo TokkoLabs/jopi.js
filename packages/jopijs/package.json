@@ -18,6 +18,8 @@
     "@oneloop/datepicker": "^1.2.248",
     "@oneloop/drawer": "^1.0.197",
     "@oneloop/dropdown": "^1.2.261",
+    "@oneloop/fonts": "^1.0.50",
+    "@oneloop/icons": "^1.2.229",
     "@oneloop/image": "^1.2.227",
     "@oneloop/input": "^1.2.246",
     "@oneloop/label": "^1.2.227",
