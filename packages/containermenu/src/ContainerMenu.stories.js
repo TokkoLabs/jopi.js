@@ -43,7 +43,7 @@ export const Normal = () => {
   return (
     <Box __css={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
       <ContainerMenu width='252px' height='325px' prefixIcon='icon-favoritos' titleText='Favoritos'
-        suffix={ <ButtonIcon icon='icon-configuracion' holdPress variant={['subtleIcon', 'iconSmall']} active={active} onClick={() => setActive()}/> }
+        suffix={ <ButtonIcon icon='icon-configuracion' holdPress variant={['subtleIcon', 'iconSmallSize18px']} active={active} onClick={() => setActive()}/> }
       >
         <Tabs>
           <Tabs.Tab variant='default' id="texto">
@@ -58,12 +58,12 @@ export const Normal = () => {
           </Tabs.Tab>
           <Tabs.Tab variant='default' id="texto3">
             <Box>
-              <span className='icon-contacto'/> 12
+              <span className='icon-contactos'/> 12
             </Box>
           </Tabs.Tab>
           <Tabs.Tab variant='default' id="texto4">
             <Box>
-              <span className='icon-emprendimiento'/> 12
+              <span className='icon-emprendimientos'/> 12
             </Box>
           </Tabs.Tab>
           <Tabs.Content id="texto">Hola!</Tabs.Content>
@@ -80,7 +80,7 @@ export const acciones = () => (
   <Box __css={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
     <ContainerMenu width='252px' prefixIcon='icon-acciones' titleText='Acciones'>
       <List>
-        <ButtonIcon icon='icon-emprendimiento' variant='mainButtonList' text='Exportar listado completo'/>
+        <ButtonIcon icon='icon-emprendimientos' variant='mainButtonList' text='Exportar listado completo'/>
         <ButtonIcon icon='icon-eliminar' variant='mainButtonList' text='Borrar propiedad'/>
       </List>
     </ContainerMenu>

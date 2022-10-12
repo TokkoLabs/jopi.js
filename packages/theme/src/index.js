@@ -753,6 +753,12 @@ const theme = {
       fontSize: '12px',
       heightIcon: '16px',
     },
+    iconSmallSize18px: {
+      height: '32px',
+      width: '32px',
+      borderRadius: '9px',
+      fontSize: '18px',
+    },
     iconExtraSmall: {
       height: '26px',
       width: '26px',
