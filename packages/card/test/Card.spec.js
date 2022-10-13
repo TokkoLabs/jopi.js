@@ -13,7 +13,7 @@ describe('Card', () => {
   test('renders correctly', () => {
     const tree = renderer
       .create(
-        <Card id='0' variant='normal' width='224px' active>
+        <Card id='0' variant='contacts' active style={{ width: '224px' }}>
           <Checkbox />
           <Image variant="rows" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
           <Box sx={{ position: 'relative' }}>
@@ -32,7 +32,7 @@ describe('Card', () => {
   test('renders correctly not active', () => {
     const tree = renderer
       .create(
-        <Card id='0' variant='normal' width='224px' active={false}>
+        <Card id='0' variant='normal' active={false} style={{ width: '224px' }}>
           <Checkbox />
           <Image variant="rows" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
           <Box sx={{ position: 'relative' }}>

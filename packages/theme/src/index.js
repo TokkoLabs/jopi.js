@@ -38,6 +38,7 @@ const colors = {
   neutralGray9: '#EFF3F5',
   neutralGray10: '#F3F6F8',
   white: '#FFFFFF',
+  yellow: '#FFF502',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -539,6 +540,14 @@ const theme = {
     ellipsis: {
       textOverflow: 'ellipsis',
       whiteSpace: 'nowrap',
+      overflow: 'hidden',
+    },
+    ellipsisOneLine: {
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      display: '-webkit-box',
+      WebkitLineClamp: 1,
+      WebkitBoxOrient: 'vertical',
       overflow: 'hidden',
     },
     success: [
@@ -1555,6 +1564,13 @@ const theme = {
       backgroundColor: colors.tips,
       color: colors.subtlePressed,
     },
+    badgeYellow: {
+      backgroundColor: colors.yellow,
+      color: colors.neutralGray1,
+      fontWeight: 700,
+      fontSize: '11px',
+      lineHeight: '13px',
+    },
     badgeAdded: {
       backgroundColor: colors.badgeBackgroundSuccess,
       color: colors.badgeSuccess,
@@ -1592,6 +1608,11 @@ const theme = {
       borderRadius: '8px',
       width: '72px',
       height: '48px',
+    },
+    rowsCard: {
+      borderRadius: '6px',
+      width: '60px',
+      height: '40px',
     },
     largeCard: {
       borderRadius: '12px',
@@ -1765,37 +1786,37 @@ const theme = {
     normal: {
       padding: '8px 10px 8px 10px',
       gap: '8px',
-      backgroundColorValue: colors.neutralGray10,
+      backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
     },
     contacts: {
       padding: '6px 10px 6px 10px',
       gap: '8px',
-      backgroundColorValue: colors.neutralGray10,
+      backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
     },
     search: {
       padding: '8px 12px 8px 12px',
       gap: '8px',
-      backgroundColorValue: colors.neutralGray10,
+      backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
     },
   },
