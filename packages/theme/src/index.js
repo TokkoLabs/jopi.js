@@ -542,6 +542,14 @@ const theme = {
       whiteSpace: 'nowrap',
       overflow: 'hidden',
     },
+    ellipsisOneLine: {
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      display: '-webkit-box',
+      WebkitLineClamp: 1,
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+    },
     success: [
       {
         fontSize: fontSize[5],
@@ -1601,6 +1609,11 @@ const theme = {
       width: '72px',
       height: '48px',
     },
+    rowsCard: {
+      borderRadius: '6px',
+      width: '60px',
+      height: '40px',
+    },
     largeCard: {
       borderRadius: '12px',
       width: '291px',
@@ -1785,13 +1798,13 @@ const theme = {
     contacts: {
       padding: '6px 10px 6px 10px',
       gap: '8px',
-      backgroundColorValue: colors.neutralGray10,
+      backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
     },
     search: {
