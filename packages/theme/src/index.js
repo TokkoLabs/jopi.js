@@ -1810,13 +1810,13 @@ const theme = {
     search: {
       padding: '8px 12px 8px 12px',
       gap: '8px',
-      backgroundColorValue: colors.neutralGray10,
+      backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
     },
   },
