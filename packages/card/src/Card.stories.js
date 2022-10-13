@@ -37,7 +37,7 @@ export const CardNormal = () => {
   )
 }
 
-export const CardContactosMailWhatsapp = () => {
+export const CardContactsMailWhatsapp = () => {
   const [active, setActive] = useToggle(false)
 
   return (
@@ -54,7 +54,7 @@ export const CardContactosMailWhatsapp = () => {
   )
 }
 
-export const CardContactosEmpresa = () => {
+export const CardContactsBusiness = () => {
   const [active, setActive] = useToggle(false)
 
   return (
@@ -72,7 +72,7 @@ export const CardContactosEmpresa = () => {
   )
 }
 
-export const CardContactosWithoutData = () => {
+export const CardContactsWithoutData = () => {
   const [active, setActive] = useToggle(false)
 
   return (
@@ -112,14 +112,14 @@ export const CardSearchTwoLines = () => {
   )
 }
 
-export const CardEmprendimiento = () => {
+export const CardEntrepreneurship = () => {
   const [active, setActive] = useToggle(false)
 
   return (
     <Card id='0' variant='normal' active={active} style={{ width: '224px' }}>
       <Checkbox onClick={setActive} isChecked={active} />
-      <Image variant="rows" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-      <Box sx={{ position: 'relative' }}>
+      <Image variant="rowsCard" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  syle={{ width: '60px', height: '40px' }} />
+      <Box sx={{ position: 'relative', width: '110px' }}>
         <Text variant='bodyBold.fontSize10' style={{ color: '#056C53' }}>Comercializando</Text>
         <Text variant='body.fontSize12' style={{ color: '#49565D' }}>Mirabilia belgrano</Text>
         <Text variant='body.fontSize11' style={{ color: '#6F838D' }}>Arcos y Roosevelt</Text>
