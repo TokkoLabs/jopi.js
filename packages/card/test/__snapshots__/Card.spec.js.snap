@@ -27,7 +27,6 @@ exports[`Card renders correctly 1`] = `
   background-color: #C9D1D5;
   position: relative;
   gap: 8px;
-  width: 224px;
 }
 
 .c3 {
@@ -218,7 +217,11 @@ input:disabled:not(:checked) ~ .c11 {
   <div
     className="c0 c2"
     id="0"
-    width="224px"
+    style={
+      Object {
+        "width": "224px",
+      }
+    }
   >
     <div
       className="c0 c3"
@@ -396,7 +399,6 @@ exports[`Card renders correctly not active 1`] = `
   background-color: #EFF3F5;
   position: relative;
   gap: 8px;
-  width: 224px;
 }
 
 .c3 {
@@ -587,7 +589,11 @@ input:disabled:not(:checked) ~ .c11 {
   <div
     className="c0 c2"
     id="0"
-    width="224px"
+    style={
+      Object {
+        "width": "224px",
+      }
+    }
   >
     <div
       className="c0 c3"
