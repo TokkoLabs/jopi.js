@@ -17,7 +17,6 @@ export const Card = ({ variant = 'normal', active, ...props }) => {
           flexDirection: 'row',
           alignItems: 'center',
           backgroundColor: backgroundColor,
-        //  position: 'static',
           position: 'relative',
           gap: '8px',
         }}

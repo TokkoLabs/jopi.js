@@ -26,11 +26,11 @@ export const CardNormal = () => {
   return (
     <Card id='0' variant='normal' active={active} style={{ width: '224px' }}>
       <Checkbox onClick={setActive} isChecked={active} />
-      <Image variant="rowsCard" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  syle={{ width: '60px', height: '40px' }} />
+      <Image variant="rowsCard" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
       <Box sx={{ position: 'relative', width: '108px' }}>
         <Text variant='bodyBold.fontSize10' style={{ color: '#056C53' }}>Disponible</Text>
         <Text variant='body.fontSize11' style={{ color: '#384248' }}>IHO2543876</Text>
-        <Text variant='body.fontSize11' style={{ color: '#6F838D', display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical', textOverflow: 'ellipsis', overflow: 'hidden' }}>Ciudad de la paz 11456 03330</Text>
+        <Text variant='body.fontSize11' style={{ color: '#6F838D', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>Ciudad de la paz 11456 03330</Text>
       </Box>
       <Badge variant="badgeYellow" style={{ position: 'absolute', top: '8px', right: '14px' }}>{'50%'}</Badge>
     </Card>
@@ -118,7 +118,7 @@ export const CardEntrepreneurship = () => {
   return (
     <Card id='0' variant='normal' active={active} style={{ width: '224px' }}>
       <Checkbox onClick={setActive} isChecked={active} />
-      <Image variant="rowsCard" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  syle={{ width: '60px', height: '40px' }} />
+      <Image variant="rowsCard" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
       <Box sx={{ position: 'relative', width: '110px' }}>
         <Text variant='bodyBold.fontSize10' style={{ color: '#056C53' }}>Comercializando</Text>
         <Text variant='body.fontSize12' style={{ color: '#49565D' }}>Mirabilia belgrano</Text>

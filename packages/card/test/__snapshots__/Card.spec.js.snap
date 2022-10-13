@@ -24,8 +24,9 @@ exports[`Card renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #E4E8EA;
-  position: static;
+  background-color: #C9D1D5;
+  position: relative;
+  gap: 8px;
   width: 224px;
 }
 
@@ -392,8 +393,9 @@ exports[`Card renders correctly not active 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F3F6F8;
-  position: static;
+  background-color: #EFF3F5;
+  position: relative;
+  gap: 8px;
   width: 224px;
 }
 
