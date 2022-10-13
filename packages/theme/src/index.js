@@ -38,6 +38,7 @@ const colors = {
   neutralGray9: '#EFF3F5',
   neutralGray10: '#F3F6F8',
   white: '#FFFFFF',
+  yellow: '#FFF502',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -1555,6 +1556,13 @@ const theme = {
       backgroundColor: colors.tips,
       color: colors.subtlePressed,
     },
+    badgeYellow: {
+      backgroundColor: colors.yellow,
+      color: colors.neutralGray1,
+      fontWeight: 700,
+      fontSize: '11px',
+      lineHeight: '13px',
+    },
     badgeAdded: {
       backgroundColor: colors.badgeBackgroundSuccess,
       color: colors.badgeSuccess,
@@ -1765,13 +1773,13 @@ const theme = {
     normal: {
       padding: '8px 10px 8px 10px',
       gap: '8px',
-      backgroundColorValue: colors.neutralGray10,
+      backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray8,
+        backgroundColor: colors.neutralGray7,
       },
     },
     contacts: {

@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
 
-export const Card = ({ variant, active, ...props }) => {
+export const Card = ({ variant = 'normal', active, ...props }) => {
   const variantValues = Object.values(theme.card)[Object.keys(theme.card).indexOf(variant)]
   const backgroundColor = active ? variantValues[':focus'].backgroundColor : variantValues.backgroundColorValue
   return (
@@ -17,7 +17,9 @@ export const Card = ({ variant, active, ...props }) => {
           flexDirection: 'row',
           alignItems: 'center',
           backgroundColor: backgroundColor,
-          position: 'static',
+        //  position: 'static',
+          position: 'relative',
+          gap: '8px',
         }}
         />
     </Box>

@@ -22,17 +22,16 @@ export default {
 
 export const CardNormal = () => {
   const [active, setActive] = useToggle(false)
-
   return (
-    <Card id='0' variant='normal' width='224px' active={active}>
+    <Card id='0' variant='normal' active={active} style={{ width: '224px', height: '59px' }}>
       <Checkbox onClick={setActive} isChecked={active} />
-      <Image variant="rows" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+      <Image variant="rows" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style={{ width: '60px', height: '40px' }} />
       <Box sx={{ position: 'relative' }}>
         <Text variant='bodyBold.fontSize10' style={{ color: '#056C53' }}>Disponible</Text>
-        <Text variant='body.fontSize11'>IHO2543876</Text>
-        <Text variant={['body.fontSize11', 'ellipsis']}>Ciudad de la paz 11456</Text>
-        <Badge variant="badgeTips" style={{ position: 'absolute', top: '-2px', right: '4px' }}>{'50%'}</Badge>
+        <Text variant='body.fontSize11' style={{ color: '#384248' }}>IHO2543876</Text>
+        <Text variant={['body.fontSize11', 'ellipsis']} style={{ color: '#6F838D',  display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Ciudad de la paz 11456</Text>
       </Box>
+      <Badge variant="badgeYellow" style={{ position: 'absolute', top: '8px', right: '14px' }}>{'50%'}</Badge>
     </Card>
   )
 }
