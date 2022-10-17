@@ -221,7 +221,7 @@ exports[`TableDefault renders correctly 1`] = `
   gap: 12px;
   background-color: #FFFFFF;
   border-radius: 8px;
-  height: 54px;
+  height: 60px;
   margin-bottom: 8px;
   color: neutralGray4;
   padding-bottom: 1em;
@@ -371,7 +371,7 @@ input:focus ~ .c0 {
   gap: 12px;
   background-color: #FFFFFF;
   border-radius: 8px;
-  height: 54px;
+  height: 60px;
   margin-bottom: 8px;
   color: neutralGray2;
   padding-bottom: 1em;

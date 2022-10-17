@@ -160,7 +160,7 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, id
         gap: '12px',
         backgroundColor: '#FFFFFF',
         borderRadius: '8px',
-        height: '54px',
+        height: '60px',
         mb: '8px',
         color: disabled ? 'neutralGray4' : 'neutralGray2',
         paddingBottom: '1em',
