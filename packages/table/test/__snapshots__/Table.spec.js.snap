@@ -202,6 +202,7 @@ exports[`TableDefault renders correctly 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  gap: 0px;
 }
 
 .c6 {
@@ -223,7 +224,6 @@ exports[`TableDefault renders correctly 1`] = `
   height: 54px;
   margin-bottom: 8px;
   color: neutralGray4;
-  border: 1px solid #000000;
   padding-bottom: 1em;
 }
 
@@ -231,20 +231,23 @@ exports[`TableDefault renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-top: 5px;
   gap: 1px;
+  border-top: 1px solid #00000000;
+  border-bottom: 1px solid #00000000;
 }
 
 .c8:first-child {
   padding-left: 12px;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
+  border-left: 1px solid #00000000;
 }
 
 .c8:last-child {
   padding-right: 12px;
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
+  border-right: 1px solid #00000000;
 }
 
 .c9 {
@@ -371,7 +374,6 @@ input:focus ~ .c0 {
   height: 54px;
   margin-bottom: 8px;
   color: neutralGray2;
-  border: 1px solid #000000;
   padding-bottom: 1em;
 }
 
@@ -581,6 +583,8 @@ input:disabled:not(:checked) ~ .c18 {
   >
     <tr
       className="c0 c7"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       <td
         className="c0 c8"
@@ -832,6 +836,8 @@ input:disabled:not(:checked) ~ .c18 {
     </tr>
     <tr
       className="c0 c25"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       <td
         className="c0 c8"

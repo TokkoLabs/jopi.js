@@ -5,13 +5,12 @@ import theme from '@oneloop/theme'
 const TableContext = createContext()
 
 export const Table = (props) => {
-
   const ref = React.useRef()
   const [idHover, setIdHover] = useState('')
 
   const value = React.useMemo(() => ({ idHover, setIdHover, ref }), [idHover])
 
-  return(
+  return (
     <TableContext.Provider value={value}>
       <Box
         as="table"

@@ -52,16 +52,16 @@ export const Primary = () => {
     setSelected2()
     setSelected3()
   }
-  console.log(order)
+
   return (
     <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '10px' }}>
       <Table>
         <Table.HeaderDefault>
           <Table.HeaderItemDefault row>
             <Checkbox onClick={() => selectAll()}/>
-            <Icon icon='icon-dropdown' fontSize='12px' onClick={setOrder} style={order ? { transform: 'rotate(-180deg)', transition: '0.5s' } : { transition: '0.5s'}}/>
+            <Icon icon='icon-dropdown' fontSize='12px' onClick={setOrder} style={ order ? { transform: 'rotate(-180deg)', transition: '0.5s' } : { transition: '0.5s' }}/>
           </Table.HeaderItemDefault>
-          <Table.HeaderItemDefault row style={{ gap: '2px'}}>
+          <Table.HeaderItemDefault row style={{ gap: '2px' }}>
             <Text variant='bodyBold.fontSize12'>Foto</Text>
             <Icon icon='icon-ordenar' fontSize='12px'/>
           </Table.HeaderItemDefault>
