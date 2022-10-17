@@ -161,4 +161,21 @@ describe('TableDefault', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  test('renders throw error', () => {
+    try {
+      renderer
+        .create(
+          <Table.Rows>
+            <Table.RowItemDefault>
+              <Text variant="body.fontSize12">3 Amb</Text>
+              <Text variant="body.fontSize11">0.00</Text>
+            </Table.RowItemDefault>
+          </Table.Rows>
+        )
+        .toJSON()
+    } catch (e) {
+      expect(e.message).toBe('Table compound components cannot be rendered outside the Dropdown component')
+    }
+  })
 })

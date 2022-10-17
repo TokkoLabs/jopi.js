@@ -1,20 +1,39 @@
-import React from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import { Box } from '@oneloop/box'
+import theme from '@oneloop/theme'
 
-export const Table = (props) => (
-  <Box
-    as="table"
-    {...props}
-    __css={{
-      fontFamily: 'primary',
-      width: '100%',
-      //  borderSpacing: '0px',
-      borderSpacing: '0px 4px',
-      //  borderCollapse: 'collapse',
-      // borderCollapse: 'separate',
-    }}
-  />
-)
+const TableContext = createContext()
+
+export const Table = (props) => {
+  const ref = React.useRef()
+  const [idHover, setIdHover] = useState('')
+
+  const value = React.useMemo(() => ({ idHover, setIdHover, ref }), [idHover])
+
+  return (
+    <TableContext.Provider value={value}>
+      <Box
+        as="table"
+        {...props}
+        __css={{
+          fontFamily: 'primary',
+          width: '100%',
+          borderSpacing: '0px 4px',
+        }}
+      />
+    </TableContext.Provider>
+  )
+}
+
+const useTableContext = () => {
+  const context = useContext(TableContext)
+  if (!context) {
+    throw new Error(
+      'Table compound components cannot be rendered outside the Dropdown component'
+    )
+  }
+  return context
+}
 
 const TableHeaderItem = (props) => (
   <Box
@@ -87,7 +106,7 @@ const TableHeaderDefault = ({ children, ...props }) => (
   </Box>
 )
 
-const TableHeaderItemDefault = ({ children, ...props }) => (
+const TableHeaderItemDefault = ({ children, row, ...props }) => (
   <Box
     as="th"
     {...props}
@@ -110,9 +129,10 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
     <Box
       __css={{
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: row ? 'row' : 'column',
         justifyContent: 'flex-start',
-        alignItems: 'flex-start',
+        alignItems: row ? 'center' : 'flex-start',
+        gap: row ? '2px' : '0px',
       }}
     >
       {children}
@@ -120,16 +140,19 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
   </Box>
 )
 
-const TableRowDefault = ({ children, disabled, variant = 'primary', selected, ...props }) => {
+const TableRowDefault = ({ children, disabled, variant = 'primary', selected, id = 0, ...props }) => {
   if (disabled) {
     variant = variant + 'Disabled'
   }
+  const { setIdHover } = useTableContext()
 
   return (
     <Box
       as="tr"
       tx='rows'
       variant={ (selected && !disabled) ? variant + 'Selected' : variant }
+      onMouseOver={() => !disabled && setIdHover(id)}
+      onMouseOut={() => !disabled && setIdHover(undefined)}
       {...props}
       __css={{
         fontFamily: 'Nunito Sans',
@@ -137,10 +160,9 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, ..
         gap: '12px',
         backgroundColor: '#FFFFFF',
         borderRadius: '8px',
-        height: '54px',
+        height: '60px',
         mb: '8px',
         color: disabled ? 'neutralGray4' : 'neutralGray2',
-        border: '1px solid #000000',
         paddingBottom: '1em',
       }}
     >
@@ -149,42 +171,47 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, ..
   )
 }
 
-const TableRowItemDefault = ({ children, error, center, ...props }) => (
-  <Box
-    as="td"
-    {...props}
-    __css={{
-      paddingTop: '5px',
-      gap: '1px',
-      /* ':hover': {
-      borderTop: '10px solid #000000',
-      borderBottom: '10px solid #000000',
-      }, */
-      '&:first-child': {
-        paddingLeft: '12px',
-        borderBottomLeftRadius: '8px',
-        borderTopLeftRadius: '8px',
-      },
-      '&:last-child': {
-        paddingRight: '12px',
-        borderBottomRightRadius: '8px',
-        borderTopRightRadius: '8px',
-      },
-    }}
-  >
+const TableRowItemDefault = ({ children, center, id = 0, variant = 'primary', ...props }) => {
+  const { idHover } = useTableContext()
+  const variantValues = Object.values(theme.rows)[Object.keys(theme.rows).indexOf(variant || 'primary')]
+  const border = idHover !== id ? (variantValues.border || '1px solid #00000000') : variantValues.borderHover
+
+  return (
     <Box
+      as="td"
+      {...props}
       __css={{
-        gap: '2px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: center ? 'center' : 'flex-start',
-        alignItems: center ? 'center' : 'flex-start',
+        gap: '1px',
+        borderTop: border,
+        borderBottom: border,
+        '&:first-child': {
+          paddingLeft: '12px',
+          borderBottomLeftRadius: '8px',
+          borderTopLeftRadius: '8px',
+          borderLeft: border,
+        },
+        '&:last-child': {
+          paddingRight: '12px',
+          borderBottomRightRadius: '8px',
+          borderTopRightRadius: '8px',
+          borderRight: border,
+        },
       }}
     >
-      {children}
+      <Box
+        __css={{
+          gap: '2px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: center ? 'center' : 'flex-start',
+          alignItems: center ? 'center' : 'flex-start',
+        }}
+      >
+        {children}
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 Table.Header = TableHeader
 Table.HeaderItem = TableHeaderItem
