@@ -101,7 +101,7 @@ const DropdownList = ({ children, width = '236px', ...props }) => {
           boxShadow: 'active',
           borderRadius: 'input',
           position: 'absolute',
-          top: '42px',
+          top: '38px',
           zIndex: 1,
           width: width,
           height: '150px',
