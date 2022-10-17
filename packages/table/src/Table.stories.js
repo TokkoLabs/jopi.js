@@ -89,88 +89,88 @@ export const Primary = () => {
           </Table.HeaderItemDefault>
         </Table.HeaderDefault>
         <Table.Rows>
-          <Table.RowDefault selected={selected0} >
-            <Table.RowItemDefault>
+          <Table.RowDefault selected={selected0} id='0'>
+            <Table.RowItemDefault id='0'>
               <Checkbox onClick={() => setSelected0()} isChecked={selected0} />
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='0'>
               <Image
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
               />
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='0'>
               <Text variant='body.fontSize12'>IHO4362866</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='0'>
               <Text variant={['bodyBold.fontSize12', 'ellipsis']} width='150px'>Av. Libertador 5687 5to A - Lote 1232</Text>
               <Text variant='body.fontSize11'>Departamento en Palermo</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='0'>
               <Text variant='bodyBold.fontSize12'>Venta</Text>
               <Text variant='body.fontSize11'>USD 200.000</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='0'>
               <Text variant='body.fontSize12'>2 Dorm</Text>
               <Text variant='body.fontSize11'>2 Baños</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='0'>
               <Text variant='body.fontSize12'>87m° Cub</Text>
               <Text variant='body.fontSize11'>0m° Tot</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='0'>
               <Text variant='body.fontSize12'>3 Amb</Text>
               <Text variant='body.fontSize11'>0.00</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='0'>
               <Text variant='body.fontSize12'>120m° Semi</Text>
               <Text variant='body.fontSize11'>0m° Total</Text>
             </Table.RowItemDefault>
           </Table.RowDefault>
-          <Table.RowDefault selected={selected1} disabled >
-            <Table.RowItemDefault>
+          <Table.RowDefault selected={selected1} id='1' disabled >
+            <Table.RowItemDefault id='1'>
               <Checkbox disabled />
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='1'>
               <Image
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
                 textBadge='Por validar'
               />
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='1'>
               <Text variant='body.fontSize12'>IHO4362866</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='1'>
               <Text variant='bodyBold.fontSize12'>Av. Libertador 5687 5to A</Text>
               <Text variant='body.fontSize11'>Departamento en Palermo</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='1'>
               <Text variant='bodyBold.fontSize12'>Venta</Text>
               <Text variant='body.fontSize11'>USD 200.000</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='1'>
               <Text variant='body.fontSize12'>2 Dorm</Text>
               <Text variant='body.fontSize11'>2 Baños</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='1'>
               <Text variant='body.fontSize12'>87m° Cub</Text>
               <Text variant='body.fontSize11'>0m° Tot</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='1'>
               <Text variant='body.fontSize12'>3 Amb</Text>
               <Text variant='body.fontSize11'>0.00</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='1'>
               <Text variant='body.fontSize12'>120m° Semi</Text>
               <Text variant='body.fontSize11'>0m° Total</Text>
             </Table.RowItemDefault>
           </Table.RowDefault>
-          <Table.RowDefault selected={selected2} variant='errorPrimary' >
-            <Table.RowItemDefault error>
+          <Table.RowDefault selected={selected2} id='2' variant='errorPrimary' >
+            <Table.RowItemDefault id='2' variant='errorPrimary'>
               <Checkbox onClick={() => setSelected2()} isChecked={selected2} />
             </Table.RowItemDefault>
-            <Table.RowItemDefault error>
+            <Table.RowItemDefault id='2' variant='errorPrimary'>
               <Image
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
@@ -178,70 +178,70 @@ export const Primary = () => {
                 variantBadge='badgeErrorRow'
               />
             </Table.RowItemDefault>
-            <Table.RowItemDefault error>
+            <Table.RowItemDefault id='2' variant='errorPrimary'>
               <Text variant='body.fontSize12'>IHO4362866</Text>
               <Text variant='body.fontSize11'>AP4468985</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault error>
+            <Table.RowItemDefault id='2' variant='errorPrimary'>
               <Text variant='bodyBold.fontSize12'>Av. Libertador 5687 5to A</Text>
               <Text variant='body.fontSize11'>Departamento en Palermo</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault error>
+            <Table.RowItemDefault id='2' variant='errorPrimary'>
               <Text variant='bodyBold.fontSize12'>Venta</Text>
               <Text variant='body.fontSize11'>USD 200.000</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault error>
+            <Table.RowItemDefault id='2' variant='errorPrimary'>
               <Text variant='body.fontSize12'>2 Dorm</Text>
               <Text variant='body.fontSize11'>2 Baños</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault error>
+            <Table.RowItemDefault id='2' variant='errorPrimary'>
               <Text variant='body.fontSize12'>87m° Cub</Text>
               <Text variant='body.fontSize11'>0m° Tot</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault error>
+            <Table.RowItemDefault id='2' variant='errorPrimary'>
               <Text variant='body.fontSize12'>3 Amb</Text>
               <Text variant='body.fontSize11'>0.00</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault error>
+            <Table.RowItemDefault id='2' variant='errorPrimary'>
               <Badge variant='badgeTips'>COHIM</Badge>
               <Text variant='body.fontSize11'>0m° Total</Text>
             </Table.RowItemDefault>
           </Table.RowDefault>
-          <Table.RowDefault selected={selected3} variant='infoAlertPrimary' >
-            <Table.RowItemDefault>
+          <Table.RowDefault selected={selected3} id='3' variant='infoAlertPrimary' >
+            <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
               <Checkbox onClick={() => setSelected3()} isChecked={selected3} />
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
               <Image
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
               />
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
               <Text variant='body.fontSize12'>IHO4362866</Text>
               <Text variant='body.fontSize11'>AP4468985</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
               <Text variant='bodyBold.fontSize12'>Av. Libertador 5687 5to A</Text>
               <Text variant='body.fontSize11'>Departamento en Palermo</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
               <Text variant='bodyBold.fontSize12'>Venta</Text>
               <Text variant='body.fontSize11'>USD 200.000</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
               <Text variant='body.fontSize12'>2 Dorm</Text>
               <Text variant='body.fontSize11'>2 Baños</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
               <Text variant='body.fontSize12'>87m° Cub</Text>
               <Text variant='body.fontSize11'>0m° Tot</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
               <Text variant='body.fontSize12'>3 Amb</Text>
               <Text variant='body.fontSize11'>0.00</Text>
             </Table.RowItemDefault>
-            <Table.RowItemDefault>
+            <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
               <Badge variant='badgeTips'>COHIM</Badge>
               <Text variant='body.fontSize11'>0m° Total</Text>
             </Table.RowItemDefault>

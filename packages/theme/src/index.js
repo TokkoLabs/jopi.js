@@ -15,6 +15,9 @@ const colors = {
   error: '#B21702',
   backgroundError: '#FFF8F6',
   backgroundError2: '#FDDDD8',
+  backgroundErrorRowTable: '#FFEDE8',
+  borderRowTable: '#FFE0DC',
+  backgroundAlert2: '#CEE0FC',
   info: '#386DF4',
   lightBlue: '#6A88F2',
   inputErrors: '#FFF2F0',
@@ -69,9 +72,18 @@ const borders = {
   disabledBorder: '1px solid ' + colors.disabled,
   error: '1px solid ' + colors.error,
   backgroundError2: '1px solid ' + colors.backgroundError2,
+  borderRowTable: '1px solid ' + colors.borderRowTable,
+  backgroundAlert2: '1px solid ' + colors.backgroundAlert2,
+  neutralGray1: '1px solid ' + colors.neutralGray1,
+  neutralGray2: '1px solid ' + colors.neutralGray2,
+  neutralGray3: '1px solid ' + colors.neutralGray3,
+  neutralGray4: '1px solid ' + colors.neutralGray4,
   neutralGray5: '1px solid ' + colors.neutralGray5,
+  neutralGray6: '1px solid ' + colors.neutralGray6,
   neutralGray7: '1px solid ' + colors.neutralGray7,
+  neutralGray8: '1px solid ' + colors.neutralGray8,
   neutralGray9: '1px solid ' + colors.neutralGray9,
+  neutralGray10: '1px solid ' + colors.neutralGray10,
 }
 
 const fontSize = [9, 10, 12, 14, 16, 20, 24, 28]
@@ -1647,67 +1659,73 @@ const theme = {
   },
   rows: {
     primary: {
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
+      border: borders.neutralGray9,
+      borderHover: borders.neutralGray8,
       ':hover': {
         backgroundColor: colors.white,
-        borderTop: borders.neutralGray9,
-        borderBottom: borders.neutralGray9,
+        /*borderTop: borders.neutralGray8,
+        borderBottom: borders.neutralGray8,
         '&:first-child': {
-          borderLeft: borders.neutralGray9,
+          borderLeft: borders.neutralGray8,
         },
         '&:last-child': {
-          borderRight: borders.neutralGray9,
-        },
+          borderRight: borders.neutralGray8,
+        },*/
       },
     },
     primarySelected: {
-      backgroundColor: colors.white,
-      borderTop: borders.neutralGray9,
+      backgroundColor: colors.neutralGray9,
+    /*  borderTop: borders.neutralGray9,
       borderBottom: borders.neutralGray9,
       '&:first-child': {
         borderLeft: borders.neutralGray9,
       },
       '&:last-child': {
         borderRight: borders.neutralGray9,
-      },
+      },*/
     },
     errorPrimary: {
-      backgroundColor: colors.backgroundError,
-      borderTop: borders.backgroundError2,
-      borderBottom: borders.backgroundError2,
+      backgroundColor: colors.backgroundErrorRowTable,
+      border: borders.borderRowTable,
+      borderHover: borders.borderRowTable,
+    /*  borderTop: borders.borderRowTable,
+      borderBottom: borders.borderRowTable,
       '&:first-child': {
-        borderLeft: borders.backgroundError2,
+        borderLeft: borders.borderRowTable,
       },
       '&:last-child': {
-        borderRight: borders.backgroundError2,
-      },
+        borderRight: borders.borderRowTable,
+      },*/
       ':hover': {
         backgroundColor: colors.white,
       },
     },
     errorPrimarySelected: {
-      backgroundColor: colors.backgroundError,
-      borderTop: borders.backgroundError2,
-      borderBottom: borders.backgroundError2,
+      backgroundColor: colors.backgroundErrorRowTable,
+    /*  borderTop: borders.borderRowTable,
+      borderBottom: borders.borderRowTable,
       '&:first-child': {
-        borderLeft: borders.backgroundError2,
+        borderLeft: borders.borderRowTable,
       },
       '&:last-child': {
-        borderRight: borders.backgroundError2,
-      },
+        borderRight: borders.borderRowTable,
+      },*/
     },
     infoAlertPrimary: {
       backgroundColor: '#EEF4FE',
+      border: borders.backgroundAlert2,
+      borderHover: borders.backgroundAlert2,
       ':hover': {
         backgroundColor: colors.white,
-        borderTop: borders.neutralGray9,
+      /*  borderTop: borders.neutralGray9,
         borderBottom: borders.neutralGray9,
         '&:first-child': {
           borderLeft: borders.neutralGray9,
         },
         '&:last-child': {
           borderRight: borders.neutralGray9,
-        },
+        },*/
       },
     },
     infoAlertPrimarySelected: {
@@ -1718,6 +1736,8 @@ const theme = {
     },
     secondary: {
       backgroundColor: colors.white,
+          border: borders.neutralGray9,
+          borderHover: borders.neutralGray8,
       ':hover': {
         backgroundColor: colors.neutralGray9,
       },
