@@ -44,7 +44,7 @@ let data = [
     content: {
       name: 'Agustin Iglesias',
       count: 10,
-      icon: 'icon-alerta',
+      icon: 'icon-alertas',
     },
   },
   {
@@ -182,7 +182,7 @@ export const DropdownDefaultWithIcon = () => {
   const [icon, setIcon] = useState('icon-ubicacion')
 
   return (
-    <Dropdown width={1 / 4}>
+    <Dropdown width={1 / 3}>
       <Dropdown.Button variant='dropdownDefault' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
@@ -217,7 +217,7 @@ export const DropdownOutlinedWithIcon = () => {
   const [icon, setIcon] = useState('icon-ubicacion')
 
   return (
-    <Dropdown width={1 / 4}>
+    <Dropdown width={1 / 3}>
       <Dropdown.Button variant='dropdownOutlined' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
@@ -235,7 +235,7 @@ export const DropdownOutlinedWithIconDisabled = () => {
   const [icon, setIcon] = useState('icon-ubicacion')
 
   return (
-    <Dropdown width={1 / 4}>
+    <Dropdown width={1 / 3}>
       <Dropdown.Button variant='dropdownOutlinedDisabled' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (

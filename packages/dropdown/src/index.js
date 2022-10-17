@@ -1,6 +1,7 @@
 import React, { createContext, useContext } from 'react'
 import { Box } from '@oneloop/box'
 import { Button, ButtonIcon } from '@oneloop/button'
+import { Icon } from '@oneloop/icons'
 import { List } from '@oneloop/list'
 import { useToggle, useOnClickOutside } from '@oneloop/hooks'
 import { Text } from '@oneloop/text'
@@ -78,11 +79,11 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
         justifyContent: isArrowStatic ? 'center' : 'flex-start',
       }}
     >
-      { icon && (!filled ? <span className={icon} style={{ fontSize: '16px', height: '16px' }}/> : <span className={icon} style={{ color: colorFilled, backgroundColor: backgroundColorFilled, fontSize: '16px', height: '16px' }}/>) }
+      { icon && (!filled ? <Icon icon={icon} fontSize='16px'/> : <Icon icon={icon} fontSize='16px' style={{ color: colorFilled, backgroundColor: backgroundColorFilled }}/>) }
       <span>{text}</span>
       { !filled
-        ? <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)' }}/>
-        : <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
+        ? <Icon icon='icon-dropdown' fontSize={sizeArrow} style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', transform: 'rotate(0deg)' }}/>
+        : <Icon icon='icon-dropdown' fontSize={sizeArrow} style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
     </Button>
   )
 }
