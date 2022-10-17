@@ -25,6 +25,16 @@ export default {
       description: 'Variantes de tamaño disponibles: [ \'dropdownSizeNormal\', \'dropdownSizeSmall\', \'dropdownSizeExtraSmall\' ]',
       control: { type: 'none' },
     },
+    width: {
+      name: 'width',
+      description: 'Se puede ajustar el width del menu que se despliega del dropdown, al agregar width al Dropdown.Items. Default 236px',
+      control: { type: 'none' },
+    },
+    height: {
+      name: 'height',
+      description: 'Se puede ajustar el height del menu que se despliega del dropdown, al agregar width al Dropdown.Items. Default 150px',
+      control: { type: 'none' },
+    },
   },
 }
 
@@ -416,7 +426,7 @@ export const DropdownDefaultSmall = () => {
       <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== 'Opción elegida' } variantSize = 'dropdownSizeSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }} variantSize = 'dropdownSizeSmall'>
             {user.content.name}
           </Dropdown.Default>
         ))}
@@ -429,11 +439,11 @@ export const DropdownDefaultExtraSmall = () => {
   const [value, setValue] = useState('Opción elegida')
 
   return (
-    <Dropdown width={1 / 4}>
+    <Dropdown width='200px'>
       <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== 'Opción elegida' } variantSize = 'dropdownSizeExtraSmall'/>
-      <Dropdown.Items>
+      <Dropdown.Items width='200px' height='100px'>
         {data.map((user) => (
-          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }} variantSize = 'dropdownSizeExtraSmall'>
             {user.content.name}
           </Dropdown.Default>
         ))}

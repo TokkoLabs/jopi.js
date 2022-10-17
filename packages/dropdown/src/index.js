@@ -87,7 +87,7 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
   )
 }
 
-const DropdownList = ({ children, width = '236px', ...props }) => {
+const DropdownList = ({ children, width = '236px', height= '150px', ...props }) => {
   const { open, ref } = useDropdownContext()
   return (
     open && (
@@ -106,7 +106,7 @@ const DropdownList = ({ children, width = '236px', ...props }) => {
           top: '38px',
           zIndex: 1,
           width: width,
-          height: '150px',
+          height: height,
         }}
       >
         {children}
