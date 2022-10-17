@@ -42,6 +42,7 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
   const colorFilled = variantValues.colorFilled
   const backgroundColorFilled = variantValues.backgroundColorFilled
   const colorArrowFilled = variantValues.colorArrowFilled
+  const borderFilled = variantValues.borderFilled
   let sizeArrow = variantValues.sizeArrow
   if (sizeArrow === undefined) {
     sizeArrow = '12px'
@@ -71,13 +72,14 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
         overflow: 'hidden',
         whiteSpace: 'nowrap',
         textAlign: 'start',
-        fontSize: '14px',
-        backgroundColor: filled ? backgroundColorFilled : undefined,
+        color: filled && colorFilled,
+        border: filled && borderFilled,
+        backgroundColor: filled && backgroundColorFilled,
         justifyContent: isArrowStatic ? 'center' : 'flex-start',
       }}
     >
       { icon && (!filled ? <span className={icon} style={{ fontSize: '16px', height: '16px' }}/> : <span className={icon} style={{ color: colorFilled, backgroundColor: backgroundColorFilled, fontSize: '16px', height: '16px' }}/>) }
-      { !filled ? <span>{text}</span> : <span style={{ color: colorFilled }}>{text}</span> }
+      <span>{text}</span>
       { !filled
         ? <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)' }}/>
         : <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
