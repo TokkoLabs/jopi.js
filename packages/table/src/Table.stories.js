@@ -135,7 +135,6 @@ export const Primary = () => {
               <Image
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
-                textBadge='Por validar'
               />
             </Table.RowItemDefault>
             <Table.RowItemDefault id='1'>
@@ -175,7 +174,7 @@ export const Primary = () => {
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
                 textBadge='Reportada'
-                variantBadge='badgeErrorRow'
+                variantBadge='badgeReportRow'
               />
             </Table.RowItemDefault>
             <Table.RowItemDefault id='2' variant='errorPrimary'>
@@ -215,6 +214,7 @@ export const Primary = () => {
               <Image
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
+                textBadge='Por validar'
               />
             </Table.RowItemDefault>
             <Table.RowItemDefault id='3' variant='infoAlertPrimary'>
@@ -348,7 +348,6 @@ export const Secondary = () => {
               <Image
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
-                textBadge='Por validar'
               />
             </Table.RowItemDefault>
             <Table.RowItemDefault id='1' variant='secondary'>
@@ -388,7 +387,7 @@ export const Secondary = () => {
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
                 textBadge='Reportada'
-                variantBadge='badgeErrorRow'
+                variantBadge='badgeReportRow'
               />
             </Table.RowItemDefault>
             <Table.RowItemDefault id='2' variant='errorSecondary'>
@@ -428,6 +427,7 @@ export const Secondary = () => {
               <Image
                 src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                 variant='rows'
+                textBadge='Por validar'
               />
             </Table.RowItemDefault>
             <Table.RowItemDefault id='3' variant='infoAlertSecondary' >
