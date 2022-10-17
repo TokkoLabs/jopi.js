@@ -107,7 +107,7 @@ const TableHeaderDefault = ({ children, ...props }) => (
   </Box>
 )
 
-const TableHeaderItemDefault = ({ children, ...props }) => (
+const TableHeaderItemDefault = ({ children, row, ...props }) => (
   <Box
     as="th"
     {...props}
@@ -130,9 +130,10 @@ const TableHeaderItemDefault = ({ children, ...props }) => (
     <Box
       __css={{
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: row ? 'row' : 'column',
         justifyContent: 'flex-start',
-        alignItems: 'flex-start',
+        alignItems: row ? 'center' : 'flex-start',
+        gap: row ? '2px' : '0px',
       }}
     >
       {children}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Badge } from '@oneloop/badge'
 import { Checkbox } from '@oneloop/checkbox'
+import { Icon } from '@oneloop/icons'
 import { Image } from '@oneloop/image'
 import { Table } from '.'
 import { Text } from '@oneloop/text'
@@ -43,6 +44,7 @@ export const Primary = () => {
   const [selected1, setSelected1] = useToggle(false)
   const [selected2, setSelected2] = useToggle(false)
   const [selected3, setSelected3] = useToggle(false)
+  const [order, setOrder] = useToggle(false)
 
   const selectAll = () => {
     setSelected0()
@@ -50,16 +52,18 @@ export const Primary = () => {
     setSelected2()
     setSelected3()
   }
-
+  console.log(order)
   return (
     <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '10px' }}>
       <Table>
         <Table.HeaderDefault>
-          <Table.HeaderItemDefault>
+          <Table.HeaderItemDefault row>
             <Checkbox onClick={() => selectAll()}/>
+            <Icon icon='icon-dropdown' fontSize='12px' onClick={setOrder} style={order ? { transform: 'rotate(-180deg)', transition: '0.5s' } : { transition: '0.5s'}}/>
           </Table.HeaderItemDefault>
-          <Table.HeaderItemDefault>
+          <Table.HeaderItemDefault row style={{ gap: '2px'}}>
             <Text variant='bodyBold.fontSize12'>Foto</Text>
+            <Icon icon='icon-ordenar' fontSize='12px'/>
           </Table.HeaderItemDefault>
           <Table.HeaderItemDefault>
             <Text variant='bodyBold.fontSize12'>Cód. Ref</Text>
