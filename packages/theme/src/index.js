@@ -17,6 +17,7 @@ const colors = {
   backgroundError2: '#FDDDD8',
   backgroundErrorRowTable: '#FFEDE8',
   borderRowTable: '#FFE0DC',
+  backgroundAlert1: '#EEF4FE',
   backgroundAlert2: '#CEE0FC',
   info: '#386DF4',
   lightBlue: '#6A88F2',
@@ -1660,124 +1661,69 @@ const theme = {
   rows: {
     primary: {
       backgroundColor: colors.neutralGray9,
-      border: borders.neutralGray9,
       borderHover: borders.neutralGray8,
       ':hover': {
         backgroundColor: colors.white,
-        /*borderTop: borders.neutralGray8,
-        borderBottom: borders.neutralGray8,
-        '&:first-child': {
-          borderLeft: borders.neutralGray8,
-        },
-        '&:last-child': {
-          borderRight: borders.neutralGray8,
-        },*/
       },
     },
     primarySelected: {
       backgroundColor: colors.neutralGray9,
-    /*  borderTop: borders.neutralGray9,
-      borderBottom: borders.neutralGray9,
-      '&:first-child': {
-        borderLeft: borders.neutralGray9,
-      },
-      '&:last-child': {
-        borderRight: borders.neutralGray9,
-      },*/
     },
     errorPrimary: {
       backgroundColor: colors.backgroundErrorRowTable,
       border: borders.borderRowTable,
       borderHover: borders.borderRowTable,
-    /*  borderTop: borders.borderRowTable,
-      borderBottom: borders.borderRowTable,
-      '&:first-child': {
-        borderLeft: borders.borderRowTable,
-      },
-      '&:last-child': {
-        borderRight: borders.borderRowTable,
-      },*/
       ':hover': {
         backgroundColor: colors.white,
       },
     },
     errorPrimarySelected: {
       backgroundColor: colors.backgroundErrorRowTable,
-    /*  borderTop: borders.borderRowTable,
-      borderBottom: borders.borderRowTable,
-      '&:first-child': {
-        borderLeft: borders.borderRowTable,
-      },
-      '&:last-child': {
-        borderRight: borders.borderRowTable,
-      },*/
     },
     infoAlertPrimary: {
-      backgroundColor: '#EEF4FE',
+      backgroundColor: colors.backgroundAlert1,
       border: borders.backgroundAlert2,
       borderHover: borders.backgroundAlert2,
       ':hover': {
         backgroundColor: colors.white,
-      /*  borderTop: borders.neutralGray9,
-        borderBottom: borders.neutralGray9,
-        '&:first-child': {
-          borderLeft: borders.neutralGray9,
-        },
-        '&:last-child': {
-          borderRight: borders.neutralGray9,
-        },*/
       },
     },
     infoAlertPrimarySelected: {
-      backgroundColor: '#EEF4FE',
+      backgroundColor: colors.backgroundAlert1,
     },
     primaryDisabled: {
       backgroundColor: colors.neutralGray10,
     },
     secondary: {
       backgroundColor: colors.white,
-          border: borders.neutralGray9,
-          borderHover: borders.neutralGray8,
       ':hover': {
-        backgroundColor: colors.neutralGray9,
+        backgroundColor: colors.neutralGray8,
       },
     },
     secondarySelected: {
-      backgroundColor: colors.neutralGray9,
+      backgroundColor: colors.neutralGray8,
     },
     errorSecondary: {
       backgroundColor: colors.backgroundError,
-      borderTop: '1px solid ' + colors.backgroundError2,
-      borderBottom: '1px solid ' + colors.backgroundError2,
-      '&:first-child': {
-        borderLeft: '1px solid ' + colors.backgroundError2,
-      },
-      '&:last-child': {
-        borderRight: '1px solid ' + colors.backgroundError2,
-      },
+      border: borders.borderRowTable,
+      borderHover: borders.borderRowTable,
       ':hover': {
-        backgroundColor: colors.neutralGray9,
+        backgroundColor: colors.neutralGray8,
       },
     },
     errorSecondarySelected: {
       backgroundColor: colors.backgroundError,
-      borderTop: '1px solid ' + colors.backgroundError2,
-      borderBottom: '1px solid ' + colors.backgroundError2,
-      '&:first-child': {
-        borderLeft: '1px solid ' + colors.backgroundError2,
-      },
-      '&:last-child': {
-        borderRight: '1px solid ' + colors.backgroundError2,
-      },
     },
     infoAlertSecondary: {
-      backgroundColor: '#EEF4FE',
+      backgroundColor: colors.backgroundAlert1,
+      border: borders.backgroundAlert2,
+      borderHover: borders.backgroundAlert2,
       ':hover': {
-        backgroundColor: colors.neutralGray9,
+        backgroundColor: colors.neutralGray8,
       },
     },
     infoAlertSecondarySelected: {
-      backgroundColor: '#EEF4FE',
+      backgroundColor: colors.backgroundAlert1,
     },
     secondaryDisabled: {
       backgroundColor: colors.white,

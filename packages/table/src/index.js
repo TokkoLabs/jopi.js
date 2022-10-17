@@ -8,9 +8,8 @@ export const Table = (props) => {
 
   const ref = React.useRef()
   const [idHover, setIdHover] = useState('')
-  const [borderHover, setBorderHover] = useState('')
 
-  const value = React.useMemo(() => ({ idHover, setIdHover, borderHover, setBorderHover, ref }), [idHover, borderHover])
+  const value = React.useMemo(() => ({ idHover, setIdHover, ref }), [idHover])
 
   return(
     <TableContext.Provider value={value}>
@@ -20,10 +19,7 @@ export const Table = (props) => {
         __css={{
           fontFamily: 'primary',
           width: '100%',
-          //  borderSpacing: '0px',
-           borderSpacing: '0px 4px',
-          //  borderCollapse: 'collapse',
-          // borderCollapse: 'separate',
+          borderSpacing: '0px 4px',
         }}
       />
     </TableContext.Provider>
@@ -148,22 +144,15 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, id
   if (disabled) {
     variant = variant + 'Disabled'
   }
-  const { setIdHover, setBorderHover } = useTableContext()
-
-  const updateContext = (idHover) => {
-    setIdHover(idHover)
-    const indexVariant = Object.keys(theme.rows).indexOf(variant || 'primary')
-    const borderHover = Object.values(theme.rows)[indexVariant].borderHover
-    setBorderHover(borderHover)
-  }
+  const { setIdHover } = useTableContext()
 
   return (
     <Box
       as="tr"
       tx='rows'
       variant={ (selected && !disabled) ? variant + 'Selected' : variant }
-      onMouseOver={() => !disabled && updateContext(id)}
-      onMouseOut={() => !disabled && updateContext(undefined)}
+      onMouseOver={() => !disabled && setIdHover(id)}
+      onMouseOut={() => !disabled && setIdHover(undefined)}
       {...props}
       __css={{
         fontFamily: 'Nunito Sans',
@@ -184,7 +173,6 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, id
 
 const TableRowItemDefault = ({ children, center, id = 0, variant = 'primary', ...props }) => {
   const { idHover } = useTableContext()
-
   const variantValues = Object.values(theme.rows)[Object.keys(theme.rows).indexOf(variant || 'primary')]
   const border = idHover !== id ? (variantValues.border || '1px solid #00000000') : variantValues.borderHover
 
