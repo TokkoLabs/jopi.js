@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/paginator",
-  "version": "1.0.88",
+  "version": "1.0.90",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
