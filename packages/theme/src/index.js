@@ -37,7 +37,7 @@ const colors = {
   neutralGray4: '#798B97',
   neutralGray5: '#94A2AB',
   neutralGray6: '#AEBAC0',
-  neutralGray7: '#C9D1D5',
+  neutralGray7: '#DDE5E9',
   neutralGray8: '#E4E8EA',
   neutralGray9: '#EFF3F5',
   neutralGray10: '#F3F6F8',
