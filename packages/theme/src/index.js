@@ -1527,6 +1527,8 @@ const theme = {
     },
     badgeInfo: {
       backgroundColor: colors.info,
+      color: colors.white,
+      letterSpacing: '0.05em',
     },
     badgeInfoRow: {
       color: colors.white,
@@ -1576,6 +1578,7 @@ const theme = {
     badgeTips: {
       backgroundColor: colors.tips,
       color: colors.subtlePressed,
+      letterSpacing: '0.05em',
     },
     badgeYellow: {
       backgroundColor: colors.yellow,
@@ -1583,14 +1586,17 @@ const theme = {
       fontWeight: 700,
       fontSize: '11px',
       lineHeight: '13px',
+      letterSpacing: '0.05em',
     },
     badgeAdded: {
       backgroundColor: colors.badgeBackgroundSuccess,
       color: colors.badgeSuccess,
+      letterSpacing: '0.05em',
     },
     badgeRemoved: {
       backgroundColor: colors.backgroundError,
       color: colors.error,
+      letterSpacing: '0.05em',
     },
   },
   borders: borders,
