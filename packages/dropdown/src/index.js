@@ -36,7 +36,7 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, variantSize = 'dropdownSizeNormal', ...props }) => {
+const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, variantSize = 'dropdownSizeNormal', selection, ...props }) => {
   const { toggle } = useDropdownContext()
 
   const variantValues = Object.values(theme.buttons)[Object.keys(theme.buttons).indexOf(variant)]
@@ -81,6 +81,7 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
     >
       { icon && (!filled ? <Icon icon={icon} fontSize='16px'/> : <Icon icon={icon} fontSize='16px' style={{ color: colorFilled, backgroundColor: backgroundColorFilled }}/>) }
       <span>{text}</span>
+      { selection && <span style={ disabled ? { color: '#AEBAC0', fontWeight: 700 } : { color: '#384248', fontWeight: 700 }}>{selection}</span> }
       { !filled
         ? <Icon icon='icon-dropdown' fontSize={sizeArrow} style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', transform: 'rotate(0deg)' }}/>
         : <Icon icon='icon-dropdown' fontSize={sizeArrow} style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', transform: 'rotate(0deg)', color: colorArrowFilled }}/> }

@@ -282,6 +282,40 @@ export const DropdownTransparentDisabled = () => {
   )
 }
 
+export const DropdownTransparentSelection = () => {
+  const [value, setValue] = useState('Seleccion')
+
+  return (
+    <Dropdown width='250px'>
+      <Dropdown.Button variant='dropdownTransparentSelection' selection={value} text='Placeholder' filled={ value === 'Selection' } />
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
+            {user.content.name}
+          </Dropdown.Icon>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const DropdownTransparentSelectionDisabled = () => {
+  const [value, setValue] = useState('Seleccion')
+
+  return (
+    <Dropdown width='250px'>
+      <Dropdown.Button variant='dropdownTransparentSelectionDisabled' selection={value} text='Placeholder' filled={ value === 'Selection' } disabled/>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
+            {user.content.name}
+          </Dropdown.Icon>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
 export const DropdownIcon = () => {
   const [icon, setIcon] = useState('icon-configuracion')
 
