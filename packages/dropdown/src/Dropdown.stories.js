@@ -25,6 +25,16 @@ export default {
       description: 'Variantes de tamaño disponibles: [ \'dropdownSizeNormal\', \'dropdownSizeSmall\', \'dropdownSizeExtraSmall\' ]',
       control: { type: 'none' },
     },
+    width: {
+      name: 'width',
+      description: 'Se puede ajustar el width del menu que se despliega del dropdown, al agregar width al Dropdown.Items. Default 236px',
+      control: { type: 'none' },
+    },
+    height: {
+      name: 'height',
+      description: 'Se puede ajustar el height del menu que se despliega del dropdown, al agregar width al Dropdown.Items. Default 150px',
+      control: { type: 'none' },
+    },
   },
 }
 
@@ -34,7 +44,7 @@ let data = [
     content: {
       name: 'Agustin Iglesias',
       count: 10,
-      icon: 'icon-alerta',
+      icon: 'icon-alertas',
     },
   },
   {
@@ -172,7 +182,7 @@ export const DropdownDefaultWithIcon = () => {
   const [icon, setIcon] = useState('icon-ubicacion')
 
   return (
-    <Dropdown width={1 / 4}>
+    <Dropdown width={1 / 3}>
       <Dropdown.Button variant='dropdownDefault' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
@@ -207,7 +217,7 @@ export const DropdownOutlinedWithIcon = () => {
   const [icon, setIcon] = useState('icon-ubicacion')
 
   return (
-    <Dropdown width={1 / 4}>
+    <Dropdown width={1 / 3}>
       <Dropdown.Button variant='dropdownOutlined' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
@@ -225,7 +235,7 @@ export const DropdownOutlinedWithIconDisabled = () => {
   const [icon, setIcon] = useState('icon-ubicacion')
 
   return (
-    <Dropdown width={1 / 4}>
+    <Dropdown width={1 / 3}>
       <Dropdown.Button variant='dropdownOutlinedDisabled' text={value} icon={icon} filled={ value !== 'Opción elegida' } />
       <Dropdown.Items>
         {data.map((user) => (
@@ -272,12 +282,46 @@ export const DropdownTransparentDisabled = () => {
   )
 }
 
+export const DropdownTransparentSelection = () => {
+  const [value, setValue] = useState('Seleccion')
+
+  return (
+    <Dropdown width='250px'>
+      <Dropdown.Button variant='dropdownTransparentSelection' selection={value} text='Placeholder' filled={ value === 'Selection' } />
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
+            {user.content.name}
+          </Dropdown.Icon>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
+export const DropdownTransparentSelectionDisabled = () => {
+  const [value, setValue] = useState('Seleccion')
+
+  return (
+    <Dropdown width='250px'>
+      <Dropdown.Button variant='dropdownTransparentSelectionDisabled' selection={value} text='Placeholder' filled={ value === 'Selection' } disabled/>
+      <Dropdown.Items>
+        {data.map((user) => (
+          <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.name) }}>
+            {user.content.name}
+          </Dropdown.Icon>
+        ))}
+      </Dropdown.Items>
+    </Dropdown>
+  )
+}
+
 export const DropdownIcon = () => {
   const [icon, setIcon] = useState('icon-configuracion')
 
   return (
     <Dropdown width={1 / 16}>
-      <Dropdown.Button variant='dropdownIcon' isButtonIcon icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconSmall' />
+      <Dropdown.Button variant='dropdownIcon' isButtonIcon icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconDropdownNormal' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon) }}>
@@ -294,7 +338,7 @@ export const DropdownIconDisabled = () => {
 
   return (
     <Dropdown width={1 / 16}>
-      <Dropdown.Button variant='dropdownIconDisabled' isButtonIcon disabled icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconSmall' />
+      <Dropdown.Button variant='dropdownIconDisabled' isButtonIcon disabled icon={icon} filled={ icon !== 'icon-configuracion' } variantSize='iconDropdownNormal' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Icon key={user.id} icon={user.content.icon} onClick={e => { setIcon(user.content.icon) }}>
@@ -396,7 +440,7 @@ export const DropdownStatesIcon = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' icon={value} filled={ value !== 'icon-configuracion' } isButtonIcon variantSize='iconSmall'/>
+      <Dropdown.Button variant='dropdownIcon' icon={value} filled={ value !== 'icon-configuracion' } isButtonIcon variantSize='iconDropdownNormal'/>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon}>
@@ -416,7 +460,7 @@ export const DropdownDefaultSmall = () => {
       <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== 'Opción elegida' } variantSize = 'dropdownSizeSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
-          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }} variantSize = 'dropdownSizeSmall'>
             {user.content.name}
           </Dropdown.Default>
         ))}
@@ -429,11 +473,11 @@ export const DropdownDefaultExtraSmall = () => {
   const [value, setValue] = useState('Opción elegida')
 
   return (
-    <Dropdown width={1 / 4}>
+    <Dropdown width='200px'>
       <Dropdown.Button variant='dropdownDefault' text={value} filled={ value !== 'Opción elegida' } variantSize = 'dropdownSizeExtraSmall'/>
-      <Dropdown.Items>
+      <Dropdown.Items width='200px' height='100px'>
         {data.map((user) => (
-          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }}>
+          <Dropdown.Default key={user.id} onClick={e => { setValue(user.content.name) }} variantSize = 'dropdownSizeExtraSmall'>
             {user.content.name}
           </Dropdown.Default>
         ))}
@@ -447,7 +491,7 @@ export const DropdownStatesIconSmall = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' icon={value} filled={value !== 'icon-configuracion'} isButtonIcon variantSize='iconSmall'/>
+      <Dropdown.Button variant='dropdownIcon' icon={value} filled={value !== 'icon-configuracion'} isButtonIcon variantSize='iconDropdownSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon} variantSize='dropdownSizeSmall'>
@@ -464,7 +508,7 @@ export const DropdownStatesIconExtraSmall = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' icon={value} filled={value !== 'icon-configuracion'} isButtonIcon variantSize='iconExtraSmall'/>
+      <Dropdown.Button variant='dropdownIcon' icon={value} filled={value !== 'icon-configuracion'} isButtonIcon variantSize='iconDropdownExtraSmall'/>
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Icon key={user.id} onClick={e => { setValue(user.content.icon) }} icon={user.content.icon} variantSize='dropdownSizeExtraSmall'>
@@ -520,7 +564,7 @@ export const DropdownStatesMultiselectExtraSmall = () => {
 
   return (
     <Dropdown width={1 / 4}>
-      <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={list.length > 0} variantSize = 'dropdownSizeSmall' />
+      <Dropdown.Button variant='dropdownDefault' text={valueTextButton} filled={list.length > 0} variantSize = 'dropdownSizeExtraSmall' />
       <Dropdown.Items>
         {data.map((user) => (
           <Dropdown.Multiselect key={user.id} onClick={e => { updateList(user.id) }} disabled={ user.id === 23 } variantSize = 'dropdownSizeExtraSmall'>

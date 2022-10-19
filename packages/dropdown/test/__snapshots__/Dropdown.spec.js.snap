@@ -65,7 +65,7 @@ exports[`Dropdown DropdownDefault 1`] = `
   overflow: hidden;
   white-space: nowrap;
   text-align: start;
-  font-size: 14px;
+  color: #FFFFFF;
   background-color: #6A88F2;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -74,6 +74,24 @@ exports[`Dropdown DropdownDefault 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -100,7 +118,7 @@ exports[`Dropdown DropdownDefault 1`] = `
   width: 100%;
 }
 
-.c4 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -135,14 +153,14 @@ exports[`Dropdown DropdownDefault 1`] = `
   border-radius: 12px;
 }
 
-.c5 {
+.c7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-family: primary;
 }
 
-.c6 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -182,41 +200,63 @@ exports[`Dropdown DropdownDefault 1`] = `
       className="c2"
       id="button"
     >
-      <span
-        className="icon-cerrar"
+      <div
+        className="c3"
         style={
           Object {
             "backgroundColor": "#6A88F2",
             "color": "#FFFFFF",
-            "fontSize": "16px",
-            "height": "16px",
           }
         }
-      />
-      <span
+      >
+        <span
+          className="icon-cerrar"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "16px",
+              "height": "16px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "16px",
+            }
+          }
+        />
+      </div>
+      <span />
+      <div
+        className="c4"
         style={
           Object {
             "color": "#FFFFFF",
-          }
-        }
-      />
-      <span
-        className="icon-dropdown"
-        style={
-          Object {
-            "color": "#FFFFFF",
-            "fontSize": "12px",
-            "height": "12px",
             "position": "absolute",
             "right": "12px",
             "transform": "rotate(0deg)",
           }
         }
-      />
+      >
+        <span
+          className="icon-dropdown"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "12px",
+              "height": "12px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
   <li
-    className="c3"
+    className="c5"
     width={1}
   >
     <div
@@ -230,7 +270,7 @@ exports[`Dropdown DropdownDefault 1`] = `
         className="c1"
       >
         <button
-          className="c4"
+          className="c6"
           style={
             Object {
               "borderRadius": "0px",
@@ -238,7 +278,7 @@ exports[`Dropdown DropdownDefault 1`] = `
           }
         >
           <p
-            className="c5"
+            className="c7"
             style={
               Object {
                 "padding": "9px 12px 9px 12px",
@@ -252,7 +292,7 @@ exports[`Dropdown DropdownDefault 1`] = `
     </div>
   </li>
   <li
-    className="c6"
+    className="c8"
     width={1}
   >
     <div
@@ -266,7 +306,7 @@ exports[`Dropdown DropdownDefault 1`] = `
         className="c1"
       >
         <button
-          className="c4"
+          className="c6"
           style={
             Object {
               "borderRadius": "0px",
@@ -274,7 +314,7 @@ exports[`Dropdown DropdownDefault 1`] = `
           }
         >
           <p
-            className="c5"
+            className="c7"
             style={
               Object {
                 "padding": "9px 12px 9px 12px",
@@ -355,7 +395,6 @@ exports[`Dropdown DropdownItem 1`] = `
   overflow: hidden;
   white-space: nowrap;
   text-align: start;
-  font-size: 14px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -363,6 +402,15 @@ exports[`Dropdown DropdownItem 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -385,7 +433,7 @@ exports[`Dropdown DropdownItem 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -394,7 +442,7 @@ exports[`Dropdown DropdownItem 1`] = `
   height: 18px;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -405,7 +453,7 @@ exports[`Dropdown DropdownItem 1`] = `
   height: 100%;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -422,7 +470,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -441,42 +489,42 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-family: primary;
 }
 
-.c9 {
+.c10 {
   display: none;
 }
 
-input:checked:not(:disabled) ~ .c8 {
+input:checked:not(:disabled) ~ .c9 {
   display: block;
 }
 
-.c12 {
+.c13 {
   display: none;
 }
 
-input:not(:checked):not(:disabled) ~ .c11 {
+input:not(:checked):not(:disabled) ~ .c12 {
   display: block;
 }
 
-.c16 {
+.c17 {
   display: none;
 }
 
-input:checked:disabled ~ .c15 {
+input:checked:disabled ~ .c16 {
   display: block;
 }
 
-.c14 {
+.c15 {
   display: none;
 }
 
-input:disabled:not(:checked) ~ .c13 {
+input:disabled:not(:checked) ~ .c14 {
   display: block;
 }
 
@@ -495,44 +543,68 @@ input:disabled:not(:checked) ~ .c13 {
       id="button"
       onClick={[Function]}
     >
-      <span
-        className="icon-cerrar"
-        style={
-          Object {
-            "fontSize": "16px",
-            "height": "16px",
+      <div
+        className="c0 c4"
+      >
+        <span
+          className="icon-cerrar"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "16px",
+              "height": "16px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "16px",
+            }
           }
-        }
-      />
+        />
+      </div>
       <span />
-      <span
-        className="icon-dropdown"
+      <div
+        className="c0 c4"
         style={
           Object {
-            "fontSize": "16px",
-            "height": "16px",
             "position": "static",
             "right": "12px",
             "transform": "rotate(0deg)",
           }
         }
-      />
+      >
+        <span
+          className="icon-dropdown"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "16px",
+              "height": "16px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "16px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
   <li
-    className="c0 c4"
+    className="c0 c5"
     width={1}
   >
     <div
-      className="c0 c5"
+      className="c0 c6"
     >
       <input
-        className="c0 c6"
+        className="c0 c7"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        className="c0 c7 c8 c9 c0 c10"
+        className="c0 c8 c9 c10 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -558,7 +630,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c11 c12 c0 c10"
+        className="c0 c8 c12 c13 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -578,7 +650,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c13 c14 c0 c10"
+        className="c0 c8 c14 c15 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -598,7 +670,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c15 c16 c0 c10"
+        className="c0 c8 c16 c17 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -624,7 +696,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
     </div>
     <p
-      className="c0 c17"
+      className="c0 c18"
       style={
         Object {
           "padding": "9px 12px 9px 12px",
@@ -635,19 +707,19 @@ input:disabled:not(:checked) ~ .c13 {
     </p>
   </li>
   <li
-    className="c0 c4"
+    className="c0 c5"
     width={1}
   >
     <div
-      className="c0 c5"
+      className="c0 c6"
     >
       <input
-        className="c0 c6"
+        className="c0 c7"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        className="c0 c7 c8 c9 c0 c10"
+        className="c0 c8 c9 c10 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -673,7 +745,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c11 c12 c0 c10"
+        className="c0 c8 c12 c13 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -693,7 +765,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c13 c14 c0 c10"
+        className="c0 c8 c14 c15 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -713,7 +785,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c15 c16 c0 c10"
+        className="c0 c8 c16 c17 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -739,7 +811,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
     </div>
     <p
-      className="c0 c17"
+      className="c0 c18"
       style={
         Object {
           "padding": "9px 12px 9px 12px",
@@ -1392,7 +1464,7 @@ input:disabled:not(:checked) ~ .c16 {
           <span
             style={
               Object {
-                "color": "#94A2AB",
+                "color": "#AEBAC0",
                 "fontWeight": "normal",
               }
             }
@@ -1628,11 +1700,19 @@ exports[`Dropdown DropdownMultiselect 1`] = `
   overflow: hidden;
   white-space: nowrap;
   text-align: start;
-  font-size: 14px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
 }
 
 @media screen and (min-width:40em) {
@@ -1650,18 +1730,32 @@ exports[`Dropdown DropdownMultiselect 1`] = `
       onClick={[Function]}
     >
       <span />
-      <span
-        className="icon-dropdown"
+      <div
+        className="c3"
         style={
           Object {
-            "fontSize": "12px",
-            "height": "12px",
             "position": "absolute",
             "right": "12px",
             "transform": "rotate(0deg)",
           }
         }
-      />
+      >
+        <span
+          className="icon-dropdown"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "12px",
+              "height": "12px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -1765,6 +1859,285 @@ exports[`Dropdown DropdownMultiselect 2`] = `
 `;
 
 exports[`Dropdown DropdownMultiselect 3`] = `ReactWrapper {}`;
+
+exports[`Dropdown DropdownSelection 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+  width: 250px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-overflow: ellipsis;
+  font-family: Nunito Sans;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="250px"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <span>
+        Placeholder
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#384248",
+            "fontWeight": 700,
+          }
+        }
+      >
+        Seleccion
+      </span>
+      <div
+        className="c3"
+        style={
+          Object {
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
+          }
+        }
+      >
+        <span
+          className="icon-dropdown"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "12px",
+              "height": "12px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Dropdown DropdownSelectionDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+  width: 250px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-overflow: ellipsis;
+  font-family: Nunito Sans;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="250px"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+    >
+      <span>
+        Placeholder
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#AEBAC0",
+            "fontWeight": 700,
+          }
+        }
+      >
+        Seleccion
+      </span>
+      <div
+        className="c3"
+        style={
+          Object {
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
+          }
+        }
+      >
+        <span
+          className="icon-dropdown"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "12px",
+              "height": "12px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;
 
 exports[`Dropdown DropdownText 1`] = `
 .c0 {

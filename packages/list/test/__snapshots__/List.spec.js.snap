@@ -1402,7 +1402,7 @@ input:disabled:not(:checked) ~ .c14 {
             <span
               style={
                 Object {
-                  "color": "#94A2AB",
+                  "color": "#AEBAC0",
                   "fontWeight": "normal",
                 }
               }

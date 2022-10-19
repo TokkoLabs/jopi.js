@@ -62,8 +62,8 @@ export const CardContactsBusiness = () => {
       <Checkbox onClick={setActive} isChecked={active} />
       <Image variant="avatar" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
       <Box sx={{ position: 'relative', width: '128px', gap: '2px' }}>
-        <Text variant='body600.fontSize12'>Marian Prueba</Text>
-        <Text variant='body.fontSize11' style={{ color: '#6F838D', textOverflow: 'ellipsis', overflow: 'hidden' }}>Motomami Company</Text>
+        <Text variant='body600.fontSize12' style={{ color: '#49565D' }}>Marian Prueba</Text>
+        <Text variant='body.fontSize11' style={{ color: '#49565D', textOverflow: 'ellipsis', overflow: 'hidden' }}>Motomami Company</Text>
         <Text variant='body.fontSize11' style={{ color: '#6F838D', textOverflow: 'ellipsis', overflow: 'hidden' }}>marianamuy@motomamicompany.com</Text>
         <Text variant='body.fontSize11' style={{ color: '#6F838D', textOverflow: 'ellipsis', overflow: 'hidden' }}>+54 9 11 123456789</Text>
       </Box>
@@ -80,7 +80,7 @@ export const CardContactsWithoutData = () => {
       <Checkbox onClick={setActive} isChecked={active} />
       <Image variant="avatar" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
       <Box sx={{ position: 'relative', width: '128px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2px' }}>
-        <Text variant='body600.fontSize12'>Marian Prueba</Text>
+        <Text variant='body600.fontSize12' style={{ color: '#49565D' }}>Marian Prueba</Text>
         <Text variant='body.fontSize11' style={{ color: '#6F838D' }}>Motomami Company</Text>
       </Box>
       <Icon icon='icon-atras' fontSize='12px' style={{ transform: 'rotate(-180deg)', color: '#6F838D' }}/>
