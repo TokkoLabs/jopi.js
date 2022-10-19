@@ -1248,6 +1248,7 @@ const theme = {
       backgroundColorFilled: colors.neutralGray9,
       colorArrowFilled: colors.neutralGray4,
       width: '100%',
+      fontWeight: 400,
       ':hover': {
         color: colors.neutralGray1,
         backgroundColor: colors.neutralGray9,
@@ -1267,6 +1268,7 @@ const theme = {
       borderRadius: '8px',
       lineHeight: '18px',
       width: '100%',
+      fontWeight: 400,
     },
     dropdownOutlined: {
       padding: '6px 10px 6px 10px',
@@ -1280,6 +1282,7 @@ const theme = {
       gap: '4px',
       lineHeight: '18px',
       width: '100%',
+      fontWeight: 400,
       // colorArrow: colors.neutralGray5,
       ':hover': {
         color: colors.neutralGray1,
@@ -1302,6 +1305,7 @@ const theme = {
       borderRadius: '8px',
       lineHeight: '18px',
       width: '100%',
+      fontWeight: 400,
     },
     dropdownTransparent: {
       padding: '6px 10px 6px 10px',
@@ -1311,6 +1315,7 @@ const theme = {
       colorArrowFilled: colors.neutralGray4,
       lineHeight: '18px',
       width: '100%',
+      fontWeight: 400,
       // colorArrow: colors.neutralGray5,
       ':hover': {
         color: colors.neutralGray1,
@@ -1328,6 +1333,7 @@ const theme = {
       userSelect: 'none',
       lineHeight: '18px',
       width: '100%',
+      fontWeight: 400,
     },
     dropdownTransparentSelection: {
       fontWeight: 400,
@@ -1365,6 +1371,7 @@ const theme = {
       backgroundColor: colors.transparent,
       colorFilled: colors.neutralGray4,
       backgroundColorFilled: colors.transparent,
+      fontWeight: 400,
       ':hover': {
         color: colors.neutralGray2,
         backgroundColor: colors.neutralGray9,
@@ -1381,6 +1388,7 @@ const theme = {
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
+      fontWeight: 400,
     },
     dropdownButtonPrimary: {
       padding: '10px 16px 10px 18px',
@@ -1424,6 +1432,7 @@ const theme = {
       colorArrowFilled: colors.neutral[0],
       backgroundColorFilled: colors.lightBlue,
       width: '100%',
+      fontWeight: 400,
       ':hover': {
         color: colors.neutralGray7,
         backgroundColor: colors.secondary,
@@ -1443,6 +1452,7 @@ const theme = {
       backgroundColorFilled: colors.lightBlue,
       borderFilled: borders.transparent,
       width: '100%',
+      fontWeight: 400,
       ':hover': {
         color: colors.neutralGray7,
         backgroundColor: colors.transparent,
