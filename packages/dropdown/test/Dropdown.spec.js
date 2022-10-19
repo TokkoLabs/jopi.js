@@ -194,4 +194,44 @@ describe('Dropdown', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  test('DropdownSelection', () => {
+    const tree = renderer
+      .create(
+        <Dropdown width='250px'>
+          <Dropdown.Button variant='dropdownTransparentSelection' selection='Seleccion' text='Placeholder'/>
+          <Dropdown.Items>
+            <Dropdown.Icon disabled>
+              <Dropdown.Text>One</Dropdown.Text>
+            </Dropdown.Icon>
+            <Dropdown.Icon active>
+              <Dropdown.Text>Two</Dropdown.Text>
+            </Dropdown.Icon>
+          </Dropdown.Items>
+        </Dropdown>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('DropdownSelectionDisabled', () => {
+    const tree = renderer
+      .create(
+        <Dropdown width='250px'>
+          <Dropdown.Button variant='dropdownTransparentSelectionDisabled' disabled selection='Seleccion' text='Placeholder'/>
+          <Dropdown.Items>
+            <Dropdown.Icon disabled>
+              <Dropdown.Text>One</Dropdown.Text>
+            </Dropdown.Icon>
+            <Dropdown.Icon active>
+              <Dropdown.Text>Two</Dropdown.Text>
+            </Dropdown.Icon>
+          </Dropdown.Items>
+        </Dropdown>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })

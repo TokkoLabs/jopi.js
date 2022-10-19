@@ -1,6 +1,7 @@
 import React, { createContext, useContext } from 'react'
 import { Box } from '@oneloop/box'
 import { Button, ButtonIcon } from '@oneloop/button'
+import { Icon } from '@oneloop/icons'
 import { List } from '@oneloop/list'
 import { useToggle, useOnClickOutside } from '@oneloop/hooks'
 import { Text } from '@oneloop/text'
@@ -35,13 +36,14 @@ const useDropdownContext = () => {
   return context
 }
 
-const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, variantSize = 'dropdownSizeNormal', ...props }) => {
+const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, variantSize = 'dropdownSizeNormal', selection, ...props }) => {
   const { toggle } = useDropdownContext()
 
   const variantValues = Object.values(theme.buttons)[Object.keys(theme.buttons).indexOf(variant)]
   const colorFilled = variantValues.colorFilled
   const backgroundColorFilled = variantValues.backgroundColorFilled
   const colorArrowFilled = variantValues.colorArrowFilled
+  const borderFilled = variantValues.borderFilled
   let sizeArrow = variantValues.sizeArrow
   if (sizeArrow === undefined) {
     sizeArrow = '12px'
@@ -71,21 +73,23 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
         overflow: 'hidden',
         whiteSpace: 'nowrap',
         textAlign: 'start',
-        fontSize: '14px',
-        backgroundColor: filled ? backgroundColorFilled : undefined,
+        color: filled && colorFilled,
+        border: filled && borderFilled,
+        backgroundColor: filled && backgroundColorFilled,
         justifyContent: isArrowStatic ? 'center' : 'flex-start',
       }}
     >
-      { icon && (!filled ? <span className={icon} style={{ fontSize: '16px', height: '16px' }}/> : <span className={icon} style={{ color: colorFilled, backgroundColor: backgroundColorFilled, fontSize: '16px', height: '16px' }}/>) }
-      { !filled ? <span>{text}</span> : <span style={{ color: colorFilled }}>{text}</span> }
+      { icon && (!filled ? <Icon icon={icon} fontSize='16px'/> : <Icon icon={icon} fontSize='16px' style={{ color: colorFilled, backgroundColor: backgroundColorFilled }}/>) }
+      <span>{text}</span>
+      { selection && <span style={ disabled ? { color: '#AEBAC0', fontWeight: 700 } : { color: '#384248', fontWeight: 700 }}>{selection}</span> }
       { !filled
-        ? <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)' }}/>
-        : <span className='icon-dropdown' style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', fontSize: sizeArrow, height: sizeArrow, transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
+        ? <Icon icon='icon-dropdown' fontSize={sizeArrow} style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', transform: 'rotate(0deg)' }}/>
+        : <Icon icon='icon-dropdown' fontSize={sizeArrow} style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', transform: 'rotate(0deg)', color: colorArrowFilled }}/> }
     </Button>
   )
 }
 
-const DropdownList = ({ children, width = '236px', ...props }) => {
+const DropdownList = ({ children, width = '236px', height = '150px', ...props }) => {
   const { open, ref } = useDropdownContext()
   return (
     open && (
@@ -101,10 +105,10 @@ const DropdownList = ({ children, width = '236px', ...props }) => {
           boxShadow: 'active',
           borderRadius: 'input',
           position: 'absolute',
-          top: '42px',
+          top: '38px',
           zIndex: 1,
           width: width,
-          height: '150px',
+          height: height,
         }}
       >
         {children}
