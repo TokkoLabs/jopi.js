@@ -1369,7 +1369,7 @@ const theme = {
       gap: '10px',
       color: colors.neutralGray4,
       backgroundColor: colors.transparent,
-      colorFilled: colors.neutralGray4,
+      colorFilled: colors.neutralGray1,
       backgroundColorFilled: colors.transparent,
       fontWeight: 400,
       ':hover': {

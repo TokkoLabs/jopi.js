@@ -1322,6 +1322,11 @@ input:disabled:not(:checked) ~ .c16 {
     >
       <div
         className="c0 c4"
+        style={
+          Object {
+            "color": "#FFFFFF",
+          }
+        }
       >
         <span
           className="icon-cerrar"
@@ -1841,6 +1846,11 @@ exports[`Dropdown DropdownMultiselect 2`] = `
     >
       <div
         className="c3"
+        style={
+          Object {
+            "color": "#A6B2BA",
+          }
+        }
       >
         <span
           className="icon-configuracion"
