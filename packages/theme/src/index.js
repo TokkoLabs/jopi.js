@@ -40,7 +40,6 @@ const colors = {
   neutralGray7: '#DDE5E9',
   neutralGray8: '#E4E8EA',
   neutralGray9: '#F3F6F8',
-  neutralGray10: '#F3F6F8',
   white: '#FFFFFF',
   yellow: '#FFF502',
   neutral: [
@@ -85,7 +84,6 @@ const borders = {
   neutralGray7: '1px solid ' + colors.neutralGray7,
   neutralGray8: '1px solid ' + colors.neutralGray8,
   neutralGray9: '1px solid ' + colors.neutralGray9,
-  neutralGray10: '1px solid ' + colors.neutralGray10,
 }
 
 const fontSize = [9, 10, 12, 14, 16, 20, 24, 28]
@@ -105,31 +103,31 @@ const forms = {
   input: {
     normal: {
       color: colors.neutralGray5,
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
       '::placeholder': {
         color: colors.neutralGray5,
       },
     },
     hover: {
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
       '::placeholder': {
         color: colors.neutralGray1,
       },
     },
     active: {
       border: '1px solid #AEBAC0',
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
     },
     filled: {
       color: colors.neutralGray1,
       border: 'none',
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
     },
   },
   inputFocus: {
     border: '1px solid #386DF4',
     boxShadow: '2px 2px 6px rgba(56, 109, 244, 0.2)',
-    backgroundColor: colors.neutralGray10,
+    backgroundColor: colors.neutralGray9,
   },
   inputError: {
     color: colors.error,
@@ -144,7 +142,7 @@ const forms = {
     cursor: 'not-allowed',
     pointerEvents: 'none',
     userSelect: 'none',
-    backgroundColor: colors.neutralGray10,
+    backgroundColor: colors.neutralGray9,
     '::placeholder': {
       color: colors.neutralGray6,
     },
@@ -171,7 +169,7 @@ const forms = {
     },
     active: {
       border: '1px solid #AEBAC0',
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
     },
     filled: {
       color: colors.neutralGray1,
@@ -182,32 +180,32 @@ const forms = {
   inputSearch: {
     normal: {
       color: colors.neutralGray3,
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
       '::placeholder': {
         color: colors.neutralGray3,
       },
     },
     hover: {
       color: colors.neutralGray4,
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
       '::placeholder': {
         color: colors.neutralGray4,
       },
     },
     active: {
       color: colors.neutralGray1,
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
       '::placeholder': {
         color: colors.neutralGray5,
       },
     },
     loading: {
       color: colors.neutralGray1,
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
     },
     filled: {
       color: colors.neutralGray1,
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
     },
   },
   inputSearchTransparent: {
@@ -228,7 +226,7 @@ const forms = {
     active: {
       border: '1px solid #AEBAC0',
       color: colors.neutralGray1,
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
       '::placeholder': {
         color: colors.neutralGray5,
       },
@@ -1090,7 +1088,7 @@ const theme = {
       borderRadius: '0px',
       width: '100%',
       ':hover': {
-        backgroundColor: colors.neutralGray10,
+        backgroundColor: colors.neutralGray9,
         color: colors.neutralGray1,
       },
       ':focus': {
@@ -1245,24 +1243,24 @@ const theme = {
     },
     dropdownDefault: {
       color: colors.neutralGray3,
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
       colorFilled: colors.neutralGray1,
-      backgroundColorFilled: colors.neutralGray10,
-      colorArrowFilled: colors.neutralGray5,
+      backgroundColorFilled: colors.neutralGray9,
+      colorArrowFilled: colors.neutralGray4,
       width: '100%',
       ':hover': {
         color: colors.neutralGray1,
-        backgroundColor: colors.neutralGray10,
+        backgroundColor: colors.neutralGray9,
       },
       ':focus': {
         color: colors.neutralGray4,
-        backgroundColor: colors.neutralGray10,
+        backgroundColor: colors.neutralGray9,
         border: borders.neutralGray7,
       },
     },
     dropdownDisabled: {
       color: colors.neutralGray6,
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
       cursor: 'default',
       pointerEvents: 'none',
       userSelect: 'none',
@@ -1278,19 +1276,19 @@ const theme = {
       borderRadius: '8px',
       colorFilled: colors.neutralGray1,
       backgroundColorFilled: colors.transparent,
-      colorArrowFilled: colors.neutralGray5,
+      colorArrowFilled: colors.neutralGray4,
       gap: '4px',
       lineHeight: '18px',
       width: '100%',
       // colorArrow: colors.neutralGray5,
       ':hover': {
         color: colors.neutralGray1,
-        backgroundColor: colors.neutralGray10,
+        backgroundColor: colors.neutralGray9,
         border: 'none',
       },
       ':focus': {
         color: colors.neutralGray4,
-        backgroundColor: colors.neutralGray10,
+        backgroundColor: colors.neutralGray9,
       },
     },
     dropdownOutlinedDisabled: {
@@ -1310,7 +1308,7 @@ const theme = {
       color: colors.neutralGray3,
       backgroundColor: colors.transparent,
       colorFilled: colors.neutralGray1,
-      colorArrowFilled: colors.neutralGray5,
+      colorArrowFilled: colors.neutralGray4,
       lineHeight: '18px',
       width: '100%',
       // colorArrow: colors.neutralGray5,
@@ -1724,7 +1722,7 @@ const theme = {
       backgroundColor: colors.backgroundAlert1,
     },
     primaryDisabled: {
-      backgroundColor: colors.neutralGray10,
+      backgroundColor: colors.neutralGray9,
     },
     secondary: {
       backgroundColor: colors.white,
