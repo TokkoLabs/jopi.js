@@ -204,7 +204,6 @@ exports[`Dropdown DropdownDefault 1`] = `
         className="c3"
         style={
           Object {
-            "backgroundColor": "#6A88F2",
             "color": "#FFFFFF",
           }
         }
@@ -225,7 +224,13 @@ exports[`Dropdown DropdownDefault 1`] = `
           }
         />
       </div>
-      <span />
+      <span
+        style={
+          Object {
+            "color": "#FFFFFF",
+          }
+        }
+      />
       <div
         className="c4"
         style={
@@ -1046,7 +1051,7 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
+  font-weight: 400;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
