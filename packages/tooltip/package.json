@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/tooltip",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.226",
+    "@oneloop/box": "^1.2.228",
     "@popperjs/core": "^2.11.5",
     "prop-types": "^15.7.2"
   },
