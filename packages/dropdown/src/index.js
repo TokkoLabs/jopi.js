@@ -48,12 +48,15 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
   if (sizeArrow === undefined) {
     sizeArrow = '12px'
   }
-
+  // ESTO FALLA CON LOS CASOS QUE MENCIONO MARIAN
+  // Porque llamo al buttonIcon
   if (isButtonIcon) {
     return (
       <ButtonIcon
         variant={[variant, variantSize]}
         icon={icon}
+        filled={filled}
+        holdPress
         onClick={ !disabled ? toggle : undefined}
       />
     )

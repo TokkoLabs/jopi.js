@@ -35,7 +35,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, holdPress, hover, ...props }) => {
+export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, holdPress, hover, filled, ...props }) => {
   let colorValue
   let colorValueIcon
   let fontSize
@@ -62,13 +62,21 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
       if (fontSize === undefined && Object.values(theme.buttons)[index].fontSize !== undefined) {
         fontSize = Object.values(theme.buttons)[index].fontSize
       }
+      if (filled && colorValueIcon === undefined) {
+        colorValueIcon = Object.values(theme.buttons)[index].colorFilled
+      }
 
       return colorValue
     })
   } else {
     const index = Object.keys(theme.buttons).indexOf(variant)
     colorValue = Object.values(theme.buttons)[index].color
-    colorValueIcon = Object.values(theme.buttons)[index].colorIcon || Object.values(theme.buttons)[index].color
+    colorValueIcon = Object.values(theme.buttons)[index].colorIcon ||
+      (
+        filled && colorValueIcon === undefined
+          ? Object.values(theme.buttons)[index].colorFilled
+          : Object.values(theme.buttons)[index].color
+      )
     fontSize = Object.values(theme.buttons)[index].fontSize
     fontWeight = Object.values(theme.buttons)[index].fontWeight
     if (hover) {
