@@ -43,50 +43,54 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
     indexes.map(index => {
-      if (Object.values(theme.buttons)[index][':focus'] !== undefined && active) {
-        colorValue = Object.values(theme.buttons)[index][':focus'].color
-        fontWeight = Object.values(theme.buttons)[index][':focus'].fontWeight
-        if (Object.values(theme.buttons)[index].colorIcon !== undefined) {
-          colorValueIcon = Object.values(theme.buttons)[index][':focus'].colorIcon
+      const variantValues = Object.values(theme.buttons)[index]
+      if (variantValues[':focus'] !== undefined && active) {
+        colorValue = variantValues[':focus'].color
+        fontWeight = variantValues[':focus'].fontWeight
+        if (variantValues.colorIcon !== undefined) {
+          colorValueIcon = variantValues[':focus'].colorIcon
         }
       }
-      if (colorValue === undefined && Object.values(theme.buttons)[index].color !== undefined) {
-        colorValue = Object.values(theme.buttons)[index].color
+      if (colorValue === undefined && variantValues.color !== undefined) {
+        colorValue = variantValues.color
       }
-      if (colorValueIcon === undefined && Object.values(theme.buttons)[index].colorIcon !== undefined) {
-        colorValueIcon = Object.values(theme.buttons)[index].colorIcon
+      if (colorValueIcon === undefined && variantValues.colorIcon !== undefined) {
+        colorValueIcon = variantValues.colorIcon
       }
-      if (fontWeight === undefined && Object.values(theme.buttons)[index].fontWeight !== undefined) {
-        fontWeight = Object.values(theme.buttons)[index].fontWeight
+      if (fontWeight === undefined && variantValues.fontWeight !== undefined) {
+        fontWeight = variantValues.fontWeight
       }
-      if (fontSize === undefined && Object.values(theme.buttons)[index].fontSize !== undefined) {
-        fontSize = Object.values(theme.buttons)[index].fontSize
+      if (fontSize === undefined && variantValues.fontSize !== undefined) {
+        fontSize = variantValues.fontSize
       }
       if (filled && colorValueIcon === undefined) {
-        colorValueIcon = Object.values(theme.buttons)[index].colorFilled
+        colorValueIcon = variantValues.colorFilled
       }
 
       return colorValue
     })
   } else {
     const index = Object.keys(theme.buttons).indexOf(variant)
-    colorValue = Object.values(theme.buttons)[index].color
-    colorValueIcon = Object.values(theme.buttons)[index].colorIcon ||
-      (
-        filled && colorValueIcon === undefined
-          ? Object.values(theme.buttons)[index].colorFilled
-          : Object.values(theme.buttons)[index].color
-      )
-    fontSize = Object.values(theme.buttons)[index].fontSize
-    fontWeight = Object.values(theme.buttons)[index].fontWeight
-    if (hover) {
-      colorValue = Object.values(theme.buttons)[index][':hover'].color
-      colorValueIcon = Object.values(theme.buttons)[index][':hover'].colorIcon
-      fontWeight = Object.values(theme.buttons)[index][':hover'].fontWeight
-    } else if (active) {
-      colorValue = Object.values(theme.buttons)[index][':focus'].color
-      colorValueIcon = Object.values(theme.buttons)[index][':focus'].colorIcon
-      fontWeight = Object.values(theme.buttons)[index][':focus'].fontWeight
+    const variantValues = Object.values(theme.buttons)[index]
+    if (variantValues !== undefined) {
+      colorValue = variantValues.color
+      colorValueIcon = variantValues.colorIcon ||
+        (
+          filled && colorValueIcon === undefined
+            ? variantValues.colorFilled
+            : variantValues.color
+        )
+      fontSize = variantValues.fontSize
+      fontWeight = variantValues.fontWeight
+      if (hover) {
+        colorValue = variantValues[':hover'].color
+        colorValueIcon = variantValues[':hover'].colorIcon
+        fontWeight = variantValues[':hover'].fontWeight
+      } else if (active) {
+        colorValue = variantValues[':focus'].color
+        colorValueIcon = variantValues[':focus'].colorIcon
+        fontWeight = variantValues[':focus'].fontWeight
+      }
     }
   }
 
