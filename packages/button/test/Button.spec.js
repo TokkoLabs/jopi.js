@@ -314,4 +314,12 @@ describe('Button', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  test('mainButtonIconBadgeFilledOneVariant', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='dropdownIconFail' icon='icon-configuracion' filled holdPress />)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })
