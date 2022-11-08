@@ -30,7 +30,7 @@ export const Tabs = ({ children, firstTabSelected = true, ...props }) => {
         {tabChildren}
       </Box>
       {contentChildren.length > 0 && (
-        <Box __css={{ padding: '10px' }}>{contentChildren}</Box>
+        <Box __css={{ paddingTop: '10px' }}>{contentChildren}</Box>
       )}
     </TabsContext.Provider>
   )
