@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/table",
-  "version": "1.2.233",
+  "version": "1.2.234",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [

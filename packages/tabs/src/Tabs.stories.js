@@ -90,7 +90,7 @@ export const normal = () => (
 
 export const tabDefault = () => (
   <Box __css={{ backgroundColor: 'lightgray', width: '250px', height: '80px', padding: '5px' }}>
-    <Tabs className='grid gap-xs'>
+    <Tabs>
       <Tabs.Tab variant='default' id="item0">
         <Icon icon='icon-buscar' fontSize='12px'/>
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>
@@ -117,7 +117,7 @@ export const tabDefault = () => (
 
 export const tabDefaultWithMoreWidth = () => (
   <Box __css={{ backgroundColor: 'lightgray', width: '350px', height: '80px', padding: '5px' }}>
-    <Tabs className='grid gap-xs'>
+    <Tabs>
       <Tabs.Tab variant='default' id="item0">
         <Icon icon='icon-buscar' fontSize='12px'/>
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>

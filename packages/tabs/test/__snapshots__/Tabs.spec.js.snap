@@ -171,7 +171,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding: 10px;
+  padding-top: 10px;
 }
 
 .c1 {

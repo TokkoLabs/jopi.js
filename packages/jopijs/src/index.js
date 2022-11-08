@@ -20,7 +20,7 @@ import { Modal } from '@oneloop/modal'
 import { Paginator } from '@oneloop/paginator'
 import { Radio } from '@oneloop/radio'
 import { Switch } from '@oneloop/switch'
-import { Submenu, Parent } from '@oneloop/submenu'
+import { Submenu, ParentSubmenu } from '@oneloop/submenu'
 import { Table } from '@oneloop/table'
 import { Tabs } from '@oneloop/tabs'
 import { Text, Heading } from '@oneloop/text'
@@ -51,7 +51,7 @@ export {
   Loader,
   Modal,
   Paginator,
-  Parent,
+  ParentSubmenu,
   ParentTooltip,
   Radio,
   Submenu,
