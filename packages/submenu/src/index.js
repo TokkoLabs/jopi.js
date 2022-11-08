@@ -3,9 +3,9 @@ import { createPopper } from '@popperjs/core'
 import { Box } from '@oneloop/box'
 import { isMouseOutJoin } from '@oneloop/hooks'
 
-export const Parent = ({ children, setHover, hover, placement = 'right', offset = 8, ...props }) => {
+export const ParentSubmenu = ({ children, setHover, hover, placement = 'right', offset = 8, ...props }) => {
   let styles = { position: 'absolute', width: offset + 'px' }
-  if (document.getElementById(props.id) !== null) {
+  if (document !== undefined && document.getElementById(props.id) !== null) {
     const values = document.getElementById(props.id).getBoundingClientRect()
     if (placement === 'right') {
       styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: values.width }
@@ -39,8 +39,8 @@ export const Parent = ({ children, setHover, hover, placement = 'right', offset 
 }
 
 export const Submenu = ({ parentId, childrenId, variant = 'submenu', placement = 'right', offset = 8, ...props }) => {
-  const popcorn = document.querySelector('#' + parentId)
-  const tooltip = document.querySelector('#' + childrenId)
+  const popcorn = document !== undefined ? document.querySelector('#' + parentId) : null
+  const tooltip = document !== undefined ? document.querySelector('#' + childrenId) : null
   if (popcorn != null && tooltip != null) {
     createPopper(popcorn, tooltip, {
       placement: placement,

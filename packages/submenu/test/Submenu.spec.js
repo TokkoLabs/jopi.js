@@ -5,7 +5,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import 'jest-styled-components'
 
 import { ButtonIcon } from '@oneloop/button'
-import { Parent, Submenu } from '../src'
+import { ParentSubmenu, Submenu } from '../src'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -19,9 +19,9 @@ describe('Submenu', () => {
   test('first case', () => {
     const tree = renderer.create(
       <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
-        <Parent id="parent0" aria-describedby="tooltip0" offset={20}>
+        <ParentSubmenu id="parent0" aria-describedby="tooltip0" offset={20}>
           <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress badgeVariant='primary'/>
-        </Parent>
+        </ParentSubmenu>
         <div id="tooltip0" role="tooltip0" style={{ width: 'fit-content', visibility: 'visible' }}>
           <Submenu parentId='parent0' childrenId='tooltip0'>
             <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
@@ -40,9 +40,9 @@ describe('Submenu', () => {
   test('renders correctly', () => {
     const wrapper = mount(
       <div style={{ background: '#F3F6F8', padding: '20px', borderRadius: '10px' }}>
-        <Parent id="parent1" aria-describedby="tooltip1" offset={20} placement='left' hover>
+        <ParentSubmenu id="parent1" aria-describedby="tooltip1" offset={20} placement='left' hover>
           <ButtonIcon id="button" variant='mainButtonIcon' icon='icon-propiedades' holdPress badgeVariant='primary'/>
-        </Parent>
+        </ParentSubmenu>
         <div id="tooltip1" role="tooltip1" style={{ width: 'fit-content', visibility: 'visible' }}>
           <Submenu parentId='tooltip1' childrenId='tooltip1' placement='left'>
             <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
