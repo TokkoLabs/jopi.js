@@ -41,7 +41,7 @@ export const useFilterData = (data, key) => {
 }
 
 export const isMouseOutTooltip = (e, tooltipId, parentId, placement) => {
-  if (document === undefined) {
+  if (typeof window === 'object' && document === undefined) {
     return true
   }
   const x = e.clientX
@@ -59,7 +59,7 @@ export const isMouseOutTooltip = (e, tooltipId, parentId, placement) => {
 }
 
 export const isMouseOutJoin = (e, joinId, placement) => {
-  if (document === undefined) {
+  if (typeof window === 'object' && document === undefined) {
     return true
   }
   const x = e.clientX
@@ -70,7 +70,7 @@ export const isMouseOutJoin = (e, joinId, placement) => {
 }
 
 export const isMouseOutParent = (e, parentId, placement) => {
-  if (document === undefined) {
+  if (typeof window === 'object' && document === undefined) {
     return true
   }
   const x = e.clientX
