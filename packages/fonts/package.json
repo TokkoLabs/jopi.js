@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/fonts",
-  "version": "1.0.60",
+  "version": "1.0.61",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
