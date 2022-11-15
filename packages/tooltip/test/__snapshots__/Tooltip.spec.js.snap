@@ -61,8 +61,8 @@ exports[`Submenu renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
 }
 
 .c4 {
@@ -128,18 +128,18 @@ exports[`Submenu renders correctly 1`] = `
               }
             }
           >
-            <span
+            <i
               className="icon-propiedades"
               style={
                 Object {
                   "bottom": "0px",
-                  "fontSize": "14px",
-                  "height": "14px",
+                  "fontSize": "18px",
+                  "height": "18px",
                   "left": "-0.5px",
                   "position": "absolute",
                   "right": "0px",
                   "top": "-1px",
-                  "width": "14px",
+                  "width": "18px",
                 }
               }
             />

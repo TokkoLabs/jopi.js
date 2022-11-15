@@ -68,7 +68,7 @@ exports[`Button collapseButtonOpen 1`] = `
     <div
       className="c2"
     >
-      <span
+      <i
         className="icon-atras"
         style={
           Object {
@@ -454,8 +454,8 @@ exports[`Button mainButton 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 <div
@@ -467,18 +467,18 @@ exports[`Button mainButton 1`] = `
     <div
       className="c2"
     >
-      <span
+      <i
         className="icon-propiedades"
         style={
           Object {
             "bottom": "0px",
-            "fontSize": "14px",
-            "height": "14px",
+            "fontSize": "16px",
+            "height": "16px",
             "left": "-0.5px",
             "position": "absolute",
             "right": "0px",
             "top": "-1px",
-            "width": "14px",
+            "width": "16px",
           }
         }
       />
@@ -538,8 +538,8 @@ exports[`Button mainButtonCollapsible 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 <div
@@ -551,18 +551,18 @@ exports[`Button mainButtonCollapsible 1`] = `
     <div
       className="c2"
     >
-      <span
+      <i
         className="icon-propiedades"
         style={
           Object {
             "bottom": "0px",
-            "fontSize": "14px",
-            "height": "14px",
+            "fontSize": "16px",
+            "height": "16px",
             "left": "-0.5px",
             "position": "absolute",
             "right": "0px",
             "top": "-1px",
-            "width": "14px",
+            "width": "16px",
           }
         }
       />
@@ -635,8 +635,8 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 @media screen and (min-width:40em) {
@@ -652,18 +652,18 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
     <div
       className="c2"
     >
-      <span
+      <i
         className="icon-propiedades"
         style={
           Object {
             "bottom": "0px",
-            "fontSize": "14px",
-            "height": "14px",
+            "fontSize": "16px",
+            "height": "16px",
             "left": "-0.5px",
             "position": "absolute",
             "right": "0px",
             "top": "-1px",
-            "width": "14px",
+            "width": "16px",
           }
         }
       />
@@ -736,8 +736,8 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 @media screen and (min-width:40em) {
@@ -753,18 +753,18 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
     <div
       className="c2"
     >
-      <span
+      <i
         className="icon-propiedades"
         style={
           Object {
             "bottom": "0px",
-            "fontSize": "14px",
-            "height": "14px",
+            "fontSize": "16px",
+            "height": "16px",
             "left": "-0.5px",
             "position": "absolute",
             "right": "0px",
             "top": "-1px",
-            "width": "14px",
+            "width": "16px",
           }
         }
       />
@@ -837,8 +837,8 @@ exports[`Button mainButtonIconActive 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
 }
 
 <div
@@ -855,18 +855,18 @@ exports[`Button mainButtonIconActive 1`] = `
         }
       }
     >
-      <span
+      <i
         className="icon-propiedades"
         style={
           Object {
             "bottom": "0px",
-            "fontSize": "14px",
-            "height": "14px",
+            "fontSize": "18px",
+            "height": "18px",
             "left": "-0.5px",
             "position": "absolute",
             "right": "0px",
             "top": "-1px",
-            "width": "14px",
+            "width": "18px",
           }
         }
       />
@@ -933,8 +933,8 @@ exports[`Button mainButtonIconBadge 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
 }
 
 .c3 {
@@ -995,18 +995,18 @@ exports[`Button mainButtonIconBadge 1`] = `
         }
       }
     >
-      <span
+      <i
         className="icon-propiedades"
         style={
           Object {
             "bottom": "0px",
-            "fontSize": "14px",
-            "height": "14px",
+            "fontSize": "18px",
+            "height": "18px",
             "left": "-0.5px",
             "position": "absolute",
             "right": "0px",
             "top": "-1px",
-            "width": "14px",
+            "width": "18px",
           }
         }
       />
@@ -1097,7 +1097,7 @@ exports[`Button mainButtonIconBadgeFilled 1`] = `
         }
       }
     >
-      <span
+      <i
         className="icon-configuracion"
         style={
           Object {
@@ -1181,7 +1181,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 1`] = `
         }
       }
     >
-      <span
+      <i
         className="icon-configuracion"
         style={
           Object {
@@ -1265,7 +1265,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
         }
       }
     >
-      <span
+      <i
         className="icon-configuracion"
         style={
           Object {
@@ -1333,8 +1333,8 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
 }
 
 .c3 {
@@ -1395,18 +1395,18 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
         }
       }
     >
-      <span
+      <i
         className="icon-propiedades"
         style={
           Object {
             "bottom": "0px",
-            "fontSize": "14px",
-            "height": "14px",
+            "fontSize": "18px",
+            "height": "18px",
             "left": "-0.5px",
             "position": "absolute",
             "right": "0px",
             "top": "-1px",
-            "width": "14px",
+            "width": "18px",
           }
         }
       />
@@ -1426,7 +1426,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
       style={
         Object {
           "position": "absolute",
-          "right": "16px",
+          "right": "10px",
         }
       }
     >
@@ -1540,8 +1540,8 @@ input:focus ~ .c0 {
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
 }
 
 .c7 {
@@ -1686,18 +1686,18 @@ input:disabled:not(:checked) ~ .c11 {
     <div
       className="c0 c15"
     >
-      <span
+      <i
         className="icon-propiedades"
         style={
           Object {
             "bottom": "0px",
-            "fontSize": "14px",
-            "height": "14px",
+            "fontSize": "18px",
+            "height": "18px",
             "left": "-0.5px",
             "position": "absolute",
             "right": "0px",
             "top": "-1px",
-            "width": "14px",
+            "width": "18px",
           }
         }
       />
@@ -1963,7 +1963,7 @@ input:disabled:not(:checked) ~ .c11 {
         }
       }
     >
-      <span
+      <i
         className="icon-propiedades"
         style={
           Object {
@@ -2420,7 +2420,7 @@ exports[`Button roundButton 1`] = `
     <div
       className="c2"
     >
-      <span
+      <i
         className="icon-unificar"
         style={
           Object {
@@ -2502,7 +2502,7 @@ exports[`Button roundButtonColourFeedback 1`] = `
     <div
       className="c2"
     >
-      <span
+      <i
         className="icon-check"
         style={
           Object {
@@ -2584,7 +2584,7 @@ exports[`Button roundButtonDisabled 1`] = `
     <div
       className="c2"
     >
-      <span
+      <i
         className="icon-unificar"
         style={
           Object {

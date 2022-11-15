@@ -40,6 +40,7 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
   let colorValueIcon
   let fontSize
   let fontWeight
+  let fontSizeIcon
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
     indexes.map(index => {
@@ -66,6 +67,9 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
       if (filled && colorValueIcon === undefined) {
         colorValueIcon = variantValues.colorFilled
       }
+      if (fontSizeIcon === undefined) {
+        fontSizeIcon = variantValues.fontSizeIcon
+      }
 
       return colorValue
     })
@@ -90,6 +94,9 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
         colorValue = variantValues[':focus'].color
         colorValueIcon = variantValues[':focus'].colorIcon
         fontWeight = variantValues[':focus'].fontWeight
+      }
+      if (fontSizeIcon === undefined) {
+        fontSizeIcon = variantValues.fontSizeIcon
       }
     }
   }
@@ -122,14 +129,14 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
       >
         { hasCheckbox && active && <Checkbox defaultChecked disabled={ disabled }/>}
         { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={ disabled }/>}
-        { icon && <Icon icon={icon} fontSize={fontSize} style={ holdPress && { color: (colorValueIcon || colorValue) }}/> }
+        { icon && <Icon icon={icon} fontSize={fontSizeIcon || fontSize} style={ holdPress && { color: (colorValueIcon || colorValue) }}/> }
         { userImage && srcImage && <Image src={srcImage} variant="avatar"/> }
         { userImage && !srcImage && <span className='icon-contactos' style={{ fontSize: '24px' }}/>}
         { text && !holdPress && <span>{text}</span>}
         { text && holdPress && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span> }
         { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: active ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
         { badgeValue !== 0 && !text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
-        { badgeValue !== 0 && text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '16px' }}>{badgeValue}</Badge> }
+        { badgeValue !== 0 && text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '10px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
   )

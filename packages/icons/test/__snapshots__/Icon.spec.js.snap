@@ -139,7 +139,7 @@ exports[`Icon renders correctly Icon 1`] = `
 <div
   className="c0"
 >
-  <span
+  <i
     className="icon-agregar"
     style={
       Object {

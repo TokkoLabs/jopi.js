@@ -143,8 +143,8 @@ Array [
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 <div
@@ -159,24 +159,36 @@ Array [
       >
         <div
           className="c3"
+          style={
+            Object {
+              "color": "#DF1E02",
+            }
+          }
         >
-          <span
+          <i
             className="icon-emprendimientos"
             style={
               Object {
                 "bottom": "0px",
-                "fontSize": "14px",
-                "height": "14px",
+                "fontSize": "16px",
+                "height": "16px",
                 "left": "-0.5px",
                 "position": "absolute",
                 "right": "0px",
                 "top": "-1px",
-                "width": "14px",
+                "width": "16px",
               }
             }
           />
         </div>
-        <span>
+        <span
+          style={
+            Object {
+              "color": "#384248",
+              "fontWeight": "bold",
+            }
+          }
+        >
           Emprendimientos
         </span>
       </button>
@@ -209,8 +221,8 @@ Array [
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 .c2 {
@@ -265,24 +277,36 @@ Array [
       >
         <div
           className="c3"
+          style={
+            Object {
+              "color": "#49565D",
+            }
+          }
         >
-          <span
+          <i
             className="icon-emprendimientos"
             style={
               Object {
                 "bottom": "0px",
-                "fontSize": "14px",
-                "height": "14px",
+                "fontSize": "16px",
+                "height": "16px",
                 "left": "-0.5px",
                 "position": "absolute",
                 "right": "0px",
                 "top": "-1px",
-                "width": "14px",
+                "width": "16px",
               }
             }
           />
         </div>
-        <span>
+        <span
+          style={
+            Object {
+              "color": "#49565D",
+              "fontWeight": "normal",
+            }
+          }
+        >
           Emprendimientos
         </span>
       </button>
@@ -307,8 +331,8 @@ Array [
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 .c2 {
@@ -407,24 +431,36 @@ Array [
       >
         <div
           className="c3"
+          style={
+            Object {
+              "color": "#49565D",
+            }
+          }
         >
-          <span
+          <i
             className="icon-emprendimientos"
             style={
               Object {
                 "bottom": "0px",
-                "fontSize": "14px",
-                "height": "14px",
+                "fontSize": "16px",
+                "height": "16px",
                 "left": "-0.5px",
                 "position": "absolute",
                 "right": "0px",
                 "top": "-1px",
-                "width": "14px",
+                "width": "16px",
               }
             }
           />
         </div>
-        <span>
+        <span
+          style={
+            Object {
+              "color": "#49565D",
+              "fontWeight": "normal",
+            }
+          }
+        >
           Emprendimientos
         </span>
         <div
@@ -432,7 +468,7 @@ Array [
           style={
             Object {
               "position": "absolute",
-              "right": "16px",
+              "right": "10px",
             }
           }
         >
