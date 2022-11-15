@@ -8,13 +8,13 @@ export const ParentTooltip = ({ children, setHover, hover, placement = 'right', 
   if (typeof window === 'object' && document !== undefined && document.getElementById(props.id) !== null) {
     const values = document.getElementById(props.id).getBoundingClientRect()
     if (placement === 'right') {
-      styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: values.width }
+      styles = { position: 'fixed', width: offset + 'px', height: values.height, marginLeft: values.width }
     } else if (placement === 'bottom') {
-      styles = { position: 'absolute', width: values.width, height: offset + 'px', marginTop: values.width }
+      styles = { position: 'fixed', width: values.width, height: offset + 'px', marginTop: values.width }
     } else if (placement === 'left') {
-      styles = { position: 'absolute', width: offset + 'px', height: values.height, marginLeft: -offset + 'px' }
+      styles = { position: 'fixed', width: offset + 'px', height: values.height, marginLeft: -offset + 'px' }
     } else if (placement === 'top') {
-      styles = { position: 'absolute', width: values.width, height: offset + 'px', marginTop: -offset + 'px' }
+      styles = { position: 'fixed', width: values.width, height: offset + 'px', marginTop: -offset + 'px' }
     }
   }
   return (
