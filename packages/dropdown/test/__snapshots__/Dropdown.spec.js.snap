@@ -208,7 +208,7 @@ exports[`Dropdown DropdownDefault 1`] = `
           }
         }
       >
-        <span
+        <i
           className="icon-cerrar"
           style={
             Object {
@@ -242,7 +242,7 @@ exports[`Dropdown DropdownDefault 1`] = `
           }
         }
       >
-        <span
+        <i
           className="icon-dropdown"
           style={
             Object {
@@ -551,7 +551,7 @@ input:disabled:not(:checked) ~ .c14 {
       <div
         className="c0 c4"
       >
-        <span
+        <i
           className="icon-cerrar"
           style={
             Object {
@@ -578,7 +578,7 @@ input:disabled:not(:checked) ~ .c14 {
           }
         }
       >
-        <span
+        <i
           className="icon-dropdown"
           style={
             Object {
@@ -1328,7 +1328,7 @@ input:disabled:not(:checked) ~ .c16 {
           }
         }
       >
-        <span
+        <i
           className="icon-cerrar"
           style={
             Object {
@@ -1750,7 +1750,7 @@ exports[`Dropdown DropdownMultiselect 1`] = `
           }
         }
       >
-        <span
+        <i
           className="icon-dropdown"
           style={
             Object {
@@ -1852,7 +1852,7 @@ exports[`Dropdown DropdownMultiselect 2`] = `
           }
         }
       >
-        <span
+        <i
           className="icon-configuracion"
           style={
             Object {
@@ -1994,7 +1994,7 @@ exports[`Dropdown DropdownSelection 1`] = `
           }
         }
       >
-        <span
+        <i
           className="icon-dropdown"
           style={
             Object {
@@ -2133,7 +2133,7 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
           }
         }
       >
-        <span
+        <i
           className="icon-dropdown"
           style={
             Object {

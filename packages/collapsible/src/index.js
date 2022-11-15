@@ -37,6 +37,7 @@ const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon =
         active={active}
         badgeValue={badgeValue}
         badgeVariant={badgeVariant}
+        holdPress
         sx={{
           width: isMainButton && '100%',
           '+ .content': {

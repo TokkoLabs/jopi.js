@@ -179,7 +179,7 @@ exports[`Input errors 1`] = `
     <div
       className="c3"
     >
-      <span
+      <i
         className="icon-error"
         style={
           Object {
@@ -908,7 +908,7 @@ exports[`Input inputWithPasswordIcon 1`] = `
       <div
         className="c5"
       >
-        <span
+        <i
           className="icon-ocultar"
           style={
             Object {
@@ -1308,7 +1308,7 @@ exports[`Input searchBoldIcon 1`] = `
     <div
       className="c2"
     >
-      <span
+      <i
         className="icon-buscar"
         style={
           Object {
