@@ -579,7 +579,8 @@ exports[`Button mainButtonCollapsible 1`] = `
           "paddingTop": "4px",
           "position": "absolute",
           "right": "10px",
-          "transform": "rotate(-180deg)",
+          "transform": "rotate(0deg)",
+          "transition": "all 0.5s",
         }
       }
     />
@@ -680,7 +681,8 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
           "paddingTop": "4px",
           "position": "absolute",
           "right": "10px",
-          "transform": "rotate(-180deg)",
+          "transform": "rotate(0deg)",
+          "transition": "all 0.5s",
         }
       }
     />
@@ -782,6 +784,7 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
           "position": "absolute",
           "right": "10px",
           "transform": "rotate(0deg)",
+          "transition": "all 0.5s",
         }
       }
     />
