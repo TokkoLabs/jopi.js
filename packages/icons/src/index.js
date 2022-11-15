@@ -91,7 +91,7 @@ export const Icon = ({ icon, fontSize, ...props }) => (
       height: fontSize,
     }}
   >
-    <span className={icon} style={{
+    <i className={icon} style={{
       position: 'absolute',
       top: '-1px',
       right: '0px',
