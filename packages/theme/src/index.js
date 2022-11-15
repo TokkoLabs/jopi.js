@@ -654,6 +654,16 @@ const theme = {
       fontSize: '14px',
       lineHeight: '18px',
     },
+    mediumIcon16: {
+      height: '38px',
+      borderRadius: '10px',
+      padding: '10px 24px 10px 24px',
+      gap: '4px',
+      fontWeight: 700,
+      fontSize: '14px',
+      fontSizeIcon: '16px',
+      lineHeight: '18px',
+    },
     small: {
       height: '32px',
       borderRadius: '8px',
@@ -1104,6 +1114,7 @@ const theme = {
     mainButton: {
       height: '38px',
       fontSize: '14px',
+      fontSizeIcon: '16px',
       lineHeight: '18px',
       borderRadius: '8px',
       fontWeight: 'normal',
@@ -1127,6 +1138,7 @@ const theme = {
       height: '32px',
       width: '32px',
       fontSize: '14px',
+      fontSizeIcon: '18px',
       lineHeight: '18px',
       fontWeight: 'normal',
       backgroundColor: colors.transparent,
