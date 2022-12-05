@@ -101,7 +101,7 @@ const DrawerMotion = ({
   }
 
   const drawerMenuContentInitial = {
-    backgroundColor: 'white',
+    backgroundColor: transparent ? 'hsla(255, 255, 255, 1)' : 'white',
     top: 0,
     height: '100%',
     maxWidth: '100%',
