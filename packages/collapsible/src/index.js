@@ -6,7 +6,8 @@ import { Box } from '@oneloop/box'
 const CollapsibleContext = createContext()
 
 export const Collapsible = ({ children, isOpen = false, ...props }) => {
-  const value = React.useMemo(() => ({ isOpen }), [isOpen])
+  const ref = React.useRef()
+  const value = React.useMemo(() => ({ isOpen, ref }), [isOpen])
 
   return (
     <CollapsibleContext.Provider value={value}>
