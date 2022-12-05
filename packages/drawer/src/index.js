@@ -66,7 +66,7 @@ const DrawerMotion = ({
       width: animationWidth,
       backgroundColor: ['hsla(255, 255, 255, 1)', 'hsla(255, 255, 255, 0)'],
       height: heightMax,
-      boxShadow: 'none',
+      boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0)',
     },
     closed: {
       width: animationMinWidth,
@@ -101,7 +101,7 @@ const DrawerMotion = ({
   }
 
   const drawerMenuContentInitial = {
-    backgroundColor: 'white',
+    backgroundColor: transparent ? 'hsla(255, 255, 255, 1)' : 'white',
     top: 0,
     height: '100%',
     maxWidth: '100%',

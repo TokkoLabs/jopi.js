@@ -42,6 +42,7 @@ const colors = {
   neutralGray9: '#F3F6F8',
   white: '#FFFFFF',
   yellow: '#FFF502',
+  petrokoPressed: '#3188A4',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -786,6 +787,7 @@ const theme = {
       width: '32px',
       borderRadius: '9px',
       fontSize: '18px',
+      fontSizeIcon: '18px',
     },
     iconExtraSmall: {
       height: '26px',
@@ -852,6 +854,13 @@ const theme = {
       width: '32px',
       fontSize: '12px',
       fontSizeIcon: '20px',
+    },
+    roundIconSmallIcon14px: {
+      borderRadius: 99999,
+      height: '32px',
+      width: '32px',
+      fontSize: '14px',
+      fontSizeIcon: '14px',
     },
     roundIconExtraSmall: {
       borderRadius: 99999,
@@ -981,6 +990,14 @@ const theme = {
         colorActive: colors.subtlePressed,
       },
     },
+    subtlePetrokoIcon: {
+      backgroundColor: colors.neutralGray9,
+      color: colors.neutralGray4,
+    },
+    subtlePetrokoIconPressed: {
+      backgroundColor: colors.petrokoPressed,
+      color: colors.white,
+    },
     transparentIcon: {
       backgroundColor: colors.transparent,
       color: colors.subtle,
@@ -1008,6 +1025,18 @@ const theme = {
       ':focus': {
         backgroundColor: colors.neutral[0],
         color: colors.subtlePressed,
+      },
+    },
+    roundIconArrowRed: {
+      backgroundColor: colors.neutralGray9,
+      color: colors.neutralGray3,
+      ':hover': {
+        backgroundColor: colors.neutralGray9,
+        color: colors.neutralGray3,
+      },
+      ':focus': {
+        backgroundColor: colors.neutralGray9,
+        color: colors.primary,
       },
     },
     colourFeedback: {
@@ -1792,6 +1821,11 @@ const theme = {
       gap: '6px',
       boxShadow: '4px 4px 12px rgba(87, 95, 99, 0.1)',
       borderRadius: '10px',
+      flexDirection: 'column',
+    },
+    submenuNotification: {
+      boxShadow: '8px 8px 16px rgba(77, 91, 100, 0.15)',
+      borderRadius: '12px',
       flexDirection: 'column',
     },
   },
