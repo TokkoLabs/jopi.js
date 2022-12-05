@@ -384,3 +384,7 @@ export const IconArrowDrawer = () => {
     <ButtonIcon icon='icon-atras' onClick={setCollapse} variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ transition: '0.5s' }}/>
   )
 }
+
+export const roundIconArrow14px = () => (
+  <ButtonIcon icon='icon-dropdown' variant={['roundIconArrowRed', 'roundIconSmallIcon14px']}/>
+)

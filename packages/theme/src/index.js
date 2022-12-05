@@ -853,6 +853,13 @@ const theme = {
       fontSize: '12px',
       fontSizeIcon: '20px',
     },
+    roundIconSmallIcon14px: {
+      borderRadius: 99999,
+      height: '32px',
+      width: '32px',
+      fontSize: '14px',
+      fontSizeIcon: '14px',
+    },
     roundIconExtraSmall: {
       borderRadius: 99999,
       height: '26px',
@@ -1008,6 +1015,18 @@ const theme = {
       ':focus': {
         backgroundColor: colors.neutral[0],
         color: colors.subtlePressed,
+      },
+    },
+    roundIconArrowRed: {
+      backgroundColor: colors.neutralGray9,
+      color: colors.neutralGray3,
+      ':hover': {
+        backgroundColor: colors.neutralGray9,
+        color: colors.neutralGray3,
+      },
+      ':focus': {
+        backgroundColor: colors.neutralGray9,
+        color: colors.primary,
       },
     },
     colourFeedback: {
