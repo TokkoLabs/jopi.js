@@ -14,12 +14,12 @@ export default {
         '\'iconSecondary\', \'iconDisabled\', \'subtleIconButton\', \'subtleTrasnparentIconClearButton\', ' +
         '\'subtleTrasnparentIconObscureButton\', \'smallIconButtonTransparent\', \'roundIconArrow\', ' +
         '\'colourFeedback\', \'mainItemSmall\', \'mainButton\', \'mainButtonIcon\', \'userButton\', \'collapseButtonOpen\', ' +
-        '\'collapseButtonClosed\' ]' +
+        '\'collapseButtonClosed\', \'roundIconArrowRed\' ]' +
         '\n*       **Variantes de tamaño disponibles:** [ \'large\', \'medium\', \'small\', \'extraSmall\', \'iconLarge\', ' +
         '\'iconMedium\', \'iconSmall\', \'iconExtraSmall\', \'iconExtraSmall22px\', \'iconExtraSmall18px\',' +
         '\'roundIconLarge\', \'roundIconMedium\', \'roundIconSmall\', \'roundIconExtraSmall\', ' +
         '\'roundIconExtraSmall22px\', \'roundIconExtraSmall18px\', \'roundLarge\', \'roundMedium\', \'roundSmall\', ' +
-        '\'roundExtraSmall\' ]' +
+        '\'roundExtraSmall\', \'roundIconSmallIcon14px\' ]' +
         '\n* **Variantes de texto disponibles:** [ \'primaryText\', \'secondaryText\', \'subtleText\', \'textDisabled\' ' +
         '\'link\', \'linkSubtle\', \'linkDisabled\', \'subtleButton\' ]',
       type: 'text',
@@ -385,6 +385,18 @@ export const IconArrowDrawer = () => {
   )
 }
 
-export const roundIconArrow14px = () => (
-  <ButtonIcon icon='icon-dropdown' variant={['roundIconArrowRed', 'roundIconSmallIcon14px']}/>
-)
+export const RoundIconArrow14px = () => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <ButtonIcon icon='icon-dropdown' variant={['roundIconArrowRed', 'roundIconSmallIcon14px']} holdPress active={active} onClick={toggle}/>
+  )
+}
+
+export const IconSubtleExtraSmall18px = () => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <ButtonIcon icon='icon-agregar' variant={[active ? 'subtlePetrokoIconPressed' : 'subtlePetrokoIcon', 'iconSmallSize18px']} holdPress active={active} onClick={toggle}/>
+  )
+}

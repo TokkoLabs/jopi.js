@@ -42,6 +42,7 @@ const colors = {
   neutralGray9: '#F3F6F8',
   white: '#FFFFFF',
   yellow: '#FFF502',
+  petrokoPressed: '#3188A4',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -786,6 +787,7 @@ const theme = {
       width: '32px',
       borderRadius: '9px',
       fontSize: '18px',
+      fontSizeIcon: '18px',
     },
     iconExtraSmall: {
       height: '26px',
@@ -987,6 +989,14 @@ const theme = {
         color: colors.subtlePressed,
         colorActive: colors.subtlePressed,
       },
+    },
+    subtlePetrokoIcon: {
+      backgroundColor: colors.neutralGray9,
+      color: colors.neutralGray4,
+    },
+    subtlePetrokoIconPressed: {
+      backgroundColor: colors.petrokoPressed,
+      color: colors.white,
     },
     transparentIcon: {
       backgroundColor: colors.transparent,
