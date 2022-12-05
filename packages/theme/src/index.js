@@ -1794,6 +1794,11 @@ const theme = {
       borderRadius: '10px',
       flexDirection: 'column',
     },
+    submenuNotification: {
+      boxShadow: '8px 8px 16px rgba(77, 91, 100, 0.15)',
+      borderRadius: '12px',
+      flexDirection: 'column',
+    },
   },
   panelTooltip: {
     tooltip: {
