@@ -33,7 +33,6 @@ exports[`Card renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
   width: 18px;
   height: 18px;
 }
@@ -399,7 +398,6 @@ exports[`Card renders correctly not active 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
   width: 18px;
   height: 18px;
 }

@@ -10,7 +10,7 @@ export default {
   argTypes: {
     variant: {
       name: 'variant',
-      description: 'Variantes disponibles del submenu: [ \'submenu\' ]',
+      description: 'Variantes disponibles del submenu: [ \'submenu\', \'submenuNotification\' ]',
     },
     placement: {
       name: 'placement',
@@ -320,6 +320,28 @@ export const SubmenuWithOutIcon = () => {
           <ButtonIcon variant='submenu' text='Propiedad' maxWidth/>
           <ButtonIcon variant='submenu' text='Emprendimientos' maxWidth badgeValue={1850} />
           <ButtonIcon variant='submenu' text='Email' maxWidth badgeValue={30} />
+        </Submenu>
+      </div>
+    </div>
+  )
+}
+
+export const SubmenuNormalBottomNotification = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', paddingLeft: '400px', paddingTop: '110px', borderRadius: '10px', height: '300px' }}>
+      <ParentSubmenu onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent13', 'bottom'))} id="parent13" aria-describedby="tooltip13" setHover={setHover} hover={hover} offset={20} placement='bottom'>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentSubmenu>
+      <div id="tooltip13" role="tooltip13" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip13', 'parent13', 'bottom'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Submenu parentId='parent13' childrenId='tooltip13' width='202px' offset={20} placement='bottom' variant='submenuNotification'>
+          <Text variant='submenuTitle'>Crear</Text>
+          <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
+          <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
+          <ButtonIcon variant='submenu' icon='icon-propiedades' text='Propiedad' maxWidth/>
+          <ButtonIcon variant='submenu' icon='icon-emprendimientos' text='Emprendimiento' maxWidth/>
+          <ButtonIcon variant='submenu' icon='icon-email' text='Email' maxWidth/>
         </Submenu>
       </div>
     </div>

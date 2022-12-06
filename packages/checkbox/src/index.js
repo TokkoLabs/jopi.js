@@ -111,7 +111,7 @@ export const Checkbox = ({
   variant = 'checkbox',
   ...props
 }) => (
-  <Box sx={{ position: 'relative', width: 18, height: 18 }}>
+  <Box sx={{ width: 18, height: 18 }}>
     <Box
       as="input"
       type="checkbox"
