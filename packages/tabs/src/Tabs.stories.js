@@ -37,7 +37,7 @@ export default {
 }
 
 export const normal = () => (
-  <Tabs bg="primary" color="neutral.0" firstTabSelected={false}>
+  <Tabs bg="primary" color="neutral.0">
     <Tabs.Tab id="texto">
       <Box as="a" href="#">
         Texto
