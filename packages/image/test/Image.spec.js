@@ -1,8 +1,13 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import { Icon } from '@oneloop/icons'
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import 'jest-styled-components'
 
 import { Image } from '../src'
+
+Enzyme.configure({ adapter: new Adapter() })
 
 describe('Image', () => {
   test('renders correctly', () => {
@@ -26,5 +31,17 @@ describe('Image', () => {
     ).toJSON()
 
     expect(tree).toMatchSnapshot()
+  })
+
+  test('ImageEmpty', () => {
+    const component = shallow(
+      <Image
+        src={null}
+        variant="rows"
+        icon ="icon-propiedades"
+      />)
+    expect(component.find(Image).exists).toBeTruthy()
+
+    expect(component).toMatchSnapshot()
   })
 })

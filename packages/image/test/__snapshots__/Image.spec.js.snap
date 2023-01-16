@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Image ImageEmpty 1`] = `ShallowWrapper {}`;
+
 exports[`Image ImageWihtBadge 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -25,6 +27,7 @@ exports[`Image ImageWihtBadge 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: normal;
 }
 
 .c2 {
@@ -73,10 +76,12 @@ exports[`Image ImageWihtBadge 1`] = `
 
 <div
   className="c0"
+  onError={[Function]}
   src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 >
   <img
     className="c1"
+    display="normal"
     src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   />
   <button
@@ -121,14 +126,17 @@ exports[`Image renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: normal;
 }
 
 <div
   className="c0"
+  onError={[Function]}
   src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 >
   <img
     className="c1"
+    display="normal"
     src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   />
 </div>

@@ -3228,6 +3228,7 @@ exports[`Button userButtonWithImage 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: normal;
 }
 
 <div
@@ -3238,10 +3239,12 @@ exports[`Button userButtonWithImage 1`] = `
   >
     <div
       className="c2"
+      onError={[Function]}
       src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     >
       <img
         className="c3"
+        display="normal"
         src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
       />
     </div>

@@ -108,6 +108,7 @@ input:focus ~ .c0 {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: normal;
 }
 
 .c17 {
@@ -318,10 +319,12 @@ input:disabled:not(:checked) ~ .c11 {
     </div>
     <div
       className="c0 c15"
+      onError={[Function]}
       src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     >
       <img
         className="c0 c16"
+        display="normal"
         src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
       />
     </div>
@@ -473,6 +476,7 @@ input:focus ~ .c0 {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: normal;
 }
 
 .c17 {
@@ -683,10 +687,12 @@ input:disabled:not(:checked) ~ .c11 {
     </div>
     <div
       className="c0 c15"
+      onError={[Function]}
       src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     >
       <img
         className="c0 c16"
+        display="normal"
         src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
       />
     </div>
