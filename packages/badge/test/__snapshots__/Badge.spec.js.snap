@@ -6,19 +6,12 @@ exports[`Badge icon 1`] = `
   margin: 0;
   min-width: 0;
   line-height: 14px;
-  height: 22px;
   display: inline-block;
   font-size: 10px;
   font-family: primary;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   border: 0;
-  border-radius: 14px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -30,19 +23,7 @@ exports[`Badge icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
   position: static;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
 }
 
 <div
@@ -75,20 +56,12 @@ exports[`Badge iconBigRounded 1`] = `
   margin: 0;
   min-width: 0;
   line-height: 14px;
-  height: 30px;
-  width: 30px;
   display: inline-block;
   font-size: 10px;
   font-family: primary;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   border: 0;
-  border-radius: 99999px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -100,19 +73,7 @@ exports[`Badge iconBigRounded 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1px 5px;
   position: static;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
 }
 
 .c1 {
@@ -139,19 +100,12 @@ exports[`Badge primary 1`] = `
   margin: 0;
   min-width: 0;
   line-height: 14px;
-  height: 16px;
   display: inline-block;
   font-size: 10px;
   font-family: primary;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   border: 0;
-  border-radius: 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -163,19 +117,11 @@ exports[`Badge primary 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1px 5px;
   position: static;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
+}
+
+@media screen and (min-width:40em) {
+
 }
 
 <button
@@ -191,19 +137,12 @@ exports[`Badge secondary 1`] = `
   margin: 0;
   min-width: 0;
   line-height: 14px;
-  height: 16px;
   display: inline-block;
   font-size: 10px;
   font-family: primary;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   border: 0;
-  border-radius: 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -215,19 +154,7 @@ exports[`Badge secondary 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1px 5px;
   position: static;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
 }
 
 <button

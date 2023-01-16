@@ -1,4 +1,6 @@
 const colors = {
+  alert: '#F4CD00',
+  alertSubtle: '#FFF4BD',
   black: '#272E33',
   primary: '#DF1E02',
   primaryHover: '#FD2B0C',
@@ -10,8 +12,9 @@ const colors = {
   subtle: '#707E86',
   subtleHover: '#4D5B64',
   subtlePressed: '#384248',
-  disabled: '#C1CCD0',
   success: '#068B5B',
+  successDark: '#00B775',
+  successDarker: '#00734A',
   error: '#B21702',
   backgroundError: '#FFF8F6',
   backgroundError2: '#FDDDD8',
@@ -19,8 +22,14 @@ const colors = {
   borderRowTable: '#FFE0DC',
   backgroundAlert1: '#EEF4FE',
   backgroundAlert2: '#CEE0FC',
-  info: '#386DF4',
+  backgroundCyan2: '#ECF0FD',
+  backgroundSuccess: '#D9FFF1',
+  darkRedTokko: '#A71601',
+  disabled: '#C1CCD0',
   lightBlue: '#6A88F2',
+  info: '#386DF4',
+  infoAlert: '#4268EF',
+  suportText: '#1A48EB',
   inputErrors: '#FFF2F0',
   inputBackground: '#F7F8FA',
   inputPlaceholderColor: '#A6B2BA',
@@ -1605,6 +1614,31 @@ const theme = {
       borderRadius: '5px',
       gap: '4px',
     },
+    badgeNormal: {
+      textTransform: 'uppercase',
+      height: '16px',
+      borderRadius: '8px',
+      padding: '1px 5px',
+    },
+    badgeMedium: {
+      textTransform: 'uppercase',
+      height: '22px',
+      borderRadius: '14px',
+      padding: '1px 5px',
+    },
+    badgeBig: {
+      textTransform: 'uppercase',
+      height: '30px',
+      width: '30px',
+      padding: '1px 5px',
+    },
+    badgeCircle: {
+      borderRadius: 99999,
+      padding: '1px 5px',
+    },
+    badgeIcon: {
+      padding: '4px 8px',
+    },
     badgeInfo: {
       backgroundColor: colors.info,
       color: colors.white,
@@ -1677,6 +1711,76 @@ const theme = {
       backgroundColor: colors.backgroundError,
       color: colors.error,
       letterSpacing: '0.05em',
+    },
+    badgeInlineLarge: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+      padding: '5px 10px',
+      gap: '8px',
+    },
+    badgeInlineMedium: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+      padding: '3px 7px',
+      gap: '8px',
+    },
+    badgeInlineSmall: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+      padding: '2px 4px',
+      gap: '8px',
+    },
+    badgeRounded: {
+      borderRadius: '12px',
+    },
+    badgeSquare: {
+      borderRadius: '4px',
+    },
+    badgeUppercase: {
+      textTransform: 'uppercase',
+    },
+    inlineError: {
+      backgroundColor: colors.darkRedTokko,
+      color: 'white',
+    },
+    inlineErrorSubtle: {
+      backgroundColor: colors.backgroundErrorRowTable,
+      color: colors.darkRedTokko,
+    },
+    inlineAlert: {
+      backgroundColor: colors.alert,
+      color: colors.black,
+    },
+    inlineAlertSubtle: {
+      backgroundColor: colors.alertSubtle,
+      color: colors.black,
+    },
+    inlineInfo: {
+      backgroundColor: colors.infoAlert,
+      color: colors.white,
+    },
+    inlineInfoSubtle: {
+      backgroundColor: colors.backgroundCyan2,
+      color: colors.suportText,
+    },
+    inlineSuccessDark: {
+      backgroundColor: colors.successDark,
+      color: colors.white,
+    },
+    inlineSuccessDarkSubtle: {
+      backgroundColor: colors.backgroundSuccess,
+      color: colors.successDarker,
+    },
+    inlineDark: {
+      backgroundColor: colors.black,
+      color: colors.white,
+    },
+    inlineDarkSubtle: {
+      backgroundColor: colors.neutralGray8,
+      color: colors.neutralGray1,
     },
   },
   borders: borders,
