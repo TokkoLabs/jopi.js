@@ -7,12 +7,12 @@ const TabsContext = createContext()
 
 export const Tabs = ({ children, itemTabSelected = 1, ...props }) => {
   const tabChildren = React.Children.toArray(children).filter(
-    child => child.type.name === 'Tab'
+    child => child.type.name === 'Tab' || child.key.toString().match('Tab')
   )
   const [active, setActive] = useState(itemTabSelected && tabChildren[itemTabSelected] !== undefined && tabChildren[itemTabSelected].props.id)
   const value = React.useMemo(() => ({ active, setActive }), [active])
   const contentChildren = React.Children.toArray(children).filter(
-    child => child.type.name === 'Content'
+    child => child.type.name === 'Content' || child.key.toString().match('Content')
   )
 
   return (
