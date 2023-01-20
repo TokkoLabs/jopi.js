@@ -1065,6 +1065,27 @@ const theme = {
         color: colors.neutral[8],
       },
     },
+    linkTwoLines: {
+      fontSize: fontSize[3],
+      color: colors.info,
+      backgroundColor: colors.transparent,
+      display: 'flex',
+      webkitBoxOrient: 'vertical',
+      webkitLineClamp: 2,
+      overflow: 'hidden',
+      whiteSpace: 'normal',
+      textOverflow: 'ellipsis',
+      textAlign: 'center',
+      alignItems: 'center',
+      justifyContent: 'center',
+      ':hover': {
+        color: colors.lightBlue,
+        textDecoration: 'underline',
+      },
+      ':focus': {
+        color: colors.neutral[8],
+      },
+    },
     linkSubtle: {
       fontSize: fontSize[3],
       color: colors.subtle,
