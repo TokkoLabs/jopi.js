@@ -4,12 +4,13 @@ import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
 import { useToggle } from '@oneloop/hooks'
 
-export const Image = ({ textBadge, variantBadge = 'badgeInfoRow', icon, iconColor = '#AEBAC0', ...props }) => {
+export const Image = ({ textBadge, variant, variantBadge = 'badgeInfoRow', icon, iconColor = '#AEBAC0', ...props }) => {
   const [error, setError] = useToggle(false)
 
   return (
     <Box
       onError={() => setError(true)}
+      variant={variant}
       {...props}
       __css={{
         maxWidth: '100%',
@@ -22,6 +23,7 @@ export const Image = ({ textBadge, variantBadge = 'badgeInfoRow', icon, iconColo
       <Box
         as="img"
         display = {error ? 'none' : 'normal'}
+        variant={variant}
         {...props}
         __css={{
           maxWidth: '100%',
@@ -30,7 +32,7 @@ export const Image = ({ textBadge, variantBadge = 'badgeInfoRow', icon, iconColo
           justifyContent: 'center',
         }}
       />
-      {icon && error && <Icon icon={icon} fontSize="24px" style={{ color: iconColor, position: 'absolute', top: '12px', left: '24px' }}/>}
+      {icon && error && <Icon icon={icon} fontSize={variant === 'avatar' ? '32px' : '24px'} style={{ color: iconColor, position: 'absolute', top: variant === 'avatar' ? '0px' : '12px', left: variant === 'avatar' ? '0px' : '24px' }}/>}
       {textBadge && <Badge variant={variantBadge} style={{ position: 'absolute', left: '0px', bottom: '-1px', width: '100%', textTransform: 'none' }}>{textBadge}</Badge> }
     </Box>
   )
