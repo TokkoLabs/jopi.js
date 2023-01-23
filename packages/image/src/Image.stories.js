@@ -128,3 +128,11 @@ export const rowsEmpty = () => (
     icon ="icon-propiedades"
   />
 )
+
+export const avatarEmpty = () => (
+  <Image
+    src="invalid_route"
+    variant="avatar"
+    icon ="icon-perfil"
+  />
+)

@@ -80,6 +80,86 @@ exports[`Image ImageEmpty 1`] = `
 </div>
 `;
 
+exports[`Image ImageEmptyAvatar 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: normal;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 14px;
+  display: inline-block;
+  font-size: 10px;
+  font-family: primary;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: static;
+}
+
+<div
+  className="c0"
+  onError={[Function]}
+  src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+>
+  <img
+    className="c1"
+    display="normal"
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  />
+  <button
+    className="c2"
+    style={
+      Object {
+        "bottom": "-1px",
+        "left": "0px",
+        "position": "absolute",
+        "textTransform": "none",
+        "width": "100%",
+      }
+    }
+  >
+    Error
+  </button>
+</div>
+`;
+
 exports[`Image ImageWihtBadge 1`] = `
 .c0 {
   box-sizing: border-box;
