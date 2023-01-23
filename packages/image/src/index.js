@@ -23,6 +23,7 @@ export const Image = ({ textBadge, variant, variantBadge = 'badgeInfoRow', icon,
       <Box
         as="img"
         display = {error ? 'none' : 'normal'}
+        variant={variant}
         {...props}
         __css={{
           maxWidth: '100%',
