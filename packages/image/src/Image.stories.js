@@ -120,3 +120,11 @@ export const circleBig = () => (
     variant="circleBig"
   />
 )
+
+export const rowsEmpty = () => (
+  <Image
+    src="invalid_route"
+    variant="rows"
+    icon ="icon-propiedades"
+  />
+)

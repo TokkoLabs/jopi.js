@@ -108,6 +108,7 @@ input:focus ~ .c0 {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: normal;
 }
 
 .c17 {
@@ -129,19 +130,12 @@ input:focus ~ .c0 {
   margin: 0;
   min-width: 0;
   line-height: 14px;
-  height: 16px;
   display: inline-block;
   font-size: 10px;
   font-family: primary;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   border: 0;
-  border-radius: 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -153,19 +147,7 @@ input:focus ~ .c0 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1px 5px;
   position: static;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
 }
 
 .c7 {
@@ -318,10 +300,12 @@ input:disabled:not(:checked) ~ .c11 {
     </div>
     <div
       className="c0 c15"
+      onError={[Function]}
       src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     >
       <img
         className="c0 c16"
+        display="normal"
         src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
       />
     </div>
@@ -473,6 +457,7 @@ input:focus ~ .c0 {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: normal;
 }
 
 .c17 {
@@ -494,19 +479,12 @@ input:focus ~ .c0 {
   margin: 0;
   min-width: 0;
   line-height: 14px;
-  height: 16px;
   display: inline-block;
   font-size: 10px;
   font-family: primary;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   border: 0;
-  border-radius: 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -518,19 +496,7 @@ input:focus ~ .c0 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1px 5px;
   position: static;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
 }
 
 .c7 {
@@ -683,10 +649,12 @@ input:disabled:not(:checked) ~ .c11 {
     </div>
     <div
       className="c0 c15"
+      onError={[Function]}
       src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     >
       <img
         className="c0 c16"
+        display="normal"
         src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
       />
     </div>
