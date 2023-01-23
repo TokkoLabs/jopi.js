@@ -54,7 +54,7 @@ Array [
 .c1 * {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #EBA49A;
 }
 
 .c1 a {
@@ -69,20 +69,6 @@ Array [
 }
 
 .c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  border-radius: 4px 4px 0 0;
-  height: 4px;
-  display: block;
-  background-color: #FFFFFF;
-  position: absolute;
-  right: 10px;
-  left: 10px;
-  bottom: 0;
-}
-
-.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -111,21 +97,35 @@ Array [
   line-height: 16px;
 }
 
-.c3 * {
+.c2 * {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #EBA49A;
+  color: #FFFFFF;
 }
 
-.c3 a {
+.c2 a {
   display: block;
   width: 148px;
   height: 52px;
   line-height: 52px;
 }
 
-.c3 a > *:first-child {
+.c2 a > *:first-child {
   margin-right: 10px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-radius: 4px 4px 0 0;
+  height: 4px;
+  display: block;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  bottom: 0;
 }
 
 <div
@@ -138,20 +138,20 @@ Array [
       onMouseOver={[Function]}
     >
       One
-      <span
-        className="c2"
-      />
     </div>
     <div
-      className="c3"
+      className="c2"
       onClick={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       Two
+      <span
+        className="c3"
+      />
     </div>
     <div
-      className="c3"
+      className="c1"
       onClick={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
@@ -159,7 +159,7 @@ Array [
       Three
     </div>
     <div
-      className="c3"
+      className="c1"
       onClick={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
@@ -174,21 +174,9 @@ Array [
   padding-top: 10px;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
 <div
     className="c0"
-  >
-    <div
-      className="c1"
-    >
-      One Content One
-    </div>
-  </div>,
+  />,
 ]
 `;
 
@@ -245,7 +233,7 @@ exports[`Tabs renders correctly with only headers 1`] = `
 .c1 * {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #EBA49A;
 }
 
 .c1 a {
@@ -260,20 +248,6 @@ exports[`Tabs renders correctly with only headers 1`] = `
 }
 
 .c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  border-radius: 4px 4px 0 0;
-  height: 4px;
-  display: block;
-  background-color: #FFFFFF;
-  position: absolute;
-  right: 10px;
-  left: 10px;
-  bottom: 0;
-}
-
-.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -302,21 +276,35 @@ exports[`Tabs renders correctly with only headers 1`] = `
   line-height: 16px;
 }
 
-.c3 * {
+.c2 * {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #EBA49A;
+  color: #FFFFFF;
 }
 
-.c3 a {
+.c2 a {
   display: block;
   width: 148px;
   height: 52px;
   line-height: 52px;
 }
 
-.c3 a > *:first-child {
+.c2 a > *:first-child {
   margin-right: 10px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-radius: 4px 4px 0 0;
+  height: 4px;
+  display: block;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  bottom: 0;
 }
 
 <div
@@ -329,20 +317,20 @@ exports[`Tabs renders correctly with only headers 1`] = `
     onMouseOver={[Function]}
   >
     One
-    <span
-      className="c2"
-    />
   </div>
   <div
-    className="c3"
+    className="c2"
     onClick={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
   >
     Two
+    <span
+      className="c3"
+    />
   </div>
   <div
-    className="c3"
+    className="c1"
     onClick={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -350,7 +338,7 @@ exports[`Tabs renders correctly with only headers 1`] = `
     Three
   </div>
   <div
-    className="c3"
+    className="c1"
     onClick={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}

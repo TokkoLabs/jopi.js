@@ -289,6 +289,10 @@ export const link = () => (
   <Button variant='link'>{'Link button'}</Button>
 )
 
+export const linkTwoLines = () => (
+  <Button variant='linkTwoLines' width='120px'>{'Link button de dos lineas'}</Button>
+)
+
 export const linkSubtle = () => (
   <Button variant='linkSubtle'>{'Link button'}</Button>
 )

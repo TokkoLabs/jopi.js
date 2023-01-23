@@ -351,6 +351,7 @@ input:focus ~ .c0 {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: normal;
 }
 
 .c24 {
@@ -701,10 +702,12 @@ input:disabled:not(:checked) ~ .c18 {
         >
           <div
             className="c0 c22"
+            onError={[Function]}
             src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           >
             <img
               className="c0 c23"
+              display="normal"
               src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
@@ -954,10 +957,12 @@ input:disabled:not(:checked) ~ .c18 {
         >
           <div
             className="c0 c22"
+            onError={[Function]}
             src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           >
             <img
               className="c0 c23"
+              display="normal"
               src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
