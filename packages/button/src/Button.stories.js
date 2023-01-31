@@ -404,3 +404,7 @@ export const IconSubtleExtraSmall18px = () => {
     <ButtonIcon icon='icon-agregar' variant={[active ? 'subtlePetrokoIconPressed' : 'subtlePetrokoIcon', 'iconSmallSize18px']} holdPress active={active} onClick={toggle}/>
   )
 }
+
+export const buttonWithImage = () => (
+  <ButtonIcon variant='mainButton' srcImage='https://static.tokkobroker.com/static/img/cec.icon.svg' text='Messenger' widthImage='16px' heightImage='16px'/>
+)

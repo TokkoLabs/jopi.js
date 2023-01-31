@@ -35,7 +35,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, holdPress, hover, filled, isExpanded, ...props }) => {
+export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, holdPress, hover, filled, isExpanded, widthImage, heightImage, ...props }) => {
   let colorValue
   let colorValueIcon
   let fontSize
@@ -130,6 +130,7 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
         { hasCheckbox && active && <Checkbox defaultChecked disabled={ disabled }/>}
         { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={ disabled }/>}
         { icon && <Icon icon={icon} fontSize={fontSizeIcon || fontSize} style={ holdPress && { color: (colorValueIcon || colorValue) }}/> }
+        { !userImage && srcImage && <Image src={srcImage} style={{ width: widthImage, height: heightImage }}/> }
         { userImage && srcImage && <Image src={srcImage} variant="avatar"/> }
         { userImage && !srcImage && <span className='icon-contactos' style={{ fontSize: '24px' }}/>}
         { text && !holdPress && <span>{text}</span>}
