@@ -1,5 +1,111 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button buttonWithImage 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: normal;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    <div
+      className="c2"
+      onError={[Function]}
+      src="https://static.tokkobroker.com/static/img/cec.icon.svg"
+      style={
+        Object {
+          "height": "16px",
+          "width": "16px",
+        }
+      }
+    >
+      <img
+        className="c3"
+        display="normal"
+        src="https://static.tokkobroker.com/static/img/cec.icon.svg"
+        style={
+          Object {
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
+    </div>
+    <span>
+      Messenger
+    </span>
+  </button>
+</div>
+`;
+
 exports[`Button collapseButtonOpen 1`] = `
 .c0 {
   box-sizing: border-box;
