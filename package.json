@@ -59,7 +59,7 @@
     "eslint-plugin-standard": "^5.0.0",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
-    "jest-haste-map": "^27.5.1",
+    "jest-haste-map": "^29.5.0",
     "jest-resolve": "^27.5.1",
     "jest-styled-components": "^7.0.8",
     "lerna": "^4.0.0",
