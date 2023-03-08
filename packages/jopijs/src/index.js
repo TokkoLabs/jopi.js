@@ -27,6 +27,7 @@ import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
 import { Tooltip, ParentTooltip } from '@oneloop/tooltip'
 import { ThemeProvider } from 'styled-components'
+import FullCalendar from '@fullcalendar/react'
 export {
   Alert,
   Badge,
@@ -63,4 +64,5 @@ export {
   Tooltip,
   ThemeProvider,
   useFilterData,
+  FullCalendar
 }

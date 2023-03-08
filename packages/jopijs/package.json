@@ -35,7 +35,8 @@
     "@oneloop/text": "^1.2.228",
     "@oneloop/textarea": "^1.0.175",
     "@oneloop/tooltip": "^1.0.31",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "@oneloop/calendar": "1.2.253"
   },
   "peerDependencies": {
     "react": "^16.8.0"
