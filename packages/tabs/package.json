@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/tabs",
-  "version": "1.4.226",
+  "version": "1.4.227",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
