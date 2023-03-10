@@ -64,5 +64,5 @@ export {
   Tooltip,
   ThemeProvider,
   useFilterData,
-  FullCalendar
+  FullCalendar,
 }
