@@ -81,6 +81,10 @@
     "webpack": "^5.72.0"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.4",
+    "@fullcalendar/daygrid": "^6.1.4",
+    "@fullcalendar/react": "^6.1.4",
+    "@fullcalendar/timegrid": "^6.1.4",
     "@popperjs/core": "^2.11.5",
     "react-datepicker": "^4.7.0",
     "yarn": "^1.22.18"
