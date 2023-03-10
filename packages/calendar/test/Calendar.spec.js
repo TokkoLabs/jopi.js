@@ -6,9 +6,9 @@ import Adapter from 'enzyme-adapter-react-16'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe("Calendar", () => {
-  test("default", () => {
+describe('Calendar', () => {
+  test('default', () => {
     const component = shallow(<Calendar />)
     expect(component).toMatchSnapshot()
-  });
+  })
 })

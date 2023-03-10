@@ -4,7 +4,6 @@ import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 import '@oneloop/theme/styles/globals.css'
 import '../styles/styles.css'
 
-
 export const Calendar = () => {
   /*   const calendarOptions = {
       events: [],
