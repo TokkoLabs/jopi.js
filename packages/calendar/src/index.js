@@ -1,33 +1,12 @@
 import React from 'react'
-import FullCalendar from '@fullcalendar/react' // must go before plugins
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 import '@oneloop/theme/styles/globals.css'
-import '../styles/styles.css'
+import { CalendarOptions } from '../options/calendarOptions'
+import { Box } from '../../box/src'
+import FullCalendar from '@fullcalendar/react'
+import '../styles/calendar.css'
 
-export const Calendar = () => {
-  /*   const calendarOptions = {
-      events: [],
-      plugins: [timeGridPlugin],
-      initialView: 'timeGridDay',
-      nowIndicator: true,
-      headerToolbar: {
-        start: 'prev',
-        center: 'title',
-        end: 'next',
-      },
-      editable: true,
-      eventResizableFromStart: true,
-      dragScroll: true,
-      dayMaxEvents: 2,
-      navLinks: true,
-    } */
+export const Calendar = ({ variant, events, initialDate, scrollTime, height }) => {
+  const options = { ...CalendarOptions[variant], events: events || [], initialDate: initialDate, scrollTime: scrollTime, height: height }
 
-  return (
-    <div className='calendarContainer'>
-      <FullCalendar
-        plugins={[dayGridPlugin]}
-        initialView="dayGridMonth"
-      />
-    </div>
-  )
+  return <Box id={variant}> <FullCalendar {...options} /> </Box>
 }
