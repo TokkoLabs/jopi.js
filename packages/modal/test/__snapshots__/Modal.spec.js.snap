@@ -35,7 +35,7 @@ exports[`Modal renders correctly 1`] = `
   className="c0 modalContainer"
 >
   <div
-    className="c0 modalComponent  undefined"
+    className="c0 modalComponent  false"
   >
     <div
       className="c0 c1 modalHeader textSm"

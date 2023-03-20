@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
 import '../styles/styles.css'
-import PropTypes from 'prop-types'
 import '@oneloop/theme/styles/globals.css'
 import { ModalHeader } from '../components/header'
 import { ModalBody } from '../components/body'
@@ -21,12 +20,6 @@ export const Modal = ({ children, modalPosition, modalBG = false, modalShadow = 
       </Box>
     </Box>
   )
-}
-
-Modal.propTypes = {
-  modalPosition: PropTypes.oneOf(['top', 'bottom']),
-  modalBG: PropTypes.bool(true, false),
-  modalShadow: PropTypes.bool(true, false),
 }
 
 Modal.Header = ModalHeader
