@@ -1,72 +1,33 @@
-import React, { useEffect } from 'react'
-import ReactDOM from 'react-dom'
-import { Box, Flex } from '@oneloop/box'
+import React from 'react'
+import { Box } from '@oneloop/box'
+import '../styles/styles.css'
+import PropTypes from 'prop-types'
+import '@oneloop/theme/styles/globals.css'
+import { ModalHeader } from '../components/header'
+import { ModalBody } from '../components/body'
+import { ModalFooter } from '../components/footer'
 
-export const Modal = ({ children, ...props }) => {
-  const portalNode = document.createElement('div')
+export const Modal = ({ children, modalPosition, modalBG = false, modalShadow = false, ...props }) => {
+  const ModalPosition = {
+    top: 'modalPositionTop',
+    bottom: 'modalPositionBottom',
+  }
 
-  useEffect(() => {
-    document.body.appendChild(portalNode)
-    return () => {
-      portalNode.parentNode.removeChild(portalNode)
-    }
-  }, [])
-
-  return ReactDOM.createPortal(
-    <Box
-      __css={{
-        position: 'fixed',
-        left: 0,
-        top: 0,
-        width: '100%',
-        height: '100%',
-        bg: 'rgba(4, 4, 4, 0.79)',
-        zIndex: '1000',
-      }}
-    >
-      <Box
-        {...props}
-        __css={{
-          margin: '40px auto 0px auto',
-          width: '690px',
-          height: 'auto',
-          bg: 'neutral.1',
-          borderRadius: '9px',
-        }}
-      >
+  return (
+    <Box className='modalContainer'>
+      {modalBG && <Box className='modalBG'></Box>}
+      <Box {...props} className={`modalComponent ${ModalPosition[modalPosition] || ''} ${modalShadow && 'modalShadow'}`}>
         {children}
       </Box>
-    </Box>,
-    portalNode
+    </Box>
   )
 }
 
-const ModalHeader = props => (
-  <Flex {...props} __css={{ p: '10px', justifyContent: 'space-between' }} />
-)
-const ModalBody = props => (
-  <Box
-    {...props}
-    __css={{
-      height: '200px',
-      overflow: 'auto',
-      margin: '4px 0px 4px 0px',
-      padding: '10px',
-    }}
-  />
-)
-const ModalFooter = props => (
-  <Flex
-    {...props}
-    __css={{
-      textAlign: 'center',
-      borderTop: '1px solid #c4c4c4',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '10px',
-    }}
-  />
-)
+Modal.propTypes = {
+  modalPosition: PropTypes.oneOf(['top', 'bottom']),
+  modalBG: PropTypes.bool(true, false),
+  modalShadow: PropTypes.bool(true, false),
+}
 
 Modal.Header = ModalHeader
 Modal.Body = ModalBody

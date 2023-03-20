@@ -4,31 +4,26 @@ import { Text } from '@oneloop/text'
 import { Button } from '@oneloop/button'
 
 import { Modal } from '.'
+import { Box } from '@oneloop/box'
 
 export default {
   component: Modal,
   title: 'Modal',
 }
 
-export const normal = () =>
+export const bigModal = () => {
   React.createElement(() => {
     const [open, toggle] = useToggle(false)
     return (
       <React.Fragment>
-        <Button onClick={toggle}>Show modal</Button>
+        <Button onClick={toggle}>Show big modal</Button>
         {open && (
-          <Modal>
-            <Modal.Header>
-              <Text>Tokko Broker</Text>
-              <Button
-                variant="default"
-                size="small"
-                onClick={toggle}
-                sx={{ bg: 'inherit', border: 0 }}
-              >
-                X
-              </Button>
-            </Modal.Header>
+          <Modal modalBG modalShadow>
+            <Modal.Header
+              closeIcon={toggle}
+              textSize="l"
+              text="Soy un modal grande"
+            />
             <Modal.Body>
               <Text>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -42,13 +37,65 @@ export const normal = () =>
                 software like Aldus PageMaker including versions of Lorem Ipsum.
               </Text>
             </Modal.Body>
-            <Modal.Footer>
-              <Button width={1} variant="secondary" onClick={toggle}>
-                Accept
-              </Button>
+            <Modal.Footer position="end">
+              <Button variant='subtleText' onClick={toggle}>{'Label'}</Button>
+              <Button variant={['primary', 'large']} onClick={toggle}>{'Label'}</Button>
             </Modal.Footer>
           </Modal>
         )}
       </React.Fragment>
     )
   })
+}
+
+export const mediumModal = () => {
+  React.createElement(() => {
+    const [open, toggle] = useToggle(false)
+    return (
+      <React.Fragment>
+        <Button onClick={toggle}>Show medium modal</Button>
+        {open && (
+          <Modal modalBG modalShadow>
+            <Modal.Header
+              textSize="l"
+              text="Medium modal"
+            />
+            <Modal.Body>
+              <Box __css={{ with: '400px', height: '200px' }}>
+                <Text>Content</Text>
+              </Box>
+            </Modal.Body>
+            <Modal.Footer position="end">
+              <Button variant='subtleText' onClick={toggle}>{'Label'}</Button>
+              <Button variant='primaryText' onClick={toggle}>{'Label'}</Button>
+            </Modal.Footer>
+          </Modal>
+        )}
+      </React.Fragment>
+    )
+  })
+}
+
+export const smallModal = () => {
+  React.createElement(() => {
+    const [open, toggle] = useToggle(false)
+    return (
+      <React.Fragment>
+        <Button onClick={toggle}>Show small modal</Button>
+        {open && (
+          <Modal modalBG modalShadow>
+            <Modal.Header
+              headerPosition="center"
+              textSize='sm'
+              text='Do you want to delete the event?'
+            />
+            <Modal.Footer position="center">
+              <Button variant='primaryText' onClick={toggle}>{'No, go back'}</Button>
+              <Button variant={['primary', 'medium']} onClick={toggle}>{'Yes, delete'}</Button>
+            </Modal.Footer>
+          </Modal>
+        )}
+      </React.Fragment>
+    )
+  })
+}
