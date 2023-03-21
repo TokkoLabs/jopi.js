@@ -16,7 +16,7 @@ export const ModalHeader = ({ closeIcon, headerPosition = 'start', text, textSiz
   return (
     <Flex ref={headerRef} className={`modalHeader ${textSize === 'l' ? 'textL' : 'textSm'}`} {...props} __css={{ justifyContent: justifyContent }}>
       <Text className={'modalTitleText'}>{text}</Text>
-      {closeIcon && <Icon icon='icon-cerrar' fontSize='18px' color={theme.colors.neutralGray5} onClick={closeIcon} />}
+      {closeIcon && <Icon style={{ cursor: 'pointer' }} icon='icon-cerrar' fontSize='18px' color={theme.colors.neutralGray5} onClick={closeIcon} />}
     </Flex>
   )
 }

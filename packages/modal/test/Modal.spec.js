@@ -20,7 +20,7 @@ describe('Modal', () => {
     const tree = renderer
       .create(
         <Modal>
-          <Modal.Header text='This is the header'></Modal.Header>
+          <Modal.Header text='This is the header' variant={['start', 'l']}></Modal.Header>
           <Modal.Body>This is the body</Modal.Body>
           <Modal.Footer>This is the footer</Modal.Footer>
         </Modal>

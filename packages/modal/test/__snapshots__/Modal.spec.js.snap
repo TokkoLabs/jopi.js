@@ -5,16 +5,71 @@ exports[`Modal renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 34px;
+  max-width: 900px;
+  min-width: 380px !important;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 8px 8px 16px rgba(77,91,100,0.15);
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   font-family: primary;
 }
 
-.c3 {
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -22,9 +77,14 @@ exports[`Modal renders correctly 1`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 24px;
 }
 
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,30 +92,36 @@ exports[`Modal renders correctly 1`] = `
 }
 
 <div
-  className="c0 modalContainer"
+  className="c0"
 >
-  <div
-    className="c0 modalComponent  false"
+  <modal
+    className="c1"
   >
-    <div
-      className="c0 c1 modalHeader textSm"
+    <modal
+      className="c2 c3"
     >
       <p
-        className="c2 modalTitleText"
+        className="c4"
+        style={
+          Object {
+            "color": "#384248",
+            "fontWeight": "700",
+          }
+        }
       >
         This is the header
       </p>
-    </div>
+    </modal>
     <div
-      className="c0"
+      className="c5"
     >
       This is the body
     </div>
-    <div
-      className="c3 c1 modalFooter"
+    <modal
+      className="c6 c3"
     >
       This is the footer
-    </div>
-  </div>
+    </modal>
+  </modal>
 </div>
 `;
