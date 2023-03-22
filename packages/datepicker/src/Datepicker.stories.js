@@ -6,6 +6,14 @@ import { Box } from '@oneloop/box'
 export default {
   component: Datepicker,
   title: 'Datepicker',
+  argTypes: {
+    doc: {
+      name: 'Documentación',
+      description: '[React Datepicker](https://reactdatepicker.com/#example-locale)',
+      type: 'text',
+      control: { type: 'none' },
+    },
+  },
 }
 
 export const Normal = () => {
