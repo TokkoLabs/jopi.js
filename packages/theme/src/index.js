@@ -2034,6 +2034,25 @@ const theme = {
       borderRadius: '12px',
     },
   },
+
+  modals: {
+    top: {
+      position: 'absolute',
+      top: '50px',
+    },
+    bottom: {
+      position: 'absolute',
+      bottom: '50px',
+    },
+    l: {
+      fontSize: '20px',
+      lineHeight: '24px',
+    },
+    sm: {
+      fontSize: '16px',
+      lineHeight: '20px',
+    },
+  },
 }
 
 export default theme
