@@ -1,70 +1,99 @@
-import React, { useEffect } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useEffect, useRef, useState } from 'react'
 import { Box, Flex } from '@oneloop/box'
+import theme from '@oneloop/theme'
+import { Text } from '@oneloop/text'
+import { Icon } from '@oneloop/icons'
 
-export const Modal = ({ children, ...props }) => {
-  const portalNode = document.createElement('div')
-
-  useEffect(() => {
-    document.body.appendChild(portalNode)
-    return () => {
-      portalNode.parentNode.removeChild(portalNode)
-    }
-  }, [])
-
-  return ReactDOM.createPortal(
-    <Box
-      __css={{
-        position: 'fixed',
-        left: 0,
-        top: 0,
+export const Modal = ({ children, variant, modalBG, ...props }) => {
+  return (
+    <Box __css={{
+      position: 'fixed',
+      zIndex: '100',
+      width: '100%',
+      height: '100%',
+      top: '0',
+      left: '0',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      {modalBG && <Box __css={{
+        backgroundColor: '#485C66',
+        opacity: '0.7',
         width: '100%',
         height: '100%',
-        bg: 'rgba(4, 4, 4, 0.79)',
-        zIndex: '1000',
-      }}
-    >
-      <Box
-        {...props}
-        __css={{
-          margin: '40px auto 0px auto',
-          width: '690px',
-          height: 'auto',
-          bg: 'neutral.1',
-          borderRadius: '9px',
-        }}
-      >
+        position: 'absolute',
+        zIndex: '-1',
+      }}></Box>}
+      <Box as="modal" tx="modals" {...props} __css={{
+        padding: '34px',
+        maxWidth: '900px',
+        minWidth: '380px !important',
+        background: theme.colors.white,
+        borderRadius: '16px',
+        boxSizing: 'border-box',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '24px',
+        boxShadow: '8px 8px 16px rgba(77, 91, 100, 0.15)',
+      }} variant={variant}>
         {children}
       </Box>
-    </Box>,
-    portalNode
+    </Box>
   )
 }
 
-const ModalHeader = props => (
-  <Flex {...props} __css={{ p: '10px', justifyContent: 'space-between' }} />
-)
+const ModalHeader = ({ closeIcon, variant, text, textSize, ...props }) => {
+  const [justifyContent, setJustifyContent] = useState()
+  const headerRef = useRef(null)
+
+  useEffect(() => {
+    setJustifyContent(headerRef.current.childElementCount > 1 ? 'space-between' : variant[0])
+  }, [])
+
+  return (
+    <Flex
+      as="modal"
+      tx="modals"
+      ref={headerRef}
+      variant={variant[1]}
+      __css={{
+        justifyContent: justifyContent,
+        alignItems: 'center',
+      }}
+      {...props}
+    >
+      <Text
+        style={{
+          fontWeight: '700',
+          color: theme.colors.neutralGray1,
+        }}
+      >
+        {text}
+      </Text>
+      {closeIcon &&
+        <Icon style={{ cursor: 'pointer' }} icon='icon-cerrar' fontSize='18px' color={theme.colors.neutralGray5} onClick={closeIcon} />
+      }
+    </Flex>
+  )
+}
+
 const ModalBody = props => (
   <Box
     {...props}
-    __css={{
-      height: '200px',
-      overflow: 'auto',
-      margin: '4px 0px 4px 0px',
-      padding: '10px',
-    }}
   />
 )
-const ModalFooter = props => (
+
+const ModalFooter = ({ variant = 'start', ...props }) => (
   <Flex
-    {...props}
+    as="modal"
+    tx="modals"
     __css={{
-      textAlign: 'center',
-      borderTop: '1px solid #c4c4c4',
+      justifyContent: variant,
       alignItems: 'center',
-      justifyContent: 'center',
-      padding: '10px',
+      gap: '24px',
     }}
+    {...props}
   />
 )
 

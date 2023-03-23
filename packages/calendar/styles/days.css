@@ -32,16 +32,6 @@
     color: var(--neutralGray2);
 }
 
-.calendarContainer {
-    width: 276px;
-    height: 389px;
-    border-radius: 12px;
-    border: solid 1px var(--neutralGray5);
-    margin: auto;
-    padding: 10px 0px 10px 10px;
-    overflow: hidden;
-}
-
 #days .fc .fc-button-primary {
     box-shadow: none !important;
 }
