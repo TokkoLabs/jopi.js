@@ -5,7 +5,8 @@
   "module": "src/index.js",
   "files": [
     "lib",
-    "styles"
+    "styles",
+    "options"
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.227",
