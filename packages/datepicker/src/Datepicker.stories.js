@@ -20,7 +20,7 @@ export const Plain = () => {
         showPopperArrow={false}
         selected={plainDate}
         onChange={(date) => setPlainDate(date)}
-        dateFormat="dd-MM-yyyy"
+        dateFormat="dd/MM/yyyy"
         minDate={new Date()}
         locale={locale}
         placeholderText="día, mes y año"
