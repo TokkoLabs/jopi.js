@@ -37,7 +37,7 @@ export default {
 }
 
 export const normal = () => (
-  <Tabs bg="primary" color="neutral.0">
+  <Tabs variant='normal' bg="primary" color="neutral.0">
     <Tabs.Tab id="texto" key="Tab0">
       <Box as="a" href="#">
         Texto
@@ -90,21 +90,21 @@ export const normal = () => (
 
 export const tabDefault = () => (
   <Box __css={{ backgroundColor: 'lightgray', width: '250px', height: '80px', padding: '5px' }}>
-    <Tabs>
+    <Tabs variant='normal'>
       <Tabs.Tab variant='default' id="item0" key="Tab0">
-        <Icon icon='icon-buscar' fontSize='12px'/>
+        <Icon icon='icon-buscar' fontSize='12px' />
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab >
       <Tabs.Tab variant='default' id="item1" key="Tab1">
-        <Icon icon='icon-propiedades' fontSize='12px'/>
+        <Icon icon='icon-propiedades' fontSize='12px' />
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Tab variant='default' id="item2" key="Tab2">
-        <Icon icon='icon-contactos' fontSize='12px'/>
+        <Icon icon='icon-contactos' fontSize='12px' />
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Tab variant='default' id="item3" key="Tab3">
-        <Icon icon='icon-emprendimientos' fontSize='12px'/>
+        <Icon icon='icon-emprendimientos' fontSize='12px' />
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Content id="item0" key="Content0">Hola!</Tabs.Content>
@@ -117,27 +117,42 @@ export const tabDefault = () => (
 
 export const tabDefaultWithMoreWidth = () => (
   <Box __css={{ backgroundColor: 'lightgray', width: '350px', height: '80px', padding: '5px' }}>
-    <Tabs>
+    <Tabs variant='normal'>
       <Tabs.Tab variant='default' id="item0" key="Tab0">
-        <Icon icon='icon-buscar' fontSize='12px'/>
+        <Icon icon='icon-buscar' fontSize='12px' />
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab >
       <Tabs.Tab variant='default' id="item1" key="Tab1">
-        <Icon icon='icon-propiedades' fontSize='12px'/>
+        <Icon icon='icon-propiedades' fontSize='12px' />
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Tab variant='default' id="item2" key="Tab2">
-        <Icon icon='icon-contactos' fontSize='12px'/>
+        <Icon icon='icon-contactos' fontSize='12px' />
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Tab variant='default' id="item3" key="Tab3">
-        <Icon icon='icon-emprendimientos' fontSize='12px'/>
+        <Icon icon='icon-emprendimientos' fontSize='12px' />
         <Text variantBody='body600' variantFont='fontSize12'>12</Text>
       </Tabs.Tab>
       <Tabs.Content id="item0" key="Content0">Hola!</Tabs.Content>
       <Tabs.Content id="item1" key="Content1">Segundo item</Tabs.Content>
       <Tabs.Content id="item2" key="Content2">Tercer item</Tabs.Content>
       <Tabs.Content id="item3" key="Content3">Ultimo item</Tabs.Content>
+    </Tabs>
+  </Box>
+)
+
+export const MinimalTabs = () => (
+  <Box __css={{ width: '700px', height: '80px', padding: '5px' }}>
+    <Tabs variant='minimal'>
+      <Tabs.Tab variant='minimal' id="item0" key="Tab0">
+        <Text variantBody='body600' variantFont='fontSize14'>Primera tab</Text>
+      </Tabs.Tab >
+      <Tabs.Tab variant='minimal' id="item1" key="Tab1">
+        <Text variantBody='body600' variantFont='fontSize14'>Segunda tab</Text>
+      </Tabs.Tab>
+      <Tabs.Content id="item0" key="Content0">Primer Item</Tabs.Content>
+      <Tabs.Content id="item1" key="Content1">Segundo item</Tabs.Content>
     </Tabs>
   </Box>
 )
