@@ -5,7 +5,7 @@ import theme from '@oneloop/theme'
 
 const TabsContext = createContext()
 
-export const Tabs = ({ children, itemTabSelected = 1, ...props }) => {
+export const Tabs = ({ children, variant, itemTabSelected = 1, ...props }) => {
   const tabChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Tab' || child.key.toString().match('Tab')
   )
@@ -19,14 +19,9 @@ export const Tabs = ({ children, itemTabSelected = 1, ...props }) => {
     <TabsContext.Provider value={value}>
       <Box
         {...props}
-        __css={{
-          alignItems: 'center',
-          alignContent: 'stretch',
-          justifyContent: 'center',
-          display: 'grid',
-          gridGap: 'var(--grid-gap, 0)',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(0, 1fr))',
-        }}>
+        tx='tabs'
+        variant={variant}
+      >
         {tabChildren}
       </Box>
       {contentChildren.length > 0 && (
@@ -71,7 +66,7 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
         position: 'relative',
         cursor: 'pointer',
         fontFamily: 'Nunito Sans',
-        textTransform: 'uppercase',
+        textTransform: variant === 'minimal' ? 'none' : 'uppercase',
         textAlign: 'center',
         display: 'flex',
         flexDirection: 'row',
@@ -96,7 +91,7 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
       }}
     >
       {children}
-      {(active === id || (variant !== 'normal' && hover)) && (
+      {(active === id || (variant !== 'normal' && hover) || (variant === 'minimal')) && (
         <Box
           as="span"
           __css={{

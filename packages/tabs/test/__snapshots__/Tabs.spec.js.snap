@@ -6,20 +6,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: grid;
-  grid-gap: var(--grid-gap,0);
-  grid-template-columns: repeat(auto-fit,minmax(0,1fr));
 }
 
 .c1 {
@@ -185,20 +171,6 @@ exports[`Tabs renders correctly with only headers 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: grid;
-  grid-gap: var(--grid-gap,0);
-  grid-template-columns: repeat(auto-fit,minmax(0,1fr));
 }
 
 .c1 {
