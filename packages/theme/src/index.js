@@ -2101,9 +2101,9 @@ const theme = {
   },
   toast: {   
     toastBase : {
-      marginLeft: '10px',
+      textIndent: '16px',
       width:'351px',
-      height:'53px'
+      height:'53px',
     },
     toastNormal: {
       borderLeft:'#C9D1D5 solid 8px',
@@ -2123,7 +2123,6 @@ const theme = {
     toastSuccess:{
       borderLeft:'#00D186 solid 8px',
       width:'436px',
-      height:'72px'
     }
   }
 }

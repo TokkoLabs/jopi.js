@@ -15,11 +15,10 @@ export const Toast = ({ variant = 'base', type = 'base', text, ...props }) => (
     {...props}
     __css={{
       bg: 'white',
-      width: '423px',
+      width: '415px',
       height: '72px',
       boxShadow: 'active',
       borderRadius: '6px',
-      justifyContent: 'space-between',
       backgroundColor: '#272E33',
       color: 'white',
       p: 1,
@@ -31,11 +30,11 @@ export const Toast = ({ variant = 'base', type = 'base', text, ...props }) => (
     )}
 
     {type === 'check' && (
-      <Icon icon='icon-check' fontSize='29.33px' color='#00D186' margin='20px 15px'/>
+      <Icon icon='icon-check' fontSize='29.33px' color='#00D186' margin='18px 15px'/>
     )}
 
     {type === 'error' && (
-        <Icon icon='icon-error' fontSize='29.33px' color='#FE8472' margin='20px 15px'/>
+        <Icon icon='icon-error' fontSize='29.33px' color='#FE8472' margin='18px 15px'/>
     )}
     
     {type === 'normal' && (
@@ -43,24 +42,23 @@ export const Toast = ({ variant = 'base', type = 'base', text, ...props }) => (
     )}
     
     {type === 'loading' && (
-        //TO-DO cambiar el loader
+        //TO-DO cambiar el loader por una variante adecuada
         <Loader />
     )}
     
     {type === 'success' && (
         <Box display='flex' justifyContent='flex-end'>
            <Icon icon='icon-check'  color='#00D186'  fontSize='29.33px'  margin='20px 15px' />
-            <Text variant="body.fontSize12" fontWeight='bold' display="flex" alignItems="center" >
+            <Text variant="body.fontSize16" fontWeight='bold' display="flex" alignItems="center" >
                 {text}
             </Text>
-            <ButtonIcon icon='icon-descargar' variant='mainItemSmall'  margin='20px 15px'  color='white' text={'Descargar'}/>
+            <ButtonIcon icon='icon-descargar' variant='mainItemSmall'  margin='20px 15px 20px 40px' fontSize='14px' color='white' text={'Descargar'}/>
         </Box>
-
     )}
 
     
     {type !== 'success' && (
-        <Text variant="body.fontSize12" display="flex" alignItems="center" flexGrow={1}>
+        <Text variant="body.fontSize14" display="flex" alignItems="center" flexGrow={1}>
             {text}
         </Text>
     )}
