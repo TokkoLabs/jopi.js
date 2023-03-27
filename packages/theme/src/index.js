@@ -2002,6 +2002,23 @@ const theme = {
       },
     },
   },
+  tabs: {
+    normal: {
+      alignItems: 'center',
+      alignContent: 'stretch',
+      justifyContent: 'center',
+      display: 'grid',
+      gridGap: 'var(--grid-gap, 0)',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(0, 1fr))',
+    },
+    minimal: {
+      boxSizing: 'border-box',
+      margin: '0',
+      minWidth: '0',
+      display: 'flex',
+      gap: '24px',
+    },
+  },
   tab: {
     normal: {
       padding: 'auto 38px',
@@ -2025,6 +2042,23 @@ const theme = {
       },
       ':focus': {
         color: colors.primary,
+      },
+    },
+    minimal: {
+      padding: '8px 10px',
+      gap: '6px',
+      color: colors.neutralGray2,
+      backgroundColor: colors.transparent,
+      ':hover': {
+        color: colors.neutralGray2,
+      },
+      ':focus': {
+        color: colors.primary,
+      },
+      span: {
+        width: '100%',
+        left: '0',
+        right: '0',
       },
     },
   },
