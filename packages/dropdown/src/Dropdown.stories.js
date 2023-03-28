@@ -582,8 +582,10 @@ export const DropdownNumber = () => {
   const horas = ['12:00', '12:15', '12:30', '12:45', '13:00', '13:15']
 
   return (
-    <Dropdown width={1 / 8}>
-      <Dropdown.Button variant='dropdownDefault' text={value} filled={value !== 'Seleccione'} />
+    <Dropdown
+      width={1 / 12}
+    >
+      <Dropdown.Button icon='icon-reloj' variant='dropdownDefault' text={value} filled={value !== 'Seleccione'} />
       <Dropdown.Items style={{ width: 'auto' }}>
         {horas.map((hora, i) => (
           <Dropdown.Default key={i} onClick={e => { setValue(hora) }}>
