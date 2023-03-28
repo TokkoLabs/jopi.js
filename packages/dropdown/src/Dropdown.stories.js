@@ -583,7 +583,7 @@ export const DropdownNumber = () => {
 
   return (
     <Dropdown
-      width={1 / 12}
+      style={{ width: '200px' }}
     >
       <Dropdown.Button icon='icon-reloj' variant='dropdownDefault' text={value} filled={value !== 'Seleccione'} />
       <Dropdown.Items style={{ width: 'auto' }}>
