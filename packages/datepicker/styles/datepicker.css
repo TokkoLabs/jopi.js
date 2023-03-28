@@ -441,11 +441,11 @@
   box-sizing: border-box;
 }
 
-.react-datepicker__day--outside-month{
+.react-datepicker__day--outside-month {
   color: var(--neutralGray5);
 }
 
-.react-datepicker__day--outside-month:hover{
+.react-datepicker__day--outside-month:hover {
   background-color: var(--neutralGray7) !important;
   color: var(--neutralGray4) !important;
 }
@@ -898,4 +898,15 @@
 .react-datepicker__day--range-start,
 .react-datepicker__day--range-end {
   border-radius: 1rem;
+}
+
+.customInputPicker {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+  gap: 8px;
+  height: 32px;
+  background: var(--neutralGray9);
+  border-radius: 8px;
+
 }
