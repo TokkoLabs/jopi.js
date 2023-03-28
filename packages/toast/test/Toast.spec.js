@@ -1,55 +1,30 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme, { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 import 'jest-styled-components'
 
-import { Alert } from '../src'
-import { Button } from '@oneloop/button'
+import { Box } from '@oneloop/box'
+import { Badge } from '@oneloop/badge'
+import { Checkbox } from '@oneloop/checkbox'
+import { Image } from '@oneloop/image'
+import { Text } from '@oneloop/text'
+import { Card } from '../src'
 
-Enzyme.configure({ adapter: new Adapter() })
-
-describe('Alert', () => {
-  beforeAll(() => {
-    const div = document.createElement('div')
-    window.domNode = div
-    document.body.appendChild(div)
-  })
-
-  test('primary default', () => {
+describe('Card', () => {
+  test('renders correctly', () => {
     const tree = renderer
       .create(
-        <Alert text="Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!" />
+        <Card id='0' variant='contacts' active style={{ width: '224px' }}>
+          <Checkbox />
+          <Image variant="rows" src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+          <Box sx={{ position: 'relative' }}>
+            <Text variant='bodyBold.fontSize10' style={{ color: '#056C53' }}>Disponible</Text>
+            <Text variant='body.fontSize11'>IHO2543876</Text>
+            <Text variant={['body.fontSize11', 'ellipsis']}>Ciudad de la paz 11456</Text>
+            <Badge variant="badgeTips" style={{ position: 'absolute', top: '-2px', right: '4px' }}>{'50%'}</Badge>
+          </Box>
+        </Card>
       )
       .toJSON()
 
     expect(tree).toMatchSnapshot()
   })
-
-  test('warning', () => {
-    const tree = renderer
-      .create(<Alert type="warning" text="Danger Zone!!!!" />)
-      .toJSON()
-
-    expect(tree).toMatchSnapshot()
-  })
-
-  test('danger', () => {
-    const tree = renderer
-      .create(
-        <Alert type="danger" text="NOOOOOO!!! Perdonanos, explotó todo! :(" />
-      )
-      .toJSON()
-
-    expect(tree).toMatchSnapshot()
-  })
-
-  test('closed', () => {
-    const closeFuction = () => {}
-    const component = shallow(<Alert id='itemToClick' closeFunction={closeFuction} text="Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!" />)
-    expect(component.find(<Button/>).exists).toBeTruthy()
-    component.find(Button).simulate('click')
-
-    expect(component).toMatchSnapshot()
-  })
-})

@@ -51,7 +51,7 @@ export const Toast = ({ variant = 'base', type = 'base', text, download, ...prop
                 {text}
             </Text>
             {/* lograr que el onclick funcione */}
-            <ButtonIcon icon='icon-descargar' onClick={download} variant='mainItemSmall'  margin='20px 15px 20px 40px' fontSize='14px' color='white' text={'Descargar'}/>
+            <ButtonIcon icon='icon-descargar' variant='mainItemSmall'  margin='20px 15px 20px 40px' fontSize='14px' color='white' text={'Descargar'} onClick={download}/>
         </Box>
     )}
 

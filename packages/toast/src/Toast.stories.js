@@ -138,7 +138,7 @@ export const check = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant='toastSuccess' type="success" text="Report export ready!" closeFunction={setOpenAlert} download='console.log(hola)'/>
+          <Toast variant='toastSuccess' type="success" text="Report export ready!" closeFunction={setOpenAlert} download={()=>{console.log('hola')}}/>
         )}
       </React.Fragment>
     )
