@@ -1,14 +1,12 @@
 import React from 'react'
 import { Flex } from '@oneloop/box'
-import { Check, Exclamation, Times } from '@oneloop/icons'
 import { Icon } from '@oneloop/icons'
 import { Text } from '@oneloop/text'
-import { Button } from '@oneloop/button'
 import { ButtonIcon } from '@oneloop/button'
 import { Box } from '@oneloop/box'
 import { Loader } from '@oneloop/loader'
 
-export const Toast = ({ variant = 'base', type = 'base', text, ...props }) => (
+export const Toast = ({ variant = 'base', type = 'base', text, download, ...props }) => (
   <Flex
     tx='toast'
     variant={variant}
@@ -52,7 +50,8 @@ export const Toast = ({ variant = 'base', type = 'base', text, ...props }) => (
             <Text variant="body.fontSize16" fontWeight='bold' display="flex" alignItems="center" >
                 {text}
             </Text>
-            <ButtonIcon icon='icon-descargar' variant='mainItemSmall'  margin='20px 15px 20px 40px' fontSize='14px' color='white' text={'Descargar'}/>
+            {/* lograr que el onclick funcione */}
+            <ButtonIcon icon='icon-descargar' onClick={download} variant='mainItemSmall'  margin='20px 15px 20px 40px' fontSize='14px' color='white' text={'Descargar'}/>
         </Box>
     )}
 
