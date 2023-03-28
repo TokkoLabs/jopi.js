@@ -72,8 +72,6 @@ Loader.defaultProps = {
   text: '',
 }
 
-
-
 const circle = keyframes`
   0% {
     transform: rotate(360deg);
@@ -99,9 +97,8 @@ const StyledCircle = styled(Box)`
     animation: ${circle} 1s infinite ease;
   }
 `
-export const Spinner = ({...props }) => (
-  <Box __css={{display: 'inline-flex', alignItems: 'baseline', heigth: '50px', width: '100%', background: '#fff' }}>
+export const Spinner = ({ ...props }) => (
+  <Box __css={{ display: 'inline-flex', alignItems: 'baseline', heigth: '50px', width: '100%', background: '#fff' }}>
     <StyledCircle {...props} __css={{ mr: '10px' }} />
   </Box>
 )
-

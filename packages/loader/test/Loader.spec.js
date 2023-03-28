@@ -2,11 +2,17 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { Loader } from '../src'
+import { Loader, Spinner } from '../src'
 
 describe('Loader', () => {
   test('renders correctly', () => {
     const tree = renderer.create(<Loader text="Loading"/>).toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('renders correctly', () => {
+    const tree = renderer.create(<Spinner />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })
