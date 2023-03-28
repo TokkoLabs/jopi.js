@@ -71,3 +71,37 @@ Loader.defaultProps = {
   kind: 'primary',
   text: '',
 }
+
+
+
+const circle = keyframes`
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+`
+
+const StyledCircle = styled(Box)`
+  ::before {
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    content: '';
+    display: block;
+    top: 0;
+    transform-origin: 50%;
+    background: linear-gradient(white, white), conic-gradient(#878C9B, #FFFFFF);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: ${circle} 1s infinite ease;
+  }
+`
+export const Spinner = ({...props }) => (
+  <Box __css={{display: 'inline-flex', alignItems: 'baseline', heigth: '50px', width: '100%', background: '#fff' }}>
+    <StyledCircle {...props} __css={{ mr: '10px' }} />
+  </Box>
+)
+

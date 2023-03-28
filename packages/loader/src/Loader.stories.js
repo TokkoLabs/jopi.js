@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Loader } from '.'
+import { Loader, Spinner } from '.'
 
 export default {
   component: Loader,
@@ -10,3 +10,5 @@ export default {
 export const normal = () => <Loader />
 
 export const withText = () => <Loader text="Loading" />
+
+export const spinner = () => <Spinner />
