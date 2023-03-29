@@ -25,7 +25,7 @@ export const Modal = ({ children, variant, modalBG, ...props }) => {
         position: 'absolute',
         zIndex: '-1',
       }}></Box>}
-      <Box as="modal" tx="modals" {...props} __css={{
+      <Box as="div" tx="modals" {...props} __css={{
         padding: '34px',
         maxWidth: '900px',
         minWidth: '380px !important',
@@ -53,7 +53,7 @@ const ModalHeader = ({ closeIcon, variant, text, textSize, ...props }) => {
 
   return (
     <Flex
-      as="modal"
+      as="div"
       tx="modals"
       ref={headerRef}
       variant={variant[1]}
@@ -86,7 +86,7 @@ const ModalBody = props => (
 
 const ModalFooter = ({ variant = 'start', ...props }) => (
   <Flex
-    as="modal"
+    as="div"
     tx="modals"
     __css={{
       justifyContent: variant,

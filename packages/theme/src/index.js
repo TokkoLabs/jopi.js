@@ -364,6 +364,12 @@ const switches = {
 }
 
 const theme = {
+  tags: {
+    secondary: {
+      color: colors.secondary,
+      background: '#D4EBF2',
+    },
+  },
   fontSizes: fontSize,
   fonts: {
     primary: '"Nunito Sans", sans-serif',

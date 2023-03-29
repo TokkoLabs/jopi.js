@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tags secondary 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: Nunito Sans;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3px 4px;
+  gap: 5px;
+  height: 20px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+<span
+  className="c0"
+>
+  Test
+</span>
+`;
