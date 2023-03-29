@@ -7,6 +7,7 @@ export const Tags = ({ children, closeIcon, variant, ...props }) => {
   return (
     <>
       <Box
+        as='span'
         tx="tags"
         variant={variant}
         {...props}

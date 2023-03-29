@@ -7,6 +7,20 @@ import { Button } from '@oneloop/button'
 export default {
   component: Tags,
   title: 'Tags',
+  argTypes: {
+    variant: {
+      name: 'variant',
+      description: '\n* **Variantes de tags disponibles:** \'secondary\',',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    closeIcon: {
+      name: 'closeIcon',
+      description: 'Muestra la X para eliminar el tag, recibe la funcionalidad correspondiente.',
+      type: 'funct',
+      control: { type: 'none' },
+    },
+  },
 }
 
 export const Secondary = () => {

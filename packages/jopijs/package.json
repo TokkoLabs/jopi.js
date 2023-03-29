@@ -32,6 +32,7 @@
     "@oneloop/switch": "^1.2.230",
     "@oneloop/table": "^1.2.243",
     "@oneloop/tabs": "^1.4.226",
+    "@oneloop/tags": "^1.0.0",
     "@oneloop/text": "^1.2.228",
     "@oneloop/textarea": "^1.0.175",
     "@oneloop/tooltip": "^1.0.32",
