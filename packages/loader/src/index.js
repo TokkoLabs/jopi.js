@@ -53,10 +53,15 @@ const LoaderStyled = styled(Box)`
     })}
   }
 `
-export const Loader = ({ text, ...props }) => (
-  <Box __css={{ display: 'inline-flex', alignItems: 'baseline' }}>
+export const Loader = ({ variant='spinner',text, ...props }) => (
+  <Box as='loader' tx='loaders' variant={variant}>
+    { variant === 'spinner' && 
+    <StyledCircle {...props} __css={{ mr: '10px' }} />
+    }
+    { variant === 'normal' &&
     <LoaderStyled {...props} __css={{ mr: '10px' }} />
-    {text && <Text variant="button.1">{text}</Text>}
+    }
+    {/* {text && <Text variant="button.1">{text}</Text>} */}
   </Box>
 )
 
@@ -98,7 +103,5 @@ const StyledCircle = styled(Box)`
   }
 `
 export const Spinner = ({ ...props }) => (
-  <Box __css={{ display: 'inline-flex', alignItems: 'baseline', heigth: '50px', width: '100%', background: '#fff' }}>
     <StyledCircle {...props} __css={{ mr: '10px' }} />
-  </Box>
 )

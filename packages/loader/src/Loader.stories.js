@@ -7,8 +7,8 @@ export default {
   title: 'Loader',
 }
 
-export const normal = () => <Loader />
+export const normal = () => <Loader variant='normal'/> 
 
-export const withText = () => <Loader text="Loading" />
+export const spinner = () => <Loader variant='spinner' />
 
-export const spinner = () => <Spinner />
+export const bounce = () => <Loader variant='normal'/>
