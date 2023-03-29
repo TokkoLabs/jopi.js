@@ -5,14 +5,6 @@ exports[`Loader renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
 }
 
 .c1 {
@@ -24,36 +16,25 @@ exports[`Loader renders correctly 1`] = `
   height: small;
 }
 
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: primary;
-}
-
-.c2 {
-  position: relative;
-  display: inline-block;
-  height: 37px;
-  width: 16px;
-}
-
 .c2::before {
-  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
   content: '';
   display: block;
   top: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
   -webkit-transform-origin: 50%;
   -ms-transform-origin: 50%;
   transform-origin: 50%;
-  -webkit-animation: fIIevM 500ms alternate infinite ease;
-  animation: fIIevM 500ms alternate infinite ease;
+  background: linear-gradient(white,white),conic-gradient(#878C9B,#FFFFFF);
+  background-origin: border-box;
+  background-clip: content-box,border-box;
+  -webkit-animation: bCrGrT 1s infinite ease;
+  animation: bCrGrT 1s infinite ease;
 }
 
-<div
+<loader
   className="c0"
 >
   <div
@@ -61,27 +42,14 @@ exports[`Loader renders correctly 1`] = `
     kind="primary"
     size="small"
   />
-  <p
-    className="c3"
-  >
-    Loading
-  </p>
-</div>
+</loader>
 `;
 
-exports[`Loader renders correctly two 1`] = `
+exports[`Loader renders correctly 2`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
 }
 
 .c1 {
@@ -115,7 +83,56 @@ exports[`Loader renders correctly two 1`] = `
   animation: fIIevM 500ms alternate infinite ease;
 }
 
-<div
+<loader
+  className="c0"
+>
+  <div
+    className="c1 c2"
+    kind="secondary"
+    size="medium"
+  />
+</loader>
+`;
+
+exports[`Loader renders correctly two 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 10px;
+  width: medium;
+  height: medium;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 24px;
+}
+
+.c2::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: fIIevM 500ms alternate infinite ease;
+  animation: fIIevM 500ms alternate infinite ease;
+}
+
+<loader
   className="c0"
 >
   <div
@@ -123,6 +140,5 @@ exports[`Loader renders correctly two 1`] = `
     kind="primary"
     size="medium"
   />
-  
-</div>
+</loader>
 `;

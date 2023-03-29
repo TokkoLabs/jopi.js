@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import { variant } from 'styled-system'
 import { Box } from '@oneloop/box'
-import { Text } from '@oneloop/text'
 
 const size = type => {
   switch (type) {
@@ -53,21 +52,49 @@ const LoaderStyled = styled(Box)`
     })}
   }
 `
-export const Loader = ({ text, ...props }) => (
-  <Box __css={{ display: 'inline-flex', alignItems: 'baseline' }}>
+export const Loader = ({ variant = 'bounce', ...props }) => (
+  <Box as='loader' tx='loaders' variant={variant}>
+    { variant === 'spinner' &&
+    <StyledCircle {...props} __css={{ mr: '10px' }} />
+    }
+    { variant === 'bounce' &&
     <LoaderStyled {...props} __css={{ mr: '10px' }} />
-    {text && <Text variant="button.1">{text}</Text>}
+    }
   </Box>
 )
 
 Loader.propTypes = {
   size: PropTypes.string,
   kind: PropTypes.string,
-  text: PropTypes.string,
 }
 
 Loader.defaultProps = {
   size: 'small',
   kind: 'primary',
-  text: '',
 }
+
+const circle = keyframes`
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+`
+
+const StyledCircle = styled(Box)`
+  ::before {
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    content: '';
+    display: block;
+    top: 0;
+    transform-origin: 50%;
+    background: linear-gradient(white, white), conic-gradient(#878C9B, #FFFFFF);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: ${circle} 1s infinite ease;
+  }
+`
