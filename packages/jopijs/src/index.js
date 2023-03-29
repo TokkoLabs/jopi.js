@@ -23,6 +23,7 @@ import { Switch } from '@oneloop/switch'
 import { Submenu, ParentSubmenu } from '@oneloop/submenu'
 import { Table } from '@oneloop/table'
 import { Tabs } from '@oneloop/tabs'
+import { Tags } from '@oneloop/tags'
 import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
 import { Tooltip, ParentTooltip } from '@oneloop/tooltip'
@@ -60,6 +61,7 @@ export {
   Table,
   Text,
   Tabs,
+  Tags,
   Textarea,
   Tooltip,
   ThemeProvider,
