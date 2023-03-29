@@ -1817,14 +1817,14 @@ const theme = {
     },
     bounce: {
       display: 'inline-flex',
-      alignItems: 'baseline'
+      alignItems: 'baseline',
     },
     spinner: {
-      display: 'inline-flex', 
-      alignItems: 'baseline', 
-      heigth: '50px', 
-      width: '100%', 
-      background: '#fff'
+      display: 'inline-flex',
+      alignItems: 'baseline',
+      heigth: '50px',
+      width: '100%',
+      background: '#fff',
     },
   },
   switches: switches,

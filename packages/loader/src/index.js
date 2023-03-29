@@ -54,7 +54,7 @@ const LoaderStyled = styled(Box)`
 `
 export const Loader = ({ variant = 'bounce', ...props }) => (
   <Box as='loader' tx='loaders' variant={variant}>
-    { variant === 'spinner' && 
+    { variant === 'spinner' &&
     <StyledCircle {...props} __css={{ mr: '10px' }} />
     }
     { variant === 'bounce' &&

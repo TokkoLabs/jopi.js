@@ -11,7 +11,7 @@ export default {
       description: '\n* **Variantes que admite:** _spinner / bounce _',
     },
     kind: {
-      description: 'Color de loader bounce \n* **Variantes que admite:** _primary / secondary _'
+      description: 'Color de loader bounce \n* **Variantes que admite:** _primary / secondary _',
     },
     size: {
       description: 'Tamaño del loader tipo _bounce_ \n* **Variantes que admite:** _small / medium_',
