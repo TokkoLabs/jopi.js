@@ -1815,7 +1815,7 @@ const theme = {
     secondary: {
       backgroundColor: colors.secondary,
     },
-    normal: {
+    bounce: {
       display: 'inline-flex',
       alignItems: 'baseline'
     },

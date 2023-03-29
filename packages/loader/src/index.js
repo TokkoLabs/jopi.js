@@ -53,15 +53,14 @@ const LoaderStyled = styled(Box)`
     })}
   }
 `
-export const Loader = ({ variant='spinner',text, ...props }) => (
+export const Loader = ({ variant ,text, ...props }) => (
   <Box as='loader' tx='loaders' variant={variant}>
     { variant === 'spinner' && 
     <StyledCircle {...props} __css={{ mr: '10px' }} />
     }
-    { variant === 'normal' &&
+    { variant === 'bounce' &&
     <LoaderStyled {...props} __css={{ mr: '10px' }} />
     }
-    {/* {text && <Text variant="button.1">{text}</Text>} */}
   </Box>
 )
 
@@ -102,6 +101,3 @@ const StyledCircle = styled(Box)`
     animation: ${circle} 1s infinite ease;
   }
 `
-export const Spinner = ({ ...props }) => (
-    <StyledCircle {...props} __css={{ mr: '10px' }} />
-)
