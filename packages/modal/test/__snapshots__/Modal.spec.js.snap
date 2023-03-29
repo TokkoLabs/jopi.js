@@ -94,10 +94,10 @@ exports[`Modal renders correctly 1`] = `
 <div
   className="c0"
 >
-  <modal
+  <div
     className="c1"
   >
-    <modal
+    <div
       className="c2 c3"
     >
       <p
@@ -111,17 +111,17 @@ exports[`Modal renders correctly 1`] = `
       >
         This is the header
       </p>
-    </modal>
+    </div>
     <div
       className="c5"
     >
       This is the body
     </div>
-    <modal
+    <div
       className="c6 c3"
     >
       This is the footer
-    </modal>
-  </modal>
+    </div>
+  </div>
 </div>
 `;

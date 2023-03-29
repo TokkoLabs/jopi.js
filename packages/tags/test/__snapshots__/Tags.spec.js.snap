@@ -23,9 +23,9 @@ exports[`Tags secondary 1`] = `
   line-height: 12px;
 }
 
-<div
+<span
   className="c0"
 >
   Test
-</div>
+</span>
 `;
