@@ -10,24 +10,20 @@ export const Wrapped = ({ items, ...props }) => {
   let widthElements = 0
   let elements
 
-
   useEffect(() => {
     widthWrapper = Ref.current.offsetWidth
     elements = Ref.current.children
 
     for (let index = 0; index < elements.length; index++) {
       widthElements = widthElements + elements[index].offsetWidth
-      
+
       if (widthElements > widthWrapper) {
-        elements[index].style.display = "none"
-        console.log('entro aca')
+        elements[index].style.display = 'none'
       }
-      //elements[index].style.display = "none"
     }
 
     console.log({ widthElements, widthWrapper })
   }, [])
-
 
   return (
     <Box
