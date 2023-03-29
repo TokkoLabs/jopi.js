@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import { variant } from 'styled-system'
 import { Box } from '@oneloop/box'
-import { Text } from '@oneloop/text'
 
 const size = type => {
   switch (type) {
@@ -53,7 +52,7 @@ const LoaderStyled = styled(Box)`
     })}
   }
 `
-export const Loader = ({ variant ,text, ...props }) => (
+export const Loader = ({ variant = 'bounce', ...props }) => (
   <Box as='loader' tx='loaders' variant={variant}>
     { variant === 'spinner' && 
     <StyledCircle {...props} __css={{ mr: '10px' }} />
@@ -67,13 +66,11 @@ export const Loader = ({ variant ,text, ...props }) => (
 Loader.propTypes = {
   size: PropTypes.string,
   kind: PropTypes.string,
-  text: PropTypes.string,
 }
 
 Loader.defaultProps = {
   size: 'small',
   kind: 'primary',
-  text: '',
 }
 
 const circle = keyframes`
