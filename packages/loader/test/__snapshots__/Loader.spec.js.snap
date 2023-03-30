@@ -5,7 +5,6 @@ exports[`Loader renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  width: 20px;
 }
 
 .c1 {
@@ -48,7 +47,6 @@ exports[`Loader renders correctly 2`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  width: 20px;
 }
 
 .c1 {
@@ -97,7 +95,6 @@ exports[`Loader renders correctly two 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  width: 20px;
 }
 
 .c1 {
