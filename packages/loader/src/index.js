@@ -1,4 +1,4 @@
-/* eslint-disable indent */
+//* eslint-disable indent */
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
@@ -33,7 +33,6 @@ const bounce = keyframes`
 
 const LoaderStyled = styled(Box)`
   position: relative;
-  display: inline-block;
   height: 37px;
   width: ${props => size(props.size)};
   ::before {
@@ -74,7 +73,7 @@ Loader.defaultProps = {
 }
 
 const circle = keyframes`
-  0% {
+ 0% {
     transform: rotate(360deg);
   }
   100% {
@@ -83,18 +82,13 @@ const circle = keyframes`
 `
 
 const StyledCircle = styled(Box)`
-  ::before {
-    height:20px;
-    width:20px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    content: '';
-    display: block;
-    top: 0;
-    transform-origin: 50%;
-    background: linear-gradient(white, white), conic-gradient(#878C9B, #FFFFFF);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    animation: ${circle} 1s infinite ease;
-  }
+width: 2em;
+height: 2em;
+padding: 8px;
+border-radius: 50%;
+background-image: conic-gradient(#272E33, #FFFFFF);
+animation: ${circle} 1s ease 0s infinite;
+clip-path: circle(80px at center);
+-webkit-mask-image: radial-gradient(circle at center, transparent 54%, black 54.8%);
+mask-image: radial-gradient(circle at center, transparent 54%, black 54.8%);
 `
