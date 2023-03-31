@@ -10,7 +10,7 @@ export default {
   argTypes: {
     variant: {
       name: 'variant',
-      description: '**Variantes hola del toast:** [\n \'toastBase, toastNormal, toastAlert, toastCheck, toastError,toastLoadingtoastSuccess]',
+      description: '**Variantes del toast:** [\n \'toastBase, toastNormal, toastAlert, toastCheck, toastError,toastLoadingtoastSuccess]',
     },
     modal: {
       name: 'Modal',
