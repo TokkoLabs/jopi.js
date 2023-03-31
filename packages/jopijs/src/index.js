@@ -27,7 +27,7 @@ import { Tags } from '@oneloop/tags'
 import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
 import { Tooltip, ParentTooltip } from '@oneloop/tooltip'
-import { Toast } from '@oneloop/toast';
+import { Toast } from '@oneloop/toast'
 import { ThemeProvider } from 'styled-components'
 import FullCalendar from '@fullcalendar/react'
 export {

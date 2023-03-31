@@ -9,9 +9,9 @@ export default {
   title: 'Toast',
   argTypes: {
     variant: {
-        name: 'variant',
-        description: '**Variantes disponibles del toast:** [\n \'toastBase\',\'toastNormal\',\'toastAlert\,\'toastCheck\,\'toastError\,\'toastLoading\,\'toastSuccess\]',
-      },
+      name: 'variant',
+      description: '**Variantes hola del toast:** [\n \'toastBase, toastNormal, toastAlert, toastCheck, toastError,toastLoadingtoastSuccess]',
+    },
     modal: {
       name: 'Modal',
       description: '**modalBG**: Muestra o no el overlay.<br> **variant**: Recibe la posición del modal, por defecto está centrado, si no puede recibir "top" o "bottom".',
@@ -40,7 +40,6 @@ export default {
 }
 
 export const base = () => <Toast type='base' variant='toastBase' text="Seleccione una propiedad"/>
-     
 
 export const normal = () =>
   React.createElement(() => {
@@ -87,7 +86,7 @@ export const check = () =>
     )
   })
 
-  export const error = () =>
+export const error = () =>
   React.createElement(() => {
     const [openAlert, setOpenAlert] = useToggle(false)
     return (
@@ -101,7 +100,7 @@ export const check = () =>
       </React.Fragment>
     )
   })
-  export const loading = () =>
+export const loading = () =>
   React.createElement(() => {
     const [openAlert, setOpenAlert] = useToggle(false)
     return (
@@ -115,7 +114,7 @@ export const check = () =>
       </React.Fragment>
     )
   })
-  export const exporting = () =>
+export const exporting = () =>
   React.createElement(() => {
     const [openAlert, setOpenAlert] = useToggle(false)
     return (
@@ -129,7 +128,7 @@ export const check = () =>
       </React.Fragment>
     )
   })
-  export const success = () =>
+export const success = () =>
   React.createElement(() => {
     const [openAlert, setOpenAlert] = useToggle(false)
     return (
@@ -138,9 +137,8 @@ export const check = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant='toastSuccess' type="success" text="Report export ready!" closeFunction={setOpenAlert} download={()=>{console.log('hola')}}/>
+          <Toast variant='toastSuccess' type="success" text="Report export ready!" closeFunction={setOpenAlert} download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>
         )}
       </React.Fragment>
     )
   })
-

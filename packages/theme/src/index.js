@@ -335,8 +335,6 @@ const forms = {
   },
 }
 
-
-
 const switches = {
   primary: {
     border: `1px solid ${colors.neutral[3]}`,
@@ -2099,32 +2097,32 @@ const theme = {
       lineHeight: '20px',
     },
   },
-  toast: {   
-    toastBase : {
+  toast: {
+    toastBase: {
       textIndent: '16px',
-      width:'351px',
-      height:'53px',
+      width: '351px',
+      height: '53px',
     },
     toastNormal: {
-      borderLeft:'#C9D1D5 solid 8px',
+      borderLeft: '#C9D1D5 solid 8px',
     },
-    toastAlert : {
-      borderLeft:'#A2B5F7 solid 8px',
+    toastAlert: {
+      borderLeft: '#A2B5F7 solid 8px',
     },
     toastCheck: {
-      borderLeft:'#00D186 solid 8px',
+      borderLeft: '#00D186 solid 8px',
     },
     toastError: {
-      borderLeft:'#FE8472 solid 8px',
+      borderLeft: '#FE8472 solid 8px',
     },
     toastLoading: {
-      borderLeft:'red solid 8px',
+      borderLeft: 'red solid 8px',
     },
-    toastSuccess:{
-      borderLeft:'#00D186 solid 8px',
-      width:'436px',
-    }
-  }
+    toastSuccess: {
+      borderLeft: '#00D186 solid 8px',
+      width: '436px',
+    },
+  },
 }
 
 export default theme
