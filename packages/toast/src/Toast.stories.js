@@ -39,7 +39,20 @@ export default {
   },
 }
 
-export const base = () => <Toast type='base' variant='toastBase' text="Seleccione una propiedad"/>
+export const base = () =>
+  React.createElement(() => {
+    const [openAlert, setOpenAlert] = useToggle(false)
+    return (
+      <React.Fragment>
+        <Button onClick={setOpenAlert}>Show base toast</Button>
+        <br />
+        <br />
+        {openAlert && (
+           <Toast variant='base' text="Seleccione una propiedad" closeFunction={setOpenAlert}/>
+        )}
+      </React.Fragment>
+    )
+  })
 
 export const normal = () =>
   React.createElement(() => {
@@ -50,7 +63,7 @@ export const normal = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast type='normal' variant='toastNormal' text="Seleccione una propiedad" closeFunction={setOpenAlert} />
+          <Toast variant="normal" text="Seleccione una propiedad" icon={'icon-check'} closeFunction={setOpenAlert} />
         )}
       </React.Fragment>
     )
@@ -65,7 +78,7 @@ export const alert = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant='toastAlert' type="alert" text="Alert message" closeFunction={setOpenAlert} />
+          <Toast icon={'icon-alertas'} variant="alert" text="Alert message" closeFunction={setOpenAlert} />
         )}
       </React.Fragment>
     )
@@ -80,7 +93,7 @@ export const check = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant='toastCheck' type="check" text="Success message" closeFunction={setOpenAlert} />
+          <Toast variant="check" text="Success message" icon={'icon-check'} closeFunction={setOpenAlert} />
         )}
       </React.Fragment>
     )
@@ -95,7 +108,7 @@ export const error = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant='toastError' type="error" text="Error message" closeFunction={setOpenAlert} />
+          <Toast variant="error" text="Error message" icon={'icon-error'} closeFunction={setOpenAlert} />
         )}
       </React.Fragment>
     )
@@ -109,7 +122,7 @@ export const loading = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant='toastNormal' type="loading" text="Cargando..." closeFunction={setOpenAlert} />
+          <Toast variant="loading" text="Cargando..."  closeFunction={setOpenAlert} />
         )}
       </React.Fragment>
     )
@@ -123,7 +136,7 @@ export const exporting = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant='toastNormal' type="loading" text="Exportando..." closeFunction={setOpenAlert} />
+          <Toast variant="loading" text="Exportando..." closeFunction={setOpenAlert} />
         )}
       </React.Fragment>
     )
@@ -137,7 +150,7 @@ export const success = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant='toastSuccess' type="success" text="Report export ready!" closeFunction={setOpenAlert} download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>
+          <Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' closeFunction={setOpenAlert} download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>
         )}
       </React.Fragment>
     )
