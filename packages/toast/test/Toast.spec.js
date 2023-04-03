@@ -1,8 +1,15 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 
+import { ButtonIcon } from '@oneloop/button'
 import { Toast } from '../src'
+
+
+Enzyme.configure({ adapter: new Adapter() })
+
 
 describe('Toast', () => {
   test('renders correctly', () => {
@@ -51,5 +58,14 @@ describe('Toast', () => {
     const tree = renderer.create(<Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' variantText='bodyBold.fontSize16' download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>).toJSON()
 
     expect(tree).toMatchSnapshot()
+  })
+
+  test('closed', () => {
+    const closeFuction = () => {}
+    const component = shallow(<Toast variant="loading" text="Exportando..." variantLoader={'spinner'} closeFunction={closeFuction}/>)
+    expect(component.find(<ButtonIcon/>).exists).toBeTruthy()
+    component.find(ButtonIcon).simulate('click')
+
+    expect(component).toMatchSnapshot()
   })
 })
