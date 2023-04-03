@@ -11,39 +11,52 @@ export const Toast = ({ variant = 'base', variantLoader, variantText = 'body.fon
     variant={variant}
     {...props}
     __css={{
-      bg: 'white',
-      width: '415px',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      padding: '0px 24px 0px 0px',
+      gap: '24px',
+      position: 'relative',
+      width: '423px',
       height: '72px',
-      boxShadow: 'active',
+      background: '#272E33',
       borderRadius: '6px',
-      backgroundColor: '#272E33',
-      color: 'white',
-      p: 1,
+      color:'white'
     }}
   >
-    { icon !== undefined && (
-    <Icon icon={icon} fontSize='29.33px' margin = '19px 15px'/>
+    <Box __css={{
+      width:'327px',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      padding: '0px',
+      gap: '16px',
+      marginLeft:'24px',
+            }} >
+      { icon !== undefined && (
+    <Icon icon={icon} fontSize='32px' />
     )}
 
-    {variantLoader !== undefined && (
-      <Loader variant={variantLoader} margin='19px 15px'/>
+    { variantLoader !== undefined && (
+      <Loader variant={variantLoader} />
     )}
 
-      {text !== undefined &&
+    { text !== undefined &&
       (<Text variant={variantText} display="flex" alignItems="center">
         {text}
-      </Text>)}
+      </Text>
+    )}
 
-      {download !== undefined && (
-      <ButtonIcon icon='icon-descargar' variant='mainItemSmall' margin='20px 15px 20px 40px' fontSize='14px' color='white' text={textDownload} onClick={download}/>
-      )}
+    { download !== undefined && (
+      <ButtonIcon icon='icon-descargar' variant='mainItemSmall' fontSize='14px' color='white' text={textDownload} onClick={download}/>
+    )} 
+    </Box>
 
-    <Box margin='auto'>
       <ButtonIcon
         color='white'
         icon='icon-cerrar'
-        variant={['subtleTrasnparentIconClearButton', 'iconLarge']}
+        variant={['subtleTrasnparentIconClearButton', 'iconMedium']}
         onClick={() => props.closeFunction()}/>
-    </Box>
+
   </Flex>
 )
