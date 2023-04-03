@@ -41,13 +41,13 @@ describe('Toast', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test('renders correctly five', () => {
+  test('renders correctly six', () => {
     const tree = renderer.create(<Toast variant="loading" text="Exportando..." variantLoader={'spinner'} />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
-  test('renders correctly five', () => {
+  test('renders correctly seven', () => {
     const tree = renderer.create(<Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' variantText='bodyBold.fontSize16' download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>).toJSON()
 
     expect(tree).toMatchSnapshot()
