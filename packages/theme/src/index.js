@@ -2097,6 +2097,36 @@ const theme = {
       lineHeight: '20px',
     },
   },
+  toast: {
+    base: {
+      textIndent: '16px',
+      width: '351px',
+      height: '53px',
+    },
+    normal: {
+      borderLeft: '#C9D1D5 solid 8px',
+    },
+    alert: {
+      borderLeft: '#A2B5F7 solid 8px',
+      color: '#A2B5F7',
+    },
+    check: {
+      borderLeft: '#00D186 solid 8px',
+      color: '#00D186',
+    },
+    error: {
+      borderLeft: '#FE8472 solid 8px',
+      color: '#FE8472',
+    },
+    loading: {
+      borderLeft: '#C9D1D5 solid 8px',
+    },
+    success: {
+      borderLeft: '#00D186 solid 8px',
+      width: '436px',
+      color: '#00D186',
+    },
+  },
 }
 
 export default theme
