@@ -122,7 +122,7 @@ export const loading = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant="loading" text="Cargando..."  closeFunction={setOpenAlert} />
+          <Toast variant="loading" text="Cargando..." variantLoader={'spinner'} closeFunction={setOpenAlert} />
         )}
       </React.Fragment>
     )
@@ -136,7 +136,7 @@ export const exporting = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant="loading" text="Exportando..." closeFunction={setOpenAlert} />
+          <Toast variant="loading" text="Exportando..." variantLoader={'spinner'} closeFunction={setOpenAlert} />
         )}
       </React.Fragment>
     )
@@ -150,7 +150,7 @@ export const success = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' closeFunction={setOpenAlert} download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>
+          <Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' closeFunction={setOpenAlert} variantText='bodyBold.fontSize16' download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>
         )}
       </React.Fragment>
     )
