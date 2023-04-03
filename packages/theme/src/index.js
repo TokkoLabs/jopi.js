@@ -2098,29 +2098,33 @@ const theme = {
     },
   },
   toast: {
-    toastBase: {
+    base: {
       textIndent: '16px',
       width: '351px',
       height: '53px',
     },
-    toastNormal: {
+    normal: {
       borderLeft: '#C9D1D5 solid 8px',
     },
-    toastAlert: {
+    alert: {
       borderLeft: '#A2B5F7 solid 8px',
+      color: '#A2B5F7',
     },
-    toastCheck: {
+    check: {
       borderLeft: '#00D186 solid 8px',
+      color: '#00D186',
     },
-    toastError: {
+    error: {
       borderLeft: '#FE8472 solid 8px',
+      color: '#FE8472',
     },
-    toastLoading: {
-      borderLeft: 'red solid 8px',
+    loading: {
+      borderLeft: '#C9D1D5 solid 8px',
     },
-    toastSuccess: {
+    success: {
       borderLeft: '#00D186 solid 8px',
       width: '436px',
+      color: '#00D186',
     },
   },
 }

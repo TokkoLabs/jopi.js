@@ -1,27 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Toast closed 1`] = `ShallowWrapper {}`;
+
 exports[`Toast renders correctly 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  background-color: #272E33;
-  width: 415px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 24px 0px 0px;
+  gap: 24px;
+  position: relative;
+  width: 423px;
   height: 72px;
-  box-shadow: active;
+  background: #272E33;
   border-radius: 6px;
   color: white;
-  padding: 4px;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
-  width: 29.33px;
-  height: 29.33px;
-  margin: 20px 15px;
+  width: 327px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  margin-left: 24px;
 }
 
 .c3 {
@@ -29,6 +54,7 @@ exports[`Toast renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -37,17 +63,398 @@ exports[`Toast renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  margin: auto;
+  position: relative;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  color: white;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <p
+      className="c3"
+      color="white"
+      display="flex"
+    >
+      Seleccione una propiedad
+    </p>
+  </div>
+  <div
+    className="c4"
+  >
+    <button
+      className="c5"
+      color="white"
+      onClick={[Function]}
+    >
+      <div
+        className="c6"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "14px",
+              "height": "14px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "14px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Toast renders correctly five 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 24px 0px 0px;
+  gap: 24px;
+  position: relative;
+  width: 423px;
+  height: 72px;
+  background: #272E33;
+  border-radius: 6px;
+  color: white;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 327px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  margin-left: 24px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 10px;
+  width: small;
+  height: small;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  color: white;
+}
+
+.c9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  width: 2em;
+  height: 2em;
+  padding: 8px;
+  border-radius: 50%;
+  background-image: conic-gradient(#272E33,#FFFFFF);
+  -webkit-animation: bCrGrT 1s ease 0s infinite;
+  animation: bCrGrT 1s ease 0s infinite;
+  -webkit-clip-path: circle(80px at center);
+  clip-path: circle(80px at center);
+  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+  mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <loader
+      className="c3"
+    >
+      <div
+        className="c4 c5"
+        kind="primary"
+        size="small"
+      />
+    </loader>
+    <p
+      className="c6"
+      color="white"
+      display="flex"
+    >
+      Cargando...
+    </p>
+  </div>
+  <div
+    className="c7"
+  >
+    <button
+      className="c8"
+      color="white"
+      onClick={[Function]}
+    >
+      <div
+        className="c9"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "14px",
+              "height": "14px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "14px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Toast renders correctly four 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 24px 0px 0px;
+  gap: 24px;
+  position: relative;
+  width: 423px;
+  height: 72px;
+  background: #272E33;
+  border-radius: 6px;
+  color: white;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 327px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  margin-left: 24px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c5 {
@@ -98,8 +505,8 @@ exports[`Toast renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 .c1 {
@@ -119,79 +526,67 @@ exports[`Toast renders correctly 1`] = `
   <div
     className="c2"
   >
-    <i
-      className="icon-check"
-      style={
-        Object {
-          "bottom": "0px",
-          "fontSize": "29.33px",
-          "height": "29.33px",
-          "left": "-0.5px",
-          "position": "absolute",
-          "right": "0px",
-          "top": "-1px",
-          "width": "29.33px",
-        }
-      }
-    />
-  </div>
-  <p
-    className="c3"
-    display="flex"
-  >
-    Seleccione una propiedad
-  </p>
-  <div
-    className="c4"
-  >
     <div
-      className="c5"
+      className="c3"
     >
-      <button
-        className="c6"
-        color="white"
-        onClick={[Function]}
-      >
-        <div
-          className="c7"
-        >
-          <i
-            className="icon-cerrar"
-            style={
-              Object {
-                "bottom": "0px",
-                "fontSize": "16px",
-                "height": "16px",
-                "left": "-0.5px",
-                "position": "absolute",
-                "right": "0px",
-                "top": "-1px",
-                "width": "16px",
-              }
-            }
-          />
-        </div>
-      </button>
+      <i
+        className="icon-check"
+        style={
+          Object {
+            "bottom": "0px",
+            "fontSize": "32px",
+            "height": "32px",
+            "left": "-0.5px",
+            "position": "absolute",
+            "right": "0px",
+            "top": "-1px",
+            "width": "32px",
+          }
+        }
+      />
     </div>
+    <p
+      className="c4"
+      color="white"
+      display="flex"
+    >
+      Success message
+    </p>
+  </div>
+  <div
+    className="c5"
+  >
+    <button
+      className="c6"
+      color="white"
+      onClick={[Function]}
+    >
+      <div
+        className="c7"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "14px",
+              "height": "14px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "14px",
+            }
+          }
+        />
+      </div>
+    </button>
   </div>
 </div>
 `;
 
-exports[`Toast renders correctly five 1`] = `
+exports[`Toast renders correctly four 2`] = `
 .c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: #272E33;
-  width: 415px;
-  height: 72px;
-  box-shadow: active;
-  border-radius: 6px;
-  color: white;
-  padding: 4px;
-}
-
-.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -199,10 +594,42 @@ exports[`Toast renders correctly five 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 24px 0px 0px;
+  gap: 24px;
+  position: relative;
+  width: 423px;
+  height: 72px;
+  background: #272E33;
+  border-radius: 6px;
+  color: white;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 327px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  margin-left: 24px;
 }
 
 .c3 {
@@ -210,10 +637,8 @@ exports[`Toast renders correctly five 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 29.33px;
-  height: 29.33px;
-  margin: 20px 15px;
-  color: #00D186;
+  width: 32px;
+  height: 32px;
 }
 
 .c4 {
@@ -221,6 +646,7 @@ exports[`Toast renders correctly five 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +655,206 @@ exports[`Toast renders correctly five 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
   font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  color: white;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <i
+        className="icon-error"
+        style={
+          Object {
+            "bottom": "0px",
+            "fontSize": "32px",
+            "height": "32px",
+            "left": "-0.5px",
+            "position": "absolute",
+            "right": "0px",
+            "top": "-1px",
+            "width": "32px",
+          }
+        }
+      />
+    </div>
+    <p
+      className="c4"
+      color="white"
+      display="flex"
+    >
+      Error message
+    </p>
+  </div>
+  <div
+    className="c5"
+  >
+    <button
+      className="c6"
+      color="white"
+      onClick={[Function]}
+    >
+      <div
+        className="c7"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "14px",
+              "height": "14px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "14px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Toast renders correctly seven 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 24px 0px 0px;
+  gap: 24px;
+  position: relative;
+  width: 423px;
+  height: 72px;
+  background: #272E33;
+  border-radius: 6px;
+  color: white;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 327px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  margin-left: 24px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c5 {
@@ -272,9 +897,7 @@ exports[`Toast renders correctly five 1`] = `
   align-items: center;
   white-space: nowrap;
   position: relative;
-  margin: 20px 15px 20px 40px;
   color: white;
-  font-size: 14px;
 }
 
 .c7 {
@@ -287,13 +910,6 @@ exports[`Toast renders correctly five 1`] = `
 }
 
 .c8 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-}
-
-.c9 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -329,13 +945,13 @@ exports[`Toast renders correctly five 1`] = `
   color: white;
 }
 
-.c10 {
+.c9 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 .c1 {
@@ -354,32 +970,30 @@ exports[`Toast renders correctly five 1`] = `
 >
   <div
     className="c2"
-    display="flex"
   >
     <div
       className="c3"
-      color="#00D186"
     >
       <i
         className="icon-check"
         style={
           Object {
             "bottom": "0px",
-            "fontSize": "29.33px",
-            "height": "29.33px",
+            "fontSize": "32px",
+            "height": "32px",
             "left": "-0.5px",
             "position": "absolute",
             "right": "0px",
             "top": "-1px",
-            "width": "29.33px",
+            "width": "32px",
           }
         }
       />
     </div>
     <p
       className="c4"
+      color="white"
       display="flex"
-      fontWeight="bold"
     >
       Report export ready!
     </p>
@@ -389,7 +1003,6 @@ exports[`Toast renders correctly five 1`] = `
       <button
         className="c6"
         color="white"
-        fontSize="14px"
         onClick={[Function]}
       >
         <div
@@ -412,82 +1025,111 @@ exports[`Toast renders correctly five 1`] = `
           />
         </div>
         <span>
-          Descargar
+          Download
         </span>
       </button>
     </div>
   </div>
   <div
-    className="c8"
+    className="c5"
   >
-    <div
-      className="c5"
+    <button
+      className="c8"
+      color="white"
+      onClick={[Function]}
     >
-      <button
+      <div
         className="c9"
-        color="white"
-        onClick={[Function]}
       >
-        <div
-          className="c10"
-        >
-          <i
-            className="icon-cerrar"
-            style={
-              Object {
-                "bottom": "0px",
-                "fontSize": "16px",
-                "height": "16px",
-                "left": "-0.5px",
-                "position": "absolute",
-                "right": "0px",
-                "top": "-1px",
-                "width": "16px",
-              }
+        <i
+          className="icon-cerrar"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "14px",
+              "height": "14px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "14px",
             }
-          />
-        </div>
-      </button>
-    </div>
+          }
+        />
+      </div>
+    </button>
   </div>
 </div>
 `;
 
-exports[`Toast renders correctly four 1`] = `
+exports[`Toast renders correctly six 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  background-color: #272E33;
-  width: 415px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 24px 0px 0px;
+  gap: 24px;
+  position: relative;
+  width: 423px;
   height: 72px;
-  box-shadow: active;
+  background: #272E33;
   border-radius: 6px;
   color: white;
-  padding: 4px;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  width: 327px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  margin-left: 24px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   margin-right: 10px;
-  margin: 17px 15px;
   width: small;
   height: small;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -496,17 +1138,6 @@ exports[`Toast renders correctly four 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
 }
 
 .c7 {
@@ -557,8 +1188,8 @@ exports[`Toast renders correctly four 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 .c1 {
@@ -566,197 +1197,9 @@ exports[`Toast renders correctly four 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c4 {
-  width: 2em;
-  height: 2em;
-  padding: 8px;
-  border-radius: 50%;
-  background-image: conic-gradient(#272E33,#FFFFFF);
-  -webkit-animation: bCrGrT 1s ease 0s infinite;
-  animation: bCrGrT 1s ease 0s infinite;
-  -webkit-clip-path: circle(80px at center);
-  clip-path: circle(80px at center);
-  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
-  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
-  mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
-}
-
-@media screen and (min-width:40em) {
-
-}
-
-<div
-  className="c0 c1"
->
-  <loader
-    className="c2"
-  >
-    <div
-      className="c3 c4"
-      kind="primary"
-      size="small"
-    />
-  </loader>
-  <p
-    className="c5"
-    display="flex"
-  >
-    Cargando...
-  </p>
-  <div
-    className="c6"
-  >
-    <div
-      className="c7"
-    >
-      <button
-        className="c8"
-        color="white"
-        onClick={[Function]}
-      >
-        <div
-          className="c9"
-        >
-          <i
-            className="icon-cerrar"
-            style={
-              Object {
-                "bottom": "0px",
-                "fontSize": "16px",
-                "height": "16px",
-                "left": "-0.5px",
-                "position": "absolute",
-                "right": "0px",
-                "top": "-1px",
-                "width": "16px",
-              }
-            }
-          />
-        </div>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Toast renders correctly four 2`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: #272E33;
-  width: 415px;
-  height: 72px;
-  box-shadow: active;
-  border-radius: 6px;
-  color: white;
-  padding: 4px;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin-right: 10px;
-  margin: 17px 15px;
-  width: small;
-  height: small;
 }
 
 .c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: primary;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-}
-
-.c7 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
-.c8 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: inherit;
-  font-family: Nunito Sans;
-  font-weight: bold;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  position: relative;
-  color: white;
-}
-
-.c9 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-  width: 16px;
-  height: 16px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c4 {
   width: 2em;
   height: 2em;
   padding: 8px;
@@ -778,53 +1221,54 @@ exports[`Toast renders correctly four 2`] = `
 <div
   className="c0 c1"
 >
-  <loader
+  <div
     className="c2"
   >
-    <div
-      className="c3 c4"
-      kind="primary"
-      size="small"
-    />
-  </loader>
-  <p
-    className="c5"
-    display="flex"
-  >
-    Exportando...
-  </p>
-  <div
-    className="c6"
-  >
-    <div
-      className="c7"
+    <loader
+      className="c3"
     >
-      <button
-        className="c8"
-        color="white"
-        onClick={[Function]}
+      <div
+        className="c4 c5"
+        kind="primary"
+        size="small"
+      />
+    </loader>
+    <p
+      className="c6"
+      color="white"
+      display="flex"
+    >
+      Exportando...
+    </p>
+  </div>
+  <div
+    className="c7"
+  >
+    <button
+      className="c8"
+      color="white"
+      onClick={[Function]}
+    >
+      <div
+        className="c9"
       >
-        <div
-          className="c9"
-        >
-          <i
-            className="icon-cerrar"
-            style={
-              Object {
-                "bottom": "0px",
-                "fontSize": "16px",
-                "height": "16px",
-                "left": "-0.5px",
-                "position": "absolute",
-                "right": "0px",
-                "top": "-1px",
-                "width": "16px",
-              }
+        <i
+          className="icon-cerrar"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "14px",
+              "height": "14px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "14px",
             }
-          />
-        </div>
-      </button>
-    </div>
+          }
+        />
+      </div>
+    </button>
   </div>
 </div>
 `;
@@ -834,31 +1278,63 @@ exports[`Toast renders correctly three 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  background-color: #272E33;
-  width: 415px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 24px 0px 0px;
+  gap: 24px;
+  position: relative;
+  width: 423px;
   height: 72px;
-  box-shadow: active;
+  background: #272E33;
   border-radius: 6px;
   color: white;
-  padding: 4px;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
-  width: 29.33px;
-  height: 29.33px;
-  margin: 18px 15px;
-  color: #00D186;
+  width: 327px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  margin-left: 24px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -867,17 +1343,6 @@ exports[`Toast renders correctly three 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
 }
 
 .c5 {
@@ -928,8 +1393,8 @@ exports[`Toast renders correctly three 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 .c1 {
@@ -948,241 +1413,62 @@ exports[`Toast renders correctly three 1`] = `
 >
   <div
     className="c2"
-    color="#00D186"
-  >
-    <i
-      className="icon-check"
-      style={
-        Object {
-          "bottom": "0px",
-          "fontSize": "29.33px",
-          "height": "29.33px",
-          "left": "-0.5px",
-          "position": "absolute",
-          "right": "0px",
-          "top": "-1px",
-          "width": "29.33px",
-        }
-      }
-    />
-  </div>
-  <p
-    className="c3"
-    display="flex"
-  >
-    Success message
-  </p>
-  <div
-    className="c4"
   >
     <div
-      className="c5"
+      className="c3"
     >
-      <button
-        className="c6"
-        color="white"
-        onClick={[Function]}
-      >
-        <div
-          className="c7"
-        >
-          <i
-            className="icon-cerrar"
-            style={
-              Object {
-                "bottom": "0px",
-                "fontSize": "16px",
-                "height": "16px",
-                "left": "-0.5px",
-                "position": "absolute",
-                "right": "0px",
-                "top": "-1px",
-                "width": "16px",
-              }
-            }
-          />
-        </div>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Toast renders correctly two 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: #272E33;
-  width: 415px;
-  height: 72px;
-  box-shadow: active;
-  border-radius: 6px;
-  color: white;
-  padding: 4px;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-  width: 29.33px;
-  height: 29.33px;
-  margin: 20px 15px;
-  color: #A2B5F7;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: primary;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-}
-
-.c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: inherit;
-  font-family: Nunito Sans;
-  font-weight: bold;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  position: relative;
-  color: white;
-}
-
-.c7 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-  width: 16px;
-  height: 16px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (min-width:40em) {
-
-}
-
-<div
-  className="c0 c1"
->
-  <div
-    className="c2"
-    color="#A2B5F7"
-  >
-    <i
-      className="icon-alertas"
-      style={
-        Object {
-          "bottom": "0px",
-          "fontSize": "29.33px",
-          "height": "29.33px",
-          "left": "-0.5px",
-          "position": "absolute",
-          "right": "0px",
-          "top": "-1px",
-          "width": "29.33px",
+      <i
+        className="icon-alertas"
+        style={
+          Object {
+            "bottom": "0px",
+            "fontSize": "32px",
+            "height": "32px",
+            "left": "-0.5px",
+            "position": "absolute",
+            "right": "0px",
+            "top": "-1px",
+            "width": "32px",
+          }
         }
-      }
-    />
-  </div>
-  <p
-    className="c3"
-    display="flex"
-  >
-    Alert message
-  </p>
-  <div
-    className="c4"
-  >
-    <div
-      className="c5"
-    >
-      <button
-        className="c6"
-        color="white"
-        onClick={[Function]}
-      >
-        <div
-          className="c7"
-        >
-          <i
-            className="icon-cerrar"
-            style={
-              Object {
-                "bottom": "0px",
-                "fontSize": "16px",
-                "height": "16px",
-                "left": "-0.5px",
-                "position": "absolute",
-                "right": "0px",
-                "top": "-1px",
-                "width": "16px",
-              }
-            }
-          />
-        </div>
-      </button>
+      />
     </div>
+    <p
+      className="c4"
+      color="white"
+      display="flex"
+    >
+      Alert message
+    </p>
+  </div>
+  <div
+    className="c5"
+  >
+    <button
+      className="c6"
+      color="white"
+      onClick={[Function]}
+    >
+      <div
+        className="c7"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            Object {
+              "bottom": "0px",
+              "fontSize": "14px",
+              "height": "14px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "14px",
+            }
+          }
+        />
+      </div>
+    </button>
   </div>
 </div>
 `;
