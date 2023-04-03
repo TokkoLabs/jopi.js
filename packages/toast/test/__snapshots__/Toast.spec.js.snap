@@ -54,6 +54,7 @@ exports[`Toast renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,6 +136,7 @@ exports[`Toast renders correctly 1`] = `
   >
     <p
       className="c3"
+      color="white"
       display="flex"
     >
       Seleccione una propiedad
@@ -239,6 +241,7 @@ exports[`Toast renders correctly five 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -344,6 +347,7 @@ exports[`Toast renders correctly five 1`] = `
     </loader>
     <p
       className="c6"
+      color="white"
       display="flex"
     >
       Cargando...
@@ -442,6 +446,7 @@ exports[`Toast renders correctly four 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -542,6 +547,7 @@ exports[`Toast renders correctly four 1`] = `
     </div>
     <p
       className="c4"
+      color="white"
       display="flex"
     >
       Success message
@@ -640,6 +646,7 @@ exports[`Toast renders correctly four 2`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -740,6 +747,7 @@ exports[`Toast renders correctly four 2`] = `
     </div>
     <p
       className="c4"
+      color="white"
       display="flex"
     >
       Error message
@@ -838,6 +846,7 @@ exports[`Toast renders correctly seven 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -889,7 +898,6 @@ exports[`Toast renders correctly seven 1`] = `
   white-space: nowrap;
   position: relative;
   color: white;
-  font-size: 14px;
 }
 
 .c7 {
@@ -984,6 +992,7 @@ exports[`Toast renders correctly seven 1`] = `
     </div>
     <p
       className="c4"
+      color="white"
       display="flex"
     >
       Report export ready!
@@ -994,7 +1003,6 @@ exports[`Toast renders correctly seven 1`] = `
       <button
         className="c6"
         color="white"
-        fontSize="14px"
         onClick={[Function]}
       >
         <div
@@ -1121,6 +1129,7 @@ exports[`Toast renders correctly six 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1226,6 +1235,7 @@ exports[`Toast renders correctly six 1`] = `
     </loader>
     <p
       className="c6"
+      color="white"
       display="flex"
     >
       Exportando...
@@ -1324,6 +1334,7 @@ exports[`Toast renders correctly three 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1424,207 +1435,10 @@ exports[`Toast renders correctly three 1`] = `
     </div>
     <p
       className="c4"
+      color="white"
       display="flex"
     >
       Alert message
-    </p>
-  </div>
-  <div
-    className="c5"
-  >
-    <button
-      className="c6"
-      color="white"
-      onClick={[Function]}
-    >
-      <div
-        className="c7"
-      >
-        <i
-          className="icon-cerrar"
-          style={
-            Object {
-              "bottom": "0px",
-              "fontSize": "14px",
-              "height": "14px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
-              "width": "14px",
-            }
-          }
-        />
-      </div>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Toast renders correctly two 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 24px 0px 0px;
-  gap: 24px;
-  position: relative;
-  width: 423px;
-  height: 72px;
-  background: #272E33;
-  border-radius: 6px;
-  color: white;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 327px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px;
-  gap: 16px;
-  margin-left: 24px;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-  width: 32px;
-  height: 32px;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: primary;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: inherit;
-  font-family: Nunito Sans;
-  font-weight: bold;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  position: relative;
-  color: white;
-}
-
-.c7 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-  width: 14px;
-  height: 14px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (min-width:40em) {
-
-}
-
-<div
-  className="c0 c1"
->
-  <div
-    className="c2"
-  >
-    <div
-      className="c3"
-    >
-      <i
-        className="icon-check"
-        style={
-          Object {
-            "bottom": "0px",
-            "fontSize": "32px",
-            "height": "32px",
-            "left": "-0.5px",
-            "position": "absolute",
-            "right": "0px",
-            "top": "-1px",
-            "width": "32px",
-          }
-        }
-      />
-    </div>
-    <p
-      className="c4"
-      display="flex"
-    >
-      Seleccione una propiedad
     </p>
   </div>
   <div

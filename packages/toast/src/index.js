@@ -43,13 +43,13 @@ export const Toast = ({ variant = 'base', variantLoader, variantText = 'body.fon
       )}
 
       { text !== undefined &&
-      (<Text variant={variantText} display="flex" alignItems="center">
+      (<Text variant={variantText} display="flex" alignItems="center" color='white'>
         {text}
       </Text>
       )}
 
       { download !== undefined && (
-      <ButtonIcon icon='icon-descargar' variant='mainItemSmall' fontSize='14px' color='white' text={textDownload} onClick={download}/>
+      <ButtonIcon icon='icon-descargar' variant='mainItemSmall' color='white' text={textDownload} onClick={download}/>
       )}
 
     </Box>

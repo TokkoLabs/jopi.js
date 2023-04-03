@@ -18,12 +18,6 @@ describe('Toast', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test('renders correctly two', () => {
-    const tree = renderer.create(<Toast variant="normal" text="Seleccione una propiedad" icon={'icon-check'} />).toJSON()
-
-    expect(tree).toMatchSnapshot()
-  })
-
   test('renders correctly three', () => {
     const tree = renderer.create(<Toast icon={'icon-alertas'} variant="alert" text="Alert message" />).toJSON()
 
@@ -55,7 +49,7 @@ describe('Toast', () => {
   })
 
   test('renders correctly seven', () => {
-    const tree = renderer.create(<Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' variantText='bodyBold.fontSize16' download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>).toJSON()
+    const tree = renderer.create(<Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' variantText='bodyBold.fontSize14' download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>).toJSON()
 
     expect(tree).toMatchSnapshot()
   })

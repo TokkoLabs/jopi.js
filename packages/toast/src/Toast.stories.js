@@ -63,7 +63,7 @@ export const normal = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant="normal" text="Seleccione una propiedad" icon={'icon-check'} closeFunction={setOpenAlert} />
+            <Toast variant='base' text="Seleccione una propiedad" closeFunction={setOpenAlert}/>
         )}
       </React.Fragment>
     )
@@ -150,7 +150,7 @@ export const success = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' closeFunction={setOpenAlert} variantText='bodyBold.fontSize16' download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>
+          <Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' closeFunction={setOpenAlert} variantText='bodyBold.fontSize14' download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>
         )}
       </React.Fragment>
     )
