@@ -7,9 +7,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import { ButtonIcon } from '@oneloop/button'
 import { Toast } from '../src'
 
-
 Enzyme.configure({ adapter: new Adapter() })
-
 
 describe('Toast', () => {
   test('renders correctly', () => {
