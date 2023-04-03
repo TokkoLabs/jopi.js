@@ -21,42 +21,44 @@ export const Toast = ({ variant = 'base', variantLoader, variantText = 'body.fon
       height: '72px',
       background: '#272E33',
       borderRadius: '6px',
-      color:'white'
+      color: 'white',
     }}
   >
     <Box __css={{
-      width:'327px',
+      width: '327px',
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
       padding: '0px',
       gap: '16px',
-      marginLeft:'24px',
-            }} >
+      marginLeft: '24px',
+    }} >
+
       { icon !== undefined && (
-    <Icon icon={icon} fontSize='32px' />
-    )}
+      <Icon icon={icon} fontSize='32px' />
+      )}
 
-    { variantLoader !== undefined && (
+      { variantLoader !== undefined && (
       <Loader variant={variantLoader} />
-    )}
+      )}
 
-    { text !== undefined &&
+      { text !== undefined &&
       (<Text variant={variantText} display="flex" alignItems="center">
         {text}
       </Text>
-    )}
+      )}
 
-    { download !== undefined && (
+      { download !== undefined && (
       <ButtonIcon icon='icon-descargar' variant='mainItemSmall' fontSize='14px' color='white' text={textDownload} onClick={download}/>
-    )} 
+      )}
+
     </Box>
 
-      <ButtonIcon
-        color='white'
-        icon='icon-cerrar'
-        variant={['subtleTrasnparentIconClearButton', 'iconMedium']}
-        onClick={() => props.closeFunction()}/>
+    <ButtonIcon
+      color='white'
+      icon='icon-cerrar'
+      variant={['subtleTrasnparentIconClearButton', 'iconMedium']}
+      onClick={() => props.closeFunction()}/>
 
   </Flex>
 )

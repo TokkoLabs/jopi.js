@@ -48,7 +48,7 @@ export const base = () =>
         <br />
         <br />
         {openAlert && (
-           <Toast variant='base' text="Seleccione una propiedad" closeFunction={setOpenAlert}/>
+        <Toast variant='base' text="Seleccione una propiedad" closeFunction={setOpenAlert}/>
         )}
       </React.Fragment>
     )

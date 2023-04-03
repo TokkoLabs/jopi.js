@@ -24,19 +24,19 @@ describe('Toast', () => {
   })
 
   test('renders correctly four', () => {
-    const tree = renderer.create( <Toast variant="check" text="Success message" icon={'icon-check'} />).toJSON()
+    const tree = renderer.create(<Toast variant="check" text="Success message" icon={'icon-check'} />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
   test('renders correctly four', () => {
-    const tree = renderer.create(  <Toast variant="error" text="Error message" icon={'icon-error'} />).toJSON()
+    const tree = renderer.create(<Toast variant="error" text="Error message" icon={'icon-error'} />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
   test('renders correctly five', () => {
-    const tree = renderer.create( <Toast variant="loading" text="Cargando..." variantLoader={'spinner'} />).toJSON()
+    const tree = renderer.create(<Toast variant="loading" text="Cargando..." variantLoader={'spinner'} />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })

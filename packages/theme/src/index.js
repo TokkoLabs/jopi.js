@@ -2112,11 +2112,11 @@ const theme = {
     },
     check: {
       borderLeft: '#00D186 solid 8px',
-      color:'#00D186'
+      color: '#00D186',
     },
     error: {
       borderLeft: '#FE8472 solid 8px',
-      color:'#FE8472'
+      color: '#FE8472',
     },
     loading: {
       borderLeft: '#C9D1D5 solid 8px',
@@ -2124,7 +2124,7 @@ const theme = {
     success: {
       borderLeft: '#00D186 solid 8px',
       width: '436px',
-      color:'#00D186'
+      color: '#00D186',
     },
   },
 }
