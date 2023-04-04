@@ -60,14 +60,14 @@ exports[`Textarea basic type renders correctly 1`] = `
 
 .c1:focus {
   outline: none;
-  border: 1px solid #4268EF;
-  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
+  border: 1px solid #94A2AB;
+  box-shadow: none;
 }
 
 .c1:active {
   outline: none;
-  border: 1px solid #94A2AB;
-  box-shadow: none;
+  border: 1px solid #4268EF;
+  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
 }
 
 <div
@@ -98,11 +98,6 @@ exports[`Textarea styled type renders correctly 1`] = `
   min-width: 0;
   width: 100%;
   font-family: sans-serif;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  color: #384248;
-  font-weight: 700;
-  font-size: 12px;
 }
 
 .c3 {
@@ -163,14 +158,14 @@ exports[`Textarea styled type renders correctly 1`] = `
 
 .c3:focus {
   outline: none;
-  border: 1px solid #4268EF;
-  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
+  border: 1px solid #94A2AB;
+  box-shadow: none;
 }
 
 .c3:active {
   outline: none;
-  border: 1px solid #94A2AB;
-  box-shadow: none;
+  border: 1px solid #4268EF;
+  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
 }
 
 .c4 {
@@ -197,9 +192,6 @@ exports[`Textarea styled type renders correctly 1`] = `
 >
   <label
     className="c1 c2"
-    color="#384248"
-    fontSize="12px"
-    fontWeight="700"
   >
     Este es el label del textarea:
   </label>
