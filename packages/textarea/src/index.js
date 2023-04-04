@@ -15,7 +15,14 @@ export const Textarea = ({
 }) => (
   <Box display="inline-block" ml={contL} mr={contR} mt={contT} mb={contB}>
     {prefix && (
-      <Label fontWeight= '700' fontSize= '12px' marginLeft="5px" marginBottom="5px" color='#384248'>
+      <Label __css={{
+        fontWeight: '700',
+        fontSize: '12px',
+        marginLeft: '5px',
+        marginBottom: '5px',
+        color: '#384248',
+        fontFamily: 'Nunito Sans',
+      }}>
         {prefix}
       </Label>
     )}
@@ -33,7 +40,7 @@ export const Textarea = ({
         fontFamily: 'Nunito Sans',
         backgroundColor: '#F3F6F8',
         resize: 'none',
-        fontSize: 1,
+        fontSize: '14px',
         height: 170,
         width: 390,
         py: 11,
@@ -50,13 +57,13 @@ export const Textarea = ({
         },
         '&:focus': {
           outline: 'none',
-          border: '1px solid #4268EF',
-          boxShadow: '2px 2px 6px rgba(56, 109, 244, 0.2)',
+          border: '1px solid #94A2AB',
+          boxShadow: 'none',
         },
         '&:active': {
           outline: 'none',
-          border: '1px solid #94A2AB',
-          boxShadow: 'none',
+          border: '1px solid #4268EF',
+          boxShadow: '2px 2px 6px rgba(56, 109, 244, 0.2)',
         },
       }}
     />
