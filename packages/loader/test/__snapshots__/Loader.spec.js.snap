@@ -54,14 +54,14 @@ exports[`Loader renders correctly 2`] = `
   margin: 0;
   min-width: 0;
   margin-right: 10px;
-  width: medium;
-  height: medium;
+  width: small;
+  height: small;
 }
 
 .c2 {
   position: relative;
   height: 37px;
-  width: 24px;
+  width: 16px;
 }
 
 .c2::before {
@@ -69,8 +69,8 @@ exports[`Loader renders correctly 2`] = `
   content: '';
   display: block;
   top: 0;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   -webkit-transform-origin: 50%;
   -ms-transform-origin: 50%;
@@ -85,7 +85,7 @@ exports[`Loader renders correctly 2`] = `
   <div
     className="c1 c2"
     kind="secondary"
-    size="medium"
+    size="small"
   />
 </loader>
 `;

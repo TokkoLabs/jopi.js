@@ -18,7 +18,7 @@ describe('Loader', () => {
   })
 
   test('renders correctly', () => {
-    const tree = renderer.create(<Loader size='medium' kind='secondary' variant='bounce' />).toJSON()
+    const tree = renderer.create(<Loader kind='secondary' />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })
