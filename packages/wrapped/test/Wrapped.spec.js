@@ -6,8 +6,23 @@ import { Wrapped } from '../src'
 
 describe('Wrapped', () => {
   test('default', () => {
-    const misItems = ['Pedro', 'Pepito', 'Jose', 'Marcelo', 'Roberto', 'Marian Font', 'Lauti', 'Agus']
-    const tree = renderer.create(<Wrapped items={misItems}>Test</Wrapped>).toJSON()
+    const misItems = [
+      { id: '1a', neme: 'Pedro' },
+      { id: '2b', neme: 'Jose' },
+      { id: '3c', neme: 'Juan Carlos' },
+      { id: '4d', neme: 'Roberto' },
+      { id: '5e', neme: 'Adriano' },
+      { id: '6f', neme: 'Roman' },
+    ]
+
+    const tree = renderer.create(
+      <Wrapped
+        items={misItems}
+        printKey={'pepito'}
+        tagVariant={'secondary'}
+      />
+
+    ).toJSON()
 
     expect(tree).toMatchSnapshot()
   })

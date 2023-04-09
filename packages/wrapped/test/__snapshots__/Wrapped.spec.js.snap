@@ -5,7 +5,6 @@ exports[`Wrapped default 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  background: #f1f1f1;
   display: block;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -13,7 +12,7 @@ exports[`Wrapped default 1`] = `
   align-items: center;
   gap: 5px;
   width: 300px;
-  overflow: hidden;
+  overflow: 0;
   white-space: nowrap;
 }
 
@@ -51,83 +50,82 @@ exports[`Wrapped default 1`] = `
 >
   <span
     className="c1"
-    id="tagClass0"
+    id="1a"
+    style={
+      Object {
+        "marginRight": "5px",
+      }
+    }
   >
     <p
       className="c2"
-    >
-      Pedro
-    </p>
+    />
   </span>
   <span
     className="c1"
-    id="tagClass1"
+    id="2b"
+    style={
+      Object {
+        "marginRight": "5px",
+      }
+    }
   >
     <p
       className="c2"
-    >
-      Pepito
-    </p>
+    />
   </span>
   <span
     className="c1"
-    id="tagClass2"
+    id="3c"
+    style={
+      Object {
+        "marginRight": "5px",
+      }
+    }
   >
     <p
       className="c2"
-    >
-      Jose
-    </p>
+    />
   </span>
   <span
     className="c1"
-    id="tagClass3"
+    id="4d"
+    style={
+      Object {
+        "marginRight": "5px",
+      }
+    }
   >
     <p
       className="c2"
-    >
-      Marcelo
-    </p>
+    />
   </span>
   <span
     className="c1"
-    id="tagClass4"
+    id="5e"
+    style={
+      Object {
+        "marginRight": "5px",
+      }
+    }
   >
     <p
       className="c2"
-    >
-      Roberto
-    </p>
+    />
   </span>
   <span
     className="c1"
-    id="tagClass5"
+    id="6f"
+    style={
+      Object {
+        "marginRight": "5px",
+      }
+    }
   >
     <p
       className="c2"
-    >
-      Marian Font
-    </p>
+    />
   </span>
-  <span
-    className="c1"
-    id="tagClass6"
-  >
-    <p
-      className="c2"
-    >
-      Lauti
-    </p>
-  </span>
-  <span
-    className="c1"
-    id="tagClass7"
-  >
-    <p
-      className="c2"
-    >
-      Agus
-    </p>
-  </span>
+  
 </div>
 `;
