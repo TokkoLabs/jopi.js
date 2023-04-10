@@ -35,4 +35,37 @@ describe('Wrapped', () => {
 
     expect(component).toMatchSnapshot()
   })
+
+  it('Delete item', () => {
+    const handleDelete = (i) => misItems.filter(item => item.id !== i.id)
+
+    const component = mount(
+      <Wrapped
+        fnClose={handleDelete}
+        items={misItems}
+        printKey={'name'}
+        tagVariant={'secondary'}
+      />
+    )
+
+    const tagIcon = component.find('Tags').at(3).find('Icon')
+
+    tagIcon.simulate('click')
+  })
+
+  it('Open modal restiItems', () => {
+    const component = mount(
+      <Wrapped
+        items={misItems}
+        printKey={'name'}
+        tagVariant={'secondary'}
+      />
+    )
+
+    component.find('.numberTag').at(0).simulate('click')
+
+    expect(component.find('#restItemsModal').exists).toBeTruthy()
+
+    expect(component).toMatchSnapshot()
+  })
 })

@@ -108,6 +108,7 @@ export const Wrapped = ({ items, fnClose, widthRestItemsWindow, printKey, tagVar
 
       </Box>
       {showRestItem && <Box
+        id='restItemsModal'
         ref={RefItemsWindow}
         __css={{
           padding: '12px 14px',
