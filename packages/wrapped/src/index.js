@@ -1,49 +1,131 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useReducer, useRef, useState } from 'react'
 import { Box } from '@oneloop/box'
-import '@oneloop/fonts'
 import { Tags } from '@oneloop/tags'
 import { Text } from '@oneloop/text'
 
-export const Wrapped = ({ items, ...props }) => {
+const wrappedReducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_REST_ITEM':
+      return {
+        ...state,
+        restItems: [...state.restItems, action.payload],
+      }
+    case 'DELETE_REST_ITEM':
+      return {
+        ...state,
+        restItems: [],
+      }
+  }
+}
+
+export const Wrapped = ({ items, fnClose, widthRestItemsWindow, printKey, tagVariant, idKey = 'id', ...props }) => {
+  const [store, dispatch] = useReducer(wrappedReducer, { restItems: [] })
+  const [showRestItem, setShowRestItems] = useState(false)
   const Ref = useRef(null)
-  let widthWrapper
+  const refElements = useRef([])
+  const RefItemsWindow = useRef(null)
+  let widthWrapper = 0
   let widthElements = 0
-  let elements
+  let elements = 0
 
   useEffect(() => {
-    widthWrapper = Ref.current.offsetWidth
     elements = Ref.current.children
+    widthWrapper = Ref.current.offsetWidth
 
     for (let index = 0; index < elements.length; index++) {
-      widthElements = widthElements + elements[index].offsetWidth
+      if (!refElements.current.find(elem => elem.id === elements[index].id) && !elements[index].className.includes('numberTag')) {
+        refElements.current.push({ ...elements[index], width: elements[index].offsetWidth + 5, id: elements[index].id })
+      }
 
-      if (widthElements > widthWrapper) {
-        elements[index].style.display = 'none'
+      if (!elements[index].className.includes('numberTag')) {
+        widthElements = widthElements + (refElements.current[index].width)
+      }
+
+      if (widthElements > (widthWrapper - 30)) {
+        elements[index].style.display = elements[index].className.includes('numberTag') ? 'inline-flex' : 'none'
+
+        if (!elements[index].className.includes('numberTag')) {
+          if (!store.restItems.find(elem => elem[idKey] === items[index][idKey])) {
+            dispatch({ type: 'ADD_REST_ITEM', payload: items[index] })
+          }
+        }
+      }
+    }
+  }, [items])
+
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (!RefItemsWindow.current?.contains(event.target) && !event.target.className?.includes('numberTag')) {
+        setShowRestItems(false)
       }
     }
 
-    console.log({ widthElements, widthWrapper })
-  }, [])
+    document.addEventListener('click', handleClick)
+
+    return () => {
+      document.removeEventListener('click', handleClick)
+    }
+  }, [showRestItem])
+
+  const handleShowRestItems = () => { setShowRestItems(!showRestItem) }
+
+  const deleteRestItem = (item) => {
+    refElements.current = refElements.current.filter(elem => elem.id !== item[idKey])
+    dispatch({ type: 'DELETE_REST_ITEM' })
+    fnClose(item)
+  }
 
   return (
-    <Box
-      __css={{
-        background: '#f1f1f1',
-        display: 'block',
-        alignItems: 'center',
-        gap: '5px',
-        width: '300px',
-        overflow: 'hidden',
-        whiteSpace: 'nowrap',
-      }}
-      {...props}
-      ref={Ref}
-    >
-      {items.map((item, i) => (
-        <Tags key={item + i} variant='secondary' id={`tagClass${i}`}>
-          <Text>{item}</Text>
-        </Tags>
-      ))}
-    </Box>
+    <>
+      <Box
+        __css={{
+          display: 'block',
+          alignItems: 'center',
+          gap: '5px',
+          width: '300px',
+          overflow: widthWrapper,
+          whiteSpace: 'nowrap',
+        }}
+        {...props}
+        ref={Ref}
+      >
+        {items.map((item, i) => (
+          <Tags key={item[idKey] + i} id={item[idKey]} variant={tagVariant} closeIcon={fnClose ? () => deleteRestItem(item) : false} style={{ marginRight: '5px' }}>
+            <Text>{item[printKey]}</Text>
+          </Tags>
+        ))}
+
+        {store.restItems.length > 0
+          ? <Tags
+            variant={tagVariant}
+            className='numberTag'
+            style={{ cursor: 'pointer' }}
+            onClick={handleShowRestItems}
+          >
+            +{store.restItems.length}
+          </Tags>
+          : ''}
+
+      </Box>
+      {showRestItem && <Box
+        id='restItemsModal'
+        ref={RefItemsWindow}
+        __css={{
+          padding: '12px 14px',
+          position: 'absolute',
+          top: '25px',
+          background: '#FFFFFF',
+          boxShadow: '4px 4px 12px rgba(87, 95, 99, 0.1)',
+          borderRadius: '8px',
+          width: widthRestItemsWindow,
+        }}
+      >
+        {store.restItems.map((item, i) => (
+          <Tags key={item[idKey] + i} id={item[idKey]} variant={tagVariant} closeIcon={fnClose ? () => deleteRestItem(item) : false} style={{ marginRight: '5px', marginBottom: '5px' }}>
+            <Text>{item[printKey]}</Text>
+          </Tags>
+        ))}
+      </Box>}
+    </>
   )
 }
