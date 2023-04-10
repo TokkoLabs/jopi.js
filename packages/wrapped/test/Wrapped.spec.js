@@ -1,6 +1,6 @@
 import React from 'react'
 import 'jest-styled-components'
-import Enzyme, { shallow } from 'enzyme'
+import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Wrapped } from '../src'
 
@@ -17,7 +17,7 @@ const misItems = [
 
 describe('Wrapped', () => {
   it('Validate list items', () => {
-    const component = shallow(
+    const component = mount(
       <Wrapped
         items={misItems}
         printKey={'name'}
@@ -25,7 +25,7 @@ describe('Wrapped', () => {
       />
     )
 
-    expect(component.find('Tags').length).toEqual(misItems.length)
+    expect(component.find('Tags').length).toEqual(misItems.length + 1)
     expect(component.find('Text').at(0).html().includes('Pedro')).toBe(true)
     expect(component.find('Text').at(1).html().includes('Jose')).toBe(true)
     expect(component.find('Text').at(2).html().includes('Juan Carlos')).toBe(true)
