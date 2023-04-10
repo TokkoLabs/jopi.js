@@ -22,6 +22,8 @@ export const Tags = ({ children, closeIcon, variant, ...props }) => {
           fontWeight: '400',
           fontSize: '12px',
           lineHeight: '12px',
+          cursor: 'pointer',
+          border: 'solid 1px transparent',
         }}
       >
         {children}
