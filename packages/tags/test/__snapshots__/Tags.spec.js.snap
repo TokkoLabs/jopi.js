@@ -21,6 +21,8 @@ exports[`Tags secondary 1`] = `
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
+  cursor: pointer;
+  border: solid 1px transparent;
 }
 
 <span

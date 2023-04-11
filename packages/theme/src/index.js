@@ -366,8 +366,16 @@ const switches = {
 const theme = {
   tags: {
     secondary: {
-      color: colors.secondary,
-      background: '#D4EBF2',
+      color: '#143742',
+      background: '#B3DBE8',
+      ':hover': {
+        color: '#25697E',
+        border: '1px solid' + colors.secondary,
+      },
+      ':active': {
+        color: '#25697E',
+        border: '1px solid transparent',
+      },
     },
   },
   fontSizes: fontSize,
