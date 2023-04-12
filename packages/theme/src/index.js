@@ -364,6 +364,12 @@ const switches = {
 }
 
 const theme = {
+  inputNumber: {
+    default: {
+      background: colors.neutralGray9,
+      color: colors.neutralGray3,
+    },
+  },
   tags: {
     secondary: {
       color: '#143742',
