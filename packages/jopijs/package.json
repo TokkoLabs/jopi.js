@@ -37,7 +37,7 @@
     "@oneloop/text": "^1.2.230",
     "@oneloop/textarea": "^1.0.177",
     "@oneloop/tooltip": "^1.0.36",
-    "@oneloop/wrapped": "^1.0.0",
+    "@oneloop/wrapped": "^1.0.1",
     "styled-components": "^5.3.5"
   },
   "peerDependencies": {
