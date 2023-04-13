@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/textarea",
-  "version": "1.0.177",
+  "version": "1.0.178",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.229"
+    "@oneloop/box": "^1.2.230"
   },
   "peerDependencies": {
     "react": "^16.8.0"
