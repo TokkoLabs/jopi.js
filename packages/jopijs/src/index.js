@@ -29,6 +29,7 @@ import { Text, Heading } from '@oneloop/text'
 import { Textarea } from '@oneloop/textarea'
 import { Tooltip, ParentTooltip } from '@oneloop/tooltip'
 import { Toast } from '@oneloop/toast'
+import { Wrapped } from '@oneloop/wrapped'
 import { ThemeProvider } from 'styled-components'
 import FullCalendar from '@fullcalendar/react'
 export {
@@ -46,6 +47,7 @@ export {
   Dropdown,
   Flex,
   Fonts,
+  FullCalendar,
   Heading,
   Icon,
   Image,
@@ -70,5 +72,5 @@ export {
   Toast,
   ThemeProvider,
   useFilterData,
-  FullCalendar,
+  Wrapped,
 }
