@@ -54,3 +54,8 @@
     --yellow: #FFF502;
     --petrokoPressed: #3188A4;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
