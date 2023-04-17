@@ -10,6 +10,7 @@ import { Datepicker } from '@oneloop/datepicker'
 import { Drawer } from '@oneloop/drawer'
 import { Dropdown } from '@oneloop/dropdown'
 import { Fonts } from '@oneloop/fonts'
+import { FullCalendar } from '@fullcalendar/react'
 import { Icon } from '@oneloop/icons'
 import { Image } from '@oneloop/image'
 import { Input } from '@oneloop/input'
@@ -31,7 +32,6 @@ import { Tooltip, ParentTooltip } from '@oneloop/tooltip'
 import { Toast } from '@oneloop/toast'
 import { Wrapped } from '@oneloop/wrapped'
 import { ThemeProvider } from 'styled-components'
-import FullCalendar from '@fullcalendar/react'
 export {
   Alert,
   Badge,
