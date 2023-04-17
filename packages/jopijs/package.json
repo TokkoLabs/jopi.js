@@ -34,9 +34,11 @@
     "@oneloop/switch": "^1.2.233",
     "@oneloop/table": "^1.2.248",
     "@oneloop/tabs": "^1.4.231",
+    "@oneloop/tags": "^1.0.2",
     "@oneloop/text": "^1.2.231",
     "@oneloop/textarea": "^1.0.178",
     "@oneloop/tooltip": "^1.0.37",
+    "@oneloop/toast": "^1.0.0",
     "@oneloop/wrapped": "^1.0.2",
     "styled-components": "^5.3.5"
   },
