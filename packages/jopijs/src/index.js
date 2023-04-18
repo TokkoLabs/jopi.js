@@ -3,6 +3,7 @@ import { Badge } from '@oneloop/badge'
 import { Box, Flex } from '@oneloop/box'
 import { Button, ButtonIcon } from '@oneloop/button'
 import { Card } from '@oneloop/card'
+import { Calendar } from '@fullcalendar/calendar'
 import { Checkbox } from '@oneloop/checkbox'
 import { Collapsible } from '@oneloop/collapsible'
 import { ContainerMenu } from '@oneloop/containermenu'
@@ -10,7 +11,6 @@ import { Datepicker } from '@oneloop/datepicker'
 import { Drawer } from '@oneloop/drawer'
 import { Dropdown } from '@oneloop/dropdown'
 import { Fonts } from '@oneloop/fonts'
-import { FullCalendar } from '@fullcalendar/react'
 import { Icon } from '@oneloop/icons'
 import { Image } from '@oneloop/image'
 import { Input } from '@oneloop/input'
@@ -39,6 +39,7 @@ export {
   Button,
   ButtonIcon,
   Card,
+  Calendar,
   Checkbox,
   Collapsible,
   ContainerMenu,
@@ -47,7 +48,6 @@ export {
   Dropdown,
   Flex,
   Fonts,
-  FullCalendar,
   Heading,
   Icon,
   Image,
