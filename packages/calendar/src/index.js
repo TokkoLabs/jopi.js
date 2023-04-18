@@ -1,5 +1,5 @@
 import React from 'react'
-import '@oneloop/theme/styles/globals.css'
+import '../../theme/styles/globals.css'
 import { CalendarOptions } from '../options/calendarOptions'
 import { Box } from '../../box/src'
 import FullCalendar from '@fullcalendar/react'
