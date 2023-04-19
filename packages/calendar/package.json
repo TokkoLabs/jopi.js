@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/calendar",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -13,10 +13,10 @@
     "@fullcalendar/daygrid": "^6.1.4",
     "@fullcalendar/react": "^6.1.4",
     "@fullcalendar/timegrid": "^6.1.4",
-    "@oneloop/box": "^1.2.234",
-    "@oneloop/button": "^1.2.277",
-    "@oneloop/icons": "^1.2.256",
-    "@oneloop/text": "^1.2.235"
+    "@oneloop/box": "^1.2.235",
+    "@oneloop/button": "^1.2.278",
+    "@oneloop/icons": "^1.2.257",
+    "@oneloop/text": "^1.2.236"
   },
   "peerDependencies": {
     "react": "^16.8.0"
