@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/box",
-  "version": "1.2.239",
+  "version": "1.2.240",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
