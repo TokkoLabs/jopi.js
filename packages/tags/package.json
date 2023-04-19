@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/tags",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.239"
+    "@oneloop/box": "^1.2.240"
   },
   "peerDependencies": {
     "react": "^16.8.0"
