@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
-/* import dayGridPlugin from '@fullcalendar/daygrid'
+import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import FullCalendar from '@fullcalendar/react'
 
@@ -34,10 +34,10 @@ export const CalendarOptions = {
     plugins: [dayGridPlugin],
     initialView: 'dayGridMonth',
   },
-} */
+}
 
 export const Calendar = ({ variant, events, initialDate, scrollTime, height }) => {
-  // const options = { ...CalendarOptions[variant], events: events || [], initialDate: initialDate, scrollTime: scrollTime, height: height }
+  const options = { ...CalendarOptions[variant], events: events || [], initialDate: initialDate, scrollTime: scrollTime, height: height }
 
-  return <Box id={variant}> Soy el calendar </Box>
+  return (<Box id={variant}> <FullCalendar {...options} /> </Box>)
 }

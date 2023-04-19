@@ -7,7 +7,11 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.237"
+    "@fullcalendar/core": "^6.1.4",
+    "@fullcalendar/daygrid": "^6.1.4",
+    "@fullcalendar/react": "^6.1.4",
+    "@fullcalendar/timegrid": "^6.1.4",
+    "@oneloop/box": "^1.2.235"
   },
   "peerDependencies": {
     "react": "^16.8.0"
