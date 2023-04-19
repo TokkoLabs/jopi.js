@@ -4,7 +4,8 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
-    "lib"
+    "lib",
+    "styles"
   ],
   "dependencies": {
     "@fullcalendar/core": "^6.1.4",

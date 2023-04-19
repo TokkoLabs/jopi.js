@@ -3,6 +3,7 @@ import { Box } from '@oneloop/box'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import FullCalendar from '@fullcalendar/react'
+import '../styles/calendar.css'
 
 const date = new Date()
 
