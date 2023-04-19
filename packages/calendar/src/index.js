@@ -7,5 +7,5 @@ import '../styles/calendar.css'
 export const Calendar = ({ variant, events, initialDate, scrollTime, height }) => {
   const options = { ...CalendarOptions[variant], events: events || [], initialDate: initialDate, scrollTime: scrollTime, height: height }
 
-  return <Box id={variant}> <FullCalendar {...options} /> </Box>
+  return (<Box id={variant}> <FullCalendar {...options} /> </Box>)
 }
