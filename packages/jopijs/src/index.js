@@ -3,7 +3,6 @@ import { Badge } from '@oneloop/badge'
 import { Box, Flex } from '@oneloop/box'
 import { Button, ButtonIcon } from '@oneloop/button'
 import { Card } from '@oneloop/card'
-import { Calendar } from '@oneloop/calendar'
 import { Checkbox } from '@oneloop/checkbox'
 import { Collapsible } from '@oneloop/collapsible'
 import { ContainerMenu } from '@oneloop/containermenu'
@@ -39,7 +38,6 @@ export {
   Button,
   ButtonIcon,
   Card,
-  Calendar,
   Checkbox,
   Collapsible,
   ContainerMenu,
