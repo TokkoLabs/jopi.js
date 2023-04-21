@@ -336,7 +336,7 @@ exports[`Toast renders correctly five 1`] = `
   <div
     className="c2"
   >
-    <loader
+    <div
       className="c3"
     >
       <div
@@ -344,7 +344,7 @@ exports[`Toast renders correctly five 1`] = `
         kind="primary"
         size="small"
       />
-    </loader>
+    </div>
     <p
       className="c6"
       color="white"
@@ -1224,7 +1224,7 @@ exports[`Toast renders correctly six 1`] = `
   <div
     className="c2"
   >
-    <loader
+    <div
       className="c3"
     >
       <div
@@ -1232,7 +1232,7 @@ exports[`Toast renders correctly six 1`] = `
         kind="primary"
         size="small"
       />
-    </loader>
+    </div>
     <p
       className="c6"
       color="white"
