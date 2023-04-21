@@ -31,7 +31,7 @@ exports[`Loader renders correctly 1`] = `
   mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
 }
 
-<loader
+<div
   className="c0"
 >
   <div
@@ -39,7 +39,7 @@ exports[`Loader renders correctly 1`] = `
     kind="primary"
     size="small"
   />
-</loader>
+</div>
 `;
 
 exports[`Loader renders correctly 2`] = `
@@ -79,7 +79,7 @@ exports[`Loader renders correctly 2`] = `
   animation: fIIevM 500ms alternate infinite ease;
 }
 
-<loader
+<div
   className="c0"
 >
   <div
@@ -87,7 +87,7 @@ exports[`Loader renders correctly 2`] = `
     kind="secondary"
     size="small"
   />
-</loader>
+</div>
 `;
 
 exports[`Loader renders correctly two 1`] = `
@@ -127,7 +127,7 @@ exports[`Loader renders correctly two 1`] = `
   animation: fIIevM 500ms alternate infinite ease;
 }
 
-<loader
+<div
   className="c0"
 >
   <div
@@ -135,5 +135,5 @@ exports[`Loader renders correctly two 1`] = `
     kind="primary"
     size="medium"
   />
-</loader>
+</div>
 `;
