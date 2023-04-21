@@ -11,6 +11,7 @@
     "@oneloop/badge": "^1.2.264",
     "@oneloop/box": "^1.2.242",
     "@oneloop/button": "^1.2.285",
+    "@oneloop/calendar": "^1.0.15",
     "@oneloop/card": "^1.0.43",
     "@oneloop/checkbox": "^1.2.264",
     "@oneloop/collapsible": "^1.2.287",
