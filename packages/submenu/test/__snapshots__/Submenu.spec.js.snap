@@ -141,7 +141,7 @@ exports[`Submenu first case 1`] = `
 
 <div
   style={
-    Object {
+    {
       "background": "#F3F6F8",
       "borderRadius": "10px",
       "padding": "20px",
@@ -161,11 +161,12 @@ exports[`Submenu first case 1`] = `
       >
         <button
           className="c2"
+          type="button"
         >
           <div
             className="c3"
             style={
-              Object {
+              {
                 "color": "#49565D",
               }
             }
@@ -173,7 +174,7 @@ exports[`Submenu first case 1`] = `
             <i
               className="icon-propiedades"
               style={
-                Object {
+                {
                   "bottom": "0px",
                   "fontSize": "18px",
                   "height": "18px",
@@ -194,7 +195,7 @@ exports[`Submenu first case 1`] = `
     id="tooltip0"
     role="tooltip0"
     style={
-      Object {
+      {
         "visibility": "visible",
         "width": "fit-content",
       }
@@ -211,6 +212,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"
@@ -218,7 +220,7 @@ exports[`Submenu first case 1`] = `
               <i
                 className="icon-contactos"
                 style={
-                  Object {
+                  {
                     "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
@@ -241,6 +243,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"
@@ -248,7 +251,7 @@ exports[`Submenu first case 1`] = `
               <i
                 className="icon-empresa"
                 style={
-                  Object {
+                  {
                     "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
@@ -271,6 +274,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"
@@ -278,7 +282,7 @@ exports[`Submenu first case 1`] = `
               <i
                 className="icon-propiedades"
                 style={
-                  Object {
+                  {
                     "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
@@ -301,6 +305,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"
@@ -308,7 +313,7 @@ exports[`Submenu first case 1`] = `
               <i
                 className="icon-emprendimientos"
                 style={
-                  Object {
+                  {
                     "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
@@ -331,6 +336,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"
@@ -338,7 +344,7 @@ exports[`Submenu first case 1`] = `
               <i
                 className="icon-email"
                 style={
-                  Object {
+                  {
                     "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",

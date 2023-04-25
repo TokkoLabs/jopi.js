@@ -127,7 +127,7 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
     <div
       className="c2"
       style={
-        Object {
+        {
           "color": "#DF1E02",
           "marginTop": "2px",
         }
@@ -136,7 +136,7 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
       <i
         className="icon-favoritos"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "18px",
             "height": "18px",
@@ -152,7 +152,7 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
     <p
       className="c3"
       style={
-        Object {
+        {
           "color": "#384248",
           "marginTop": "6px",
         }
@@ -169,6 +169,7 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
     >
       <button
         className="c6"
+        type="button"
       >
         <div
           className="c7"
@@ -176,7 +177,7 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
           <i
             className="icon-configuracion"
             style={
-              Object {
+              {
                 "bottom": "0px",
                 "fontSize": "12px",
                 "height": "12px",

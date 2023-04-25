@@ -16,4 +16,7 @@ module.exports = {
     '^.+\\.(css)$': '<rootDir>/packages/datepicker/config/CSSStub.js',
   },
   testEnvironment: 'jest-environment-jsdom',
+  testEnvironmentOptions: {
+    customExportConditions: [],
+  },
 }

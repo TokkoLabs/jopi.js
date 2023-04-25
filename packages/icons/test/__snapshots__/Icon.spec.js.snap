@@ -142,7 +142,7 @@ exports[`Icon renders correctly Icon 1`] = `
   <i
     className="icon-agregar"
     style={
-      Object {
+      {
         "bottom": "0px",
         "fontSize": "24px",
         "height": "24px",

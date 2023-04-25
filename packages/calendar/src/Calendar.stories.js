@@ -38,6 +38,6 @@ export default {
   },
 }
 
-export const days = () => <Calendar variant={'days'} />
+export const days = () => <Calendar variant={'days'}/>
 
 export const fullCalendar = () => <Calendar variant={'fullCalendar'} />

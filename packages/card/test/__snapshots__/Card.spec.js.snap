@@ -193,7 +193,7 @@ input:disabled:not(:checked) ~ .c11 {
     className="c0 c2"
     id="0"
     style={
-      Object {
+      {
         "width": "224px",
       }
     }
@@ -315,7 +315,7 @@ input:disabled:not(:checked) ~ .c11 {
       <p
         className="c0 c17"
         style={
-          Object {
+          {
             "color": "#056C53",
           }
         }
@@ -335,7 +335,7 @@ input:disabled:not(:checked) ~ .c11 {
       <button
         className="c0 c19"
         style={
-          Object {
+          {
             "position": "absolute",
             "right": "4px",
             "top": "-2px",
@@ -542,7 +542,7 @@ input:disabled:not(:checked) ~ .c11 {
     className="c0 c2"
     id="0"
     style={
-      Object {
+      {
         "width": "224px",
       }
     }
@@ -664,7 +664,7 @@ input:disabled:not(:checked) ~ .c11 {
       <p
         className="c0 c17"
         style={
-          Object {
+          {
             "color": "#056C53",
           }
         }
@@ -684,7 +684,7 @@ input:disabled:not(:checked) ~ .c11 {
       <button
         className="c0 c19"
         style={
-          Object {
+          {
             "position": "absolute",
             "right": "4px",
             "top": "-2px",
