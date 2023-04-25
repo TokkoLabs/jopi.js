@@ -182,7 +182,7 @@ exports[`Input errors 1`] = `
       <i
         className="icon-error"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "14px",
             "height": "14px",
@@ -396,7 +396,7 @@ exports[`Input inputInlineLabel 1`] = `
     <p
       className="c2"
       style={
-        Object {
+        {
           "color": "#384248",
         }
       }
@@ -656,7 +656,7 @@ exports[`Input inputWithLabel 1`] = `
     <p
       className="c2"
       style={
-        Object {
+        {
           "color": "#384248",
         }
       }
@@ -765,7 +765,7 @@ exports[`Input inputWithPassword 1`] = `
     <p
       className="c2"
       style={
-        Object {
+        {
           "color": "#384248",
         }
       }
@@ -882,7 +882,7 @@ exports[`Input inputWithPasswordIcon 1`] = `
     <p
       className="c2"
       style={
-        Object {
+        {
           "color": "#384248",
         }
       }
@@ -911,7 +911,7 @@ exports[`Input inputWithPasswordIcon 1`] = `
         <i
           className="icon-ocultar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": undefined,
               "height": undefined,
@@ -1311,7 +1311,7 @@ exports[`Input searchBoldIcon 1`] = `
       <i
         className="icon-buscar"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": undefined,
             "height": undefined,

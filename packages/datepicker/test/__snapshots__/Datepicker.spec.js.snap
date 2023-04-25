@@ -50,7 +50,7 @@ exports[`Datepicker default 1`] = `
         <i
           className="icon-calendario"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "16px",
               "height": "16px",

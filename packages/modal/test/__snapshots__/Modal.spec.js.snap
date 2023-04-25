@@ -103,7 +103,7 @@ exports[`Modal renders correctly 1`] = `
       <p
         className="c4"
         style={
-          Object {
+          {
             "color": "#384248",
             "fontWeight": "700",
           }

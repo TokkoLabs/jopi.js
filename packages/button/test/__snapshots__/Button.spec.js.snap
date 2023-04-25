@@ -81,7 +81,7 @@ exports[`Button buttonWithImage 1`] = `
       onError={[Function]}
       src="https://static.tokkobroker.com/static/img/cec.icon.svg"
       style={
-        Object {
+        {
           "height": "16px",
           "width": "16px",
         }
@@ -92,7 +92,7 @@ exports[`Button buttonWithImage 1`] = `
         display="normal"
         src="https://static.tokkobroker.com/static/img/cec.icon.svg"
         style={
-          Object {
+          {
             "height": "16px",
             "width": "16px",
           }
@@ -164,7 +164,7 @@ exports[`Button collapseButtonOpen 1`] = `
   <button
     className="c1"
     style={
-      Object {
+      {
         "position": "absolute",
         "right": "-23px",
         "top": "60px",
@@ -177,7 +177,7 @@ exports[`Button collapseButtonOpen 1`] = `
       <i
         className="icon-atras"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "10px",
             "height": "10px",
@@ -576,7 +576,7 @@ exports[`Button mainButton 1`] = `
       <i
         className="icon-propiedades"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "16px",
             "height": "16px",
@@ -660,7 +660,7 @@ exports[`Button mainButtonCollapsible 1`] = `
       <i
         className="icon-propiedades"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "16px",
             "height": "16px",
@@ -679,7 +679,7 @@ exports[`Button mainButtonCollapsible 1`] = `
     <span
       className="icon-dropdown"
       style={
-        Object {
+        {
           "color": "#798B97",
           "fontSize": "14px",
           "paddingTop": "4px",
@@ -762,7 +762,7 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
       <i
         className="icon-propiedades"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "16px",
             "height": "16px",
@@ -781,7 +781,7 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
     <span
       className="icon-dropdown"
       style={
-        Object {
+        {
           "color": "#798B97",
           "fontSize": "14px",
           "paddingTop": "4px",
@@ -864,7 +864,7 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
       <i
         className="icon-propiedades"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "16px",
             "height": "16px",
@@ -883,7 +883,7 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
     <span
       className="icon-dropdown"
       style={
-        Object {
+        {
           "color": "#798B97",
           "fontSize": "14px",
           "paddingTop": "4px",
@@ -959,7 +959,7 @@ exports[`Button mainButtonIconActive 1`] = `
     <div
       className="c2"
       style={
-        Object {
+        {
           "color": "#DF1E02",
         }
       }
@@ -967,7 +967,7 @@ exports[`Button mainButtonIconActive 1`] = `
       <i
         className="icon-propiedades"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "18px",
             "height": "18px",
@@ -982,7 +982,7 @@ exports[`Button mainButtonIconActive 1`] = `
     </div>
     <span
       style={
-        Object {
+        {
           "color": "#384248",
           "fontWeight": "bold",
         }
@@ -1080,7 +1080,7 @@ exports[`Button mainButtonIconBadge 1`] = `
     <div
       className="c2"
       style={
-        Object {
+        {
           "color": "#DF1E02",
         }
       }
@@ -1088,7 +1088,7 @@ exports[`Button mainButtonIconBadge 1`] = `
       <i
         className="icon-propiedades"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "18px",
             "height": "18px",
@@ -1104,7 +1104,7 @@ exports[`Button mainButtonIconBadge 1`] = `
     <div
       className="c3"
       style={
-        Object {
+        {
           "left": "16px",
           "position": "absolute",
           "top": "2px",
@@ -1182,7 +1182,7 @@ exports[`Button mainButtonIconBadgeFilled 1`] = `
     <div
       className="c2"
       style={
-        Object {
+        {
           "color": "#384248",
         }
       }
@@ -1190,7 +1190,7 @@ exports[`Button mainButtonIconBadgeFilled 1`] = `
       <i
         className="icon-configuracion"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "18px",
             "height": "18px",
@@ -1266,7 +1266,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 1`] = `
     <div
       className="c2"
       style={
-        Object {
+        {
           "color": "#384248",
         }
       }
@@ -1274,7 +1274,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 1`] = `
       <i
         className="icon-configuracion"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": undefined,
             "height": undefined,
@@ -1350,7 +1350,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
     <div
       className="c2"
       style={
-        Object {
+        {
           "color": undefined,
         }
       }
@@ -1358,7 +1358,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
       <i
         className="icon-configuracion"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": undefined,
             "height": undefined,
@@ -1461,7 +1461,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
     <div
       className="c2"
       style={
-        Object {
+        {
           "color": "#DF1E02",
         }
       }
@@ -1469,7 +1469,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
       <i
         className="icon-propiedades"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "18px",
             "height": "18px",
@@ -1484,7 +1484,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
     </div>
     <span
       style={
-        Object {
+        {
           "color": "#384248",
           "fontWeight": "bold",
         }
@@ -1495,7 +1495,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
     <div
       className="c3"
       style={
-        Object {
+        {
           "position": "absolute",
           "right": "10px",
         }
@@ -1759,7 +1759,7 @@ input:disabled:not(:checked) ~ .c11 {
       <i
         className="icon-propiedades"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "18px",
             "height": "18px",
@@ -2027,7 +2027,7 @@ input:disabled:not(:checked) ~ .c11 {
     <div
       className="c0 c15"
       style={
-        Object {
+        {
           "color": "#384248",
         }
       }
@@ -2035,7 +2035,7 @@ input:disabled:not(:checked) ~ .c11 {
       <i
         className="icon-propiedades"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "10px",
             "height": "10px",
@@ -2492,7 +2492,7 @@ exports[`Button roundButton 1`] = `
       <i
         className="icon-unificar"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": undefined,
             "height": undefined,
@@ -2574,7 +2574,7 @@ exports[`Button roundButtonColourFeedback 1`] = `
       <i
         className="icon-check"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": undefined,
             "height": undefined,
@@ -2656,7 +2656,7 @@ exports[`Button roundButtonDisabled 1`] = `
       <i
         className="icon-unificar"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": undefined,
             "height": undefined,
@@ -3209,7 +3209,7 @@ exports[`Button userButton 1`] = `
   <button
     className="c1"
     style={
-      Object {
+      {
         "backgroundColor": "#798B97",
       }
     }
@@ -3217,7 +3217,7 @@ exports[`Button userButton 1`] = `
     <span
       className="icon-contactos"
       style={
-        Object {
+        {
           "fontSize": "24px",
         }
       }

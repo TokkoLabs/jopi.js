@@ -4,10 +4,11 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import FullCalendar from '@fullcalendar/react'
 import '../styles/calendar.css'
+import esLocale from '@fullcalendar/core/locales/es-us'
 
 const date = new Date()
 
-export const CalendarOptions = {
+const CalendarOptions = {
   days: {
     slotLabelFormat: {
       hour: '2-digit',
@@ -20,7 +21,6 @@ export const CalendarOptions = {
       minute: '2-digit',
       meridiem: false,
     },
-    scrollTime: `${date.getHours() - 2}:00:00`,
     plugins: [timeGridPlugin],
     initialView: 'timeGridDay',
     headerToolbar: {
@@ -38,7 +38,7 @@ export const CalendarOptions = {
 }
 
 export const Calendar = ({ variant, events, initialDate, scrollTime, height }) => {
-  const options = { ...CalendarOptions[variant], events: events || [], initialDate: initialDate, scrollTime: scrollTime, height: height }
+  const options = { ...CalendarOptions[variant], events: events || [], initialDate: initialDate, scrollTime: scrollTime || `${date.getHours() - 2}:00:00`, height: height }
 
-  return (<Box id={variant}> <FullCalendar {...options} /> </Box>)
+  return (<Box id={variant}> <FullCalendar locale={esLocale} {...options} /> </Box>)
 }

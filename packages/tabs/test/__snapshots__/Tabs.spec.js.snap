@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs renders correctly with headers and content 1`] = `
-Array [
+[
   .c0 {
   box-sizing: border-box;
   margin: 0;
