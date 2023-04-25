@@ -150,6 +150,7 @@ exports[`Alert danger 1`] = `
       display="inline-flex"
       onClick={[Function]}
       size={32}
+      type="button"
     >
       <svg
         className="c6"
@@ -321,6 +322,7 @@ exports[`Alert primary default 1`] = `
       display="inline-flex"
       onClick={[Function]}
       size={32}
+      type="button"
     >
       <svg
         className="c6"
@@ -490,6 +492,7 @@ exports[`Alert warning 1`] = `
       display="inline-flex"
       onClick={[Function]}
       size={32}
+      type="button"
     >
       <svg
         className="c6"

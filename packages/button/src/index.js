@@ -12,6 +12,7 @@ export const Button = ({ variant, ...props }) => (
     <Box
       as='button'
       tx='buttons'
+      type='button'
       variant={variant}
       {...props}
       __css={{
@@ -106,6 +107,7 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
       <Box
         as='button'
         tx='buttons'
+        type='button'
         variant={variant}
         {...props}
         __css={{

@@ -75,6 +75,7 @@ exports[`Button buttonWithImage 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -170,6 +171,7 @@ exports[`Button collapseButtonOpen 1`] = `
         "top": "60px",
       }
     }
+    type="button"
   >
     <div
       className="c2"
@@ -242,6 +244,7 @@ exports[`Button iconDisabled 1`] = `
 >
   <button
     className="c1"
+    type="button"
   />
 </div>
 `;
@@ -294,6 +297,7 @@ exports[`Button iconPrimary 1`] = `
 >
   <button
     className="c1"
+    type="button"
   />
 </div>
 `;
@@ -346,6 +350,7 @@ exports[`Button iconSecondary 1`] = `
 >
   <button
     className="c1"
+    type="button"
   />
 </div>
 `;
@@ -398,6 +403,7 @@ exports[`Button link 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -452,6 +458,7 @@ exports[`Button linkDisabled 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -506,6 +513,7 @@ exports[`Button linkSubtle 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -569,6 +577,7 @@ exports[`Button mainButton 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -653,6 +662,7 @@ exports[`Button mainButtonCollapsible 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -755,6 +765,7 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -857,6 +868,7 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -955,6 +967,7 @@ exports[`Button mainButtonIconActive 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -1076,6 +1089,7 @@ exports[`Button mainButtonIconBadge 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -1178,6 +1192,7 @@ exports[`Button mainButtonIconBadgeFilled 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -1262,6 +1277,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -1346,6 +1362,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -1457,6 +1474,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -1651,6 +1669,7 @@ input:disabled:not(:checked) ~ .c11 {
 >
   <button
     className="c0 c2"
+    type="button"
   >
     <div
       className="c0 c3"
@@ -1922,6 +1941,7 @@ input:disabled:not(:checked) ~ .c11 {
 >
   <button
     className="c0 c2"
+    type="button"
   >
     <div
       className="c0 c3"
@@ -2100,6 +2120,7 @@ exports[`Button outlineDisabled 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -2154,6 +2175,7 @@ exports[`Button outlinedDisabled 1`] = `
 >
   <button
     className="c1"
+    type="button"
   />
 </div>
 `;
@@ -2206,6 +2228,7 @@ exports[`Button primary 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -2260,6 +2283,7 @@ exports[`Button primaryDisabled 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -2314,6 +2338,7 @@ exports[`Button primaryOutline 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -2372,6 +2397,7 @@ exports[`Button primaryOutlineIcon 1`] = `
 >
   <button
     className="c1"
+    type="button"
   />
 </div>
 `;
@@ -2424,6 +2450,7 @@ exports[`Button primaryText 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -2485,6 +2512,7 @@ exports[`Button roundButton 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -2567,6 +2595,7 @@ exports[`Button roundButtonColourFeedback 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -2649,6 +2678,7 @@ exports[`Button roundButtonDisabled 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
@@ -2724,6 +2754,7 @@ exports[`Button secondary 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -2782,6 +2813,7 @@ exports[`Button secondaryOutlineIcon 1`] = `
 >
   <button
     className="c1"
+    type="button"
   />
 </div>
 `;
@@ -2834,6 +2866,7 @@ exports[`Button secondaryOutlinedIcon 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -2888,6 +2921,7 @@ exports[`Button secondaryText 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -2942,6 +2976,7 @@ exports[`Button subtleButton 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -2996,6 +3031,7 @@ exports[`Button subtleIcon 1`] = `
 >
   <button
     className="c1"
+    type="button"
   />
 </div>
 `;
@@ -3048,6 +3084,7 @@ exports[`Button subtleIconDisabled 1`] = `
 >
   <button
     className="c1"
+    type="button"
   />
 </div>
 `;
@@ -3100,6 +3137,7 @@ exports[`Button subtleText 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -3154,6 +3192,7 @@ exports[`Button textDisabled 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     Test
   </button>
@@ -3213,6 +3252,7 @@ exports[`Button userButton 1`] = `
         "backgroundColor": "#798B97",
       }
     }
+    type="button"
   >
     <span
       className="icon-contactos"
@@ -3304,6 +3344,7 @@ exports[`Button userButtonWithImage 1`] = `
 >
   <button
     className="c1"
+    type="button"
   >
     <div
       className="c2"
