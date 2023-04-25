@@ -199,6 +199,7 @@ exports[`Dropdown DropdownDefault 1`] = `
     <button
       className="c2"
       id="button"
+      type="button"
     >
       <div
         className="c3"
@@ -281,6 +282,7 @@ exports[`Dropdown DropdownDefault 1`] = `
               "borderRadius": "0px",
             }
           }
+          type="button"
         >
           <p
             className="c7"
@@ -317,6 +319,7 @@ exports[`Dropdown DropdownDefault 1`] = `
               "borderRadius": "0px",
             }
           }
+          type="button"
         >
           <p
             className="c7"
@@ -546,6 +549,7 @@ input:disabled:not(:checked) ~ .c14 {
       className="c0 c3"
       id="button"
       onClick={[Function]}
+      type="button"
     >
       <div
         className="c0 c4"
@@ -963,6 +967,7 @@ exports[`Dropdown DropdownListIcon 1`] = `
               "borderRadius": "0px",
             }
           }
+          type="button"
         >
           <span>
             <p
@@ -1001,6 +1006,7 @@ exports[`Dropdown DropdownListIcon 1`] = `
               "borderRadius": "0px",
             }
           }
+          type="button"
         >
           <span>
             <p
@@ -1317,6 +1323,7 @@ input:disabled:not(:checked) ~ .c16 {
     <button
       className="c0 c3"
       onClick={[Function]}
+      type="button"
     >
       <div
         className="c0 c4"
@@ -1366,6 +1373,7 @@ input:disabled:not(:checked) ~ .c16 {
               "borderRadius": "0px",
             }
           }
+          type="button"
         >
           <div
             className="c0 c8"
@@ -1514,6 +1522,7 @@ input:disabled:not(:checked) ~ .c16 {
               "borderRadius": "0px",
             }
           }
+          type="button"
         >
           <div
             className="c0 c8"
@@ -1736,6 +1745,7 @@ exports[`Dropdown DropdownMultiselect 1`] = `
     <button
       className="c2"
       onClick={[Function]}
+      type="button"
     >
       <span />
       <div
@@ -1841,6 +1851,7 @@ exports[`Dropdown DropdownMultiselect 2`] = `
   >
     <button
       className="c2"
+      type="button"
     >
       <div
         className="c3"
@@ -1968,6 +1979,7 @@ exports[`Dropdown DropdownSelection 1`] = `
     <button
       className="c2"
       onClick={[Function]}
+      type="button"
     >
       <span>
         Placeholder
@@ -2107,6 +2119,7 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
   >
     <button
       className="c2"
+      type="button"
     >
       <span>
         Placeholder

@@ -161,6 +161,7 @@ exports[`Submenu first case 1`] = `
       >
         <button
           className="c2"
+          type="button"
         >
           <div
             className="c3"
@@ -211,6 +212,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"
@@ -241,6 +243,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"
@@ -271,6 +274,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"
@@ -301,6 +305,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"
@@ -331,6 +336,7 @@ exports[`Submenu first case 1`] = `
         >
           <button
             className="c6"
+            type="button"
           >
             <div
               className="c7"

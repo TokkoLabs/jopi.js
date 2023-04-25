@@ -75,6 +75,7 @@ exports[`Collapsible default 1`] = `
   >
     <button
       className="c2"
+      type="button"
     >
       Estado
     </button>
@@ -156,6 +157,7 @@ Array [
     >
       <button
         className="c2"
+        type="button"
       >
         <div
           className="c3"
@@ -274,6 +276,7 @@ Array [
     >
       <button
         className="c2"
+        type="button"
       >
         <div
           className="c3"
@@ -409,6 +412,7 @@ Array [
     >
       <button
         className="c2"
+        type="button"
       >
         <div
           className="c3"

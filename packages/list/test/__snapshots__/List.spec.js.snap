@@ -739,6 +739,7 @@ exports[`ListDefault renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
+            type="button"
           >
             Item 1
           </button>
@@ -766,6 +767,7 @@ exports[`ListDefault renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
+            type="button"
           >
             Item 2
           </button>
@@ -793,6 +795,7 @@ exports[`ListDefault renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
+            type="button"
           >
             Item 3
           </button>
@@ -951,6 +954,7 @@ exports[`ListIcon renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
+            type="button"
           >
             <div
               className="c5"
@@ -999,6 +1003,7 @@ exports[`ListIcon renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
+            type="button"
           >
             <div
               className="c6"
@@ -1047,6 +1052,7 @@ exports[`ListIcon renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
+            type="button"
           >
             <div
               className="c6"
@@ -1294,6 +1300,7 @@ input:disabled:not(:checked) ~ .c14 {
                 "borderRadius": "0px",
               }
             }
+            type="button"
           >
             <div
               className="c0 c6"
@@ -1433,6 +1440,7 @@ input:disabled:not(:checked) ~ .c14 {
                 "borderRadius": "0px",
               }
             }
+            type="button"
           >
             <div
               className="c0 c6"
@@ -1572,6 +1580,7 @@ input:disabled:not(:checked) ~ .c14 {
                 "borderRadius": "0px",
               }
             }
+            type="button"
           >
             <div
               className="c0 c6"
