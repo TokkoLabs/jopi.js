@@ -1036,7 +1036,7 @@ exports[`Paginator renders correctly 5 - with selectedPageStyle 1`] = `
   <div
     className="c3"
     style={
-      Object {
+      {
         "borderBottom": "5px dotted purple",
         "color": "purple",
         "fontWeight": "bold",
@@ -1211,7 +1211,7 @@ exports[`Paginator renders correctly 6 - with sx and selectedPageStyle 1`] = `
   <div
     className="c3"
     style={
-      Object {
+      {
         "borderBottom": "5px dotted purple",
         "color": "purple",
         "fontWeight": "bold",

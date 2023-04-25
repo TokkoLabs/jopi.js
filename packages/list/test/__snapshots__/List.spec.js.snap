@@ -260,7 +260,7 @@ input:disabled:not(:checked) ~ .c18 {
             <i
               className="icon-buscar"
               style={
-                Object {
+                {
                   "bottom": "0px",
                   "fontSize": "14px",
                   "height": "14px",
@@ -724,7 +724,7 @@ exports[`ListDefault renders correctly 1`] = `
     >
       <div
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -735,7 +735,7 @@ exports[`ListDefault renders correctly 1`] = `
           <button
             className="c4"
             style={
-              Object {
+              {
                 "borderRadius": "0px",
               }
             }
@@ -752,7 +752,7 @@ exports[`ListDefault renders correctly 1`] = `
     >
       <div
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -763,7 +763,7 @@ exports[`ListDefault renders correctly 1`] = `
           <button
             className="c4"
             style={
-              Object {
+              {
                 "borderRadius": "0px",
               }
             }
@@ -780,7 +780,7 @@ exports[`ListDefault renders correctly 1`] = `
     >
       <div
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -791,7 +791,7 @@ exports[`ListDefault renders correctly 1`] = `
           <button
             className="c4"
             style={
-              Object {
+              {
                 "borderRadius": "0px",
               }
             }
@@ -939,7 +939,7 @@ exports[`ListIcon renders correctly 1`] = `
     >
       <div
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -950,7 +950,7 @@ exports[`ListIcon renders correctly 1`] = `
           <button
             className="c4"
             style={
-              Object {
+              {
                 "borderRadius": "0px",
               }
             }
@@ -962,7 +962,7 @@ exports[`ListIcon renders correctly 1`] = `
               <i
                 className="icon-agente"
                 style={
-                  Object {
+                  {
                     "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
@@ -988,7 +988,7 @@ exports[`ListIcon renders correctly 1`] = `
     >
       <div
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -999,7 +999,7 @@ exports[`ListIcon renders correctly 1`] = `
           <button
             className="c4"
             style={
-              Object {
+              {
                 "borderRadius": "0px",
               }
             }
@@ -1011,7 +1011,7 @@ exports[`ListIcon renders correctly 1`] = `
               <i
                 className="icon-agente"
                 style={
-                  Object {
+                  {
                     "bottom": "0px",
                     "fontSize": "14px",
                     "height": "14px",
@@ -1037,7 +1037,7 @@ exports[`ListIcon renders correctly 1`] = `
     >
       <div
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -1048,7 +1048,7 @@ exports[`ListIcon renders correctly 1`] = `
           <button
             className="c4"
             style={
-              Object {
+              {
                 "borderRadius": "0px",
               }
             }
@@ -1060,7 +1060,7 @@ exports[`ListIcon renders correctly 1`] = `
               <i
                 className="icon-agente"
                 style={
-                  Object {
+                  {
                     "bottom": "0px",
                     "fontSize": "14px",
                     "height": "14px",
@@ -1284,7 +1284,7 @@ input:disabled:not(:checked) ~ .c14 {
     >
       <div
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -1296,7 +1296,7 @@ input:disabled:not(:checked) ~ .c14 {
             className="c0 c5"
             onClick={[Function]}
             style={
-              Object {
+              {
                 "borderRadius": "0px",
               }
             }
@@ -1406,7 +1406,7 @@ input:disabled:not(:checked) ~ .c14 {
             </div>
             <span
               style={
-                Object {
+                {
                   "color": "#AEBAC0",
                   "fontWeight": "normal",
                 }
@@ -1424,7 +1424,7 @@ input:disabled:not(:checked) ~ .c14 {
     >
       <div
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -1436,7 +1436,7 @@ input:disabled:not(:checked) ~ .c14 {
             className="c0 c5"
             onClick={[Function]}
             style={
-              Object {
+              {
                 "borderRadius": "0px",
               }
             }
@@ -1546,7 +1546,7 @@ input:disabled:not(:checked) ~ .c14 {
             </div>
             <span
               style={
-                Object {
+                {
                   "color": "#49565D",
                   "fontWeight": "normal",
                 }
@@ -1564,7 +1564,7 @@ input:disabled:not(:checked) ~ .c14 {
     >
       <div
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -1576,7 +1576,7 @@ input:disabled:not(:checked) ~ .c14 {
             className="c0 c5"
             onClick={[Function]}
             style={
-              Object {
+              {
                 "borderRadius": "0px",
               }
             }
@@ -1686,7 +1686,7 @@ input:disabled:not(:checked) ~ .c14 {
             </div>
             <span
               style={
-                Object {
+                {
                   "color": "#49565D",
                   "fontWeight": "normal",
                 }

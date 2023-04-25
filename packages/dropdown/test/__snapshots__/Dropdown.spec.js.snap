@@ -204,7 +204,7 @@ exports[`Dropdown DropdownDefault 1`] = `
       <div
         className="c3"
         style={
-          Object {
+          {
             "color": "#FFFFFF",
           }
         }
@@ -212,7 +212,7 @@ exports[`Dropdown DropdownDefault 1`] = `
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "16px",
               "height": "16px",
@@ -227,7 +227,7 @@ exports[`Dropdown DropdownDefault 1`] = `
       </div>
       <span
         style={
-          Object {
+          {
             "color": "#FFFFFF",
           }
         }
@@ -235,7 +235,7 @@ exports[`Dropdown DropdownDefault 1`] = `
       <div
         className="c4"
         style={
-          Object {
+          {
             "color": "#FFFFFF",
             "position": "absolute",
             "right": "12px",
@@ -246,7 +246,7 @@ exports[`Dropdown DropdownDefault 1`] = `
         <i
           className="icon-dropdown"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "12px",
               "height": "12px",
@@ -267,7 +267,7 @@ exports[`Dropdown DropdownDefault 1`] = `
   >
     <div
       style={
-        Object {
+        {
           "width": "100%",
         }
       }
@@ -278,7 +278,7 @@ exports[`Dropdown DropdownDefault 1`] = `
         <button
           className="c6"
           style={
-            Object {
+            {
               "borderRadius": "0px",
             }
           }
@@ -287,7 +287,7 @@ exports[`Dropdown DropdownDefault 1`] = `
           <p
             className="c7"
             style={
-              Object {
+              {
                 "padding": "9px 12px 9px 12px",
               }
             }
@@ -304,7 +304,7 @@ exports[`Dropdown DropdownDefault 1`] = `
   >
     <div
       style={
-        Object {
+        {
           "width": "100%",
         }
       }
@@ -315,7 +315,7 @@ exports[`Dropdown DropdownDefault 1`] = `
         <button
           className="c6"
           style={
-            Object {
+            {
               "borderRadius": "0px",
             }
           }
@@ -324,7 +324,7 @@ exports[`Dropdown DropdownDefault 1`] = `
           <p
             className="c7"
             style={
-              Object {
+              {
                 "padding": "9px 12px 9px 12px",
               }
             }
@@ -557,7 +557,7 @@ input:disabled:not(:checked) ~ .c14 {
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "16px",
               "height": "16px",
@@ -574,7 +574,7 @@ input:disabled:not(:checked) ~ .c14 {
       <div
         className="c0 c4"
         style={
-          Object {
+          {
             "position": "static",
             "right": "12px",
             "transform": "rotate(0deg)",
@@ -584,7 +584,7 @@ input:disabled:not(:checked) ~ .c14 {
         <i
           className="icon-dropdown"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "16px",
               "height": "16px",
@@ -706,7 +706,7 @@ input:disabled:not(:checked) ~ .c14 {
     <p
       className="c0 c18"
       style={
-        Object {
+        {
           "padding": "9px 12px 9px 12px",
         }
       }
@@ -821,7 +821,7 @@ input:disabled:not(:checked) ~ .c14 {
     <p
       className="c0 c18"
       style={
-        Object {
+        {
           "padding": "9px 12px 9px 12px",
         }
       }
@@ -952,7 +952,7 @@ exports[`Dropdown DropdownListIcon 1`] = `
   >
     <div
       style={
-        Object {
+        {
           "width": "100%",
         }
       }
@@ -963,7 +963,7 @@ exports[`Dropdown DropdownListIcon 1`] = `
         <button
           className="c3"
           style={
-            Object {
+            {
               "borderRadius": "0px",
             }
           }
@@ -973,7 +973,7 @@ exports[`Dropdown DropdownListIcon 1`] = `
             <p
               className="c4"
               style={
-                Object {
+                {
                   "padding": "9px 12px 9px 12px",
                 }
               }
@@ -991,7 +991,7 @@ exports[`Dropdown DropdownListIcon 1`] = `
   >
     <div
       style={
-        Object {
+        {
           "width": "100%",
         }
       }
@@ -1002,7 +1002,7 @@ exports[`Dropdown DropdownListIcon 1`] = `
         <button
           className="c3"
           style={
-            Object {
+            {
               "borderRadius": "0px",
             }
           }
@@ -1012,7 +1012,7 @@ exports[`Dropdown DropdownListIcon 1`] = `
             <p
               className="c4"
               style={
-                Object {
+                {
                   "padding": "9px 12px 9px 12px",
                 }
               }
@@ -1328,7 +1328,7 @@ input:disabled:not(:checked) ~ .c16 {
       <div
         className="c0 c4"
         style={
-          Object {
+          {
             "color": "#FFFFFF",
           }
         }
@@ -1336,7 +1336,7 @@ input:disabled:not(:checked) ~ .c16 {
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
@@ -1357,7 +1357,7 @@ input:disabled:not(:checked) ~ .c16 {
   >
     <div
       style={
-        Object {
+        {
           "width": "100%",
         }
       }
@@ -1369,7 +1369,7 @@ input:disabled:not(:checked) ~ .c16 {
           className="c0 c7"
           onClick={[Function]}
           style={
-            Object {
+            {
               "borderRadius": "0px",
             }
           }
@@ -1479,7 +1479,7 @@ input:disabled:not(:checked) ~ .c16 {
           </div>
           <span
             style={
-              Object {
+              {
                 "color": "#AEBAC0",
                 "fontWeight": "normal",
               }
@@ -1488,7 +1488,7 @@ input:disabled:not(:checked) ~ .c16 {
             <p
               className="c0 c20"
               style={
-                Object {
+                {
                   "padding": "9px 12px 9px 12px",
                 }
               }
@@ -1506,7 +1506,7 @@ input:disabled:not(:checked) ~ .c16 {
   >
     <div
       style={
-        Object {
+        {
           "width": "100%",
         }
       }
@@ -1518,7 +1518,7 @@ input:disabled:not(:checked) ~ .c16 {
           className="c0 c22"
           onClick={[Function]}
           style={
-            Object {
+            {
               "borderRadius": "0px",
             }
           }
@@ -1628,7 +1628,7 @@ input:disabled:not(:checked) ~ .c16 {
           </div>
           <span
             style={
-              Object {
+              {
                 "color": "#384248",
                 "fontWeight": "bold",
               }
@@ -1637,7 +1637,7 @@ input:disabled:not(:checked) ~ .c16 {
             <p
               className="c0 c20"
               style={
-                Object {
+                {
                   "padding": "9px 12px 9px 12px",
                 }
               }
@@ -1751,7 +1751,7 @@ exports[`Dropdown DropdownMultiselect 1`] = `
       <div
         className="c3"
         style={
-          Object {
+          {
             "position": "absolute",
             "right": "12px",
             "transform": "rotate(0deg)",
@@ -1761,7 +1761,7 @@ exports[`Dropdown DropdownMultiselect 1`] = `
         <i
           className="icon-dropdown"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "12px",
               "height": "12px",
@@ -1856,7 +1856,7 @@ exports[`Dropdown DropdownMultiselect 2`] = `
       <div
         className="c3"
         style={
-          Object {
+          {
             "color": "#A6B2BA",
           }
         }
@@ -1864,7 +1864,7 @@ exports[`Dropdown DropdownMultiselect 2`] = `
         <i
           className="icon-configuracion"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": 14,
               "height": 14,
@@ -1986,7 +1986,7 @@ exports[`Dropdown DropdownSelection 1`] = `
       </span>
       <span
         style={
-          Object {
+          {
             "color": "#384248",
             "fontWeight": 700,
           }
@@ -1997,7 +1997,7 @@ exports[`Dropdown DropdownSelection 1`] = `
       <div
         className="c3"
         style={
-          Object {
+          {
             "position": "absolute",
             "right": "12px",
             "transform": "rotate(0deg)",
@@ -2007,7 +2007,7 @@ exports[`Dropdown DropdownSelection 1`] = `
         <i
           className="icon-dropdown"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "12px",
               "height": "12px",
@@ -2126,7 +2126,7 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
       </span>
       <span
         style={
-          Object {
+          {
             "color": "#AEBAC0",
             "fontWeight": 700,
           }
@@ -2137,7 +2137,7 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
       <div
         className="c3"
         style={
-          Object {
+          {
             "position": "absolute",
             "right": "12px",
             "transform": "rotate(0deg)",
@@ -2147,7 +2147,7 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
         <i
           className="icon-dropdown"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "12px",
               "height": "12px",

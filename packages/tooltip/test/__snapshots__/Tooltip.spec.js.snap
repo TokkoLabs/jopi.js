@@ -99,7 +99,7 @@ exports[`Submenu renders correctly 1`] = `
 
 <div
   style={
-    Object {
+    {
       "background": "#F3F6F8",
       "borderRadius": "10px",
       "padding": "20px",
@@ -124,7 +124,7 @@ exports[`Submenu renders correctly 1`] = `
           <div
             className="c3"
             style={
-              Object {
+              {
                 "color": "#49565D",
               }
             }
@@ -132,7 +132,7 @@ exports[`Submenu renders correctly 1`] = `
             <i
               className="icon-propiedades"
               style={
-                Object {
+                {
                   "bottom": "0px",
                   "fontSize": "18px",
                   "height": "18px",
@@ -153,7 +153,7 @@ exports[`Submenu renders correctly 1`] = `
     id="tooltip0"
     role="tooltip0"
     style={
-      Object {
+      {
         "visibility": "visible",
         "width": "fit-content",
       }

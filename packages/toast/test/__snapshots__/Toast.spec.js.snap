@@ -157,7 +157,7 @@ exports[`Toast renders correctly 1`] = `
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
@@ -369,7 +369,7 @@ exports[`Toast renders correctly five 1`] = `
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
@@ -534,7 +534,7 @@ exports[`Toast renders correctly four 1`] = `
       <i
         className="icon-check"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "32px",
             "height": "32px",
@@ -570,7 +570,7 @@ exports[`Toast renders correctly four 1`] = `
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
@@ -735,7 +735,7 @@ exports[`Toast renders correctly four 2`] = `
       <i
         className="icon-error"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "32px",
             "height": "32px",
@@ -771,7 +771,7 @@ exports[`Toast renders correctly four 2`] = `
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
@@ -981,7 +981,7 @@ exports[`Toast renders correctly seven 1`] = `
       <i
         className="icon-check"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "32px",
             "height": "32px",
@@ -1016,7 +1016,7 @@ exports[`Toast renders correctly seven 1`] = `
           <i
             className="icon-descargar"
             style={
-              Object {
+              {
                 "bottom": "0px",
                 "fontSize": "12px",
                 "height": "12px",
@@ -1050,7 +1050,7 @@ exports[`Toast renders correctly seven 1`] = `
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
@@ -1262,7 +1262,7 @@ exports[`Toast renders correctly six 1`] = `
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
@@ -1427,7 +1427,7 @@ exports[`Toast renders correctly three 1`] = `
       <i
         className="icon-alertas"
         style={
-          Object {
+          {
             "bottom": "0px",
             "fontSize": "32px",
             "height": "32px",
@@ -1463,7 +1463,7 @@ exports[`Toast renders correctly three 1`] = `
         <i
           className="icon-cerrar"
           style={
-            Object {
+            {
               "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",

@@ -84,7 +84,7 @@ exports[`Collapsible default 1`] = `
 `;
 
 exports[`Collapsible main 1`] = `
-Array [
+[
   .c0 {
   box-sizing: border-box;
   margin: 0;
@@ -162,7 +162,7 @@ Array [
         <div
           className="c3"
           style={
-            Object {
+            {
               "color": "#DF1E02",
             }
           }
@@ -170,7 +170,7 @@ Array [
           <i
             className="icon-emprendimientos"
             style={
-              Object {
+              {
                 "bottom": "0px",
                 "fontSize": "16px",
                 "height": "16px",
@@ -185,7 +185,7 @@ Array [
         </div>
         <span
           style={
-            Object {
+            {
               "color": "#384248",
               "fontWeight": "bold",
             }
@@ -198,7 +198,7 @@ Array [
     <div
       className="content"
       style={
-        Object {
+        {
           "height": "auto",
         }
       }
@@ -281,7 +281,7 @@ Array [
         <div
           className="c3"
           style={
-            Object {
+            {
               "color": "#49565D",
             }
           }
@@ -289,7 +289,7 @@ Array [
           <i
             className="icon-emprendimientos"
             style={
-              Object {
+              {
                 "bottom": "0px",
                 "fontSize": "16px",
                 "height": "16px",
@@ -304,7 +304,7 @@ Array [
         </div>
         <span
           style={
-            Object {
+            {
               "color": "#49565D",
               "fontWeight": "normal",
             }
@@ -417,7 +417,7 @@ Array [
         <div
           className="c3"
           style={
-            Object {
+            {
               "color": "#49565D",
             }
           }
@@ -425,7 +425,7 @@ Array [
           <i
             className="icon-emprendimientos"
             style={
-              Object {
+              {
                 "bottom": "0px",
                 "fontSize": "16px",
                 "height": "16px",
@@ -440,7 +440,7 @@ Array [
         </div>
         <span
           style={
-            Object {
+            {
               "color": "#49565D",
               "fontWeight": "normal",
             }
@@ -451,7 +451,7 @@ Array [
         <div
           className="c4"
           style={
-            Object {
+            {
               "position": "absolute",
               "right": "10px",
             }
