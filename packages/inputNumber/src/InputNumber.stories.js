@@ -48,6 +48,12 @@ export default {
       type: 'string',
       control: { type: 'none' },
     },
+    error: {
+      name: 'error',
+      description: 'Booleano para indicar que el campo falta de completar',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
   },
 }
 
