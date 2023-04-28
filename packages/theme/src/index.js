@@ -366,8 +366,26 @@ const switches = {
 const theme = {
   inputNumber: {
     default: {
-      background: colors.neutralGray9,
-      color: colors.neutralGray3,
+      background: colors.neutralGray8,
+      color: colors.neutralGray2,
+      ':hover': {
+        color: colors.neutralGray1,
+        input: {
+          color: colors.neutralGray1,
+        },
+      },
+    },
+    active: {
+      borderColor: colors.neutralGray3,
+    },
+    focus: {
+      borderColor: colors.infoAlert,
+    },
+    filled: {
+      color: colors.neutralGray1,
+      input: {
+        color: colors.neutralGray1,
+      },
     },
   },
   tags: {
