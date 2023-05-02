@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/datepicker",
-  "version": "1.2.285",
+  "version": "1.2.286",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -9,11 +9,11 @@
   ],
   "dependencies": {
     "@datepicker-react/hooks": "^2.2.0",
-    "@oneloop/box": "^1.2.244",
-    "@oneloop/button": "^1.2.287",
-    "@oneloop/dropdown": "^1.2.298",
-    "@oneloop/icons": "^1.2.266",
-    "@oneloop/text": "^1.2.245",
+    "@oneloop/box": "^1.2.245",
+    "@oneloop/button": "^1.2.288",
+    "@oneloop/dropdown": "^1.2.299",
+    "@oneloop/icons": "^1.2.267",
+    "@oneloop/text": "^1.2.246",
     "date-fns": "^2.8.1",
     "react-datepicker": "^3.3.0"
   },
