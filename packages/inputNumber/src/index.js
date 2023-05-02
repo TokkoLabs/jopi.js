@@ -6,12 +6,38 @@ import { Text } from '@oneloop/text'
 import theme from '@oneloop/theme'
 import '../../theme/styles/globals.css'
 
-export const InputNumber = ({ max = 99, min = 0, startVal = 0, step = 1, val = () => { }, text, variant = 'default', ...props }) => {
+export const InputNumber = ({ max = 99, min = 0, error = false, startVal = 0, step = 1, val = () => { }, text, variant = 'default', ...props }) => {
   const [valueInput, setValueInput] = useState(startVal)
+  const [inputVariants, setInputVariants] = useState([variant])
+  const inputRef = useRef()
+  const inputCont = useRef()
 
   useEffect(() => {
     val(valueInput)
+    if (valueInput) {
+      setInputVariants([...inputVariants, 'filled'])
+    } else {
+      setInputVariants(inputVariants.filter(elem => elem !== 'filled'))
+    }
   }, [valueInput])
+
+  useEffect(() => {
+    if (error) {
+      setInputVariants([variant, 'focus'])
+    }
+  }, [error])
+
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (!inputCont.current?.contains(event.target)) {
+        setInputVariants(inputVariants.filter(elem => elem !== 'filled'))
+      }
+    }
+    document.addEventListener('click', handleClick)
+    return () => {
+      document.removeEventListener('click', handleClick)
+    }
+  }, [])
 
   const handleChange = (e) => {
     if (e.target.value === '') {
@@ -25,19 +51,24 @@ export const InputNumber = ({ max = 99, min = 0, startVal = 0, step = 1, val = (
     }
   }
 
-  const inputRef = useRef()
-  const handleFocus = () => inputRef.current.focus()
+  const handleFocus = () => {
+    inputRef.current.focus()
+    setInputVariants([variant, 'active'])
+  }
+
   return (
     <Box
-      as='div'
+      as='form'
       tx="inputNumber"
-      variant={variant}
+      ref={inputCont}
+      variant={inputVariants}
       __css={{
         display: 'inline-flex',
         alignItems: 'center',
         padding: '7px 10px',
         gap: '8px',
-        borderRadius: '5px',
+        borderRadius: '8px',
+        border: 'solid 1px transparent',
       }}
       onClick={handleFocus}
     >
@@ -49,7 +80,15 @@ export const InputNumber = ({ max = 99, min = 0, startVal = 0, step = 1, val = (
         id='inputNumberDisplay'
         value={parseInt(valueInput).toString()}
         onChange={(e) => handleChange(e)}
-        __css={{ width: '22px', background: 'transparent', border: 'none', outline: 'none', color: theme.colors.neutralGray3, textAlign: 'center', padding: '0' }}
+        __css={{
+          width: '22px',
+          background: 'transparent',
+          border: 'none',
+          outline: 'none',
+          color: theme.colors.neutralGray2,
+          textAlign: 'center',
+          padding: '0',
+        }}
         {...props}
         onKeyDown={(e) => {
           if (e.target.value.length === 1 && e.key === 'Backspace') {
