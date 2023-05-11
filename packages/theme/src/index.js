@@ -364,6 +364,12 @@ const switches = {
 }
 
 const theme = {
+  liInputHours: {
+    selected: {
+      backgroundColor: '#F3F6F8',
+      color: '#384248',
+    },
+  },
   inputNumber: {
     default: {
       background: colors.neutralGray8,

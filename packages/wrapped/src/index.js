@@ -82,7 +82,6 @@ export const Wrapped = ({ items, fnClose, widthRestItemsWindow, printKey, tagVar
           display: 'block',
           alignItems: 'center',
           gap: '5px',
-          width: '300px',
           overflow: widthWrapper,
           whiteSpace: 'nowrap',
         }}
