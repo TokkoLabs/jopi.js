@@ -14,6 +14,7 @@ import { Fonts } from '@oneloop/fonts'
 import { Icon } from '@oneloop/icons'
 import { Image } from '@oneloop/image'
 import { Input } from '@oneloop/input'
+import { InputHours } from '@oneloop/input-hours'
 import { InputNumber } from '@oneloop/input-number'
 import { Label } from '@oneloop/label'
 import { List, useFilterData } from '@oneloop/list'
@@ -52,6 +53,7 @@ export {
   Icon,
   Image,
   Input,
+  InputHours,
   InputNumber,
   Label,
   List,
