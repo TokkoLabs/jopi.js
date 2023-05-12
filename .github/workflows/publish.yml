@@ -25,13 +25,10 @@ jobs:
           node-version: 14
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Installing npm
-        run: |
-          npm install
-          npm install --global lerna
-
       - name: Installing yarn
-        run: yarn install
+        run: |
+          yarn install
+          yarn global add lerna
 
       - name: Run tests
         run: yarn test
@@ -58,7 +55,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
-        run: lerna publish from-package -y --no-verify-access
+        run: npx lerna publish from-package --yes
 
   merge-me:
     name: Merge to master
