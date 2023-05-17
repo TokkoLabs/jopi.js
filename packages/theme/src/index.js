@@ -764,14 +764,11 @@ const theme = {
     },
     primaryText: {
       color: colors.primary,
-      backgroundColor: colors.neutral[0],
       ':hover': {
         color: colors.primaryHover,
-        backgroundColor: colors.neutral[0],
       },
       ':focus': {
         color: colors.primaryPressed,
-        backgroundColor: colors.neutral[0],
       },
     },
     secondaryText: {
