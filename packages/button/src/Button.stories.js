@@ -408,3 +408,9 @@ export const IconSubtleExtraSmall18px = () => {
 export const buttonWithImage = () => (
   <ButtonIcon variant='mainButton' srcImage='https://static.tokkobroker.com/static/img/cec.icon.svg' text='Messenger' widthImage='16px' heightImage='16px'/>
 )
+
+export const IconInputHeader = () => {
+  return (
+    <ButtonIcon icon='icon-contactos' variant={['iconExtraSmall24pxWithIcon14px', 'subtleTrasnparentPretroko']}/>
+  )
+}

@@ -52,6 +52,7 @@ const colors = {
   white: '#FFFFFF',
   yellow: '#FFF502',
   petrokoPressed: '#3188A4',
+  petrokoHeader: '#25697E',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -855,6 +856,15 @@ const theme = {
       py: '5px',
       px: '11px',
     },
+    iconExtraSmall24pxWithIcon14px: {
+      height: '24px',
+      width: '24px',
+      borderRadius: '6px',
+      fontSize: '14px',
+      fontSizeIcon: '14px',
+      py: '5px',
+      px: '11px',
+    },
     iconExtraSmall18px: {
       height: '18px',
       width: '18px',
@@ -1169,6 +1179,18 @@ const theme = {
       ':focus': {
         backgroundColor: colors.neutral[0],
         color: colors.subtlePressed,
+      },
+    },
+    subtleTrasnparentPretroko: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.transparent,
+      ':hover': {
+        color: colors.neutralGray4,
+        backgroundColor: colors.neutralGray8,
+      },
+      ':focus': {
+        color: colors.neutralGray8,
+        backgroundColor: colors.petrokoHeader,
       },
     },
     subtleTrasnparentIconClearButton: {
