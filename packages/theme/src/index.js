@@ -52,6 +52,7 @@ const colors = {
   white: '#FFFFFF',
   yellow: '#FFF502',
   petrokoPressed: '#3188A4',
+  petrokoHeader: '#25697E',
   neutral: [
     '#FFFFFF',
     '#F5F5F5',
@@ -764,14 +765,11 @@ const theme = {
     },
     primaryText: {
       color: colors.primary,
-      backgroundColor: colors.neutral[0],
       ':hover': {
         color: colors.primaryHover,
-        backgroundColor: colors.neutral[0],
       },
       ':focus': {
         color: colors.primaryPressed,
-        backgroundColor: colors.neutral[0],
       },
     },
     secondaryText: {
@@ -855,6 +853,15 @@ const theme = {
       width: '22px',
       borderRadius: '6px',
       fontSize: '10px',
+      py: '5px',
+      px: '11px',
+    },
+    iconExtraSmall24pxWithIcon14px: {
+      height: '24px',
+      width: '24px',
+      borderRadius: '6px',
+      fontSize: '14px',
+      fontSizeIcon: '14px',
       py: '5px',
       px: '11px',
     },
@@ -1172,6 +1179,18 @@ const theme = {
       ':focus': {
         backgroundColor: colors.neutral[0],
         color: colors.subtlePressed,
+      },
+    },
+    subtleTrasnparentPretroko: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.transparent,
+      ':hover': {
+        color: colors.neutralGray4,
+        backgroundColor: colors.neutralGray8,
+      },
+      ':focus': {
+        color: colors.neutralGray8,
+        backgroundColor: colors.petrokoHeader,
       },
     },
     subtleTrasnparentIconClearButton: {
