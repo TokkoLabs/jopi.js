@@ -5,7 +5,7 @@ import theme from '@oneloop/theme'
 
 const TabsContext = createContext()
 
-export const Tabs = ({ children, variant, itemTabSelected = 1, ...props }) => {
+export const Tabs = ({ children, variant = 'normal', itemTabSelected = 1, ...props }) => {
   const tabChildren = React.Children.toArray(children).filter(
     child => child.type.name === 'Tab' || child.key.toString().match('Tab')
   )
@@ -41,7 +41,7 @@ const useTabsContext = () => {
   return context
 }
 
-const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', variantFont = 'fontSize12', ...props }) => {
+const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', variantFont = 'fontSize12', onClick, ...props }) => {
   const { active, setActive } = useTabsContext()
   const [hover, setHover] = useToggle(false)
   const fontText = Object.values(theme.text[variantBody][variantFont])
@@ -53,12 +53,17 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
   } else if (hover) {
     color = variantValues[':hover'].color
   }
-
+  const onClickTab = () => {
+    setActive(id)
+    if (onClick) {
+      onClick()
+    }
+  }
   return (
     <Box
       tx='tab'
       variant={variant}
-      onClick={() => setActive(id)}
+      onClick={() => onClickTab()}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
       {...props}

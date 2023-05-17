@@ -44,7 +44,7 @@ describe('Tabs', () => {
   test('renders correctly with variant default', () => {
     const component = shallow(
       <Tabs>
-        <Tabs.Tab variant='default' id="one">One</Tabs.Tab>
+        <Tabs.Tab variant='default' id="one" onClick={console.log('works')}>One</Tabs.Tab>
         <Tabs.Tab variant='default' id="two">Two</Tabs.Tab>
         <Tabs.Tab variant='default' id="three">Three</Tabs.Tab>
         <Tabs.Tab variant='default' id="four">Four</Tabs.Tab>
