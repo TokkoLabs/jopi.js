@@ -91,19 +91,19 @@ export const normal = () => (
 export const tabDefault = () => (
   <Box __css={{ backgroundColor: 'lightgray', width: '250px', height: '80px', padding: '5px' }}>
     <Tabs variant='normal'>
-      <Tabs.Tab variant='default' id="item0" key="Tab0">
+      <Tabs.Tab variant='default' id="item0" key="Tab0" onClick={() => console.log('funciona 0')}>
         <Icon icon='icon-buscar' fontSize='12px' />
         <Text variant='bodyBold.fontSize12'>12</Text>
       </Tabs.Tab >
-      <Tabs.Tab variant='default' id="item1" key="Tab1">
+      <Tabs.Tab variant='default' id="item1" key="Tab1" onClick={() => console.log('funciona 1')}>
         <Icon icon='icon-propiedades' fontSize='12px' />
         <Text variant='bodyBold.fontSize12'>12</Text>
       </Tabs.Tab>
-      <Tabs.Tab variant='default' id="item2" key="Tab2">
+      <Tabs.Tab variant='default' id="item2" key="Tab2" onClick={() => console.log('funciona 2')}>
         <Icon icon='icon-contactos' fontSize='12px' />
         <Text variant='bodyBold.fontSize12'>12</Text>
       </Tabs.Tab>
-      <Tabs.Tab variant='default' id="item3" key="Tab3">
+      <Tabs.Tab variant='default' id="item3" key="Tab3" onClick={() => console.log('funciona 3')}>
         <Icon icon='icon-emprendimientos' fontSize='12px' />
         <Text variant='bodyBold.fontSize12'>12</Text>
       </Tabs.Tab>
