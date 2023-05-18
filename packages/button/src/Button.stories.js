@@ -14,12 +14,12 @@ export default {
         '\'iconSecondary\', \'iconDisabled\', \'subtleIconButton\', \'subtleTrasnparentIconClearButton\', ' +
         '\'subtleTrasnparentIconObscureButton\', \'smallIconButtonTransparent\', \'roundIconArrow\', ' +
         '\'colourFeedback\', \'mainItemSmall\', \'mainButton\', \'mainButtonIcon\', \'userButton\', \'collapseButtonOpen\', ' +
-        '\'collapseButtonClosed\', \'roundIconArrowRed\' ]' +
+        '\'collapseButtonClosed\', \'roundIconArrowRed\', \'subtleTrasnparentPretrokoPressed\', \'subtleTrasnparentPretroko\' ]' +
         '\n*       **Variantes de tamaño disponibles:** [ \'large\', \'medium\', \'small\', \'extraSmall\', \'iconLarge\', ' +
         '\'iconMedium\', \'iconSmall\', \'iconExtraSmall\', \'iconExtraSmall22px\', \'iconExtraSmall18px\',' +
         '\'roundIconLarge\', \'roundIconMedium\', \'roundIconSmall\', \'roundIconExtraSmall\', ' +
         '\'roundIconExtraSmall22px\', \'roundIconExtraSmall18px\', \'roundLarge\', \'roundMedium\', \'roundSmall\', ' +
-        '\'roundExtraSmall\', \'roundIconSmallIcon14px\' ]' +
+        '\'roundExtraSmall\', \'roundIconSmallIcon14px\', \'iconExtraSmall24pxWithIcon14px\' ]' +
         '\n* **Variantes de texto disponibles:** [ \'primaryText\', \'secondaryText\', \'subtleText\', \'textDisabled\' ' +
         '\'link\', \'linkSubtle\', \'linkDisabled\', \'subtleButton\' ]',
       type: 'text',
@@ -410,7 +410,8 @@ export const buttonWithImage = () => (
 )
 
 export const IconInputHeader = () => {
+  const [active, toggle] = useToggle(false)
   return (
-    <ButtonIcon icon='icon-contactos' variant={['iconExtraSmall24pxWithIcon14px', 'subtleTrasnparentPretroko']}/>
+    <ButtonIcon icon='icon-contactos' variant={[active ? 'subtleTrasnparentPretrokoPressed' : 'subtleTrasnparentPretroko', 'iconExtraSmall24pxWithIcon14px']} holdPress active={active} onClick={toggle}/>
   )
 }
