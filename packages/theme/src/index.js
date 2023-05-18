@@ -1188,10 +1188,10 @@ const theme = {
         color: colors.neutralGray4,
         backgroundColor: colors.neutralGray8,
       },
-      ':focus': {
-        color: colors.neutralGray8,
-        backgroundColor: colors.petrokoHeader,
-      },
+    },
+    subtleTrasnparentPretrokoPressed: {
+      color: colors.neutralGray8,
+      backgroundColor: colors.petrokoHeader,
     },
     subtleTrasnparentIconClearButton: {
       color: colors.subtle,
