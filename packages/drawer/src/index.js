@@ -14,7 +14,7 @@ export const Drawer = ({
   heightMax,
   transparent,
   borderRadiusClosed,
-  topClosed,
+  marginTop,
   animationDuration,
   ...props
 }) => {
@@ -23,7 +23,7 @@ export const Drawer = ({
       {isOpen && (
         <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth}
           overlay={overlay} isCollapse={isCollapse} heightMin={heightMin} heightMax={heightMax} transparent={transparent}
-          borderRadiusClosed={borderRadiusClosed} topClosed={topClosed} animationDuration={animationDuration} {...props}>
+          borderRadiusClosed={borderRadiusClosed} marginTop={marginTop} animationDuration={animationDuration} {...props}>
           {children}
         </DrawerMotion>
       )}
@@ -42,7 +42,7 @@ const DrawerMotion = ({
   heightMax = '100%',
   transparent,
   borderRadiusClosed,
-  topClosed,
+  marginTop,
   animationDuration = 0.5,
   ...props
 }) => {
@@ -67,6 +67,7 @@ const DrawerMotion = ({
       backgroundColor: ['hsla(255, 255, 255, 1)', 'hsla(255, 255, 255, 0)'],
       height: heightMax,
       boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0)',
+      top: marginTop,
     },
     closed: {
       width: animationMinWidth,
@@ -74,7 +75,7 @@ const DrawerMotion = ({
       height: heightMin,
       boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0.05)',
       borderRadius: borderRadiusClosed,
-      top: topClosed,
+      top: marginTop,
     },
   }
 
