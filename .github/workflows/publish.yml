@@ -2,6 +2,8 @@ on:
   push:
     branches:
       - master
+    branches-ignore:
+      - development
 
 jobs:
   build-and-publish:
