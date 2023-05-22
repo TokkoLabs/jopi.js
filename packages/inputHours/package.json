@@ -1,14 +1,14 @@
 {
   "name": "@oneloop/input-hours",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.250",
-    "@oneloop/icons": "^1.2.272",
+    "@oneloop/box": "^1.2.251",
+    "@oneloop/icons": "^1.2.273",
     "date-fns": "2.30.0",
     "prop-types": "^15.7.2"
   },
