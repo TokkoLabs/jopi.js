@@ -41,10 +41,6 @@ $ npm run dev
 
 - [ ] STRUCTURE: Too many packages, reduce amount (1)
 - [ ] STRUCTURE: Upgrade dependencies (storybook 5.3)
-- [ ] CI: Publish a testing version
-- [ ] CI - BUG: Make publish dont push to github or something else
-- [ ] PACKAGES: Calendar
-- [ ] PACKAGES: Button (hover).
 - [ ] DOCS: Improve documentation of the packages.
 
 (1) Today, every visual element is a package in npm. Maybe we should group them by elements (forms, core, extra, theme, hooks)
