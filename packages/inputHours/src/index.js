@@ -150,6 +150,7 @@ export const InputHours = ({
         className="List"
         __css={{
           width: InputContRef.current?.offsetWidth,
+          backgroundColor: '#FFF',
           visibility: showDD ? 'visible' : 'hidden',
           position: 'absolute',
           height: '140px',
