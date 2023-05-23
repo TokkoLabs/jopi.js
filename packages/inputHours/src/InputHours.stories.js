@@ -7,7 +7,8 @@ export default {
   argTypes: {
     inputTime: {
       name: 'inputTime',
-      description: 'Horario inicial del input, formato day. Por defecto carga la fecha actual',
+      description:
+        'Horario inicial del input, formato day. Por defecto carga la fecha actual',
       type: 'text',
       control: { type: 'none' },
     },
