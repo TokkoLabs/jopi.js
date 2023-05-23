@@ -103,7 +103,14 @@ export const InputHours = ({
 
   useEffect(() => {
     handleScroll()
-    val(time)
+    if (time) {
+      val(
+        set(inputTime, {
+          hours: time.slice(0, 2),
+          minutes: time.slice(3, 5),
+        })
+      )
+    }
   }, [time, listItemsRef.current])
 
   return (
