@@ -49,7 +49,7 @@ jobs:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
         run: |
           cd node_modules/.bin
-          lerna version --no-private
+          lerna version patch --yes
 
       - name: Publish New Jopi version to NPM
         env:
