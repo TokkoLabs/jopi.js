@@ -49,13 +49,13 @@ jobs:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
         run: |
           cd node_modules/.bin
-          lerna version patch --yes
+          lerna version --no-private
 
       - name: Publish New Jopi version to NPM
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
-        run: lerna publish --no-private
+        run: lerna --force-publish
 
   merge-me:
     name: Merge to master
