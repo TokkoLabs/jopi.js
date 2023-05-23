@@ -57,9 +57,6 @@ jobs:
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
         run: npx lerna init --independent
 
-      - name: Npm whoami
-        run: npm whoami
-
   merge-me:
     name: Merge to master
     needs:
