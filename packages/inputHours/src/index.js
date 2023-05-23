@@ -14,7 +14,11 @@ for (let i = 0; i < 24; i++) {
   }
 }
 
-export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }) => {
+export const InputHours = ({
+  inputTime = new Date(),
+  arrayInput = defaultHours,
+  val = () => {},
+}) => {
   const InputContRef = useRef(null)
   const listItemsRef = useRef(null)
   const [showDD, setShowDD] = useState(false)
@@ -30,10 +34,16 @@ export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }
     const { seter } = hoursFormatRef.current
 
     if (format(seter, 'mm') % 15) {
-      hoursFormatRef.current = { ...hoursFormatRef.current, seter: set(seter, { minutes: 0 }) }
+      hoursFormatRef.current = {
+        ...hoursFormatRef.current,
+        seter: set(seter, { minutes: 0 }),
+      }
       setTime(format(seter, 'HH:mm'))
     } else {
-      hoursFormatRef.current = { ...hoursFormatRef.current, seter: addMinutes(seter, min) }
+      hoursFormatRef.current = {
+        ...hoursFormatRef.current,
+        seter: addMinutes(seter, min),
+      }
       setTime(format(addMinutes(seter, min), 'HH:mm'))
     }
   }
@@ -49,7 +59,10 @@ export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }
       }
       const { hours, minutes } = hoursFormatRef.current
       if (hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59) {
-        hoursFormatRef.current = { ...hoursFormatRef.current, seter: set(inputTime, { hours: hours, minutes: minutes }) }
+        hoursFormatRef.current = {
+          ...hoursFormatRef.current,
+          seter: set(inputTime, { hours: hours, minutes: minutes }),
+        }
         setTime(newValue)
       }
     }
@@ -60,7 +73,10 @@ export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }
   }
 
   const handleClickTime = (h) => {
-    const seter = set(inputTime, { hours: h.substring(0, 2), minutes: h.substring(3, 5) })
+    const seter = set(inputTime, {
+      hours: h.substring(0, 2),
+      minutes: h.substring(3, 5),
+    })
     setTime(format(seter, 'HH:mm'))
   }
 
@@ -68,13 +84,16 @@ export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }
     const restTime = format(inputTime, 'mm') % 15
     const interval = restTime < 15 ? 30 : 15
 
-    hoursFormatRef.current = { ...hoursFormatRef.current, seter: addMinutes(inputTime, interval - restTime) }
+    hoursFormatRef.current = {
+      ...hoursFormatRef.current,
+      seter: addMinutes(inputTime, interval - restTime),
+    }
 
     setTime(format(addMinutes(inputTime, interval - restTime), 'HH:mm'))
   }
 
   const handleScroll = () => {
-    const index = (arrayInput.indexOf(time) * 26) - 52
+    const index = arrayInput.indexOf(time) * 26 - 52
     listItemsRef.current.scrollTop = index
   }
 
@@ -84,6 +103,14 @@ export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }
 
   useEffect(() => {
     handleScroll()
+    if (time) {
+      val(
+        set(inputTime, {
+          hours: time.slice(0, 2),
+          minutes: time.slice(3, 5),
+        })
+      )
+    }
   }, [time, listItemsRef.current])
 
   return (
@@ -94,12 +121,12 @@ export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }
       onClick={handleShowDD}
     >
       <Input
-        id='inputHourDisplay'
-        prefix={<Icon icon='icon-reloj' fontSize='14px' />}
-        suffix={<Icon icon='icon-dropdown' fontSize='14px' />}
-        variant='inputSearch'
-        width='100px'
-        maxLength='4'
+        id="inputHourDisplay"
+        prefix={<Icon icon="icon-reloj" fontSize="14px" />}
+        suffix={<Icon icon="icon-dropdown" fontSize="14px" />}
+        variant="inputSearch"
+        width="100px"
+        maxLength="4"
         onChange={handleInputChange}
         onBlur={handleBlur}
         value={time}
@@ -118,9 +145,9 @@ export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }
         }}
       />
       <Box
-        as='ul'
+        as="ul"
         ref={listItemsRef}
-        className='List'
+        className="List"
         __css={{
           width: InputContRef.current?.offsetWidth,
           visibility: showDD ? 'visible' : 'hidden',
@@ -149,9 +176,13 @@ export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }
         {arrayInput.map((h, i) => (
           <Box
             key={i}
-            as='li'
-            tx='liInputHours'
-            variant={arrayInput.indexOf(h) === arrayInput.indexOf(time) ? 'selected' : ''}
+            as="li"
+            tx="liInputHours"
+            variant={
+              arrayInput.indexOf(h) === arrayInput.indexOf(time)
+                ? 'selected'
+                : ''
+            }
             __css={{
               padding: '4px 7px',
               cursor: 'pointer',
@@ -168,7 +199,7 @@ export const InputHours = ({ inputTime = new Date(), arrayInput = defaultHours }
             }}
             onClick={() => handleClickTime(h)}
           >
-            <Text variant='body.fontSize14'>{h}</Text>
+            <Text variant="body.fontSize14">{h}</Text>
           </Box>
         ))}
       </Box>
