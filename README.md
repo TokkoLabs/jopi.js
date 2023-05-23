@@ -39,15 +39,22 @@ $ npm run dev
 
 #### Things to improve
 
-- [ ] STRUCTURE: Too many packages, reduce amount (1)
+- [ ] STRUCTURE: Upgrade dependencies (Framer Motion) 
 - [ ] STRUCTURE: Upgrade dependencies (storybook 5.3)
 - [ ] DOCS: Improve documentation of the packages.
 
-(1) Today, every visual element is a package in npm. Maybe we should group them by elements (forms, core, extra, theme, hooks)
+(*) Today, every visual element is a package in npm. Maybe we should group them by elements (forms, core, extra, theme, hooks)
 
 ### New thigs to do
 
 - [ ] PACKAGES: Carousel.
+- [ ] PACKAGES: Textarea - restyling.
+- [ ] PACKAGES: Alert - restyling.
+- [ ] PACKAGES: Box - restyling.
+- [ ] PACKAGES: List - restyling.
+- [ ] PACKAGES: Paginator - restyling.
+- [ ] PACKAGES: Label - restyling.
+- [ ] PACKAGES: Table filter. 
 
 ### QA:
 
