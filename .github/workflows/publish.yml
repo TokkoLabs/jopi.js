@@ -43,7 +43,6 @@ jobs:
         run: |
           git config --global user.email "${{secrets.GIT_EMAIL}}"
           git config --global user.name "${{secrets.GIT_USER}}"
-          git remote set-url origin https://${{secrets.GIT_USER}}:${GH_TOKEN}@github.com/$GITHUB_REPOSITORY
 
       - name: Update lerna packages
         env:
@@ -52,17 +51,11 @@ jobs:
           cd node_modules/.bin
           lerna version patch --yes
 
-      - name: "NPM Identity"
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
-
       - name: Publish New Jopi version to NPM
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GH_TOKEN: ${{secrets.GIT_TOKEN}}
-        run: npx lerna publish from-package --no-verify-access --yes
+        run: npx lerna init --independent
 
       - name: Npm whoami
         run: npm whoami
