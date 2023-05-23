@@ -1,14 +1,14 @@
 {
   "name": "@oneloop/collapsible",
-  "version": "1.2.306",
+  "version": "1.2.307",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.261",
-    "@oneloop/button": "^1.2.304",
+    "@oneloop/box": "^1.2.262",
+    "@oneloop/button": "^1.2.305",
     "framer-motion": "2.9.4"
   },
   "peerDependencies": {
