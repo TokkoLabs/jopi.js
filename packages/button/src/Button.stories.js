@@ -419,6 +419,6 @@ export const IconInputHeader = () => {
 export const IconInputHeader2 = () => {
   const [active, toggle] = useToggle(false)
   return (
-    <ButtonIcon icon='icon-contactos' variant={[active ? 'subtleTrasnparentPretrokoPressed' : 'subtleTrasnparentPretroko', 'iconExtraSmall24pxWithIcon14px']} holdPress active={active} onClick={toggle}/>
+    <ButtonIcon icon='icon-agregar' variant={[active ? 'subtlePetrokoIconPressed' : 'subtlePetrokoIcon', 'iconSmallSize18px']} holdPress active={active} onClick={toggle}/>
   )
 }
