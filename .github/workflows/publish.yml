@@ -51,12 +51,6 @@ jobs:
           cd node_modules/.bin
           lerna version patch --yes
 
-      - name: "NPM Identity"
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
-
       - name: Publish New Jopi version to NPM
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
