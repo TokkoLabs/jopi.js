@@ -98,6 +98,15 @@ export const InputHours = ({
   }
 
   useEffect(() => {
+    const currentTime = format(new Date(), 'HH:mm')
+    const input = format(inputTime, 'HH:mm')
+
+    if (currentTime !== input) {
+      handleClickTime(input)
+    }
+  }, [inputTime])
+
+  useEffect(() => {
     handleInitialTime()
   }, [])
 
@@ -150,6 +159,7 @@ export const InputHours = ({
         className="List"
         __css={{
           width: InputContRef.current?.offsetWidth,
+          zIndex: '100',
           backgroundColor: '#FFF',
           visibility: showDD ? 'visible' : 'hidden',
           position: 'absolute',
