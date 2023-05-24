@@ -42,8 +42,6 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
   let fontSize
   let fontWeight
   let fontSizeIcon
-  const test = 'test'
-  console.log(test)
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
     indexes.map(index => {
