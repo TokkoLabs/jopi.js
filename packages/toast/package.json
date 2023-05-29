@@ -1,17 +1,17 @@
 {
   "name": "@oneloop/toast",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.268",
-    "@oneloop/button": "^1.2.311",
-    "@oneloop/icons": "^1.2.290",
-    "@oneloop/loader": "^1.2.291",
-    "@oneloop/text": "^1.2.269"
+    "@oneloop/box": "^1.2.269",
+    "@oneloop/button": "^1.2.312",
+    "@oneloop/icons": "^1.2.291",
+    "@oneloop/loader": "^1.2.292",
+    "@oneloop/text": "^1.2.270"
   },
   "peerDependencies": {
     "react": "^16.8.0"
