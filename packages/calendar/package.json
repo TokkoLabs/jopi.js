@@ -12,7 +12,7 @@
     "@fullcalendar/daygrid": "^6.1.4",
     "@fullcalendar/react": "^6.1.4",
     "@fullcalendar/timegrid": "^6.1.4",
-    "@oneloop/box": "^1.2.269"
+    "@oneloop/box": "^1.2.262"
   },
   "peerDependencies": {
     "react": "^16.8.0"
@@ -20,5 +20,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "09e853641ddb5e8ba1967f64661f155879ac150c"
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
 }

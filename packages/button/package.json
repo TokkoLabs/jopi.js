@@ -7,8 +7,8 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.269",
-    "@oneloop/fonts": "^1.0.112",
+    "@oneloop/box": "^1.2.262",
+    "@oneloop/fonts": "^1.0.105",
     "styled-components": "5.3.5",
     "styled-system": "5.1.5"
   },
@@ -20,5 +20,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "09e853641ddb5e8ba1967f64661f155879ac150c"
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
 }

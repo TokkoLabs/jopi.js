@@ -9,11 +9,11 @@
   ],
   "dependencies": {
     "@datepicker-react/hooks": "^2.2.0",
-    "@oneloop/box": "^1.2.269",
-    "@oneloop/button": "^1.2.312",
-    "@oneloop/dropdown": "^1.2.323",
-    "@oneloop/icons": "^1.2.291",
-    "@oneloop/text": "^1.2.270",
+    "@oneloop/box": "^1.2.262",
+    "@oneloop/button": "^1.2.305",
+    "@oneloop/dropdown": "^1.2.316",
+    "@oneloop/icons": "^1.2.284",
+    "@oneloop/text": "^1.2.263",
     "date-fns": "^2.8.1",
     "react-datepicker": "^3.3.0"
   },
@@ -23,5 +23,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "09e853641ddb5e8ba1967f64661f155879ac150c"
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
 }
