@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/tags",
-  "version": "1.0.39",
+  "version": "1.0.42",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.267"
+    "@oneloop/box": "^1.2.270"
   },
   "peerDependencies": {
     "react": "^16.8.0"
@@ -15,5 +15,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "3149717e3e138565d91cf06fbfa9c314089db7b3"
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
 }
