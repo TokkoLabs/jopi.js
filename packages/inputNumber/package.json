@@ -1,14 +1,14 @@
 {
   "name": "@oneloop/input-number",
-  "version": "1.0.34",
+  "version": "1.0.39",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.262",
-    "@oneloop/icons": "^1.2.284",
+    "@oneloop/box": "^1.2.267",
+    "@oneloop/icons": "^1.2.289",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
@@ -17,5 +17,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "72a0f20bcd92b31c78b2c632634fafea25760d5b"
+  "gitHead": "3149717e3e138565d91cf06fbfa9c314089db7b3"
 }

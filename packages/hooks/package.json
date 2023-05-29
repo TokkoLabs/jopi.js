@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/hooks",
-  "version": "1.2.284",
+  "version": "1.2.289",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -15,5 +15,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "72a0f20bcd92b31c78b2c632634fafea25760d5b"
+  "gitHead": "3149717e3e138565d91cf06fbfa9c314089db7b3"
 }
