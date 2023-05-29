@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.5.285",
+  "version": "1.5.286",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -23,7 +23,7 @@
     "@oneloop/icons": "^1.2.289",
     "@oneloop/image": "^1.2.284",
     "@oneloop/input": "^1.2.306",
-    "@oneloop/input-hours": "^1.0.23",
+    "@oneloop/input-hours": "^1.0.24",
     "@oneloop/input-number": "^1.0.39",
     "@oneloop/label": "^1.2.267",
     "@oneloop/list": "^1.2.309",
@@ -49,5 +49,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "72a0f20bcd92b31c78b2c632634fafea25760d5b"
+  "gitHead": "3149717e3e138565d91cf06fbfa9c314089db7b3"
 }
