@@ -3,10 +3,5 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "version": "independent",
-  "command.publish.verifyAccess": false,
-  "command": {
-    "publish": {
-      "registry": "https://npm.pkg.github.com/"
-    }
-  }
+  "command.publish.verifyAccess": false
 }
