@@ -1,14 +1,14 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.5.281",
+  "version": "1.5.287",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/alert": "^1.2.306",
-    "@oneloop/badge": "^1.2.285",
+    "@oneloop/alert": "^1.2.311",
+    "@oneloop/badge": "^1.2.290",
     "@oneloop/box": "^1.2.270",
     "@oneloop/button": "^1.2.313",
     "@oneloop/calendar": "^1.0.43",
