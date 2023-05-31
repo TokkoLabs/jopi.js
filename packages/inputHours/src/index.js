@@ -17,18 +17,32 @@ for (let i = 0; i < 24; i++) {
 export const InputHours = ({
   inputTime = new Date(),
   arrayInput = defaultHours,
+  variant = 'default',
+  error = false,
   val = () => {},
 }) => {
   const InputContRef = useRef(null)
   const listItemsRef = useRef(null)
   const [showDD, setShowDD] = useState(false)
   const [time, setTime] = useState()
+  const [inputVariant, setInputVariant] = useState(variant)
+
+  useEffect(() => {
+    if (error) {
+      setInputVariant('focus')
+    }
+  }, [error])
 
   useOnClickOutside(InputContRef, () => setShowDD(false))
 
   const handleShowDD = () => setShowDD(!showDD)
 
   const hoursFormatRef = useRef({ hours: 0, minutes: 0, seter: inputTime })
+
+  const handleChangeTime = (theTime) => {
+    setTime(format(theTime, 'HH:mm'))
+    hoursFormatRef.current.seter = theTime
+  }
 
   const handleArrows = (min) => {
     const { seter } = hoursFormatRef.current
@@ -38,13 +52,13 @@ export const InputHours = ({
         ...hoursFormatRef.current,
         seter: set(seter, { minutes: 0 }),
       }
-      setTime(format(seter, 'HH:mm'))
+      handleChangeTime(seter)
     } else {
       hoursFormatRef.current = {
         ...hoursFormatRef.current,
         seter: addMinutes(seter, min),
       }
-      setTime(format(addMinutes(seter, min), 'HH:mm'))
+      handleChangeTime(addMinutes(seter, min))
     }
   }
 
@@ -69,7 +83,8 @@ export const InputHours = ({
   }
 
   const handleBlur = () => {
-    setTime(format(hoursFormatRef.current.seter, 'HH:mm'))
+    handleChangeTime(hoursFormatRef.current.seter)
+    setInputVariant('default')
   }
 
   const handleClickTime = (h) => {
@@ -77,7 +92,7 @@ export const InputHours = ({
       hours: h.substring(0, 2),
       minutes: h.substring(3, 5),
     })
-    setTime(format(seter, 'HH:mm'))
+    handleChangeTime(seter)
   }
 
   const handleInitialTime = () => {
@@ -89,7 +104,7 @@ export const InputHours = ({
       seter: addMinutes(inputTime, interval - restTime),
     }
 
-    setTime(format(addMinutes(inputTime, interval - restTime), 'HH:mm'))
+    handleChangeTime(addMinutes(inputTime, interval - restTime))
   }
 
   const handleScroll = () => {
@@ -124,8 +139,14 @@ export const InputHours = ({
 
   return (
     <Box
-      className="Container"
-      __css={{ position: 'relative', width: 'fit-content' }}
+      tx="inputHours"
+      variant={inputVariant}
+      __css={{
+        position: 'relative',
+        width: 'fit-content',
+        borderRadius: '8px',
+        border: 'solid 1px transparent',
+      }}
       ref={InputContRef}
       onClick={handleShowDD}
     >
@@ -134,9 +155,9 @@ export const InputHours = ({
         prefix={<Icon icon="icon-reloj" fontSize="14px" />}
         suffix={<Icon icon="icon-dropdown" fontSize="14px" />}
         variant="inputSearch"
-        width="100px"
         maxLength="4"
         onChange={handleInputChange}
+        onFocus={() => setInputVariant('active')}
         onBlur={handleBlur}
         value={time}
         onKeyDown={(e) => {
