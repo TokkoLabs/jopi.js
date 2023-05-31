@@ -395,6 +395,14 @@ const theme = {
       },
     },
   },
+  inputHours: {
+    active: {
+      borderColor: colors.neutralGray3,
+    },
+    focus: {
+      borderColor: colors.infoAlert,
+    },
+  },
   tags: {
     secondary: {
       color: '#143742',
