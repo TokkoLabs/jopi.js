@@ -400,6 +400,7 @@ const theme = {
       borderColor: colors.neutralGray3,
     },
     focus: {
+      border: 'solid 1px',
       borderColor: colors.infoAlert,
     },
   },
