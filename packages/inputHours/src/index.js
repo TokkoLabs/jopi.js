@@ -46,13 +46,8 @@ export const InputHours = ({
 
   const handleArrows = (min) => {
     const { seter } = hoursFormatRef.current
-
     if (format(seter, 'mm') % 15) {
-      hoursFormatRef.current = {
-        ...hoursFormatRef.current,
-        seter: set(seter, { minutes: 0 }),
-      }
-      handleChangeTime(seter)
+      handleChangeTime(set(seter, { minutes: 0 }))
     } else {
       hoursFormatRef.current = {
         ...hoursFormatRef.current,
@@ -84,7 +79,7 @@ export const InputHours = ({
 
   const handleBlur = () => {
     handleChangeTime(hoursFormatRef.current.seter)
-    setInputVariant('default')
+    setInputVariant(error ? 'focus' : 'default')
   }
 
   const handleClickTime = (h) => {
@@ -108,7 +103,7 @@ export const InputHours = ({
   }
 
   const handleScroll = () => {
-    const index = arrayInput.indexOf(time) * 26 - 52
+    const index = arrayInput.indexOf(time?.substring(0, 5)) * 26 - 52
     listItemsRef.current.scrollTop = index
   }
 

@@ -18,6 +18,18 @@ export default {
       type: 'array',
       control: { type: 'none' },
     },
+    val: {
+      name: 'val',
+      description: 'Recibe una función que devuelve la fecha del input',
+      type: 'function',
+      control: { type: 'none' },
+    },
+    error: {
+      name: 'error',
+      description: 'Booleano para indicar error en el input',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
   },
 }
 
