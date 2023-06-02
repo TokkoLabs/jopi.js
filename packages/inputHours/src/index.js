@@ -10,9 +10,7 @@ const defaultHours = []
 
 for (let i = 0; i < 24; i++) {
   for (let j = 0; j < 4; j++) {
-    defaultHours.push(
-      `${i < 10 ? '0' + i : i}:${j === 0 ? '00' : 15 * j}`
-    )
+    defaultHours.push(`${i < 10 ? '0' + i : i}:${j === 0 ? '00' : 15 * j}`)
   }
 }
 
@@ -23,6 +21,7 @@ export const InputHours = ({
   error = false,
   keepArray = false,
   val = () => {},
+  ...props
 }) => {
   const InputContRef = useRef(null)
   const listItemsRef = useRef(null)
@@ -156,7 +155,8 @@ export const InputHours = ({
       onClick={handleShowDD}
     >
       <Input
-        id="inputHourDisplay"
+        {...props}
+        className="inputHourDisplay"
         prefix={<Icon icon="icon-reloj" fontSize="14px" />}
         suffix={<Icon icon="icon-dropdown" fontSize="14px" />}
         variant="inputSearch"
