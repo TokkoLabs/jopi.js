@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.5.289",
+  "version": "1.5.290",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -23,7 +23,7 @@
     "@oneloop/icons": "^1.2.293",
     "@oneloop/image": "^1.2.288",
     "@oneloop/input": "^1.2.310",
-    "@oneloop/input-hours": "^1.0.29",
+    "@oneloop/input-hours": "^1.0.30",
     "@oneloop/input-number": "^1.0.43",
     "@oneloop/label": "^1.2.271",
     "@oneloop/list": "^1.2.313",
