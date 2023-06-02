@@ -10,7 +10,9 @@ const defaultHours = []
 
 for (let i = 0; i < 24; i++) {
   for (let j = 0; j < 4; j++) {
-    defaultHours.push(`${i < 10 ? '0' + i : i}:${j === 0 ? '00' : 15 * j}`)
+    defaultHours.push(
+      `${i < 10 ? '0' + i : i}:${j === 0 ? '00' : 15 * j}`
+    )
   }
 }
 
@@ -19,6 +21,7 @@ export const InputHours = ({
   arrayInput = defaultHours,
   variant = 'default',
   error = false,
+  keepArray = false,
   val = () => {},
 }) => {
   const InputContRef = useRef(null)
@@ -46,7 +49,7 @@ export const InputHours = ({
 
   const handleArrows = (min) => {
     const { seter } = hoursFormatRef.current
-    if (format(seter, 'mm') % 15) {
+    if (format(seter, 'mm') % 15 && !keepArray) {
       handleChangeTime(set(seter, { minutes: 0 }))
     } else {
       hoursFormatRef.current = {
@@ -103,7 +106,8 @@ export const InputHours = ({
   }
 
   const handleScroll = () => {
-    const index = arrayInput.indexOf(time?.substring(0, 5)) * 26 - 52
+    const index =
+      arrayInput.map((item) => item.substring(0, 5)).indexOf(time) * 26 - 52
     listItemsRef.current.scrollTop = index
   }
 
@@ -131,6 +135,12 @@ export const InputHours = ({
       )
     }
   }, [time, listItemsRef.current])
+
+  const compareArrayIndex = (item) => {
+    const cleanArray = arrayInput.map((i) => i.substring(0, 5))
+
+    return cleanArray.indexOf(item.substring(0, 5)) === cleanArray.indexOf(time)
+  }
 
   return (
     <Box
@@ -205,11 +215,7 @@ export const InputHours = ({
             key={i}
             as="li"
             tx="liInputHours"
-            variant={
-              arrayInput.indexOf(h) === arrayInput.indexOf(time)
-                ? 'selected'
-                : ''
-            }
+            variant={compareArrayIndex(h) ? 'selected' : ''}
             __css={{
               padding: '4px 7px',
               cursor: 'pointer',
