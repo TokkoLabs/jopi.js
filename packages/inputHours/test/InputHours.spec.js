@@ -45,7 +45,7 @@ describe('InputHours', () => {
         arrayInput={defaultHours}
       />
     )
-    const input = component.find('#inputHourDisplay').at(1)
+    const input = component.find('.inputHourDisplay').at(1)
     const item = component.find('li').at(5)
     item.simulate('click')
     input
