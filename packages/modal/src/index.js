@@ -8,7 +8,7 @@ export const Modal = ({ children, variant, modalBG, ...props }) => {
   return (
     <Box __css={{
       position: 'fixed',
-      zIndex: '100',
+      zIndex: '1000',
       width: '100%',
       height: '100%',
       top: '0',

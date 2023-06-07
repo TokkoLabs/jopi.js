@@ -26,7 +26,7 @@ export default {
     },
     error: {
       name: 'error',
-      description: 'Booleano para indicar error en el input',
+      description: 'Booleano para indicar error en el inputs',
       type: 'boolean',
       control: { type: 'none' },
     },
