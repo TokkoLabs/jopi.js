@@ -6,7 +6,17 @@ import { Text } from '@oneloop/text'
 import theme from '@oneloop/theme'
 import '../../theme/styles/globals.css'
 
-export const InputNumber = ({ max = 99, min = 0, error = false, startVal = 0, step = 1, val = () => { }, text, variant = 'default', ...props }) => {
+export const InputNumber = ({
+  max = 99,
+  min = 0,
+  error = false,
+  startVal = 0,
+  step = 1,
+  val = () => {},
+  text,
+  variant = 'default',
+  ...props
+}) => {
   const [valueInput, setValueInput] = useState(startVal)
   const [inputVariants, setInputVariants] = useState([variant])
   const inputRef = useRef()
@@ -17,7 +27,7 @@ export const InputNumber = ({ max = 99, min = 0, error = false, startVal = 0, st
     if (valueInput) {
       setInputVariants([...inputVariants, 'filled'])
     } else {
-      setInputVariants(inputVariants.filter(elem => elem !== 'filled'))
+      setInputVariants(inputVariants.filter((elem) => elem !== 'filled'))
     }
   }, [valueInput])
 
@@ -30,7 +40,7 @@ export const InputNumber = ({ max = 99, min = 0, error = false, startVal = 0, st
   useEffect(() => {
     const handleClick = (event) => {
       if (!inputCont.current?.contains(event.target)) {
-        setInputVariants(inputVariants.filter(elem => elem !== 'filled'))
+        setInputVariants(inputVariants.filter((elem) => elem !== 'filled'))
       }
     }
     document.addEventListener('click', handleClick)
@@ -58,7 +68,7 @@ export const InputNumber = ({ max = 99, min = 0, error = false, startVal = 0, st
 
   return (
     <Box
-      as='form'
+      as="form"
       tx="inputNumber"
       ref={inputCont}
       variant={inputVariants}
@@ -69,15 +79,16 @@ export const InputNumber = ({ max = 99, min = 0, error = false, startVal = 0, st
         gap: '8px',
         borderRadius: '8px',
         border: 'solid 1px transparent',
+        height: '32px',
       }}
       onClick={handleFocus}
     >
       <Box
-        as='input'
+        as="input"
         ref={inputRef}
-        type='number'
-        placeholder='00'
-        id='inputNumberDisplay'
+        type="number"
+        placeholder="00"
+        id="inputNumberDisplay"
         value={parseInt(valueInput).toString()}
         onChange={(e) => handleChange(e)}
         __css={{
@@ -97,7 +108,9 @@ export const InputNumber = ({ max = 99, min = 0, error = false, startVal = 0, st
           }
         }}
       />
-      <Text variant='body.fontSize14' style={{ marginRight: '15px' }} >{text}</Text>
+      <Text variant="body.fontSize14" style={{ marginRight: '15px' }}>
+        {text}
+      </Text>
       <Box
         __css={{
           display: 'flex',
@@ -107,21 +120,24 @@ export const InputNumber = ({ max = 99, min = 0, error = false, startVal = 0, st
         }}
       >
         <Icon
-          id='arrowUpNumberInput'
-          icon='icon-dropdown'
-          fontSize='12px'
-          style={{ transform: 'rotate(180deg) translateX(1px)', cursor: 'pointer' }}
+          id="arrowUpNumberInput"
+          icon="icon-dropdown"
+          fontSize="12px"
+          style={{
+            transform: 'rotate(180deg) translateX(1px)',
+            cursor: 'pointer',
+          }}
           onClick={() => setValueInput(Math.min(max, valueInput + step))}
         />
         <Icon
-          id='arrowDownNumberInput'
-          icon='icon-dropdown'
-          fontSize='12px'
+          id="arrowDownNumberInput"
+          icon="icon-dropdown"
+          fontSize="12px"
           style={{ cursor: 'pointer' }}
           onClick={() => setValueInput(Math.max(min, valueInput - step))}
         />
       </Box>
-    </Box >
+    </Box>
   )
 }
 
