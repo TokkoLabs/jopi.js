@@ -384,6 +384,7 @@ const theme = {
     },
     active: {
       borderColor: colors.neutralGray3,
+      boxShadow: 'none',
     },
     focus: {
       borderColor: colors.infoAlert,
@@ -774,6 +775,7 @@ const theme = {
     },
     primaryText: {
       color: colors.primary,
+      backgroundColor: 'transparent',
       ':hover': {
         color: colors.primaryHover,
       },
