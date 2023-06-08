@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.5.291",
+  "version": "1.5.292",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -23,12 +23,12 @@
     "@oneloop/icons": "^1.2.293",
     "@oneloop/image": "^1.2.288",
     "@oneloop/input": "^1.2.310",
-    "@oneloop/input-hours": "^1.0.31",
-    "@oneloop/input-number": "^1.0.43",
+    "@oneloop/input-hours": "^1.0.32",
+    "@oneloop/input-number": "^1.0.44",
     "@oneloop/label": "^1.2.271",
     "@oneloop/list": "^1.2.313",
     "@oneloop/loader": "^1.2.294",
-    "@oneloop/modal": "^1.2.317",
+    "@oneloop/modal": "^1.2.318",
     "@oneloop/paginator": "^1.0.149",
     "@oneloop/radio": "^1.2.293",
     "@oneloop/submenu": "^1.0.80",
