@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { InputHours } from '.'
+import { format } from 'date-fns'
+import { Text } from '@oneloop/text'
+import { Button } from '@oneloop/button'
 
 export default {
   component: InputHours,
@@ -33,4 +36,16 @@ export default {
   },
 }
 
-export const Hours = () => <InputHours />
+export const Hours = () => {
+  const [value, setValue] = useState(new Date())
+  const [newValue, setNewValue] = useState(new Date())
+  return (
+    <>
+      <InputHours val={setValue} inputTime={value} listenTime={newValue} />
+      <Text>{format(value, 'dd/MM/yyy HH:mm')}</Text>
+      <Button onClick={() => setNewValue(new Date('August 19, 1975 23:15:30'))}>
+        set time
+      </Button>
+    </>
+  )
+}
