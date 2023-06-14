@@ -21,12 +21,13 @@ export const InputHours = ({
   error = false,
   keepArray = false,
   val = () => {},
+  listenTime = new Date(),
   ...props
 }) => {
   const InputContRef = useRef(null)
   const listItemsRef = useRef(null)
   const [showDD, setShowDD] = useState(false)
-  const [time, setTime] = useState()
+  const [time, setTime] = useState('')
   const [inputVariant, setInputVariant] = useState(variant)
 
   useEffect(() => {
@@ -44,6 +45,7 @@ export const InputHours = ({
   const handleChangeTime = (theTime) => {
     setTime(format(theTime, 'HH:mm'))
     hoursFormatRef.current.seter = theTime
+    val(hoursFormatRef.current.seter)
   }
 
   const handleArrows = (min) => {
@@ -112,12 +114,12 @@ export const InputHours = ({
 
   useEffect(() => {
     const currentTime = format(new Date(), 'HH:mm')
-    const input = format(inputTime, 'HH:mm')
+    const input = format(listenTime, 'HH:mm')
 
     if (currentTime !== input) {
       handleClickTime(input)
     }
-  }, [inputTime])
+  }, [listenTime])
 
   useEffect(() => {
     handleInitialTime()
@@ -125,14 +127,6 @@ export const InputHours = ({
 
   useEffect(() => {
     handleScroll()
-    if (time) {
-      val(
-        set(inputTime, {
-          hours: time.slice(0, 2),
-          minutes: time.slice(3, 5),
-        })
-      )
-    }
   }, [time, listItemsRef.current])
 
   const compareArrayIndex = (item) => {
