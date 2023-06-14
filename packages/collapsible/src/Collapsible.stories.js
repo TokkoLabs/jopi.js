@@ -64,6 +64,7 @@ export const menu = () =>
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open0}
+            setExpand={() => setOpen0(!open0)}
             active={active0}
             maxWidth
             holdPress
@@ -79,6 +80,7 @@ export const menu = () =>
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open1}
+            setExpand={() => setOpen1(!open1)}
             active={active1}
             isCollapsible
             maxWidth
@@ -99,6 +101,7 @@ export const menu = () =>
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open2}
+            setExpand={() => setOpen2(!open2)}
             active={active2}
             badgeValue={2}
             maxWidth

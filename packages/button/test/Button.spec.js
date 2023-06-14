@@ -1,8 +1,13 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import { Box } from '@oneloop/box'
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import 'jest-styled-components'
 
 import { Button, ButtonIcon } from '../src'
+
+Enzyme.configure({ adapter: new Adapter() })
 
 describe('Button', () => {
   test('primary', () => {
@@ -317,10 +322,19 @@ describe('Button', () => {
 
   test('mainButtonIconBadgeFilledOneVariant', () => {
     const tree = renderer
-      .create(<ButtonIcon variant='dropdownIconFail' icon='icon-configuracion' filled holdPress />)
+      .create(<ButtonIcon variant='dropdownIconFail' icon='icon-configuracion' filled holdPress isCollapsible isExpanded={false} setExpand={() => console.log('test')}/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
+  })
+
+  test('mainButtonIconBadgeFilledOneVariant click', () => {
+    const component = shallow(<ButtonIcon variant='dropdownIconFail' icon='icon-configuracion' filled holdPress isCollapsible isExpanded setExpand={() => console.log('test')}/>)
+    expect(component.find(<Box as='button' />).exists).toBeTruthy()
+    const button = component.find(Box).at(0)
+    button.simulate('click')
+
+    expect(component).toMatchSnapshot()
   })
 
   test('buttonWithImage', () => {

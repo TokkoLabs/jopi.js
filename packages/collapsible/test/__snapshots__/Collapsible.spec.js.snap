@@ -148,6 +148,10 @@ exports[`Collapsible main 1`] = `
   height: 16px;
 }
 
+@media screen and (min-width:40em) {
+
+}
+
 <div
     className="c0"
     width={0.3333333333333333}
@@ -265,6 +269,10 @@ exports[`Collapsible main 1`] = `
 
 .c2 + .content {
   overflow: hidden;
+}
+
+@media screen and (min-width:40em) {
+
 }
 
 <div
@@ -401,6 +409,10 @@ exports[`Collapsible main 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: static;
+}
+
+@media screen and (min-width:40em) {
+
 }
 
 <div
