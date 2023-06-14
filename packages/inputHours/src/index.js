@@ -22,6 +22,7 @@ export const InputHours = ({
   keepArray = false,
   val = () => {},
   listenTime = new Date(),
+  isSelected = false,
   ...props
 }) => {
   const InputContRef = useRef(null)
@@ -122,7 +123,9 @@ export const InputHours = ({
   }, [listenTime])
 
   useEffect(() => {
-    handleInitialTime()
+    if (!isSelected) {
+      handleInitialTime()
+    }
   }, [])
 
   useEffect(() => {
