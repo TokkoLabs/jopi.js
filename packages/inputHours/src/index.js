@@ -22,6 +22,7 @@ export const InputHours = ({
   keepArray = false,
   val = () => {},
   listenTime = new Date(),
+  isSelected = false,
   ...props
 }) => {
   const InputContRef = useRef(null)
@@ -98,12 +99,16 @@ export const InputHours = ({
     const restTime = format(inputTime, 'mm') % 15
     const interval = restTime < 15 ? 30 : 15
 
-    hoursFormatRef.current = {
-      ...hoursFormatRef.current,
-      seter: addMinutes(inputTime, interval - restTime),
-    }
+    if (!isSelected) {
+      hoursFormatRef.current = {
+        ...hoursFormatRef.current,
+        seter: addMinutes(inputTime, interval - restTime),
+      }
 
-    handleChangeTime(addMinutes(inputTime, interval - restTime))
+      handleChangeTime(addMinutes(inputTime, interval - restTime))
+    } else {
+      handleChangeTime(inputTime)
+    }
   }
 
   const handleScroll = () => {

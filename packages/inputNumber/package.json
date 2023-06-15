@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/input-number",
-  "version": "1.0.45",
+  "version": "1.0.47",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
