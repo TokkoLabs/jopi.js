@@ -37,6 +37,12 @@ export default {
       description: 'El valor del distanciamiento entre el submenu y el objeto de referencia.',
       type: 'number',
     },
+    arrow: {
+      name: 'arrow',
+      required: false,
+      description: 'Booleano que agrega un arrow hacia el elemento padre.',
+      type: 'boolean',
+    },
   },
 }
 
@@ -49,7 +55,7 @@ export const SubmenuNormalRightStart = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip0" role="tooltip0" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip0', 'parent0', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent0' childrenId='tooltip0' width='202px' offset={20} placement='right-start'>
+        <Submenu parentId='parent0' childrenId='tooltip0' width='202px' offset={20} placement='right-start' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -71,7 +77,7 @@ export const SubmenuNormalRight = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip1" role="tooltip1" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent1' childrenId='tooltip1' width='202px' offset={20} placement='right'>
+        <Submenu parentId='parent1' childrenId='tooltip1' width='202px' offset={20} placement='right' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -93,7 +99,7 @@ export const SubmenuNormalRightEnd = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip2" role="tooltip2" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip2', 'parent2', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent2' childrenId='tooltip2' width='202px' offset={20} placement='right-end'>
+        <Submenu parentId='parent2' childrenId='tooltip2' width='202px' offset={20} placement='right-end' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -115,7 +121,7 @@ export const SubmenuNormalBottomStart = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip3" role="tooltip3" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip3', 'parent3', 'bottom'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent3' childrenId='tooltip3' width='202px' offset={20} placement='bottom-start'>
+        <Submenu parentId='parent3' childrenId='tooltip3' width='202px' offset={20} placement='bottom-start' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -137,7 +143,7 @@ export const SubmenuNormalBottom = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip4" role="tooltip4" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip4', 'parent4', 'bottom'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent4' childrenId='tooltip4' width='202px' offset={20} placement='bottom'>
+        <Submenu parentId='parent4' childrenId='tooltip4' width='202px' offset={20} placement='bottom' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -159,7 +165,7 @@ export const SubmenuNormalBottomEnd = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip5" role="tooltip5" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip5', 'parent5', 'bottom'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent5' childrenId='tooltip5' width='202px' offset={20} placement='bottom-end'>
+        <Submenu parentId='parent5' childrenId='tooltip5' width='202px' offset={20} placement='bottom-end' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -181,7 +187,7 @@ export const SubmenuNormalLeftStart = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip6" role="tooltip6" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip6', 'parent6', 'left'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent6' childrenId='tooltip6' width='202px' offset={20} placement='left-start'>
+        <Submenu parentId='parent6' childrenId='tooltip6' width='202px' offset={20} placement='left-start' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -203,7 +209,7 @@ export const SubmenuNormalLeft = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip7" role="tooltip7" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip7', 'parent7', 'left'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent7' childrenId='tooltip7' width='202px' offset={20} placement='left'>
+        <Submenu parentId='parent7' childrenId='tooltip7' width='202px' offset={20} placement='left' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -225,7 +231,7 @@ export const SubmenuNormalLeftEnd = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip8" role="tooltip8" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip8', 'parent8', 'left'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent8' childrenId='tooltip8' width='202px' offset={20} placement='left-end'>
+        <Submenu parentId='parent8' childrenId='tooltip8' width='202px' offset={20} placement='left-end' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -247,7 +253,7 @@ export const SubmenuNormalTopStart = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip9" role="tooltip9" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip9', 'parent9', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent9' childrenId='tooltip9' width='202px' offset={20} placement='top-start'>
+        <Submenu parentId='parent9' childrenId='tooltip9' width='202px' offset={20} placement='top-start' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -269,7 +275,7 @@ export const SubmenuNormalTop = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip10" role="tooltip10" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip10', 'parent10', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent10' childrenId='tooltip10' width='202px' offset={20} placement='top'>
+        <Submenu parentId='parent10' childrenId='tooltip10' width='202px' offset={20} placement='top' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
@@ -291,7 +297,7 @@ export const SubmenuNormalTopEnd = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentSubmenu>
       <div id="tooltip11" role="tooltip11" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip11', 'parent11', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Submenu parentId='parent11' childrenId='tooltip11' width='202px' offset={20} placement='top-end'>
+        <Submenu parentId='parent11' childrenId='tooltip11' width='202px' offset={20} placement='top-end' arrow>
           <Text variant='submenuTitle'>Crear</Text>
           <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
           <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
