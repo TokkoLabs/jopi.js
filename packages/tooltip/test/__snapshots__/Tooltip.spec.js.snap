@@ -97,6 +97,17 @@ exports[`Submenu renders correctly 1`] = `
   font-family: primary;
 }
 
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  background: inherit;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
 <div
   style={
     {
@@ -171,6 +182,11 @@ exports[`Submenu renders correctly 1`] = `
           Sitios Webs
         </p>
       </div>
+      <div
+        className="c6"
+        data-popper-arrow={true}
+        id="arrow"
+      />
     </div>
   </div>
 </div>

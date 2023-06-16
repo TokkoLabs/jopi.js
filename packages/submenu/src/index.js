@@ -38,7 +38,7 @@ export const ParentSubmenu = ({ children, setHover, hover, placement = 'right', 
   )
 }
 
-export const Submenu = ({ parentId, childrenId, variant = 'submenu', placement = 'right', offset = 8, ...props }) => {
+export const Submenu = ({ parentId, childrenId, variant = 'submenu', placement = 'right', offset = 8, arrow, ...props }) => {
   const popcorn = (typeof window === 'object' && document !== undefined) ? document.querySelector('#' + parentId) : null
   const tooltip = (typeof window === 'object' && document !== undefined) ? document.querySelector('#' + childrenId) : null
   if (popcorn != null && tooltip != null) {
@@ -72,6 +72,19 @@ export const Submenu = ({ parentId, childrenId, variant = 'submenu', placement =
           justifyContent: 'center',
         }}
       />
+      { arrow &&
+        <Box
+          tx='arrowTooltip'
+          variant={placement}
+          id="arrow"
+          __css={{
+            position: 'absolute',
+            background: 'inherit',
+            transform: 'translate(-50%)',
+          }}
+          data-popper-arrow
+        />
+      }
     </Box>
   )
 }

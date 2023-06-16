@@ -37,6 +37,12 @@ export default {
       description: 'El valor del distanciamiento entre el tooltip y el objeto de referencia.',
       type: 'number',
     },
+    arrow: {
+      name: 'arrow',
+      required: false,
+      description: 'Booleano que agrega un arrow hacia el elemento padre.',
+      type: 'boolean',
+    },
   },
 }
 
@@ -49,7 +55,7 @@ export const TooltipRightStart = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentTooltip>
       <div id="tooltip0" role="tooltip0" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip0', 'parent0', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Tooltip parentId='parent0' childrenId='tooltip0' placement='right-start'>
+        <Tooltip parentId='parent0' childrenId='tooltip0' placement='right-start' arrow>
           <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Tooltip>
       </div>
@@ -66,7 +72,7 @@ export const TooltipRight = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentTooltip>
       <div id="tooltip1" role="tooltip1" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip1', 'parent1', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Tooltip parentId='parent1' childrenId='tooltip1' placement='right'>
+        <Tooltip parentId='parent1' childrenId='tooltip1' placement='right' arrow>
           <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Tooltip>
       </div>
@@ -83,7 +89,7 @@ export const TooltipRightEnd = () => {
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentTooltip>
       <div id="tooltip2" role="tooltip2" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip2', 'parent2', 'right'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Tooltip parentId='parent2' childrenId='tooltip2' placement='right-end'>
+        <Tooltip parentId='parent2' childrenId='tooltip2' placement='right-end' arrow>
           <Text variant='body.fontSize13'>Sitios Webs</Text>
         </Tooltip>
       </div>

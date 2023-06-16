@@ -2042,6 +2042,80 @@ const theme = {
       height: '26px',
     },
   },
+  arrowTooltip: {
+    'right-start': {
+      left: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderRight: '10px solid white',
+    },
+    right: {
+      left: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderRight: '10px solid white',
+    },
+    'right-end': {
+      left: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderRight: '10px solid white',
+    },
+    'left-start': {
+      right: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderLeft: '10px solid white',
+    },
+    left: {
+      right: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderLeft: '10px solid white',
+    },
+    'left-end': {
+      right: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderLeft: '10px solid white',
+    },
+    'bottom-start': {
+      top: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderBottom: '10px solid white',
+    },
+    bottom: {
+      top: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderBottom: '10px solid white',
+    },
+    'bottom-end': {
+      top: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderBottom: '10px solid white',
+    },
+    'top-start': {
+      bottom: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderTop: '10px solid white',
+    },
+    top: {
+      bottom: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderTop: '10px solid white',
+    },
+    'top-end': {
+      bottom: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderTop: '10px solid white',
+    },
+  },
   card: {
     normal: {
       padding: '8px 10px 8px 10px',

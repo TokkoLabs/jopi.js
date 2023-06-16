@@ -26,7 +26,7 @@ const useCollapsibleContext = () => {
   return context
 }
 
-const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon = false, active = false, icon, text, isExpanded = false, isCollapsible, badgeValue, badgeVariant, ...props }) => {
+const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon = false, active = false, icon, text, isExpanded = false, isCollapsible, badgeValue, badgeVariant, setExpand, ...props }) => {
   if (isSmallButtonIcon || isMainButton) {
     return (
       <ButtonIcon
@@ -38,6 +38,7 @@ const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon =
         active={active}
         badgeValue={badgeValue}
         badgeVariant={badgeVariant}
+        setExpand={setExpand}
         holdPress
         sx={{
           width: isMainButton && '100%',
