@@ -44,7 +44,7 @@ describe('Submenu', () => {
           <ButtonIcon id="button" variant='mainButtonIcon' icon='icon-propiedades' holdPress badgeVariant='primary'/>
         </ParentSubmenu>
         <div id="tooltip1" role="tooltip1" style={{ width: 'fit-content', visibility: 'visible' }}>
-          <Submenu parentId='tooltip1' childrenId='tooltip1' placement='left'>
+          <Submenu parentId='tooltip1' childrenId='tooltip1' placement='left' arrow>
             <ButtonIcon variant='submenu' icon='icon-contactos' text='Contacto' maxWidth/>
             <ButtonIcon variant='submenu' icon='icon-empresa' text='Empresa' maxWidth/>
             <ButtonIcon variant='submenu' icon='icon-propiedades' text='Propiedad' maxWidth/>

@@ -14,7 +14,7 @@ describe('Submenu', () => {
           <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress badgeVariant='primary'/>
         </ParentTooltip>
         <div id="tooltip0" role="tooltip0" style={{ width: 'fit-content', visibility: 'visible' }}>
-          <Tooltip parentId='parent0' childrenId='tooltip0' placement='right-start'>
+          <Tooltip parentId='parent0' childrenId='tooltip0' placement='right-start' arrow>
             <Text variant='body.fontSize13'>Sitios Webs</Text>
           </Tooltip>
         </div>

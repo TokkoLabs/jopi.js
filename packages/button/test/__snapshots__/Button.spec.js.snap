@@ -1388,9 +1388,28 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
         }
       />
     </div>
+    <span
+      className="icon-dropdown"
+      onClick={[Function]}
+      style={
+        {
+          "color": "#798B97",
+          "fontSize": "14px",
+          "paddingLeft": "1px",
+          "paddingRight": "1px",
+          "paddingTop": "4px",
+          "position": "absolute",
+          "right": "10px",
+          "transform": "rotate(0deg)",
+          "transition": "all 0.5s",
+        }
+      }
+    />
   </button>
 </div>
 `;
+
+exports[`Button mainButtonIconBadgeFilledOneVariant click 1`] = `ShallowWrapper {}`;
 
 exports[`Button mainButtonIconBadgeWithText 1`] = `
 .c0 {

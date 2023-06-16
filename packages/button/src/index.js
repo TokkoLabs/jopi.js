@@ -36,7 +36,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = 'primary', maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, holdPress, hover, filled, isExpanded, widthImage, heightImage, ...props }) => {
+export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = ['badgeNormal', 'primary'], maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, holdPress, hover, filled, isExpanded, widthImage, heightImage, setExpand, ...props }) => {
   let colorValue
   let colorValueIcon
   let fontSize
@@ -137,7 +137,8 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
         { userImage && !srcImage && <span className='icon-contactos' style={{ fontSize: '24px' }}/>}
         { text && !holdPress && <span>{text}</span>}
         { text && holdPress && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span> }
-        { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', transition: 'all 0.5s', paddingTop: '4px' }}/> }
+        { badgeValue === 0 && isCollapsible && setExpand === undefined && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', transition: 'all 0.5s', paddingTop: '4px' }}/> }
+        { badgeValue === 0 && isCollapsible && setExpand !== undefined && <span className='icon-dropdown' onClick={(event) => { setExpand(); event.stopPropagation() }}style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', transition: 'all 0.5s', paddingTop: '4px', paddingLeft: '1px', paddingRight: '1px' }}/> }
         { badgeValue !== 0 && !text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
         { badgeValue !== 0 && text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '10px' }}>{badgeValue}</Badge> }
       </Box>
