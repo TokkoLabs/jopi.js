@@ -5,38 +5,55 @@ import { Text } from '@oneloop/text'
 import { Icon } from '@oneloop/icons'
 
 export const Modal = ({ children, variant, modalBG, ...props }) => {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => (document.body.style.overflow = 'auto')
+  }, [])
+
   return (
-    <Box __css={{
-      position: 'fixed',
-      zIndex: '1000',
-      width: '100%',
-      height: '100%',
-      top: '0',
-      left: '0',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}>
-      {modalBG && <Box __css={{
-        backgroundColor: '#485C66',
-        opacity: '0.7',
+    <Box
+      __css={{
+        position: 'fixed',
+        zIndex: '1000',
         width: '100%',
         height: '100%',
-        position: 'absolute',
-        zIndex: '-1',
-      }}></Box>}
-      <Box as="div" tx="modals" {...props} __css={{
-        padding: '34px',
-        maxWidth: '900px',
-        minWidth: '380px !important',
-        background: theme.colors.white,
-        borderRadius: '16px',
-        boxSizing: 'border-box',
+        top: '0',
+        left: '0',
         display: 'flex',
-        flexDirection: 'column',
-        gap: '24px',
-        boxShadow: '8px 8px 16px rgba(77, 91, 100, 0.15)',
-      }} variant={variant}>
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      {modalBG && (
+        <Box
+          __css={{
+            backgroundColor: '#485C66',
+            opacity: '0.7',
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            zIndex: '-1',
+          }}
+        ></Box>
+      )}
+      <Box
+        as="div"
+        tx="modals"
+        {...props}
+        __css={{
+          padding: '34px',
+          maxWidth: '900px',
+          minWidth: '380px !important',
+          background: theme.colors.white,
+          borderRadius: '16px',
+          boxSizing: 'border-box',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '24px',
+          boxShadow: '8px 8px 16px rgba(77, 91, 100, 0.15)',
+        }}
+        variant={variant}
+      >
         {children}
       </Box>
     </Box>
@@ -48,7 +65,9 @@ const ModalHeader = ({ closeIcon, variant, text, textSize, ...props }) => {
   const headerRef = useRef(null)
 
   useEffect(() => {
-    setJustifyContent(headerRef.current.childElementCount > 1 ? 'space-between' : variant[0])
+    setJustifyContent(
+      headerRef.current.childElementCount > 1 ? 'space-between' : variant[0]
+    )
   }, [])
 
   return (
@@ -71,18 +90,20 @@ const ModalHeader = ({ closeIcon, variant, text, textSize, ...props }) => {
       >
         {text}
       </Text>
-      {closeIcon &&
-        <Icon style={{ cursor: 'pointer' }} icon='icon-cerrar' fontSize='18px' color={theme.colors.neutralGray5} onClick={closeIcon} />
-      }
+      {closeIcon && (
+        <Icon
+          style={{ cursor: 'pointer' }}
+          icon="icon-cerrar"
+          fontSize="18px"
+          color={theme.colors.neutralGray5}
+          onClick={closeIcon}
+        />
+      )}
     </Flex>
   )
 }
 
-const ModalBody = props => (
-  <Box
-    {...props}
-  />
-)
+const ModalBody = (props) => <Box {...props} />
 
 const ModalFooter = ({ variant = 'start', ...props }) => (
   <Flex
