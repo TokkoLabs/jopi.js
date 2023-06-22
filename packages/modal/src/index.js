@@ -4,10 +4,18 @@ import theme from '@oneloop/theme'
 import { Text } from '@oneloop/text'
 import { Icon } from '@oneloop/icons'
 
-export const Modal = ({ children, variant, modalBG, ...props }) => {
+export const Modal = ({
+  children,
+  variant,
+  modalBG,
+  blockScroll = false,
+  ...props
+}) => {
   useEffect(() => {
-    document.body.style.overflow = 'hidden'
-    return () => (document.body.style.overflow = 'auto')
+    if (blockScroll) {
+      document.body.style.overflow = 'hidden'
+      return () => (document.body.style.overflow = 'auto')
+    }
   }, [])
 
   return (
