@@ -74,6 +74,10 @@
     border: none;
 }
 
+#days .fc-scroller-liquid-absolute{
+    scroll-behavior: smooth;
+}
+
 #days .fc-scroller-liquid-absolute::-webkit-scrollbar {
     width: 2px;
 }
