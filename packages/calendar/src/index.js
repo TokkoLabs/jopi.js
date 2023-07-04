@@ -2,6 +2,7 @@ import React from 'react'
 import { Box } from '@oneloop/box'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
+import interactionPlugin from '@fullcalendar/interaction'
 import FullCalendar from '@fullcalendar/react'
 import '../styles/calendar.css'
 import esLocale from '@fullcalendar/core/locales/es-us'
@@ -21,7 +22,7 @@ const CalendarOptions = {
       minute: '2-digit',
       meridiem: false,
     },
-    plugins: [timeGridPlugin],
+    plugins: [interactionPlugin, timeGridPlugin],
     initialView: 'timeGridDay',
     headerToolbar: {
       start: 'prev',
@@ -37,8 +38,26 @@ const CalendarOptions = {
   },
 }
 
-export const Calendar = ({ variant, events, initialDate, scrollTime, height }) => {
-  const options = { ...CalendarOptions[variant], events: events || [], initialDate: initialDate, scrollTime: scrollTime || `${date.getHours() - 2}:00:00`, height: height }
+export const Calendar = ({
+  variant,
+  events,
+  initialDate,
+  scrollTime,
+  height,
+  moreOptions,
+}) => {
+  const options = {
+    ...CalendarOptions[variant],
+    ...moreOptions,
+    events: events || [],
+    initialDate: initialDate,
+    scrollTime: scrollTime || `${date.getHours() - 2}:00:00`,
+    height: height,
+  }
 
-  return (<Box id={variant}> <FullCalendar locale={esLocale} {...options} /> </Box>)
+  return (
+    <Box id={variant}>
+      <FullCalendar locale={esLocale} {...options} />{' '}
+    </Box>
+  )
 }
