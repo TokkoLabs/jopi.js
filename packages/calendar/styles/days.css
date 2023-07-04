@@ -93,3 +93,12 @@
 #days .fc .fc-button {
     padding: 5px 10px;
 }
+
+#days .fc-event-main {
+    cursor: grab;
+}
+
+#days .fc-highlight{
+    background: #dde5e961;
+    border-radius: 8px;
+}
