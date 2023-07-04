@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Calendar } from '.'
 
 export default {
@@ -42,7 +42,49 @@ export default {
   },
 }
 
-export const days = () => <Calendar variant={'days'} />
+export const Days = () => {
+  const [events, setEvents] = useState([
+    {
+      title: 'Evento recurrente',
+      daysOfWeek: [0, 1, 2, 3, 4, 5, 6],
+      startTime: '10:00',
+      endTime: '11:00',
+      startRecur: new Date(),
+      endRecur: false,
+      editable: true,
+    },
+  ])
+  const handleEventDrop = (eventDropInfo) => {
+    setEvents([
+      {
+        start: eventDropInfo.event.start,
+        end: eventDropInfo.event.end,
+      },
+    ])
+  }
+
+  const handleEventSelect = (eventSelectData) => {
+    setEvents([
+      {
+        start: eventSelectData.start,
+        end: eventSelectData.end,
+      },
+    ])
+  }
+
+  return (
+    <Calendar
+      variant={'days'}
+      events={events}
+      moreOptions={{
+        eventDrop: (e) => handleEventDrop(e),
+        select: (e) => handleEventSelect(e),
+        selectable: true,
+        droppable: true,
+        editable: true,
+      }}
+    />
+  )
+}
 
 export const fullCalendar = () => <Calendar variant={'fullCalendar'} />
-// prueba
