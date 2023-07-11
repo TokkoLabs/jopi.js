@@ -101,6 +101,9 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
       }
     }
   }
+  if (badgeValue > 99) {
+    badgeValue = '+99'
+  }
 
   return (
     <Box sx={ maxWidth ? { position: 'relative', width: '100%' } : { position: 'relative' }}>
