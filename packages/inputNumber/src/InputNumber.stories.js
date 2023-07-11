@@ -8,7 +8,7 @@ export default {
   argTypes: {
     variant: {
       name: 'variant',
-      description: '**Variantes de color disponibles:** [ \'default\']',
+      description: "**Variantes de color disponibles:** [ 'default']",
       type: 'text',
       control: { type: 'none' },
     },
@@ -38,7 +38,8 @@ export default {
     },
     val: {
       name: 'val',
-      description: 'Recibe la función donde se quiera guardar el valor mostrado',
+      description:
+        'Recibe la función donde se quiera guardar el valor mostrado',
       type: 'function',
       control: { type: 'none' },
     },
@@ -61,10 +62,7 @@ export const Minutes = () => {
   const [value, setValue] = useState(0)
   return (
     <>
-      <InputNumber
-        val={setValue}
-        text='Minutes before'
-      />
+      <InputNumber val={setValue} text="Minutes before" />
       <Text>{value}</Text>
     </>
   )
