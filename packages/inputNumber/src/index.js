@@ -24,12 +24,17 @@ export const InputNumber = ({
 
   useEffect(() => {
     val(valueInput)
+
     if (valueInput) {
       setInputVariants([...inputVariants, 'filled'])
     } else {
       setInputVariants(inputVariants.filter((elem) => elem !== 'filled'))
     }
   }, [valueInput])
+
+  useEffect(() => {
+    setValueInput(startVal)
+  }, [startVal])
 
   useEffect(() => {
     if (error) {
