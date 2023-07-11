@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Collapsible } from '.'
-import { Button } from '@oneloop/button'
+import { Button, ButtonIcon } from '@oneloop/button'
 
 export default {
   component: Collapsible,
@@ -88,8 +88,8 @@ export const menu = () =>
           >
           </Collapsible.Button>
           <Collapsible.Body>
-            <Button variant='mainItemSmall'>{'User management'}</Button>
-            <Button variant='mainItemSmall'>{'Configuration'}</Button>
+            <ButtonIcon variant='mainItemSmall' text='User management' badgeValue={120} />
+            <ButtonIcon variant='mainItemSmall' text='Configuration' badgeValue={4} />
           </Collapsible.Body>
         </Collapsible>
 

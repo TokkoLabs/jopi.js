@@ -1291,7 +1291,7 @@ const theme = {
       },
     },
     mainItemSmall: {
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       fontWeight: 'normal',
       backgroundColor: colors.transparent,
       color: colors.neutralGray3,
@@ -1299,6 +1299,7 @@ const theme = {
       fontSize: '12px',
       lineHeight: '16px',
       padding: '9px 12px 9px 12px',
+      width: '100%',
       ':hover': {
         fontWeight: '600px',
         color: colors.subtlePressed,
