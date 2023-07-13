@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/tooltip",
-  "version": "1.0.85",
+  "version": "1.0.86",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
