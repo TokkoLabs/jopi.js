@@ -9,47 +9,19 @@ export default {
   title: 'Alert',
 }
 
-export const success = () =>
-  React.createElement(() => {
-    const [openAlert, setOpenAlert] = useToggle(false)
-    return (
-      <React.Fragment>
-        <Button onClick={setOpenAlert}>Show alert</Button>
-        <br />
-        <br />
-        {openAlert && (
-          <Alert text="Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!" closeFunction={setOpenAlert} />
-        )}
-      </React.Fragment>
-    )
-  })
-
-export const warning = () =>
-  React.createElement(() => {
-    const [openAlert, setOpenAlert] = useToggle(false)
-    return (
-      <React.Fragment>
-        <Button onClick={setOpenAlert}>Show alert</Button>
-        <br />
-        <br />
-        {openAlert && (
-          <Alert type="warning" text="Danger Zone!!!!" closeFunction={setOpenAlert} />
-        )}
-      </React.Fragment>
-    )
-  })
-
-export const danger = () =>
-  React.createElement(() => {
-    const [openAlert, setOpenAlert] = useToggle(false)
-    return (
-      <React.Fragment>
-        <Button onClick={setOpenAlert}>Show alert</Button>
-        <br />
-        <br />
-        {openAlert && (
-          <Alert type="danger" text="NOOOOOO!!! Perdonanos, explotó todo! :(" closeFunction={setOpenAlert} />
-        )}
-      </React.Fragment>
-    )
-  })
+export const Info = () => {
+  const [openAlert, setOpenAlert] = useToggle(false)
+  return (
+    <React.Fragment>
+      <Button onClick={setOpenAlert}>Show alert</Button>
+      <br />
+      <br />
+      {openAlert && (
+        <Alert
+          text="Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!"
+          closeAlert={setOpenAlert}
+        />
+      )}
+    </React.Fragment>
+  )
+}

@@ -2,35 +2,25 @@
 
 exports[`Alert closed 1`] = `ShallowWrapper {}`;
 
-exports[`Alert danger 1`] = `
+exports[`Alert info 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  background-color: white;
+  border-radius: 12px;
+  padding: 20px 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
-  box-shadow: active;
-  border-radius: circle;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 4px;
 }
 
 .c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding: 16px;
-  margin-right: 64px;
-  background-color: danger;
-  width: 40px;
-  height: 40px;
-  border-radius: circle;
-}
-
-.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -49,235 +39,13 @@ exports[`Alert danger 1`] = `
   flex-grow: 1;
 }
 
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
-.c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: inherit;
-  font-family: Nunito Sans;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: 12px;
-  padding: 16px;
-  margin-right: 8px;
-  background-color: #F6F2F2;
-  width: 32px;
-  height: 32px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-  width: 14px;
-  height: 14px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
-  className="c0 c1"
->
-  <svg
-    className="c2"
-    fill="currentcolor"
-    height={14}
-    size={40}
-    viewBox="0 0 14 14"
-    width={14}
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
-      fill="white"
-    />
-  </svg>
-  <p
-    className="c3"
-    display="flex"
-  >
-    NOOOOOO!!! Perdonanos, explotó todo! :(
-  </p>
-  <div
-    className="c4"
-  >
-    <button
-      className="c5"
-      display="inline-flex"
-      onClick={[Function]}
-      size={32}
-      type="button"
-    >
-      <svg
-        className="c6"
-        fill="currentcolor"
-        height={14}
-        viewBox="0 0 14 14"
-        width={14}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
-          fill="#716F6F"
-        />
-      </svg>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Alert primary default 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: white;
-  width: 100%;
-  box-shadow: active;
-  border-radius: circle;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding: 16px;
-  margin-right: 64px;
-  background-color: success;
-  width: 40px;
-  height: 40px;
-  border-radius: circle;
-}
-
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  font-family: primary;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   position: relative;
-}
-
-.c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: inherit;
-  font-family: Nunito Sans;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: 12px;
-  padding: 16px;
-  margin-right: 8px;
-  background-color: #F6F2F2;
-  width: 32px;
-  height: 32px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 
 .c1 {
@@ -290,224 +58,35 @@ exports[`Alert primary default 1`] = `
 <div
   className="c0 c1"
 >
-  <svg
-    className="c2"
-    fill="none"
-    height="17px"
-    size={40}
-    viewBox="0 0 22 17"
-    width="22px"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M4.18359 7.64653L3.83128 7.29423L3.47773 7.64529L2.05773 9.05529L1.70168 9.40884L2.05648 9.76364L7.64648 15.3536L8.00003 15.7072L8.35359 15.3536L20.3536 3.35364L20.7071 3.00009L20.3536 2.64653L18.9436 1.23653L18.5902 0.883148L18.2366 1.23637L8.0002 11.4631L4.18359 7.64653Z"
-      fill="white"
-    />
-    <path
-      d="M4.18359 7.64653L3.83128 7.29423L3.47773 7.64529L2.05773 9.05529L1.70168 9.40884L2.05648 9.76364L7.64648 15.3536L8.00003 15.7072L8.35359 15.3536L20.3536 3.35364L20.7071 3.00009L20.3536 2.64653L18.9436 1.23653L18.5902 0.883148L18.2366 1.23637L8.0002 11.4631L4.18359 7.64653Z"
-      fill="white"
-    />
-  </svg>
   <p
-    className="c3"
+    className="c2"
     display="flex"
   >
     Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!
   </p>
   <div
-    className="c4"
-  >
-    <button
-      className="c5"
-      display="inline-flex"
-      onClick={[Function]}
-      size={32}
-      type="button"
-    >
-      <svg
-        className="c6"
-        fill="currentcolor"
-        height={14}
-        viewBox="0 0 14 14"
-        width={14}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
-          fill="#716F6F"
-        />
-      </svg>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Alert warning 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  background-color: white;
-  width: 100%;
-  box-shadow: active;
-  border-radius: circle;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding: 16px;
-  margin-right: 64px;
-  background-color: warning;
-  width: 40px;
-  height: 40px;
-  border-radius: circle;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: primary;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
-.c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: inherit;
-  font-family: Nunito Sans;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: 12px;
-  padding: 16px;
-  margin-right: 8px;
-  background-color: #F6F2F2;
-  width: 32px;
-  height: 32px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: auto;
-  width: 14px;
-  height: 14px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
-  className="c0 c1"
->
-  <svg
-    className="c2"
-    fill="none"
-    height="19px"
-    size={40}
-    viewBox="0 0 4 19"
-    width="4px"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      clipRule="evenodd"
-      d="M4 0.666748H0V12.6667H4V0.666748ZM0 16.6667C0 15.5622 0.89543 14.6667 2 14.6667C3.10457 14.6667 4 15.5622 4 16.6667C4 17.7713 3.10457 18.6667 2 18.6667C0.89543 18.6667 0 17.7713 0 16.6667Z"
-      fill="white"
-      fillRule="evenodd"
-    />
-  </svg>
-  <p
     className="c3"
-    display="flex"
+    style={
+      {
+        "cursor": "pointer",
+      }
+    }
   >
-    Danger Zone!!!!
-  </p>
-  <div
-    className="c4"
-  >
-    <button
-      className="c5"
-      display="inline-flex"
-      onClick={[Function]}
-      size={32}
-      type="button"
-    >
-      <svg
-        className="c6"
-        fill="currentcolor"
-        height={14}
-        viewBox="0 0 14 14"
-        width={14}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
-          fill="#716F6F"
-        />
-      </svg>
-    </button>
+    <i
+      className="icon-cerrar"
+      style={
+        {
+          "bottom": "0px",
+          "fontSize": "12px",
+          "height": "12px",
+          "left": "-0.5px",
+          "position": "absolute",
+          "right": "0px",
+          "top": "-1px",
+          "width": "12px",
+        }
+      }
+    />
   </div>
 </div>
 `;
