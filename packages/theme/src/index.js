@@ -371,6 +371,12 @@ const theme = {
       color: '#384248',
     },
   },
+  alert: {
+    info: {
+      backgroundColor: colors.backgroundCyan2,
+      color: colors.infoAlert,
+    },
+  },
   inputNumber: {
     default: {
       background: colors.neutralGray8,

@@ -32,9 +32,7 @@ export const InputHours = ({
   const [inputVariant, setInputVariant] = useState(variant)
 
   useEffect(() => {
-    if (error) {
-      setInputVariant('focus')
-    }
+    setInputVariant(error ? 'focus' : 'default')
   }, [error])
 
   useOnClickOutside(InputContRef, () => setShowDD(false))
