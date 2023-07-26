@@ -82,6 +82,7 @@ export const menu = () =>
             isExpanded={open1}
             setExpand={() => setOpen1(!open1)}
             active={active1}
+            badgeValue={2}
             isCollapsible
             maxWidth
             holdPress
