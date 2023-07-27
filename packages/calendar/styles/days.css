@@ -50,7 +50,7 @@
 #days .fc-timegrid-event.fc-event-mirror,
 #days .fc-timegrid-more-link {
     border-radius: 8px;
-    border: none;
+    border-color: var(--neutralGray3);
     background-color: var(--neutralGray3);
 }
 
