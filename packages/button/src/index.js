@@ -141,7 +141,7 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
         { text && !holdPress && <span>{text}</span>}
         { text && holdPress && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span> }
         { isCollapsible && setExpand === undefined && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', transition: 'all 0.5s', paddingTop: '4px' }}/> }
-        { isCollapsible && setExpand !== undefined && <span className='icon-dropdown' onClick={(event) => { setExpand(); event.stopPropagation() }}style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', transition: 'all 0.5s', paddingTop: '4px', paddingLeft: '1px', paddingRight: '1px' }}/> }
+        { isCollapsible && setExpand !== undefined && <span className='icon-dropdown' onClick={(event) => { event.preventDefault(); setExpand(); event.stopPropagation(); event.nativeEvent.stopImmediatePropagation() }}style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', transition: 'all 0.5s', paddingTop: '4px', paddingLeft: '1px', paddingRight: '1px' }}/> }
         { badgeValue !== 0 && !text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
         { badgeValue !== 0 && text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: isCollapsible ? '30px' : '10px' }}>{badgeValue}</Badge> }
       </Box>
