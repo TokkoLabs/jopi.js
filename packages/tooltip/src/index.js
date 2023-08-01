@@ -38,7 +38,7 @@ export const ParentTooltip = ({ children, setHover, hover, placement = 'right', 
   )
 }
 
-export const Tooltip = ({ parentId, childrenId, variant = 'tooltip', placement = 'right', offset = 8, arrow, ...props }) => {
+export const Tooltip = ({ parentId, childrenId, variant = 'tooltip', txVariant = 'arrowTooltip', placement = 'right', offset = 8, arrow, ...props }) => {
   const popcorn = (typeof window === 'object' && document !== undefined) ? document.querySelector('#' + parentId) : null
   const tooltip = (typeof window === 'object' && document !== undefined) ? document.querySelector('#' + childrenId) : null
   if (popcorn != null && tooltip != null) {
@@ -65,16 +65,14 @@ export const Tooltip = ({ parentId, childrenId, variant = 'tooltip', placement =
           appearance: 'none',
           display: 'flex',
           alignItems: 'flex-start',
-          whiteSpace: 'nowrap',
           border: 'none',
           fontFamily: 'Nunito Sans',
-          background: '#FFFFFF',
           justifyContent: 'center',
         }}
       />
       { arrow &&
         <Box
-          tx='arrowTooltip'
+          tx={txVariant}
           variant={placement}
           id="arrow"
           __css={{

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import { ButtonIcon } from '@oneloop/button'
 import { useToggle, isMouseOutTooltip, isMouseOutParent } from '@oneloop/hooks'
@@ -10,7 +11,7 @@ export default {
   argTypes: {
     variant: {
       name: 'variant',
-      description: 'Variantes disponibles del tooltip: [ \'tooltip\' ]',
+      description: 'Variantes disponibles del tooltip: [ \'tooltip\', \'tooltipBlack\' ]',
     },
     placement: {
       name: 'placement',
@@ -244,6 +245,24 @@ export const TooltipTopEnd = () => {
       <div id="tooltip11" role="tooltip11" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip11', 'parent11', 'top'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
         <Tooltip parentId='parent11' childrenId='tooltip11' placement='top-end'>
           <Text variant='body.fontSize13'>Sitios Webs</Text>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
+export const TooltipBlack = () => {
+  const [hover, setHover] = React.useState(false)
+  const [active, setActive] = useToggle(false)
+  return (
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', borderRadius: '10px', height: '50px' }}>
+      <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent12', 'bottom'))} id="parent12" aria-describedby="tooltip12" setHover={setHover} hover={hover}>
+        <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
+      </ParentTooltip>
+      <div id="tooltip12" role="tooltip12" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip12', 'parent12', 'bottom'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
+        <Tooltip variant='tooltipBlack' txVariant='arrowTooltipBlack' parentId='parent12' childrenId='tooltip12' placement='bottom' arrow height='42px' width='380px'>
+          <Text variant={['body.fontSize13', 'wordBreak']} width='360px'>Write contact's name or email, then select 'New contact'
+            It will help you to check if it already exists and avoid duplicates.</Text>
         </Tooltip>
       </div>
     </div>
