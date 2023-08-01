@@ -3,6 +3,7 @@ import { Box } from '@oneloop/box'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import rrulePlugin from '@fullcalendar/rrule'
 import FullCalendar from '@fullcalendar/react'
 import '../styles/calendar.css'
 import esLocale from '@fullcalendar/core/locales/es-us'
@@ -22,7 +23,7 @@ const CalendarOptions = {
       minute: '2-digit',
       meridiem: false,
     },
-    plugins: [interactionPlugin, timeGridPlugin],
+    plugins: [interactionPlugin, timeGridPlugin, rrulePlugin],
     initialView: 'timeGridDay',
     headerToolbar: {
       start: 'prev',
@@ -33,7 +34,12 @@ const CalendarOptions = {
     stickyFooterScrollbar: false,
   },
   fullCalendar: {
-    plugins: [dayGridPlugin],
+    plugins: [dayGridPlugin, rrulePlugin, timeGridPlugin],
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay',
+    },
     initialView: 'dayGridMonth',
   },
 }
@@ -57,7 +63,7 @@ export const Calendar = ({
 
   return (
     <Box id={variant}>
-      <FullCalendar locale={esLocale} {...options} />{' '}
+      <FullCalendar locale={esLocale} {...options} />
     </Box>
   )
 }
