@@ -8,12 +8,14 @@
     "styles"
   ],
   "dependencies": {
-    "@fullcalendar/core": "^6.1.4",
-    "@fullcalendar/daygrid": "^6.1.4",
+    "@fullcalendar/core": "^6.1.8",
+    "@fullcalendar/daygrid": "^6.1.8",
     "@fullcalendar/interaction": "^6.1.8",
-    "@fullcalendar/react": "^6.1.4",
-    "@fullcalendar/timegrid": "^6.1.4",
-    "@oneloop/box": "^1.2.271"
+    "@fullcalendar/rrule": "^6.1.8",
+    "@fullcalendar/react": "^6.1.8",
+    "@fullcalendar/timegrid": "^6.1.8",
+    "@oneloop/box": "^1.2.271",
+    "rrule": "^2.7.2"
   },
   "peerDependencies": {
     "react": "^16.8.0"
