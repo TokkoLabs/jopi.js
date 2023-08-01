@@ -633,6 +633,11 @@ const theme = {
       WebkitBoxOrient: 'vertical',
       overflow: 'hidden',
     },
+    wordBreak: {
+      'overflow-wrap': 'break-word',
+      'word-wrap': 'break-word',
+      'word-break': 'break-word',
+    },
     success: [
       {
         fontSize: fontSize[5],
@@ -2047,6 +2052,18 @@ const theme = {
       borderRadius: '6px',
       flexDirection: 'row',
       height: '26px',
+      background: colors.white,
+    },
+    tooltipBlack: {
+      padding: '4px 10px 4px 10px',
+      gap: '14px',
+      boxShadow: '4px 4px 4px rgba(112, 126, 134, 0.15)',
+      borderRadius: '6px',
+      // flexDirection: 'inherit',
+      flexDirection: 'row',
+      // height: '26px',
+      background: colors.black,
+      color: colors.white,
     },
   },
   arrowTooltip: {
@@ -2121,6 +2138,80 @@ const theme = {
       borderRight: '5px solid transparent',
       borderLeft: '5px solid transparent',
       borderTop: '10px solid white',
+    },
+  },
+  arrowTooltipBlack: {
+    'right-start': {
+      left: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderRight: '10px solid black',
+    },
+    right: {
+      left: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderRight: '10px solid black',
+    },
+    'right-end': {
+      left: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderRight: '10px solid black',
+    },
+    'left-start': {
+      right: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderLeft: '10px solid black',
+    },
+    left: {
+      right: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderLeft: '10px solid black',
+    },
+    'left-end': {
+      right: '-8px',
+      borderTop: '5px solid transparent',
+      borderBottom: '5px solid transparent',
+      borderLeft: '10px solid black',
+    },
+    'bottom-start': {
+      top: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderBottom: '10px solid black',
+    },
+    bottom: {
+      top: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderBottom: '10px solid black',
+    },
+    'bottom-end': {
+      top: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderBottom: '10px solid black',
+    },
+    'top-start': {
+      bottom: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderTop: '10px solid black',
+    },
+    top: {
+      bottom: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderTop: '10px solid black',
+    },
+    'top-end': {
+      bottom: '-8px',
+      borderRight: '5px solid transparent',
+      borderLeft: '5px solid transparent',
+      borderTop: '10px solid black',
     },
   },
   card: {
