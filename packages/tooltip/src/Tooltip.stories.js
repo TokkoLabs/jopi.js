@@ -255,7 +255,7 @@ export const TooltipBlack = () => {
   const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
   return (
-    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', borderRadius: '10px', height: '50px' }}>
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', borderRadius: '10px', height: '80px' }}>
       <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent12', 'bottom'))} id="parent12" aria-describedby="tooltip12" setHover={setHover} hover={hover}>
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentTooltip>
