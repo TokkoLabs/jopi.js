@@ -255,13 +255,13 @@ export const TooltipBlack = () => {
   const [hover, setHover] = React.useState(false)
   const [active, setActive] = useToggle(false)
   return (
-    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', borderRadius: '10px', height: '80px' }}>
+    <div style={{ backgroundColor: '#F3F6F8', padding: '20px', borderRadius: '10px', height: '100px' }}>
       <ParentTooltip onMouseOver={() => setHover(true)} onMouseOut={(e) => setHover(isMouseOutParent(e, 'parent12', 'bottom'))} id="parent12" aria-describedby="tooltip12" setHover={setHover} hover={hover}>
         <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} badgeVariant='primary' onClick={() => setActive(active)}/>
       </ParentTooltip>
       <div id="tooltip12" role="tooltip12" onMouseOut={(e) => setHover(isMouseOutTooltip(e, 'tooltip12', 'parent12', 'bottom'))} style={{ width: 'fit-content', visibility: (hover || active) ? 'visible' : 'hidden' }}>
-        <Tooltip variant='tooltipBlack' txVariant='arrowTooltipBlack' parentId='parent12' childrenId='tooltip12' placement='bottom' arrow height='42px' width='380px'>
-          <Text variant={['body.fontSize13', 'wordBreak']} width='360px'>Write contact's name or email, then select 'New contact'
+        <Tooltip variant='tooltipBlack' txVariant='arrowTooltipBlack' parentId='parent12' childrenId='tooltip12' placement='bottom' arrow height='52px' width='420px'>
+          <Text variant={['body.fontSize13', 'wordBreak']} width='420px'>Write contact's name or email, then select 'New contact'
             It will help you to check if it already exists and avoid duplicates.</Text>
         </Tooltip>
       </div>
