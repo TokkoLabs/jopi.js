@@ -14,6 +14,15 @@ const size = type => {
   }
 }
 
+const sizeSpinner = type => {
+  switch (type) {
+    case 'medium':
+      return '2em'
+    default:
+      return '1em'
+  }
+}
+
 const bounce = keyframes`
   0% {
     top: 30px;
@@ -82,8 +91,8 @@ const circle = keyframes`
 `
 
 const StyledCircle = styled(Box)`
-width: 2em;
-height: 2em;
+width: ${props => sizeSpinner(props.size)};
+height: ${props => sizeSpinner(props.size)};
 padding: 8px;
 border-radius: 50%;
 background-image: conic-gradient(#272E33, #FFFFFF);

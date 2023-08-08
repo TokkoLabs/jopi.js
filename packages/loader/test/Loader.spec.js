@@ -11,6 +11,12 @@ describe('Loader', () => {
     expect(tree).toMatchSnapshot()
   })
 
+  test('spinner medium', () => {
+    const tree = renderer.create(<Loader variant='spinner' size='medium'/>).toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
   test('renders correctly two', () => {
     const tree = renderer.create(<Loader variant='bounce' size='medium'/>).toJSON()
 
