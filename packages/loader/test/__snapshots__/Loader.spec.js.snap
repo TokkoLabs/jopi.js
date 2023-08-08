@@ -17,8 +17,8 @@ exports[`Loader renders correctly 1`] = `
 }
 
 .c2 {
-  width: 2em;
-  height: 2em;
+  width: 1em;
+  height: 1em;
   padding: 8px;
   border-radius: 50%;
   background-image: conic-gradient(#272E33,#FFFFFF);
@@ -125,6 +125,48 @@ exports[`Loader renders correctly two 1`] = `
   transform-origin: 50%;
   -webkit-animation: fIIevM 500ms alternate infinite ease;
   animation: fIIevM 500ms alternate infinite ease;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+    kind="primary"
+    size="medium"
+  />
+</div>
+`;
+
+exports[`Loader spinner medium 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 10px;
+  width: medium;
+  height: medium;
+}
+
+.c2 {
+  width: 2em;
+  height: 2em;
+  padding: 8px;
+  border-radius: 50%;
+  background-image: conic-gradient(#272E33,#FFFFFF);
+  -webkit-animation: bCrGrT 1s ease 0s infinite;
+  animation: bCrGrT 1s ease 0s infinite;
+  -webkit-clip-path: circle(80px at center);
+  clip-path: circle(80px at center);
+  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+  mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
 }
 
 <div
