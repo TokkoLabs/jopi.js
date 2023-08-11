@@ -7,6 +7,7 @@ import theme from '@oneloop/theme'
 import '../../theme/styles/globals.css'
 
 export const InputNumber = ({
+  disabled = false,
   max = 99,
   min = 0,
   error = false,
@@ -67,8 +68,10 @@ export const InputNumber = ({
   }
 
   const handleFocus = () => {
-    inputRef.current.focus()
-    setInputVariants([variant, 'active'])
+    if (!disabled) {
+      inputRef.current.focus()
+      setInputVariants([variant, 'active'])
+    }
   }
 
   return (
@@ -89,6 +92,7 @@ export const InputNumber = ({
       onClick={handleFocus}
     >
       <Box
+        disabled={disabled}
         as="input"
         ref={inputRef}
         type="number"
@@ -132,14 +136,18 @@ export const InputNumber = ({
             transform: 'rotate(180deg) translateX(1px)',
             cursor: 'pointer',
           }}
-          onClick={() => setValueInput(Math.min(max, valueInput + step))}
+          onClick={() =>
+            !disabled && setValueInput(Math.min(max, valueInput + step))
+          }
         />
         <Icon
           id="arrowDownNumberInput"
           icon="icon-dropdown"
           fontSize="12px"
           style={{ cursor: 'pointer' }}
-          onClick={() => setValueInput(Math.max(min, valueInput - step))}
+          onClick={() =>
+            !disabled && setValueInput(Math.max(min, valueInput - step))
+          }
         />
       </Box>
     </Box>
