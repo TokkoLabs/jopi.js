@@ -1,3 +1,4 @@
+/* eslint-disable react/boolean-prop-naming */
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Box } from '@oneloop/box'
@@ -162,4 +163,5 @@ InputNumber.propTypes = {
   val: PropTypes.func,
   text: PropTypes.string,
   variant: PropTypes.string,
+  disabled: PropTypes.bool,
 }
