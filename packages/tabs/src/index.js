@@ -5,23 +5,29 @@ import theme from '@oneloop/theme'
 
 const TabsContext = createContext()
 
-export const Tabs = ({ children, variant = 'normal', itemTabSelected = 1, ...props }) => {
+export const Tabs = ({
+  children,
+  variant = 'normal',
+  itemTabSelected = 1,
+  ...props
+}) => {
   const tabChildren = React.Children.toArray(children).filter(
-    child => child.type.name === 'Tab' || child.key.toString().match('Tab')
+    (child) => child.type.name === 'Tab' || child.key.toString().match('Tab')
   )
-  const [active, setActive] = useState(itemTabSelected && tabChildren[itemTabSelected] !== undefined && tabChildren[itemTabSelected].props.id)
+  const [active, setActive] = useState(
+    itemTabSelected &&
+      tabChildren[itemTabSelected] !== undefined &&
+      tabChildren[itemTabSelected].props.id
+  )
   const value = React.useMemo(() => ({ active, setActive }), [active])
   const contentChildren = React.Children.toArray(children).filter(
-    child => child.type.name === 'Content' || child.key.toString().match('Content')
+    (child) =>
+      child.type.name === 'Content' || child.key.toString().match('Content')
   )
 
   return (
     <TabsContext.Provider value={value}>
-      <Box
-        {...props}
-        tx='tabs'
-        variant={variant}
-      >
+      <Box {...props} tx="tabs" variant={variant}>
         {tabChildren}
       </Box>
       {contentChildren.length > 0 && (
@@ -41,12 +47,23 @@ const useTabsContext = () => {
   return context
 }
 
-const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', variantFont = 'fontSize12', onClick, ...props }) => {
+const Tab = ({
+  id,
+  children,
+  variant = 'normal',
+  variantBody = 'body600',
+  variantFont = 'fontSize12',
+  onClick,
+  refTab,
+  ...props
+}) => {
   const { active, setActive } = useTabsContext()
   const [hover, setHover] = useToggle(false)
   const fontText = Object.values(theme.text[variantBody][variantFont])
   let color
-  const variantValues = Object.values(theme.tab)[Object.keys(theme.tab).indexOf(variant)]
+  const variantValues = Object.values(theme.tab)[
+    Object.keys(theme.tab).indexOf(variant)
+  ]
   color = variantValues.color
   if (active === id) {
     color = variantValues[':focus'].color
@@ -61,7 +78,8 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
   }
   return (
     <Box
-      tx='tab'
+      ref={refTab}
+      tx="tab"
       variant={variant}
       onClick={() => onClickTab()}
       onMouseOver={() => setHover(true)}
@@ -96,7 +114,9 @@ const Tab = ({ id, children, variant = 'normal', variantBody = 'body600', varian
       }}
     >
       {children}
-      {(active === id || (variant !== 'normal' && hover) || (variant === 'minimal')) && (
+      {(active === id ||
+        (variant !== 'normal' && hover) ||
+        variant === 'minimal') && (
         <Box
           as="span"
           __css={{
