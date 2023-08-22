@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/input-hours",
-  "version": "1.0.51",
+  "version": "1.0.52",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
