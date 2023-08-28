@@ -796,26 +796,22 @@ const theme = {
     },
     secondaryText: {
       color: colors.secondary,
-      backgroundColor: colors.neutral[0],
+      backgroundColor: 'transparent',
       ':hover': {
         color: colors.secondaryHover,
-        backgroundColor: colors.neutral[0],
       },
       ':focus': {
         color: colors.secondaryPressed,
-        backgroundColor: colors.neutral[0],
       },
     },
     subtleText: {
       color: colors.subtle,
-      backgroundColor: colors.neutral[0],
+      backgroundColor: 'transparent',
       ':hover': {
         color: colors.subtleHover,
-        backgroundColor: colors.neutral[0],
       },
       ':focus': {
         color: colors.subtlePressed,
-        backgroundColor: colors.neutral[0],
       },
     },
     textDisabled: {

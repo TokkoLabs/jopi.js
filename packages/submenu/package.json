@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/submenu",
-  "version": "1.0.97",
+  "version": "1.0.98",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
