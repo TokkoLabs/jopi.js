@@ -40,10 +40,9 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
   const { toggle } = useDropdownContext()
 
   const variantValues = Object.values(theme.buttons)[Object.keys(theme.buttons).indexOf(variant)]
-  const colorFilled = variantValues.colorFilled
+  const colorFilled = theme.colors.black
   const backgroundColorFilled = variantValues.backgroundColorFilled
   const colorArrowFilled = variantValues.colorArrowFilled
-  const borderFilled = variantValues.borderFilled
   let sizeArrow = variantValues.sizeArrow
   if (sizeArrow === undefined) {
     sizeArrow = '12px'
@@ -77,7 +76,7 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
         whiteSpace: 'nowrap',
         textAlign: 'start',
         color: filled && colorFilled,
-        border: filled && borderFilled,
+        border: 'solid 1px transparent',
         backgroundColor: filled && backgroundColorFilled,
         justifyContent: isArrowStatic ? 'center' : 'flex-start',
       }}
@@ -93,10 +92,11 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
 }
 
 const DropdownList = ({ children, width = '236px', height = '150px', ...props }) => {
-  const { open, ref } = useDropdownContext()
+  const { open, ref, toggle } = useDropdownContext()
   return (
     open && (
       <List
+        onClick={toggle}
         ref={ref}
         {...props}
         sx={{

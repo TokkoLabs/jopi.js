@@ -7,7 +7,7 @@ export default {
   title: 'Textarea',
 }
 
-export const basic = () => <Textarea />
+export const basic = () => <Textarea placeholder="Hello World!"/>
 
 export const inline = () => (
   <Fragment>
