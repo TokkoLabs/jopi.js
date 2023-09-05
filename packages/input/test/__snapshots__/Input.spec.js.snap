@@ -40,7 +40,7 @@ exports[`Input disabled 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -118,7 +118,7 @@ exports[`Input errors 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -246,7 +246,7 @@ exports[`Input infoAlert 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -372,7 +372,7 @@ exports[`Input inputInlineLabel 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -460,7 +460,7 @@ exports[`Input inputMedium 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -541,7 +541,7 @@ exports[`Input inputWithIcon 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -632,7 +632,7 @@ exports[`Input inputWithLabel 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -741,7 +741,7 @@ exports[`Input inputWithPassword 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -851,7 +851,7 @@ exports[`Input inputWithPasswordIcon 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -967,7 +967,7 @@ exports[`Input placeholder 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -1041,7 +1041,7 @@ exports[`Input readonly 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -1115,7 +1115,7 @@ exports[`Input renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -1195,7 +1195,7 @@ exports[`Input searchBold 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 700;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -1284,7 +1284,7 @@ exports[`Input searchBoldIcon 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 700;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
