@@ -1,0 +1,21 @@
+{
+  "name": "@oneloop/submenu",
+  "version": "1.0.99",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@oneloop/box": "^1.2.271",
+    "@popperjs/core": "^2.11.5",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
+}

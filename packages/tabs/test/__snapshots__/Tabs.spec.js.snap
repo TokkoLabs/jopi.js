@@ -1,29 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs renders correctly with headers and content 1`] = `
-Array [
+[
   .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding: auto 38px;
   position: relative;
   cursor: pointer;
-  font-family: heading;
+  font-family: Nunito Sans;
   text-transform: uppercase;
   text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
   font-weight: 600;
-  font-size: 14px;
+  line-height: 16px;
 }
 
 .c1 * {
@@ -43,30 +54,101 @@ Array [
   margin-right: 10px;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  cursor: pointer;
+  font-family: Nunito Sans;
+  text-transform: uppercase;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.c2 * {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.c2 a {
+  display: block;
+  width: 148px;
+  height: 52px;
+  line-height: 52px;
+}
+
+.c2 a > *:first-child {
+  margin-right: 10px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-radius: 4px 4px 0 0;
+  height: 4px;
+  display: block;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  bottom: 0;
+}
+
 <div
     className="c0"
   >
     <div
       className="c1"
       onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       One
     </div>
     <div
-      className="c1"
+      className="c2"
       onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       Two
+      <span
+        className="c3"
+      />
     </div>
     <div
       className="c1"
       onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       Three
     </div>
     <div
       className="c1"
       onClick={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
     >
       Four
     </div>
@@ -75,7 +157,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding: 10px;
+  padding-top: 10px;
 }
 
 <div
@@ -89,24 +171,35 @@ exports[`Tabs renders correctly with only headers 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding: auto 38px;
   position: relative;
   cursor: pointer;
-  font-family: heading;
+  font-family: Nunito Sans;
   text-transform: uppercase;
   text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
   font-weight: 600;
-  font-size: 14px;
+  line-height: 16px;
 }
 
 .c1 * {
@@ -126,32 +219,105 @@ exports[`Tabs renders correctly with only headers 1`] = `
   margin-right: 10px;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  cursor: pointer;
+  font-family: Nunito Sans;
+  text-transform: uppercase;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.c2 * {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.c2 a {
+  display: block;
+  width: 148px;
+  height: 52px;
+  line-height: 52px;
+}
+
+.c2 a > *:first-child {
+  margin-right: 10px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-radius: 4px 4px 0 0;
+  height: 4px;
+  display: block;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  bottom: 0;
+}
+
 <div
   className="c0"
 >
   <div
     className="c1"
     onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
     One
   </div>
   <div
-    className="c1"
+    className="c2"
     onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
     Two
+    <span
+      className="c3"
+    />
   </div>
   <div
     className="c1"
     onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
     Three
   </div>
   <div
     className="c1"
     onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
     Four
   </div>
 </div>
 `;
+
+exports[`Tabs renders correctly with variant default 1`] = `ShallowWrapper {}`;

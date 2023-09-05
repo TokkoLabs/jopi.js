@@ -1,10 +1,9 @@
-/* eslint-disable indent */
+//* eslint-disable indent */
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import { variant } from 'styled-system'
 import { Box } from '@oneloop/box'
-import { Text } from '@oneloop/text'
 
 const size = type => {
   switch (type) {
@@ -12,6 +11,15 @@ const size = type => {
       return '24px'
     default:
       return '16px'
+  }
+}
+
+const sizeSpinner = type => {
+  switch (type) {
+    case 'medium':
+      return '2em'
+    default:
+      return '1em'
   }
 }
 
@@ -34,7 +42,6 @@ const bounce = keyframes`
 
 const LoaderStyled = styled(Box)`
   position: relative;
-  display: inline-block;
   height: 37px;
   width: ${props => size(props.size)};
   ::before {
@@ -53,21 +60,44 @@ const LoaderStyled = styled(Box)`
     })}
   }
 `
-export const Loader = ({ text, ...props }) => (
-  <Box __css={{ display: 'inline-flex', alignItems: 'baseline' }}>
+export const Loader = ({ variant = 'bounce', ...props }) => (
+  <Box tx='loaders' variant={variant}>
+    { variant === 'spinner' &&
+    <StyledCircle {...props} __css={{ mr: '10px' }} />
+    }
+    { variant === 'bounce' &&
     <LoaderStyled {...props} __css={{ mr: '10px' }} />
-    {text && <Text variant="button.1">{text}</Text>}
+    }
   </Box>
 )
 
 Loader.propTypes = {
   size: PropTypes.string,
   kind: PropTypes.string,
-  text: PropTypes.string,
 }
 
 Loader.defaultProps = {
   size: 'small',
   kind: 'primary',
-  text: '',
 }
+
+const circle = keyframes`
+ 0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+`
+
+const StyledCircle = styled(Box)`
+width: ${props => sizeSpinner(props.size)};
+height: ${props => sizeSpinner(props.size)};
+padding: 8px;
+border-radius: 50%;
+background-image: conic-gradient(#272E33, #FFFFFF);
+animation: ${circle} 1s ease 0s infinite;
+clip-path: circle(80px at center);
+-webkit-mask-image: radial-gradient(circle at center, transparent 54%, black 54.8%);
+mask-image: radial-gradient(circle at center, transparent 54%, black 54.8%);
+`

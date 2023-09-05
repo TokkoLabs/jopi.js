@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/box",
-  "version": "1.2.202",
+  "version": "1.2.271",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -18,5 +18,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "4cea4b6e1d2b274b20bde85644f7be5916105ef2"
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
 }

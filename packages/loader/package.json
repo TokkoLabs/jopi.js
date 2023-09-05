@@ -1,14 +1,14 @@
 {
   "name": "@oneloop/loader",
-  "version": "1.2.203",
+  "version": "1.2.299",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.202",
-    "@oneloop/text": "^1.2.203",
+    "@oneloop/box": "^1.2.271",
+    "@oneloop/text": "^1.2.272",
     "prop-types": "^15.7.2",
     "styled-components": "5.3.5",
     "styled-system": "5.1.5"
@@ -19,5 +19,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
 }

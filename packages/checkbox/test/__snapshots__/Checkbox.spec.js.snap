@@ -5,7 +5,6 @@ exports[`Checkbox alt 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
   width: 18px;
   height: 18px;
 }
@@ -196,7 +195,6 @@ exports[`Checkbox default 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
   width: 18px;
   height: 18px;
 }
@@ -375,6 +373,98 @@ input:disabled:not(:checked) ~ .c9 {
     <path
       d="M 5,8 L 7,10 L 12,5"
       stroke="#C1CCD0"
+      strokeLinecap="round"
+      strokeWidth="1.5"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Checkbox isChecked 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+  width: 20px;
+  height: 20px;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+<div
+  className="c0 c1"
+>
+  <input
+    className="c0 c2"
+    type="checkbox"
+  />
+  <svg
+    aria-hidden="true"
+    className="c0 c3 c0 c4"
+    fill="none"
+    height={20}
+    viewBox="0 0 16 16"
+    width={20}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="#6A88F2"
+      height="15"
+      rx="4"
+      ry="4"
+      stroke="#6A88F2"
+      width="15"
+      x="0.5"
+      y="0.5"
+    />
+    <path
+      d="M 5,8 L 7,10 L 12,5"
+      stroke="white"
       strokeLinecap="round"
       strokeWidth="1.5"
     />

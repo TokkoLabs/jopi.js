@@ -12,10 +12,13 @@ exports[`Textarea basic type renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 4px;
-  border: 1px solid #DADADA;
+  border-radius: 8px;
+  border: none;
   caret-color: #757575;
   color: #757575;
+  font-family: Nunito Sans;
+  background-color: #F3F6F8;
+  resize: none;
   font-size: 14px;
   height: 170px;
   width: 390px;
@@ -25,10 +28,46 @@ exports[`Textarea basic type renders correctly 1`] = `
   padding-right: 64px;
 }
 
+.c1::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #485C66;
+}
+
+.c1::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #485C66;
+}
+
+.c1:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #485C66;
+}
+
+.c1::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #485C66;
+}
+
 .c1:disabled {
   color: #999999;
   background-color: #EBEBEB;
   cursor: not-allowed;
+}
+
+.c1:focus {
+  outline: none;
+  border: 1px solid #94A2AB;
+  box-shadow: none;
+}
+
+.c1:active {
+  outline: none;
+  border: 1px solid #4268EF;
+  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
 }
 
 <div
@@ -59,18 +98,19 @@ exports[`Textarea styled type renders correctly 1`] = `
   min-width: 0;
   width: 100%;
   font-family: sans-serif;
-  margin-left: 5px;
-  margin-bottom: 5px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  border-radius: 4px;
-  border: 1px solid #DADADA;
+  border-radius: 8px;
+  border: none;
   caret-color: #757575;
   color: #757575;
+  font-family: Nunito Sans;
+  background-color: #F3F6F8;
+  resize: none;
   font-size: 14px;
   height: 170px;
   width: 390px;
@@ -86,10 +126,46 @@ exports[`Textarea styled type renders correctly 1`] = `
   border-color: success;
 }
 
+.c3::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #485C66;
+}
+
+.c3::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #485C66;
+}
+
+.c3:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #485C66;
+}
+
+.c3::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #485C66;
+}
+
 .c3:disabled {
   color: #999999;
   background-color: #EBEBEB;
   cursor: not-allowed;
+}
+
+.c3:focus {
+  outline: none;
+  border: 1px solid #94A2AB;
+  box-shadow: none;
+}
+
+.c3:active {
+  outline: none;
+  border: 1px solid #4268EF;
+  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
 }
 
 .c4 {
@@ -97,8 +173,10 @@ exports[`Textarea styled type renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-family: primary;
-  color: neutral.6;
   margin-left: 5px;
+  color: #384248;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .c2 {
@@ -129,6 +207,9 @@ exports[`Textarea styled type renders correctly 1`] = `
   />
   <p
     className="c4"
+    color="#384248"
+    fontSize="12px"
+    fontWeight="400"
   >
     *Este es el detalle del textarea
   </p>

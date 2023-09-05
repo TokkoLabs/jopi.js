@@ -1,18 +1,19 @@
 {
   "name": "@oneloop/image",
-  "version": "1.2.202",
+  "version": "1.2.288",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.202"
+    "@oneloop/box": "^1.2.271"
   },
   "peerDependencies": {
     "react": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
 }

@@ -1,0 +1,9 @@
+@import url('./days.css');
+
+.fc-event.fc-event-draggable {
+  cursor: grab;
+}
+
+.notAllowed {
+  cursor: not-allowed !important;
+}

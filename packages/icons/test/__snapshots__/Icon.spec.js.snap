@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon renders correctly Add 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 18;
+  height: 18;
+}
+
+<svg
+  className="c0"
+  fill="none"
+  height="18"
+  viewBox="0 0 18 18"
+  width="18"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M14.25 9.75H9.75V14.25H8.25V9.75H3.75V8.25H8.25V3.75H9.75V8.25H14.25V9.75Z"
+    fill="black"
+  />
+</svg>
+`;
+
+exports[`Icon renders correctly Check 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 22px;
+  height: 17px;
+}
+
+<svg
+  className="c0"
+  fill="none"
+  height="17px"
+  viewBox="0 0 22 17"
+  width="22px"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M4.18359 7.64653L3.83128 7.29423L3.47773 7.64529L2.05773 9.05529L1.70168 9.40884L2.05648 9.76364L7.64648 15.3536L8.00003 15.7072L8.35359 15.3536L20.3536 3.35364L20.7071 3.00009L20.3536 2.64653L18.9436 1.23653L18.5902 0.883148L18.2366 1.23637L8.0002 11.4631L4.18359 7.64653Z"
+    fill="black"
+  />
+  <path
+    d="M4.18359 7.64653L3.83128 7.29423L3.47773 7.64529L2.05773 9.05529L1.70168 9.40884L2.05648 9.76364L7.64648 15.3536L8.00003 15.7072L8.35359 15.3536L20.3536 3.35364L20.7071 3.00009L20.3536 2.64653L18.9436 1.23653L18.5902 0.883148L18.2366 1.23637L8.0002 11.4631L4.18359 7.64653Z"
+    fill="black"
+  />
+</svg>
+`;
+
+exports[`Icon renders correctly ChevronLeft 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 8;
+  height: 12;
+}
+
+<svg
+  className="c0"
+  fill="none"
+  height="12"
+  viewBox="0 0 18 12"
+  width="8"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M7.41 1.41L6 0L0 6L6 12L7.41 10.59L2.83 6L7.41 1.41Z"
+    fill="black"
+  />
+</svg>
+`;
+
+exports[`Icon renders correctly ChevronRight 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 8;
+  height: 12;
+}
+
+<svg
+  className="c0"
+  fill="none"
+  height="12"
+  viewBox="0 0 18 12"
+  width="8"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M2.00009 0L0.590088 1.41L5.17009 6L0.590088 10.59L2.00009 12L8.00009 6L2.00009 0Z"
+    fill="black"
+  />
+</svg>
+`;
+
+exports[`Icon renders correctly Exclamation 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 4px;
+  height: 19px;
+}
+
+<svg
+  className="c0"
+  fill="none"
+  height="19px"
+  viewBox="0 0 4 19"
+  width="4px"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    clipRule="evenodd"
+    d="M4 0.666748H0V12.6667H4V0.666748ZM0 16.6667C0 15.5622 0.89543 14.6667 2 14.6667C3.10457 14.6667 4 15.5622 4 16.6667C4 17.7713 3.10457 18.6667 2 18.6667C0.89543 18.6667 0 17.7713 0 16.6667Z"
+    fill="black"
+    fillRule="evenodd"
+  />
+</svg>
+`;
+
+exports[`Icon renders correctly Icon 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+<div
+  className="c0"
+>
+  <i
+    className="icon-agregar"
+    style={
+      {
+        "bottom": "0px",
+        "fontSize": "24px",
+        "height": "24px",
+        "left": "-0.5px",
+        "position": "absolute",
+        "right": "0px",
+        "top": "-1px",
+        "width": "24px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Icon renders correctly Substract 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 18;
+  height: 18;
+}
+
+<svg
+  className="c0"
+  fill="none"
+  height="18"
+  viewBox="0 0 18 18"
+  width="18"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M14.25 9.75001H9.75H8.25H3.75V8.25001H8.25L9.75 8.24994L14.25 8.25001V9.75001Z"
+    fill="black"
+  />
+</svg>
+`;
+
+exports[`Icon renders correctly Times 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 14px;
+  height: 14px;
+}
+
+<svg
+  className="c0"
+  fill="currentcolor"
+  height={14}
+  viewBox="0 0 14 14"
+  width={14}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+    fill="black"
+  />
+</svg>
+`;

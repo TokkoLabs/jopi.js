@@ -1,24 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Datepicker default 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 7px 10px;
+  gap: 8px;
+  height: 32px;
+  background: #F3F6F8;
+  border-radius: 8px;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
 <div
   className="react-datepicker-wrapper"
 >
   <div
     className="react-datepicker__input-container"
   >
-    <input
-      className=""
-      disabled={false}
-      onBlur={[Function]}
-      onChange={[Function]}
+    <div
+      className="c0"
       onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      readOnly={false}
-      type="text"
-      value=""
-    />
+    >
+      <div
+        className="c1"
+      >
+        <i
+          className="icon-calendario"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": "16px",
+              "height": "16px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "16px",
+            }
+          }
+        />
+      </div>
+      
+    </div>
   </div>
 </div>
 `;

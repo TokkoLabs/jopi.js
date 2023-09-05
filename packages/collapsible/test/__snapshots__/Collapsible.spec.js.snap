@@ -27,34 +27,26 @@ exports[`Collapsible default 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  color: white;
-  background-color: primary;
   border: 0;
-  border-radius: button;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
   white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
   width: 100%;
   border: none;
   border-radius: 0;
@@ -83,9 +75,404 @@ exports[`Collapsible default 1`] = `
   >
     <button
       className="c2"
+      type="button"
     >
       Estado
     </button>
   </div>
 </div>
+`;
+
+exports[`Collapsible main 1`] = `
+[
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 33.33333333333333%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.c2 + .content {
+  overflow: hidden;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+    className="c0"
+    width={0.3333333333333333}
+  >
+    <div
+      className="c1"
+    >
+      <button
+        className="c2"
+        type="button"
+      >
+        <div
+          className="c3"
+          style={
+            {
+              "color": "#DF1E02",
+            }
+          }
+        >
+          <i
+            className="icon-emprendimientos"
+            style={
+              {
+                "bottom": "0px",
+                "fontSize": "16px",
+                "height": "16px",
+                "left": "-0.5px",
+                "position": "absolute",
+                "right": "0px",
+                "top": "-1px",
+                "width": "16px",
+              }
+            }
+          />
+        </div>
+        <span
+          style={
+            {
+              "color": "#384248",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Emprendimientos
+        </span>
+      </button>
+    </div>
+    <div
+      className="content"
+      style={
+        {
+          "height": "auto",
+        }
+      }
+    />
+  </div>,
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 33.33333333333333%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.c2 + .content {
+  overflow: hidden;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+    className="c0"
+    width={0.3333333333333333}
+  >
+    <div
+      className="c1"
+    >
+      <button
+        className="c2"
+        type="button"
+      >
+        <div
+          className="c3"
+          style={
+            {
+              "color": "#49565D",
+            }
+          }
+        >
+          <i
+            className="icon-emprendimientos"
+            style={
+              {
+                "bottom": "0px",
+                "fontSize": "16px",
+                "height": "16px",
+                "left": "-0.5px",
+                "position": "absolute",
+                "right": "0px",
+                "top": "-1px",
+                "width": "16px",
+              }
+            }
+          />
+        </div>
+        <span
+          style={
+            {
+              "color": "#49565D",
+              "fontWeight": "normal",
+            }
+          }
+        >
+          Emprendimientos
+        </span>
+      </button>
+    </div>
+  </div>,
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 33.33333333333333%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.c2 + .content {
+  overflow: hidden;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 14px;
+  display: inline-block;
+  font-size: 10px;
+  font-family: primary;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: static;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+    className="c0"
+    width={0.3333333333333333}
+  >
+    <div
+      className="c1"
+    >
+      <button
+        className="c2"
+        type="button"
+      >
+        <div
+          className="c3"
+          style={
+            {
+              "color": "#49565D",
+            }
+          }
+        >
+          <i
+            className="icon-emprendimientos"
+            style={
+              {
+                "bottom": "0px",
+                "fontSize": "16px",
+                "height": "16px",
+                "left": "-0.5px",
+                "position": "absolute",
+                "right": "0px",
+                "top": "-1px",
+                "width": "16px",
+              }
+            }
+          />
+        </div>
+        <span
+          style={
+            {
+              "color": "#49565D",
+              "fontWeight": "normal",
+            }
+          }
+        >
+          Emprendimientos
+        </span>
+        <div
+          className="c4"
+          style={
+            {
+              "position": "absolute",
+              "right": "10px",
+            }
+          }
+        >
+          2
+        </div>
+      </button>
+    </div>
+  </div>,
+]
 `;

@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dropdown default 1`] = `
+exports[`Dropdown DropdownDefault 1`] = `
 .c0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
+  height: 200px;
 }
 
 .c1 {
@@ -28,21 +29,872 @@ exports[`Dropdown default 1`] = `
   display: flex;
   line-height: inherit;
   font-family: Nunito Sans;
-  font-weight: bold;
-  font-size: 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  color: white;
-  background-color: primary;
   border: 0;
-  border-radius: button;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-overflow: ellipsis;
+  font-family: Nunito Sans;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: start;
+  color: #FFFFFF;
+  background-color: #6A88F2;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      id="button"
+      type="button"
+    >
+      <div
+        className="c3"
+        style={
+          {
+            "color": "#FFFFFF",
+          }
+        }
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": "16px",
+              "height": "16px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "16px",
+            }
+          }
+        />
+      </div>
+      <span
+        style={
+          {
+            "color": "#FFFFFF",
+          }
+        }
+      />
+      <div
+        className="c4"
+        style={
+          {
+            "color": "#FFFFFF",
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
+          }
+        }
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": "12px",
+              "height": "12px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+  <li
+    className="c5"
+    width={1}
+  >
+    <div
+      style={
+        {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c1"
+      >
+        <button
+          className="c6"
+          style={
+            {
+              "borderRadius": "0px",
+            }
+          }
+          type="button"
+        >
+          <p
+            className="c7"
+            style={
+              {
+                "padding": "9px 12px 9px 12px",
+              }
+            }
+          >
+            One
+          </p>
+        </button>
+      </div>
+    </div>
+  </li>
+  <li
+    className="c8"
+    width={1}
+  >
+    <div
+      style={
+        {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c1"
+      >
+        <button
+          className="c6"
+          style={
+            {
+              "borderRadius": "0px",
+            }
+          }
+          type="button"
+        >
+          <p
+            className="c7"
+            style={
+              {
+                "padding": "9px 12px 9px 12px",
+              }
+            }
+          >
+            Two
+          </p>
+        </button>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`Dropdown DropdownItem 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-overflow: ellipsis;
+  font-family: Nunito Sans;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: primary;
+  cursor: pointer;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c10 {
+  display: none;
+}
+
+input:checked:not(:disabled) ~ .c9 {
+  display: block;
+}
+
+.c13 {
+  display: none;
+}
+
+input:not(:checked):not(:disabled) ~ .c12 {
+  display: block;
+}
+
+.c17 {
+  display: none;
+}
+
+input:checked:disabled ~ .c16 {
+  display: block;
+}
+
+.c15 {
+  display: none;
+}
+
+input:disabled:not(:checked) ~ .c14 {
+  display: block;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c0 c2"
+  >
+    <button
+      className="c0 c3"
+      id="button"
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        className="c0 c4"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": "16px",
+              "height": "16px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "16px",
+            }
+          }
+        />
+      </div>
+      <span />
+      <div
+        className="c0 c4"
+        style={
+          {
+            "position": "static",
+            "right": "12px",
+            "transform": "rotate(0deg)",
+          }
+        }
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": "16px",
+              "height": "16px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "16px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+  <li
+    className="c0 c5"
+    width={1}
+  >
+    <div
+      className="c0 c6"
+    >
+      <input
+        className="c0 c7"
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        className="c0 c8 c9 c10 c0 c11"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#6A88F2"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#6A88F2"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c8 c12 c13 c0 c11"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="white"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#C1CCD0"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c8 c14 c15 c0 c11"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c8 c16 c17 c0 c11"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="#C1CCD0"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+    </div>
+    <p
+      className="c0 c18"
+      style={
+        {
+          "padding": "9px 12px 9px 12px",
+        }
+      }
+    >
+      One
+    </p>
+  </li>
+  <li
+    className="c0 c5"
+    width={1}
+  >
+    <div
+      className="c0 c6"
+    >
+      <input
+        className="c0 c7"
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        className="c0 c8 c9 c10 c0 c11"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#6A88F2"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#6A88F2"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="white"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c8 c12 c13 c0 c11"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="white"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#C1CCD0"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c8 c14 c15 c0 c11"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="c0 c8 c16 c17 c0 c11"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="#EFF2F3"
+          height="15"
+          rx="4"
+          ry="4"
+          stroke="#EFF2F3"
+          width="15"
+          x="0.5"
+          y="0.5"
+        />
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke="#C1CCD0"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+    </div>
+    <p
+      className="c0 c18"
+      style={
+        {
+          "padding": "9px 12px 9px 12px",
+        }
+      }
+    >
+      Two
+    </p>
+  </li>
+</div>
+`;
+
+exports[`Dropdown DropdownListIcon 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -54,20 +906,834 @@ exports[`Dropdown default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
   white-space: nowrap;
+  position: relative;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <li
+    className="c1"
+    width={1}
+  >
+    <div
+      style={
+        {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c2"
+      >
+        <button
+          className="c3"
+          style={
+            {
+              "borderRadius": "0px",
+            }
+          }
+          type="button"
+        >
+          <span>
+            <p
+              className="c4"
+              style={
+                {
+                  "padding": "9px 12px 9px 12px",
+                }
+              }
+            >
+              One
+            </p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </li>
+  <li
+    className="c5"
+    width={1}
+  >
+    <div
+      style={
+        {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c2"
+      >
+        <button
+          className="c3"
+          style={
+            {
+              "borderRadius": "0px",
+            }
+          }
+          type="button"
+        >
+          <span>
+            <p
+              className="c4"
+              style={
+                {
+                  "padding": "9px 12px 9px 12px",
+                }
+              }
+            >
+              Two
+            </p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`Dropdown DropdownListMultiselect 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 100%;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.c9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.c13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: darkGray;
+  width: 100%;
+}
+
+.c22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c12 {
+  display: none;
+}
+
+input:checked:not(:disabled) ~ .c11 {
+  display: block;
+}
+
+.c15 {
+  display: none;
+}
+
+input:not(:checked):not(:disabled) ~ .c14 {
+  display: block;
+}
+
+.c19 {
+  display: none;
+}
+
+input:checked:disabled ~ .c18 {
+  display: block;
+}
+
+.c17 {
+  display: none;
+}
+
+input:disabled:not(:checked) ~ .c16 {
+  display: block;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c0 c2"
+  >
+    <button
+      className="c0 c3"
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        className="c0 c4"
+        style={
+          {
+            "color": "#FFFFFF",
+          }
+        }
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": "14px",
+              "height": "14px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "14px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+  <li
+    className="c0 c5"
+    width={1}
+  >
+    <div
+      style={
+        {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c0 c6"
+      >
+        <button
+          className="c0 c7"
+          onClick={[Function]}
+          style={
+            {
+              "borderRadius": "0px",
+            }
+          }
+          type="button"
+        >
+          <div
+            className="c0 c8"
+          >
+            <input
+              className="c0 c9"
+              defaultChecked={false}
+              disabled={true}
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              className="c0 c10 c11 c12 c0 c13"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#6A88F2"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#6A88F2"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="white"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c10 c14 c15 c0 c13"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="white"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#C1CCD0"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c10 c16 c17 c0 c13"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c10 c18 c19 c0 c13"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="#C1CCD0"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+          </div>
+          <span
+            style={
+              {
+                "color": "#AEBAC0",
+                "fontWeight": "normal",
+              }
+            }
+          >
+            <p
+              className="c0 c20"
+              style={
+                {
+                  "padding": "9px 12px 9px 12px",
+                }
+              }
+            >
+              One
+            </p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </li>
+  <li
+    className="c0 c21"
+    width={1}
+  >
+    <div
+      style={
+        {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c0 c6"
+      >
+        <button
+          className="c0 c22"
+          onClick={[Function]}
+          style={
+            {
+              "borderRadius": "0px",
+            }
+          }
+          type="button"
+        >
+          <div
+            className="c0 c8"
+          >
+            <input
+              className="c0 c9"
+              defaultChecked={true}
+              disabled={false}
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              className="c0 c10 c11 c12 c0 c13"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#6A88F2"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#6A88F2"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="white"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c10 c14 c15 c0 c13"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="white"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#C1CCD0"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c10 c16 c17 c0 c13"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c10 c18 c19 c0 c13"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="#C1CCD0"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+          </div>
+          <span
+            style={
+              {
+                "color": "#384248",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            <p
+              className="c0 c20"
+              style={
+                {
+                  "padding": "9px 12px 9px 12px",
+                }
+              }
+            >
+              Two
+            </p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`Dropdown DropdownMultiselect 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-overflow: ellipsis;
+  font-family: Nunito Sans;
   overflow: hidden;
   white-space: nowrap;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 16px;
-  padding-right: 16px;
   text-align: start;
-  font-size: 14px;
-  line-height: 0;
-  height: 36px;
-  width: 236px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+@media screen and (min-width:40em) {
+
 }
 
 <div
@@ -79,9 +1745,438 @@ exports[`Dropdown default 1`] = `
     <button
       className="c2"
       onClick={[Function]}
+      type="button"
     >
-      Opción elegida
+      <span />
+      <div
+        className="c3"
+        style={
+          {
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
+          }
+        }
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": "12px",
+              "height": "12px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
 </div>
 `;
+
+exports[`Dropdown DropdownMultiselect 2`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      type="button"
+    >
+      <div
+        className="c3"
+        style={
+          {
+            "color": "#A6B2BA",
+          }
+        }
+      >
+        <i
+          className="icon-configuracion"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": 14,
+              "height": 14,
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": 14,
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Dropdown DropdownMultiselect 3`] = `ReactWrapper {}`;
+
+exports[`Dropdown DropdownSelection 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+  width: 250px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-overflow: ellipsis;
+  font-family: Nunito Sans;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="250px"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        Placeholder
+      </span>
+      <span
+        style={
+          {
+            "color": "#384248",
+            "fontWeight": 700,
+          }
+        }
+      >
+        Seleccion
+      </span>
+      <div
+        className="c3"
+        style={
+          {
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
+          }
+        }
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": "12px",
+              "height": "12px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Dropdown DropdownSelectionDisabled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+  width: 250px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-overflow: ellipsis;
+  font-family: Nunito Sans;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
+<div
+  className="c0"
+  width="250px"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      type="button"
+    >
+      <span>
+        Placeholder
+      </span>
+      <span
+        style={
+          {
+            "color": "#AEBAC0",
+            "fontWeight": 700,
+          }
+        }
+      >
+        Seleccion
+      </span>
+      <div
+        className="c3"
+        style={
+          {
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
+          }
+        }
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "bottom": "0px",
+              "fontSize": "12px",
+              "height": "12px",
+              "left": "-0.5px",
+              "position": "absolute",
+              "right": "0px",
+              "top": "-1px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Dropdown DropdownText 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: 200px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Dropdown default 1`] = `ShallowWrapper {}`;

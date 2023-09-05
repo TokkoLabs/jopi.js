@@ -27,4 +27,55 @@ describe('Collapsible', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  test('main', () => {
+    const tree = renderer
+      .create(
+        <>
+          <Collapsible width={1 / 3} isOpen>
+            <Collapsible.Button
+              isMainButton
+              variant="mainButton"
+              icon="icon-emprendimientos"
+              text={'Emprendimientos'}
+              isExpanded
+              active
+            >
+            </Collapsible.Button>
+            <Collapsible.Body>
+            </Collapsible.Body>
+          </Collapsible>
+
+          <Collapsible width={1 / 3} isOpen={false}>
+            <Collapsible.Button
+              isMainButton
+              variant="mainButton"
+              icon="icon-emprendimientos"
+              text={'Emprendimientos'}
+              isExpanded={false}
+              active={false}
+            >
+            </Collapsible.Button>
+            <Collapsible.Body>
+            </Collapsible.Body>
+          </Collapsible>
+
+          <Collapsible width={1 / 3} isOpen={false}>
+            <Collapsible.Button
+              isMainButton
+              variant="mainButton"
+              icon="icon-emprendimientos"
+              text={'Emprendimientos'}
+              isExpanded={false}
+              active={false}
+              badgeValue={2}
+            >
+            </Collapsible.Button>
+          </Collapsible>
+        </>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })
