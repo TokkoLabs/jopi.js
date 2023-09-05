@@ -72,7 +72,7 @@ export const Input = forwardRef(
       colorPlaceholder = 'error'
       suffix = <Icon icon="icon-error" fontSize={fontSizePrefix} />
     }
-    // test
+
     return (
       <Box
         width="100%"
@@ -144,7 +144,7 @@ export const Input = forwardRef(
             {...props}
             __css={{
               fontWeight: bold ? 700 : 400,
-              border: 'none',
+              border: 'solid 1px transparent',
               boxShadow: 'none',
               fontFamily: 'primary',
               display: 'block',

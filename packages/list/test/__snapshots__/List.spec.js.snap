@@ -13,9 +13,9 @@ exports[`List renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 4px;
-  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
@@ -623,9 +623,9 @@ exports[`ListDefault renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 4px;
-  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
@@ -737,6 +737,11 @@ exports[`ListDefault renders correctly 1`] = `
             style={
               {
                 "borderRadius": "0px",
+                "display": "block",
+                "overflow": "hidden",
+                "textAlign": "left",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
               }
             }
             type="button"
@@ -765,6 +770,11 @@ exports[`ListDefault renders correctly 1`] = `
             style={
               {
                 "borderRadius": "0px",
+                "display": "block",
+                "overflow": "hidden",
+                "textAlign": "left",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
               }
             }
             type="button"
@@ -793,6 +803,11 @@ exports[`ListDefault renders correctly 1`] = `
             style={
               {
                 "borderRadius": "0px",
+                "display": "block",
+                "overflow": "hidden",
+                "textAlign": "left",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
               }
             }
             type="button"
@@ -820,9 +835,9 @@ exports[`ListIcon renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 4px;
-  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
@@ -1098,9 +1113,9 @@ exports[`ListMultiselect renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 4px;
-  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
