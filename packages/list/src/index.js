@@ -8,19 +8,19 @@ import { Button, ButtonIcon } from '@oneloop/button'
 
 const List = forwardRef(({ children, ...props }, ref) => (
   <Box
-    ref={ref}
-    as="ul"
-    {...props}
-    __css={{
-      listStyleType: 'none',
-      padding: '4px',
-    }}
+  ref={ref}
+  as="ul"
+  {...props}
+  __css={{
+    listStyleType: 'none',
+    padding: '4px',
+  }}
   >
     <Box
       __css={{
-        overflowY: 'auto',
-        overflowX: 'hidden',
+        overflowY: 'scroll',
         paddingRight: '4px',
+        overflow: 'auto',
         'scroll-behavior': 'smooth',
         '::-webkit-scrollbar': {
           width: '4px',
@@ -41,8 +41,7 @@ const List = forwardRef(({ children, ...props }, ref) => (
 ))
 
 const ListInput = (props) => (
-  <Flex
-    as="span"
+  <Flex as="span"
     sx={{
       display: 'flex',
       flexDirection: 'column',
@@ -53,9 +52,9 @@ const ListInput = (props) => (
     }}
   >
     <Input
-      prefix={<Icon icon="icon-buscar" fontSize="14px" />}
+      prefix={<Icon icon='icon-buscar' fontSize='14px'/>}
       placeholder="Search"
-      variant="inputSearchOutlined"
+      variant='inputSearchOutlined'
       {...props}
     />
   </Flex>
@@ -81,13 +80,7 @@ const ListItem = ({ children, hover = true, ...props }) => (
   </Box>
 )
 
-const ListDefault = ({
-  children,
-  disabled = false,
-  hover = true,
-  variantSize = 'dropdownSizeNormal',
-  ...props
-}) => {
+const ListDefault = ({ children, disabled = false, hover = true, variantSize = 'dropdownSizeNormal', ...props }) => {
   return (
     <Box
       as="li"
@@ -100,35 +93,13 @@ const ListDefault = ({
       }}
     >
       <div style={{ width: '100%' }}>
-        <Button
-          variant={[
-            disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList',
-            variantSize,
-          ]}
-          style={{
-            borderRadius: '0px',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            whiteSpace: 'nowrap',
-            display: 'block',
-            textAlign: 'left',
-          }}
-        >
-          {children}
-        </Button>
+        <Button variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} style={{ borderRadius: '0px' }} >{children}</Button>
       </div>
     </Box>
   )
 }
 
-const ListMultiselect = ({
-  children,
-  disabled = false,
-  hover = true,
-  isActive,
-  variantSize = 'dropdownSizeNormal',
-  ...props
-}) => {
+const ListMultiselect = ({ children, disabled = false, hover = true, isActive, variantSize = 'dropdownSizeNormal', ...props }) => {
   const [active, toggle] = useToggle(false)
   if (isActive && !active) {
     toggle(true)
@@ -146,34 +117,13 @@ const ListMultiselect = ({
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonIcon
-          variant={[
-            disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList',
-            variantSize,
-          ]}
-          active={active}
-          onClick={toggle}
-          text={children}
-          hasCheckbox
-          maxWidth
-          holdPress
-          disabled={disabled}
-          style={{ borderRadius: '0px' }}
-        />
+        <ButtonIcon variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} active={active} onClick={toggle} text={children} hasCheckbox maxWidth holdPress disabled={disabled} style={{ borderRadius: '0px' }}/>
       </div>
     </Box>
   )
 }
 
-const ListIcon = ({
-  children,
-  disabled = false,
-  hover = true,
-  isActive,
-  icon,
-  variantSize = 'dropdownSizeNormal',
-  ...props
-}) => {
+const ListIcon = ({ children, disabled = false, hover = true, isActive, icon, variantSize = 'dropdownSizeNormal', ...props }) => {
   return (
     <Box
       as="li"
@@ -186,15 +136,7 @@ const ListIcon = ({
       }}
     >
       <div style={{ width: '100%' }}>
-        <ButtonIcon
-          variant={[
-            disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList',
-            variantSize,
-          ]}
-          icon={icon}
-          text={children}
-          style={{ borderRadius: '0px' }}
-        />
+        <ButtonIcon variant={[disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList', variantSize]} icon={icon} text={children} style={{ borderRadius: '0px' }}/>
       </div>
     </Box>
   )

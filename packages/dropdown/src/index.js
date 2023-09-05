@@ -93,11 +93,10 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
 }
 
 const DropdownList = ({ children, width = '236px', height = '150px', ...props }) => {
-  const { open, ref, toggle } = useDropdownContext()
+  const { open, ref } = useDropdownContext()
   return (
     open && (
       <List
-        onClick={toggle}
         ref={ref}
         {...props}
         sx={{

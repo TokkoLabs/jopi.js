@@ -13,9 +13,9 @@ exports[`Textarea basic type renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   border-radius: 8px;
-  border: solid 1px transparent;
+  border: none;
   caret-color: #757575;
-  color: #344149;
+  color: #757575;
   font-family: Nunito Sans;
   background-color: #F3F6F8;
   resize: none;
@@ -60,28 +60,14 @@ exports[`Textarea basic type renders correctly 1`] = `
 
 .c1:focus {
   outline: none;
-  border: 1px solid #6B7C85;
+  border: 1px solid #94A2AB;
   box-shadow: none;
 }
 
 .c1:active {
   outline: none;
-}
-
-.c1:hover::-webkit-input-placeholder {
-  color: #2F373D;
-}
-
-.c1:hover::-moz-placeholder {
-  color: #2F373D;
-}
-
-.c1:hover:-ms-input-placeholder {
-  color: #2F373D;
-}
-
-.c1:hover::placeholder {
-  color: #2F373D;
+  border: 1px solid #4268EF;
+  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
 }
 
 <div
@@ -119,9 +105,9 @@ exports[`Textarea styled type renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   border-radius: 8px;
-  border: solid 1px transparent;
+  border: none;
   caret-color: #757575;
-  color: #344149;
+  color: #757575;
   font-family: Nunito Sans;
   background-color: #F3F6F8;
   resize: none;
@@ -172,28 +158,14 @@ exports[`Textarea styled type renders correctly 1`] = `
 
 .c3:focus {
   outline: none;
-  border: 1px solid #6B7C85;
+  border: 1px solid #94A2AB;
   box-shadow: none;
 }
 
 .c3:active {
   outline: none;
-}
-
-.c3:hover::-webkit-input-placeholder {
-  color: #2F373D;
-}
-
-.c3:hover::-moz-placeholder {
-  color: #2F373D;
-}
-
-.c3:hover:-ms-input-placeholder {
-  color: #2F373D;
-}
-
-.c3:hover::placeholder {
-  color: #2F373D;
+  border: 1px solid #4268EF;
+  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
 }
 
 .c4 {

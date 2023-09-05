@@ -144,7 +144,7 @@ export const Input = forwardRef(
             {...props}
             __css={{
               fontWeight: bold ? 700 : 400,
-              border: 'solid 1px transparent',
+              border: 'none',
               boxShadow: 'none',
               fontFamily: 'primary',
               display: 'block',

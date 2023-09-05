@@ -124,10 +124,7 @@ const Tab = ({
             height: variant === 'normal' ? '4px' : undefined,
             display: 'block',
             backgroundColor: color,
-            border:
-              variant === 'normal'
-                ? undefined
-                : '1px solid ' + (active === id ? '#df1e02 !important' : color),
+            border: variant === 'normal' ? undefined : '1px solid ' + color,
             position: 'absolute',
             right: variant === 'normal' ? '10px' : 'calc(25%)',
             left: variant === 'normal' ? '10px' : 'calc(25%)',
