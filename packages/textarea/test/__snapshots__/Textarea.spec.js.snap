@@ -13,11 +13,11 @@ exports[`Textarea basic type renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   border-radius: 8px;
-  border: none;
+  border: solid 1px transparent;
   caret-color: #757575;
-  color: #757575;
+  color: #384248;
   font-family: Nunito Sans;
-  background-color: #F3F6F8;
+  background-color: #E4E8EA;
   resize: none;
   font-size: 14px;
   height: 170px;
@@ -31,25 +31,25 @@ exports[`Textarea basic type renders correctly 1`] = `
 .c1::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #485C66;
+  color: #49565D;
 }
 
 .c1::-moz-placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #485C66;
+  color: #49565D;
 }
 
 .c1:-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #485C66;
+  color: #49565D;
 }
 
 .c1::placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #485C66;
+  color: #49565D;
 }
 
 .c1:disabled {
@@ -60,14 +60,28 @@ exports[`Textarea basic type renders correctly 1`] = `
 
 .c1:focus {
   outline: none;
-  border: 1px solid #94A2AB;
+  border: 1px solid #6F838D;
   box-shadow: none;
 }
 
 .c1:active {
   outline: none;
-  border: 1px solid #4268EF;
-  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
+}
+
+.c1:hover::-webkit-input-placeholder {
+  color: #272E33;
+}
+
+.c1:hover::-moz-placeholder {
+  color: #272E33;
+}
+
+.c1:hover:-ms-input-placeholder {
+  color: #272E33;
+}
+
+.c1:hover::placeholder {
+  color: #272E33;
 }
 
 <div
@@ -105,11 +119,11 @@ exports[`Textarea styled type renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   border-radius: 8px;
-  border: none;
+  border: solid 1px transparent;
   caret-color: #757575;
-  color: #757575;
+  color: #384248;
   font-family: Nunito Sans;
-  background-color: #F3F6F8;
+  background-color: #E4E8EA;
   resize: none;
   font-size: 14px;
   height: 170px;
@@ -129,25 +143,25 @@ exports[`Textarea styled type renders correctly 1`] = `
 .c3::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #485C66;
+  color: #49565D;
 }
 
 .c3::-moz-placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #485C66;
+  color: #49565D;
 }
 
 .c3:-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #485C66;
+  color: #49565D;
 }
 
 .c3::placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #485C66;
+  color: #49565D;
 }
 
 .c3:disabled {
@@ -158,14 +172,28 @@ exports[`Textarea styled type renders correctly 1`] = `
 
 .c3:focus {
   outline: none;
-  border: 1px solid #94A2AB;
+  border: 1px solid #6F838D;
   box-shadow: none;
 }
 
 .c3:active {
   outline: none;
-  border: 1px solid #4268EF;
-  box-shadow: 2px 2px 6px rgba(56,109,244,0.2);
+}
+
+.c3:hover::-webkit-input-placeholder {
+  color: #272E33;
+}
+
+.c3:hover::-moz-placeholder {
+  color: #272E33;
+}
+
+.c3:hover:-ms-input-placeholder {
+  color: #272E33;
+}
+
+.c3:hover::placeholder {
+  color: #272E33;
 }
 
 .c4 {
