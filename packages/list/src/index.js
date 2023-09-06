@@ -18,9 +18,9 @@ const List = forwardRef(({ children, ...props }, ref) => (
   >
     <Box
       __css={{
-        overflowY: 'scroll',
+        overflowY: 'auto',
+        overflowX: 'hidden',
         paddingRight: '4px',
-        overflow: 'auto',
         'scroll-behavior': 'smooth',
         '::-webkit-scrollbar': {
           width: '4px',

@@ -190,7 +190,7 @@ exports[`Collapsible main 1`] = `
         <span
           style={
             {
-              "color": "#384248",
+              "color": "#344149",
               "fontWeight": "bold",
             }
           }
@@ -290,7 +290,7 @@ exports[`Collapsible main 1`] = `
           className="c3"
           style={
             {
-              "color": "#49565D",
+              "color": "#485C66",
             }
           }
         >
@@ -313,7 +313,7 @@ exports[`Collapsible main 1`] = `
         <span
           style={
             {
-              "color": "#49565D",
+              "color": "#485C66",
               "fontWeight": "normal",
             }
           }
@@ -430,7 +430,7 @@ exports[`Collapsible main 1`] = `
           className="c3"
           style={
             {
-              "color": "#49565D",
+              "color": "#485C66",
             }
           }
         >
@@ -453,7 +453,7 @@ exports[`Collapsible main 1`] = `
         <span
           style={
             {
-              "color": "#49565D",
+              "color": "#485C66",
               "fontWeight": "normal",
             }
           }

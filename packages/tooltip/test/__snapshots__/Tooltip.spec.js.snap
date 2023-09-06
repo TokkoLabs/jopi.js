@@ -134,7 +134,7 @@ exports[`Submenu renders correctly 1`] = `
             className="c3"
             style={
               {
-                "color": "#49565D",
+                "color": "#485C66",
               }
             }
           >
