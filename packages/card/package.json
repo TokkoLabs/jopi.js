@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/card",
-  "version": "1.0.72",
+  "version": "1.0.73",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
