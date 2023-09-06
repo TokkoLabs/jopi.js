@@ -13,9 +13,9 @@ exports[`List renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 4px;
-  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
@@ -110,7 +110,7 @@ exports[`List renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -623,9 +623,9 @@ exports[`ListDefault renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 4px;
-  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
@@ -820,9 +820,9 @@ exports[`ListIcon renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 4px;
-  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
@@ -1098,9 +1098,9 @@ exports[`ListMultiselect renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 4px;
-  overflow: auto;
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
