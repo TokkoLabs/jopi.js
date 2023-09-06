@@ -24,7 +24,7 @@ exports[`Card renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #DDE5E9;
+  background-color: #EFF3F5;
   position: relative;
   gap: 8px;
 }

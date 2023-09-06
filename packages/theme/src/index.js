@@ -1,7 +1,7 @@
 const colors = {
   alert: '#F4CD00',
   alertSubtle: '#FFF4BD',
-  black: '#272E33',
+  black: '#2F373D',
   primary: '#DF1E02',
   primaryHover: '#FD2B0C',
   primaryPressed: '#FD4E34',
@@ -40,14 +40,14 @@ const colors = {
   badgeSuccess: '#048465',
   mainButtonText: '#49565D',
   transparent: '#00000000',
-  neutralGray1: '#384248',
-  neutralGray2: '#49565D',
-  neutralGray3: '#6F838D',
+  neutralGray1: '#344149',
+  neutralGray2: '#485C66',
+  neutralGray3: '#6B7C85',
   neutralGray4: '#94A2AB',
-  neutralGray5: '#AEBAC0',
-  neutralGray6: '#C9D1D5',
-  neutralGray7: '#DDE5E9',
-  neutralGray8: '#E4E8EA',
+  neutralGray5: '#C7D1D7',
+  neutralGray6: '#DDE5E9',
+  neutralGray7: '#EFF3F5',
+  neutralGray8: '#F3F6F8',
   neutralGray9: '#F3F6F8',
   white: '#FFFFFF',
   yellow: '#FFF502',
@@ -116,23 +116,22 @@ const forms = {
       color: colors.neutralGray5,
       backgroundColor: colors.neutralGray9,
       '::placeholder': {
-        color: colors.neutralGray5,
+        color: colors.neutralGray2,
       },
     },
     hover: {
-      backgroundColor: colors.neutralGray9,
+      backgroundColor: colors.neutralGray8,
       '::placeholder': {
-        color: colors.neutralGray1,
+        color: colors.black,
       },
     },
     active: {
-      border: '1px solid #AEBAC0',
-      backgroundColor: colors.neutralGray9,
+      border: `1px solid ${colors.neutralGray3}`,
+      backgroundColor: colors.neutralGray8,
     },
     filled: {
       color: colors.neutralGray1,
-      border: 'none',
-      backgroundColor: colors.neutralGray9,
+      backgroundColor: colors.neutralGray8,
     },
   },
   inputFocus: {
@@ -390,7 +389,12 @@ const theme = {
     },
     active: {
       borderColor: colors.neutralGray3,
-      boxShadow: 'none',
+      p: {
+        boxShadow: 'none !important',
+      },
+      div: {
+        boxShadow: 'none !important',
+      },
     },
     focus: {
       borderColor: colors.infoAlert,
@@ -805,16 +809,21 @@ const theme = {
       },
     },
     subtleText: {
+      padding: '10px 24px 10px 24px',
+      fontSize: '14px',
       color: colors.subtle,
       backgroundColor: 'transparent',
       ':hover': {
         color: colors.subtleHover,
+        backgroundColor: colors.neutralGray7,
       },
       ':focus': {
-        color: colors.subtlePressed,
+        color: colors.neutralGray1,
       },
     },
     textDisabled: {
+      padding: '10px 24px 10px 24px',
+      fontSize: '14px',
       color: colors.disabled,
       backgroundColor: colors.neutral[0],
       cursor: 'default',
@@ -1400,21 +1409,22 @@ const theme = {
       fontFamily: 'primary',
     },
     dropdownDefault: {
-      color: colors.neutralGray3,
+      color: colors.neutralGray2,
       backgroundColor: colors.neutralGray9,
       colorFilled: colors.neutralGray1,
+      border: 'solid 1px transparent',
       backgroundColorFilled: colors.neutralGray9,
       colorArrowFilled: colors.neutralGray4,
       width: '100%',
       fontWeight: 400,
       ':hover': {
-        color: colors.neutralGray1,
+        color: colors.black,
         backgroundColor: colors.neutralGray9,
       },
       ':focus': {
         color: colors.neutralGray4,
         backgroundColor: colors.neutralGray9,
-        border: borders.neutralGray7,
+        border: borders.neutralGray3,
       },
     },
     dropdownDisabled: {
@@ -2295,6 +2305,9 @@ const theme = {
       backgroundColor: colors.transparent,
       ':hover': {
         color: colors.neutralGray2,
+        span: {
+          borderColor: colors.neutralGray2,
+        },
       },
       ':focus': {
         color: colors.primary,
@@ -2303,6 +2316,7 @@ const theme = {
         width: '100%',
         left: '0',
         right: '0',
+        borderColor: colors.neutralGray6,
       },
     },
   },
