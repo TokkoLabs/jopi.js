@@ -389,7 +389,12 @@ const theme = {
     },
     active: {
       borderColor: colors.neutralGray3,
-      boxShadow: 'none',
+      p: {
+        boxShadow: 'none !important',
+      },
+      div: {
+        boxShadow: 'none !important',
+      },
     },
     focus: {
       borderColor: colors.infoAlert,
@@ -817,6 +822,8 @@ const theme = {
       },
     },
     textDisabled: {
+      padding: '10px 24px 10px 24px',
+      fontSize: '14px',
       color: colors.disabled,
       backgroundColor: colors.neutral[0],
       cursor: 'default',
