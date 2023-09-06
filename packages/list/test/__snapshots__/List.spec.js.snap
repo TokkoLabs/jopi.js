@@ -110,7 +110,7 @@ exports[`List renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
