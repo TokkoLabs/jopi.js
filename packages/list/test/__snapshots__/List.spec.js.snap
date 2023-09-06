@@ -86,7 +86,7 @@ exports[`List renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #6F838D;
+  color: #6B7C85;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -110,7 +110,7 @@ exports[`List renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: none;
+  border: solid 1px transparent;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -1407,7 +1407,7 @@ input:disabled:not(:checked) ~ .c14 {
             <span
               style={
                 {
-                  "color": "#AEBAC0",
+                  "color": "#C7D1D7",
                   "fontWeight": "normal",
                 }
               }
@@ -1547,7 +1547,7 @@ input:disabled:not(:checked) ~ .c14 {
             <span
               style={
                 {
-                  "color": "#49565D",
+                  "color": "#485C66",
                   "fontWeight": "normal",
                 }
               }
@@ -1687,7 +1687,7 @@ input:disabled:not(:checked) ~ .c14 {
             <span
               style={
                 {
-                  "color": "#49565D",
+                  "color": "#485C66",
                   "fontWeight": "normal",
                 }
               }

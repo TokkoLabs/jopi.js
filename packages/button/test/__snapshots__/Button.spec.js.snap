@@ -996,7 +996,7 @@ exports[`Button mainButtonIconActive 1`] = `
     <span
       style={
         {
-          "color": "#384248",
+          "color": "#344149",
           "fontWeight": "bold",
         }
       }
@@ -1198,7 +1198,7 @@ exports[`Button mainButtonIconBadgeFilled 1`] = `
       className="c2"
       style={
         {
-          "color": "#384248",
+          "color": "#344149",
         }
       }
     >
@@ -1283,7 +1283,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 1`] = `
       className="c2"
       style={
         {
-          "color": "#384248",
+          "color": "#344149",
         }
       }
     >
@@ -1522,7 +1522,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
     <span
       style={
         {
-          "color": "#384248",
+          "color": "#344149",
           "fontWeight": "bold",
         }
       }
