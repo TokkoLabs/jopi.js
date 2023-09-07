@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Box } from '@oneloop/box'
 import { Label } from '@oneloop/label'
 import { Text } from '@oneloop/text'
-import theme from '@oneloop/theme/src'
+import theme from '@oneloop/theme'
 
 export const Textarea = ({
   prefix,
