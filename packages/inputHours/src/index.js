@@ -5,6 +5,7 @@ import { Text } from '@oneloop/text'
 import { Input } from '@oneloop/input'
 import { useOnClickOutside } from '@oneloop/hooks'
 import { format, addMinutes, set } from 'date-fns'
+import theme from '@oneloop/theme'
 
 const defaultHours = []
 
@@ -140,6 +141,7 @@ export const InputHours = ({
 
   return (
     <Box
+      as="form"
       tx="inputHours"
       variant={inputVariant}
       __css={{
@@ -156,7 +158,6 @@ export const InputHours = ({
         className="inputHourDisplay"
         prefix={<Icon icon="icon-reloj" fontSize="14px" />}
         suffix={<Icon icon="icon-dropdown" fontSize="14px" />}
-        variant="inputSearch"
         maxLength="4"
         onChange={handleInputChange}
         onFocus={() => setInputVariant('active')}
@@ -217,8 +218,8 @@ export const InputHours = ({
               padding: '4px 7px',
               cursor: 'pointer',
               ':hover': {
-                backgroundColor: '#F3F6F8',
-                color: '#384248',
+                backgroundColor: theme.colors.neutralGray8,
+                color: theme.colors.neutralGray1,
               },
               ':first-child': {
                 borderRadius: '8px 8px 0px 0px',
