@@ -113,7 +113,7 @@ const shadows = {
 const forms = {
   input: {
     normal: {
-      color: colors.neutralGray5,
+      color: colors.neutralGray1,
       backgroundColor: colors.neutralGray9,
       '::placeholder': {
         color: colors.neutralGray2,
@@ -366,8 +366,8 @@ const switches = {
 const theme = {
   liInputHours: {
     selected: {
-      backgroundColor: '#F3F6F8',
-      color: '#384248',
+      backgroundColor: colors.neutralGray8,
+      color: colors.neutralGray1,
     },
   },
   alert: {
@@ -379,9 +379,9 @@ const theme = {
   inputNumber: {
     default: {
       background: colors.neutralGray8,
-      color: colors.neutralGray2,
+      color: colors.neutralGray1,
       ':hover': {
-        color: colors.neutralGray1,
+        color: colors.black,
         input: {
           color: colors.neutralGray1,
         },
@@ -407,11 +407,24 @@ const theme = {
     },
   },
   inputHours: {
+    default: {
+      background: colors.neutralGray8,
+      border: 'solid 1px transparent',
+      color: colors.neutralGray1,
+      ':hover': {
+        color: colors.black,
+        div: {
+          i: {
+            color: colors.black,
+          },
+        },
+      },
+    },
     active: {
       borderColor: colors.neutralGray3,
+      color: colors.neutralGray1,
     },
     focus: {
-      border: 'solid 1px',
       borderColor: colors.infoAlert,
     },
   },
@@ -1409,7 +1422,7 @@ const theme = {
       fontFamily: 'primary',
     },
     dropdownDefault: {
-      color: colors.neutralGray2,
+      color: colors.neutralGray1,
       backgroundColor: colors.neutralGray9,
       colorFilled: colors.neutralGray1,
       border: 'solid 1px transparent',
@@ -1642,7 +1655,7 @@ const theme = {
       borderRadius: '0px',
       gap: '8px',
       ':hover': {
-        backgroundColor: colors.neutralGray9,
+        backgroundColor: colors.neutralGray8,
         color: colors.neutralGray1,
       },
       ':focus': {
