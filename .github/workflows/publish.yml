@@ -28,7 +28,7 @@ jobs:
       - name: Installing yarn
         run: |
           yarn install
-          yarn global add lerna
+        #  yarn global add lerna
 
       - name: Run tests
         run: yarn test
