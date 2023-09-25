@@ -9,20 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Configure git credentials
-        uses: OleksiyRudenko/gha-git-credentials@v2-latest
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Configure git credentials
+      #  uses: OleksiyRudenko/gha-git-credentials@v2-latest
+      #  with:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Installing node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
       - name: Installing yarn
