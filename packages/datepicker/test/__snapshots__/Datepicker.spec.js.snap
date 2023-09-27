@@ -28,7 +28,7 @@ exports[`Datepicker default 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #C7D1D7;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -81,6 +81,12 @@ exports[`Datepicker default 1`] = `
       >
         <div
           className="c2"
+          onClick={[Function]}
+          style={
+            {
+              "cursor": "pointer",
+            }
+          }
         >
           <i
             className="icon-calendario"

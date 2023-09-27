@@ -229,6 +229,9 @@ exports[`Dropdown DropdownDefault 1`] = `
         style={
           {
             "color": "#FFFFFF",
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+            "width": "95%",
           }
         }
       />
