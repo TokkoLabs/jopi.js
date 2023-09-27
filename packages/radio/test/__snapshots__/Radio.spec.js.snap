@@ -19,7 +19,6 @@ exports[`Radio renders checked correctly 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .c6 {
@@ -196,7 +195,6 @@ exports[`Radio renders correctly 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .c6 {
@@ -372,7 +370,6 @@ exports[`Radio renders disabled correctly 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .c6 {
@@ -549,7 +546,6 @@ exports[`Radio renders isMedium correctly 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .c6 {
@@ -726,7 +722,6 @@ exports[`Radio renders unchecked correctly 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .c6 {
