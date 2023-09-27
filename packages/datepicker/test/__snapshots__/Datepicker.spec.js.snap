@@ -28,7 +28,7 @@ exports[`Datepicker default 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #C7D1D7;
+  color: #344149;
   font-family: Nunito Sans;
   font-weight: 400;
 }
