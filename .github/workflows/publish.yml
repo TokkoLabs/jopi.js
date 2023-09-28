@@ -28,9 +28,11 @@ jobs:
       - name: Installing yarn
         run: |
           yarn install
-          yarn add lerna --dev
-          yarn global bin
-          yarn global add lerna
+
+      - name: Set Current Version
+        run: |
+          CURRENT_VERSION=$(node -p 'require("./lerna.json").version')
+          echo "CURRENT_VERSION=${CURRENT_VERSION}" >> $GITHUB_ENV
 
       - name: Run tests
         run: yarn test
