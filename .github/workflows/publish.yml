@@ -9,25 +9,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GIT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Configure git credentials
-        uses: OleksiyRudenko/gha-git-credentials@v2-latest
-        with:
-          token: ${{ secrets.GIT_TOKEN }}
+      #- name: Configure git credentials
+      #  uses: OleksiyRudenko/gha-git-credentials@v2-latest
+      #  with:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Installing node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
       - name: Installing yarn
         run: |
           yarn install
+          yarn add lerna --dev
+          yarn global bin
           yarn global add lerna
 
       - name: Run tests
@@ -46,7 +48,7 @@ jobs:
 
       - name: Update lerna packages
         env:
-          GH_TOKEN: ${{secrets.GIT_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd node_modules/.bin
           lerna version patch --yes
@@ -54,7 +56,7 @@ jobs:
       - name: Publish New Jopi version to NPM
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          GH_TOKEN: ${{secrets.GIT_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx lerna publish from-package --yes
 
   merge-me:

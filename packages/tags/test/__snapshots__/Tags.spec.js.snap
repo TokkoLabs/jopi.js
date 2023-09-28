@@ -25,9 +25,9 @@ exports[`Tags secondary 1`] = `
   border: solid 1px transparent;
 }
 
-<span
+<div
   className="c0"
 >
   Test
-</span>
+</div>
 `;

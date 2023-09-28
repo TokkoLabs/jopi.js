@@ -83,7 +83,7 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
       }}
     >
       { icon && (!filled ? <Icon icon={icon} fontSize='16px'/> : <Icon icon={icon} fontSize='16px' style={{ color: colorFilled }}/>) }
-      { !filled ? <span>{text}</span> : <span style={{ color: colorFilled }}>{text}</span> }
+      { !filled ? <span>{text}</span> : <span style={{ color: colorFilled, overflow: 'hidden', width: '95%', textOverflow: 'ellipsis' }}>{text}</span> }
       { selection && <span style={ disabled ? { color: '#AEBAC0', fontWeight: 700 } : { color: '#384248', fontWeight: 700 }}>{selection}</span> }
       { !filled
         ? <Icon icon='icon-dropdown' fontSize={sizeArrow} style={{ position: isArrowStatic ? 'static' : 'absolute', right: '12px', transform: 'rotate(0deg)' }}/>

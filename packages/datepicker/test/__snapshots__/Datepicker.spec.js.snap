@@ -81,6 +81,12 @@ exports[`Datepicker default 1`] = `
       >
         <div
           className="c2"
+          onClick={[Function]}
+          style={
+            {
+              "cursor": "pointer",
+            }
+          }
         >
           <i
             className="icon-calendario"
