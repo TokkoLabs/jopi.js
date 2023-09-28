@@ -157,7 +157,13 @@ export const InputHours = ({
         {...props}
         className="inputHourDisplay"
         prefix={<Icon icon="icon-reloj" fontSize="14px" />}
-        suffix={<Icon icon="icon-dropdown" fontSize="14px" />}
+        suffix={
+          <Icon
+            icon="icon-dropdown"
+            fontSize="14px"
+            style={{ cursor: 'pointer' }}
+          />
+        }
         maxLength="4"
         onChange={handleInputChange}
         onFocus={() => setInputVariant('active')}

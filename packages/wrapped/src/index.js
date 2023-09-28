@@ -133,10 +133,9 @@ export const Wrapped = ({
           <Tags
             variant={tagVariant}
             className="numberTag"
-            style={{ cursor: 'pointer' }}
             onClick={handleShowRestItems}
           >
-            +{store.restItems.length}
+            {`+${store.restItems.length}`}
           </Tags>
         ) : (
           ''
@@ -164,7 +163,17 @@ export const Wrapped = ({
               closeIcon={fnClose ? () => deleteRestItem(item) : false}
               style={{ marginRight: '5px', marginBottom: '5px' }}
             >
-              <Text>{item[printKey]}</Text>
+              <Box
+                as="p"
+                __css={{
+                  maxWidth: '350px',
+                  overflow: 'hidden',
+                  whiteSpace: 'noWrap',
+                  textOverflow: 'ellipsis',
+                }}
+              >
+                {item[printKey]}
+              </Box>
             </Tags>
           ))}
         </Box>
