@@ -429,8 +429,8 @@ const theme = {
     },
   },
   tags: {
+    color: colors.neutralGray1,
     secondary: {
-      color: '#143742',
       background: '#B3DBE8',
       ':hover': {
         color: '#25697E',
@@ -440,6 +440,15 @@ const theme = {
         color: '#25697E',
         border: '1px solid transparent',
       },
+    },
+    warning: {
+      background: '#FFF7CE',
+    },
+    success: {
+      background: '#D0FCEC',
+    },
+    dark: {
+      background: '#DDE5E9',
     },
   },
   fontSizes: fontSize,

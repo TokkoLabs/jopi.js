@@ -3,7 +3,13 @@ import { Box } from '@oneloop/box'
 import '@oneloop/fonts'
 import { Icon } from '@oneloop/icons'
 
-export const Tags = ({ children, closeIcon, variant, ...props }) => {
+export const Tags = ({
+  children,
+  closeIcon,
+  variant,
+  noClick = false,
+  ...props
+}) => {
   return (
     <Box
       as="div"
@@ -21,8 +27,9 @@ export const Tags = ({ children, closeIcon, variant, ...props }) => {
         fontWeight: '400',
         fontSize: '12px',
         lineHeight: '12px',
-        cursor: 'pointer',
+        cursor: !noClick ? 'pointer' : 'default',
         border: 'solid 1px transparent',
+        pointerEvents: noClick && 'none',
       }}
     >
       {children}
