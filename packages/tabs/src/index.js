@@ -1,25 +1,37 @@
 import React, { useState, createContext, useContext } from 'react'
 import { Box } from '@oneloop/box'
+import { useToggle } from '@oneloop/hooks'
+import theme from '@oneloop/theme'
 
 const TabsContext = createContext()
 
-export const Tabs = ({ children, ...props }) => {
-  const [active, setActive] = useState()
-  const value = React.useMemo(() => ({ active, setActive }), [active])
+export const Tabs = ({
+  children,
+  variant = 'normal',
+  itemTabSelected = 1,
+  ...props
+}) => {
   const tabChildren = React.Children.toArray(children).filter(
-    child => child.type.name === 'Tab'
+    (child) => child.type.name === 'Tab' || child.key.toString().match('Tab')
   )
+  const [active, setActive] = useState(
+    itemTabSelected &&
+      tabChildren[itemTabSelected] !== undefined &&
+      tabChildren[itemTabSelected].props.id
+  )
+  const value = React.useMemo(() => ({ active, setActive }), [active])
   const contentChildren = React.Children.toArray(children).filter(
-    child => child.type.name === 'Content'
+    (child) =>
+      child.type.name === 'Content' || child.key.toString().match('Content')
   )
 
   return (
     <TabsContext.Provider value={value}>
-      <Box {...props} __css={{ display: 'inline-flex' }}>
+      <Box {...props} tx="tabs" variant={variant}>
         {tabChildren}
       </Box>
       {contentChildren.length > 0 && (
-        <Box __css={{ padding: '10px' }}>{contentChildren}</Box>
+        <Box __css={{ paddingTop: '10px' }}>{contentChildren}</Box>
       )}
     </TabsContext.Provider>
   )
@@ -35,24 +47,57 @@ const useTabsContext = () => {
   return context
 }
 
-const Tab = ({ id, children, ...props }) => {
+const Tab = ({
+  id,
+  children,
+  variant = 'normal',
+  variantBody = 'body600',
+  variantFont = 'fontSize12',
+  onClick,
+  refTab,
+  ...props
+}) => {
   const { active, setActive } = useTabsContext()
+  const [hover, setHover] = useToggle(false)
+  const fontText = Object.values(theme.text[variantBody][variantFont])
+  let color
+  const variantValues = Object.values(theme.tab)[
+    Object.keys(theme.tab).indexOf(variant)
+  ]
+  color = variantValues.color
+  if (active === id) {
+    color = variantValues[':focus'].color
+  } else if (hover) {
+    color = variantValues[':hover'].color
+  }
+  const onClickTab = () => {
+    setActive(id)
+    if (onClick) {
+      onClick()
+    }
+  }
   return (
     <Box
-      onClick={() => setActive(id)}
+      ref={refTab}
+      tx="tab"
+      variant={variant}
+      onClick={() => onClickTab()}
+      onMouseOver={() => setHover(true)}
+      onMouseOut={() => setHover(false)}
       {...props}
       __css={{
-        padding: 'auto 38px',
         position: 'relative',
         cursor: 'pointer',
-        fontFamily: 'heading',
-        textTransform: 'uppercase',
+        fontFamily: 'Nunito Sans',
+        textTransform: variant === 'minimal' ? 'none' : 'uppercase',
         textAlign: 'center',
-        fontWeight: '600',
-        fontSize: 1,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
         '*': {
           textDecoration: 'none',
-          color: active === id ? 'white' : '#EBA49A',
+          color: color,
         },
         a: {
           display: 'block',
@@ -63,20 +108,29 @@ const Tab = ({ id, children, ...props }) => {
         'a > *:first-child': {
           marginRight: '10px',
         },
+        fontSize: fontText[0],
+        fontWeight: fontText[1],
+        lineHeight: fontText[2],
       }}
     >
       {children}
-      {active === id && (
+      {(active === id ||
+        (variant !== 'normal' && hover) ||
+        variant === 'minimal') && (
         <Box
           as="span"
           __css={{
-            borderRadius: '4px 4px 0 0',
+            borderRadius: variant === 'normal' ? '4px 4px 0 0' : '4px',
+            height: variant === 'normal' ? '4px' : undefined,
             display: 'block',
-            backgroundColor: 'white',
-            height: '4px',
+            backgroundColor: color,
+            border:
+              variant === 'normal'
+                ? undefined
+                : '1px solid ' + (active === id ? '#df1e02 !important' : color),
             position: 'absolute',
-            right: '10px',
-            left: '10px',
+            right: variant === 'normal' ? '10px' : 'calc(25%)',
+            left: variant === 'normal' ? '10px' : 'calc(25%)',
             bottom: 0,
           }}
         />

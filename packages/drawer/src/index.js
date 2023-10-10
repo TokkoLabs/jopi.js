@@ -10,12 +10,20 @@ export const Drawer = ({
   animationWidth,
   animationMinWidth,
   overlay,
+  heightMin,
+  heightMax,
+  transparent,
+  borderRadiusClosed,
+  marginTop,
+  animationDuration,
   ...props
 }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth} overlay={overlay} isCollapse={isCollapse}>
+        <DrawerMotion screenSide={screenSide} animationWidth={animationWidth} animationMinWidth={animationMinWidth}
+          overlay={overlay} isCollapse={isCollapse} heightMin={heightMin} heightMax={heightMax} transparent={transparent}
+          borderRadiusClosed={borderRadiusClosed} marginTop={marginTop} animationDuration={animationDuration} {...props}>
           {children}
         </DrawerMotion>
       )}
@@ -30,6 +38,12 @@ const DrawerMotion = ({
   animationWidth = 1000,
   animationMinWidth = 82,
   overlay,
+  heightMin,
+  heightMax = '100%',
+  transparent,
+  borderRadiusClosed,
+  marginTop,
+  animationDuration = 0.5,
   ...props
 }) => {
   const variantsOverlay = {
@@ -45,6 +59,24 @@ const DrawerMotion = ({
   const variantsDrawerMenu = {
     open: { width: animationWidth },
     closed: { width: animationMinWidth },
+  }
+
+  const variantsDrawerTransparent = {
+    open: {
+      width: animationWidth,
+      backgroundColor: ['hsla(255, 255, 255, 1)', 'hsla(255, 255, 255, 0)'],
+      height: heightMax,
+      boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0)',
+      top: marginTop,
+    },
+    closed: {
+      width: animationMinWidth,
+      backgroundColor: ['hsla(255, 255, 255, 0)', 'hsla(255, 255, 255, 1)'],
+      height: heightMin,
+      boxShadow: ' 0px 2px 2px rgba(0, 0, 0, 0.05)',
+      borderRadius: borderRadiusClosed,
+      top: marginTop,
+    },
   }
 
   const drawerOverlayInitial = {
@@ -70,10 +102,7 @@ const DrawerMotion = ({
   }
 
   const drawerMenuContentInitial = {
-    backgroundColor: 'white',
-    boxShadow: '5px 0 5px -5px rgba(0, 0, 0, 0.15)',
-    position: 'relative',
-    left: 0,
+    backgroundColor: transparent ? 'hsla(255, 255, 255, 1)' : 'white',
     top: 0,
     height: '100%',
     maxWidth: '100%',
@@ -89,9 +118,15 @@ const DrawerMotion = ({
   if (screenSide === 'left') {
     drawerContentInitial.x = animationWidth * -1
     variantsDrawer.closed.x = animationWidth * -1
+    drawerMenuContentInitial.left = 0
+    drawerMenuContentInitial.position = 'relative'
+    drawerMenuContentInitial.boxShadow = '5px 0 5px -5px rgba(0, 0, 0, 0.15)'
   } else {
     drawerContentInitial.x = animationWidth
     variantsDrawer.closed.x = animationWidth
+    drawerMenuContentInitial.right = 0
+    drawerMenuContentInitial.position = 'absolute'
+    drawerMenuContentInitial.boxShadow = '0px 5px 5px rgba(0, 0, 0, 0.05)'
   }
 
   if (overlay) {
@@ -108,7 +143,7 @@ const DrawerMotion = ({
           variants={variantsDrawer}
           initial={drawerContentInitial}
           exit="closed"
-          transition={{ duration: 0.5 }}
+          transition={{ duration: animationDuration }}
         >
           {children}
         </motion.div>
@@ -118,10 +153,10 @@ const DrawerMotion = ({
     return (
       <motion.div
         key="drawerContent"
-        variants={variantsDrawerMenu}
+        variants={ transparent ? variantsDrawerTransparent : variantsDrawerMenu}
         initial={drawerMenuContentInitial}
         animate={ isCollapse ? 'open' : 'closed' }
-        transition={{ duration: 0.5 }}
+        transition={{ duration: animationDuration }}
       >
         {children}
       </motion.div>

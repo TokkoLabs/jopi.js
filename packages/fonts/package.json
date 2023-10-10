@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/fonts",
-  "version": "1.0.38",
+  "version": "1.0.114",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -10,5 +10,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "589f87f6781012bf3946450745c22ab975d04d1a"
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
 }

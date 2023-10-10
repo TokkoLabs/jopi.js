@@ -7,7 +7,7 @@ exports[`Table renders correctly 1`] = `
   min-width: 0;
   font-family: primary;
   width: 100%;
-  border-spacing: 0 4px;
+  border-spacing: 0px 4px;
 }
 
 .c1 {
@@ -121,5 +121,976 @@ exports[`Table renders correctly 1`] = `
       Yes
     </td>
   </tr>
+</table>
+`;
+
+exports[`TableDefault renders correctly 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+  width: 100%;
+  border-spacing: 0px 4px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: Nunito Sans;
+  padding: 12px 16px 12px 16px;
+  gap: 8px;
+  background-color: neutralGray2;
+  border-radius: 8px;
+  display: table-row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+  height: 60px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: neutralGray2;
+}
+
+.c4:first-child {
+  padding-left: 12px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.c4:last-child {
+  padding-right: 12px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: Nunito Sans;
+  padding: 6px 12px 6px 12px;
+  gap: 12px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  height: 60px;
+  margin-bottom: 8px;
+  color: neutralGray4;
+  padding-bottom: 1em;
+}
+
+.c8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  gap: 1px;
+  border-top: 1px solid #00000000;
+  border-bottom: 1px solid #00000000;
+}
+
+.c8:first-child {
+  padding-left: 12px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  border-left: 1px solid #00000000;
+}
+
+.c8:last-child {
+  padding-right: 12px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  border-right: 1px solid #00000000;
+}
+
+.c9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  gap: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.c11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.c15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: gray;
+  width: 16px;
+  height: 16px;
+}
+
+input:checked ~ .c0 {
+  color: primary;
+}
+
+input:focus ~ .c0 {
+  box-shadow: active;
+}
+
+.c22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+
+.c23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: normal;
+}
+
+.c24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+  width: 150px;
+}
+
+.c25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: Nunito Sans;
+  padding: 6px 12px 6px 12px;
+  gap: 12px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  height: 60px;
+  margin-bottom: 8px;
+  color: neutralGray2;
+  padding-bottom: 1em;
+}
+
+.c26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  gap: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c14 {
+  display: none;
+}
+
+input:checked:not(:disabled) ~ .c13 {
+  display: block;
+}
+
+.c17 {
+  display: none;
+}
+
+input:not(:checked):not(:disabled) ~ .c16 {
+  display: block;
+}
+
+.c21 {
+  display: none;
+}
+
+input:checked:disabled ~ .c20 {
+  display: block;
+}
+
+.c19 {
+  display: none;
+}
+
+input:disabled:not(:checked) ~ .c18 {
+  display: block;
+}
+
+<table
+  className="c0 c1"
+>
+  <thead
+    className="c0 c2"
+  >
+    <tr
+      className="c0 c3"
+    >
+      <th
+        className="c0 c4"
+      >
+        <div
+          className="c0 c5"
+        />
+      </th>
+      <th
+        className="c0 c4"
+      >
+        <div
+          className="c0 c5"
+        >
+          <p
+            className="c0 c6"
+          >
+            Foto
+          </p>
+        </div>
+      </th>
+      <th
+        className="c0 c4"
+      >
+        <div
+          className="c0 c5"
+        >
+          <p
+            className="c0 c6"
+          >
+            Cód. Ref
+          </p>
+        </div>
+      </th>
+      <th
+        className="c0 c4"
+      >
+        <div
+          className="c0 c5"
+        >
+          <p
+            className="c0 c6"
+          >
+            Dirección
+          </p>
+          <p
+            className="c0 c6"
+          >
+            Ubicación
+          </p>
+        </div>
+      </th>
+      <th
+        className="c0 c4"
+      >
+        <div
+          className="c0 c5"
+        >
+          <p
+            className="c0 c6"
+          >
+            Valor
+          </p>
+        </div>
+      </th>
+      <th
+        className="c0 c4"
+      >
+        <div
+          className="c0 c5"
+        >
+          <p
+            className="c0 c6"
+          >
+            Dorm
+          </p>
+          <p
+            className="c0 c6"
+          >
+            Baños
+          </p>
+        </div>
+      </th>
+      <th
+        className="c0 c4"
+      >
+        <div
+          className="c0 c5"
+        >
+          <p
+            className="c0 c6"
+          >
+            S. Cubierta
+          </p>
+          <p
+            className="c0 c6"
+          >
+            Total
+          </p>
+        </div>
+      </th>
+      <th
+        className="c0 c4"
+      >
+        <div
+          className="c0 c5"
+        >
+          <p
+            className="c0 c6"
+          >
+            Fondo
+          </p>
+          <p
+            className="c0 c6"
+          >
+            Frente
+          </p>
+        </div>
+      </th>
+      <th
+        className="c0 c4"
+      >
+        <div
+          className="c0 c5"
+        >
+          <p
+            className="c0 c6"
+          >
+            S. Descrub
+          </p>
+          <p
+            className="c0 c6"
+          >
+            S. Descrub
+          </p>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="c0 c2"
+  >
+    <tr
+      className="c0 c7"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <div
+            className="c0 c10"
+          >
+            <input
+              className="c0 c11"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              className="c0 c12 c13 c14 c0 c15"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#6A88F2"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#6A88F2"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="white"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c12 c16 c17 c0 c15"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="white"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#C1CCD0"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c12 c18 c19 c0 c15"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c12 c20 c21 c0 c15"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="#C1CCD0"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+          </div>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <div
+            className="c0 c22"
+            onError={[Function]}
+            src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          >
+            <img
+              className="c0 c23"
+              display="normal"
+              src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            />
+          </div>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            IHO4362866
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c24"
+            width="150px"
+          >
+            Av. Libertador 5687 5to A - Lote 1232
+          </p>
+          <p
+            className="c0 c6"
+          >
+            Departamento en Palermo
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            Venta
+          </p>
+          <p
+            className="c0 c6"
+          >
+            USD 200.000
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            2 Dorm
+          </p>
+          <p
+            className="c0 c6"
+          >
+            2 Baños
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            87m° Cub
+          </p>
+          <p
+            className="c0 c6"
+          >
+            0m° Tot
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            3 Amb
+          </p>
+          <p
+            className="c0 c6"
+          >
+            0.00
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            120m° Semi
+          </p>
+          <p
+            className="c0 c6"
+          >
+            0m° Total
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="c0 c25"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <div
+            className="c0 c10"
+          >
+            <input
+              className="c0 c11"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              className="c0 c12 c13 c14 c0 c15"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#6A88F2"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#6A88F2"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="white"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c12 c16 c17 c0 c15"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="white"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#C1CCD0"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c12 c18 c19 c0 c15"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="c0 c12 c20 c21 c0 c15"
+              fill="none"
+              height={16}
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#EFF2F3"
+                height="15"
+                rx="4"
+                ry="4"
+                stroke="#EFF2F3"
+                width="15"
+                x="0.5"
+                y="0.5"
+              />
+              <path
+                d="M 5,8 L 7,10 L 12,5"
+                stroke="#C1CCD0"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+          </div>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <div
+            className="c0 c22"
+            onError={[Function]}
+            src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          >
+            <img
+              className="c0 c23"
+              display="normal"
+              src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            />
+          </div>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c26"
+        >
+          <p
+            className="c0 c6"
+          >
+            IHO4362866
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            Av. Libertador 5687 5to A
+          </p>
+          <p
+            className="c0 c6"
+          >
+            Departamento en Palermo
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            Venta
+          </p>
+          <p
+            className="c0 c6"
+          >
+            USD 200.000
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            2 Dorm
+          </p>
+          <p
+            className="c0 c6"
+          >
+            2 Baños
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            87m° Cub
+          </p>
+          <p
+            className="c0 c6"
+          >
+            0m° Tot
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            3 Amb
+          </p>
+          <p
+            className="c0 c6"
+          >
+            0.00
+          </p>
+        </div>
+      </td>
+      <td
+        className="c0 c8"
+      >
+        <div
+          className="c0 c9"
+        >
+          <p
+            className="c0 c6"
+          >
+            120m° Semi
+          </p>
+          <p
+            className="c0 c6"
+          >
+            0m° Total
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
 `;

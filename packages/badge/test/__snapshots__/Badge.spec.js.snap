@@ -6,25 +6,12 @@ exports[`Badge icon 1`] = `
   margin: 0;
   min-width: 0;
   line-height: 14px;
-  height: 22px;
   display: inline-block;
   font-size: 10px;
   font-family: primary;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  -webkit-letter-spacing: 0.05em;
-  -moz-letter-spacing: 0.05em;
-  -ms-letter-spacing: 0.05em;
-  letter-spacing: 0.05em;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  color: white;
-  background-color: primary;
   border: 0;
-  border-radius: 14px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -36,28 +23,16 @@ exports[`Badge icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
   position: static;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
 }
 
-<button
+<div
   className="c0"
 >
   <span
     className="icon-vista"
     style={
-      Object {
+      {
         "paddingTop": "0.5px",
         "position": "absolute",
       }
@@ -65,13 +40,57 @@ exports[`Badge icon 1`] = `
   />
   <span
     style={
-      Object {
+      {
         "paddingLeft": "10px",
       }
     }
   >
     55
   </span>
+</div>
+`;
+
+exports[`Badge iconBigRounded 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 14px;
+  display: inline-block;
+  font-size: 10px;
+  font-family: primary;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: static;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: primary;
+}
+
+<button
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    SE
+  </p>
 </button>
 `;
 
@@ -81,25 +100,12 @@ exports[`Badge primary 1`] = `
   margin: 0;
   min-width: 0;
   line-height: 14px;
-  height: 16px;
   display: inline-block;
   font-size: 10px;
   font-family: primary;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  -webkit-letter-spacing: 0.05em;
-  -moz-letter-spacing: 0.05em;
-  -ms-letter-spacing: 0.05em;
-  letter-spacing: 0.05em;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  color: white;
-  background-color: primary;
   border: 0;
-  border-radius: 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -111,19 +117,11 @@ exports[`Badge primary 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1px 5px;
   position: static;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
+}
+
+@media screen and (min-width:40em) {
+
 }
 
 <button
@@ -139,25 +137,12 @@ exports[`Badge secondary 1`] = `
   margin: 0;
   min-width: 0;
   line-height: 14px;
-  height: 16px;
   display: inline-block;
   font-size: 10px;
   font-family: primary;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  -webkit-letter-spacing: 0.05em;
-  -moz-letter-spacing: 0.05em;
-  -ms-letter-spacing: 0.05em;
-  letter-spacing: 0.05em;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  color: white;
-  background-color: primary;
   border: 0;
-  border-radius: 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -169,19 +154,7 @@ exports[`Badge secondary 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1px 5px;
   position: static;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
 }
 
 <button

@@ -1,0 +1,61 @@
+:root {
+  --fuente-tokko: 'Nunito Sans';
+  --alert: #f4cd00;
+  --alertSubtle: #fff4bd;
+  --black: #2f373d;
+  --primary: #df1e02;
+  --primaryHover: #fd2b0c;
+  --primaryPressed: #fd4e34;
+  --primaryAccent: #f6d4cf;
+  --secondary: #1a4958;
+  --secondaryHover: #2d7d97;
+  --secondaryPressed: #236377;
+  --subtle: #707e86;
+  --subtleHover: #4d5b64;
+  --subtlePressed: #384248;
+  --success: #068b5b;
+  --successDark: #00b775;
+  --successDarker: #00734a;
+  --error: #b21702;
+  --backgroundError: #fff8f6;
+  --backgroundError2: #fdddd8;
+  --backgroundErrorRowTable: #ffede8;
+  --borderRowTable: #ffe0dc;
+  --backgroundAlert1: #eef4fe;
+  --backgroundAlert2: #cee0fc;
+  --backgroundCyan2: #ecf0fd;
+  --backgroundSuccess: #d9fff1;
+  --darkRedTokko: #a71601;
+  --disabled: #c1ccd0;
+  --lightBlue: #6a88f2;
+  --info: #386df4;
+  --infoAlert: #4268ef;
+  --suportText: #1a48eb;
+  --inputErrors: #fff2f0;
+  --inputBackground: #f7f8fa;
+  --inputPlaceholderColor: #a6b2ba;
+  --darkGray: #6d777d;
+  --feedback: #048465;
+  --tips: #ffd02a;
+  --badgeBackgroundSuccess: #9ee4cb;
+  --badgeSuccess: #048465;
+  --mainButtonText: #49565d;
+  --transparent: #00000000;
+  --neutralGray1: #344149;
+  --neutralGray2: #485c66;
+  --neutralGray3: #6b7c85;
+  --neutralGray4: #94a2ab;
+  --neutralGray5: #c7d1d7;
+  --neutralGray6: #dde5e9;
+  --neutralGray7: #eff3f5;
+  --neutralGray8: #f3f6f8;
+  --neutralGray9: #010101;
+  --white: #ffffff;
+  --yellow: #fff502;
+  --petrokoPressed: #3188a4;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

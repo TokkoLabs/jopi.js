@@ -35,6 +35,50 @@ export const rows = () => (
   />
 )
 
+export const rowsInfo = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="rows"
+    textBadge="Por validar"
+  />
+)
+
+export const rowsReport = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="rows"
+    textBadge="Reportada"
+    variantBadge='badgeReportRow'
+  />
+)
+
+export const rowsSend = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="rows"
+    textBadge="Enviada"
+    variantBadge='badgeSendRow'
+  />
+)
+
+export const rowsError = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="rows"
+    textBadge="Error"
+    variantBadge='badgeErrorRow'
+  />
+)
+
+export const rowsSupport = () => (
+  <Image
+    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    variant="rows"
+    textBadge="Vista"
+    variantBadge='badgeSupportRow'
+  />
+)
+
 export const largeCard = () => (
   <Image
     src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -74,5 +118,21 @@ export const circleBig = () => (
   <Image
     src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     variant="circleBig"
+  />
+)
+
+export const rowsEmpty = () => (
+  <Image
+    src="invalid_route"
+    variant="rows"
+    icon ="icon-propiedades"
+  />
+)
+
+export const avatarEmpty = () => (
+  <Image
+    src="invalid_route"
+    variant="avatar"
+    icon ="icon-perfil"
   />
 )

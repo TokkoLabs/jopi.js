@@ -39,3 +39,45 @@ export const useFilterData = (data, key) => {
 
   return [handleFilter, setValue]
 }
+
+export const isMouseOutTooltip = (e, tooltipId, parentId, placement) => {
+  if (typeof window === 'object' && document === undefined) {
+    return true
+  }
+  const x = e.clientX
+  const y = e.clientY
+  const positionParent = document.getElementById(parentId).getBoundingClientRect()
+  const positionTooltip = document.getElementById(tooltipId).getBoundingClientRect()
+  return !((placement === 'right' && ((x >= positionTooltip.right || y <= positionTooltip.top || y >= positionTooltip.bottom) ||
+    (x < positionTooltip.left && (y <= positionParent.top || y >= positionParent.bottom)))) ||
+    (placement === 'left' && ((x <= positionTooltip.left || y <= positionTooltip.top || y >= positionTooltip.bottom) ||
+    (x > positionTooltip.right && (y <= positionParent.top || y >= positionParent.bottom)))) ||
+    (placement === 'bottom' && ((y >= positionTooltip.bottom || x <= positionTooltip.left || x >= positionTooltip.right) ||
+    (y < positionTooltip.top && (x <= positionParent.left || x >= positionParent.right)))) ||
+    (placement === 'top' && ((y <= positionTooltip.top || x <= positionTooltip.left || x >= positionTooltip.right) ||
+    (y > positionTooltip.bottom && (x <= positionParent.left || x >= positionParent.right)))))
+}
+
+export const isMouseOutJoin = (e, joinId, placement) => {
+  if (typeof window === 'object' && document === undefined) {
+    return true
+  }
+  const x = e.clientX
+  const y = e.clientY
+  const positionJoin = document.getElementById(joinId).getBoundingClientRect()
+  return !(((placement === 'right' || placement === 'left') && (y <= positionJoin.top || y >= (positionJoin.bottom - 1))) ||
+    ((placement === 'bottom' || placement === 'top') && (x <= positionJoin.left || x >= positionJoin.right)))
+}
+
+export const isMouseOutParent = (e, parentId, placement) => {
+  if (typeof window === 'object' && document === undefined) {
+    return true
+  }
+  const x = e.clientX
+  const y = e.clientY
+  const positionParent = document.getElementById(parentId).getBoundingClientRect()
+  return !((placement === 'right' && (x <= positionParent.left || y <= positionParent.top || y >= positionParent.bottom)) ||
+    (placement === 'bottom' && (y <= positionParent.top || x <= positionParent.left || x >= positionParent.right)) ||
+    (placement === 'left' && (x >= positionParent.right || y <= positionParent.top || y >= (positionParent.bottom - 1))) ||
+    (placement === 'top' && (y >= positionParent.bottom || x <= positionParent.left || x >= positionParent.right)))
+}

@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react'
 import { Box, Flex } from '@oneloop/box'
+import { Icon } from '@oneloop/icons'
 import { Input } from '@oneloop/input'
-import { useFilterData } from '@oneloop/hooks'
 import { Checkbox } from '@oneloop/checkbox'
+import { useToggle, useFilterData } from '@oneloop/hooks'
+import { Button, ButtonIcon } from '@oneloop/button'
 
 const List = forwardRef(({ children, ...props }, ref) => (
   <Box
@@ -11,19 +13,50 @@ const List = forwardRef(({ children, ...props }, ref) => (
     {...props}
     __css={{
       listStyleType: 'none',
-      p: 0,
+      padding: '4px',
     }}
   >
-    {children}
+    <Box
+      __css={{
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        paddingRight: '4px',
+        'scroll-behavior': 'smooth',
+        '::-webkit-scrollbar': {
+          width: '4px',
+        },
+        '::-webkit-scrollbar-track': {
+          '-webkit-border-radius': '4px',
+          background: '#E4E8EA',
+        },
+        '::-webkit-scrollbar-thumb': {
+          '-webkit-border-radius': '4px',
+          background: '#6F838D',
+        },
+      }}
+    >
+      {children}
+    </Box>
   </Box>
 ))
 
 const ListInput = (props) => (
-  <Flex as="span" sx={{ px: '16px', py: '14px' }}>
+  <Flex
+    as="span"
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: '10px 6px 12px',
+      gap: '8px',
+    }}
+  >
     <Input
-      width={1}
+      prefix={<Icon icon="icon-buscar" fontSize="14px" />}
+      placeholder="Search"
+      variant="inputSearchOutlined"
       {...props}
-      sx={{ borderRadius: 'circle', bg: 'rgba(0, 0, 0, 0.04)', mb: 0 }}
     />
   </Flex>
 )
@@ -48,6 +81,133 @@ const ListItem = ({ children, hover = true, ...props }) => (
   </Box>
 )
 
+const ListDefault = ({
+  children,
+  ellipsis = false,
+  disabled = false,
+  hover = true,
+  variantSize = 'dropdownSizeNormal',
+  ...props
+}) => {
+  return (
+    <Box
+      as="li"
+      width={1}
+      {...props}
+      __css={{
+        display: 'inline-flex',
+        justifyContent: 'start',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{ width: '100%' }}>
+        <Button
+          variant={[
+            disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList',
+            variantSize,
+          ]}
+          style={
+            ellipsis
+              ? {
+                  borderRadius: '0px',
+                  display: 'block',
+                  textAlign: 'initial',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }
+              : { borderRadius: '0px' }
+          }
+        >
+          {children}
+        </Button>
+      </div>
+    </Box>
+  )
+}
+
+const ListMultiselect = ({
+  children,
+  disabled = false,
+  hover = true,
+  isActive,
+  variantSize = 'dropdownSizeNormal',
+  ...props
+}) => {
+  const [active, toggle] = useToggle(false)
+  if (isActive && !active) {
+    toggle(true)
+  }
+
+  return (
+    <Box
+      as="li"
+      width={1}
+      {...props}
+      __css={{
+        display: 'inline-flex',
+        justifyContent: 'start',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{ width: '100%' }}>
+        <ButtonIcon
+          variant={[
+            disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList',
+            variantSize,
+          ]}
+          active={active}
+          onClick={toggle}
+          text={children}
+          hasCheckbox
+          maxWidth
+          holdPress
+          disabled={disabled}
+          style={{ borderRadius: '0px' }}
+        />
+      </div>
+    </Box>
+  )
+}
+
+const ListIcon = ({
+  children,
+  disabled = false,
+  hover = true,
+  isActive,
+  icon,
+  variantSize = 'dropdownSizeNormal',
+  ...props
+}) => {
+  return (
+    <Box
+      as="li"
+      width={1}
+      {...props}
+      __css={{
+        display: 'inline-flex',
+        justifyContent: 'start',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{ width: '100%' }}>
+        <ButtonIcon
+          variant={[
+            disabled ? 'mainItemSmallListDisabled' : 'mainItemSmallList',
+            variantSize,
+          ]}
+          icon={icon}
+          text={children}
+          style={{ borderRadius: '0px' }}
+        />
+      </div>
+    </Box>
+  )
+}
+
+List.Default = ListDefault
+List.Multiselect = ListMultiselect
+List.Icon = ListIcon
 List.Search = ListInput
 List.Item = ListItem
 List.displayName = 'List'

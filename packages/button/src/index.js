@@ -1,8 +1,9 @@
 import React from 'react'
 import { Badge } from '@oneloop/badge'
 import { Box } from '@oneloop/box'
+import { Checkbox } from '@oneloop/checkbox'
+import { Icon } from '@oneloop/icons'
 import { Image } from '@oneloop/image'
-import { useToggle } from '@oneloop/hooks'
 import theme from '@oneloop/theme'
 import '@oneloop/fonts'
 
@@ -11,6 +12,7 @@ export const Button = ({ variant, ...props }) => (
     <Box
       as='button'
       tx='buttons'
+      type='button'
       variant={variant}
       {...props}
       __css={{
@@ -18,155 +20,97 @@ export const Button = ({ variant, ...props }) => (
         display: 'flex',
         lineHeight: 'inherit',
         fontFamily: 'Nunito Sans',
-        fontWeight: 'bold',
-        fontSize: 16,
         textAlign: 'center',
         textDecoration: 'none',
         cursor: 'pointer',
         outline: 'none',
-        color: 'white',
-        bg: 'primary',
         border: 0,
-        borderRadius: '12px',
         flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
-        height: '48px',
         whiteSpace: 'nowrap',
-        padding: '13px 26px 13px 26px',
-        gap: '6px',
+        justifyContent: 'center',
+        fontWeight: 'bold',
+        borderRadius: '12px',
       }}
     />
   </Box>
 )
 
-export const ButtonIcon = ({ icon, isRounded, variant, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
-  let heightIcon
-  if (Array.isArray(variant)) {
-    const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
-    indexes.map(index => {
-      if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
-        heightIcon = Object.values(theme.buttons)[index].heightIcon
-      }
-      return heightIcon
-    })
-  } else {
-    const index = Object.keys(theme.buttons).indexOf(variant)
-    heightIcon = Object.values(theme.buttons)[index].heightIcon
-  }
-
-  return (
-    <Box sx={{ position: 'relative' }}>
-      <Box
-        as='button'
-        tx='buttons'
-        variant={variant}
-        {...props}
-        __css={{
-          appearance: 'none',
-          display: 'flex',
-          lineHeight: 'inherit',
-          fontFamily: 'Nunito Sans',
-          fontWeight: 'bold',
-          fontSize: '24px',
-          textAlign: 'center',
-          textDecoration: 'none',
-          cursor: 'pointer',
-          outline: 'none',
-          color: 'white',
-          bg: 'primary',
-          border: 0,
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          borderRadius: 12,
-          width: '48px',
-          height: '48px',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        <span className={icon} style={heightIcon && { height: heightIcon }}></span>
-        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{ badgeValue }</Badge> }
-      </Box>
-    </Box>
-  )
-}
-
-export const ButtonRound = ({ text, icon, variant, ...props }) => {
-  let heightIcon = '16px'
-  if (variant.includes('roundLarge')) {
-    heightIcon = '20px'
-  }
-  return (
-    <Box sx={{ position: 'relative' }}>
-      <Box
-        as='button'
-        tx='buttons'
-        variant={variant}
-        {...props}
-        __css={{
-          appearance: 'none',
-          display: 'flex',
-          lineHeight: 'inherit',
-          fontFamily: 'Nunito Sans',
-          fontWeight: 'bold',
-          fontSize: 16,
-          textAlign: 'center',
-          textDecoration: 'none',
-          cursor: 'pointer',
-          outline: 'none',
-          color: 'white',
-          bg: 'primary',
-          border: 0,
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          borderRadius: 24,
-          height: '48px',
-          gap: '6px',
-          whiteSpace: 'nowrap',
-          padding: '13px 26px 13px 26px',
-        }}
-      >
-        <span className={icon} style={{ height: heightIcon, fontSize: heightIcon }}></span>
-        <span> {text}</span>
-      </Box>
-    </Box>
-  )
-}
-
-export const ButtonHoldPress = ({ variant, isActive = false, isInput = false, text, icon, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
+export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = ['badgeNormal', 'primary'], maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, holdPress, hover, filled, isExpanded, widthImage, heightImage, setExpand, ...props }) => {
   let colorValue
-  let heightIcon
+  let colorValueIcon
+  let fontSize
+  let fontWeight
+  let fontSizeIcon
   if (Array.isArray(variant)) {
     const indexes = variant.map(v => Object.keys(theme.buttons).indexOf(v))
     indexes.map(index => {
-      if (Object.values(theme.buttons)[index][':focus'] !== undefined && isActive) {
-        colorValue = Object.values(theme.buttons)[index][':focus'].color
-      } else if (Object.values(theme.buttons)[index].color !== undefined && isInput) {
-        colorValue = Object.values(theme.buttons)[index].color
+      const variantValues = Object.values(theme.buttons)[index]
+      if (variantValues[':focus'] !== undefined && active) {
+        colorValue = variantValues[':focus'].color
+        fontWeight = variantValues[':focus'].fontWeight
+        if (variantValues.colorIcon !== undefined) {
+          colorValueIcon = variantValues[':focus'].colorIcon
+        }
       }
-      if (Object.values(theme.buttons)[index].heightIcon !== undefined) {
-        heightIcon = Object.values(theme.buttons)[index].heightIcon
+      if (colorValue === undefined && variantValues.color !== undefined) {
+        colorValue = variantValues.color
       }
+      if (colorValueIcon === undefined && variantValues.colorIcon !== undefined) {
+        colorValueIcon = variantValues.colorIcon
+      }
+      if (fontWeight === undefined && variantValues.fontWeight !== undefined) {
+        fontWeight = variantValues.fontWeight
+      }
+      if (fontSize === undefined && variantValues.fontSize !== undefined) {
+        fontSize = variantValues.fontSize
+      }
+      if (filled && colorValueIcon === undefined) {
+        colorValueIcon = variantValues.colorFilled
+      }
+      if (fontSizeIcon === undefined) {
+        fontSizeIcon = variantValues.fontSizeIcon
+      }
+
       return colorValue
     })
   } else {
     const index = Object.keys(theme.buttons).indexOf(variant)
-    heightIcon = Object.values(theme.buttons)[index].heightIcon
-    if (isInput) {
-      colorValue = Object.values(theme.buttons)[index].color
+    const variantValues = Object.values(theme.buttons)[index]
+    if (variantValues !== undefined) {
+      colorValue = variantValues.color
+      colorValueIcon = variantValues.colorIcon ||
+        (
+          filled && colorValueIcon === undefined
+            ? variantValues.colorFilled
+            : variantValues.color
+        )
+      fontSize = variantValues.fontSize
+      fontWeight = variantValues.fontWeight
+      if (hover) {
+        colorValue = variantValues[':hover'].color
+        colorValueIcon = variantValues[':hover'].colorIcon
+        fontWeight = variantValues[':hover'].fontWeight
+      } else if (active) {
+        colorValue = variantValues[':focus'].color
+        colorValueIcon = variantValues[':focus'].colorIcon
+        fontWeight = variantValues[':focus'].fontWeight
+      }
+      if (fontSizeIcon === undefined) {
+        fontSizeIcon = variantValues.fontSizeIcon
+      }
     }
-    if (isActive) {
-      colorValue = Object.values(theme.buttons)[index][':focus'].color
-    }
+  }
+  if (badgeValue > 99) {
+    badgeValue = '+99'
   }
 
   return (
-    <Box sx={{ position: 'relative' }}>
+    <Box sx={ maxWidth ? { position: 'relative', width: '100%' } : { position: 'relative' }}>
       <Box
         as='button'
         tx='buttons'
+        type='button'
         variant={variant}
         {...props}
         __css={{
@@ -174,114 +118,33 @@ export const ButtonHoldPress = ({ variant, isActive = false, isInput = false, te
           display: 'flex',
           lineHeight: 'inherit',
           fontFamily: 'Nunito Sans',
-          fontWeight: 'normal',
-          fontSize: '24px',
+          fontWeight: fontWeight || 'bold',
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
           outline: 'none',
-          color: 'white',
-          bg: 'primary',
           border: 0,
           flexDirection: 'row',
-          justifyContent: 'center',
+          justifyContent: !maxWidth && 'center',
+          width: maxWidth && '100%',
           alignItems: 'center',
-          borderRadius: 12,
-          width: '48px',
-          height: '48px',
           whiteSpace: 'nowrap',
+          position: 'relative',
         }}
       >
-        { !icon && <span style={colorValue && { color: colorValue, fontWeight: 'bold' }}>{text}</span> }
-        { icon && colorValue && <span className={icon} style={{ color: colorValue, height: heightIcon }}/> }
-        { icon && !colorValue && <span className={icon} style={heightIcon && { height: heightIcon }}/> }
-        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
+        { hasCheckbox && active && <Checkbox defaultChecked disabled={ disabled }/>}
+        { hasCheckbox && !active && <Checkbox defaultChecked={false} disabled={ disabled }/>}
+        { icon && <Icon icon={icon} fontSize={fontSizeIcon || fontSize} style={ holdPress && { color: (colorValueIcon || colorValue) }}/> }
+        { !userImage && srcImage && <Image src={srcImage} style={{ width: widthImage, height: heightImage }}/> }
+        { userImage && srcImage && <Image src={srcImage} variant="avatar"/> }
+        { userImage && !srcImage && <span className='icon-contactos' style={{ fontSize: '24px' }}/>}
+        { text && !holdPress && <span>{text}</span>}
+        { text && holdPress && <span style={colorValue && { color: colorValue, fontWeight: fontWeight }}>{text}</span> }
+        { isCollapsible && setExpand === undefined && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', transition: 'all 0.5s', paddingTop: '4px' }}/> }
+        { isCollapsible && setExpand !== undefined && <span className='icon-dropdown' onClick={(event) => { event.preventDefault(); setExpand(); event.stopPropagation(); event.nativeEvent.stopImmediatePropagation() }}style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', transition: 'all 0.5s', paddingTop: '4px', paddingLeft: '1px', paddingRight: '1px' }}/> }
+        { badgeValue !== 0 && !text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', top: '2px', left: '16px' }}>{badgeValue}</Badge> }
+        { badgeValue !== 0 && text && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: isCollapsible ? '30px' : '10px' }}>{badgeValue}</Badge> }
       </Box>
     </Box>
   )
 }
-
-export const ButtonMain = ({ variant, text, icon, isCollapsible, isActive = false, isExpanded = false, badgeValue = 0, badgeVariant = 'primary', ...props }) => {
-  const [hover, setHover] = useToggle(false)
-  const colorFirstIcon = '#707E86'
-  const colorFirstIconActive = '#DF1E02'
-  const colorText = '#49565D'
-  const colorTextActive = '#384248'
-
-  return (
-    <Box sx={{ position: 'relative' }}>
-      <Box
-        as='button'
-        tx='buttons'
-        variant={variant}
-        onMouseOver={() => setHover(true)}
-        onMouseOut={() => setHover(false)}
-        {...props}
-        __css={{
-          appearance: 'none',
-          display: 'flex',
-          lineHeight: '19px',
-          fontFamily: 'Nunito Sans',
-          fontWeight: (isExpanded || isActive) ? 'bold' : 'normal',
-          fontSize: 14,
-          textAlign: 'center',
-          textDecoration: 'none',
-          cursor: 'pointer',
-          outline: 'none',
-          color: 'white',
-          bg: 'primary',
-          border: 0,
-          borderRadius: '8px',
-          flexDirection: 'row',
-          alignItems: 'center',
-          height: '38px',
-          whiteSpace: 'nowrap',
-          backgroundColor: hover ? '#E4E8EA' : '#00000000',
-        }}
-      >
-        <span className={icon} style={{ color: (isExpanded || isActive || hover) ? colorFirstIconActive : colorFirstIcon, fontSize: '22px', paddingTop: '4px' }}/>
-        <span style={{ color: (hover || isExpanded || isActive) ? colorTextActive : colorText }}> {text} </span>
-        { badgeValue === 0 && isCollapsible && <span className='icon-dropdown' style={{ position: 'absolute', right: '10px', color: '#798B97', fontSize: '14px', transform: isExpanded ? 'rotate(-180deg)' : 'rotate(0deg)', paddingTop: '4px' }}/> }
-        { badgeValue !== 0 && <Badge variant={badgeVariant} isNotButton style={{ position: 'absolute', right: '10px' }}>{badgeValue}</Badge> }
-      </Box>
-    </Box>
-  )
-}
-
-export const ButtonUser = ({ variant, srcImage, text, ...props }) => (
-  <Box sx={{ position: 'relative' }}>
-    <Box
-      as='button'
-      tx='buttons'
-      variant={variant}
-      {...props}
-      __css={{
-        appearance: 'none',
-        display: 'flex',
-        lineHeight: 'inherit',
-        fontFamily: 'Nunito Sans',
-        fontWeight: 'bold',
-        fontSize: '14px',
-        textAlign: 'center',
-        textDecoration: 'none',
-        cursor: 'pointer',
-        outline: 'none',
-        color: 'white',
-        bg: 'primary',
-        border: 0,
-        borderRadius: '12px',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '48px',
-        whiteSpace: 'nowrap',
-        padding: '13px 26px 13px 26px',
-        gap: '8px',
-      }}
-    >
-      {srcImage && <Image src={srcImage} variant="avatar"/> }
-      {!srcImage && <span className='icon-contacto' style={{ fontSize: '24px', height: '24px' }}/>}
-      {text}
-    </Box>
-  </Box>
-)

@@ -1,18 +1,112 @@
 import React from 'react'
-import { Button, ButtonIcon, ButtonRound, ButtonMain, ButtonHoldPress, ButtonUser } from '.'
+import { Box } from '@oneloop/box'
+import { Button, ButtonIcon } from '.'
 import { useToggle } from '@oneloop/hooks'
 
 export default {
   component: Button,
   title: 'Button',
+  argTypes: {
+    variant: {
+      name: 'variant',
+      description: '\n* **Variantes de color disponibles:** [ \'primary\', \'primaryDisabled\', \'secondary\', ' +
+        '\'secondaryDisabled\', \'primaryOutlined\', \'secondaryOutlined\', \'outlinedDisabled\', \'iconPrimary\', ' +
+        '\'iconSecondary\', \'iconDisabled\', \'subtleIconButton\', \'subtleTrasnparentIconClearButton\', ' +
+        '\'subtleTrasnparentIconObscureButton\', \'smallIconButtonTransparent\', \'roundIconArrow\', ' +
+        '\'colourFeedback\', \'mainItemSmall\', \'mainButton\', \'mainButtonIcon\', \'userButton\', \'collapseButtonOpen\', ' +
+        '\'collapseButtonClosed\', \'roundIconArrowRed\', \'subtleTrasnparentPretrokoPressed\', \'subtleTrasnparentPretroko\' ]' +
+        '\n*       **Variantes de tamaño disponibles:** [ \'large\', \'medium\', \'small\', \'extraSmall\', \'iconLarge\', ' +
+        '\'iconMedium\', \'iconSmall\', \'iconExtraSmall\', \'iconExtraSmall22px\', \'iconExtraSmall18px\',' +
+        '\'roundIconLarge\', \'roundIconMedium\', \'roundIconSmall\', \'roundIconExtraSmall\', ' +
+        '\'roundIconExtraSmall22px\', \'roundIconExtraSmall18px\', \'roundLarge\', \'roundMedium\', \'roundSmall\', ' +
+        '\'roundExtraSmall\', \'roundIconSmallIcon14px\', \'iconExtraSmall24pxWithIcon14px\' ]' +
+        '\n* **Variantes de texto disponibles:** [ \'primaryText\', \'secondaryText\', \'subtleText\', \'textDisabled\' ' +
+        '\'link\', \'linkSubtle\', \'linkDisabled\', \'subtleButton\' ]',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    icon: {
+      name: 'icon',
+      description: 'Valor del icono a agregar (Se debe usar el tipo ButtonIcon)',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    text: {
+      name: 'text',
+      description: 'El texto asignado al button.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    active: {
+      name: 'active',
+      description: 'Determina si el boton esta activo. (para los casos que se quiere que el boton quede activado)',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    onClick: {
+      name: 'onClick',
+      description: 'Pasamos la accion por parametro, que seteara que se activo el boton.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    badgeValue: {
+      name: 'badgeValue',
+      description: 'Valor numérico de la cantidad a mostrar en el badge.',
+      type: 'number',
+      control: { type: 'none' },
+    },
+    badgeVariant: {
+      name: 'badgeVariant',
+      description: 'Variant del badge (variants disponibles en el componente Badge).',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    maxWidth: {
+      name: 'maxWidth',
+      description: 'Booleano que determina si usa el maximo width posible.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    srcImage: {
+      name: 'srcImage',
+      description: 'Ruta de la imagen.',
+      type: 'text',
+      control: { type: 'none' },
+    },
+    hasCheckbox: {
+      name: 'hasCheckbox',
+      description: 'Booleano que determina si el boton al principio tiene un checkbox.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    isCollapsible: {
+      name: 'isCollapsible',
+      description: 'Booleano que determina si el boton es colapsible, en ese caso se agrega el icono al final ' +
+        'que indica que se puede desplegar.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    disabled: {
+      name: 'disabled',
+      description: 'Booleano para determinar que el checkbox quede disabled.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+    holdPress: {
+      name: 'holdPress',
+      description: 'Booleano que se utiliza en los botones que requieran quedar activos, hasta que se los vuelva a seleccionar.',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
+  },
 }
 
 export const primary = () => (
-  <Button>{'Label'}</Button>
+  <Button variant={['primary', 'large']}>{'Label'}</Button>
 )
 
 export const primaryLarge = () => (
-  <Button>{'Label'}</Button>
+  <Button variant={['primary', 'large']}>{'Label'}</Button>
 )
 
 export const primaryMedium = () => (
@@ -28,27 +122,27 @@ export const primaryExtraSmall = () => (
 )
 
 export const primaryDisabled = () => (
-  <Button variant='primaryDisabled'>{'Label'}</Button>
+  <Button variant={['primaryDisabled', 'large']}>{'Label'}</Button>
 )
 
 export const secondary = () => (
-  <Button variant='secondary'>{'Label'}</Button>
+  <Button variant={['secondary', 'large']}>{'Label'}</Button>
 )
 
 export const secondaryDisabled = () => (
-  <Button variant='primaryDisabled'>{'Label'}</Button>
+  <Button variant={['secondaryDisabled', 'large']}>{'Label'}</Button>
 )
 
-export const primaryOutline = () => (
-  <Button variant='primaryOutline'>{'Label'}</Button>
+export const primaryOutlined = () => (
+  <Button variant={['primaryOutlined', 'large']}>{'Label'}</Button>
 )
 
-export const secondaryOutline = () => (
-  <Button variant='secondaryOutlineIcon'>{'Label'}</Button>
+export const secondaryOutlined = () => (
+  <Button variant={['secondaryOutlined', 'large']}>{'Label'}</Button>
 )
 
-export const outlineDisabled = () => (
-  <Button variant='outlineDisabled'>{'Label'}</Button>
+export const outlinedDisabled = () => (
+  <Button variant={['outlinedDisabled', 'large']}>{'Label'}</Button>
 )
 
 export const primaryText = () => (
@@ -99,16 +193,16 @@ export const iconDisabled = () => (
   <ButtonIcon icon='icon-agregar' variant={['iconDisabled', 'iconLarge']}/>
 )
 
-export const primaryOutlineIcon = () => (
-  <ButtonIcon icon='icon-agregar' variant={['primaryOutline', 'iconLarge']}/>
+export const primaryOutlinedIcon = () => (
+  <ButtonIcon icon='icon-agregar' variant={['primaryOutlined', 'iconLarge']}/>
 )
 
-export const secondaryOutlineIcon = () => (
-  <ButtonIcon icon='icon-agregar' variant={['secondaryOutlineIcon', 'iconLarge']}/>
+export const secondaryOutlinedIcon = () => (
+  <ButtonIcon icon='icon-agregar' variant={['secondaryOutlined', 'iconLarge']}/>
 )
 
-export const outlineIconDisabled = () => (
-  <ButtonIcon icon='icon-agregar' variant={['outlineDisabled', 'iconLarge']}/>
+export const outlinedIconDisabled = () => (
+  <ButtonIcon icon='icon-agregar' variant={['outlinedDisabled', 'iconLarge']}/>
 )
 
 export const subtleIcon = () => (
@@ -132,67 +226,71 @@ export const iconSecondaryWithBadge = () => (
 )
 
 export const roundIconLarge = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconLarge']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconLarge']}/>
 )
 
 export const roundIconMedium = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconMedium']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconMedium']}/>
 )
 
 export const roundIconSmall = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconSmall']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconSmall']}/>
 )
 
 export const roundIconExtraSmall = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall']}/>
 )
 
 export const roundIconExtraSmall22px = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall22px']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall22px']}/>
 )
 
 export const roundIconExtraSmall18px = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall18px']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconPrimary', 'roundIconExtraSmall18px']}/>
 )
 
 export const subtleRoundIcon = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['subtleIconButton', 'roundIconLarge']}/>
+  <ButtonIcon icon='icon-agregar' variant={['subtleIconButton', 'roundIconLarge']}/>
 )
 
 export const roundIconArrow = () => (
-  <ButtonIcon isRounded icon='icon-dropdown' variant={['roundIconArrow', 'roundIconLarge']}/>
+  <ButtonIcon icon='icon-dropdown' variant={['roundIconArrow', 'roundIconLarge']}/>
 )
 
 export const roundIconDisabled = () => (
-  <ButtonIcon isRounded icon='icon-agregar' variant={['iconDisabled', 'roundIconLarge']}/>
+  <ButtonIcon icon='icon-agregar' variant={['iconDisabled', 'roundIconLarge']}/>
 )
 
 export const roundLarge = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant={['primary', 'roundLarge']}/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primary', 'roundLarge']}/>
 )
 
 export const roundMedium = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant={['primary', 'roundMedium']}/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primary', 'roundMedium']}/>
 )
 
 export const roundSmall = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant={['primary', 'roundSmall']}/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primary', 'roundSmall']}/>
 )
 
 export const roundExtraSmall = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant={['primary', 'roundExtraSmall']}/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primary', 'roundExtraSmall']}/>
 )
 
 export const roundColourFeedback = () => (
-  <ButtonRound text='Label' icon='icon-check' variant='colourFeedback'/>
+  <ButtonIcon text='Label' icon='icon-check' variant={['colourFeedback', 'roundLarge']}/>
 )
 
 export const roundDisabled = () => (
-  <ButtonRound text='Label' icon='icon-unificar' variant='primaryDisabled'/>
+  <ButtonIcon text='Label' icon='icon-link' variant={['primaryDisabled', 'roundLarge']}/>
 )
 
 export const link = () => (
   <Button variant='link'>{'Link button'}</Button>
+)
+
+export const linkTwoLines = () => (
+  <Button variant='linkTwoLines' width='120px'>{'Link button de dos lineas'}</Button>
 )
 
 export const linkSubtle = () => (
@@ -215,48 +313,112 @@ export const MainItemSmallHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='mainItemSmall' isActive={active} onClick={toggle} text={'Label'}/>
+    <ButtonIcon variant='mainItemSmall' holdPress active={active} onClick={toggle} text={'Label'}/>
   )
 }
 
-export const mainButton = () => (
-  <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos'/>
-)
-
-export const mainButtonCollapsible = () => (
-  <ButtonMain variant='mainButton' icon='icon-propiedades' text='Emprendimientos' isCollapsible/>
-)
-
-export const userButton = () => (
-  <ButtonUser variant='userButton' text='Nombre Usuario' style={{ backgroundColor: '#798B97' }}/>
-)
-
-export const userButtonWithImage = () => (
-  <ButtonUser variant='userButton' srcImage='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' text='Nombre Usuario' />
-)
-
-export const MainIconButtonHoldPressed = () => {
+export const MainButtonHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant='smallIconMainButton' icon='icon-propiedades' isActive={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
+    <ButtonIcon variant='mainButton' icon='icon-propiedades' holdPress text='Emprendimientos' active={active} onClick={toggle}/>
   )
 }
 
-export const iconWhiteHelp = () => (
-  <ButtonIcon icon='icon-dudas' variant='whiteExtraSmall24px' style={{ backgroundColor: '#798B97', paddingTop: '10px', paddingRight: '7.2px' }}/>
-)
+export const MainButtonHoldPressedCollapsible = () => {
+  const [active, setActive] = useToggle(false)
+
+  return (
+    <Box __css={{ width: '200px' }}>
+      <ButtonIcon variant='mainButton' icon='icon-propiedades' holdPress text='Emprendimientos' isCollapsible active={active} onClick={setActive} maxWidth/>
+    </Box>
+  )
+}
+
+export const MainButtonHoldPressedWithBadge = () => {
+  const [active, setActive] = useToggle(false)
+
+  return (
+    <Box __css={{ width: '200px' }}>
+      <ButtonIcon variant='mainButton' icon='icon-propiedades' holdPress text='Emprendimientos' active={active} onClick={setActive} maxWidth badgeValue='20' badgeVariant='primary'/>
+    </Box>
+  )
+}
+
+export const MainButtonIconHoldPressed = () => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} onClick={toggle}/>
+  )
+}
+
+export const MainButtonIconHoldPressedWithBadge = () => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <ButtonIcon variant='mainButtonIcon' icon='icon-propiedades' holdPress active={active} onClick={toggle} badgeValue='20' badgeVariant='primary'/>
+  )
+}
 
 export const MainIconSubtleHoldPressed = () => {
   const [active, toggle] = useToggle(false)
 
   return (
-    <ButtonHoldPress variant={['subtleIcon', 'iconExtraSmall22px']} icon='icon-propiedades' isActive={active} onClick={toggle} isInput/>
+    <ButtonIcon variant={['subtleIcon', 'iconExtraSmall22px']} holdPress icon='icon-propiedades' active={active} onClick={toggle} isInput/>
   )
 }
 
-export const iconArrowDrawer = () => {
+export const userButton = () => (
+  <ButtonIcon variant='userButton' userImage text='Nombre Usuario' style={{ backgroundColor: '#798B97' }}/>
+)
+
+export const userButtonWithImage = () => (
+  <ButtonIcon variant='userButton' userImage srcImage='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' text='Nombre Usuario' />
+)
+
+export const iconWhiteHelp = () => (
+  <ButtonIcon icon='icon-dudas' variant='whiteSmallIcon' style={{ backgroundColor: '#798B97' }}/>
+)
+
+export const IconArrowDrawer = () => {
+  const [isCollapse, setCollapse] = useToggle(false)
+
   return (
-    <ButtonIcon isRounded icon='icon-atras' variant={'collapseButtonOpen'}/>
+    <ButtonIcon icon='icon-atras' onClick={setCollapse} variant={isCollapse ? 'collapseButtonOpen' : 'collapseButtonClosed'} style={{ transition: '0.5s' }}/>
+  )
+}
+
+export const RoundIconArrow14px = () => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <ButtonIcon icon='icon-dropdown' variant={['roundIconArrowRed', 'roundIconSmallIcon14px']} holdPress active={active} onClick={toggle}/>
+  )
+}
+
+export const IconSubtleExtraSmall18px = () => {
+  const [active, toggle] = useToggle(false)
+
+  return (
+    <ButtonIcon icon='icon-agregar' variant={[active ? 'subtlePetrokoIconPressed' : 'subtlePetrokoIcon', 'iconSmallSize18px']} holdPress active={active} onClick={toggle}/>
+  )
+}
+
+export const buttonWithImage = () => (
+  <ButtonIcon variant='mainButton' srcImage='https://static.tokkobroker.com/static/img/cec.icon.svg' text='Messenger' widthImage='16px' heightImage='16px'/>
+)
+
+export const IconInputHeader = () => {
+  const [active, toggle] = useToggle(false)
+  return (
+    <ButtonIcon icon='icon-contactos' variant={[active ? 'subtleTrasnparentPretrokoPressed' : 'subtleTrasnparentPretroko', 'iconExtraSmall24pxWithIcon14px']} holdPress active={active} onClick={toggle}/>
+  )
+}
+
+export const IconInputHeader2 = () => {
+  const [active, toggle] = useToggle(false)
+  return (
+    <ButtonIcon icon='icon-agregar' variant={[active ? 'subtlePetrokoIconPressed' : 'subtlePetrokoIcon', 'iconSmallSize18px']} holdPress active={active} onClick={toggle}/>
   )
 }

@@ -35,11 +35,11 @@ describe('Collapsible', () => {
           <Collapsible width={1 / 3} isOpen>
             <Collapsible.Button
               isMainButton
-              variant="mainButtonCollapsible"
+              variant="mainButton"
               icon="icon-emprendimientos"
               text={'Emprendimientos'}
               isExpanded
-              isActive
+              active
             >
             </Collapsible.Button>
             <Collapsible.Body>
@@ -49,11 +49,11 @@ describe('Collapsible', () => {
           <Collapsible width={1 / 3} isOpen={false}>
             <Collapsible.Button
               isMainButton
-              variant="mainButtonCollapsible"
+              variant="mainButton"
               icon="icon-emprendimientos"
               text={'Emprendimientos'}
               isExpanded={false}
-              isActive={false}
+              active={false}
             >
             </Collapsible.Button>
             <Collapsible.Body>
@@ -63,11 +63,11 @@ describe('Collapsible', () => {
           <Collapsible width={1 / 3} isOpen={false}>
             <Collapsible.Button
               isMainButton
-              variant="mainButtonCollapsible"
+              variant="mainButton"
               icon="icon-emprendimientos"
               text={'Emprendimientos'}
               isExpanded={false}
-              isActive={false}
+              active={false}
               badgeValue={2}
             >
             </Collapsible.Button>

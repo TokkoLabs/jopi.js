@@ -6,61 +6,82 @@ exports[`Modal renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   position: fixed;
-  left: 0;
-  top: 0;
+  z-index: 1000;
   width: 100%;
   height: 100%;
-  background-color: rgba(4,4,4,0.79);
-  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  margin: 40px auto 0px auto;
-  width: 690px;
-  height: auto;
-  background-color: neutral.1;
-  border-radius: 9px;
+  padding: 34px;
+  max-width: 900px;
+  min-width: 380px !important;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 8px 8px 16px rgba(77,91,100,0.15);
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding: 10px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  height: 200px;
-  overflow: auto;
-  margin: 4px 0px 4px 0px;
-  padding: 10px;
+  font-family: primary;
 }
 
 .c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  text-align: center;
-  border-top: 1px solid #c4c4c4;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 10px;
+  gap: 24px;
 }
 
 .c3 {
@@ -79,15 +100,25 @@ exports[`Modal renders correctly 1`] = `
     <div
       className="c2 c3"
     >
-      This is the header
+      <p
+        className="c4"
+        style={
+          {
+            "color": "#344149",
+            "fontWeight": "700",
+          }
+        }
+      >
+        This is the header
+      </p>
     </div>
     <div
-      className="c4"
+      className="c5"
     >
       This is the body
     </div>
     <div
-      className="c5 c3"
+      className="c6 c3"
     >
       This is the footer
     </div>

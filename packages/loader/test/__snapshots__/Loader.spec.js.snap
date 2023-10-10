@@ -5,14 +5,48 @@ exports[`Loader renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 10px;
+  width: small;
+  height: small;
+}
+
+.c2 {
+  width: 1em;
+  height: 1em;
+  padding: 8px;
+  border-radius: 50%;
+  background-image: conic-gradient(#272E33,#FFFFFF);
+  -webkit-animation: bCrGrT 1s ease 0s infinite;
+  animation: bCrGrT 1s ease 0s infinite;
+  -webkit-clip-path: circle(80px at center);
+  clip-path: circle(80px at center);
+  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+  mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+    kind="primary"
+    size="small"
+  />
+</div>
+`;
+
+exports[`Loader renders correctly 2`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
 }
 
 .c1 {
@@ -26,7 +60,6 @@ exports[`Loader renders correctly 1`] = `
 
 .c2 {
   position: relative;
-  display: inline-block;
   height: 37px;
   width: 16px;
 }
@@ -51,9 +84,98 @@ exports[`Loader renders correctly 1`] = `
 >
   <div
     className="c1 c2"
-    kind="primary"
+    kind="secondary"
     size="small"
   />
-  
+</div>
+`;
+
+exports[`Loader renders correctly two 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 10px;
+  width: medium;
+  height: medium;
+}
+
+.c2 {
+  position: relative;
+  height: 37px;
+  width: 24px;
+}
+
+.c2::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: fIIevM 500ms alternate infinite ease;
+  animation: fIIevM 500ms alternate infinite ease;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+    kind="primary"
+    size="medium"
+  />
+</div>
+`;
+
+exports[`Loader spinner medium 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 10px;
+  width: medium;
+  height: medium;
+}
+
+.c2 {
+  width: 2em;
+  height: 2em;
+  padding: 8px;
+  border-radius: 50%;
+  background-image: conic-gradient(#272E33,#FFFFFF);
+  -webkit-animation: bCrGrT 1s ease 0s infinite;
+  animation: bCrGrT 1s ease 0s infinite;
+  -webkit-clip-path: circle(80px at center);
+  clip-path: circle(80px at center);
+  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+  -webkit-mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+  mask-image: radial-gradient(circle at center,transparent 54%,black 54.8%);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+    kind="primary"
+    size="medium"
+  />
 </div>
 `;

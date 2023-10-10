@@ -1,24 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Datepicker default 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #344149;
+  font-family: Nunito Sans;
+  font-weight: 400;
+}
+
+.c1 > *:first-child {
+  position: absolute;
+  left: 12px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 400;
+  border: solid 1px transparent;
+  box-shadow: none;
+  font-family: primary;
+  display: block;
+  padding-left: 30px;
+  padding-right: 12px;
+  outline: none;
+  width: 100%;
+}
+
+@media screen and (min-width:40em) {
+
+}
+
 <div
   className="react-datepicker-wrapper"
 >
   <div
     className="react-datepicker__input-container"
   >
-    <input
-      className=""
-      disabled={false}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      readOnly={false}
-      type="text"
-      value=""
-    />
+    <div
+      className="c0"
+      width="100%"
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="c2"
+          onClick={[Function]}
+          style={
+            {
+              "cursor": "pointer",
+            }
+          }
+        >
+          <i
+            className="icon-calendario"
+            style={
+              {
+                "bottom": "0px",
+                "fontSize": "16px",
+                "height": "16px",
+                "left": "-0.5px",
+                "position": "absolute",
+                "right": "0px",
+                "top": "-1px",
+                "width": "16px",
+              }
+            }
+          />
+        </div>
+        <input
+          className="c3"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          style={
+            {
+              "paddingLeft": "34px",
+            }
+          }
+          type="text"
+          value=""
+          width="100%"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;

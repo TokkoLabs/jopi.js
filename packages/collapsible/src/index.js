@@ -1,12 +1,13 @@
 import React, { createContext, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Button, ButtonHoldPress, ButtonMain } from '@oneloop/button'
+import { Button, ButtonIcon } from '@oneloop/button'
 import { Box } from '@oneloop/box'
 
 const CollapsibleContext = createContext()
 
 export const Collapsible = ({ children, isOpen = false, ...props }) => {
-  const value = React.useMemo(() => ({ isOpen }), [isOpen])
+  const ref = React.useRef()
+  const value = React.useMemo(() => ({ isOpen, ref }), [isOpen])
 
   return (
     <CollapsibleContext.Provider value={value}>
@@ -25,39 +26,22 @@ const useCollapsibleContext = () => {
   return context
 }
 
-const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon = false, isActive = false, icon, text, isExpanded = false, isCollapsible, badgeValue, badgeVariant, ...props }) => {
-  if (isMainButton) {
+const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon = false, active = false, icon, text, isExpanded = false, isCollapsible, badgeValue, badgeVariant, setExpand, ...props }) => {
+  if (isSmallButtonIcon || isMainButton) {
     return (
-      <ButtonMain
+      <ButtonIcon
         {...props}
         icon={icon}
         text={text}
         isCollapsible={isCollapsible}
         isExpanded={isExpanded}
-        isActive={isActive}
+        active={active}
         badgeValue={badgeValue}
         badgeVariant={badgeVariant}
+        setExpand={setExpand}
+        holdPress
         sx={{
-          width: '100%',
-          '+ .content': {
-            overflow: 'hidden',
-          },
-        }}
-      />
-    )
-  } else if (isSmallButtonIcon) {
-    return (
-      <ButtonHoldPress
-        {...props}
-        variant="smallIconMainButton"
-        icon={icon}
-        text={text}
-        isCollapsible
-        isExpanded={isExpanded}
-        isActive={isActive}
-        badgeValue={badgeValue}
-        badgeVariant={badgeVariant}
-        sx={{
+          width: isMainButton && '100%',
           '+ .content': {
             overflow: 'hidden',
           },

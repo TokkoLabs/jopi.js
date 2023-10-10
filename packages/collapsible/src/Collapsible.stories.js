@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Collapsible } from '.'
-import { Button } from '@oneloop/button'
+import { Button, ButtonIcon } from '@oneloop/button'
 
 export default {
   component: Collapsible,
@@ -60,11 +60,14 @@ export const menu = () =>
           <Collapsible.Button
             isMainButton
             onClick={() => closeAllExcep(0)}
-            variant="mainButtonCollapsible"
+            variant="mainButton"
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open0}
-            isActive={active0}
+            setExpand={() => setOpen0(!open0)}
+            active={active0}
+            maxWidth
+            holdPress
           >
           </Collapsible.Button>
         </Collapsible>
@@ -73,17 +76,21 @@ export const menu = () =>
           <Collapsible.Button
             isMainButton
             onClick={() => closeAllExcep(1)}
-            variant="mainButtonCollapsible"
+            variant="mainButton"
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open1}
-            isActive={active1}
+            setExpand={() => setOpen1(!open1)}
+            active={active1}
+            badgeValue={2}
             isCollapsible
+            maxWidth
+            holdPress
           >
           </Collapsible.Button>
           <Collapsible.Body>
-            <Button variant='mainItemSmall'>{'User management'}</Button>
-            <Button variant='mainItemSmall'>{'Configuration'}</Button>
+            <ButtonIcon variant='mainItemSmall' text='User management' badgeValue={120} />
+            <ButtonIcon variant='mainItemSmall' text='Configuration' badgeValue={4} />
           </Collapsible.Body>
         </Collapsible>
 
@@ -91,12 +98,15 @@ export const menu = () =>
           <Collapsible.Button
             isMainButton
             onClick={() => closeAllExcep(2)}
-            variant="mainButtonCollapsible"
+            variant="mainButton"
             icon="icon-emprendimientos"
             text={'Emprendimientos'}
             isExpanded={open2}
-            isActive={active2}
+            setExpand={() => setOpen2(!open2)}
+            active={active2}
             badgeValue={2}
+            maxWidth
+            holdPress
           >
           </Collapsible.Button>
         </Collapsible>
@@ -129,10 +139,10 @@ export const menuCollapsed = () =>
           <Collapsible.Button
             isSmallButtonIcon
             onClick={() => closeAllExcep(0)}
-            variant="mainButtonCollapsible"
+            variant="mainButtonIcon"
             icon="icon-emprendimientos"
             isExpanded={open0}
-            isActive={active0}
+            active={active0}
           >
           </Collapsible.Button>
           <Collapsible.Body>
@@ -145,10 +155,10 @@ export const menuCollapsed = () =>
           <Collapsible.Button
             isSmallButtonIcon
             onClick={() => closeAllExcep(1)}
-            variant="mainButtonCollapsible"
+            variant="mainButtonIcon"
             icon="icon-emprendimientos"
             isExpanded={open1}
-            isActive={active1}
+            active={active1}
           >
           </Collapsible.Button>
           <Collapsible.Body>
@@ -161,10 +171,10 @@ export const menuCollapsed = () =>
           <Collapsible.Button
             isSmallButtonIcon
             onClick={() => closeAllExcep(2)}
-            variant="mainButtonCollapsible"
+            variant="mainButtonIcon"
             icon="icon-emprendimientos"
             isExpanded={open2}
-            isActive={active2}
+            active={active2}
             badgeValue={200}
           >
           </Collapsible.Button>

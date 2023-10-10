@@ -1,20 +1,21 @@
 {
   "name": "@oneloop/list",
-  "version": "1.2.224",
+  "version": "1.2.331",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.217",
-    "@oneloop/hooks": "^1.2.205",
-    "@oneloop/input": "^1.2.221"
+    "@oneloop/box": "^1.2.271",
+    "@oneloop/hooks": "^1.2.293",
+    "@oneloop/input": "^1.2.328"
   },
   "peerDependencies": {
     "react": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
 }
