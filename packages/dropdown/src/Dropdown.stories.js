@@ -79,6 +79,14 @@ let data = [
       icon: 'icon-ambientes',
     },
   },
+  {
+    id: 61,
+    content: {
+      name: 'Nombre muuuuuuuuuuuuuuy laaaaaaaargoooooooooooo',
+      count: 412,
+      icon: 'icon-ambientes',
+    },
+  },
 ]
 
 export const Search = () => {

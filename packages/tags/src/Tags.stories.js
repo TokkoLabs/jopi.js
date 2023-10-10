@@ -10,13 +10,14 @@ export default {
   argTypes: {
     variant: {
       name: 'variant',
-      description: '\n* **Variantes de tags disponibles:** \'secondary\',',
+      description: "\n* **Variantes de tags disponibles:** 'secondary',",
       type: 'text',
       control: { type: 'none' },
     },
     closeIcon: {
       name: 'closeIcon',
-      description: 'Muestra la X para eliminar el tag, recibe la funcionalidad correspondiente.',
+      description:
+        'Muestra la X para eliminar el tag, recibe la funcionalidad correspondiente.',
       type: 'funct',
       control: { type: 'none' },
     },
@@ -31,11 +32,15 @@ export const Secondary = () => {
       <Modal modalBG variant={'center'}>
         <Modal.Header
           variant={['center', 'sm']}
-          text='Do you want to delete Mariana Font?'
+          text="Do you want to delete Mariana Font?"
         />
         <Modal.Footer variant="center">
-          <Button variant='primaryText' onClick={handleCheck}>{'No, go back'}</Button>
-          <Button variant={['primary', 'medium']} onClick={handleCheck}>{'Yes, delete'}</Button>
+          <Button variant="primaryText" onClick={handleCheck}>
+            {'No, go back'}
+          </Button>
+          <Button variant={['primary', 'medium']} onClick={handleCheck}>
+            {'Yes, delete'}
+          </Button>
         </Modal.Footer>
       </Modal>
     )
@@ -46,12 +51,21 @@ export const Secondary = () => {
   return (
     <>
       {check && <ModalCheck />}
-      <Tags
-        variant='secondary'
-        closeIcon={handleCheck}
-      >
+      <Tags variant="secondary" closeIcon={handleCheck}>
         Mariana Font
       </Tags>
     </>
   )
+}
+
+export const Warning = () => {
+  return <Tags variant="warning" noClick>Mariana Font</Tags>
+}
+
+export const Success = () => {
+  return <Tags variant="success" noClick>Mariana Font</Tags>
+}
+
+export const Dark = () => {
+  return <Tags variant="dark" noClick>Mariana Font</Tags>
 }
