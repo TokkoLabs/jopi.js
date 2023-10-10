@@ -166,7 +166,7 @@ export const Wrapped = ({
               <Box
                 as="p"
                 __css={{
-                  maxWidth: '350px',
+                  maxWidth: '200px',
                   overflow: 'hidden',
                   whiteSpace: 'noWrap',
                   textOverflow: 'ellipsis',
