@@ -1,8 +1,8 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable multiline-ternary */
 import React, { useEffect, useReducer, useRef, useState } from 'react'
 import { Box } from '@oneloop/box'
 import { Tags } from '@oneloop/tags'
-import { Text } from '@oneloop/text'
 
 const wrappedReducer = (state, action) => {
   switch (action.type) {
@@ -25,6 +25,7 @@ export const Wrapped = ({
   widthRestItemsWindow,
   printKey,
   tagVariant,
+  clickFn,
   idKey = 'id',
   ...props
 }) => {
@@ -124,8 +125,19 @@ export const Wrapped = ({
             variant={tagVariant}
             closeIcon={fnClose ? () => deleteRestItem(item) : false}
             style={{ marginRight: '5px' }}
+            onClick={item[clickFn]}
           >
-            <Text>{item[printKey]}</Text>
+            <Box
+              as="p"
+              __css={{
+                maxWidth: '250px',
+                overflow: 'hidden',
+                whiteSpace: 'noWrap',
+                textOverflow: 'ellipsis',
+              }}
+            >
+              {item[printKey]}
+            </Box>
           </Tags>
         ))}
 
@@ -162,11 +174,12 @@ export const Wrapped = ({
               variant={tagVariant}
               closeIcon={fnClose ? () => deleteRestItem(item) : false}
               style={{ marginRight: '5px', marginBottom: '5px' }}
+              onClick={item[clickFn]}
             >
               <Box
                 as="p"
                 __css={{
-                  maxWidth: '200px',
+                  maxWidth: '250px',
                   overflow: 'hidden',
                   whiteSpace: 'noWrap',
                   textOverflow: 'ellipsis',
