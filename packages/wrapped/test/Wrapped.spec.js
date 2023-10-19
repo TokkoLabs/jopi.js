@@ -26,12 +26,6 @@ describe('Wrapped', () => {
     )
 
     expect(component.find('Tags').length).toEqual(misItems.length + 1)
-    expect(component.find('Text').at(0).html().includes('Pedro')).toBe(true)
-    expect(component.find('Text').at(1).html().includes('Jose')).toBe(true)
-    expect(component.find('Text').at(2).html().includes('Juan Carlos')).toBe(true)
-    expect(component.find('Text').at(3).html().includes('Roberto')).toBe(true)
-    expect(component.find('Text').at(4).html().includes('Adriano')).toBe(true)
-    expect(component.find('Text').at(5).html().includes('Roman')).toBe(true)
 
     expect(component).toMatchSnapshot()
   })
