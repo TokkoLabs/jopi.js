@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.5.320",
+  "version": "1.5.321",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -35,12 +35,12 @@
     "@oneloop/switch": "^1.2.275",
     "@oneloop/table": "^1.2.292",
     "@oneloop/tabs": "^1.4.281",
-    "@oneloop/tags": "^1.0.46",
+    "@oneloop/tags": "^1.0.47",
     "@oneloop/text": "^1.2.273",
     "@oneloop/textarea": "^1.0.225",
     "@oneloop/toast": "^1.0.66",
     "@oneloop/tooltip": "^1.0.103",
-    "@oneloop/wrapped": "^1.0.61",
+    "@oneloop/wrapped": "^1.0.62",
     "styled-components": "^5.3.5"
   },
   "peerDependencies": {
