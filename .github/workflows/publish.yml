@@ -9,25 +9,16 @@ jobs:
     name: Build Jopi & Publish New Version in NPM
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: reattach HEAD to Head Ref
-        run: git checkout "${GITHUB_REF:11}"
-    #    run: git checkout "$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-    #    if: github.head_ref != ''
-    #  - name: reattach HEAD to Ref
-    #    run: git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-    #    if: github.head_ref == ''
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    #  - name: Checkout
-    #    uses: actions/checkout@v3
-    #    with:
-    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #      ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      #- name: Configure git credentials
-      #  uses: OleksiyRudenko/gha-git-credentials@v2-latest
-      #  with:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Configure git credentials
+        uses: OleksiyRudenko/gha-git-credentials@v2-latest
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Installing node
         uses: actions/setup-node@v3
