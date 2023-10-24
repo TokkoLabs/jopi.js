@@ -2,7 +2,7 @@ on:
   pull_request:
     branches:
       - master
-    #  - development
+      - development
 
 jobs:
   build-and-publish:
@@ -11,11 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: reattach HEAD to Head Ref
-        run: git checkout "$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-        if: github.head_ref != ''
-      - name: reattach HEAD to Ref
-        run: git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-        if: github.head_ref == ''
+        run: git checkout "${GITHUB_REF:11}"
+    #    run: git checkout "$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+    #    if: github.head_ref != ''
+    #  - name: reattach HEAD to Ref
+    #    run: git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+    #    if: github.head_ref == ''
 
     #  - name: Checkout
     #    uses: actions/checkout@v3
