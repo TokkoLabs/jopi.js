@@ -344,4 +344,12 @@ describe('Button', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  test('buttonTestForAction', () => {
+    const tree = renderer
+      .create(<ButtonIcon variant='mainButton' srcImage='https://static.tokkobroker.com/static/img/cec.icon.svg' text='Messenger' widthImage='16px' heightImage='16px' testForAction/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })

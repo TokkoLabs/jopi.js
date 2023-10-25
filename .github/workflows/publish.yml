@@ -2,31 +2,33 @@ on:
   pull_request:
     branches:
       - master
-    #  - development
 
 jobs:
   build-and-publish:
     name: Build Jopi & Publish New Version in NPM
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: reattach HEAD to Head Ref
-        run: git checkout "$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-        if: github.head_ref != ''
-      - name: reattach HEAD to Ref
-        run: git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-        if: github.head_ref == ''
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    #  - name: Checkout
-    #    uses: actions/checkout@v3
+      # - name: Creating and switching branch
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #  run: |
+      #    git switch -c "publish"
+      #    git push --set-upstream origin publish
+        #  git add .
+        #  git commit -m "adding publish changes"
+        #  git push origin
+
+    # Not working more      
+    #  - name: Configure git credentials
+    #    uses: OleksiyRudenko/gha-git-credentials@v2-latest
     #    with:
     #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #      ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      #- name: Configure git credentials
-      #  uses: OleksiyRudenko/gha-git-credentials@v2-latest
-      #  with:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Installing node
         uses: actions/setup-node@v3
@@ -63,8 +65,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd node_modules/.bin
-          yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
-      #    lerna version patch --yes
+          lerna version patch --yes
+        #  lerna version --no-push # => this don't fail, but don't change anithing
+        #  yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
 
       - name: Publish New Jopi version to NPM
         env:
