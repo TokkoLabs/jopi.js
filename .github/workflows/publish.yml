@@ -15,9 +15,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Creating and switching branch
-        run: |
-          git switch -c "publish"
+      # - name: Creating and switching branch
+      #  run: |
+      #    git switch -c "publish"
         #  git push --set-upstream origin publish
         #  git add .
         #  git commit -m "adding publish changes"
@@ -64,7 +64,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd node_modules/.bin
-          yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
+          lerna version --no-push
+        #  yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
       #    lerna version patch --yes
 
       - name: Publish New Jopi version to NPM
