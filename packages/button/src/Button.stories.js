@@ -426,6 +426,6 @@ export const IconInputHeader2 = () => {
 export const IconInputHeader2ForTestAction = () => {
   const [active, toggle] = useToggle(false)
   return (
-    <ButtonIcon icon='icon-agregar' variant={[active ? 'subtlePetrokoIconPressed' : 'subtlePetrokoIcon', 'iconSmallSize18px']} holdPress active={active} onClick={toggle}/>
+    <ButtonIcon icon='icon-agregar' variant={[active ? 'subtlePetrokoIconPressed' : 'subtlePetrokoIcon', 'iconSmallSize18px']} holdPress active={active} onClick={toggle} testForAction/>
   )
 }
