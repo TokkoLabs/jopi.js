@@ -18,7 +18,7 @@ jobs:
       - name: Creating and switching branch
         run: |
           git switch -c "publish"
-          git push --set-upstream origin publish
+        #  git push --set-upstream origin publish
         #  git add .
         #  git commit -m "adding publish changes"
         #  git push origin
