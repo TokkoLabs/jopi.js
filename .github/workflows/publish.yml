@@ -15,6 +15,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      - name: Switch branch
+        run: git switch -c "pull-request"
+        
     # Not working more      
     #  - name: Configure git credentials
     #    uses: OleksiyRudenko/gha-git-credentials@v2-latest
@@ -26,7 +29,6 @@ jobs:
         with:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
-          run: git switch -c "pull-request"
 
       - name: Installing yarn
         run: |
