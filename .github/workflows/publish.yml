@@ -15,10 +15,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Switch branch
+      - name: Creating and switching branch
         run: |
-          git switch -c "pull-request"
-          git push
+          git switch -c "publish"
+          git push --set-upstream origin publish
+        #  git add .
+        #  git commit -m "adding publish changes"
+        #  git push origin
 
     # Not working more      
     #  - name: Configure git credentials
