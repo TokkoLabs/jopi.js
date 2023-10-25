@@ -64,9 +64,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd node_modules/.bin
-          lerna version --no-push
+          lerna version patch --yes
+        #  lerna version --no-push
         #  yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
-      #    lerna version patch --yes
 
       - name: Publish New Jopi version to NPM
         env:
