@@ -50,7 +50,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          lerna version patch --yes
+          lerna version patch --yes --force-publish 
         #  cd node_modules/.bin
         #  lerna version patch --yes --force-publish=*
         #  lerna version --no-push # => this don't fail, but don't change anithing
