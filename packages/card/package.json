@@ -1,13 +1,13 @@
 {
   "name": "@oneloop/card",
-  "version": "1.0.77",
+  "version": "6.6.3",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.271"
+    "@oneloop/box": "^6.6.3"
   },
   "peerDependencies": {
     "react": "^16.8.0"
