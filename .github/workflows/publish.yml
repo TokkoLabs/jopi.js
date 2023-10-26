@@ -18,9 +18,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git switch -c "development"
-        #  git switch -c "publish"
-        #  git push --set-upstream origin publish
+          git switch -c "publish"
+          git push --set-upstream origin publish
         #  git add .
         #  git commit -m "adding publish changes"
         #  git push origin
@@ -75,6 +74,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx lerna publish from-package --yes
+
+      - name: Delete publish branch
+        run: git branch -d publish
 
   merge-me:
     name: Merge to master
