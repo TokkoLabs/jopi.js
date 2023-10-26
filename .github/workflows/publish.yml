@@ -50,7 +50,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          yarn lerna run build
+          npx lerna version --yes
         #  cd node_modules/.bin
         #  lerna version patch --yes --force-publish=*
         #  lerna version --no-push # => this don't fail, but don't change anithing
@@ -60,7 +60,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx lerna publish from-git
+        run: npx lerna publish from-git --yes
 
   merge-me:
     name: Merge to master
