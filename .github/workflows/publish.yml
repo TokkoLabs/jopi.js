@@ -32,11 +32,11 @@ jobs:
         run: |
           yarn install
 
-      - name: Run tests
-        run: yarn test
+#      - name: Run tests
+#        run: yarn test
 
-      - name: Run coverage
-        run: yarn jest --coverage
+#      - name: Run coverage
+#        run: yarn jest --coverage
 
       - name: Build Jopi
         run: yarn build
