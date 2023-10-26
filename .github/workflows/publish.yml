@@ -51,7 +51,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx lerna version 6.6.2 --force-conventional-graduate --force-publish --yes --exact --create-release github 
+          npx lerna version 6.6.2 --force-publish --yes --exact --create-release github 
         #  cd node_modules/.bin
         #  lerna version patch --yes --force-publish=*
         #  lerna version --no-push # => this don't fail, but don't change anithing
