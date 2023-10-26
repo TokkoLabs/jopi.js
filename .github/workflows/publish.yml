@@ -75,11 +75,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx lerna publish from-package --yes --force-publish=*
 
-      - name: Delete publish branch
-        run: |
-          git checkout development
-          git branch -d publish
-
   merge-me:
     name: Merge to master
     needs:
@@ -92,3 +87,8 @@ jobs:
           # This must be used as GitHub Actions token does not support
           # pushing to protected branches.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete publish branch
+        run: |
+          git checkout master
+          git branch -d publish
