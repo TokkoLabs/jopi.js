@@ -73,11 +73,11 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx lerna publish from-package --yes
+        run: npx lerna publish from-package --yes --force-publish=*
 
       - name: Delete publish branch
         run: |
-          git switch -c "development"
+          git checkout development
           git branch -d publish
 
   merge-me:
