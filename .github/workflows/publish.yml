@@ -65,7 +65,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd node_modules/.bin
-          lerna version patch --yes
+          lerna version patch --yes --force-publish=*
         #  lerna version --no-push # => this don't fail, but don't change anithing
         #  yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
 
@@ -76,7 +76,9 @@ jobs:
         run: npx lerna publish from-package --yes
 
       - name: Delete publish branch
-        run: git branch -d publish
+        run: |
+          git switch -c "development"
+          git branch -d publish
 
   merge-me:
     name: Merge to master
