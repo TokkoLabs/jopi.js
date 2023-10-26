@@ -1,5 +1,6 @@
 {
   "npmClient": "yarn",
   "private": true,
+  "version": "independent",
   "command.publish.verifyAccess": false
 }
