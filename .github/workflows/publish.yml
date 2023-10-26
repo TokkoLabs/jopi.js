@@ -14,21 +14,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Creating and switching branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git switch -c "publish"
-          git push --set-upstream origin publish
-        #  git add .
-        #  git commit -m "adding publish changes"
-        #  git push origin
-
-    # Not working more      
-    #  - name: Configure git credentials
-    #    uses: OleksiyRudenko/gha-git-credentials@v2-latest
-    #    with:
+    #  - name: Creating and switching branch
+    #    env:
     #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #    run: |
+    #      git switch -c "publish"
+    #      git push --set-upstream origin publish
 
       - name: Installing node
         uses: actions/setup-node@v3
@@ -39,11 +30,6 @@ jobs:
       - name: Installing yarn
         run: |
           yarn install
-
-    #  - name: Set Current Version
-    #    run: |
-    #      CURRENT_VERSION=$(node -p 'require("./lerna.json").version')
-    #      echo "CURRENT_VERSION=${CURRENT_VERSION}" >> $GITHUB_ENV
 
       - name: Run tests
         run: yarn test
@@ -64,8 +50,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd node_modules/.bin
-          lerna version patch --yes --force-publish=*
+          yarn lerna run build
+        #  cd node_modules/.bin
+        #  lerna version patch --yes --force-publish=*
         #  lerna version --no-push # => this don't fail, but don't change anithing
         #  yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
 
@@ -73,7 +60,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx lerna publish from-package --yes --force-publish=*
+        run: npx lerna publish from-git
 
   merge-me:
     name: Merge to master
@@ -88,7 +75,7 @@ jobs:
           # pushing to protected branches.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Delete publish branch
-        run: |
-          git checkout master
-          git branch -d publish
+    #  - name: Delete publish branch
+    #    run: |
+    #      git checkout master
+    #      git branch -d publish
