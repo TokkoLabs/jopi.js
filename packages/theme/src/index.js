@@ -450,6 +450,11 @@ const theme = {
     dark: {
       background: '#DDE5E9',
     },
+    default: {
+      background: '#FFFFFF',
+      border: '1px solid' + colors.neutralGray5,
+      borderRadius: '6px',
+    },
   },
   fontSizes: fontSize,
   fonts: {
