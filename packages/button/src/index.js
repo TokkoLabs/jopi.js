@@ -36,7 +36,7 @@ export const Button = ({ variant, ...props }) => (
   </Box>
 )
 
-export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = ['badgeNormal', 'primary'], maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, holdPress, hover, filled, isExpanded, widthImage, heightImage, setExpand, ...props }) => {
+export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant = ['badgeNormal', 'primary'], maxWidth, srcImage, userImage, hasCheckbox, active, isCollapsible, disabled, holdPress, hover, filled, isExpanded, widthImage, heightImage, setExpand, testForAction, ...props }) => {
   let colorValue
   let colorValueIcon
   let fontSize
@@ -103,6 +103,10 @@ export const ButtonIcon = ({ icon, variant, text, badgeValue = 0, badgeVariant =
   }
   if (badgeValue > 99) {
     badgeValue = '+99'
+  }
+
+  if (testForAction) {
+    console.log('It has a boolean testForAction.')
   }
 
   return (
