@@ -67,7 +67,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          lerna publish from-git --no-verify-access --yes
+          lerna publish from-git --no-git-tag-version --no-push --yes
 
   merge-me:
     name: Merge to master
