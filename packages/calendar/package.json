@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/calendar",
-  "version": "1.0.68",
+  "version": "1.0.69",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
