@@ -55,12 +55,19 @@ jobs:
         #  lerna version patch --yes --force-publish=*
         #  lerna version --no-push # => this don't fail, but don't change anithing
         #  yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
+      
+      - name: "NPM Identity"
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
 
       - name: Publish New Jopi version to NPM
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx lerna publish from-git --yes
+        run: |
+          lerna publish from-git --no-private --force-publish --no-push --yes
 
   merge-me:
     name: Merge to master
