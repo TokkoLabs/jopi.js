@@ -286,6 +286,25 @@ const forms = {
       border: '1px solid #94A2AB',
     },
   },
+  borderRadiusVariant: {
+    normal: {
+      color: colors.error,
+      backgroundColor: colors.error,
+      '::placeholder': {
+        color: colors.neutralGray2,
+      },
+    },
+    hover: {
+      backgroundColor: colors.error,
+      '::placeholder': {
+        color: colors.black,
+      },
+    },
+    active: {
+      border: `1px solid ${colors.error}`,
+      backgroundColor: colors.error,
+    },
+  },
   inputLarge: {
     gap: '6px',
     paddingLeftPrefix: '30px',
@@ -325,6 +344,20 @@ const forms = {
     paddingBottom: '6px',
     height: '22px',
     borderRadius: '5px',
+    fontSize: '11px',
+    lineHeight: '13px',
+  },
+  inputNoBorder: {
+    gap: '4px',
+    paddingLeftPrefix: '20px',
+    paddingRightSuffix: '22px',
+    paddingLeftNoPrefix: '6px',
+    paddingRightNoSuffix: '6px',
+    paddingIcons: '6px',
+    paddingTop: '6px',
+    paddingBottom: '6px',
+    height: '22px',
+    borderRadius: '0px',
     fontSize: '11px',
     lineHeight: '13px',
   },

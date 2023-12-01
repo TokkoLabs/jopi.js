@@ -92,6 +92,13 @@ export default {
 
 export const input = () => <Input placeholder="Placeholder text" width='300px'/>
 
+export const inputPrueba = () => (
+  <Input variant='borderRadiusVariant' variantSize='inputNoBorder' prefix={<Icon icon='icon-email' fontSize='14px'/>} placeholder="holaa!" width='300px'/>
+)
+export const inputWithIconBorderBottom = () => (
+  <Input prefix={<Icon icon='icon-email' fontSize='14px'/>} placeholder="Hello World!" width='300px'/>
+)
+
 export const inputWithErrors = () => (
   <Input errors="Minimo 8 caracteres." placeholder="Placeholder text" width='300px'/>
 )
