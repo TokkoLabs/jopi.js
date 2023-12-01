@@ -286,6 +286,42 @@ const forms = {
       border: '1px solid #94A2AB',
     },
   },
+  inputBorderBottom: {
+    normal: {
+      color: colors.neutralGray2,
+      backgroundColor: colors.transparent,
+      borderBottom: '1px solid #C7D1D7',
+      '::placeholder': {
+        color: colors.neutralGray2,
+      },
+    },
+    hover: {
+      color: colors.neutralGray4,
+      backgroundColor: colors.transparent,
+      borderBottom: '1px solid #C7D1D7',
+      '::placeholder': {
+        color: colors.neutralGray4,
+      },
+    },
+    active: {
+      color: colors.neutralGray2,
+      backgroundColor: colors.transparent,
+      borderBottom: '1px solid #C7D1D7',
+      '::placeholder': {
+        color: colors.neutralGray2,
+      },
+    },
+    loading: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+      borderBottom: '1px solid #C7D1D7',
+    },
+    filled: {
+      color: colors.neutralGray1,
+      backgroundColor: colors.transparent,
+      borderBottom: '1px solid #C7D1D7',
+    },
+  },
   inputLarge: {
     gap: '6px',
     paddingLeftPrefix: '30px',
@@ -327,6 +363,20 @@ const forms = {
     borderRadius: '5px',
     fontSize: '11px',
     lineHeight: '13px',
+  },
+  inputNoBorderRadius: {
+    gap: '6px',
+    paddingLeftPrefix: '30px',
+    paddingRightSuffix: '32px',
+    paddingLeftNoPrefix: '12px',
+    paddingRightNoSuffix: '12px',
+    paddingIcons: '12px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    height: '32px',
+    borderRadius: '0px',
+    fontSize: '14px',
+    lineHeight: '18px',
   },
   label: {
     color: colors.disabled,

@@ -220,3 +220,7 @@ export const SearchPrefixSuffix = () => (
     width='500px'
   />
 )
+
+export const inputBorderBottomVariant = () => (
+  <Input variant='inputBorderBottom' variantSize='inputNoBorderRadius' prefix={<Icon icon='icon-contactos' fontSize='14px'/>} placeholder="Jacqueline Gómez" width='200px'/>
+)
