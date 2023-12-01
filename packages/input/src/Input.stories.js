@@ -92,9 +92,6 @@ export default {
 
 export const input = () => <Input placeholder="Placeholder text" width='300px'/>
 
-export const inputPrueba = () => (
-  <Input variant='borderRadiusVariant' variantSize='inputNoBorder' prefix={<Icon icon='icon-email' fontSize='14px'/>} placeholder="holaa!" width='300px'/>
-)
 export const inputWithIconBorderBottom = () => (
   <Input prefix={<Icon icon='icon-email' fontSize='14px'/>} placeholder="Hello World!" width='300px'/>
 )
@@ -226,4 +223,8 @@ export const SearchPrefixSuffix = () => (
     variant='inputSearchTransparent'
     width='500px'
   />
+)
+
+export const inputPrueba = () => (
+  <Input variant='InputBorderBottom' variantSize='inputNoBorderRadius' prefix={<Icon icon='icon-contactos' fontSize='14px'/>} placeholder="Jacqueline Gómez" width='200px'/>
 )
