@@ -75,7 +75,6 @@ exports[`Collapsible default 1`] = `
   >
     <button
       className="c2"
-      type="button"
     >
       Estado
     </button>
@@ -148,10 +147,6 @@ exports[`Collapsible main 1`] = `
   height: 16px;
 }
 
-@media screen and (min-width:40em) {
-
-}
-
 <div
     className="c0"
     width={0.3333333333333333}
@@ -161,7 +156,6 @@ exports[`Collapsible main 1`] = `
     >
       <button
         className="c2"
-        type="button"
       >
         <div
           className="c3"
@@ -190,7 +184,7 @@ exports[`Collapsible main 1`] = `
         <span
           style={
             {
-              "color": "#344149",
+              "color": "#384248",
               "fontWeight": "bold",
             }
           }
@@ -271,10 +265,6 @@ exports[`Collapsible main 1`] = `
   overflow: hidden;
 }
 
-@media screen and (min-width:40em) {
-
-}
-
 <div
     className="c0"
     width={0.3333333333333333}
@@ -284,13 +274,12 @@ exports[`Collapsible main 1`] = `
     >
       <button
         className="c2"
-        type="button"
       >
         <div
           className="c3"
           style={
             {
-              "color": "#485C66",
+              "color": "#49565D",
             }
           }
         >
@@ -313,7 +302,7 @@ exports[`Collapsible main 1`] = `
         <span
           style={
             {
-              "color": "#485C66",
+              "color": "#49565D",
               "fontWeight": "normal",
             }
           }
@@ -411,10 +400,6 @@ exports[`Collapsible main 1`] = `
   position: static;
 }
 
-@media screen and (min-width:40em) {
-
-}
-
 <div
     className="c0"
     width={0.3333333333333333}
@@ -424,13 +409,12 @@ exports[`Collapsible main 1`] = `
     >
       <button
         className="c2"
-        type="button"
       >
         <div
           className="c3"
           style={
             {
-              "color": "#485C66",
+              "color": "#49565D",
             }
           }
         >
@@ -453,7 +437,7 @@ exports[`Collapsible main 1`] = `
         <span
           style={
             {
-              "color": "#485C66",
+              "color": "#49565D",
               "fontWeight": "normal",
             }
           }

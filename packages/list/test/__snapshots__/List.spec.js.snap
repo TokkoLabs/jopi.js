@@ -86,7 +86,7 @@ exports[`List renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #6B7C85;
+  color: #6F838D;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -110,7 +110,7 @@ exports[`List renders correctly 1`] = `
   margin: 0;
   min-width: 0;
   font-weight: 400;
-  border: solid 1px transparent;
+  border: none;
   box-shadow: none;
   font-family: primary;
   display: block;
@@ -157,7 +157,6 @@ exports[`List renders correctly 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .c15 {
@@ -740,7 +739,6 @@ exports[`ListDefault renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
-            type="button"
           >
             Item 1
           </button>
@@ -768,7 +766,6 @@ exports[`ListDefault renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
-            type="button"
           >
             Item 2
           </button>
@@ -796,7 +793,6 @@ exports[`ListDefault renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
-            type="button"
           >
             Item 3
           </button>
@@ -955,7 +951,6 @@ exports[`ListIcon renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
-            type="button"
           >
             <div
               className="c5"
@@ -1004,7 +999,6 @@ exports[`ListIcon renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
-            type="button"
           >
             <div
               className="c6"
@@ -1053,7 +1047,6 @@ exports[`ListIcon renders correctly 1`] = `
                 "borderRadius": "0px",
               }
             }
-            type="button"
           >
             <div
               className="c6"
@@ -1198,7 +1191,6 @@ exports[`ListMultiselect renders correctly 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .c11 {
@@ -1302,7 +1294,6 @@ input:disabled:not(:checked) ~ .c14 {
                 "borderRadius": "0px",
               }
             }
-            type="button"
           >
             <div
               className="c0 c6"
@@ -1409,7 +1400,7 @@ input:disabled:not(:checked) ~ .c14 {
             <span
               style={
                 {
-                  "color": "#C7D1D7",
+                  "color": "#AEBAC0",
                   "fontWeight": "normal",
                 }
               }
@@ -1442,7 +1433,6 @@ input:disabled:not(:checked) ~ .c14 {
                 "borderRadius": "0px",
               }
             }
-            type="button"
           >
             <div
               className="c0 c6"
@@ -1549,7 +1539,7 @@ input:disabled:not(:checked) ~ .c14 {
             <span
               style={
                 {
-                  "color": "#485C66",
+                  "color": "#49565D",
                   "fontWeight": "normal",
                 }
               }
@@ -1582,7 +1572,6 @@ input:disabled:not(:checked) ~ .c14 {
                 "borderRadius": "0px",
               }
             }
-            type="button"
           >
             <div
               className="c0 c6"
@@ -1689,7 +1678,7 @@ input:disabled:not(:checked) ~ .c14 {
             <span
               style={
                 {
-                  "color": "#485C66",
+                  "color": "#49565D",
                   "fontWeight": "normal",
                 }
               }

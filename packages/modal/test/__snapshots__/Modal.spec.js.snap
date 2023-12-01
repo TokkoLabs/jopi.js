@@ -104,7 +104,7 @@ exports[`Modal renders correctly 1`] = `
         className="c4"
         style={
           {
-            "color": "#344149",
+            "color": "#384248",
             "fontWeight": "700",
           }
         }

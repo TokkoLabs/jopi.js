@@ -24,7 +24,7 @@ exports[`Card renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #EFF3F5;
+  background-color: #DDE5E9;
   position: relative;
   gap: 8px;
 }
@@ -46,7 +46,6 @@ exports[`Card renders correctly 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .c8 {
@@ -396,7 +395,6 @@ exports[`Card renders correctly not active 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .c8 {

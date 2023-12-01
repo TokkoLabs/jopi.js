@@ -236,7 +236,7 @@ exports[`Input infoAlert 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #AEBAC0;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -362,7 +362,7 @@ exports[`Input inputInlineLabel 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #AEBAC0;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -450,7 +450,7 @@ exports[`Input inputMedium 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #AEBAC0;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -524,7 +524,7 @@ exports[`Input inputWithIcon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #AEBAC0;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -622,7 +622,7 @@ exports[`Input inputWithLabel 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #AEBAC0;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -724,7 +724,7 @@ exports[`Input inputWithPassword 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #AEBAC0;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -836,7 +836,7 @@ exports[`Input inputWithPasswordIcon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #AEBAC0;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -957,7 +957,7 @@ exports[`Input placeholder 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #AEBAC0;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -1105,7 +1105,7 @@ exports[`Input renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #344149;
+  color: #AEBAC0;
   font-family: Nunito Sans;
   font-weight: 400;
 }
@@ -1178,7 +1178,7 @@ exports[`Input searchBold 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #6B7C85;
+  color: #6F838D;
   font-family: Nunito Sans;
   font-weight: 700;
 }
@@ -1262,7 +1262,7 @@ exports[`Input searchBoldIcon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 6px;
-  color: #6B7C85;
+  color: #6F838D;
   font-family: Nunito Sans;
   font-weight: 700;
 }

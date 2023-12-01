@@ -149,7 +149,6 @@ exports[`Toast renders correctly 1`] = `
       className="c5"
       color="white"
       onClick={[Function]}
-      type="button"
     >
       <div
         className="c6"
@@ -313,8 +312,8 @@ exports[`Toast renders correctly five 1`] = `
 }
 
 .c5 {
-  width: 1em;
-  height: 1em;
+  width: 2em;
+  height: 2em;
   padding: 8px;
   border-radius: 50%;
   background-image: conic-gradient(#272E33,#FFFFFF);
@@ -337,7 +336,7 @@ exports[`Toast renders correctly five 1`] = `
   <div
     className="c2"
   >
-    <div
+    <loader
       className="c3"
     >
       <div
@@ -345,7 +344,7 @@ exports[`Toast renders correctly five 1`] = `
         kind="primary"
         size="small"
       />
-    </div>
+    </loader>
     <p
       className="c6"
       color="white"
@@ -361,7 +360,6 @@ exports[`Toast renders correctly five 1`] = `
       className="c8"
       color="white"
       onClick={[Function]}
-      type="button"
     >
       <div
         className="c9"
@@ -562,7 +560,6 @@ exports[`Toast renders correctly four 1`] = `
       className="c6"
       color="white"
       onClick={[Function]}
-      type="button"
     >
       <div
         className="c7"
@@ -763,7 +760,6 @@ exports[`Toast renders correctly four 2`] = `
       className="c6"
       color="white"
       onClick={[Function]}
-      type="button"
     >
       <div
         className="c7"
@@ -1008,7 +1004,6 @@ exports[`Toast renders correctly seven 1`] = `
         className="c6"
         color="white"
         onClick={[Function]}
-        type="button"
       >
         <div
           className="c7"
@@ -1042,7 +1037,6 @@ exports[`Toast renders correctly seven 1`] = `
       className="c8"
       color="white"
       onClick={[Function]}
-      type="button"
     >
       <div
         className="c9"
@@ -1206,8 +1200,8 @@ exports[`Toast renders correctly six 1`] = `
 }
 
 .c5 {
-  width: 1em;
-  height: 1em;
+  width: 2em;
+  height: 2em;
   padding: 8px;
   border-radius: 50%;
   background-image: conic-gradient(#272E33,#FFFFFF);
@@ -1230,7 +1224,7 @@ exports[`Toast renders correctly six 1`] = `
   <div
     className="c2"
   >
-    <div
+    <loader
       className="c3"
     >
       <div
@@ -1238,7 +1232,7 @@ exports[`Toast renders correctly six 1`] = `
         kind="primary"
         size="small"
       />
-    </div>
+    </loader>
     <p
       className="c6"
       color="white"
@@ -1254,7 +1248,6 @@ exports[`Toast renders correctly six 1`] = `
       className="c8"
       color="white"
       onClick={[Function]}
-      type="button"
     >
       <div
         className="c9"
@@ -1455,7 +1448,6 @@ exports[`Toast renders correctly three 1`] = `
       className="c6"
       color="white"
       onClick={[Function]}
-      type="button"
     >
       <div
         className="c7"

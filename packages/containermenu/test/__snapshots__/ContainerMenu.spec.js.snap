@@ -169,7 +169,6 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
     >
       <button
         className="c6"
-        type="button"
       >
         <div
           className="c7"
