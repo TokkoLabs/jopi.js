@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/list",
-  "version": "1.2.333",
+  "version": "1.2.335",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -9,7 +9,7 @@
   "dependencies": {
     "@oneloop/box": "^1.2.271",
     "@oneloop/hooks": "^1.2.293",
-    "@oneloop/input": "^1.2.330"
+    "@oneloop/input": "^1.2.332"
   },
   "peerDependencies": {
     "react": "^16.8.0"

@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/wrapped",
-  "version": "1.0.62",
+  "version": "1.0.64",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
