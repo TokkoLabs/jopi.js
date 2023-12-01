@@ -286,7 +286,7 @@ const forms = {
       border: '1px solid #94A2AB',
     },
   },
-  InputBorderBottom: {
+  inputBorderBottom: {
     normal: {
       color: colors.neutralGray2,
       backgroundColor: colors.transparent,
