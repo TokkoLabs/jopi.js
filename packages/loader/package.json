@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/loader",
-  "version": "1.2.308",
+  "version": "1.2.309",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
