@@ -77,7 +77,7 @@ export const InputNumber = ({
 
   return (
     <Box
-      as="form"
+      as="div"
       tx="inputNumber"
       ref={inputCont}
       variant={inputVariants}
@@ -106,7 +106,7 @@ export const InputNumber = ({
           background: 'transparent',
           border: 'none',
           outline: 'none',
-          color: theme.colors.neutralGray2,
+          color: theme.colors.neutralGray1,
           textAlign: 'center',
           padding: '0',
         }}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Box } from '@oneloop/box'
 import { Label } from '@oneloop/label'
 import { Text } from '@oneloop/text'
+import theme from '@oneloop/theme'
 
 export const Textarea = ({
   prefix,
@@ -64,8 +65,11 @@ export const Textarea = ({
         },
         '&:active': {
           outline: 'none',
-          border: '1px solid #4268EF',
-          boxShadow: '2px 2px 6px rgba(56, 109, 244, 0.2)',
+        },
+        '&:hover': {
+          '&::placeholder': {
+            color: theme.colors.black,
+          },
         },
         '&:hover': {
           '&::placeholder': {

@@ -229,6 +229,9 @@ exports[`Dropdown DropdownDefault 1`] = `
         style={
           {
             "color": "#FFFFFF",
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+            "width": "95%",
           }
         }
       />
@@ -458,6 +461,7 @@ exports[`Dropdown DropdownItem 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .c11 {
@@ -1171,6 +1175,7 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   overflow: hidden;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .c13 {
@@ -1480,7 +1485,7 @@ input:disabled:not(:checked) ~ .c16 {
           <span
             style={
               {
-                "color": "#AEBAC0",
+                "color": "#C7D1D7",
                 "fontWeight": "normal",
               }
             }
@@ -1629,7 +1634,7 @@ input:disabled:not(:checked) ~ .c16 {
           <span
             style={
               {
-                "color": "#384248",
+                "color": "#344149",
                 "fontWeight": "bold",
               }
             }

@@ -11,7 +11,13 @@ const CheckboxBox = ({
   ...props
 }) => (
   <>
-    <Svg width={isMedium ? 20 : 16} height={isMedium ? 20 : 16} viewBox="0 0 16 16" fill="none" {...props}>
+    <Svg
+      width={isMedium ? 20 : 16}
+      height={isMedium ? 20 : 16}
+      viewBox="0 0 16 16"
+      fill="none"
+      {...props}
+    >
       <rect
         x="0.5"
         y="0.5"
@@ -22,17 +28,24 @@ const CheckboxBox = ({
         fill={backgroundColor}
         stroke={borderColor}
       />
-      {tick && <path d="M 5,8 L 7,10 L 12,5" stroke={tickColor} strokeWidth="1.5" strokeLinecap="round"/>}
+      {tick && (
+        <path
+          d="M 5,8 L 7,10 L 12,5"
+          stroke={tickColor}
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      )}
     </Svg>
   </>
 )
 
 const CheckboxChecked = ({ isMedium, ...props }) => (
   <CheckboxBox
-    borderColor='#6A88F2'
-    backgroundColor='#6A88F2'
+    borderColor="#6A88F2"
+    backgroundColor="#6A88F2"
     tick
-    tickColor='white'
+    tickColor="white"
     isMedium={isMedium}
     {...props}
   />
@@ -122,29 +135,31 @@ export const Checkbox = ({
         overflow: 'hidden',
         width: '100%',
         height: '100%',
+        cursor: 'pointer',
       }}
     />
-    { !isChecked && <Box
-      as={CheckboxIcon}
-      aria-hidden="true"
-      tx="forms"
-      variant={variant}
-      isMedium={isMedium}
-      sx={sx}
-      __css={{
-        mr: 2,
-        borderRadius: 2,
-        color: 'gray',
-        'input:checked ~ &': {
-          color: 'primary',
-        },
-        'input:focus ~ &': {
-          boxShadow: 'active',
-        },
-      }}
-    />
-    }
-    { isChecked &&
+    {!isChecked && (
+      <Box
+        as={CheckboxIcon}
+        aria-hidden="true"
+        tx="forms"
+        variant={variant}
+        isMedium={isMedium}
+        sx={sx}
+        __css={{
+          mr: 2,
+          borderRadius: 2,
+          color: 'gray',
+          'input:checked ~ &': {
+            color: 'primary',
+          },
+          'input:focus ~ &': {
+            boxShadow: 'active',
+          },
+        }}
+      />
+    )}
+    {isChecked && (
       <Box
         as={CheckboxChecked}
         aria-hidden="true"
@@ -164,6 +179,6 @@ export const Checkbox = ({
           },
         }}
       />
-    }
+    )}
   </Box>
 )

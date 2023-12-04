@@ -1,33 +1,29 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useRef } from 'react'
 import DatePicker from 'react-datepicker'
 import '../styles/datepicker.css'
 import '@oneloop/theme/styles/globals.css'
 import { Icon } from '@oneloop/icons'
-import { Box } from '@oneloop/box'
-import theme from '@oneloop/theme'
+import { Input } from '@oneloop/input'
 
 const CustomInput = forwardRef(({ value, onClick }, ref) => {
+  const inputRef = useRef(ref)
+  const handleClick = () => inputRef.current.click()
+
   return (
-    <Box
-      __css={{
-        display: 'flex',
-        alignItems: 'center',
-        padding: '7px 10px',
-        gap: '8px',
-        height: '32px',
-        background: theme.colors.neutralGray9,
-        borderRadius: '8px',
-        fontFamily: 'Nunito Sans',
-        fontWeight: '400',
-        fontSize: '14px',
-        lineHeight: '18px',
-        cursor: 'pointer',
-      }}
+    <Input
+      style={{ paddingLeft: '34px' }}
+      ref={inputRef}
       onClick={onClick}
-      ref={ref}>
-      <Icon icon={'icon-calendario'} fontSize='16px' />
-      {value}
-    </Box>
+      prefix={
+        <Icon
+          icon={'icon-calendario'}
+          fontSize="16px"
+          onClick={handleClick}
+          style={{ cursor: 'pointer' }}
+        />
+      }
+      value={value}
+    />
   )
 })
 CustomInput.displayName = 'CustomInput'
