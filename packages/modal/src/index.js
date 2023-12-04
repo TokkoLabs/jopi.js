@@ -1,3 +1,4 @@
+/* eslint-disable multiline-ternary */
 import React, { useEffect, useRef, useState } from 'react'
 import { Box, Flex } from '@oneloop/box'
 import theme from '@oneloop/theme'
@@ -9,12 +10,31 @@ export const Modal = ({
   variant,
   modalBG,
   blockScroll = false,
+  closeModal = false,
+  scrollHeight = false,
+  fixedCLoseBtn = false,
   ...props
 }) => {
   useEffect(() => {
     if (blockScroll) {
       document.body.style.overflow = 'hidden'
       return () => (document.body.style.overflow = 'auto')
+    }
+  }, [])
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Escape') {
+      closeModal()
+    }
+  }
+
+  useEffect(() => {
+    if (closeModal) {
+      document.addEventListener('keydown', handleKeyDown)
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
     }
   }, [])
 
@@ -34,6 +54,7 @@ export const Modal = ({
     >
       {modalBG && (
         <Box
+          onClick={closeModal}
           __css={{
             backgroundColor: '#485C66',
             opacity: '0.7',
@@ -49,20 +70,57 @@ export const Modal = ({
         tx="modals"
         {...props}
         __css={{
-          padding: '34px',
+          position: 'relative',
           maxWidth: '900px',
           minWidth: '380px !important',
+          height: `${scrollHeight}px`,
           background: theme.colors.white,
           borderRadius: '16px',
           boxSizing: 'border-box',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '24px',
           boxShadow: '8px 8px 16px rgba(77, 91, 100, 0.15)',
         }}
         variant={variant}
       >
-        {children}
+        {fixedCLoseBtn && (
+          <Box
+            onClick={closeModal}
+            __css={{
+              width: '20px',
+              height: '20px',
+              backgroundColor: '#FFF',
+              position: 'absolute',
+              borderRadius: '50%',
+              top: '-7px',
+              right: '-7px',
+              display: 'grid',
+              placeItems: 'center',
+              padding: '3px 0px 0px 1px',
+              cursor: 'pointer',
+              boxShadow: '4px 4px 12px 0px rgba(87, 95, 99, 0.25)',
+            }}
+          >
+            <Icon
+              icon="icon-cerrar"
+              fontSize="12px"
+              color={theme.colors.neutralGray1}
+            />
+          </Box>
+        )}
+        <Box
+          __css={{
+            '::-webkit-scrollbar': {
+              display: 'none',
+            },
+            overflowY: 'auto',
+            padding: '24px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '24px',
+            height: `${scrollHeight}px`,
+          }}
+        >
+          {children}
+        </Box>
       </Box>
     </Box>
   )
