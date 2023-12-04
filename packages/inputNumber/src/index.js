@@ -77,7 +77,7 @@ export const InputNumber = ({
 
   return (
     <Box
-      as="form"
+      as="div"
       tx="inputNumber"
       ref={inputCont}
       variant={inputVariants}
