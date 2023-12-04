@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/button",
-  "version": "1.2.339",
+  "version": "1.2.343",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [

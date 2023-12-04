@@ -69,3 +69,7 @@ export const Success = () => {
 export const Dark = () => {
   return <Tags variant="dark" noClick>Mariana Font</Tags>
 }
+
+export const Default = () => {
+  return <Tags variant="default" noClick>Mariana Font</Tags>
+}

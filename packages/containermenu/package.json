@@ -1,15 +1,15 @@
 {
   "name": "@oneloop/containermenu",
-  "version": "1.0.95",
+  "version": "1.0.99",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.272",
-    "@oneloop/button": "^1.2.339",
-    "@oneloop/text": "^1.2.273"
+    "@oneloop/box": "^1.2.271",
+    "@oneloop/button": "^1.2.343",
+    "@oneloop/text": "^1.2.272"
   },
   "peerDependencies": {
     "react": "^16.8.0"
