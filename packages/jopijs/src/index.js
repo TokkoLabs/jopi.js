@@ -11,6 +11,7 @@ import { Datepicker } from '@oneloop/datepicker'
 import { Drawer } from '@oneloop/drawer'
 import { Dropdown } from '@oneloop/dropdown'
 import { Fonts } from '@oneloop/fonts'
+import { Gallery } from '@oneloop/gallery'
 import { Icon } from '@oneloop/icons'
 import { Image } from '@oneloop/image'
 import { Input } from '@oneloop/input'
@@ -49,6 +50,7 @@ export {
   Dropdown,
   Flex,
   Fonts,
+  Gallery,
   Heading,
   Icon,
   Image,

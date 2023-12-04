@@ -1,0 +1,24 @@
+{
+  "name": "@oneloop/gallery",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@oneloop/box": "^1.2.271",
+    "@oneloop/button": "^1.2.343",
+    "@oneloop/hooks": "^1.2.293",
+    "@oneloop/text": "^1.2.272",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
+}
