@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React from 'react'
 import { Box } from '@oneloop/box'
 import '@oneloop/fonts'
@@ -36,7 +37,10 @@ export const Tags = ({
       {closeIcon && (
         <Icon
           icon="icon-cerrar"
-          onClick={closeIcon}
+          onClick={(event) => {
+            event.stopPropagation()
+            closeIcon()
+          }}
           fontSize="8px"
           style={{ cursor: 'pointer' }}
         />
