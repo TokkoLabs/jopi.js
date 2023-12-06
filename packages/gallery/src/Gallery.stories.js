@@ -12,6 +12,7 @@ export const GalleyComponent = () => {
     'https://www.wallpaperuse.com/wallp/0-9852_m.jpg',
     'https://static.inmofactory.com/images/inmofactory/documents/1/124683/34021431/582525589.jpg?rule=web_412x257',
     'https://staticbp.com/img/prop_new_b/534/00534436-01.jpg',
+    'https://imgs.nestimg.com/casa_en_fraccionamiento_privadas_de_la_hacienda_3210125690712336672.jpg',
   ]
 
   const VIDEO = [
