@@ -30,3 +30,15 @@ export const GalleyComponent = () => {
     </Box>
   )
 }
+
+export const GalleyPocasImg = () => {
+  const imgs = [
+    'https://www.wallpaperuse.com/wallp/0-9852_m.jpg',
+  ]
+
+  return (
+    <Box __css={{ width: '770px' }}>
+      <Gallery images={imgs} />
+    </Box>
+  )
+}
