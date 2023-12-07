@@ -1,10 +1,12 @@
 /* eslint-disable multiline-ternary */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
 import { Icon } from '@oneloop/icons'
+import './Gallery.css'
+import { Text } from '@oneloop/text'
 
-const ButtonGallery = ({ text }) => (
+const ButtonGallery = ({ text, ...props }) => (
   <Box
     __css={{
       padding: '6px 12px',
@@ -17,6 +19,7 @@ const ButtonGallery = ({ text }) => (
       fontWeight: '600',
       cursor: 'pointer',
     }}
+    {...props}
   >
     {text}
   </Box>
@@ -25,15 +28,99 @@ const ButtonGallery = ({ text }) => (
 export const Gallery = ({
   images = [],
   planos = [],
-  video,
-  video360,
+  video = [],
+  video360 = [],
   ...props
 }) => {
   const Images = [...images, ...planos]
+  const [fullscreen, setFullscreen] = useState(false)
+  const [tabSelected, setTabSelected] = useState('fotos')
+  const tabContainers = []
+  const [index, setIndex] = useState(0)
+  const [contTab, setContTab] = useState(0)
+
+  const changeTabContainer = (tab) => {
+    setIndex(0)
+    setTabSelected(tab)
+  }
+
+  if (video.length > 0) {
+    tabContainers.push('Videos')
+  }
+
+  if (video360.length > 0) {
+    tabContainers.push('Video360')
+  }
+
+  if (images.length > 0) {
+    tabContainers.push('Fotos')
+  }
+
+  if (planos.length > 0) {
+    tabContainers.push('Planos')
+  }
+
+  useEffect(() => {
+    let newContTab
+    if (tabSelected === 'videos') {
+      newContTab = video.length
+    } else if (tabSelected === 'fotos') {
+      newContTab = images.length
+    } else if (tabSelected === 'planos') {
+      newContTab = planos.length
+    } else if (tabSelected === 'video360') {
+      newContTab = video360.length
+    }
+
+    setContTab(newContTab)
+  }, [tabSelected])
+
+  const next = () => setIndex((prev) => Math.min(contTab - 1, prev + 1))
+
+  const prev = () => setIndex((prev) => Math.max(0, prev - 1))
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'ArrowRight') {
+      next()
+    }
+
+    if (event.key === 'ArrowLeft') {
+      prev()
+    }
+
+    if (event.key === 'Escape') {
+      closeFullscreen()
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [contTab, index])
+
+  const toggleFullscreen = () => {
+    if (
+      video.length > 0 ||
+      video360.length > 0 ||
+      images.length > 0 ||
+      planos.length > 0
+    ) {
+      setFullscreen(true)
+    }
+  }
+
+  const closeFullscreen = () => {
+    setFullscreen(false)
+    setTabSelected('fotos')
+  }
 
   return (
     <Box
       __css={{
+        position: 'relative',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -42,6 +129,8 @@ export const Gallery = ({
       {...props}
     >
       <Box
+        onClick={toggleFullscreen}
+        className="firstTabImg"
         __css={{
           position: 'relative',
           display: 'flex',
@@ -58,7 +147,7 @@ export const Gallery = ({
           cursor: 'pointer',
         }}
       >
-        {Images[0] && (
+        {!Images[0] && (
           <Icon
             icon="icon-imagenes"
             fontSize="34px"
@@ -75,13 +164,35 @@ export const Gallery = ({
             gap: '8px',
           }}
         >
-          {video && <ButtonGallery text={'Videos'} />}
-          {video360 && <ButtonGallery text={'Video 360°'} />}
-          {images.length > 0 && <ButtonGallery text={'Fotos'} />}
-          {planos.length > 0 && <ButtonGallery text={'Planos'} />}
+          {video.length > 0 && (
+            <ButtonGallery
+              text={'Videos'}
+              onClick={() => setTabSelected('videos')}
+            />
+          )}
+          {video360.length > 0 && (
+            <ButtonGallery
+              text={'Video 360°'}
+              onClick={() => setTabSelected('video360')}
+            />
+          )}
+          {images.length > 0 && (
+            <ButtonGallery
+              className="buttonGallery"
+              text={'Fotos'}
+              onClick={() => setTabSelected('fotos')}
+            />
+          )}
+          {planos.length > 0 && (
+            <ButtonGallery
+              text={'Planos'}
+              onClick={() => setTabSelected('planos')}
+            />
+          )}
         </Box>
       </Box>
       <Box
+        onClick={toggleFullscreen}
         __css={{
           display: 'flex',
           flexDirection: 'column',
@@ -151,6 +262,108 @@ export const Gallery = ({
               }}
             >{`+${images.length - 3}`}</Box>
           )}
+        </Box>
+      </Box>
+
+      <Box className={`fullscreen ${fullscreen ? 'openFullscreen' : ''}`}>
+        <Box className="fsOverlay" onClick={closeFullscreen}></Box>
+        <Box className="fsCloseIcon">
+          <Icon
+            onClick={closeFullscreen}
+            className="closeIcon"
+            icon="icon-cerrar"
+            fontSize="32px"
+          />
+        </Box>
+        <Box className="fsTabHeader">
+          {tabContainers.map((tab, i) => (
+            <Text
+              key={i}
+              onClick={() => changeTabContainer(tab.toLocaleLowerCase())}
+              className={`${
+                tabSelected === tab.toLocaleLowerCase() && 'tabSelected'
+              }`}
+              variant="bodyBold.fontSize14"
+            >
+              {tab}
+            </Text>
+          ))}
+        </Box>
+        <Box className="fsContainerTabs">
+          {/* Containers */}
+
+          <Icon
+            icon="icon-atras"
+            className="iconPrev"
+            fontSize="40px"
+            onClick={prev}
+          />
+
+          {tabSelected === 'fotos' && (
+            <Box className="fsTabCont">
+              <Box className="fsTabContImage">
+                <img src={images[index]} alt="Foto" />
+                <Text className="contFotos" variant="bodyBold.fontSize14">{`${
+                  index + 1
+                }/${images.length}`}</Text>
+              </Box>
+            </Box>
+          )}
+
+          {tabSelected === 'videos' && (
+            <Box className="fsTabCont">
+              <Box className="fsTabContImage">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={video[index]}
+                  title="Video"
+                  frameBorder="0"
+                  allowFullScreen
+                />
+                <Text variant="bodyBold.fontSize14">{`${index + 1}/${
+                  video.length
+                }`}</Text>
+              </Box>
+            </Box>
+          )}
+
+          {tabSelected === 'planos' && (
+            <Box className="fsTabCont">
+              <Box className="fsTabContImage">
+                <img src={planos[index]} alt="Foto" />
+                <Text variant="bodyBold.fontSize14">{`${index + 1}/${
+                  planos.length
+                }`}</Text>
+              </Box>
+            </Box>
+          )}
+
+          {tabSelected === 'video360' && (
+            <Box className="fsTabCont">
+              <Box className="fsTabContImage">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={video360[index]}
+                  title="Video"
+                  frameBorder="0"
+                  allowFullScreen
+                />
+                <Text variant="bodyBold.fontSize14">{`${index + 1}/${
+                  video360.length
+                }`}</Text>
+              </Box>
+            </Box>
+          )}
+
+          <Icon
+            className="iconNext"
+            style={{ transform: 'rotate(180deg)' }}
+            onClick={next}
+            icon="icon-atras"
+            fontSize="40px"
+          />
         </Box>
       </Box>
     </Box>
