@@ -34,6 +34,7 @@ export const GalleyComponent = () => {
 export const GalleyPocasImg = () => {
   const imgs = [
     'https://www.wallpaperuse.com/wallp/0-9852_m.jpg',
+    'https://i.blogs.es/439f3b/casa1/450_1000.png',
   ]
 
   return (
