@@ -94,7 +94,7 @@ export const Modal = ({
               right: '-7px',
               display: 'grid',
               placeItems: 'center',
-              padding: '3px 0px 0px 1px',
+              padding: '0px 0px 0px 1px',
               cursor: 'pointer',
               boxShadow: '4px 4px 12px 0px rgba(87, 95, 99, 0.25)',
             }}
