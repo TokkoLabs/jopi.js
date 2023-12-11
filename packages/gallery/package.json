@@ -1,6 +1,6 @@
 {
-  "name": "@oneloop/submenu",
-  "version": "1.0.110",
+  "name": "@oneloop/gallery",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,11 +8,14 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.271",
-    "@popperjs/core": "^2.11.5",
+    "@oneloop/button": "^1.2.345",
+    "@oneloop/hooks": "^1.2.293",
+    "@oneloop/text": "^1.2.272",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "react": "^16.8.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"
