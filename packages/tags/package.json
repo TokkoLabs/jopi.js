@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/tags",
-  "version": "1.0.52",
+  "version": "1.0.53",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
