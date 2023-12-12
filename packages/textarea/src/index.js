@@ -71,6 +71,11 @@ export const Textarea = ({
             color: theme.colors.black,
           },
         },
+        '&:hover': {
+          '&::placeholder': {
+            color: theme.colors.black,
+          },
+        },
       }}
     />
     {suffix && (
