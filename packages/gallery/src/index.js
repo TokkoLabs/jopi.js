@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
 import { Icon } from '@oneloop/icons'
-import './Gallery.css'
+import '../styles/gallery.css'
 import { Text } from '@oneloop/text'
 
 const ButtonGallery = ({ text, ...props }) => (
