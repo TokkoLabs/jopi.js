@@ -55,7 +55,13 @@ describe('Button', () => {
 
     expect(tree).toMatchSnapshot()
   })
+  test('dummyTest', () => {
+    const tree = renderer
+      .create(<Button variant='outlineDisabled'>{'Test'}</Button>)
+      .toJSON()
 
+    expect(tree).toMatchSnapshot()
+  })
   test('primaryText', () => {
     const tree = renderer
       .create(<Button variant='primaryText'>{'Test'}</Button>)

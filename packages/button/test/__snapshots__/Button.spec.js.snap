@@ -303,6 +303,61 @@ exports[`Button collapseButtonOpen 1`] = `
 </div>
 `;
 
+exports[`Button dummyTest 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: inherit;
+  font-family: Nunito Sans;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
 exports[`Button iconDisabled 1`] = `
 .c0 {
   box-sizing: border-box;
