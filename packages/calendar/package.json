@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/calendar",
-  "version": "1.0.75",
+  "version": "1.0.76",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -14,7 +14,7 @@
     "@fullcalendar/react": "^6.1.8",
     "@fullcalendar/rrule": "^6.1.8",
     "@fullcalendar/timegrid": "^6.1.8",
-    "@oneloop/box": "^1.2.272",
+    "@oneloop/box": "^1.2.273",
     "rrule": "^2.7.2"
   },
   "peerDependencies": {
