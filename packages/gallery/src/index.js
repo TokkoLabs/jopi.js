@@ -33,7 +33,7 @@ const ButtonGallery = ({ text, ...props }) => (
   </Box>
 )
 
-export const Gallery = ({
+export const Carousel = ({
   images = [],
   planos = [],
   video = [],

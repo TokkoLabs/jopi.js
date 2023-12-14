@@ -1,13 +1,13 @@
 import React from 'react'
-import { Gallery } from '.'
+import { Carousel } from '.'
 import { Box } from '@oneloop/box'
 
 export default {
-  component: Gallery,
-  title: 'Gallery',
+  component: Carousel,
+  title: 'Carousel',
 }
 
-export const GalleyComponent = () => {
+export const CarouselComponent = () => {
   const imgs = [
     'https://www.wallpaperuse.com/wallp/0-9852_m.jpg',
     'https://static.inmofactory.com/images/inmofactory/documents/1/124683/34021431/582525589.jpg?rule=web_412x257',
@@ -26,12 +26,12 @@ export const GalleyComponent = () => {
 
   return (
     <Box __css={{ width: '770px' }}>
-      <Gallery images={imgs} video={VIDEO} planos={PLANO} video360={Video360} />
+      <Carousel images={imgs} video={VIDEO} planos={PLANO} video360={Video360} />
     </Box>
   )
 }
 
-export const GalleyPocasImg = () => {
+export const CarouselPocasImg = () => {
   const imgs = [
     'https://www.wallpaperuse.com/wallp/0-9852_m.jpg',
     'https://i.blogs.es/439f3b/casa1/450_1000.png',
@@ -39,7 +39,7 @@ export const GalleyPocasImg = () => {
 
   return (
     <Box __css={{ width: '770px' }}>
-      <Gallery images={imgs} />
+      <Carousel images={imgs} />
     </Box>
   )
 }
