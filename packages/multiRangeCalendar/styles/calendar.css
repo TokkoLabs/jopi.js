@@ -1,0 +1,69 @@
+.rmdp-border {
+  border: none !important;
+  font-family: var(--fuente-tokko);
+}
+
+.rmdp-header-values,
+.rmdp-week-day {
+  color: var(--neutralGray1) !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
+
+.rmdp-day {
+  color: var(--neutralGray2) !important;
+  cursor: default !important;
+  margin-bottom: 5px;
+}
+
+.rmdp-range {
+  background-color: var(--neutralGray7) !important;
+  box-shadow: none !important;
+  color: var(--neutralGray5) !important;
+}
+
+.rmdp-range-hover.start:not(.force),
+.rmdp-range.start:not(.force),
+.rmdp-range-hover.end:not(.force),
+.rmdp-range.end:not(.force) {
+  border-radius: 0px !important;
+}
+
+.rmdp-arrow {
+  border: solid var(--neutralGray4) !important;
+  border-width: 0 1px 1px 0 !important;
+}
+
+.rmdp-arrow-container:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.rmdp-day-picker {
+  gap: 40px;
+}
+
+.rmdp-day.rmdp-today:not(.rmdp-range) span {
+  background-color: transparent;
+  color: var(--neutralGray2) !important;
+}
+
+.rmdp-day.rmdp-today.rmdp-range span {
+  background-color: transparent;
+  color: var(--neutralGray5) !important;
+}
+
+.rmdp-day.rmdp-today:not(.rmdp-range) span:hover {
+  background-color: transparent;
+  color: var(--neutralGray2) !important;
+}
+
+.rmdp-day:not(.rmdp-range) span:hover {
+  background-color: transparent !important;
+  color: var(--neutralGray1) !important;
+}
+
+.rmdp-range span:hover {
+  background-color: transparent !important;
+  color: var(--neutralGray5) !important;
+}
