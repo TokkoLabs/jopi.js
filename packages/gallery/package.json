@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/gallery",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,10 +8,10 @@
     "styles"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.273",
-    "@oneloop/button": "^1.2.349",
-    "@oneloop/hooks": "^1.2.295",
-    "@oneloop/text": "^1.2.274",
+    "@oneloop/box": "^1.2.274",
+    "@oneloop/button": "^1.2.350",
+    "@oneloop/hooks": "^1.2.296",
+    "@oneloop/text": "^1.2.275",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
