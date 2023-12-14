@@ -18,6 +18,14 @@ const ButtonGallery = ({ text, ...props }) => (
       fontSize: '12px',
       fontWeight: '600',
       cursor: 'pointer',
+      ':hover': {
+        background: '#A2D4E5',
+        color: theme.colors.secondary,
+      },
+      ':active': {
+        color: theme.colors.secondaryHover,
+        borderColor: theme.colors.secondary,
+      },
     }}
     {...props}
   >
@@ -25,7 +33,7 @@ const ButtonGallery = ({ text, ...props }) => (
   </Box>
 )
 
-export const Gallery = ({
+export const Carousel = ({
   images = [],
   planos = [],
   video = [],
@@ -149,7 +157,7 @@ export const Gallery = ({
       >
         {!Images[0] && (
           <Icon
-            icon="icon-imagenes"
+            icon="icon-propiedades"
             fontSize="34px"
             color={theme.colors.neutralGray4}
           />
@@ -219,7 +227,7 @@ export const Gallery = ({
         >
           {!Images[1] && (
             <Icon
-              icon="icon-imagenes"
+              icon="icon-propiedades"
               fontSize="24px"
               color={theme.colors.neutralGray4}
             />
@@ -243,7 +251,7 @@ export const Gallery = ({
         >
           {!Images[2] && (
             <Icon
-              icon="icon-imagenes"
+              icon="icon-propiedades"
               fontSize="24px"
               color={theme.colors.neutralGray4}
             />
@@ -275,20 +283,22 @@ export const Gallery = ({
             fontSize="32px"
           />
         </Box>
-        <Box className="fsTabHeader">
-          {tabContainers.map((tab, i) => (
-            <Text
-              key={i}
-              onClick={() => changeTabContainer(tab.toLocaleLowerCase())}
-              className={`${
-                tabSelected === tab.toLocaleLowerCase() && 'tabSelected'
-              }`}
-              variant="bodyBold.fontSize14"
-            >
-              {tab}
-            </Text>
-          ))}
-        </Box>
+        {tabContainers.length > 1 && (
+          <Box className="fsTabHeader">
+            {tabContainers.map((tab, i) => (
+              <Text
+                key={i}
+                onClick={() => changeTabContainer(tab.toLocaleLowerCase())}
+                className={`${
+                  tabSelected === tab.toLocaleLowerCase() && 'tabSelected'
+                }`}
+                variant="bodyBold.fontSize14"
+              >
+                {tab}
+              </Text>
+            ))}
+          </Box>
+        )}
         <Box className="fsContainerTabs">
           {/* Containers */}
 

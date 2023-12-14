@@ -2,18 +2,18 @@
 import React from 'react'
 import { configure, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import { Gallery } from '../src'
+import { Carousel } from '../src'
 
 configure({ adapter: new Adapter() })
 
-describe('Gallery', () => {
+describe('Carousel', () => {
   it('renders without crashing', () => {
-    const wrapper = mount(<Gallery />)
+    const wrapper = mount(<Carousel />)
     expect(wrapper).toBeDefined()
   })
 
   it('renders correct number of tabs', () => {
-    const wrapper = mount(<Gallery images={['', '']} />)
+    const wrapper = mount(<Carousel images={['', '']} />)
     const btn = wrapper.find('.buttonGallery')
 
     expect(btn.at(0).text()).toBe('Fotos')
@@ -21,7 +21,7 @@ describe('Gallery', () => {
 
   it('toggles fullscreen correctly', () => {
     const wrapper = mount(
-      <Gallery
+      <Carousel
         images={['', '']}
         video={['', '']}
         video360={['', '']}
@@ -38,7 +38,7 @@ describe('Gallery', () => {
   })
 
   it('change img', () => {
-    const wrapper = mount(<Gallery images={['', '']} />)
+    const wrapper = mount(<Carousel images={['', '']} />)
     const next = wrapper.find('.iconNext').at(0)
 
     next.simulate('click')
@@ -57,7 +57,7 @@ describe('Gallery', () => {
   })
 
   it('close fullscreen', () => {
-    const wrapper = mount(<Gallery images={['', '']} />)
+    const wrapper = mount(<Carousel images={['', '']} />)
     const closeBtn = wrapper.find('.closeIcon').at(0)
 
     closeBtn.simulate('click')
