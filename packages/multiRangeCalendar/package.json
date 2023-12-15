@@ -1,0 +1,20 @@
+{
+  "name": "@oneloop/multirangecalendar",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "styles"
+  ],
+  "dependencies": {
+    "react-multi-date-picker": "^4.4.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "d65c6a2618eac0470ecc4f462e8905e0aaf1bd9d"
+}

@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/gallery",
+  "name": "@oneloop/carousel",
   "version": "1.0.6",
   "main": "lib/index.js",
   "module": "src/index.js",
