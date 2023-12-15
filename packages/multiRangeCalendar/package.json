@@ -1,13 +1,14 @@
 {
-  "name": "@oneloop/image",
-  "version": "1.2.291",
+  "name": "@oneloop/multirangecalendar",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
-    "lib"
+    "lib",
+    "styles"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.274"
+    "react-multi-date-picker": "^4.4.1"
   },
   "peerDependencies": {
     "react": "^16.8.0"
