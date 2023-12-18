@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/theme",
-  "version": "1.2.342",
+  "version": "1.2.343",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
