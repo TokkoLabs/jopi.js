@@ -15,7 +15,7 @@
     "@oneloop/icons": "^1.2.298",
     "@oneloop/text": "^1.2.277",
     "date-fns": "^2.8.1",
-    "react-datepicker": "^3.3.0"
+    "react-datepicker": "^4.25.0"
   },
   "peerDependencies": {
     "react": "^16.8.0"
