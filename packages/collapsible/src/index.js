@@ -26,7 +26,20 @@ const useCollapsibleContext = () => {
   return context
 }
 
-const CollapsibleButton = ({ children, isMainButton = false, isSmallButtonIcon = false, active = false, icon, text, isExpanded = false, isCollapsible, badgeValue, badgeVariant, setExpand, ...props }) => {
+const CollapsibleButton = ({
+  children,
+  isMainButton = false,
+  isSmallButtonIcon = false,
+  active = false,
+  icon,
+  text,
+  isExpanded = false,
+  isCollapsible,
+  badgeValue,
+  badgeVariant,
+  setExpand,
+  ...props
+}) => {
   if (isSmallButtonIcon || isMainButton) {
     return (
       <ButtonIcon
@@ -84,10 +97,16 @@ const CollapsibleBody = ({ children }) => {
           animate="open"
           exit="collapsed"
           variants={{
-            open: { height: 'auto' },
-            collapsed: { height: 0 },
+            open: {
+              height: 'auto',
+              transition: { duration: 0.2, ease: 'easeIn' },
+            },
+            collapsed: {
+              height: 0,
+              transition: { duration: 0.2, ease: 'easeOut' },
+              overflow: 'hidden',
+            },
           }}
-          transition={{ duration: 0.2, ease: 'easeOut' }}
         >
           {children}
         </motion.div>
