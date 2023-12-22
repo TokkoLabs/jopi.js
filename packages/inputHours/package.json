@@ -9,7 +9,7 @@
   "dependencies": {
     "@oneloop/box": "^1.2.277",
     "@oneloop/icons": "^1.2.299",
-    "date-fns": "2.30.0",
+    "date-fns": "3.0.6",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
