@@ -133,8 +133,8 @@ export const Checkbox = ({
         position: 'absolute',
         opacity: 0,
         overflow: 'hidden',
-        width: '100%',
-        height: '100%',
+        width: '18',
+        height: '18',
         cursor: 'pointer',
       }}
     />

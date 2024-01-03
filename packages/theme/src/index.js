@@ -2302,10 +2302,10 @@ const theme = {
       backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
     },
     contacts: {
@@ -2314,10 +2314,10 @@ const theme = {
       backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
     },
     search: {
@@ -2326,10 +2326,10 @@ const theme = {
       backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
     },
   },
