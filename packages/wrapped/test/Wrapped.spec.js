@@ -18,11 +18,7 @@ const misItems = [
 describe('Wrapped', () => {
   it('Validate list items', () => {
     const component = mount(
-      <Wrapped
-        items={misItems}
-        printKey={'name'}
-        tagVariant={'secondary'}
-      />
+      <Wrapped items={misItems} printKey={'name'} tagVariant={'secondary'} />
     )
 
     expect(component.find('Tags').length).toEqual(misItems.length + 1)
@@ -31,7 +27,7 @@ describe('Wrapped', () => {
   })
 
   it('Delete item', () => {
-    const handleDelete = (i) => misItems.filter(item => item.id !== i.id)
+    const handleDelete = (i) => misItems.filter((item) => item.id !== i.id)
 
     const component = mount(
       <Wrapped
@@ -49,11 +45,7 @@ describe('Wrapped', () => {
 
   it('Open modal restiItems', () => {
     const component = mount(
-      <Wrapped
-        items={misItems}
-        printKey={'name'}
-        tagVariant={'secondary'}
-      />
+      <Wrapped items={misItems} printKey={'name'} tagVariant={'secondary'} />
     )
 
     component.find('.numberTag').at(0).simulate('click')

@@ -6,7 +6,7 @@ import { Tags } from '../src'
 
 describe('Tags', () => {
   test('secondary', () => {
-    const tree = renderer.create(<Tags variant='secondary'>Test</Tags>).toJSON()
+    const tree = renderer.create(<Tags variant="secondary">Test</Tags>).toJSON()
 
     expect(tree).toMatchSnapshot()
   })

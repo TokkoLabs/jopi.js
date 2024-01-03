@@ -13,28 +13,37 @@ describe('Badge', () => {
   })
 
   test('secondary', () => {
-    const tree = renderer.create(<Badge variant="secondary">{'Test'}</Badge>).toJSON()
+    const tree = renderer
+      .create(<Badge variant="secondary">{'Test'}</Badge>)
+      .toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
   test('icon', () => {
-    const tree = renderer.create(
-      <Badge variant="badgeInfo" hasIcon isMedium isNotButton>
-        <span className='icon-vista' style={{ position: 'absolute', paddingTop: '0.5px' }}/>
-        <span style={{ paddingLeft: '10px' }}>{'55'}</span>
-      </Badge>
-    ).toJSON()
+    const tree = renderer
+      .create(
+        <Badge variant="badgeInfo" hasIcon isMedium isNotButton>
+          <span
+            className="icon-vista"
+            style={{ position: 'absolute', paddingTop: '0.5px' }}
+          />
+          <span style={{ paddingLeft: '10px' }}>{'55'}</span>
+        </Badge>
+      )
+      .toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
   test('iconBigRounded', () => {
-    const tree = renderer.create(
-      <Badge variant="badgeInfo" isBig isRounded>
-        <Text variatn="bodyBold.fontSize12">SE</Text>
-      </Badge>
-    ).toJSON()
+    const tree = renderer
+      .create(
+        <Badge variant="badgeInfo" isBig isRounded>
+          <Text variatn="bodyBold.fontSize12">SE</Text>
+        </Badge>
+      )
+      .toJSON()
 
     expect(tree).toMatchSnapshot()
   })

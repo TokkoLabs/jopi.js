@@ -26,7 +26,7 @@ describe('Radio', () => {
     expect(tree).toMatchSnapshot()
   })
   test('renders isMedium correctly', () => {
-    const tree = renderer.create(<Radio isMedium defaultChecked/>).toJSON()
+    const tree = renderer.create(<Radio isMedium defaultChecked />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })
