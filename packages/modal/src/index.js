@@ -57,7 +57,7 @@ export const Modal = ({
     >
       {modalBG && (
         <Box
-          onClick={closeModal}
+          onClick={closeModal || undefined}
           __css={{
             backgroundColor: '#485C66',
             opacity: '0.7',
