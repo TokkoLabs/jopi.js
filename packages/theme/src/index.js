@@ -2084,6 +2084,15 @@ const theme = {
         backgroundColor: colors.neutralGray8,
       },
     },
+    minimalist: {
+      backgroundColor: colors.white,
+      td: {
+        borderColor: '#fff !important',
+        border: 'none !important',
+        borderBottom: `solid 1px ${colors.neutralGray6} !important`,
+        borderRadius: '0px !important',
+      },
+    },
     secondarySelected: {
       backgroundColor: colors.neutralGray8,
     },

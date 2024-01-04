@@ -112,15 +112,15 @@ const TableHeaderItemDefault = ({ children, row, ...props }) => (
     {...props}
     __css={{
       color: 'white',
-      py: '12px',
+      py: '19px',
       backgroundColor: 'neutralGray2',
       '&:first-child': {
-        paddingLeft: '12px',
+        paddingLeft: '24px',
         borderBottomLeftRadius: '8px',
         borderTopLeftRadius: '8px',
       },
       '&:last-child': {
-        paddingRight: '12px',
+        paddingRight: '24px',
         borderBottomRightRadius: '8px',
         borderTopRightRadius: '8px',
       },
@@ -185,13 +185,13 @@ const TableRowItemDefault = ({ children, center, id = 0, variant = 'primary', ..
         borderTop: border,
         borderBottom: border,
         '&:first-child': {
-          paddingLeft: '12px',
+          paddingLeft: '24px',
           borderBottomLeftRadius: '8px',
           borderTopLeftRadius: '8px',
           borderLeft: border,
         },
         '&:last-child': {
-          paddingRight: '12px',
+          paddingRight: '24px',
           borderBottomRightRadius: '8px',
           borderTopRightRadius: '8px',
           borderRight: border,
