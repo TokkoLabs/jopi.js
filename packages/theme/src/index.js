@@ -2088,6 +2088,7 @@ const theme = {
       backgroundColor: colors.white,
       td: {
         borderColor: '#fff !important',
+        border: 'none !important',
         borderBottom: `solid 1px ${colors.neutralGray6} !important`,
         borderRadius: '0px !important',
       },
