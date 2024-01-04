@@ -40,10 +40,8 @@ describe('Collapsible', () => {
               text={'Emprendimientos'}
               isExpanded
               active
-            >
-            </Collapsible.Button>
-            <Collapsible.Body>
-            </Collapsible.Body>
+            ></Collapsible.Button>
+            <Collapsible.Body></Collapsible.Body>
           </Collapsible>
 
           <Collapsible width={1 / 3} isOpen={false}>
@@ -54,10 +52,8 @@ describe('Collapsible', () => {
               text={'Emprendimientos'}
               isExpanded={false}
               active={false}
-            >
-            </Collapsible.Button>
-            <Collapsible.Body>
-            </Collapsible.Body>
+            ></Collapsible.Button>
+            <Collapsible.Body></Collapsible.Body>
           </Collapsible>
 
           <Collapsible width={1 / 3} isOpen={false}>
@@ -69,8 +65,7 @@ describe('Collapsible', () => {
               isExpanded={false}
               active={false}
               badgeValue={2}
-            >
-            </Collapsible.Button>
+            ></Collapsible.Button>
           </Collapsible>
         </>
       )

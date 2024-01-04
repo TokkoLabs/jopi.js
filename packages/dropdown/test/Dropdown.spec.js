@@ -20,7 +20,7 @@ describe('Dropdown', () => {
       <Dropdown width={1 / 4}>
         <Dropdown.Button>{'Opción elegida'}</Dropdown.Button>
         <Dropdown.Items>
-          <Dropdown.Search/>
+          <Dropdown.Search />
           <Dropdown.Default>One</Dropdown.Default>
           <Dropdown.Default>Two</Dropdown.Default>
           <Dropdown.Default>Three</Dropdown.Default>
@@ -59,12 +59,14 @@ describe('Dropdown', () => {
     const tree = renderer
       .create(
         <Dropdown>
-          <Dropdown.Button icon='icon-configuracion' isButtonIcon disabled/>
+          <Dropdown.Button icon="icon-configuracion" isButtonIcon disabled />
           <Dropdown.Items>
             <Dropdown.Search />
-            <Dropdown.Icon icon='icon-agente' disabled>One</Dropdown.Icon>
-            <Dropdown.Icon icon='icon-agente'>Two</Dropdown.Icon>
-            <Dropdown.Icon icon='icon-agente'>Three</Dropdown.Icon>
+            <Dropdown.Icon icon="icon-agente" disabled>
+              One
+            </Dropdown.Icon>
+            <Dropdown.Icon icon="icon-agente">Two</Dropdown.Icon>
+            <Dropdown.Icon icon="icon-agente">Three</Dropdown.Icon>
           </Dropdown.Items>
         </Dropdown>
       )
@@ -76,16 +78,27 @@ describe('Dropdown', () => {
   test('DropdownMultiselect', () => {
     const wrapper = mount(
       <Dropdown>
-        <Dropdown.Button id='button' variant='dropdownButtonPrimary' variantSize='dropdownSizeButton' filled isArrowStatic />
+        <Dropdown.Button
+          id="button"
+          variant="dropdownButtonPrimary"
+          variantSize="dropdownSizeButton"
+          filled
+          isArrowStatic
+        />
         <Dropdown.Items>
-          <Dropdown.Item icon='icon-agente' disabled>One</Dropdown.Item>
-          <Dropdown.Item icon='icon-agente' variantSize='dropdownSizeNormal'>Two</Dropdown.Item>
-          <Dropdown.Item icon='icon-agente'>Three</Dropdown.Item>
+          <Dropdown.Item icon="icon-agente" disabled>
+            One
+          </Dropdown.Item>
+          <Dropdown.Item icon="icon-agente" variantSize="dropdownSizeNormal">
+            Two
+          </Dropdown.Item>
+          <Dropdown.Item icon="icon-agente">Three</Dropdown.Item>
         </Dropdown.Items>
-      </Dropdown>
-      , {
+      </Dropdown>,
+      {
         attachTo: window.domNode,
-      })
+      }
+    )
     expect(wrapper).toMatchSnapshot()
     const itemToClick = document.getElementById('button')
     itemToClick.click()
@@ -96,17 +109,21 @@ describe('Dropdown', () => {
       renderer
         .create(
           <>
-            <Dropdown.Button icon='icon-configuracion' isButtonIcon/>
+            <Dropdown.Button icon="icon-configuracion" isButtonIcon />
             <Dropdown.Items>
-              <Dropdown.Item icon='icon-agente' disabled>One</Dropdown.Item>
-              <Dropdown.Item icon='icon-agente'>Two</Dropdown.Item>
-              <Dropdown.Item icon='icon-agente'>Three</Dropdown.Item>
+              <Dropdown.Item icon="icon-agente" disabled>
+                One
+              </Dropdown.Item>
+              <Dropdown.Item icon="icon-agente">Two</Dropdown.Item>
+              <Dropdown.Item icon="icon-agente">Three</Dropdown.Item>
             </Dropdown.Items>
           </>
         )
         .toJSON()
     } catch (e) {
-      expect(e.message).toBe('Dropdown compound components cannot be rendered outside the Dropdown component')
+      expect(e.message).toBe(
+        'Dropdown compound components cannot be rendered outside the Dropdown component'
+      )
     }
   })
 
@@ -128,7 +145,14 @@ describe('Dropdown', () => {
     const tree = renderer
       .create(
         <Dropdown>
-          <Dropdown.Button id='button' variant='dropdownButtonPrimary' variantSize='dropdownSizeButton' filled={false} isArrowStatic icon='icon-cerrar'/>
+          <Dropdown.Button
+            id="button"
+            variant="dropdownButtonPrimary"
+            variantSize="dropdownSizeButton"
+            filled={false}
+            isArrowStatic
+            icon="icon-cerrar"
+          />
           <Dropdown.Item>
             <Dropdown.Text disabled>One</Dropdown.Text>
           </Dropdown.Item>
@@ -146,7 +170,14 @@ describe('Dropdown', () => {
     const tree = renderer
       .create(
         <Dropdown>
-          <Dropdown.Button id='button' variant='dropdownColored' variantSize='dropdownSizeButton' filled icon='icon-cerrar' disabled/>
+          <Dropdown.Button
+            id="button"
+            variant="dropdownColored"
+            variantSize="dropdownSizeButton"
+            filled
+            icon="icon-cerrar"
+            disabled
+          />
           <Dropdown.Default disabled>
             <Dropdown.Text>One</Dropdown.Text>
           </Dropdown.Default>
@@ -164,7 +195,14 @@ describe('Dropdown', () => {
     const tree = renderer
       .create(
         <Dropdown>
-          <Dropdown.Button id='button' variant='dropdownColored' variantSize='dropdownSizeButton' filled isButtonIcon icon='icon-cerrar'/>
+          <Dropdown.Button
+            id="button"
+            variant="dropdownColored"
+            variantSize="dropdownSizeButton"
+            filled
+            isButtonIcon
+            icon="icon-cerrar"
+          />
           <Dropdown.Multiselect disabled>
             <Dropdown.Text>One</Dropdown.Text>
           </Dropdown.Multiselect>
@@ -198,8 +236,12 @@ describe('Dropdown', () => {
   test('DropdownSelection', () => {
     const tree = renderer
       .create(
-        <Dropdown width='250px'>
-          <Dropdown.Button variant='dropdownTransparentSelection' selection='Seleccion' text='Placeholder'/>
+        <Dropdown width="250px">
+          <Dropdown.Button
+            variant="dropdownTransparentSelection"
+            selection="Seleccion"
+            text="Placeholder"
+          />
           <Dropdown.Items>
             <Dropdown.Icon disabled>
               <Dropdown.Text>One</Dropdown.Text>
@@ -218,8 +260,13 @@ describe('Dropdown', () => {
   test('DropdownSelectionDisabled', () => {
     const tree = renderer
       .create(
-        <Dropdown width='250px'>
-          <Dropdown.Button variant='dropdownTransparentSelectionDisabled' disabled selection='Seleccion' text='Placeholder'/>
+        <Dropdown width="250px">
+          <Dropdown.Button
+            variant="dropdownTransparentSelectionDisabled"
+            disabled
+            selection="Seleccion"
+            text="Placeholder"
+          />
           <Dropdown.Items>
             <Dropdown.Icon disabled>
               <Dropdown.Text>One</Dropdown.Text>
