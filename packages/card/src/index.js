@@ -19,6 +19,7 @@ export const Card = ({ variant = 'normal', active, ...props }) => {
           backgroundColor: backgroundColor,
           position: 'relative',
           gap: '8px',
+          cursor: 'pointer',
         }}
         />
     </Box>

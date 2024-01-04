@@ -19,7 +19,13 @@ describe('Modal', () => {
   test('renders correctly', () => {
     const tree = renderer
       .create(
-        <Modal modalBG blockScroll scrollHeight={500} fixedCLoseBtn closeModal={() => {}}>
+        <Modal
+          modalBG
+          blockScroll
+          scrollHeight={500}
+          fixedCLoseBtn
+          closeModal={() => {}}
+        >
           <Modal.Header
             onClick={() => {}}
             text="Soy un modal grande"
