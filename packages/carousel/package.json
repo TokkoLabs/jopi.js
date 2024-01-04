@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/carousel",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,10 +8,10 @@
     "styles"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.278",
-    "@oneloop/button": "^1.2.354",
-    "@oneloop/hooks": "^1.2.300",
-    "@oneloop/text": "^1.2.279",
+    "@oneloop/box": "^1.2.279",
+    "@oneloop/button": "^1.2.355",
+    "@oneloop/hooks": "^1.2.301",
+    "@oneloop/text": "^1.2.280",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
