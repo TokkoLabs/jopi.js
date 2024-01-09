@@ -630,7 +630,13 @@ export const Minimalist = () => {
     <Table>
       <Table.Header>
         {Columns.map((column, index) => (
-          <Table.HeaderItemDefault key={index}>
+          <Table.HeaderItemDefault
+            __css={{
+              paddingTop: '21px',
+              paddingBottom: '21px',
+            }}
+            key={index}
+          >
             <Text variant="bodyBold.fontSize12">{column}</Text>
           </Table.HeaderItemDefault>
         ))}
