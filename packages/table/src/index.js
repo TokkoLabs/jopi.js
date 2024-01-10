@@ -51,12 +51,7 @@ const TableHeaderItem = (props) => (
   />
 )
 
-const TableBody = (props) => (
-  <Box
-    as="tbody"
-    {...props}
-  />
-)
+const TableBody = (props) => <Box as="tbody" {...props} />
 
 const TableHeader = ({ children, ...props }) => (
   <Box as="thead">
@@ -100,7 +95,7 @@ const TableHeaderDefault = ({ children, ...props }) => (
         mb: '8px',
         height: '60px',
       }}
-      >
+    >
       {children}
     </Box>
   </Box>
@@ -124,6 +119,7 @@ const TableHeaderItemDefault = ({ children, row, ...props }) => (
         borderBottomRightRadius: '8px',
         borderTopRightRadius: '8px',
       },
+      ...props.__css,
     }}
   >
     <Box
@@ -140,7 +136,14 @@ const TableHeaderItemDefault = ({ children, row, ...props }) => (
   </Box>
 )
 
-const TableRowDefault = ({ children, disabled, variant = 'primary', selected, id = 0, ...props }) => {
+const TableRowDefault = ({
+  children,
+  disabled,
+  variant = 'primary',
+  selected,
+  id = 0,
+  ...props
+}) => {
   if (disabled) {
     variant = variant + 'Disabled'
   }
@@ -149,8 +152,8 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, id
   return (
     <Box
       as="tr"
-      tx='rows'
-      variant={ (selected && !disabled) ? variant + 'Selected' : variant }
+      tx="rows"
+      variant={selected && !disabled ? variant + 'Selected' : variant}
       onMouseOver={() => !disabled && setIdHover(id)}
       onMouseOut={() => !disabled && setIdHover(undefined)}
       {...props}
@@ -160,7 +163,7 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, id
         gap: '12px',
         backgroundColor: '#FFFFFF',
         borderRadius: '8px',
-        height: '60px',
+        height: variant === 'minimalist' ? '47px' : '60px',
         mb: '8px',
         color: disabled ? 'neutralGray4' : 'neutralGray2',
         paddingBottom: '1em',
@@ -171,10 +174,21 @@ const TableRowDefault = ({ children, disabled, variant = 'primary', selected, id
   )
 }
 
-const TableRowItemDefault = ({ children, center, id = 0, variant = 'primary', ...props }) => {
+const TableRowItemDefault = ({
+  children,
+  center,
+  id = 0,
+  variant = 'primary',
+  ...props
+}) => {
   const { idHover } = useTableContext()
-  const variantValues = Object.values(theme.rows)[Object.keys(theme.rows).indexOf(variant || 'primary')]
-  const border = idHover !== id ? (variantValues.border || '1px solid #00000000') : variantValues.borderHover
+  const variantValues = Object.values(theme.rows)[
+    Object.keys(theme.rows).indexOf(variant || 'primary')
+  ]
+  const border =
+    idHover !== id
+      ? variantValues.border || '1px solid #00000000'
+      : variantValues.borderHover
 
   return (
     <Box
