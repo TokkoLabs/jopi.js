@@ -9,10 +9,18 @@ describe('ContainerMenu', () => {
   test('renders correctly with only headers', () => {
     const tree = renderer
       .create(
-        <ContainerMenu width='252px' height='325px' prefixIcon='icon-favoritos' titleText='Favoritos'
-          suffix={ <ButtonIcon icon='icon-configuracion' variant={['subtleTrasnparentIconClearButton', 'iconExtraSmall']}/> }
-        >
-        </ContainerMenu>
+        <ContainerMenu
+          width="252px"
+          height="325px"
+          prefixIcon="icon-favoritos"
+          titleText="Favoritos"
+          suffix={
+            <ButtonIcon
+              icon="icon-configuracion"
+              variant={['subtleTrasnparentIconClearButton', 'iconExtraSmall']}
+            />
+          }
+        ></ContainerMenu>
       )
       .toJSON()
 

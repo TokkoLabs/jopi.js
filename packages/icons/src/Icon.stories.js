@@ -296,3 +296,53 @@ export const iconZonificacion = () => <Icon icon='icon-zonificacion' fontSize='2
 export const iconZoomIn = () => <Icon icon='icon-zoom-in' fontSize='24px'/>
 
 export const iconZoomOut = () => <Icon icon='icon-zoom-out' fontSize='24px'/>
+
+export const iconAguacorriente = () => <Icon icon='icon-aguacorriente' fontSize='24px'/>
+
+export const iconBalconTerraza = () => <Icon icon='icon-balconterraza' fontSize='24px'/>
+
+export const iconBusquedaReciente = () => <Icon icon='icon-busquedareciente' fontSize='24px'/>
+
+export const iconColapsar = () => <Icon icon='icon-colapsar' fontSize='24px'/>
+
+export const iconDobleCheck = () => <Icon icon='icon-doblecheck' fontSize='24px'/>
+
+export const iconDuplicados = () => <Icon icon='icon-duplicados' fontSize='24px'/>
+
+export const iconGas = () => <Icon icon='icon-gas' fontSize='24px'/>
+
+export const iconGimnasio = () => <Icon icon='icon-gimnasio' fontSize='24px'/>
+
+export const iconHabilitarPortal = () => <Icon icon='icon-habilitarportal' fontSize='24px'/>
+
+export const iconIgComentarios = () => <Icon icon='icon-igcomentarios' fontSize='24px'/>
+
+export const iconIgMeGusta = () => <Icon icon='icon-igmegusta' fontSize='24px'/>
+
+export const iconIgEnviar = () => <Icon icon='icon-igenviar' fontSize='24px'/>
+
+export const iconIgGuardar = () => <Icon icon='icon-igguardar' fontSize='24px'/>
+
+export const iconNovedades = () => <Icon icon='icon-novedades' fontSize='24px'/>
+
+export const iconNuevoEvento = () => <Icon icon='icon-nuevoevento' fontSize='24px'/>
+
+export const iconNuevoMensaje = () => <Icon icon='icon-nuevomensaje' fontSize='24px'/>
+
+export const iconParrilla = () => <Icon icon='icon-parrilla' fontSize='24px'/>
+
+export const iconPdfGrilla = () => <Icon icon='icon-pdfgrilla' fontSize='24px'/>
+
+export const iconPdfHorizontal = () => <Icon icon='icon-pdfhorizontal' fontSize='24px'/>
+
+export const iconPdfVertical = () => <Icon icon='icon-pdfvertical' fontSize='24px'/>
+
+export const iconPileta = () => <Icon icon='icon-pileta' fontSize='24px'/>
+
+export const iconSeguridad = () => <Icon icon='icon-seguridad' fontSize='24px'/>
+
+export const iconSiguiente = () => <Icon icon='icon-siguiente' fontSize='24px'/>
+
+export const iconSilenciar = () => <Icon icon='icon-silenciar' fontSize='24px'/>
+
+export const iconSolarium = () => <Icon icon='icon-solarium' fontSize='24px'/>

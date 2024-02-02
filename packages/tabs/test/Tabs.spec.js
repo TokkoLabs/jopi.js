@@ -44,10 +44,18 @@ describe('Tabs', () => {
   test('renders correctly with variant default', () => {
     const component = shallow(
       <Tabs>
-        <Tabs.Tab variant='default' id="one" onClick={console.log('works')}>One</Tabs.Tab>
-        <Tabs.Tab variant='default' id="two">Two</Tabs.Tab>
-        <Tabs.Tab variant='default' id="three">Three</Tabs.Tab>
-        <Tabs.Tab variant='default' id="four">Four</Tabs.Tab>
+        <Tabs.Tab variant="default" id="one" onClick={console.log('works')}>
+          One
+        </Tabs.Tab>
+        <Tabs.Tab variant="default" id="two">
+          Two
+        </Tabs.Tab>
+        <Tabs.Tab variant="default" id="three">
+          Three
+        </Tabs.Tab>
+        <Tabs.Tab variant="default" id="four">
+          Four
+        </Tabs.Tab>
         <Tabs.Content id="one">One Content One</Tabs.Content>
         <Tabs.Content id="three">Three Content Three</Tabs.Content>
       </Tabs>
@@ -66,12 +74,7 @@ describe('Tabs', () => {
   test('renders throw error', () => {
     try {
       const tree = () => {
-        renderer
-          .create(
-            <Tabs.Tab>
-            </Tabs.Tab>
-          )
-          .toJSON()
+        renderer.create(<Tabs.Tab></Tabs.Tab>).toJSON()
       }
       expect(tree).toThrow(Error)
     } catch (e) {

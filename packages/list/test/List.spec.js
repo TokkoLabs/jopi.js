@@ -68,12 +68,15 @@ describe('ListMultiselectClick', () => {
     const wrapper = mount(
       <List width={1 / 3}>
         <List.Multiselect disabled>Item 1</List.Multiselect>
-        <List.Multiselect id='itemToClick' isActive>Item 2</List.Multiselect>
+        <List.Multiselect id="itemToClick" isActive>
+          Item 2
+        </List.Multiselect>
         <List.Multiselect>Item 3</List.Multiselect>
-      </List>
-      , {
+      </List>,
+      {
         attachTo: window.domNode,
-      })
+      }
+    )
     expect(wrapper).toMatchSnapshot()
     const itemToClick = document.getElementById('itemToClick')
     itemToClick.click()
@@ -85,9 +88,11 @@ describe('ListIcon', () => {
     const tree = renderer
       .create(
         <List width={1 / 3}>
-          <List.Icon icon="icon-agente" disabled>Item 1</List.Icon>
-          <List.Icon icon="icon-agente" >Item 2</List.Icon>
-          <List.Icon icon="icon-agente" >Item 3</List.Icon>
+          <List.Icon icon="icon-agente" disabled>
+            Item 1
+          </List.Icon>
+          <List.Icon icon="icon-agente">Item 2</List.Icon>
+          <List.Icon icon="icon-agente">Item 3</List.Icon>
         </List>
       )
       .toJSON()
