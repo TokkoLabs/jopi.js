@@ -11,7 +11,7 @@ export const Modal = ({
   modalBG,
   blockScroll = false,
   closeModal = false,
-  scrollHeight = false,
+  scrollHeight = '600px',
   fixedCLoseBtn = false,
   ...props
 }) => {
@@ -76,7 +76,7 @@ export const Modal = ({
           position: 'relative',
           maxWidth: '900px',
           minWidth: '380px !important',
-          height: `${scrollHeight}px`,
+          height: `${scrollHeight}`,
           background: theme.colors.white,
           borderRadius: '16px',
           boxSizing: 'border-box',
@@ -119,7 +119,7 @@ export const Modal = ({
             display: 'flex',
             flexDirection: 'column',
             gap: '24px',
-            height: `${scrollHeight}px`,
+            height: `${scrollHeight}`,
           }}
         >
           {children}
