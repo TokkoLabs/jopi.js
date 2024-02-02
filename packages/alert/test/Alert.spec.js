@@ -28,8 +28,14 @@ describe('Alert', () => {
 
   test('closed', () => {
     const closeFuction = () => {}
-    const component = shallow(<Alert id='itemToClick' closeFunction={closeFuction} text="Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!" />)
-    expect(component.find(<Icon/>).exists).toBeTruthy()
+    const component = shallow(
+      <Alert
+        id="itemToClick"
+        closeFunction={closeFuction}
+        text="Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!"
+      />
+    )
+    expect(component.find(<Icon />).exists).toBeTruthy()
     component.find(Icon).simulate('click')
 
     expect(component).toMatchSnapshot()

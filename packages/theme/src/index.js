@@ -2084,6 +2084,15 @@ const theme = {
         backgroundColor: colors.neutralGray8,
       },
     },
+    minimalist: {
+      backgroundColor: colors.white,
+      td: {
+        borderColor: '#fff !important',
+        border: 'none !important',
+        borderBottom: `solid 1px ${colors.neutralGray6} !important`,
+        borderRadius: '0px !important',
+      },
+    },
     secondarySelected: {
       backgroundColor: colors.neutralGray8,
     },
@@ -2302,10 +2311,10 @@ const theme = {
       backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
     },
     contacts: {
@@ -2314,10 +2323,10 @@ const theme = {
       backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
     },
     search: {
@@ -2326,10 +2335,10 @@ const theme = {
       backgroundColorValue: colors.neutralGray9,
       borderRadius: '10px',
       ':hover': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
       ':focus': {
-        backgroundColor: colors.neutralGray7,
+        backgroundColor: colors.neutralGray6,
       },
     },
   },

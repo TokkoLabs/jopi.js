@@ -44,7 +44,7 @@ exports[`Modal renders correctly 1`] = `
   position: relative;
   max-width: 900px;
   min-width: 380px !important;
-  height: 500px;
+  height: 500;
   background: #FFFFFF;
   border-radius: 16px;
   box-sizing: border-box;
@@ -93,7 +93,7 @@ exports[`Modal renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 24px;
-  height: 500px;
+  height: 500;
 }
 
 .c5::-webkit-scrollbar {

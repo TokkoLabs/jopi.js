@@ -17,10 +17,7 @@ for (let i = 0; i < 24; i++) {
 describe('InputHours', () => {
   it('renders correctly', () => {
     const component = shallow(
-      <InputHours
-        inputTime={new Date()}
-        arrayInput={defaultHours}
-      />
+      <InputHours inputTime={new Date()} arrayInput={defaultHours} />
     )
 
     expect(component).toMatchSnapshot()
@@ -28,10 +25,7 @@ describe('InputHours', () => {
 
   it('show dropdown', () => {
     const component = mount(
-      <InputHours
-        inputTime={new Date()}
-        arrayInput={defaultHours}
-      />
+      <InputHours inputTime={new Date()} arrayInput={defaultHours} />
     )
     const listWrapper = component.find('.list')
 
@@ -40,10 +34,7 @@ describe('InputHours', () => {
 
   it('change hour', () => {
     const component = mount(
-      <InputHours
-        inputTime={new Date()}
-        arrayInput={defaultHours}
-      />
+      <InputHours inputTime={new Date()} arrayInput={defaultHours} />
     )
     const input = component.find('.inputHourDisplay').at(1)
     const item = component.find('li').at(5)
