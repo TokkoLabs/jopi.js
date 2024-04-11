@@ -112,7 +112,8 @@ exports[`Toast renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -158,13 +159,8 @@ exports[`Toast renders correctly 1`] = `
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "14px",
             }
           }
@@ -300,7 +296,8 @@ exports[`Toast renders correctly five 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -370,13 +367,8 @@ exports[`Toast renders correctly five 1`] = `
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "14px",
             }
           }
@@ -438,7 +430,8 @@ exports[`Toast renders correctly four 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 32px;
   height: 32px;
 }
@@ -506,7 +499,8 @@ exports[`Toast renders correctly four 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -535,13 +529,8 @@ exports[`Toast renders correctly four 1`] = `
         className="icon-check"
         style={
           {
-            "bottom": "0px",
             "fontSize": "32px",
             "height": "32px",
-            "left": "-0.5px",
-            "position": "absolute",
-            "right": "0px",
-            "top": "-1px",
             "width": "32px",
           }
         }
@@ -571,13 +560,8 @@ exports[`Toast renders correctly four 1`] = `
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "14px",
             }
           }
@@ -639,7 +623,8 @@ exports[`Toast renders correctly four 2`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 32px;
   height: 32px;
 }
@@ -707,7 +692,8 @@ exports[`Toast renders correctly four 2`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -736,13 +722,8 @@ exports[`Toast renders correctly four 2`] = `
         className="icon-error"
         style={
           {
-            "bottom": "0px",
             "fontSize": "32px",
             "height": "32px",
-            "left": "-0.5px",
-            "position": "absolute",
-            "right": "0px",
-            "top": "-1px",
             "width": "32px",
           }
         }
@@ -772,13 +753,8 @@ exports[`Toast renders correctly four 2`] = `
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "14px",
             }
           }
@@ -840,7 +816,8 @@ exports[`Toast renders correctly seven 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 32px;
   height: 32px;
 }
@@ -908,7 +885,8 @@ exports[`Toast renders correctly seven 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 12px;
   height: 12px;
 }
@@ -953,7 +931,8 @@ exports[`Toast renders correctly seven 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -982,13 +961,8 @@ exports[`Toast renders correctly seven 1`] = `
         className="icon-check"
         style={
           {
-            "bottom": "0px",
             "fontSize": "32px",
             "height": "32px",
-            "left": "-0.5px",
-            "position": "absolute",
-            "right": "0px",
-            "top": "-1px",
             "width": "32px",
           }
         }
@@ -1017,13 +991,8 @@ exports[`Toast renders correctly seven 1`] = `
             className="icon-descargar"
             style={
               {
-                "bottom": "0px",
                 "fontSize": "12px",
                 "height": "12px",
-                "left": "-0.5px",
-                "position": "absolute",
-                "right": "0px",
-                "top": "-1px",
                 "width": "12px",
               }
             }
@@ -1051,13 +1020,8 @@ exports[`Toast renders correctly seven 1`] = `
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "14px",
             }
           }
@@ -1193,7 +1157,8 @@ exports[`Toast renders correctly six 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -1263,13 +1228,8 @@ exports[`Toast renders correctly six 1`] = `
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "14px",
             }
           }
@@ -1331,7 +1291,8 @@ exports[`Toast renders correctly three 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 32px;
   height: 32px;
 }
@@ -1399,7 +1360,8 @@ exports[`Toast renders correctly three 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -1428,13 +1390,8 @@ exports[`Toast renders correctly three 1`] = `
         className="icon-alertas"
         style={
           {
-            "bottom": "0px",
             "fontSize": "32px",
             "height": "32px",
-            "left": "-0.5px",
-            "position": "absolute",
-            "right": "0px",
-            "top": "-1px",
             "width": "32px",
           }
         }
@@ -1464,13 +1421,8 @@ exports[`Toast renders correctly three 1`] = `
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "14px",
             }
           }

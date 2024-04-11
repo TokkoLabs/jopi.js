@@ -131,7 +131,8 @@ exports[`Icon renders correctly Icon 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 24px;
   height: 24px;
 }
@@ -143,13 +144,8 @@ exports[`Icon renders correctly Icon 1`] = `
     className="icon-agregar"
     style={
       {
-        "bottom": "0px",
         "fontSize": "24px",
         "height": "24px",
-        "left": "-0.5px",
-        "position": "absolute",
-        "right": "0px",
-        "top": "-1px",
         "width": "24px",
       }
     }

@@ -55,8 +55,8 @@ exports[`Modal renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-color: #FFF;
   position: absolute;
   border-radius: 50%;
@@ -64,7 +64,6 @@ exports[`Modal renders correctly 1`] = `
   right: -7px;
   display: grid;
   place-items: center;
-  padding: 0px 0px 0px 1px;
   cursor: pointer;
   box-shadow: 4px 4px 12px 0px rgba(87,95,99,0.25);
 }
@@ -73,7 +72,8 @@ exports[`Modal renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 12px;
   height: 12px;
   color: #344149;
@@ -83,7 +83,6 @@ exports[`Modal renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  overflow-y: auto;
   padding: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -94,10 +93,6 @@ exports[`Modal renders correctly 1`] = `
   flex-direction: column;
   gap: 24px;
   height: 500;
-}
-
-.c5::-webkit-scrollbar {
-  display: none;
 }
 
 .c6 {
@@ -167,13 +162,8 @@ exports[`Modal renders correctly 1`] = `
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "12px",
               "height": "12px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "12px",
             }
           }
