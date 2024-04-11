@@ -38,6 +38,7 @@ export const Carousel = ({
   planos = [],
   video = [],
   video360 = [],
+  otherComponent = false,
   ...props
 }) => {
   const Images = [...images, ...planos]
@@ -126,163 +127,164 @@ export const Carousel = ({
   }
 
   return (
-    <Box
-      __css={{
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        height: '263px',
-      }}
-      {...props}
-    >
-      <Box
-        onClick={toggleFullscreen}
-        className="firstTabImg"
-        __css={{
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '69%',
-          height: '100%',
-          background: theme.colors.neutralGray8,
-          borderRadius: '12px',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundImage: `url(${Images[0]})`,
-          cursor: 'pointer',
-        }}
-      >
-        {!Images[0] && (
-          <Icon
-            icon="icon-propiedades"
-            fontSize="34px"
-            color={theme.colors.neutralGray4}
-          />
-        )}
+    <Box __css={{ position: 'relative' }}>
+      {!otherComponent ? (
+        <Box
+          {...props}
+          __css={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            height: '263px',
+          }}
+        >
+          <Box
+            onClick={toggleFullscreen}
+            className="firstTabImg"
+            __css={{
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '69%',
+              height: '100%',
+              background: theme.colors.neutralGray8,
+              borderRadius: '12px',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundImage: `url(${Images[0]})`,
+              cursor: 'pointer',
+            }}
+          >
+            {!Images[0] && (
+              <Icon
+                icon="icon-propiedades"
+                fontSize="34px"
+                color={theme.colors.neutralGray4}
+              />
+            )}
 
-        <Box
-          __css={{
-            position: 'absolute',
-            bottom: '16px',
-            right: '16px',
-            display: 'flex',
-            gap: '8px',
-          }}
-        >
-          {video.length > 0 && (
-            <ButtonGallery
-              text={'Videos'}
-              onClick={() => setTabSelected('videos')}
-            />
-          )}
-          {video360.length > 0 && (
-            <ButtonGallery
-              text={'Video 360°'}
-              onClick={() => setTabSelected('video360')}
-            />
-          )}
-          {images.length > 0 && (
-            <ButtonGallery
-              className="buttonGallery"
-              text={'Fotos'}
-              onClick={() => setTabSelected('fotos')}
-            />
-          )}
-          {planos.length > 0 && (
-            <ButtonGallery
-              text={'Planos'}
-              onClick={() => setTabSelected('planos')}
-            />
-          )}
-        </Box>
-      </Box>
-      <Box
-        onClick={toggleFullscreen}
-        __css={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          width: '29%',
-          height: '100%',
-        }}
-      >
-        <Box
-          __css={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: theme.colors.neutralGray8,
-            width: '100%',
-            height: '47%',
-            borderRadius: '12px',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundImage: `url(${Images[1]})`,
-            cursor: 'pointer',
-          }}
-        >
-          {!Images[1] && (
-            <Icon
-              icon="icon-propiedades"
-              fontSize="24px"
-              color={theme.colors.neutralGray4}
-            />
-          )}
-        </Box>
-        <Box
-          __css={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: theme.colors.neutralGray8,
-            width: '100%',
-            height: '47%',
-            borderRadius: '12px',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundImage: `url(${Images[2]})`,
-            cursor: 'pointer',
-          }}
-        >
-          {!Images[2] && (
-            <Icon
-              icon="icon-propiedades"
-              fontSize="24px"
-              color={theme.colors.neutralGray4}
-            />
-          )}
-          {images.length > 3 && (
             <Box
               __css={{
-                padding: '14px 15px',
-                borderRadius: '50%',
-                backgroundColor: theme.colors.neutralGray8,
-                opacity: '0.8',
-                color: theme.colors.black,
-                fontFamily: 'Nunito Sans',
-                fontSize: '14px',
-                fontWeight: '700',
+                position: 'absolute',
+                bottom: '16px',
+                right: '16px',
+                display: 'flex',
+                gap: '8px',
               }}
-            >{`+${images.length - 3}`}</Box>
-          )}
+            >
+              {video.length > 0 && (
+                <ButtonGallery
+                  text={'Videos'}
+                  onClick={() => setTabSelected('videos')}
+                />
+              )}
+              {video360.length > 0 && (
+                <ButtonGallery
+                  text={'Video 360°'}
+                  onClick={() => setTabSelected('video360')}
+                />
+              )}
+              {images.length > 0 && (
+                <ButtonGallery
+                  className="buttonGallery"
+                  text={'Fotos'}
+                  onClick={() => setTabSelected('fotos')}
+                />
+              )}
+              {planos.length > 0 && (
+                <ButtonGallery
+                  text={'Planos'}
+                  onClick={() => setTabSelected('planos')}
+                />
+              )}
+            </Box>
+          </Box>
+
+          <Box
+            onClick={toggleFullscreen}
+            __css={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              width: '29%',
+              height: '100%',
+            }}
+          >
+            <Box
+              __css={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: theme.colors.neutralGray8,
+                width: '100%',
+                height: '47%',
+                borderRadius: '12px',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundImage: `url(${Images[1]})`,
+                cursor: 'pointer',
+              }}
+            >
+              {!Images[1] && (
+                <Icon
+                  icon="icon-propiedades"
+                  fontSize="24px"
+                  color={theme.colors.neutralGray4}
+                />
+              )}
+            </Box>
+            <Box
+              __css={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: theme.colors.neutralGray8,
+                width: '100%',
+                height: '47%',
+                borderRadius: '12px',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundImage: `url(${Images[2]})`,
+                cursor: 'pointer',
+              }}
+            >
+              {!Images[2] && (
+                <Icon
+                  icon="icon-propiedades"
+                  fontSize="24px"
+                  color={theme.colors.neutralGray4}
+                />
+              )}
+              {images.length > 3 && (
+                <Box
+                  __css={{
+                    width: '48px',
+                    height: '48px',
+                    display: 'grid',
+                    placeItems: 'center',
+                    borderRadius: '50%',
+                    backgroundColor: theme.colors.neutralGray8,
+                    opacity: '0.8',
+                    color: theme.colors.black,
+                    fontFamily: 'Nunito Sans',
+                    fontSize: '14px',
+                    fontWeight: '700',
+                  }}
+                >{`+${images.length - 3}`}</Box>
+              )}
+            </Box>
+          </Box>
         </Box>
-      </Box>
+      ) : (
+        <Box onClick={toggleFullscreen}>{otherComponent}</Box>
+      )}
 
       <Box className={`fullscreen ${fullscreen ? 'openFullscreen' : ''}`}>
         <Box className="fsOverlay" onClick={closeFullscreen}></Box>
-        <Box className="fsCloseIcon">
-          <Icon
-            onClick={closeFullscreen}
-            className="closeIcon"
-            icon="icon-cerrar"
-            fontSize="32px"
-          />
-        </Box>
         {tabContainers.length > 1 && (
           <Box className="fsTabHeader">
             {tabContainers.map((tab, i) => (
@@ -299,7 +301,7 @@ export const Carousel = ({
             ))}
           </Box>
         )}
-        <Box className="fsContainerTabs">
+        <Box className="fsContainerTabs" __css={{ position: 'relative' }}>
           {/* Containers */}
 
           <Icon
@@ -374,6 +376,15 @@ export const Carousel = ({
             icon="icon-atras"
             fontSize="40px"
           />
+
+          <Box className="fsCloseIcon">
+            <Icon
+              onClick={closeFullscreen}
+              className="closeIcon"
+              icon="icon-cerrar"
+              fontSize="32px"
+            />
+          </Box>
         </Box>
       </Box>
     </Box>
