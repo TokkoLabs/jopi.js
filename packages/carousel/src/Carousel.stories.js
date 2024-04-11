@@ -26,7 +26,12 @@ export const CarouselComponent = () => {
 
   return (
     <Box __css={{ width: '770px' }}>
-      <Carousel images={imgs} video={VIDEO} planos={PLANO} video360={Video360} />
+      <Carousel
+        images={imgs}
+        video={VIDEO}
+        planos={PLANO}
+        video360={Video360}
+      />
     </Box>
   )
 }
@@ -41,5 +46,16 @@ export const CarouselPocasImg = () => {
     <Box __css={{ width: '770px' }}>
       <Carousel images={imgs} />
     </Box>
+  )
+}
+
+export const OpenWithButton = () => {
+  const imgs = [
+    'https://www.wallpaperuse.com/wallp/0-9852_m.jpg',
+    'https://i.blogs.es/439f3b/casa1/450_1000.png',
+  ]
+
+  return (
+    <Carousel images={imgs} otherComponent={<div>Mostrar full view</div>} />
   )
 }

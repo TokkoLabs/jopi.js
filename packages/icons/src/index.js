@@ -86,17 +86,13 @@ export const Icon = ({ icon, fontSize, ...props }) => (
   <Box
     {...props}
     __css={{
-      position: 'relative',
+      display: 'grid',
+      placeItems: 'center',
       width: fontSize,
       height: fontSize,
     }}
   >
     <i className={icon} style={{
-      position: 'absolute',
-      top: '-1px',
-      right: '0px',
-      bottom: '0px',
-      left: '-0.5px',
       fontSize: fontSize,
       width: fontSize,
       height: fontSize,

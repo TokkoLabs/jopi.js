@@ -88,8 +88,8 @@ export const Modal = ({
           <Box
             onClick={closeModal}
             __css={{
-              width: '20px',
-              height: '20px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#FFF',
               position: 'absolute',
               borderRadius: '50%',
@@ -97,7 +97,6 @@ export const Modal = ({
               right: '-7px',
               display: 'grid',
               placeItems: 'center',
-              padding: '0px 0px 0px 1px',
               cursor: 'pointer',
               boxShadow: '4px 4px 12px 0px rgba(87, 95, 99, 0.25)',
             }}
@@ -111,10 +110,6 @@ export const Modal = ({
         )}
         <Box
           __css={{
-            '::-webkit-scrollbar': {
-              display: 'none',
-            },
-            overflowY: 'auto',
             padding: '24px',
             display: 'flex',
             flexDirection: 'column',

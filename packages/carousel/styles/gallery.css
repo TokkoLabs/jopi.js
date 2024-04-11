@@ -99,13 +99,13 @@
 .fsTabContImage p {
   color: #fff;
   position: absolute;
-  bottom: 50px;
+  bottom: 0px;
 }
 
 .fsCloseIcon {
   position: absolute;
   color: #fff;
-  right: 156px;
-  top: 55px;
+  right: 4px;
+  top: 0px;
   cursor: pointer;
 }
