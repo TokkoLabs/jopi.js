@@ -77,7 +77,8 @@ exports[`Dropdown DropdownDefault 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 16px;
   height: 16px;
 }
@@ -86,7 +87,8 @@ exports[`Dropdown DropdownDefault 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 12px;
   height: 12px;
 }
@@ -213,13 +215,8 @@ exports[`Dropdown DropdownDefault 1`] = `
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "16px",
               "height": "16px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "16px",
             }
           }
@@ -250,13 +247,8 @@ exports[`Dropdown DropdownDefault 1`] = `
           className="icon-dropdown"
           style={
             {
-              "bottom": "0px",
               "fontSize": "12px",
               "height": "12px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "12px",
             }
           }
@@ -416,7 +408,8 @@ exports[`Dropdown DropdownItem 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 16px;
   height: 16px;
 }
@@ -459,8 +452,8 @@ exports[`Dropdown DropdownItem 1`] = `
   position: absolute;
   opacity: 0;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
 }
 
@@ -562,13 +555,8 @@ input:disabled:not(:checked) ~ .c14 {
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "16px",
               "height": "16px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "16px",
             }
           }
@@ -589,13 +577,8 @@ input:disabled:not(:checked) ~ .c14 {
           className="icon-dropdown"
           style={
             {
-              "bottom": "0px",
               "fontSize": "16px",
               "height": "16px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "16px",
             }
           }
@@ -1086,7 +1069,8 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -1173,8 +1157,8 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   position: absolute;
   opacity: 0;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
 }
 
@@ -1342,13 +1326,8 @@ input:disabled:not(:checked) ~ .c16 {
           className="icon-cerrar"
           style={
             {
-              "bottom": "0px",
               "fontSize": "14px",
               "height": "14px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "14px",
             }
           }
@@ -1732,7 +1711,8 @@ exports[`Dropdown DropdownMultiselect 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 12px;
   height: 12px;
 }
@@ -1767,13 +1747,8 @@ exports[`Dropdown DropdownMultiselect 1`] = `
           className="icon-dropdown"
           style={
             {
-              "bottom": "0px",
               "fontSize": "12px",
               "height": "12px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "12px",
             }
           }
@@ -1839,7 +1814,8 @@ exports[`Dropdown DropdownMultiselect 2`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -1870,13 +1846,8 @@ exports[`Dropdown DropdownMultiselect 2`] = `
           className="icon-configuracion"
           style={
             {
-              "bottom": "0px",
               "fontSize": 14,
               "height": 14,
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": 14,
             }
           }
@@ -1965,7 +1936,8 @@ exports[`Dropdown DropdownSelection 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 12px;
   height: 12px;
 }
@@ -2013,13 +1985,8 @@ exports[`Dropdown DropdownSelection 1`] = `
           className="icon-dropdown"
           style={
             {
-              "bottom": "0px",
               "fontSize": "12px",
               "height": "12px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "12px",
             }
           }
@@ -2106,7 +2073,8 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 12px;
   height: 12px;
 }
@@ -2153,13 +2121,8 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
           className="icon-dropdown"
           style={
             {
-              "bottom": "0px",
               "fontSize": "12px",
               "height": "12px",
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": "12px",
             }
           }

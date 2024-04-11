@@ -60,7 +60,8 @@ exports[`Submenu renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 18px;
   height: 18px;
 }
@@ -142,13 +143,8 @@ exports[`Submenu renders correctly 1`] = `
               className="icon-propiedades"
               style={
                 {
-                  "bottom": "0px",
                   "fontSize": "18px",
                   "height": "18px",
-                  "left": "-0.5px",
-                  "position": "absolute",
-                  "right": "0px",
-                  "top": "-1px",
                   "width": "18px",
                 }
               }

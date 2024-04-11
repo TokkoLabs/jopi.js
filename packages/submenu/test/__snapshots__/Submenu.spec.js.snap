@@ -60,7 +60,8 @@ exports[`Submenu first case 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 18px;
   height: 18px;
 }
@@ -134,7 +135,8 @@ exports[`Submenu first case 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 12px;
   height: 12px;
 }
@@ -175,13 +177,8 @@ exports[`Submenu first case 1`] = `
               className="icon-propiedades"
               style={
                 {
-                  "bottom": "0px",
                   "fontSize": "18px",
                   "height": "18px",
-                  "left": "-0.5px",
-                  "position": "absolute",
-                  "right": "0px",
-                  "top": "-1px",
                   "width": "18px",
                 }
               }
@@ -221,13 +218,8 @@ exports[`Submenu first case 1`] = `
                 className="icon-contactos"
                 style={
                   {
-                    "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
-                    "left": "-0.5px",
-                    "position": "absolute",
-                    "right": "0px",
-                    "top": "-1px",
                     "width": "12px",
                   }
                 }
@@ -252,13 +244,8 @@ exports[`Submenu first case 1`] = `
                 className="icon-empresa"
                 style={
                   {
-                    "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
-                    "left": "-0.5px",
-                    "position": "absolute",
-                    "right": "0px",
-                    "top": "-1px",
                     "width": "12px",
                   }
                 }
@@ -283,13 +270,8 @@ exports[`Submenu first case 1`] = `
                 className="icon-propiedades"
                 style={
                   {
-                    "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
-                    "left": "-0.5px",
-                    "position": "absolute",
-                    "right": "0px",
-                    "top": "-1px",
                     "width": "12px",
                   }
                 }
@@ -314,13 +296,8 @@ exports[`Submenu first case 1`] = `
                 className="icon-emprendimientos"
                 style={
                   {
-                    "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
-                    "left": "-0.5px",
-                    "position": "absolute",
-                    "right": "0px",
-                    "top": "-1px",
                     "width": "12px",
                   }
                 }
@@ -345,13 +322,8 @@ exports[`Submenu first case 1`] = `
                 className="icon-email"
                 style={
                   {
-                    "bottom": "0px",
                     "fontSize": "12px",
                     "height": "12px",
-                    "left": "-0.5px",
-                    "position": "absolute",
-                    "right": "0px",
-                    "top": "-1px",
                     "width": "12px",
                   }
                 }

@@ -132,7 +132,8 @@ exports[`Input errors 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
   width: 14px;
   height: 14px;
 }
@@ -183,13 +184,8 @@ exports[`Input errors 1`] = `
         className="icon-error"
         style={
           {
-            "bottom": "0px",
             "fontSize": "14px",
             "height": "14px",
-            "left": "-0.5px",
-            "position": "absolute",
-            "right": "0px",
-            "top": "-1px",
             "width": "14px",
           }
         }
@@ -865,7 +861,8 @@ exports[`Input inputWithPasswordIcon 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
 }
 
 @media screen and (min-width:40em) {
@@ -912,13 +909,8 @@ exports[`Input inputWithPasswordIcon 1`] = `
           className="icon-ocultar"
           style={
             {
-              "bottom": "0px",
               "fontSize": undefined,
               "height": undefined,
-              "left": "-0.5px",
-              "position": "absolute",
-              "right": "0px",
-              "top": "-1px",
               "width": undefined,
             }
           }
@@ -1276,7 +1268,8 @@ exports[`Input searchBoldIcon 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: relative;
+  display: grid;
+  place-items: center;
 }
 
 .c3 {
@@ -1312,13 +1305,8 @@ exports[`Input searchBoldIcon 1`] = `
         className="icon-buscar"
         style={
           {
-            "bottom": "0px",
             "fontSize": undefined,
             "height": undefined,
-            "left": "-0.5px",
-            "position": "absolute",
-            "right": "0px",
-            "top": "-1px",
             "width": undefined,
           }
         }
