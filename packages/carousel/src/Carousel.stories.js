@@ -38,13 +38,13 @@ export const CarouselComponent = () => {
 
 export const CarouselPocasImg = () => {
   const imgs = [
-    'https://www.wallpaperuse.com/wallp/0-9852_m.jpg',
+    'https://static.tokkobroker.com/pictures/53597579023351052068944175327171081899881857570308647696598826336228770716010.jpg',
     'https://i.blogs.es/439f3b/casa1/450_1000.png',
   ]
 
   return (
     <Box __css={{ width: '770px' }}>
-      <Carousel images={imgs} />
+      <Carousel planos={imgs} />
     </Box>
   )
 }
