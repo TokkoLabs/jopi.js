@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/toast",
-  "version": "1.0.86",
+  "version": "1.0.87",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,8 +8,8 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.283",
-    "@oneloop/button": "^1.2.359",
-    "@oneloop/icons": "^1.2.305",
+    "@oneloop/button": "^1.2.360",
+    "@oneloop/icons": "^1.2.306",
     "@oneloop/loader": "^1.2.324",
     "@oneloop/text": "^1.2.284"
   },
