@@ -33,6 +33,54 @@ const ButtonGallery = ({ text, ...props }) => (
   </Box>
 )
 
+const ImageCard = ({ url, styles, children, ...props }) => {
+  const [rectangle, setRectangle] = useState(false)
+
+  const isRectangle = async () => {
+    const isRectangle = await validateImageDimensions(url)
+    return setRectangle(isRectangle)
+  }
+
+  useEffect(() => {
+    isRectangle()
+  }, [url])
+
+  return (
+    <Box
+      __css={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: theme.colors.neutralGray8,
+        width: '100%',
+        height: '47%',
+        borderRadius: '12px',
+        backgroundSize: rectangle ? 'cover' : 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundImage: `url(${url})`,
+        cursor: 'pointer',
+        ...styles,
+      }}
+      {...props}
+    >
+      {children}
+    </Box>
+  )
+}
+
+const validateImageDimensions = async (imageUrl) => {
+  // eslint-disable-next-line no-undef
+  const img = new Image()
+  img.src = imageUrl
+
+  await new Promise((resolve) => {
+    img.onload = () => resolve()
+  })
+
+  return img.width > img.height
+}
+
 export const Carousel = ({
   images = [],
   planos = [],
@@ -117,6 +165,9 @@ export const Carousel = ({
       images.length > 0 ||
       planos.length > 0
     ) {
+      if (planos.length > 0 && !images.length > 0) {
+        setTabSelected('planos')
+      }
       setFullscreen(true)
     }
   }
@@ -138,24 +189,15 @@ export const Carousel = ({
             height: '263px',
           }}
         >
-          <Box
+          <ImageCard
             onClick={toggleFullscreen}
             className="firstTabImg"
-            __css={{
+            styles={{
               position: 'relative',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
               width: '69%',
               height: '100%',
-              background: theme.colors.neutralGray8,
-              borderRadius: '12px',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundImage: `url(${Images[0]})`,
-              cursor: 'pointer',
             }}
+            url={Images[0]}
           >
             {!Images[0] && (
               <Icon
@@ -200,7 +242,7 @@ export const Carousel = ({
                 />
               )}
             </Box>
-          </Box>
+          </ImageCard>
 
           <Box
             onClick={toggleFullscreen}
@@ -212,22 +254,7 @@ export const Carousel = ({
               height: '100%',
             }}
           >
-            <Box
-              __css={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: theme.colors.neutralGray8,
-                width: '100%',
-                height: '47%',
-                borderRadius: '12px',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundImage: `url(${Images[1]})`,
-                cursor: 'pointer',
-              }}
-            >
+            <ImageCard url={Images[1]}>
               {!Images[1] && (
                 <Icon
                   icon="icon-propiedades"
@@ -235,23 +262,9 @@ export const Carousel = ({
                   color={theme.colors.neutralGray4}
                 />
               )}
-            </Box>
-            <Box
-              __css={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: theme.colors.neutralGray8,
-                width: '100%',
-                height: '47%',
-                borderRadius: '12px',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundImage: `url(${Images[2]})`,
-                cursor: 'pointer',
-              }}
-            >
+            </ImageCard>
+
+            <ImageCard url={Images[2]}>
               {!Images[2] && (
                 <Icon
                   icon="icon-propiedades"
@@ -276,7 +289,7 @@ export const Carousel = ({
                   }}
                 >{`+${images.length - 3}`}</Box>
               )}
-            </Box>
+            </ImageCard>
           </Box>
         </Box>
       ) : (
