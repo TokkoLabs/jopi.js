@@ -87,14 +87,28 @@ export const Carousel = ({
   video = [],
   video360 = [],
   otherComponent = false,
+  frontCoverImg = false,
+  frontCoverBlueprints = false,
   ...props
 }) => {
-  const Images = [...images, ...planos]
   const [fullscreen, setFullscreen] = useState(false)
   const [tabSelected, setTabSelected] = useState('fotos')
   const tabContainers = []
   const [index, setIndex] = useState(0)
   const [contTab, setContTab] = useState(0)
+  const Images = [...images, ...planos]
+  const imgWithCover = [...images]
+  const bluePrintsWithCover = [...planos]
+
+  if (frontCoverImg) {
+    Images.unshift(frontCoverImg)
+    imgWithCover.unshift(frontCoverImg)
+  }
+
+  if (frontCoverBlueprints) {
+    Images.unshift(frontCoverBlueprints)
+    bluePrintsWithCover.unshift(frontCoverBlueprints)
+  }
 
   const changeTabContainer = (tab) => {
     setIndex(0)
@@ -122,9 +136,9 @@ export const Carousel = ({
     if (tabSelected === 'videos') {
       newContTab = video.length
     } else if (tabSelected === 'fotos') {
-      newContTab = images.length
+      newContTab = imgWithCover.length
     } else if (tabSelected === 'planos') {
-      newContTab = planos.length
+      newContTab = bluePrintsWithCover.length
     } else if (tabSelected === 'video360') {
       newContTab = video360.length
     }
@@ -175,6 +189,7 @@ export const Carousel = ({
   const closeFullscreen = () => {
     setFullscreen(false)
     setTabSelected('fotos')
+    setIndex(0)
   }
 
   return (
@@ -287,7 +302,7 @@ export const Carousel = ({
                     fontSize: '14px',
                     fontWeight: '700',
                   }}
-                >{`+${images.length - 3}`}</Box>
+                >{`+${Images.length - 3}`}</Box>
               )}
             </ImageCard>
           </Box>
@@ -327,10 +342,10 @@ export const Carousel = ({
           {tabSelected === 'fotos' && (
             <Box className="fsTabCont">
               <Box className="fsTabContImage">
-                <img src={images[index]} alt="Foto" />
+                <img src={imgWithCover[index]} alt="Foto" />
                 <Text className="contFotos" variant="bodyBold.fontSize14">{`${
                   index + 1
-                }/${images.length}`}</Text>
+                }/${imgWithCover.length}`}</Text>
               </Box>
             </Box>
           )}
@@ -356,9 +371,9 @@ export const Carousel = ({
           {tabSelected === 'planos' && (
             <Box className="fsTabCont">
               <Box className="fsTabContImage">
-                <img src={planos[index]} alt="Foto" />
+                <img src={bluePrintsWithCover[index]} alt="Foto" />
                 <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                  planos.length
+                  bluePrintsWithCover.length
                 }`}</Text>
               </Box>
             </Box>
