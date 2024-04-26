@@ -1,10 +1,24 @@
 /* eslint-disable multiline-ternary */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
 import { Icon } from '@oneloop/icons'
 import '../styles/gallery.css'
 import { Text } from '@oneloop/text'
+
+function useWindowResize(data, occupiedWindowPercenajege = 100) {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    if (data) return
+    const changeWidth = () => {
+      setWindowWidth(window.innerWidth * (occupiedWindowPercenajege / 100))
+    }
+    window.addEventListener('resize', changeWidth)
+  }, [])
+
+  return { windowWidth }
+}
 
 const ButtonGallery = ({ text, ...props }) => (
   <Box
@@ -91,6 +105,7 @@ export const Carousel = ({
   frontCoverBlueprints = false,
   ...props
 }) => {
+  const { windowWidth: width } = useWindowResize()
   const [fullscreen, setFullscreen] = useState(false)
   const [tabSelected, setTabSelected] = useState('fotos')
   const tabContainers = []
@@ -110,6 +125,14 @@ export const Carousel = ({
     bluePrintsWithCover.unshift(frontCoverBlueprints)
   }
 
+  const [emptyImgArray, setEmptyImgArray] = useState([])
+  const [followImgWidth, setFollowImgWidth] = useState(0)
+  const carouselContainerRef = useRef()
+  const mainImageRef = useRef()
+  const parentContainer = carouselContainerRef.current?.parentElement
+  const followingImagesContainer =
+    parentContainer?.clientWidth - mainImageRef.current?.offsetWidth
+  const [followImgColumns, setFollowImgColumns] = useState(0)
   const changeTabContainer = (tab) => {
     setIndex(0)
     setTabSelected(tab)
@@ -145,6 +168,17 @@ export const Carousel = ({
 
     setContTab(newContTab)
   }, [tabSelected])
+
+  useEffect(() => {
+    let emptyArray = []
+    let followImgWidth = (parentContainer?.clientHeight / 2 - 23.7) / 0.5625
+    setFollowImgColumns(Math.trunc(followingImagesContainer / followImgWidth))
+    for (let i = 0; i < followImgColumns * 2; i++) {
+      emptyArray.push('')
+    }
+    setEmptyImgArray(emptyArray)
+    setFollowImgWidth(followImgWidth)
+  }, [width])
 
   const next = () => setIndex((prev) => Math.min(contTab - 1, prev + 1))
 
@@ -191,7 +225,6 @@ export const Carousel = ({
     setTabSelected('fotos')
     setIndex(0)
   }
-
   return (
     <Box __css={{ position: 'relative' }}>
       {!otherComponent ? (

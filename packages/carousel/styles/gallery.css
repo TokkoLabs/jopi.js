@@ -52,7 +52,7 @@
 
 .fsTabHeader p:hover {
   color: var(--neutralGray1);
-  border-color: var(--neutralGray1);;
+  border-color: var(--neutralGray1);
 }
 
 .fsTabHeader p.tabSelected {
