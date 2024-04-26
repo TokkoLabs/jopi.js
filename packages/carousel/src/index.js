@@ -108,6 +108,7 @@ export const Carousel = ({
   if (frontCoverBlueprints) {
     Images.unshift(frontCoverBlueprints)
     bluePrintsWithCover.unshift(frontCoverBlueprints)
+    console.log(bluePrintsWithCover)
   }
 
   const changeTabContainer = (tab) => {
@@ -123,11 +124,11 @@ export const Carousel = ({
     tabContainers.push('Video360')
   }
 
-  if (images.length > 0) {
+  if (images.length > 0 || frontCoverImg.length > 0) {
     tabContainers.push('Fotos')
   }
 
-  if (planos.length > 0) {
+  if (planos.length > 0 || frontCoverBlueprints.length > 0) {
     tabContainers.push('Planos')
   }
 
@@ -243,14 +244,14 @@ export const Carousel = ({
                   onClick={() => setTabSelected('video360')}
                 />
               )}
-              {images.length > 0 && (
+              {(images.length > 0 || imgWithCover.length > 0) && (
                 <ButtonGallery
                   className="buttonGallery"
                   text={'Fotos'}
                   onClick={() => setTabSelected('fotos')}
                 />
               )}
-              {planos.length > 0 && (
+              {(planos.length > 0 || frontCoverBlueprints.length > 0) && (
                 <ButtonGallery
                   text={'Planos'}
                   onClick={() => setTabSelected('planos')}
