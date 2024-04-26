@@ -20,7 +20,7 @@ export const CarouselComponent = () => {
     'https://www.youtube.com/embed/70KXYjyzFK4',
   ]
 
-  const PLANO = ['https://cedreo.com/wp-content/uploads/2023/10/ES_CASA-4-HABITACIONES_2D_GROUND-FLOOR-PLAN_624.png']
+  const PLANO = []
 
   const Video360 = ['https://my.matterport.com/show/?m=eURj8Qwwzb2']
 
