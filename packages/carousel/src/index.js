@@ -107,6 +107,9 @@ export const Carousel = ({
 }) => {
   const { windowWidth: width } = useWindowResize()
   const [fullscreen, setFullscreen] = useState(false)
+  const [carouselHeight, setCarouselHeight] = useState(
+    props.height ? props.height : 0
+  )
   const [tabSelected, setTabSelected] = useState('fotos')
   const tabContainers = []
   const [index, setIndex] = useState(0)
@@ -127,17 +130,15 @@ export const Carousel = ({
 
   const [emptyImgArray, setEmptyImgArray] = useState([])
   const [followImgWidth, setFollowImgWidth] = useState(0)
+  const [mainImageMobile, setMainImageMobile] = useState(0)
   const carouselContainerRef = useRef()
-  const mainImageRef = useRef()
   const parentContainer = carouselContainerRef.current?.parentElement
-  const followingImagesContainer =
-    parentContainer?.clientWidth - mainImageRef.current?.offsetWidth
+  const mainImgRef = document.getElementById('firstTabImg')
   const [followImgColumns, setFollowImgColumns] = useState(0)
   const changeTabContainer = (tab) => {
     setIndex(0)
     setTabSelected(tab)
   }
-
   if (video.length > 0) {
     tabContainers.push('Videos')
   }
@@ -153,7 +154,12 @@ export const Carousel = ({
   if (planos.length > 0) {
     tabContainers.push('Planos')
   }
-
+  useEffect(() => {
+    if (props.height) return
+    if (width <= 400) setCarouselHeight(153)
+    else if (width > 400 && width < 800) setCarouselHeight(263)
+    else setCarouselHeight(326)
+  }, [width])
   useEffect(() => {
     let newContTab
     if (tabSelected === 'videos') {
@@ -171,6 +177,8 @@ export const Carousel = ({
 
   useEffect(() => {
     let emptyArray = []
+    const followingImagesContainer =
+      parentContainer?.clientWidth - mainImgRef?.clientWidth
     let followImgWidth = (parentContainer?.clientHeight / 2 - 23.7) / 0.5625
     setFollowImgColumns(Math.trunc(followingImagesContainer / followImgWidth))
     for (let i = 0; i < followImgColumns * 2; i++) {
@@ -178,7 +186,7 @@ export const Carousel = ({
     }
     setEmptyImgArray(emptyArray)
     setFollowImgWidth(followImgWidth)
-  }, [width])
+  }, [width, parentContainer, mainImgRef, followImgColumns])
 
   const next = () => setIndex((prev) => Math.min(contTab - 1, prev + 1))
 
@@ -225,8 +233,28 @@ export const Carousel = ({
     setTabSelected('fotos')
     setIndex(0)
   }
+  const handleNextPrevImageMobile = (e, action) => {
+    e.stopPropagation()
+    if (action === 'next')
+      setMainImageMobile(
+        mainImageMobile < Images.length ? mainImageMobile + 1 : 0
+      )
+    if (action === 'prev')
+      setMainImageMobile(
+        mainImageMobile > 0 ? mainImageMobile - 1 : Images.length
+      )
+  }
   return (
-    <Box __css={{ position: 'relative' }}>
+    <Box
+      __css={{
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: `${carouselHeight}px`,
+        width: '100%',
+      }}
+    >
       {!otherComponent ? (
         <Box
           {...props}
@@ -234,18 +262,25 @@ export const Carousel = ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: '263px',
+            gap: '10px',
+            height: '100%',
           }}
+          ref={carouselContainerRef}
         >
           <ImageCard
             onClick={toggleFullscreen}
-            className="firstTabImg"
+            id="firstTabImg"
             styles={{
               position: 'relative',
-              width: '69%',
               height: '100%',
+              width: `${
+                followImgColumns === 0
+                  ? parentContainer?.clientWidth
+                  : parentContainer?.clientHeight / 0.5625
+              }px`,
+              maxWidth: `${parentContainer?.clientHeight / 0.47}px`,
             }}
-            url={Images[0]}
+            url={width > 400 ? Images[0] : Images[mainImageMobile]}
           >
             {!Images[0] && (
               <Icon
@@ -254,7 +289,28 @@ export const Carousel = ({
                 color={theme.colors.neutralGray4}
               />
             )}
-
+            {width < 400 && Images.length > 0 && (
+              <Icon
+                className="iconNext"
+                style={{
+                  transform: 'rotate(180deg)',
+                  position: 'absolute',
+                  right: 0,
+                }}
+                onClick={(e) => handleNextPrevImageMobile(e, 'next')}
+                icon="icon-atras"
+                fontSize="40px"
+              />
+            )}
+            {width < 400 && Images.length > 0 && (
+              <Icon
+                icon="icon-atras"
+                className="iconPrev"
+                fontSize="40px"
+                style={{ position: 'absolute', left: 0 }}
+                onClick={(e) => handleNextPrevImageMobile(e, 'prev')}
+              />
+            )}
             <Box
               __css={{
                 position: 'absolute',
@@ -298,46 +354,50 @@ export const Carousel = ({
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
-              width: '29%',
+              alignItems: 'start',
+              flexWrap: 'wrap',
+              gap: '10px',
+              width:
+                followImgColumns > 0 ? followImgWidth * followImgColumns : '0%',
               height: '100%',
             }}
           >
-            <ImageCard url={Images[1]}>
-              {!Images[1] && (
-                <Icon
-                  icon="icon-propiedades"
-                  fontSize="24px"
-                  color={theme.colors.neutralGray4}
-                />
-              )}
-            </ImageCard>
-
-            <ImageCard url={Images[2]}>
-              {!Images[2] && (
-                <Icon
-                  icon="icon-propiedades"
-                  fontSize="24px"
-                  color={theme.colors.neutralGray4}
-                />
-              )}
-              {images.length > 3 && (
-                <Box
-                  __css={{
-                    width: '48px',
-                    height: '48px',
-                    display: 'grid',
-                    placeItems: 'center',
-                    borderRadius: '50%',
-                    backgroundColor: theme.colors.neutralGray8,
-                    opacity: '0.8',
-                    color: theme.colors.black,
-                    fontFamily: 'Nunito Sans',
-                    fontSize: '14px',
-                    fontWeight: '700',
+            {emptyImgArray.map((img, index) => {
+              return (
+                <ImageCard
+                  styles={{
+                    maxWidth: `calc(100%/${followImgColumns})`,
                   }}
-                >{`+${Images.length - 3}`}</Box>
-              )}
-            </ImageCard>
+                  url={Images[[index + 1]]}
+                >
+                  {!Images[index + 1] ? (
+                    <Icon
+                      icon="icon-propiedades"
+                      fontSize="24px"
+                      color={theme.colors.neutralGray4}
+                    />
+                  ) : (
+                    index + 1 === followImgColumns * 2 &&
+                    images.length > followImgColumns * 2 && (
+                      <Box
+                        __css={{
+                          padding: '14px 15px',
+                          borderRadius: '50%',
+                          backgroundColor: theme.colors.neutralGray8,
+                          opacity: '0.8',
+                          color: theme.colors.black,
+                          fontFamily: 'Nunito Sans',
+                          fontSize: '14px',
+                          fontWeight: '700',
+                        }}
+                      >{`+${
+                        images.length - 1 - followImgColumns * 2 + planos.length
+                      }`}</Box>
+                    )
+                  )}
+                </ImageCard>
+              )
+            })}
           </Box>
         </Box>
       ) : (
@@ -363,8 +423,6 @@ export const Carousel = ({
           </Box>
         )}
         <Box className="fsContainerTabs" __css={{ position: 'relative' }}>
-          {/* Containers */}
-
           <Icon
             icon="icon-atras"
             className="iconPrev"
