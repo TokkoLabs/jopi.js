@@ -4,96 +4,9 @@ import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
 import { Icon } from '@oneloop/icons'
 import '../styles/gallery.css'
-import { Text } from '@oneloop/text'
-
-function useWindowResize(data, occupiedWindowPercenajege = 100) {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    if (data) return
-    const changeWidth = () => {
-      setWindowWidth(window.innerWidth * (occupiedWindowPercenajege / 100))
-    }
-    window.addEventListener('resize', changeWidth)
-  }, [])
-
-  return { windowWidth }
-}
-
-const ButtonGallery = ({ text, ...props }) => (
-  <Box
-    __css={{
-      padding: '6px 12px',
-      color: '#FFF',
-      borderRadius: '32px',
-      background: theme.colors.secondary,
-      border: '1px solid #A2D4E5',
-      fontFamily: 'Nunito Sans',
-      fontSize: '12px',
-      fontWeight: '600',
-      cursor: 'pointer',
-      ':hover': {
-        background: '#A2D4E5',
-        color: theme.colors.secondary,
-      },
-      ':active': {
-        color: theme.colors.secondaryHover,
-        borderColor: theme.colors.secondary,
-      },
-    }}
-    {...props}
-  >
-    {text}
-  </Box>
-)
-
-const ImageCard = ({ url, styles, children, ...props }) => {
-  const [rectangle, setRectangle] = useState(false)
-
-  const isRectangle = async () => {
-    const isRectangle = await validateImageDimensions(url)
-    return setRectangle(isRectangle)
-  }
-
-  useEffect(() => {
-    isRectangle()
-  }, [url])
-
-  return (
-    <Box
-      __css={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: theme.colors.neutralGray8,
-        width: '100%',
-        height: '47%',
-        borderRadius: '12px',
-        backgroundSize: rectangle ? 'cover' : 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundImage: `url(${url})`,
-        cursor: 'pointer',
-        ...styles,
-      }}
-      {...props}
-    >
-      {children}
-    </Box>
-  )
-}
-
-const validateImageDimensions = async (imageUrl) => {
-  // eslint-disable-next-line no-undef
-  const img = new Image()
-  img.src = imageUrl
-
-  await new Promise((resolve) => {
-    img.onload = () => resolve()
-  })
-
-  return img.width > img.height
-}
+import ImageCard from './components/ImageCard'
+import ButtonGallery from './components/ButtonGallery'
+import FullScreen from './components/FullScreen'
 
 export const Carousel = ({
   images = [],
@@ -101,11 +14,12 @@ export const Carousel = ({
   video = [],
   video360 = [],
   otherComponent = false,
+  otherButton = false,
   frontCoverImg = false,
   frontCoverBlueprints = false,
   ...props
 }) => {
-  const { windowWidth: width } = useWindowResize()
+  const [windowResize, setWindowResize] = useState(false)
   const [fullscreen, setFullscreen] = useState(false)
   const [carouselHeight, setCarouselHeight] = useState(
     props.height ? props.height : 0
@@ -113,7 +27,6 @@ export const Carousel = ({
   const [tabSelected, setTabSelected] = useState('fotos')
   const tabContainers = []
   const [index, setIndex] = useState(0)
-  const [contTab, setContTab] = useState(0)
   const Images = [...images, ...planos]
   const imgWithCover = [...images]
   const bluePrintsWithCover = [...planos]
@@ -126,20 +39,17 @@ export const Carousel = ({
   if (frontCoverBlueprints) {
     Images.unshift(frontCoverBlueprints)
     bluePrintsWithCover.unshift(frontCoverBlueprints)
-    console.log(bluePrintsWithCover)
   }
 
   const [emptyImgArray, setEmptyImgArray] = useState([])
-  const [followImgWidth, setFollowImgWidth] = useState(0)
   const [mainImageMobile, setMainImageMobile] = useState(0)
   const carouselContainerRef = useRef()
-  const parentContainer = carouselContainerRef.current?.parentElement
-  const mainImgRef = document.getElementById('firstTabImg')
+  const containerWidth = carouselContainerRef.current?.parentElement.clientWidth
+  const followingImg =
+    document.getElementsByClassName('followingImg')[0]?.offsetWidth
+  const [mainImageWidth, setMainImageWidth] = useState(327)
   const [followImgColumns, setFollowImgColumns] = useState(0)
-  const changeTabContainer = (tab) => {
-    setIndex(0)
-    setTabSelected(tab)
-  }
+  const [compensationHeigth, setCompensationHeigth] = useState(0)
   if (video.length > 0) {
     tabContainers.push('Videos')
   }
@@ -156,66 +66,50 @@ export const Carousel = ({
     tabContainers.push('Planos')
   }
   useEffect(() => {
-    if (props.height) return
-    if (width <= 400) setCarouselHeight(153)
-    else if (width > 400 && width < 800) setCarouselHeight(263)
-    else setCarouselHeight(326)
-  }, [width])
-  useEffect(() => {
-    let newContTab
-    if (tabSelected === 'videos') {
-      newContTab = video.length
-    } else if (tabSelected === 'fotos') {
-      newContTab = imgWithCover.length
-    } else if (tabSelected === 'planos') {
-      newContTab = bluePrintsWithCover.length
-    } else if (tabSelected === 'video360') {
-      newContTab = video360.length
+    const changeWidth = () => {
+      setWindowResize(window.innerWidth)
     }
+    window.addEventListener('resize', changeWidth)
+    return () => window.removeEventListener('resize')
+  }, [])
 
-    setContTab(newContTab)
-  }, [tabSelected])
+  useEffect(() => {
+    if (followingImg > (carouselHeight * 0.5) / 0.3)
+      setCompensationHeigth(followingImg - (carouselHeight * 0.5) / 0.65)
+    else {
+      setCompensationHeigth(0)
+    }
+    if (containerWidth > 650 && containerWidth < 960) {
+      setCarouselHeight(mainImageWidth * 0.562 + compensationHeigth)
+    } else setCarouselHeight(mainImageWidth * 0.562)
+  }, [windowResize, followImgColumns])
+
+  useEffect(() => {
+    if (containerWidth <= 700) {
+      setFollowImgColumns(0)
+      setCarouselHeight(containerWidth * 0.562)
+    } else if (containerWidth >= 650 && containerWidth < 960) {
+      setFollowImgColumns(1)
+      setMainImageWidth(470)
+    } else if (containerWidth >= 960 && containerWidth < 1477) {
+      setFollowImgColumns(2)
+      setMainImageWidth(520)
+    } else {
+      setFollowImgColumns(3)
+    }
+    if (containerWidth >= 1150) setMainImageWidth(696)
+  }, [windowResize, containerWidth])
 
   useEffect(() => {
     let emptyArray = []
-    const followingImagesContainer =
-      parentContainer?.clientWidth - mainImgRef?.clientWidth
-    let followImgWidth = (parentContainer?.clientHeight / 2 - 23.7) / 0.5625
-    setFollowImgColumns(Math.trunc(followingImagesContainer / followImgWidth))
     for (let i = 0; i < followImgColumns * 2; i++) {
       emptyArray.push('')
     }
-    setEmptyImgArray(emptyArray)
-    setFollowImgWidth(followImgWidth)
-  }, [width, parentContainer, mainImgRef, followImgColumns])
-
-  const next = () => setIndex((prev) => Math.min(contTab - 1, prev + 1))
-
-  const prev = () => setIndex((prev) => Math.max(0, prev - 1))
-
-  const handleKeyDown = (event) => {
-    if (event.key === 'ArrowRight') {
-      next()
-    }
-
-    if (event.key === 'ArrowLeft') {
-      prev()
-    }
-
-    if (event.key === 'Escape') {
-      closeFullscreen()
-    }
-  }
-
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown)
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [contTab, index])
+    if (emptyArray) setEmptyImgArray(emptyArray)
+  }, [followImgColumns, containerWidth, windowResize])
 
   const toggleFullscreen = () => {
+    if (otherButton) return
     if (
       video.length > 0 ||
       video360.length > 0 ||
@@ -229,11 +123,6 @@ export const Carousel = ({
     }
   }
 
-  const closeFullscreen = () => {
-    setFullscreen(false)
-    setTabSelected('fotos')
-    setIndex(0)
-  }
   const handleNextPrevImageMobile = (e, action) => {
     e.stopPropagation()
     if (action === 'next')
@@ -252,8 +141,9 @@ export const Carousel = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: `${carouselHeight}px`,
+        height: `${carouselHeight + 5}px`,
         width: '100%',
+        maxHeight: '316px',
       }}
     >
       {!otherComponent ? (
@@ -263,7 +153,7 @@ export const Carousel = ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: '10px',
+            gap: '16px',
             height: '100%',
           }}
           ref={carouselContainerRef}
@@ -271,17 +161,12 @@ export const Carousel = ({
           <ImageCard
             onClick={toggleFullscreen}
             id="firstTabImg"
-            styles={{
-              position: 'relative',
-              height: '100%',
-              width: `${
-                followImgColumns === 0
-                  ? parentContainer?.clientWidth
-                  : parentContainer?.clientHeight / 0.5625
-              }px`,
-              maxWidth: `${parentContainer?.clientHeight / 0.47}px`,
-            }}
-            url={width > 400 ? Images[0] : Images[mainImageMobile]}
+            position={'relative'}
+            height={'100%'}
+            minWidth={`${
+              followImgColumns === 0 ? containerWidth : mainImageWidth
+            }px`}
+            url={containerWidth > 400 ? Images[0] : Images[mainImageMobile]}
           >
             {!Images[0] && (
               <Icon
@@ -290,63 +175,61 @@ export const Carousel = ({
                 color={theme.colors.neutralGray4}
               />
             )}
-            {width < 400 && Images.length > 0 && (
-              <Icon
-                className="iconNext"
-                style={{
-                  transform: 'rotate(180deg)',
+            {containerWidth < 400 && Images.length > 0 && (
+              <Box
+                width="100%"
+                __css={{
                   position: 'absolute',
-                  right: 0,
+                  display: 'flex',
+                  justifyContent: 'space-between',
                 }}
-                onClick={(e) => handleNextPrevImageMobile(e, 'next')}
-                icon="icon-atras"
-                fontSize="40px"
-              />
+              >
+                <Icon
+                  icon="icon-atras"
+                  className="iconPrevMobile"
+                  onClick={(e) => handleNextPrevImageMobile(e, 'prev')}
+                />
+                <Icon
+                  className="iconNextMobile"
+                  style={{
+                    transform: 'rotate(180deg)',
+                  }}
+                  onClick={(e) => handleNextPrevImageMobile(e, 'next')}
+                  icon="icon-atras"
+                />
+              </Box>
             )}
-            {width < 400 && Images.length > 0 && (
-              <Icon
-                icon="icon-atras"
-                className="iconPrev"
-                fontSize="40px"
-                style={{ position: 'absolute', left: 0 }}
-                onClick={(e) => handleNextPrevImageMobile(e, 'prev')}
-              />
+            {otherButton || containerWidth < 500 ? (
+              <Box className="buttonsMainImgContainer">{otherButton}</Box>
+            ) : (
+              <Box className="buttonsMainImgContainer">
+                {video.length > 0 && (
+                  <ButtonGallery
+                    text={'Videos'}
+                    onClick={() => setTabSelected('videos')}
+                  />
+                )}
+                {video360.length > 0 && (
+                  <ButtonGallery
+                    text={'Video 360°'}
+                    onClick={() => setTabSelected('video360')}
+                  />
+                )}
+                {(images.length > 0 || imgWithCover.length > 0) && (
+                  <ButtonGallery
+                    className="buttonGallery"
+                    text={'Fotos'}
+                    onClick={() => setTabSelected('fotos')}
+                  />
+                )}
+                {(planos.length > 0 || frontCoverBlueprints.length > 0) && (
+                  <ButtonGallery
+                    text={'Planos'}
+                    onClick={() => setTabSelected('planos')}
+                  />
+                )}
+              </Box>
             )}
-            <Box
-              __css={{
-                position: 'absolute',
-                bottom: '16px',
-                right: '16px',
-                display: 'flex',
-                gap: '8px',
-              }}
-            >
-              {video.length > 0 && (
-                <ButtonGallery
-                  text={'Videos'}
-                  onClick={() => setTabSelected('videos')}
-                />
-              )}
-              {video360.length > 0 && (
-                <ButtonGallery
-                  text={'Video 360°'}
-                  onClick={() => setTabSelected('video360')}
-                />
-              )}
-              {(images.length > 0 || imgWithCover.length > 0) && (
-                <ButtonGallery
-                  className="buttonGallery"
-                  text={'Fotos'}
-                  onClick={() => setTabSelected('fotos')}
-                />
-              )}
-              {(planos.length > 0 || frontCoverBlueprints.length > 0) && (
-                <ButtonGallery
-                  text={'Planos'}
-                  onClick={() => setTabSelected('planos')}
-                />
-              )}
-            </Box>
           </ImageCard>
 
           <Box
@@ -357,19 +240,25 @@ export const Carousel = ({
               justifyContent: 'space-between',
               alignItems: 'start',
               flexWrap: 'wrap',
-              gap: '10px',
+              gap: '16px',
               width:
-                followImgColumns > 0 ? followImgWidth * followImgColumns : '0%',
+                followImgColumns > 0
+                  ? (containerWidth - mainImageWidth) * followImgColumns
+                  : '0%',
               height: '100%',
             }}
           >
             {emptyImgArray.map((img, index) => {
               return (
                 <ImageCard
-                  styles={{
-                    maxWidth: `calc(100%/${followImgColumns})`,
-                  }}
-                  url={Images[[index + 1]]}
+                  width={`${
+                    (1 / followImgColumns) * (containerWidth - mainImageWidth) -
+                    16
+                  }px`}
+                  maxWidth="100%"
+                  className="followingImg"
+                  url={Images[index + 1] ? Images[index + 1] : ''}
+                  key={index}
                 >
                   {!Images[index + 1] ? (
                     <Icon
@@ -379,7 +268,9 @@ export const Carousel = ({
                     />
                   ) : (
                     index + 1 === followImgColumns * 2 &&
-                    images.length > followImgColumns * 2 && (
+                    images.length > followImgColumns * 2 &&
+                    images.length - 1 - followImgColumns * 2 + planos.length >
+                      0 && (
                       <Box
                         __css={{
                           padding: '14px 15px',
@@ -392,7 +283,11 @@ export const Carousel = ({
                           fontWeight: '700',
                         }}
                       >{`+${
-                        images.length - 1 - followImgColumns * 2 + planos.length
+                        images.length -
+                        1 -
+                        followImgColumns * 2 +
+                        planos.length +
+                        (frontCoverBlueprints ? 1 : 0)
                       }`}</Box>
                     )
                   )}
@@ -404,109 +299,20 @@ export const Carousel = ({
       ) : (
         <Box onClick={toggleFullscreen}>{otherComponent}</Box>
       )}
-
-      <Box className={`fullscreen ${fullscreen ? 'openFullscreen' : ''}`}>
-        <Box className="fsOverlay" onClick={closeFullscreen}></Box>
-        {tabContainers.length > 1 && (
-          <Box className="fsTabHeader">
-            {tabContainers.map((tab, i) => (
-              <Text
-                key={i}
-                onClick={() => changeTabContainer(tab.toLocaleLowerCase())}
-                className={`${
-                  tabSelected === tab.toLocaleLowerCase() && 'tabSelected'
-                }`}
-                variant="bodyBold.fontSize14"
-              >
-                {tab}
-              </Text>
-            ))}
-          </Box>
-        )}
-        <Box className="fsContainerTabs" __css={{ position: 'relative' }}>
-          <Icon
-            icon="icon-atras"
-            className="iconPrev"
-            fontSize="40px"
-            onClick={prev}
-          />
-
-          {tabSelected === 'fotos' && (
-            <Box className="fsTabCont">
-              <Box className="fsTabContImage">
-                <img src={imgWithCover[index]} alt="Foto" />
-                <Text className="contFotos" variant="bodyBold.fontSize14">{`${
-                  index + 1
-                }/${imgWithCover.length}`}</Text>
-              </Box>
-            </Box>
-          )}
-
-          {tabSelected === 'videos' && (
-            <Box className="fsTabCont">
-              <Box className="fsTabContImage">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={video[index]}
-                  title="Video"
-                  frameBorder="0"
-                  allowFullScreen
-                />
-                <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                  video.length
-                }`}</Text>
-              </Box>
-            </Box>
-          )}
-
-          {tabSelected === 'planos' && (
-            <Box className="fsTabCont">
-              <Box className="fsTabContImage">
-                <img src={bluePrintsWithCover[index]} alt="Foto" />
-                <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                  bluePrintsWithCover.length
-                }`}</Text>
-              </Box>
-            </Box>
-          )}
-
-          {tabSelected === 'video360' && (
-            <Box className="fsTabCont">
-              <Box className="fsTabContImage">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={video360[index]}
-                  title="Video"
-                  frameBorder="0"
-                  allowFullScreen
-                />
-                <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                  video360.length
-                }`}</Text>
-              </Box>
-            </Box>
-          )}
-
-          <Icon
-            className="iconNext"
-            style={{ transform: 'rotate(180deg)' }}
-            onClick={next}
-            icon="icon-atras"
-            fontSize="40px"
-          />
-
-          <Box className="fsCloseIcon">
-            <Icon
-              onClick={closeFullscreen}
-              className="closeIcon"
-              icon="icon-cerrar"
-              fontSize="32px"
-            />
-          </Box>
-        </Box>
-      </Box>
+      <FullScreen
+        fullscreen={fullscreen}
+        setFullscreen={setFullscreen}
+        tabContainers={tabContainers}
+        tabSelected={tabSelected}
+        setTabSelected={setTabSelected}
+        imgWithCover={imgWithCover}
+        index={index}
+        setIndex={setIndex}
+        images={images}
+        video={video}
+        planos={planos}
+        video360={video360}
+      />
     </Box>
   )
 }
