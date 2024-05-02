@@ -79,9 +79,10 @@ export const Carousel = ({
     else {
       setCompensationHeigth(0)
     }
-    if (containerWidth > 650 && containerWidth < 960) {
+    if (containerWidth < 600) setCarouselHeight(mainImageWidth * 0.562)
+    else if (containerWidth > 650 && containerWidth < 960) {
       setCarouselHeight(mainImageWidth * 0.562 + compensationHeigth)
-    } else setCarouselHeight(mainImageWidth * 0.562)
+    } else setCarouselHeight(316)
   }, [windowResize, followImgColumns])
 
   useEffect(() => {
@@ -106,7 +107,7 @@ export const Carousel = ({
       emptyArray.push('')
     }
     if (emptyArray) setEmptyImgArray(emptyArray)
-  }, [followImgColumns, containerWidth, windowResize])
+  }, [followImgColumns, windowResize])
 
   const toggleFullscreen = () => {
     if (otherButton) return
@@ -166,7 +167,7 @@ export const Carousel = ({
             minWidth={`${
               followImgColumns === 0 ? containerWidth : mainImageWidth
             }px`}
-            url={containerWidth > 400 ? Images[0] : Images[mainImageMobile]}
+            url={containerWidth > 600 ? Images[0] : Images[mainImageMobile]}
           >
             {!Images[0] && (
               <Icon
@@ -175,7 +176,7 @@ export const Carousel = ({
                 color={theme.colors.neutralGray4}
               />
             )}
-            {containerWidth < 400 && Images.length > 0 && (
+            {containerWidth <= 600 && Images.length > 0 && (
               <Box
                 width="100%"
                 __css={{
@@ -199,7 +200,7 @@ export const Carousel = ({
                 />
               </Box>
             )}
-            {otherButton || containerWidth < 500 ? (
+            {otherButton || containerWidth < 600 ? (
               <Box className="buttonsMainImgContainer">{otherButton}</Box>
             ) : (
               <Box className="buttonsMainImgContainer">

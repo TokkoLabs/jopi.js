@@ -40,12 +40,13 @@ export const CarouselComponent = () => {
   return (
     <Box>
       <Carousel
-        //frontCoverBlueprints="https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*"
+        frontCoverBlueprints="https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*"
         images={imgs}
         video={VIDEO}
         planos={PLANO}
         video360={Video360}
-        //otherButton={<OtherButton />}
+        h
+        otherButton={<OtherButton />}
       />
     </Box>
   )

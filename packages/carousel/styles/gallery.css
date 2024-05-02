@@ -138,7 +138,7 @@
 body {
   padding: 0 !important;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .fullscreen {
     padding: 40px;
     gap: 24px;
