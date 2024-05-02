@@ -1,3 +1,4 @@
+@import '../../theme/styles/globals.css';
 .fullscreen {
   position: fixed;
   display: flex;
@@ -7,8 +8,7 @@
   width: 100%;
   height: 100%;
   flex-direction: column;
-  padding: 40px;
-  gap: 24px;
+  padding: 38px 28px 28px 28px;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -36,23 +36,27 @@
 .fsTabHeader {
   display: flex;
   padding: 8px 16px;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 360px;
   border-radius: 8px;
-  background: #fff;
+  background: var(--neutralGray8);
   gap: 20px;
 }
 
 .fsTabHeader p {
   cursor: pointer;
   color: var(--neutralGray2);
-  padding: 8px 16px;
+  padding: 8px 0;
+  font-size: 13px;
   border-bottom: 1px solid var(--neutralGray5);
   line-height: 8px;
 }
 
 .fsTabHeader p:hover {
   color: var(--neutralGray1);
-  border-color: var(--neutralGray1);;
+  border-color: var(--neutralGray1);
 }
 
 .fsTabHeader p.tabSelected {
@@ -61,8 +65,9 @@
 }
 
 .fsContainerTabs {
-  width: 90%;
-  height: 90%;
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +81,7 @@
 }
 
 .fsContainerTabs i {
-  color: #fff;
+  color: var(--neutralGray8);
   cursor: pointer;
 }
 
@@ -86,26 +91,87 @@
   justify-content: center;
   align-items: center;
   height: 95%;
-  width: 95%;
+  width: 100%;
   gap: 24px;
 }
 
 .fsTabContImage img {
-  max-width: 95%;
-  max-height: 95%;
+  max-width: 100%;
+  max-height: 100%;
   height: auto;
 }
 
 .fsTabContImage p {
-  color: #fff;
+  color: var(--neutralGray8);
   position: absolute;
   bottom: 0px;
 }
 
 .fsCloseIcon {
   position: absolute;
-  color: #fff;
-  right: 4px;
-  top: 0px;
+  color: var(--neutralGray8);
+  right: 5px;
+  font-size: 16px;
+  top: -67px;
   cursor: pointer;
+}
+.iconPrev,
+.iconNext {
+  position: absolute;
+}
+.iconPrev {
+  left: -20px;
+}
+.iconNext {
+  right: -20px;
+}
+.iconPrevMobile,
+.iconNextMobile {
+  font-size: 24px;
+  color: var(--neutralGray8);
+}
+.buttonsMainImgContainer {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+@media (min-width: 600px) {
+  .fullscreen {
+    padding: 40px;
+    gap: 24px;
+  }
+  .fsCloseIcon {
+    right: 4px;
+    font-size: 32px;
+    top: 0px;
+  }
+  .fsTabHeader {
+    padding: 8px 16px;
+    align-items: center;
+    width: auto;
+    max-width: 100%;
+    & p {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  .fsContainerTabs {
+    width: 90%;
+    padding-top: 0;
+  }
+  .iconPrev,
+  .iconNext {
+    position: relative;
+  }
+  .fsTabContImage {
+    width: 95%;
+  }
+  .fsTabContImage img {
+    max-width: 95%;
+    max-height: 95%;
+    height: auto;
+  }
 }
