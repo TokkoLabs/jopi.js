@@ -3,6 +3,7 @@ import React from 'react'
 import { configure, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Carousel } from '../src'
+import { Box } from '@oneloop/box'
 
 configure({ adapter: new Adapter() })
 
@@ -13,8 +14,13 @@ describe('Carousel', () => {
   })
 
   it('renders correct number of tabs', () => {
-    const wrapper = mount(<Carousel images={['', '']} />)
+    const wrapper = mount(
+      <div style={{ minWidth: '1500px' }}>
+        <Carousel images={['', '']} />
+      </div>
+    )
     const btn = wrapper.find('.buttonGallery')
+    console.log(wrapper.debug())
 
     expect(btn.at(0).text()).toBe('Fotos')
   })
