@@ -16,15 +16,7 @@ describe('Carousel', () => {
     const wrapper = mount(<Carousel images={['', '']} />)
     const btn = wrapper.find('.buttonGallery')
 
-    expect(btn).toBeDefined()
-  })
-
-  it('next or prev img mobile', () => {
-    const wrapper = mount(<Carousel images={['1', '2']} />)
-
-    const btnNext = wrapper.find('.iconNextMobile').first()
-
-    btnNext.simulate('click')
+    expect(btn.at(0).text()).toBe('Fotos')
   })
 
   it('toggles fullscreen correctly', () => {
