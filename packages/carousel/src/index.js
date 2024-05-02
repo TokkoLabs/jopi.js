@@ -1,85 +1,12 @@
 /* eslint-disable multiline-ternary */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
 import { Icon } from '@oneloop/icons'
 import '../styles/gallery.css'
-import { Text } from '@oneloop/text'
-
-const ButtonGallery = ({ text, ...props }) => (
-  <Box
-    __css={{
-      padding: '6px 12px',
-      color: '#FFF',
-      borderRadius: '32px',
-      background: theme.colors.secondary,
-      border: '1px solid #A2D4E5',
-      fontFamily: 'Nunito Sans',
-      fontSize: '12px',
-      fontWeight: '600',
-      cursor: 'pointer',
-      ':hover': {
-        background: '#A2D4E5',
-        color: theme.colors.secondary,
-      },
-      ':active': {
-        color: theme.colors.secondaryHover,
-        borderColor: theme.colors.secondary,
-      },
-    }}
-    {...props}
-  >
-    {text}
-  </Box>
-)
-
-const ImageCard = ({ url, styles, children, ...props }) => {
-  const [rectangle, setRectangle] = useState(false)
-
-  const isRectangle = async () => {
-    const isRectangle = await validateImageDimensions(url)
-    return setRectangle(isRectangle)
-  }
-
-  useEffect(() => {
-    isRectangle()
-  }, [url])
-
-  return (
-    <Box
-      __css={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: theme.colors.neutralGray8,
-        width: '100%',
-        height: '47%',
-        borderRadius: '12px',
-        backgroundSize: rectangle ? 'cover' : 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundImage: `url(${url})`,
-        cursor: 'pointer',
-        ...styles,
-      }}
-      {...props}
-    >
-      {children}
-    </Box>
-  )
-}
-
-const validateImageDimensions = async (imageUrl) => {
-  // eslint-disable-next-line no-undef
-  const img = new Image()
-  img.src = imageUrl
-
-  await new Promise((resolve) => {
-    img.onload = () => resolve()
-  })
-
-  return img.width > img.height
-}
+import { ImageCard } from './components/ImageCard'
+import { ButtonGallery } from './components/ButtonGallery'
+import { FullScreen } from './components/FullScreen'
 
 export const Carousel = ({
   images = [],
@@ -87,15 +14,19 @@ export const Carousel = ({
   video = [],
   video360 = [],
   otherComponent = false,
+  otherButton = false,
   frontCoverImg = false,
   frontCoverBlueprints = false,
   ...props
 }) => {
+  const [windowResize, setWindowResize] = useState(false)
   const [fullscreen, setFullscreen] = useState(false)
+  const [carouselHeight, setCarouselHeight] = useState(
+    props.height ? props.height : 0
+  )
   const [tabSelected, setTabSelected] = useState('fotos')
   const tabContainers = []
   const [index, setIndex] = useState(0)
-  const [contTab, setContTab] = useState(0)
   const Images = [...images, ...planos]
   const imgWithCover = [...images]
   const bluePrintsWithCover = [...planos]
@@ -108,14 +39,17 @@ export const Carousel = ({
   if (frontCoverBlueprints) {
     Images.unshift(frontCoverBlueprints)
     bluePrintsWithCover.unshift(frontCoverBlueprints)
-    console.log(bluePrintsWithCover)
   }
 
-  const changeTabContainer = (tab) => {
-    setIndex(0)
-    setTabSelected(tab)
-  }
-
+  const [emptyImgArray, setEmptyImgArray] = useState([])
+  const [mainImageMobile, setMainImageMobile] = useState(0)
+  const carouselContainerRef = useRef()
+  const containerWidth = carouselContainerRef.current?.parentElement.clientWidth
+  const followingImg =
+    document.getElementsByClassName('followingImg')[0]?.offsetWidth
+  const [mainImageWidth, setMainImageWidth] = useState(327)
+  const [followImgColumns, setFollowImgColumns] = useState(0)
+  const [compensationHeigth, setCompensationHeigth] = useState(0)
   if (video.length > 0) {
     tabContainers.push('Videos')
   }
@@ -131,49 +65,52 @@ export const Carousel = ({
   if (planos.length > 0 || frontCoverBlueprints.length > 0) {
     tabContainers.push('Planos')
   }
+  useEffect(() => {
+    const changeWidth = () => {
+      setWindowResize(window.innerWidth)
+    }
+    window.addEventListener('resize', changeWidth)
+    return () => window.removeEventListener('resize', changeWidth)
+  }, [])
 
   useEffect(() => {
-    let newContTab
-    if (tabSelected === 'videos') {
-      newContTab = video.length
-    } else if (tabSelected === 'fotos') {
-      newContTab = imgWithCover.length
-    } else if (tabSelected === 'planos') {
-      newContTab = bluePrintsWithCover.length
-    } else if (tabSelected === 'video360') {
-      newContTab = video360.length
+    if (followingImg > (carouselHeight * 0.5) / 0.3) {
+      setCompensationHeigth(followingImg - (carouselHeight * 0.5) / 0.65)
+    } else {
+      setCompensationHeigth(0)
     }
-
-    setContTab(newContTab)
-  }, [tabSelected])
-
-  const next = () => setIndex((prev) => Math.min(contTab - 1, prev + 1))
-
-  const prev = () => setIndex((prev) => Math.max(0, prev - 1))
-
-  const handleKeyDown = (event) => {
-    if (event.key === 'ArrowRight') {
-      next()
-    }
-
-    if (event.key === 'ArrowLeft') {
-      prev()
-    }
-
-    if (event.key === 'Escape') {
-      closeFullscreen()
-    }
-  }
+    if (containerWidth < 600) setCarouselHeight(mainImageWidth * 0.562)
+    else if (containerWidth > 650 && containerWidth < 960) {
+      setCarouselHeight(mainImageWidth * 0.562 + compensationHeigth)
+    } else setCarouselHeight(316)
+  }, [windowResize, followImgColumns])
 
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown)
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown)
+    if (containerWidth <= 700) {
+      setFollowImgColumns(0)
+      setCarouselHeight(containerWidth * 0.562)
+    } else if (containerWidth >= 650 && containerWidth < 960) {
+      setFollowImgColumns(1)
+      setMainImageWidth(470)
+    } else if (containerWidth >= 960 && containerWidth < 1477) {
+      setFollowImgColumns(2)
+      setMainImageWidth(520)
+    } else {
+      setFollowImgColumns(3)
     }
-  }, [contTab, index])
+    if (containerWidth >= 1150) setMainImageWidth(696)
+  }, [windowResize, containerWidth])
+
+  useEffect(() => {
+    const emptyArray = []
+    for (let i = 0; i < followImgColumns * 2; i++) {
+      emptyArray.push('')
+    }
+    if (emptyArray) setEmptyImgArray(emptyArray)
+  }, [followImgColumns, windowResize])
 
   const toggleFullscreen = () => {
+    if (otherButton) return
     if (
       video.length > 0 ||
       video360.length > 0 ||
@@ -187,14 +124,32 @@ export const Carousel = ({
     }
   }
 
-  const closeFullscreen = () => {
-    setFullscreen(false)
-    setTabSelected('fotos')
-    setIndex(0)
+  const handleNextPrevImageMobile = (e, action) => {
+    e.stopPropagation()
+    if (action === 'next' && mainImageMobile < Images.length - 1) {
+      setMainImageMobile(
+        mainImageMobile < Images.length - 1 ? mainImageMobile + 1 : 0
+      )
+    }
+    if (action === 'prev' && mainImageMobile > 0) {
+      setMainImageMobile(
+        mainImageMobile > 0 ? mainImageMobile - 1 : Images.length - 1
+      )
+    }
   }
 
   return (
-    <Box __css={{ position: 'relative' }}>
+    <Box
+      __css={{
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: `${carouselHeight + 5}px`,
+        width: '100%',
+        maxHeight: '316px',
+      }}
+    >
       {!otherComponent ? (
         <Box
           {...props}
@@ -202,18 +157,20 @@ export const Carousel = ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: '263px',
+            gap: '16px',
+            height: '100%',
           }}
+          ref={carouselContainerRef}
         >
           <ImageCard
             onClick={toggleFullscreen}
             className="firstTabImg"
-            styles={{
-              position: 'relative',
-              width: '69%',
-              height: '100%',
-            }}
-            url={Images[0]}
+            position={'relative'}
+            height={'100%'}
+            minWidth={`${
+              followImgColumns === 0 ? containerWidth : mainImageWidth
+            }px`}
+            url={containerWidth > 600 ? Images[0] : Images[mainImageMobile]}
           >
             {!Images[0] && (
               <Icon
@@ -222,42 +179,62 @@ export const Carousel = ({
                 color={theme.colors.neutralGray4}
               />
             )}
-
-            <Box
-              __css={{
-                position: 'absolute',
-                bottom: '16px',
-                right: '16px',
-                display: 'flex',
-                gap: '8px',
-              }}
-            >
-              {video.length > 0 && (
-                <ButtonGallery
-                  text={'Videos'}
-                  onClick={() => setTabSelected('videos')}
+            {containerWidth <= 600 && Images.length > 0 && (
+              <Box
+                width="100%"
+                __css={{
+                  position: 'absolute',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  padding: '0 8px',
+                }}
+              >
+                <Icon
+                  icon="icon-atras"
+                  className="iconPrevMobile"
+                  onClick={(e) => handleNextPrevImageMobile(e, 'prev')}
                 />
-              )}
-              {video360.length > 0 && (
-                <ButtonGallery
-                  text={'Video 360°'}
-                  onClick={() => setTabSelected('video360')}
+                <Icon
+                  className="iconNextMobile"
+                  style={{
+                    transform: 'rotate(180deg)',
+                  }}
+                  onClick={(e) => handleNextPrevImageMobile(e, 'next')}
+                  icon="icon-atras"
                 />
-              )}
-              {(images.length > 0 || imgWithCover.length > 0) && (
-                <ButtonGallery
-                  className="buttonGallery"
-                  text={'Fotos'}
-                  onClick={() => setTabSelected('fotos')}
-                />
-              )}
-              {(planos.length > 0 || frontCoverBlueprints.length > 0) && (
-                <ButtonGallery
-                  text={'Planos'}
-                  onClick={() => setTabSelected('planos')}
-                />
-              )}
-            </Box>
+              </Box>
+            )}
+            {otherButton || containerWidth < 600 ? (
+              <Box className="buttonsMainImgContainer">{otherButton}</Box>
+            ) : (
+              <Box className="buttonsMainImgContainer">
+                {video.length > 0 && (
+                  <ButtonGallery
+                    text={'Videos'}
+                    onClick={() => setTabSelected('videos')}
+                  />
+                )}
+                {video360.length > 0 && (
+                  <ButtonGallery
+                    text={'Video 360°'}
+                    onClick={() => setTabSelected('video360')}
+                  />
+                )}
+                {(images.length > 0 || imgWithCover.length > 0) && (
+                  <ButtonGallery
+                    className="buttonGallery"
+                    text={'Fotos'}
+                    onClick={() => setTabSelected('fotos')}
+                  />
+                )}
+                {(planos.length > 0 || frontCoverBlueprints.length > 0) && (
+                  <ButtonGallery
+                    text={'Planos'}
+                    onClick={() => setTabSelected('planos')}
+                  />
+                )}
+              </Box>
+            )}
           </ImageCard>
 
           <Box
@@ -266,156 +243,82 @@ export const Carousel = ({
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
-              width: '29%',
+              alignItems: 'start',
+              flexWrap: 'wrap',
+              gap: '16px',
+              width:
+                followImgColumns > 0
+                  ? (containerWidth - mainImageWidth) * followImgColumns
+                  : '0%',
               height: '100%',
             }}
           >
-            <ImageCard url={Images[1]}>
-              {!Images[1] && (
-                <Icon
-                  icon="icon-propiedades"
-                  fontSize="24px"
-                  color={theme.colors.neutralGray4}
-                />
-              )}
-            </ImageCard>
-
-            <ImageCard url={Images[2]}>
-              {!Images[2] && (
-                <Icon
-                  icon="icon-propiedades"
-                  fontSize="24px"
-                  color={theme.colors.neutralGray4}
-                />
-              )}
-              {images.length > 3 && (
-                <Box
-                  __css={{
-                    width: '48px',
-                    height: '48px',
-                    display: 'grid',
-                    placeItems: 'center',
-                    borderRadius: '50%',
-                    backgroundColor: theme.colors.neutralGray8,
-                    opacity: '0.8',
-                    color: theme.colors.black,
-                    fontFamily: 'Nunito Sans',
-                    fontSize: '14px',
-                    fontWeight: '700',
-                  }}
-                >{`+${Images.length - 3}`}</Box>
-              )}
-            </ImageCard>
+            {emptyImgArray.map((img, index) => {
+              return (
+                <ImageCard
+                  width={`${
+                    (1 / followImgColumns) * (containerWidth - mainImageWidth) -
+                    16
+                  }px`}
+                  maxWidth="100%"
+                  className="followingImg"
+                  url={Images[index + 1] ? Images[index + 1] : ''}
+                  key={index}
+                >
+                  {!Images[index + 1] ? (
+                    <Icon
+                      icon="icon-propiedades"
+                      fontSize="24px"
+                      color={theme.colors.neutralGray4}
+                    />
+                  ) : (
+                    index + 1 === followImgColumns * 2 &&
+                    images.length > followImgColumns * 2 &&
+                    images.length - 1 - followImgColumns * 2 + planos.length >
+                      0 && (
+                      <Box
+                        __css={{
+                          padding: '14px 15px',
+                          borderRadius: '50%',
+                          backgroundColor: theme.colors.neutralGray8,
+                          opacity: '0.8',
+                          color: theme.colors.black,
+                          fontFamily: 'Nunito Sans',
+                          fontSize: '14px',
+                          fontWeight: '700',
+                        }}
+                      >{`+${
+                        images.length -
+                        1 -
+                        followImgColumns * 2 +
+                        planos.length +
+                        (frontCoverBlueprints ? 1 : 0)
+                      }`}</Box>
+                    )
+                  )}
+                </ImageCard>
+              )
+            })}
           </Box>
         </Box>
       ) : (
         <Box onClick={toggleFullscreen}>{otherComponent}</Box>
       )}
-
-      <Box className={`fullscreen ${fullscreen ? 'openFullscreen' : ''}`}>
-        <Box className="fsOverlay" onClick={closeFullscreen}></Box>
-        {tabContainers.length > 1 && (
-          <Box className="fsTabHeader">
-            {tabContainers.map((tab, i) => (
-              <Text
-                key={i}
-                onClick={() => changeTabContainer(tab.toLocaleLowerCase())}
-                className={`${
-                  tabSelected === tab.toLocaleLowerCase() && 'tabSelected'
-                }`}
-                variant="bodyBold.fontSize14"
-              >
-                {tab}
-              </Text>
-            ))}
-          </Box>
-        )}
-        <Box className="fsContainerTabs" __css={{ position: 'relative' }}>
-          {/* Containers */}
-
-          <Icon
-            icon="icon-atras"
-            className="iconPrev"
-            fontSize="40px"
-            onClick={prev}
-          />
-
-          {tabSelected === 'fotos' && (
-            <Box className="fsTabCont">
-              <Box className="fsTabContImage">
-                <img src={imgWithCover[index]} alt="Foto" />
-                <Text className="contFotos" variant="bodyBold.fontSize14">{`${
-                  index + 1
-                }/${imgWithCover.length}`}</Text>
-              </Box>
-            </Box>
-          )}
-
-          {tabSelected === 'videos' && (
-            <Box className="fsTabCont">
-              <Box className="fsTabContImage">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={video[index]}
-                  title="Video"
-                  frameBorder="0"
-                  allowFullScreen
-                />
-                <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                  video.length
-                }`}</Text>
-              </Box>
-            </Box>
-          )}
-
-          {tabSelected === 'planos' && (
-            <Box className="fsTabCont">
-              <Box className="fsTabContImage">
-                <img src={bluePrintsWithCover[index]} alt="Foto" />
-                <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                  bluePrintsWithCover.length
-                }`}</Text>
-              </Box>
-            </Box>
-          )}
-
-          {tabSelected === 'video360' && (
-            <Box className="fsTabCont">
-              <Box className="fsTabContImage">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={video360[index]}
-                  title="Video"
-                  frameBorder="0"
-                  allowFullScreen
-                />
-                <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                  video360.length
-                }`}</Text>
-              </Box>
-            </Box>
-          )}
-
-          <Icon
-            className="iconNext"
-            style={{ transform: 'rotate(180deg)' }}
-            onClick={next}
-            icon="icon-atras"
-            fontSize="40px"
-          />
-
-          <Box className="fsCloseIcon">
-            <Icon
-              onClick={closeFullscreen}
-              className="closeIcon"
-              icon="icon-cerrar"
-              fontSize="32px"
-            />
-          </Box>
-        </Box>
-      </Box>
+      <FullScreen
+        fullscreen={fullscreen}
+        setFullscreen={setFullscreen}
+        tabContainers={tabContainers}
+        tabSelected={tabSelected}
+        setTabSelected={setTabSelected}
+        imgWithCover={imgWithCover}
+        index={index}
+        setIndex={setIndex}
+        images={images}
+        video={video}
+        planos={planos}
+        video360={video360}
+        bluePrintsWithCover={bluePrintsWithCover}
+      />
     </Box>
   )
 }
