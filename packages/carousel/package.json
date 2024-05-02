@@ -1,11 +1,12 @@
 {
   "name": "@oneloop/carousel",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib",
-    "styles"
+    "styles",
+    "components"
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.283",

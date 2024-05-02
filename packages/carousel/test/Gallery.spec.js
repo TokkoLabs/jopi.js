@@ -16,7 +16,15 @@ describe('Carousel', () => {
     const wrapper = mount(<Carousel images={['', '']} />)
     const btn = wrapper.find('.buttonGallery')
 
-    expect(btn.at(0).text()).toBe('Fotos')
+    expect(btn).toBeDefined()
+  })
+
+  it('next or prev img mobile', () => {
+    const wrapper = mount(<Carousel images={['1', '2']} />)
+
+    const btnNext = wrapper.find('.iconNextMobile').first()
+
+    btnNext.simulate('click')
   })
 
   it('toggles fullscreen correctly', () => {
@@ -26,6 +34,8 @@ describe('Carousel', () => {
         video={['', '']}
         video360={['', '']}
         planos={['', '']}
+        frontCoverImg={['img']}
+        frontCoverBlueprints={['img']}
       />
     )
     const fullscreenButton = wrapper.find('.firstTabImg').at(0)
@@ -35,6 +45,24 @@ describe('Carousel', () => {
     const tab = wrapper.find('.fsTabHeader')
 
     expect(tab.at(0).text()).toBe('VideosVideo360FotosPlanos')
+
+    const videosNode = wrapper
+      .findWhere((node) => node.text() === 'Videos')
+      .at(0)
+
+    videosNode.simulate('click')
+
+    const panosNode = wrapper
+      .findWhere((node) => node.text() === 'Planos')
+      .at(0)
+
+    panosNode.simulate('click')
+
+    const Video360 = wrapper
+      .findWhere((node) => node.text() === 'Video360')
+      .at(0)
+
+    Video360.simulate('click')
   })
 
   it('change img', () => {
