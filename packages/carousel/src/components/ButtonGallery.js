@@ -1,7 +1,8 @@
 import { Box } from '@oneloop/box'
+import React from 'react'
 import theme from '@oneloop/theme'
 
-export default function ButtonGallery({ text, ...props }) {
+export const ButtonGallery = ({ text, ...props }) => {
   return (
     <Box
       __css={{

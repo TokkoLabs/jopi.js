@@ -14,7 +14,7 @@ const validateImageDimensions = async (imageUrl) => {
   return img.width > img.height
 }
 
-export default function ImageCard({ url, styles, children, ...props }) {
+export const ImageCard = ({ url, styles, children, ...props }) => {
   const [rectangle, setRectangle] = useState(false)
   const isRectangle = async () => {
     const isRectangle = await validateImageDimensions(url)

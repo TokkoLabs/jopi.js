@@ -3,7 +3,7 @@ import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
 import { Text } from '@oneloop/text'
 
-export default function FullScreen({
+export const FullScreen = ({
   fullscreen,
   tabContainers,
   tabSelected,
@@ -14,7 +14,8 @@ export default function FullScreen({
   video,
   video360,
   setFullscreen,
-}) {
+  bluePrintsWithCover,
+}) => {
   const [contTab, setContTab] = useState(0)
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown)

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Carousel } from '.'
 import { Box } from '@oneloop/box'
-import { Button } from '@oneloop/button'
 
 export default {
   component: Carousel,
@@ -27,16 +26,6 @@ export const CarouselComponent = () => {
 
   const Video360 = ['https://my.matterport.com/show/?m=eURj8Qwwzb2']
 
-  const OtherButton = () => (
-    <Button
-      onClick={() => alert('seleccionando Imágenes')}
-      variant={['primary', 'medium']}
-      padding="7px 16px"
-      borderRadius="8px"
-    >
-      {'Seleccionar Imágenes'}
-    </Button>
-  )
   return (
     <Box>
       <Carousel
@@ -45,8 +34,6 @@ export const CarouselComponent = () => {
         video={VIDEO}
         planos={PLANO}
         video360={Video360}
-        h
-        otherButton={<OtherButton />}
       />
     </Box>
   )

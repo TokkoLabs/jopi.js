@@ -4,9 +4,9 @@ import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
 import { Icon } from '@oneloop/icons'
 import '../styles/gallery.css'
-import ImageCard from './components/ImageCard'
-import ButtonGallery from './components/ButtonGallery'
-import FullScreen from './components/FullScreen'
+import { ImageCard } from './components/ImageCard'
+import { ButtonGallery } from './components/ButtonGallery'
+import { FullScreen } from './components/FullScreen'
 
 export const Carousel = ({
   images = [],
@@ -70,13 +70,13 @@ export const Carousel = ({
       setWindowResize(window.innerWidth)
     }
     window.addEventListener('resize', changeWidth)
-    return () => window.removeEventListener('resize')
+    return () => window.removeEventListener('resize', changeWidth)
   }, [])
 
   useEffect(() => {
-    if (followingImg > (carouselHeight * 0.5) / 0.3)
+    if (followingImg > (carouselHeight * 0.5) / 0.3) {
       setCompensationHeigth(followingImg - (carouselHeight * 0.5) / 0.65)
-    else {
+    } else {
       setCompensationHeigth(0)
     }
     if (containerWidth < 600) setCarouselHeight(mainImageWidth * 0.562)
@@ -102,7 +102,7 @@ export const Carousel = ({
   }, [windowResize, containerWidth])
 
   useEffect(() => {
-    let emptyArray = []
+    const emptyArray = []
     for (let i = 0; i < followImgColumns * 2; i++) {
       emptyArray.push('')
     }
@@ -126,15 +126,18 @@ export const Carousel = ({
 
   const handleNextPrevImageMobile = (e, action) => {
     e.stopPropagation()
-    if (action === 'next')
+    if (action === 'next' && mainImageMobile < Images.length - 1) {
       setMainImageMobile(
-        mainImageMobile < Images.length ? mainImageMobile + 1 : 0
+        mainImageMobile < Images.length - 1 ? mainImageMobile + 1 : 0
       )
-    if (action === 'prev')
+    }
+    if (action === 'prev' && mainImageMobile > 0) {
       setMainImageMobile(
-        mainImageMobile > 0 ? mainImageMobile - 1 : Images.length
+        mainImageMobile > 0 ? mainImageMobile - 1 : Images.length - 1
       )
+    }
   }
+
   return (
     <Box
       __css={{
@@ -161,7 +164,7 @@ export const Carousel = ({
         >
           <ImageCard
             onClick={toggleFullscreen}
-            id="firstTabImg"
+            className="firstTabImg"
             position={'relative'}
             height={'100%'}
             minWidth={`${
@@ -183,6 +186,7 @@ export const Carousel = ({
                   position: 'absolute',
                   display: 'flex',
                   justifyContent: 'space-between',
+                  padding: '0 8px',
                 }}
               >
                 <Icon
@@ -313,6 +317,7 @@ export const Carousel = ({
         video={video}
         planos={planos}
         video360={video360}
+        bluePrintsWithCover={bluePrintsWithCover}
       />
     </Box>
   )
