@@ -21,9 +21,7 @@ export const Carousel = ({
 }) => {
   const [windowResize, setWindowResize] = useState(false)
   const [fullscreen, setFullscreen] = useState(false)
-  const [carouselHeight, setCarouselHeight] = useState(
-    props.height ? props.height : 0
-  )
+  const [carouselHeight, setCarouselHeight] = useState(0)
   const [tabSelected, setTabSelected] = useState('fotos')
   const tabContainers = []
   const [index, setIndex] = useState(0)
@@ -65,10 +63,12 @@ export const Carousel = ({
   if (planos.length > 0 || frontCoverBlueprints.length > 0) {
     tabContainers.push('Planos')
   }
+
   useEffect(() => {
     const changeWidth = () => {
       setWindowResize(window.innerWidth)
     }
+
     window.addEventListener('resize', changeWidth)
     return () => window.removeEventListener('resize', changeWidth)
   }, [])
@@ -79,11 +79,13 @@ export const Carousel = ({
     } else {
       setCompensationHeigth(0)
     }
-    if (containerWidth < 600) setCarouselHeight(mainImageWidth * 0.562)
-    else if (containerWidth > 650 && containerWidth < 960) {
+
+    if (containerWidth < 600) {
+      setCarouselHeight(containerWidth * 0.562)
+    } else if (containerWidth > 650 && containerWidth < 960) {
       setCarouselHeight(mainImageWidth * 0.562 + compensationHeigth)
     } else setCarouselHeight(316)
-  }, [windowResize, followImgColumns])
+  }, [windowResize, followImgColumns, containerWidth])
 
   useEffect(() => {
     if (containerWidth <= 700) {
@@ -179,7 +181,7 @@ export const Carousel = ({
                 color={theme.colors.neutralGray4}
               />
             )}
-            {containerWidth <= 600 && Images.length > 0 && (
+            {window.innerWidth <= 480 && Images.length > 0 && (
               <Box
                 width="100%"
                 __css={{
@@ -204,7 +206,7 @@ export const Carousel = ({
                 />
               </Box>
             )}
-            {otherButton || containerWidth < 600 ? (
+            {otherButton || window.innerWidth <= 480 ? (
               <Box className="buttonsMainImgContainer">{otherButton}</Box>
             ) : (
               <Box className="buttonsMainImgContainer">
