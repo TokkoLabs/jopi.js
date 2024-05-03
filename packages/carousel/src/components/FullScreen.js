@@ -7,14 +7,14 @@ export const FullScreen = ({
   fullscreen,
   tabContainers,
   tabSelected,
-  imgWithCover,
+  photos,
   index,
   setIndex,
   setTabSelected,
   video,
   video360,
   setFullscreen,
-  bluePrintsWithCover,
+  planos,
 }) => {
   const [contTab, setContTab] = useState(0)
   useEffect(() => {
@@ -29,18 +29,20 @@ export const FullScreen = ({
     if (tabSelected === 'videos') {
       newContTab = video.length
     } else if (tabSelected === 'fotos') {
-      newContTab = imgWithCover.length
+      newContTab = photos.length
     } else if (tabSelected === 'planos') {
-      newContTab = bluePrintsWithCover.length
+      newContTab = planos.length
     } else if (tabSelected === 'video360') {
       newContTab = video360.length
     }
     setContTab(newContTab)
   }, [tabSelected])
+
   const changeTabContainer = (tab) => {
     setIndex(0)
     setTabSelected(tab)
   }
+
   const handleKeyDown = (event) => {
     if (event.key === 'ArrowRight') {
       next()
@@ -81,6 +83,7 @@ export const FullScreen = ({
           ))}
         </Box>
       )}
+
       <Box className="fsContainerTabs" __css={{ position: 'relative' }}>
         <Icon
           icon="icon-atras"
@@ -92,10 +95,10 @@ export const FullScreen = ({
         {tabSelected === 'fotos' && (
           <Box className="fsTabCont">
             <Box className="fsTabContImage">
-              <img src={imgWithCover[index]} alt="Foto" />
+              <img src={photos[index]} alt="Foto" />
               <Text className="contFotos" variant="bodyBold.fontSize14">{`${
                 index + 1
-              }/${imgWithCover.length}`}</Text>
+              }/${photos.length}`}</Text>
             </Box>
           </Box>
         )}
@@ -121,9 +124,9 @@ export const FullScreen = ({
         {tabSelected === 'planos' && (
           <Box className="fsTabCont">
             <Box className="fsTabContImage">
-              <img src={bluePrintsWithCover[index]} alt="Foto" />
+              <img src={planos[index]} alt="Foto" />
               <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                bluePrintsWithCover.length
+                planos.length
               }`}</Text>
             </Box>
           </Box>
