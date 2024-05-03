@@ -24,7 +24,7 @@ export const Carousel = ({
   const [carouselHeight, setCarouselHeight] = useState(0)
   const [tabSelected, setTabSelected] = useState('fotos')
   const tabContainers = []
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(2)
   const Images = [...images, ...planos]
   const imgWithCover = [...images]
   const bluePrintsWithCover = [...planos]
@@ -116,10 +116,10 @@ export const Carousel = ({
     if (
       video.length > 0 ||
       video360.length > 0 ||
-      images.length > 0 ||
-      planos.length > 0
+      imgWithCover.length > 0 ||
+      bluePrintsWithCover.length > 0
     ) {
-      if (planos.length > 0 && !images.length > 0) {
+      if (bluePrintsWithCover.length > 0 && !imgWithCover.length > 0) {
         setTabSelected('planos')
       }
       setFullscreen(true)
@@ -240,7 +240,6 @@ export const Carousel = ({
           </ImageCard>
 
           <Box
-            onClick={toggleFullscreen}
             __css={{
               display: 'flex',
               flexDirection: 'column',
@@ -258,6 +257,7 @@ export const Carousel = ({
             {emptyImgArray.map((img, index) => {
               return (
                 <ImageCard
+                onClick={toggleFullscreen}
                   width={`${
                     (1 / followImgColumns) * (containerWidth - mainImageWidth) -
                     16
@@ -312,12 +312,11 @@ export const Carousel = ({
         tabContainers={tabContainers}
         tabSelected={tabSelected}
         setTabSelected={setTabSelected}
-        imgWithCover={imgWithCover}
         index={index}
         setIndex={setIndex}
-        images={images}
         video={video}
-        planos={planos}
+        photos={imgWithCover}
+        planos={bluePrintsWithCover}
         video360={video360}
         bluePrintsWithCover={bluePrintsWithCover}
       />

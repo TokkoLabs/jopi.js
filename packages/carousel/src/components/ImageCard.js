@@ -24,9 +24,13 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
   }
 
   useEffect(() => {
-    isRectangle().then(() => {
+    if (url) {
+      isRectangle().then(() => {
+        setDone(true)
+      })
+    } else {
       setDone(true)
-    })
+    }
   }, [url])
 
   if (!done && process.env.NODE_ENV !== 'test') {
