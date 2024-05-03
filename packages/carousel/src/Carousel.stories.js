@@ -22,7 +22,11 @@ export const CarouselComponent = () => {
     'https://www.youtube.com/embed/70KXYjyzFK4',
   ]
 
-  const PLANO = []
+  const PLANO = [
+    'https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*',
+    'https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*',
+    'https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*',
+  ]
 
   const Video360 = ['https://my.matterport.com/show/?m=eURj8Qwwzb2']
 
