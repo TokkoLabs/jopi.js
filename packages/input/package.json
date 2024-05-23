@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/input",
-  "version": "1.2.349",
+  "version": "1.2.350",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.283",
-    "@oneloop/icons": "^1.2.306",
+    "@oneloop/icons": "^1.2.307",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
