@@ -346,3 +346,7 @@ export const iconSiguiente = () => <Icon icon='icon-siguiente' fontSize='24px'/>
 export const iconSilenciar = () => <Icon icon='icon-silenciar' fontSize='24px'/>
 
 export const iconSolarium = () => <Icon icon='icon-solarium' fontSize='24px'/>
+
+export const iconFrente = () => <Icon icon='icon-frente' fontSize='24px'/>
+
+export const iconFondo = () => <Icon icon='icon-fondo' fontSize='24px'/>
