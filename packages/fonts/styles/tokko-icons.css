@@ -535,3 +535,9 @@
 .icon-zoom-out:before {
   content: "\e9a9";
 }
+.icon-fondo:before {
+  content: "\e94b";
+}
+.icon-frente:before {
+  content: "\e94c";
+}
