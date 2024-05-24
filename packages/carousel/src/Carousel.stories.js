@@ -33,7 +33,7 @@ export const CarouselComponent = () => {
   return (
     <Box>
       <Carousel
-        frontCoverBlueprints="https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*"
+        frontCoverBlueprints="https://www.wallpaperuse.com/wallp/0-9852_m.jpg"
         images={imgs}
         video={VIDEO}
         planos={PLANO}

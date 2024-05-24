@@ -38,7 +38,7 @@
   padding: 8px 16px;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: auto;
   max-width: 360px;
   border-radius: 8px;
   background: var(--neutralGray8);
@@ -68,6 +68,7 @@
   padding-top: 10px;
   width: 100%;
   height: 100%;
+  min-height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +76,7 @@
 
 .fsTabCont {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 50px);
   display: flex;
   justify-content: center;
 }
@@ -90,7 +91,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95%;
+  max-height: 100%;
   width: 100%;
   gap: 24px;
 }
@@ -107,13 +108,16 @@
   bottom: 0px;
 }
 
-.fsCloseIcon {
+.fsCloseIconMobile {
   position: absolute;
   color: var(--neutralGray8);
-  right: 5px;
+  right: 20px;
+  top: 16px;
   font-size: 16px;
-  top: -67px;
   cursor: pointer;
+}
+.fsCloseIconDesktop {
+  display: none;
 }
 .iconPrev,
 .iconNext {
@@ -143,10 +147,17 @@
     padding: 40px;
     gap: 24px;
   }
-  .fsCloseIcon {
+  .fsCloseIconDesktop {
+    display: block;
+    position: absolute;
+    color: var(--neutralGray8);
     right: 4px;
     font-size: 32px;
     top: 0px;
+    cursor: pointer;
+  }
+  .fsCloseIconMobile {
+    display: none;
   }
   .fsTabHeader {
     padding: 8px 16px;
@@ -174,4 +185,7 @@
     max-height: 95%;
     height: auto;
   }
+}
+body {
+  padding: 0 !important;
 }

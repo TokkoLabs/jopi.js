@@ -1,5 +1,5 @@
 /* eslint-disable multiline-ternary */
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef, useLayoutEffect } from 'react'
 import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
 import { Icon } from '@oneloop/icons'
@@ -7,6 +7,7 @@ import '../styles/gallery.css'
 import { ImageCard } from './components/ImageCard'
 import { ButtonGallery } from './components/ButtonGallery'
 import { FullScreen } from './components/FullScreen'
+import SliderSwap from './components/SliderSwap'
 
 export const Carousel = ({
   images = [],
@@ -40,7 +41,6 @@ export const Carousel = ({
   }
 
   const [emptyImgArray, setEmptyImgArray] = useState([])
-  const [mainImageMobile, setMainImageMobile] = useState(0)
   const carouselContainerRef = useRef()
   const containerWidth = carouselContainerRef.current?.parentElement.clientWidth
   const followingImg =
@@ -68,29 +68,29 @@ export const Carousel = ({
     const changeWidth = () => {
       setWindowResize(window.innerWidth)
     }
-
-    window.addEventListener('resize', changeWidth)
-    return () => window.removeEventListener('resize', changeWidth)
+    const debouncedHandleResize = debounce(changeWidth, 200)
+    window.addEventListener('resize', debouncedHandleResize)
+    return () => window.removeEventListener('resize', debouncedHandleResize)
   }, [])
 
-  useEffect(() => {
-    if (followingImg > (carouselHeight * 0.5) / 0.3) {
-      setCompensationHeigth(followingImg - (carouselHeight * 0.5) / 0.65)
-    } else {
-      setCompensationHeigth(0)
-    }
-
-    if (containerWidth < 600) {
-      setCarouselHeight(containerWidth * 0.562)
-    } else if (containerWidth > 650 && containerWidth < 960) {
-      setCarouselHeight(mainImageWidth * 0.562 + compensationHeigth)
-    } else setCarouselHeight(316)
+  useLayoutEffect(() => {
+    setCompensationHeigth(followingImg - (carouselHeight * 0.5) / 0.65)
   }, [windowResize, followImgColumns, containerWidth])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if (containerWidth < 600) {
+      setCarouselHeight(containerWidth * 0.562)
+    } else {
+      setCarouselHeight(
+        mainImageWidth * 0.562 +
+          (isNaN(compensationHeigth) ? 0 : compensationHeigth)
+      )
+    }
+  }, [compensationHeigth, mainImageWidth, containerWidth])
+
+  useLayoutEffect(() => {
     if (containerWidth <= 700) {
       setFollowImgColumns(0)
-      setCarouselHeight(containerWidth * 0.562)
     } else if (containerWidth >= 650 && containerWidth < 960) {
       setFollowImgColumns(1)
       setMainImageWidth(470)
@@ -126,20 +126,17 @@ export const Carousel = ({
     }
   }
 
-  const handleNextPrevImageMobile = (e, action) => {
-    e.stopPropagation()
-    if (action === 'next' && mainImageMobile < Images.length - 1) {
-      setMainImageMobile(
-        mainImageMobile < Images.length - 1 ? mainImageMobile + 1 : 0
-      )
-    }
-    if (action === 'prev' && mainImageMobile > 0) {
-      setMainImageMobile(
-        mainImageMobile > 0 ? mainImageMobile - 1 : Images.length - 1
-      )
+  function debounce(func, wait) {
+    let timeout
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout)
+        func(...args)
+      }
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
     }
   }
-
   return (
     <Box
       __css={{
@@ -148,166 +145,178 @@ export const Carousel = ({
     >
       {!otherComponent ? (
         <Box
+          height={`${carouselHeight}px`}
           __css={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            height: `${carouselHeight + 5}px`,
             width: '100%',
-            maxHeight: '316px',
           }}
         >
-          <Box
-            {...props}
-            __css={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '16px',
-              height: '100%',
-            }}
-            ref={carouselContainerRef}
-          >
-            <ImageCard
-              onClick={toggleFullscreen}
-              className="firstTabImg"
-              position={'relative'}
-              height={'100%'}
-              minWidth={`${
-                followImgColumns === 0 ? containerWidth : mainImageWidth
-              }px`}
-              url={containerWidth > 600 ? Images[0] : Images[mainImageMobile]}
-            >
-              {!Images[0] && (
-                <Icon
-                  icon="icon-propiedades"
-                  fontSize="34px"
-                  color={theme.colors.neutralGray4}
-                />
-              )}
-              {window.innerWidth <= 480 && Images.length > 0 && (
-                <Box
-                  width="100%"
-                  __css={{
-                    position: 'absolute',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    padding: '0 8px',
-                  }}
-                >
-                  <Icon
-                    icon="icon-atras"
-                    className="iconPrevMobile"
-                    onClick={(e) => handleNextPrevImageMobile(e, 'prev')}
-                  />
-                  <Icon
-                    className="iconNextMobile"
-                    style={{
-                      transform: 'rotate(180deg)',
-                    }}
-                    onClick={(e) => handleNextPrevImageMobile(e, 'next')}
-                    icon="icon-atras"
-                  />
-                </Box>
-              )}
-              {otherButton || window.innerWidth <= 480 ? (
-                <Box className="buttonsMainImgContainer">{otherButton}</Box>
-              ) : (
-                <Box className="buttonsMainImgContainer">
-                  {video.length > 0 && (
-                    <ButtonGallery
-                      text={'Videos'}
-                      onClick={() => setTabSelected('videos')}
-                    />
-                  )}
-                  {video360.length > 0 && (
-                    <ButtonGallery
-                      text={'Video 360°'}
-                      onClick={() => setTabSelected('video360')}
-                    />
-                  )}
-                  {(images.length > 0 || imgWithCover.length > 0) && (
-                    <ButtonGallery
-                      className="buttonGallery"
-                      text={'Fotos'}
-                      onClick={() => setTabSelected('fotos')}
-                    />
-                  )}
-                  {(planos.length > 0 || frontCoverBlueprints.length > 0) && (
-                    <ButtonGallery
-                      text={'Planos'}
-                      onClick={() => setTabSelected('planos')}
-                    />
-                  )}
-                </Box>
-              )}
-            </ImageCard>
-
+          {window.innerWidth < 600 ? (
+            <SliderSwap
+              height={carouselHeight}
+              images={Images}
+              handleTouchToogle={toggleFullscreen}
+              otherButton={otherButton}
+            />
+          ) : (
             <Box
+              {...props}
               __css={{
                 display: 'flex',
-                flexDirection: 'column',
+                alignItems: 'center',
                 justifyContent: 'space-between',
-                alignItems: 'start',
-                flexWrap: 'wrap',
                 gap: '16px',
-                width:
-                  followImgColumns > 0
-                    ? (containerWidth - mainImageWidth) * followImgColumns
-                    : '0%',
                 height: '100%',
               }}
+              ref={carouselContainerRef}
             >
-              {emptyImgArray.map((img, index) => {
-                return (
-                  <ImageCard
-                    onClick={toggleFullscreen}
-                    width={`${
-                      (1 / followImgColumns) *
-                        (containerWidth - mainImageWidth) -
-                      16
-                    }px`}
-                    maxWidth="100%"
-                    className="followingImg"
-                    url={Images[index + 1] ? Images[index + 1] : ''}
-                    key={index}
+              <ImageCard
+                onClick={toggleFullscreen}
+                className="firstTabImg"
+                position={'relative'}
+                height={'100%'}
+                minWidth={`${
+                  followImgColumns === 0 ? containerWidth : mainImageWidth
+                }px`}
+                url={Images[0]}
+              >
+                {!Images[0] && (
+                  <Icon
+                    icon="icon-propiedades"
+                    fontSize="34px"
+                    color={theme.colors.neutralGray4}
+                  />
+                )}
+                {/*                 {window.innerWidth <= 480 && Images.length > 0 && (
+                  <Box
+                    width="100%"
+                    __css={{
+                      position: 'absolute',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      padding: '0 8px',
+                    }}
                   >
-                    {!Images[index + 1] ? (
-                      <Icon
-                        icon="icon-propiedades"
-                        fontSize="24px"
-                        color={theme.colors.neutralGray4}
+                    <Icon
+                      icon="icon-atras"
+                      className="iconPrevMobile"
+                      onClick={(e) => handleNextPrevImageMobile(e, 'prev')}
+                    />
+                    <Icon
+                      className="iconNextMobile"
+                      style={{
+                        transform: 'rotate(180deg)',
+                      }}
+                      onClick={(e) => handleNextPrevImageMobile(e, 'next')}
+                      icon="icon-atras"
+                    />
+                  </Box>
+                )} */}
+                {otherButton || window.innerWidth <= 480 ? (
+                  <Box className="buttonsMainImgContainer">{otherButton}</Box>
+                ) : (
+                  <Box className="buttonsMainImgContainer">
+                    {video.length > 0 && (
+                      <ButtonGallery
+                        text={'Videos'}
+                        onClick={() => setTabSelected('videos')}
                       />
-                    ) : (
-                      index + 1 === followImgColumns * 2 &&
-                      images.length > followImgColumns * 2 &&
-                      images.length - 1 - followImgColumns * 2 + planos.length >
-                        0 && (
-                        <Box
-                          __css={{
-                            padding: '14px 15px',
-                            borderRadius: '50%',
-                            backgroundColor: theme.colors.neutralGray8,
-                            opacity: '0.8',
-                            color: theme.colors.black,
-                            fontFamily: 'Nunito Sans',
-                            fontSize: '14px',
-                            fontWeight: '700',
-                          }}
-                        >{`+${
-                          images.length -
+                    )}
+                    {video360.length > 0 && (
+                      <ButtonGallery
+                        text={'Video 360°'}
+                        onClick={() => setTabSelected('video360')}
+                      />
+                    )}
+                    {(images.length > 0 || imgWithCover.length > 0) && (
+                      <ButtonGallery
+                        className="buttonGallery"
+                        text={'Fotos'}
+                        onClick={() => setTabSelected('fotos')}
+                      />
+                    )}
+                    {(planos.length > 0 || frontCoverBlueprints.length > 0) && (
+                      <ButtonGallery
+                        text={'Planos'}
+                        onClick={() => setTabSelected('planos')}
+                      />
+                    )}
+                  </Box>
+                )}
+              </ImageCard>
+
+              <Box
+                __css={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  alignItems: 'start',
+                  flexWrap: 'wrap',
+                  gap: '16px',
+                  width:
+                    followImgColumns > 0
+                      ? (containerWidth - mainImageWidth) * followImgColumns
+                      : '0%',
+                  height: '100%',
+                }}
+              >
+                {emptyImgArray.map((img, index) => {
+                  return (
+                    <ImageCard
+                      onClick={toggleFullscreen}
+                      width={`${
+                        (1 / followImgColumns) *
+                          (containerWidth - mainImageWidth) -
+                        16
+                      }px`}
+                      maxWidth="100%"
+                      maxHeight={carouselHeight / 2 - 8}
+                      className="followingImg"
+                      url={Images[index + 1] ? Images[index + 1] : ''}
+                      key={index}
+                    >
+                      {!Images[index + 1] ? (
+                        <Icon
+                          icon="icon-propiedades"
+                          fontSize="24px"
+                          color={theme.colors.neutralGray4}
+                        />
+                      ) : (
+                        index + 1 === followImgColumns * 2 &&
+                        images.length > followImgColumns * 2 &&
+                        images.length -
                           1 -
                           followImgColumns * 2 +
-                          planos.length +
-                          (frontCoverBlueprints ? 1 : 0)
-                        }`}</Box>
-                      )
-                    )}
-                  </ImageCard>
-                )
-              })}
+                          planos.length >
+                          0 && (
+                          <Box
+                            __css={{
+                              padding: '14px 15px',
+                              borderRadius: '50%',
+                              backgroundColor: theme.colors.neutralGray8,
+                              opacity: '0.8',
+                              color: theme.colors.black,
+                              fontFamily: 'Nunito Sans',
+                              fontSize: '14px',
+                              fontWeight: '700',
+                            }}
+                          >{`+${
+                            images.length -
+                            1 -
+                            followImgColumns * 2 +
+                            planos.length +
+                            (frontCoverBlueprints ? 1 : 0)
+                          }`}</Box>
+                        )
+                      )}
+                    </ImageCard>
+                  )
+                })}
+              </Box>
             </Box>
-          </Box>
+          )}
         </Box>
       ) : (
         <Box onClick={toggleFullscreen}>{otherComponent}</Box>

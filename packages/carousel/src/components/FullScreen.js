@@ -66,6 +66,13 @@ export const FullScreen = ({
   }
   return (
     <Box className={`fullscreen ${fullscreen ? 'openFullscreen' : ''}`}>
+      <Box className="fsCloseIconMobile">
+        <Icon
+          onClick={closeFullscreen}
+          className="closeIcon"
+          icon="icon-cerrar"
+        />
+      </Box>
       <Box className="fsOverlay" onClick={closeFullscreen}></Box>
       {tabContainers.length > 1 && (
         <Box className="fsTabHeader">
@@ -158,7 +165,7 @@ export const FullScreen = ({
           fontSize="40px"
         />
 
-        <Box className="fsCloseIcon">
+        <Box className="fsCloseIconDesktop">
           <Icon
             onClick={closeFullscreen}
             className="closeIcon"
