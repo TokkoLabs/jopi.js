@@ -4,9 +4,9 @@ import theme from '@oneloop/theme'
 import { Icon } from '@oneloop/icons'
 import '../styles/gallery.css'
 import { ImageCard } from './components/ImageCard'
-import { ButtonGallery } from './components/ButtonGallery'
 import { FullScreen } from './components/FullScreen'
 import { SliderSwap } from './components/SliderSwap'
+import ButtonsMainImage from './components/ButtonsMainImage'
 
 export const Carousel = ({
   images = [],
@@ -143,6 +143,32 @@ export const Carousel = ({
     }
     return executedFunction
   }
+  const handleImageClickToFullscreen = (url) => {
+    const imagesMap = images.map((img) => ({ url: img, type: 'fotos' }))
+    if (frontCoverImg) imagesMap.unshift({ url: frontCoverImg, type: 'fotos' })
+    const planosMap = planos.map((img) => ({ url: img, type: 'planos' }))
+    if (frontCoverBlueprints)
+      planosMap.unshift({ url: frontCoverBlueprints, type: 'planos' })
+
+    const allFiles = [...imagesMap, ...planosMap]
+    const fileFiltered = allFiles.filter((img) => img.url == url)[0]
+
+    if (fileFiltered.type === 'fotos') {
+      imgWithCover.map((img, index) => {
+        if (img === fileFiltered.url) {
+          setIndex(index)
+        }
+      })
+    } else {
+      bluePrintsWithCover.map((img, index) => {
+        if (img === fileFiltered.url) {
+          setIndex(index)
+        }
+      })
+    }
+    setTabSelected(fileFiltered.type)
+  }
+
   return (
     <Box
       __css={{
@@ -160,14 +186,34 @@ export const Carousel = ({
             width: '100%',
           }}
         >
-          {window.innerWidth < 600 ? (
-            <SliderSwap
-              height={`${carouselHeight || window.innerWidth * 0.562}px`}
-              width={carouselContainerWidth}
-              images={Images}
-              handleTouchToogle={toggleFullscreen}
-              otherButton={otherButton}
-            />
+          {window.innerWidth < 700 ? (
+            <Box __css={{ width: '100%', height: '100%' }}>
+              <SliderSwap
+                files={Images}
+                handleTouchToogle={toggleFullscreen}
+                otherButton={otherButton}
+                handleImageClickToFullscreen={handleImageClickToFullscreen}
+                setIndex={setIndex}
+              />
+              {!otherButton && window.innerWidth > 600 && (
+                <Box
+                  __css={{ bottom: '6px' }}
+                  className="buttonsMainImageSlider"
+                >
+                  <ButtonsMainImage
+                    video={video}
+                    video360={video360}
+                    images={images}
+                    imgWithCover={imgWithCover}
+                    planos={planos}
+                    frontCoverBlueprints={frontCoverBlueprints}
+                    setTabSelected={setTabSelected}
+                    setIndex={setIndex}
+                    handleTouchToogle={toggleFullscreen}
+                  />
+                </Box>
+              )}
+            </Box>
           ) : (
             <Box
               {...props}
@@ -181,7 +227,10 @@ export const Carousel = ({
               ref={carouselContainerRef}
             >
               <ImageCard
-                onClick={toggleFullscreen}
+                onClick={() => {
+                  toggleFullscreen()
+                  handleImageClickToFullscreen(Images[0])
+                }}
                 className="firstTabImg"
                 position={'relative'}
                 height={'100%'}
@@ -201,36 +250,20 @@ export const Carousel = ({
                   />
                 )}
 
-                {otherButton || window.innerWidth <= 600 ? (
+                {otherButton ? (
                   <Box className="buttonsMainImgContainer">{otherButton}</Box>
                 ) : (
-                  <Box className="buttonsMainImgContainer">
-                    {video.length > 0 && (
-                      <ButtonGallery
-                        text={'Videos'}
-                        onClick={() => setTabSelected('videos')}
-                      />
-                    )}
-                    {video360.length > 0 && (
-                      <ButtonGallery
-                        text={'Video 360°'}
-                        onClick={() => setTabSelected('video360')}
-                      />
-                    )}
-                    {(images.length > 0 || imgWithCover.length > 0) && (
-                      <ButtonGallery
-                        className="buttonGallery"
-                        text={'Fotos'}
-                        onClick={() => setTabSelected('fotos')}
-                      />
-                    )}
-                    {(planos.length > 0 || frontCoverBlueprints.length > 0) && (
-                      <ButtonGallery
-                        text={'Planos'}
-                        onClick={() => setTabSelected('planos')}
-                      />
-                    )}
-                  </Box>
+                  <ButtonsMainImage
+                    video={video}
+                    video360={video360}
+                    images={images}
+                    imgWithCover={imgWithCover}
+                    planos={planos}
+                    frontCoverBlueprints={frontCoverBlueprints}
+                    setTabSelected={setTabSelected}
+                    setIndex={setIndex}
+                    handleTouchToogle={toggleFullscreen}
+                  />
                 )}
               </ImageCard>
 
@@ -248,7 +281,12 @@ export const Carousel = ({
                 {emptyImgArray.map((img, index) => {
                   return (
                     <ImageCard
-                      onClick={toggleFullscreen}
+                      onClick={() => {
+                        toggleFullscreen()
+                        handleImageClickToFullscreen(
+                          Images[index + 1] ? Images[index + 1] : Images[0]
+                        )
+                      }}
                       width={`${followingImgWidth}px`}
                       maxHeight={carouselHeight / 2 - 8}
                       className="followingImg"

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
 import { Text } from '@oneloop/text'
+import { SliderSwap } from './SliderSwap'
 
 export const FullScreen = ({
   fullscreen,
@@ -56,9 +57,6 @@ export const FullScreen = ({
       closeFullscreen()
     }
   }
-  const next = () => setIndex((prev) => Math.min(contTab - 1, prev + 1))
-
-  const prev = () => setIndex((prev) => Math.max(0, prev - 1))
   const closeFullscreen = () => {
     setFullscreen(false)
     setTabSelected('fotos')
@@ -92,17 +90,16 @@ export const FullScreen = ({
       )}
 
       <Box className="fsContainerTabs" __css={{ position: 'relative' }}>
-        <Icon
-          icon="icon-atras"
-          className="iconPrev"
-          fontSize="40px"
-          onClick={prev}
-        />
-
         {tabSelected === 'fotos' && (
           <Box className="fsTabCont">
             <Box className="fsTabContImage">
-              <img src={photos[index]} alt="Foto" />
+              <SliderSwap
+                setIndex={setIndex}
+                fullScreen
+                fileType={tabSelected}
+                files={photos}
+                index={index}
+              />
               <Text className="contFotos" variant="bodyBold.fontSize14">{`${
                 index + 1
               }/${photos.length}`}</Text>
@@ -113,13 +110,12 @@ export const FullScreen = ({
         {tabSelected === 'videos' && (
           <Box className="fsTabCont">
             <Box className="fsTabContImage">
-              <iframe
-                width="100%"
-                height="100%"
-                src={video[index]}
-                title="Video"
-                frameBorder="0"
-                allowFullScreen
+              <SliderSwap
+                setIndex={setIndex}
+                fullScreen
+                fileType={tabSelected}
+                files={video}
+                index={index}
               />
               <Text variant="bodyBold.fontSize14">{`${index + 1}/${
                 video.length
@@ -127,11 +123,16 @@ export const FullScreen = ({
             </Box>
           </Box>
         )}
-
         {tabSelected === 'planos' && (
           <Box className="fsTabCont">
             <Box className="fsTabContImage">
-              <img src={planos[index]} alt="Foto" />
+              <SliderSwap
+                setIndex={setIndex}
+                fullScreen
+                fileType={tabSelected}
+                files={planos}
+                index={index}
+              />
               <Text variant="bodyBold.fontSize14">{`${index + 1}/${
                 planos.length
               }`}</Text>
@@ -142,13 +143,12 @@ export const FullScreen = ({
         {tabSelected === 'video360' && (
           <Box className="fsTabCont">
             <Box className="fsTabContImage">
-              <iframe
-                width="100%"
-                height="100%"
-                src={video360[index]}
-                title="Video"
-                frameBorder="0"
-                allowFullScreen
+              <SliderSwap
+                setIndex={setIndex}
+                fullScreen
+                fileType={tabSelected}
+                files={video360}
+                index={index}
               />
               <Text variant="bodyBold.fontSize14">{`${index + 1}/${
                 video360.length
@@ -156,14 +156,6 @@ export const FullScreen = ({
             </Box>
           </Box>
         )}
-
-        <Icon
-          className="iconNext"
-          style={{ transform: 'rotate(180deg)' }}
-          onClick={next}
-          icon="icon-atras"
-          fontSize="40px"
-        />
 
         <Box className="fsCloseIconDesktop">
           <Icon

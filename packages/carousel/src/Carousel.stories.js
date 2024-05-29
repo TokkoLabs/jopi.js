@@ -25,22 +25,23 @@ export const CarouselComponent = () => {
   ]
 
   const PLANO = [
-    'https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*',
-    'https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*',
-    'https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*',
+    'https://support.content.office.net/es-es/media/9fbc6289-a5de-4954-ae03-0ef707ac66e2.gif',
+    'https://static.wixstatic.com/media/c842eb_995c1e6e010543128d89ba34886b4a82~mv2.jpg/v1/fill/w_980,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c842eb_995c1e6e010543128d89ba34886b4a82~mv2.jpg',
   ]
 
-  const Video360 = ['https://my.matterport.com/show/?m=eURj8Qwwzb2']
+  const Video360 = [
+    'https://www.youtube.com/embed/j37WwsVmKRk?si=KeA42lF4i7705Dzf',
+  ]
 
   return (
     <Box>
       <Carousel
-        frontCoverBlueprints="https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*"
+        //frontCoverBlueprints="https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*"
         images={imgs}
         video={VIDEO}
         planos={PLANO}
         video360={Video360}
-        otherButton={editButton()}
+        //otherButton={editButton()}
       />
     </Box>
   )

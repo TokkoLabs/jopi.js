@@ -3,18 +3,44 @@ import { ImageCard } from './ImageCard'
 import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
 
-export const SliderSwap = ({ images = [], handleTouchToogle, otherButton }) => {
+const validateImageDimensions = async (imageUrl) => {
+  // eslint-disable-next-line no-undef
+  const img = new Image()
+  img.src = imageUrl
+
+  await new Promise((resolve) => {
+    img.onload = () => resolve()
+  })
+
+  return img.width > img.height
+}
+export const SliderSwap = ({
+  files = [],
+  handleTouchToogle,
+  otherButton,
+  fullScreen = false,
+  handleImageClickToFullscreen,
+  fileType,
+  setIndex,
+  index,
+}) => {
   const sliderContainerRef = useRef(null)
   const sliderRef = useRef(null)
+  const iconNextRef = useRef(null)
+  const iconPrevRef = useRef(null)
+
   const [isDragging, setIsDragging] = useState(false)
   const [startPos, setStartPos] = useState(0)
   const [startPosY, setStartPosY] = useState(0)
   const [currentTranslate, setCurrentTranslate] = useState(0)
   const [prevTranslate, setPrevTranslate] = useState(0)
-  const [translateX, setTranslateX] = useState(0)
   const [startTime, setStartTime] = useState(0)
   const [isClick, setIsClick] = useState(true)
-  const iconsPositionY = sliderContainerRef.current?.offsetHeight / 2
+  const sliderContainerWidth = sliderContainerRef.current?.offsetWidth
+  const iconNextPosition = iconNextRef.current?.getBoundingClientRect()
+  const iconPrevPosition = iconPrevRef.current?.getBoundingClientRect()
+  const [translateX, setTranslateX] = useState(0)
+  const [rectangle, setRectangle] = useState(false)
 
   const touchStart = (event) => {
     const position =
@@ -50,24 +76,24 @@ export const SliderSwap = ({ images = [], handleTouchToogle, otherButton }) => {
 
       if (isClick && elapsedTime < 300) {
         if (
-          startPos > sliderContainerRef.current.offsetWidth - 50 &&
-          startPosY < iconsPositionY + 15 &&
-          startPosY > iconsPositionY - 15
+          startPos > iconNextPosition.x - 10 &&
+          startPosY < iconNextPosition.y + 40 &&
+          startPosY > iconNextPosition.y - 10
         )
           return nextSlide()
         if (
-          startPos < 50 &&
-          startPosY < iconsPositionY + 15 &&
-          startPosY > iconsPositionY - 15
-        )
+          startPos < iconPrevPosition.x + 40 &&
+          startPosY < iconPrevPosition.y + 40 &&
+          startPosY > iconPrevPosition.y - 10
+        ) {
           return prevSlide()
-        if (!otherButton) return handleTouchToogle()
+        }
+        if (!otherButton && !fullScreen) return handleTouchToogle()
         return
       }
       if (
         movedBy < -10 &&
-        translateX >
-          -(sliderContainerRef.current.offsetWidth * (images.length - 1))
+        translateX > -(sliderContainerWidth * (files.length - 1))
       ) {
         nextSlide()
       } else if (movedBy > 50 && translateX < 0) {
@@ -82,18 +108,15 @@ export const SliderSwap = ({ images = [], handleTouchToogle, otherButton }) => {
 
   const nextSlide = () => {
     const newTranslateX = Math.max(
-      translateX - sliderContainerRef.current.offsetWidth,
-      -sliderContainerRef.current.offsetWidth * (images.length - 1)
+      translateX - sliderContainerWidth,
+      -sliderContainerWidth * (files.length - 1)
     )
     setTranslateX(newTranslateX)
     sliderRef.current.style.transform = `translateX(${newTranslateX}px)`
   }
 
   const prevSlide = () => {
-    const newTranslateX = Math.min(
-      translateX + sliderContainerRef.current.offsetWidth,
-      0
-    )
+    const newTranslateX = Math.min(translateX + sliderContainerWidth, 0)
     setTranslateX(newTranslateX)
     sliderRef.current.style.transform = `translateX(${newTranslateX}px)`
   }
@@ -114,7 +137,9 @@ export const SliderSwap = ({ images = [], handleTouchToogle, otherButton }) => {
     sliderContainer.addEventListener('touchmove', touchMove, { passive: true })
 
     return () => {
-      sliderContainer.removeEventListener('mousedown', touchStart)
+      sliderContainer.removeEventListener('mousedown', touchStart, {
+        passive: true,
+      })
       sliderContainer.removeEventListener('mouseup', touchEnd)
       sliderContainer.removeEventListener('mousemove', touchMove)
       sliderContainer.removeEventListener('touchstart', touchStart)
@@ -127,10 +152,35 @@ export const SliderSwap = ({ images = [], handleTouchToogle, otherButton }) => {
     currentTranslate,
     prevTranslate,
     translateX,
-    images.length,
+    files.length,
     startTime,
     isClick,
   ])
+  useEffect(() => {
+    setIndex(
+      isNaN(-translateX / sliderContainerWidth)
+        ? 0
+        : -translateX / sliderContainerWidth
+    )
+  }, [translateX])
+  useEffect(() => {
+    if (!fullScreen) return
+    setTranslateX(-sliderContainerWidth * index)
+    sliderRef.current.style.transform = `translateX(${
+      -sliderContainerWidth * index
+    }px)`
+  }, [sliderContainerWidth, index])
+
+  const isRectangle = async () => {
+    const isRectangle = await validateImageDimensions(files[index])
+    return setRectangle(isRectangle)
+  }
+
+  useEffect(() => {
+    if (index) {
+      isRectangle()
+    }
+  }, [translateX, index])
 
   return (
     <Box
@@ -153,38 +203,90 @@ export const SliderSwap = ({ images = [], handleTouchToogle, otherButton }) => {
         }}
         className="sliderContainer"
       >
-        {images.map((img, index) => (
-          <ImageCard
-            key={index}
-            onClick={(event) => {
-              if (!isClick) {
-                event.preventDefault()
-                event.stopPropagation()
-              }
-            }}
-            className="firstTabImg"
-            position={'relative'}
-            height={'100%'}
-            minWidth={'100%'}
-            backgroundSize={'cover'}
-            backgroundPosition={'center'}
-            url={img}
-          />
-        ))}
+        {!fullScreen &&
+          files.map((img, index) => (
+            <ImageCard
+              key={index}
+              onClick={(e) => handleImageClickToFullscreen(img)}
+              className="firstTabImg"
+              position={'relative'}
+              height={'100%'}
+              minWidth={'100%'}
+              backgroundSize={'cover'}
+              backgroundPosition={'center'}
+              url={img}
+            />
+          ))}
+        {fullScreen &&
+          (fileType === 'fotos' || fileType === 'planos') &&
+          files.map((img, index) => (
+            <Box
+              key={index}
+              __css={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minWidth: '100%',
+                maxWidth: '100%',
+                height: '100%',
+                borderRadius: '12px',
+                backgroundSize: rectangle ? 'auto' : 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundImage: `url(${img})`,
+                cursor: 'pointer',
+              }}
+              onClick={(e) => e.stopPropagation()}
+            ></Box>
+          ))}
+        {fullScreen &&
+          (fileType === 'videos' || fileType === 'videos360') &&
+          files.map((video, index) => (
+            <Box
+              key={index}
+              __css={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minWidth: '100%',
+                height: '100%',
+                borderRadius: '12px',
+                cursor: 'pointer',
+              }}
+            >
+              <iframe
+                width="100%"
+                height="100%"
+                src={video}
+                title={fileType}
+                allowFullScreen
+              />
+            </Box>
+          ))}
       </Box>
-      <Box __css={{ left: '16px' }} className="nextPrevIconContainer">
+      <Box
+        __css={{ left: '16px' }}
+        ref={iconPrevRef}
+        className="nextPrevIconContainer"
+      >
         <Icon className="swapSliderIconPrev" icon="icon-atras" />
       </Box>
-      <Box __css={{ right: '16px' }} className="nextPrevIconContainer">
+      <Box
+        __css={{ right: '16px' }}
+        ref={iconNextRef}
+        className="nextPrevIconContainer"
+      >
         <Icon
           className="swapSliderIconNext"
           style={{ transform: 'rotate(180deg)' }}
           icon="icon-atras"
         />
       </Box>
-      <Box onClick={(e) => e.stopPropagation()} className="otherButtonSwap">
-        {otherButton}
-      </Box>
+      {!fullScreen && (
+        <Box onClick={(e) => e.stopPropagation()} className="otherButtonSwap">
+          {otherButton}
+        </Box>
+      )}
     </Box>
   )
 }

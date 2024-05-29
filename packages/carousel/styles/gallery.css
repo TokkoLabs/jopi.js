@@ -81,11 +81,6 @@
   justify-content: center;
 }
 
-.fsContainerTabs i {
-  color: var(--neutralGray8);
-  cursor: pointer;
-}
-
 .fsTabContImage {
   display: flex;
   flex-direction: column;
@@ -94,12 +89,6 @@
   max-height: 100%;
   width: 100%;
   gap: 24px;
-}
-
-.fsTabContImage img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
 }
 
 .fsTabContImage p {
@@ -157,7 +146,9 @@
   }
 }
 
-.buttonsMainImgContainer {
+.buttonsMainImgContainer,
+.buttonsMainImageSlider {
+  width: max-content;
   position: absolute;
   bottom: 16px;
   right: 16px;
@@ -166,8 +157,8 @@
 }
 @media (min-width: 600px) {
   .fullscreen {
-    padding: 40px;
-    gap: 24px;
+    padding: 30px 40px;
+    gap: 8px;
   }
   .fsCloseIconDesktop {
     display: block;
@@ -206,6 +197,17 @@
     max-width: 95%;
     max-height: 95%;
     height: auto;
+  }
+}
+@media (min-width: 700px) {
+  .nextPrevIconContainer {
+    width: 40px;
+    height: 40px;
+  }
+  .swapSliderIconPrev,
+  .swapSliderIconNext {
+    font-size: 24px;
+    color: var(--neutralGray2);
   }
 }
 body {
