@@ -1,112 +1,125 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { ImageCard } from './ImageCard'
 import { Box } from '@oneloop/box'
+import { Icon } from '@oneloop/icons'
 
-export default function SliderSwap({
-  images = [],
-  handleTouchToogle,
-  otherButton,
-}) {
+export const SliderSwap = ({ images = [], handleTouchToogle, otherButton }) => {
   const sliderContainerRef = useRef(null)
   const sliderRef = useRef(null)
-
   const [isDragging, setIsDragging] = useState(false)
   const [startPos, setStartPos] = useState(0)
+  const [startPosY, setStartPosY] = useState(0)
   const [currentTranslate, setCurrentTranslate] = useState(0)
   const [prevTranslate, setPrevTranslate] = useState(0)
   const [translateX, setTranslateX] = useState(0)
   const [startTime, setStartTime] = useState(0)
   const [isClick, setIsClick] = useState(true)
+  const iconsPositionY = sliderContainerRef.current?.offsetHeight / 2
+
+  const touchStart = (event) => {
+    const position =
+      event.type === 'mousedown' ? event.clientX : event.touches[0].clientX
+    const positionY =
+      event.type === 'mousedown' ? event.clientY : event.touches[0].clientY
+    setStartPos(position)
+    setStartPosY(positionY)
+    setIsDragging(true)
+    setPrevTranslate(translateX)
+    setStartTime(Date.now())
+    setIsClick(true)
+  }
+
+  const touchMove = (event) => {
+    if (isDragging) {
+      const currentPosition =
+        event.type === 'mousemove' ? event.clientX : event.touches[0].clientX
+      const translate = currentPosition - startPos + prevTranslate
+      setCurrentTranslate(translate)
+      sliderRef.current.style.transform = `translateX(${translate}px)`
+      if (Math.abs(currentPosition - startPos) > 5) {
+        setIsClick(false)
+      }
+    }
+  }
+
+  const touchEnd = () => {
+    if (isDragging) {
+      setIsDragging(false)
+      const movedBy = currentTranslate - prevTranslate
+      const elapsedTime = Date.now() - startTime
+
+      if (isClick && elapsedTime < 300) {
+        if (
+          startPos > sliderContainerRef.current.offsetWidth - 50 &&
+          startPosY < iconsPositionY + 15 &&
+          startPosY > iconsPositionY - 15
+        )
+          return nextSlide()
+        if (
+          startPos < 50 &&
+          startPosY < iconsPositionY + 15 &&
+          startPosY > iconsPositionY - 15
+        )
+          return prevSlide()
+        if (!otherButton) return handleTouchToogle()
+        return
+      }
+      if (
+        movedBy < -10 &&
+        translateX >
+          -(sliderContainerRef.current.offsetWidth * (images.length - 1))
+      ) {
+        nextSlide()
+      } else if (movedBy > 50 && translateX < 0) {
+        prevSlide()
+      } else {
+        sliderRef.current.style.transform = `translateX(${prevTranslate}px)`
+      }
+
+      resetPosition()
+    }
+  }
+
+  const nextSlide = () => {
+    const newTranslateX = Math.max(
+      translateX - sliderContainerRef.current.offsetWidth,
+      -sliderContainerRef.current.offsetWidth * (images.length - 1)
+    )
+    setTranslateX(newTranslateX)
+    sliderRef.current.style.transform = `translateX(${newTranslateX}px)`
+  }
+
+  const prevSlide = () => {
+    const newTranslateX = Math.min(
+      translateX + sliderContainerRef.current.offsetWidth,
+      0
+    )
+    setTranslateX(newTranslateX)
+    sliderRef.current.style.transform = `translateX(${newTranslateX}px)`
+  }
+
+  const resetPosition = () => {
+    setCurrentTranslate(0)
+  }
 
   useEffect(() => {
     const sliderContainer = sliderContainerRef.current
-    const slider = sliderRef.current
-
-    const touchStart = (event) => {
-      const position =
-        event.type === 'mousedown' ? event.clientX : event.touches[0].clientX
-      setStartPos(position)
-      setIsDragging(true)
-      setPrevTranslate(translateX)
-      setStartTime(Date.now())
-      setIsClick(true)
-    }
-
-    const touchMove = (event) => {
-      if (isDragging) {
-        const currentPosition =
-          event.type === 'mousemove' ? event.clientX : event.touches[0].clientX
-        const translate = currentPosition - startPos + prevTranslate
-        setCurrentTranslate(translate)
-        slider.style.transform = `translateX(${translate}px)`
-        if (Math.abs(currentPosition - startPos) > 5) {
-          setIsClick(false)
-        }
-      }
-    }
-
-    const touchEnd = () => {
-      if (isDragging) {
-        setIsDragging(false)
-        const movedBy = currentTranslate - prevTranslate
-        const elapsedTime = Date.now() - startTime
-
-        if (isClick && elapsedTime < 200) {
-          if (!otherButton) handleTouchToogle()
-          return
-        }
-
-        if (
-          movedBy < -50 &&
-          translateX > -(sliderContainer.offsetWidth * (images.length - 1))
-        ) {
-          nextSlide()
-        } else if (movedBy > 50 && translateX < 0) {
-          prevSlide()
-        } else {
-          slider.style.transform = `translateX(${prevTranslate}px)`
-        }
-
-        resetPosition()
-      }
-    }
-
-    const nextSlide = () => {
-      const newTranslateX = Math.max(
-        translateX - sliderContainer.offsetWidth,
-        -sliderContainer.offsetWidth * (images.length - 1)
-      )
-      setTranslateX(newTranslateX)
-      slider.style.transform = `translateX(${newTranslateX}px)`
-    }
-
-    const prevSlide = () => {
-      const newTranslateX = Math.min(
-        translateX + sliderContainer.offsetWidth,
-        0
-      )
-      setTranslateX(newTranslateX)
-      slider.style.transform = `translateX(${newTranslateX}px)`
-    }
-
-    const resetPosition = () => {
-      setCurrentTranslate(0)
-    }
-
-    document.addEventListener('mousedown', touchStart)
-    document.addEventListener('mouseup', touchEnd)
-    document.addEventListener('mousemove', touchMove)
-    document.addEventListener('touchstart', touchStart)
-    document.addEventListener('touchend', touchEnd)
-    document.addEventListener('touchmove', touchMove)
+    sliderContainer.addEventListener('mousedown', touchStart)
+    sliderContainer.addEventListener('mouseup', touchEnd)
+    sliderContainer.addEventListener('mousemove', touchMove)
+    sliderContainer.addEventListener('touchstart', touchStart, {
+      passive: true,
+    })
+    sliderContainer.addEventListener('touchend', touchEnd)
+    sliderContainer.addEventListener('touchmove', touchMove, { passive: true })
 
     return () => {
-      document.removeEventListener('mousedown', touchStart)
-      document.removeEventListener('mouseup', touchEnd)
-      document.removeEventListener('mousemove', touchMove)
-      document.removeEventListener('touchstart', touchStart)
-      document.removeEventListener('touchend', touchEnd)
-      document.removeEventListener('touchmove', touchMove)
+      sliderContainer.removeEventListener('mousedown', touchStart)
+      sliderContainer.removeEventListener('mouseup', touchEnd)
+      sliderContainer.removeEventListener('mousemove', touchMove)
+      sliderContainer.removeEventListener('touchstart', touchStart)
+      sliderContainer.removeEventListener('touchend', touchEnd)
+      sliderContainer.removeEventListener('touchmove', touchMove)
     }
   }, [
     isDragging,
@@ -122,7 +135,12 @@ export default function SliderSwap({
   return (
     <Box
       ref={sliderContainerRef}
-      __css={{ width: '100%', height: '100%', overflow: 'hidden' }}
+      __css={{
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden',
+        position: 'relative',
+      }}
     >
       <Box
         ref={sliderRef}
@@ -130,10 +148,10 @@ export default function SliderSwap({
           display: 'flex',
           width: '100%',
           height: '100%',
-          position: 'relative',
-          transform: `translateX(${translateX}px)`,
           transition: isDragging ? 'none' : 'transform 0.5s ease',
+          transform: `translateX(${translateX}px)`,
         }}
+        className="sliderContainer"
       >
         {images.map((img, index) => (
           <ImageCard
@@ -153,6 +171,19 @@ export default function SliderSwap({
             url={img}
           />
         ))}
+      </Box>
+      <Box __css={{ left: '16px' }} className="nextPrevIconContainer">
+        <Icon className="swapSliderIconPrev" icon="icon-atras" />
+      </Box>
+      <Box __css={{ right: '16px' }} className="nextPrevIconContainer">
+        <Icon
+          className="swapSliderIconNext"
+          style={{ transform: 'rotate(180deg)' }}
+          icon="icon-atras"
+        />
+      </Box>
+      <Box onClick={(e) => e.stopPropagation()} className="otherButtonSwap">
+        {otherButton}
       </Box>
     </Box>
   )

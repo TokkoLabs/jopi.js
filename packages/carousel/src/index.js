@@ -1,4 +1,3 @@
-/* eslint-disable multiline-ternary */
 import React, { useEffect, useState, useRef, useLayoutEffect } from 'react'
 import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
@@ -7,7 +6,7 @@ import '../styles/gallery.css'
 import { ImageCard } from './components/ImageCard'
 import { ButtonGallery } from './components/ButtonGallery'
 import { FullScreen } from './components/FullScreen'
-import SliderSwap from './components/SliderSwap'
+import { SliderSwap } from './components/SliderSwap'
 
 export const Carousel = ({
   images = [],
@@ -43,11 +42,11 @@ export const Carousel = ({
   const [emptyImgArray, setEmptyImgArray] = useState([])
   const carouselContainerRef = useRef()
   const containerWidth = carouselContainerRef.current?.parentElement.clientWidth
-  const followingImg =
-    document.getElementsByClassName('followingImg')[0]?.offsetWidth
-  const [mainImageWidth, setMainImageWidth] = useState(327)
+  const [carouselContainerWidth, setCarouselContainerWidth] = useState(0)
+  const [mainImageWidth, setMainImageWidth] = useState(0)
   const [followImgColumns, setFollowImgColumns] = useState(0)
-  const [compensationHeigth, setCompensationHeigth] = useState(0)
+  const [followingImgWidth, setFollowingImgWidth] = useState(0)
+
   if (video.length > 0) {
     tabContainers.push('Videos')
   }
@@ -73,35 +72,41 @@ export const Carousel = ({
     return () => window.removeEventListener('resize', debouncedHandleResize)
   }, [])
 
-  useLayoutEffect(() => {
-    setCompensationHeigth(followingImg - (carouselHeight * 0.5) / 0.65)
-  }, [windowResize, followImgColumns, containerWidth])
+  useEffect(() => {
+    setCarouselContainerWidth(containerWidth)
+  }, [containerWidth])
 
   useLayoutEffect(() => {
-    if (containerWidth < 600) {
-      setCarouselHeight(containerWidth * 0.562)
-    } else {
-      setCarouselHeight(
-        mainImageWidth * 0.562 +
-          (isNaN(compensationHeigth) ? 0 : compensationHeigth)
-      )
-    }
-  }, [compensationHeigth, mainImageWidth, containerWidth])
-
-  useLayoutEffect(() => {
-    if (containerWidth <= 700) {
+    let newMainImageWidth
+    if (carouselContainerWidth <= 700) {
       setFollowImgColumns(0)
-    } else if (containerWidth >= 650 && containerWidth < 960) {
+      newMainImageWidth = carouselContainerWidth
+    } else if (carouselContainerWidth >= 650 && carouselContainerWidth < 960) {
       setFollowImgColumns(1)
-      setMainImageWidth(470)
-    } else if (containerWidth >= 960 && containerWidth < 1477) {
+      newMainImageWidth = carouselContainerWidth * 0.68
+    } else if (carouselContainerWidth >= 960 && carouselContainerWidth < 1215) {
       setFollowImgColumns(2)
-      setMainImageWidth(520)
+      newMainImageWidth = carouselContainerWidth * 0.513
+    } else if (
+      carouselContainerWidth >= 1215 &&
+      carouselContainerWidth < 1480
+    ) {
+      setFollowImgColumns(2)
+      newMainImageWidth = carouselContainerWidth * 0.51
     } else {
       setFollowImgColumns(3)
+      newMainImageWidth = carouselContainerWidth * 0.41
     }
-    if (containerWidth >= 1150) setMainImageWidth(696)
-  }, [windowResize, containerWidth])
+    setMainImageWidth(Math.round(newMainImageWidth))
+  }, [carouselContainerWidth, containerWidth])
+
+  useEffect(() => {
+    setCarouselHeight(Math.round(mainImageWidth * 0.562))
+  }, [mainImageWidth])
+
+  useEffect(() => {
+    setFollowingImgWidth(Math.round((carouselHeight / 2 - 16) * 1.77))
+  }, [carouselHeight])
 
   useEffect(() => {
     const emptyArray = []
@@ -126,9 +131,9 @@ export const Carousel = ({
     }
   }
 
-  function debounce(func, wait) {
+  const debounce = (func, wait) => {
     let timeout
-    return function executedFunction(...args) {
+    const executedFunction = (...args) => {
       const later = () => {
         clearTimeout(timeout)
         func(...args)
@@ -136,26 +141,29 @@ export const Carousel = ({
       clearTimeout(timeout)
       timeout = setTimeout(later, wait)
     }
+    return executedFunction
   }
   return (
     <Box
       __css={{
         position: 'relative',
+        width: '100%',
       }}
     >
       {!otherComponent ? (
         <Box
-          height={`${carouselHeight}px`}
+          height={`${carouselHeight || window.innerWidth * 0.562}px`}
           __css={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: 'start',
             width: '100%',
           }}
         >
           {window.innerWidth < 600 ? (
             <SliderSwap
-              height={carouselHeight}
+              height={`${carouselHeight || window.innerWidth * 0.562}px`}
+              width={carouselContainerWidth}
               images={Images}
               handleTouchToogle={toggleFullscreen}
               otherButton={otherButton}
@@ -177,9 +185,12 @@ export const Carousel = ({
                 className="firstTabImg"
                 position={'relative'}
                 height={'100%'}
-                minWidth={`${
-                  followImgColumns === 0 ? containerWidth : mainImageWidth
+                width={`${
+                  followImgColumns === 0
+                    ? carouselContainerWidth
+                    : mainImageWidth
                 }px`}
+                minWidth={followImgColumns === 0 ? carouselContainerWidth : 0}
                 url={Images[0]}
               >
                 {!Images[0] && (
@@ -189,32 +200,8 @@ export const Carousel = ({
                     color={theme.colors.neutralGray4}
                   />
                 )}
-                {/*                 {window.innerWidth <= 480 && Images.length > 0 && (
-                  <Box
-                    width="100%"
-                    __css={{
-                      position: 'absolute',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      padding: '0 8px',
-                    }}
-                  >
-                    <Icon
-                      icon="icon-atras"
-                      className="iconPrevMobile"
-                      onClick={(e) => handleNextPrevImageMobile(e, 'prev')}
-                    />
-                    <Icon
-                      className="iconNextMobile"
-                      style={{
-                        transform: 'rotate(180deg)',
-                      }}
-                      onClick={(e) => handleNextPrevImageMobile(e, 'next')}
-                      icon="icon-atras"
-                    />
-                  </Box>
-                )} */}
-                {otherButton || window.innerWidth <= 480 ? (
+
+                {otherButton || window.innerWidth <= 600 ? (
                   <Box className="buttonsMainImgContainer">{otherButton}</Box>
                 ) : (
                   <Box className="buttonsMainImgContainer">
@@ -255,10 +242,6 @@ export const Carousel = ({
                   alignItems: 'start',
                   flexWrap: 'wrap',
                   gap: '16px',
-                  width:
-                    followImgColumns > 0
-                      ? (containerWidth - mainImageWidth) * followImgColumns
-                      : '0%',
                   height: '100%',
                 }}
               >
@@ -266,12 +249,7 @@ export const Carousel = ({
                   return (
                     <ImageCard
                       onClick={toggleFullscreen}
-                      width={`${
-                        (1 / followImgColumns) *
-                          (containerWidth - mainImageWidth) -
-                        16
-                      }px`}
-                      maxWidth="100%"
+                      width={`${followingImgWidth}px`}
                       maxHeight={carouselHeight / 2 - 8}
                       className="followingImg"
                       url={Images[index + 1] ? Images[index + 1] : ''}

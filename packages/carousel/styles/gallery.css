@@ -129,11 +129,34 @@
 .iconNext {
   right: -20px;
 }
-.iconPrevMobile,
-.iconNextMobile {
-  font-size: 24px;
-  color: var(--neutralGray8);
+.nextPrevIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: calc(50% - 20px);
+  background-color: var(--neutralGray8);
+  border-radius: 50%;
+  cursor: pointer;
 }
+.swapSliderIconPrev,
+.swapSliderIconNext {
+  font-size: 12px;
+  color: var(--neutralGray2);
+}
+.otherButtonSwap {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  & button {
+    border-radius: 7px;
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+}
+
 .buttonsMainImgContainer {
   position: absolute;
   bottom: 16px;
@@ -141,7 +164,6 @@
   display: flex;
   gap: 8px;
 }
-
 @media (min-width: 600px) {
   .fullscreen {
     padding: 40px;

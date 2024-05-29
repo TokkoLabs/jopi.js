@@ -1,17 +1,19 @@
 import React from 'react'
 import { Carousel } from '.'
 import { Box } from '@oneloop/box'
+import { Button } from '@oneloop/button'
 
 export default {
   component: Carousel,
   title: 'Carousel',
 }
 
+const editButton = () => (
+  <Button variant={['primary', 'large']}>{'Editar imágenes'}</Button>
+)
 export const CarouselComponent = () => {
   const imgs = [
     'https://www.wallpaperuse.com/wallp/0-9852_m.jpg',
-    'https://static.inmofactory.com/images/inmofactory/documents/1/124683/34021431/582525589.jpg?rule=web_412x257',
-    'https://imgs.nestimg.com/casa_en_fraccionamiento_privadas_de_la_hacienda_3210125690712336672.jpg',
     'https://static.inmofactory.com/images/inmofactory/documents/1/124683/34021431/582525589.jpg?rule=web_412x257',
     'https://imgs.nestimg.com/casa_en_fraccionamiento_privadas_de_la_hacienda_3210125690712336672.jpg',
     'https://static.tokkobroker.com/pictures/3576822133737522479342344804526371670339487603874495331054752417644934016466.jpg',
@@ -33,11 +35,12 @@ export const CarouselComponent = () => {
   return (
     <Box>
       <Carousel
-        frontCoverBlueprints="https://www.wallpaperuse.com/wallp/0-9852_m.jpg"
+        frontCoverBlueprints="https://hips.hearstapps.com/hmg-prod/images/apartamento15-organizada-1528886170.jpg?crop=1.00xw:0.669xh;0,0.160xh&resize=640:*"
         images={imgs}
         video={VIDEO}
         planos={PLANO}
         video360={Video360}
+        otherButton={editButton()}
       />
     </Box>
   )
