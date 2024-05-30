@@ -250,288 +250,294 @@
 .icon-filtros:before {
   content: "\e94a";
 }
-.icon-gas:before {
+.icon-fondo:before {
   content: "\e94b";
 }
-.icon-gestordearchivos:before {
+.icon-frente:before {
   content: "\e94c";
 }
-.icon-gimnasio:before {
+.icon-gas:before {
   content: "\e94d";
 }
-.icon-grupodecontactos:before {
+.icon-gestordearchivos:before {
   content: "\e94e";
 }
-.icon-guardar:before {
+.icon-gimnasio:before {
   content: "\e94f";
 }
-.icon-habilitarportal:before {
+.icon-grupodecontactos:before {
   content: "\e950";
 }
-.icon-igcomentarios:before {
+.icon-guardar:before {
   content: "\e951";
 }
-.icon-igenviar:before {
+.icon-habilitarportal:before {
   content: "\e952";
 }
-.icon-igguardar:before {
+.icon-igcomentarios:before {
   content: "\e953";
 }
-.icon-igmegusta:before {
+.icon-igenviar:before {
   content: "\e954";
 }
-.icon-imagenes:before {
+.icon-igguardar:before {
   content: "\e955";
 }
-.icon-info:before {
+.icon-igmegusta:before {
   content: "\e956";
 }
-.icon-informacioninterna:before {
+.icon-imagenes:before {
   content: "\e957";
 }
-.icon-ir:before {
+.icon-info:before {
   content: "\e958";
 }
-.icon-link:before {
+.icon-informacioninterna:before {
   content: "\e959";
 }
-.icon-listadocontactos:before {
+.icon-ir:before {
   content: "\e95a";
 }
-.icon-mapa:before {
+.icon-link:before {
   content: "\e95b";
 }
-.icon-menu:before {
+.icon-listadocontactos:before {
   content: "\e95c";
 }
-.icon-mostrarmenos:before {
+.icon-mapa:before {
   content: "\e95d";
 }
-.icon-mover:before {
+.icon-menu:before {
   content: "\e95e";
 }
-.icon-movimientosdepropiedades:before {
+.icon-mostrarmenos:before {
   content: "\e95f";
 }
-.icon-negativo:before {
+.icon-mover:before {
   content: "\e960";
 }
-.icon-neutro:before {
+.icon-movimientosdepropiedades:before {
   content: "\e961";
 }
-.icon-nota:before {
+.icon-negativo:before {
   content: "\e962";
 }
-.icon-noticias:before {
+.icon-neutro:before {
   content: "\e963";
 }
-.icon-notificaciones:before {
+.icon-nota:before {
   content: "\e964";
 }
-.icon-novedades:before {
+.icon-noticias:before {
   content: "\e965";
 }
-.icon-nuevapropiedad:before {
+.icon-notificaciones:before {
   content: "\e966";
 }
-.icon-nuevocontacto:before {
+.icon-novedades:before {
   content: "\e967";
 }
-.icon-nuevoevento:before {
+.icon-nuevapropiedad:before {
   content: "\e968";
 }
-.icon-nuevomensaje:before {
+.icon-nuevocontacto:before {
   content: "\e969";
 }
-.icon-ocultar:before {
+.icon-nuevoevento:before {
   content: "\e96a";
 }
-.icon-oportunidades:before {
+.icon-nuevomensaje:before {
   content: "\e96b";
 }
-.icon-ordenar:before {
+.icon-ocultar:before {
   content: "\e96c";
 }
-.icon-orientacion:before {
+.icon-oportunidades:before {
   content: "\e96d";
 }
-.icon-parrilla:before {
+.icon-ordenar:before {
   content: "\e96e";
 }
-.icon-patronesdebusqueda:before {
+.icon-orientacion:before {
   content: "\e96f";
 }
-.icon-pausarcontacto:before {
+.icon-parrilla:before {
   content: "\e970";
 }
-.icon-pdf:before {
+.icon-patronesdebusqueda:before {
   content: "\e971";
 }
-.icon-pdfgrilla:before {
+.icon-pausarcontacto:before {
   content: "\e972";
 }
-.icon-pdfhorizontal:before {
+.icon-pdf:before {
   content: "\e973";
 }
-.icon-pdfvertical:before {
+.icon-pdfgrilla:before {
   content: "\e974";
 }
-.icon-pegar:before {
+.icon-pdfhorizontal:before {
   content: "\e975";
 }
-.icon-perfil:before {
+.icon-pdfvertical:before {
   content: "\e976";
 }
-.icon-performance:before {
+.icon-pegar:before {
   content: "\e977";
 }
-.icon-permisos:before {
+.icon-perfil:before {
   content: "\e978";
 }
-.icon-pileta:before {
+.icon-performance:before {
   content: "\e979";
 }
-.icon-pinup:before {
+.icon-permisos:before {
   content: "\e97a";
 }
-.icon-plantas:before {
+.icon-pileta:before {
   content: "\e97b";
 }
-.icon-positivo:before {
+.icon-pinup:before {
   content: "\e97c";
 }
-.icon-propiedades:before {
+.icon-plantas:before {
   content: "\e97d";
 }
-.icon-propiedadessinmovimiento:before {
+.icon-positivo:before {
   content: "\e97e";
 }
-.icon-propietario:before {
+.icon-propiedades:before {
   content: "\e97f";
 }
-.icon-quitardestaque:before {
+.icon-propiedadessinmovimiento:before {
   content: "\e980";
 }
-.icon-reasignar:before {
+.icon-propietario:before {
   content: "\e981";
 }
-.icon-redes:before {
+.icon-quitardestaque:before {
   content: "\e982";
 }
-.icon-redflag:before {
+.icon-reasignar:before {
   content: "\e983";
 }
-.icon-reloj:before {
+.icon-redes:before {
   content: "\e984";
 }
-.icon-reportada:before {
+.icon-redflag:before {
   content: "\e985";
 }
-.icon-reportar:before {
+.icon-reloj:before {
   content: "\e986";
 }
-.icon-reporte-conversion:before {
+.icon-reportada:before {
   content: "\e987";
 }
-.icon-reporte-operaciones:before {
+.icon-reportar:before {
   content: "\e988";
 }
-.icon-reportes:before {
+.icon-reporte-conversion:before {
   content: "\e989";
 }
-.icon-reservas:before {
+.icon-reporte-operaciones:before {
   content: "\e98a";
 }
-.icon-respuestasrapidas:before {
+.icon-reportes:before {
   content: "\e98b";
 }
-.icon-restaurar:before {
+.icon-reservas:before {
   content: "\e98c";
 }
-.icon-salir:before {
+.icon-respuestasrapidas:before {
   content: "\e98d";
 }
-.icon-seguimiento:before {
+.icon-restaurar:before {
   content: "\e98e";
 }
-.icon-seguimientos:before {
+.icon-salir:before {
   content: "\e98f";
 }
-.icon-seguridad:before {
+.icon-seguimiento:before {
   content: "\e990";
 }
-.icon-selectall:before {
+.icon-seguimientos:before {
   content: "\e991";
 }
-.icon-semicubierta:before {
+.icon-seguridad:before {
   content: "\e992";
 }
-.icon-siguiente:before {
+.icon-selectall:before {
   content: "\e993";
 }
-.icon-silenciar:before {
+.icon-semicubierta:before {
   content: "\e994";
 }
-.icon-sitioweb:before {
+.icon-siguiente:before {
   content: "\e995";
 }
-.icon-solarium:before {
+.icon-silenciar:before {
   content: "\e996";
 }
-.icon-subida:before {
+.icon-sitioweb:before {
   content: "\e997";
 }
-.icon-superficie:before {
+.icon-solarium:before {
   content: "\e998";
 }
-.icon-tabla:before {
+.icon-subida:before {
   content: "\e999";
 }
-.icon-telefono:before {
+.icon-superficie:before {
   content: "\e99a";
 }
-.icon-terreno:before {
+.icon-tabla:before {
   content: "\e99b";
 }
-.icon-timeline:before {
+.icon-telefono:before {
   content: "\e99c";
 }
-.icon-toilletes:before {
+.icon-terreno:before {
   content: "\e99d";
 }
-.icon-tokkotip:before {
+.icon-timeline:before {
   content: "\e99e";
 }
-.icon-totalconstruido:before {
+.icon-toilletes:before {
   content: "\e99f";
 }
-.icon-trespunticos:before {
+.icon-tokkotip:before {
   content: "\e9a0";
 }
-.icon-ubicacion:before {
+.icon-totalconstruido:before {
   content: "\e9a1";
 }
-.icon-vendio:before {
+.icon-trespunticos:before {
   content: "\e9a2";
 }
-.icon-ver:before {
+.icon-ubicacion:before {
   content: "\e9a3";
 }
-.icon-video:before {
+.icon-vendio:before {
   content: "\e9a4";
 }
-.icon-whatsapp:before {
+.icon-ver:before {
   content: "\e9a5";
 }
-.icon-wifi:before {
+.icon-video:before {
   content: "\e9a6";
 }
-.icon-zonificacion:before {
+.icon-whatsapp:before {
   content: "\e9a7";
 }
-.icon-zoom-in:before {
+.icon-wifi:before {
   content: "\e9a8";
 }
-.icon-zoom-out:before {
+.icon-zonificacion:before {
   content: "\e9a9";
+}
+.icon-zoom-in:before {
+  content: "\e9aa";
+}
+.icon-zoom-out:before {
+  content: "\e9ab";
 }
