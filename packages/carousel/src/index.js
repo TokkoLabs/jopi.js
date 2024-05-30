@@ -143,6 +143,7 @@ export const Carousel = ({
     }
     return executedFunction
   }
+
   const handleImageClickToFullscreen = (url) => {
     const imagesMap = images.map((img) => ({ url: img, type: 'fotos' }))
     if (frontCoverImg) imagesMap.unshift({ url: frontCoverImg, type: 'fotos' })
@@ -186,7 +187,7 @@ export const Carousel = ({
             width: '100%',
           }}
         >
-          {window.innerWidth < 700 ? (
+          {window.innerWidth < 786 ? (
             <Box __css={{ width: '100%', height: '100%' }}>
               <SliderSwap
                 files={Images}
@@ -345,8 +346,8 @@ export const Carousel = ({
         setTabSelected={setTabSelected}
         index={index}
         setIndex={setIndex}
-        video={video}
-        photos={imgWithCover}
+        videos={video}
+        fotos={imgWithCover}
         planos={bluePrintsWithCover}
         video360={video360}
         bluePrintsWithCover={bluePrintsWithCover}

@@ -8,16 +8,18 @@ export const FullScreen = ({
   fullscreen,
   tabContainers,
   tabSelected,
-  photos,
+  fotos,
   index,
   setIndex,
   setTabSelected,
-  video,
+  videos,
   video360,
   setFullscreen,
   planos,
 }) => {
+  const allFiles = { fotos, videos, video360, planos }
   const [contTab, setContTab] = useState(0)
+  const windowWidth = window.innerWidth
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown)
 
@@ -28,9 +30,9 @@ export const FullScreen = ({
   useEffect(() => {
     let newContTab
     if (tabSelected === 'videos') {
-      newContTab = video.length
+      newContTab = videos.length
     } else if (tabSelected === 'fotos') {
-      newContTab = photos.length
+      newContTab = fotos.length
     } else if (tabSelected === 'planos') {
       newContTab = planos.length
     } else if (tabSelected === 'video360') {
@@ -88,75 +90,22 @@ export const FullScreen = ({
           ))}
         </Box>
       )}
-
       <Box className="fsContainerTabs" __css={{ position: 'relative' }}>
-        {tabSelected === 'fotos' && (
-          <Box className="fsTabCont">
-            <Box className="fsTabContImage">
-              <SliderSwap
-                setIndex={setIndex}
-                fullScreen
-                fileType={tabSelected}
-                files={photos}
-                index={index}
-              />
-              <Text className="contFotos" variant="bodyBold.fontSize14">{`${
-                index + 1
-              }/${photos.length}`}</Text>
-            </Box>
+        <Box className="fsTabCont">
+          <Box className="fsTabContImage">
+            <SliderSwap
+              setIndex={setIndex}
+              fullScreen
+              fileType={tabSelected}
+              files={allFiles[tabSelected]}
+              index={index}
+              windowWidth={windowWidth}
+            />
+            <Text className="contFotos" variant="bodyBold.fontSize14">{`${
+              index + 1
+            }/${allFiles[tabSelected].length}`}</Text>
           </Box>
-        )}
-
-        {tabSelected === 'videos' && (
-          <Box className="fsTabCont">
-            <Box className="fsTabContImage">
-              <SliderSwap
-                setIndex={setIndex}
-                fullScreen
-                fileType={tabSelected}
-                files={video}
-                index={index}
-              />
-              <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                video.length
-              }`}</Text>
-            </Box>
-          </Box>
-        )}
-        {tabSelected === 'planos' && (
-          <Box className="fsTabCont">
-            <Box className="fsTabContImage">
-              <SliderSwap
-                setIndex={setIndex}
-                fullScreen
-                fileType={tabSelected}
-                files={planos}
-                index={index}
-              />
-              <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                planos.length
-              }`}</Text>
-            </Box>
-          </Box>
-        )}
-
-        {tabSelected === 'video360' && (
-          <Box className="fsTabCont">
-            <Box className="fsTabContImage">
-              <SliderSwap
-                setIndex={setIndex}
-                fullScreen
-                fileType={tabSelected}
-                files={video360}
-                index={index}
-              />
-              <Text variant="bodyBold.fontSize14">{`${index + 1}/${
-                video360.length
-              }`}</Text>
-            </Box>
-          </Box>
-        )}
-
+        </Box>
         <Box className="fsCloseIconDesktop">
           <Icon
             onClick={closeFullscreen}

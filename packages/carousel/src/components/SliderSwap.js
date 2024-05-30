@@ -144,20 +144,22 @@ export const SliderSwap = ({
     startTime,
     isClick,
   ])
+
   useEffect(() => {
-    setIndex(
-      isNaN(-translateX / sliderContainerWidth)
-        ? 0
-        : -translateX / sliderContainerWidth
-    )
+    if (fullScreen) setIndex(-translateX / sliderContainerWidth)
+    if (!fullScreen) {
+      let fileVisibleIndex = Math.abs(translateX / (sliderContainerWidth || 1))
+      handleImageClickToFullscreen(files[fileVisibleIndex])
+    }
   }, [translateX])
+
   useEffect(() => {
-    if (!fullScreen) return
+    if (!fullScreen || !sliderContainerWidth) return
     setTranslateX(-sliderContainerWidth * index)
     sliderRef.current.style.transform = `translateX(${
       -sliderContainerWidth * index
     }px)`
-  }, [sliderContainerWidth, index])
+  }, [sliderContainerWidth, index, fullScreen])
 
   return (
     <Box
@@ -184,7 +186,9 @@ export const SliderSwap = ({
           files.map((img, index) => (
             <ImageCard
               key={index}
-              onClick={(e) => handleImageClickToFullscreen(img)}
+              onClick={(e) => {
+                handleImageClickToFullscreen(img)
+              }}
               className="firstTabImg"
               position={'relative'}
               height={'100%'}
