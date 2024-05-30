@@ -149,7 +149,8 @@ export const SliderSwap = ({
     if (fullScreen) setIndex(-translateX / sliderContainerWidth)
     if (!fullScreen) {
       let fileVisibleIndex = Math.abs(translateX / (sliderContainerWidth || 1))
-      handleImageClickToFullscreen(files[fileVisibleIndex])
+      if (sliderContainerWidth)
+        handleImageClickToFullscreen(files[fileVisibleIndex])
     }
   }, [translateX])
 

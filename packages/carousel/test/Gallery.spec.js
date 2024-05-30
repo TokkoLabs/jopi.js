@@ -5,7 +5,6 @@ import Adapter from 'enzyme-adapter-react-16'
 import { Carousel } from '../src'
 import { SliderSwap } from '../src/components/SliderSwap'
 import { ImageCard } from '../src/components/ImageCard'
-import { Box } from '@oneloop/box'
 import { Button } from '@oneloop/button'
 
 configure({ adapter: new Adapter() })
@@ -98,26 +97,6 @@ describe('Carousel', () => {
 
     expect(wrapper.find('.otherButtonSwap').exists()).toBe(true)
   })
-
-  /*   it('change img', () => {
-    const wrapper = mount(<Carousel images={['', '']} />)
-
-    const next = wrapper.find('.iconNext').at(0)
-
-    next.simulate('click')
-
-    const contador1 = wrapper.find('.contFotos')
-
-    expect(contador1.at(0).text()).toBe('2/2')
-
-    const prev = wrapper.find('.iconPrev').at(0)
-
-    prev.simulate('click')
-
-    const contador2 = wrapper.find('.contFotos')
-
-    expect(contador2.at(0).text()).toBe('1/2')
-  }) */
 
   it('close fullscreen', () => {
     const wrapper = mount(<Carousel images={['', '']} />)

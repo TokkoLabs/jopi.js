@@ -153,6 +153,7 @@ export const Carousel = ({
 
     const allFiles = [...imagesMap, ...planosMap]
     const fileFiltered = allFiles.filter((img) => img.url == url)[0]
+    console.log(fileFiltered)
 
     if (fileFiltered.type === 'fotos') {
       imgWithCover.map((img, index) => {
