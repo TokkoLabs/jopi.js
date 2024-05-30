@@ -3,17 +3,6 @@ import { ImageCard } from './ImageCard'
 import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
 
-const validateImageDimensions = async (imageUrl) => {
-  // eslint-disable-next-line no-undef
-  const img = new Image()
-  img.src = imageUrl
-
-  await new Promise((resolve) => {
-    img.onload = () => resolve()
-  })
-
-  return img.width > img.height
-}
 export const SliderSwap = ({
   files = [],
   handleTouchToogle,
@@ -40,7 +29,6 @@ export const SliderSwap = ({
   const iconNextPosition = iconNextRef.current?.getBoundingClientRect()
   const iconPrevPosition = iconPrevRef.current?.getBoundingClientRect()
   const [translateX, setTranslateX] = useState(0)
-  const [rectangle, setRectangle] = useState(false)
 
   const touchStart = (event) => {
     const position =
@@ -171,17 +159,6 @@ export const SliderSwap = ({
     }px)`
   }, [sliderContainerWidth, index])
 
-  const isRectangle = async () => {
-    const isRectangle = await validateImageDimensions(files[index])
-    return setRectangle(isRectangle)
-  }
-
-  useEffect(() => {
-    if (index) {
-      isRectangle()
-    }
-  }, [translateX, index])
-
   return (
     <Box
       ref={sliderContainerRef}
@@ -212,8 +189,6 @@ export const SliderSwap = ({
               position={'relative'}
               height={'100%'}
               minWidth={'100%'}
-              backgroundSize={'cover'}
-              backgroundPosition={'center'}
               url={img}
             />
           ))}
@@ -230,14 +205,12 @@ export const SliderSwap = ({
                 maxWidth: '100%',
                 height: '100%',
                 borderRadius: '12px',
-                backgroundSize: rectangle ? 'auto' : 'contain',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundImage: `url(${img})`,
                 cursor: 'pointer',
               }}
               onClick={(e) => e.stopPropagation()}
-            ></Box>
+            >
+              <img className="imgFullScreenSlide" src={img} alt={fileType} />
+            </Box>
           ))}
         {fullScreen &&
           (fileType === 'videos' || fileType === 'videos360') &&
@@ -255,8 +228,7 @@ export const SliderSwap = ({
               }}
             >
               <iframe
-                width="100%"
-                height="100%"
+                className="videoFullScreenSlide"
                 src={video}
                 title={fileType}
                 allowFullScreen
@@ -265,19 +237,22 @@ export const SliderSwap = ({
           ))}
       </Box>
       <Box
-        __css={{ left: '16px' }}
+        __css={{ left: fullScreen ? '-5px' : '16px' }}
         ref={iconPrevRef}
-        className="nextPrevIconContainer"
-      >
-        <Icon className="swapSliderIconPrev" icon="icon-atras" />
-      </Box>
-      <Box
-        __css={{ right: '16px' }}
-        ref={iconNextRef}
-        className="nextPrevIconContainer"
+        className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
       >
         <Icon
-          className="swapSliderIconNext"
+          className={`swapSliderIconPrev ${fullScreen ? 'fullScreen' : ''}`}
+          icon="icon-atras"
+        />
+      </Box>
+      <Box
+        __css={{ right: fullScreen ? '-5px' : '16px' }}
+        ref={iconNextRef}
+        className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
+      >
+        <Icon
+          className={`swapSliderIconNext ${fullScreen ? 'fullScreen' : ''}`}
           style={{ transform: 'rotate(180deg)' }}
           icon="icon-atras"
         />
