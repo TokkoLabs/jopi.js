@@ -48,11 +48,13 @@ export const FullScreen = ({
 
   const handleKeyDown = (event) => {
     if (event.key === 'ArrowRight') {
-      next()
+      if (index + 1 === contTab) return
+      setIndex((prevIndex) => prevIndex + 1)
     }
 
     if (event.key === 'ArrowLeft') {
-      prev()
+      if (index === 0) return
+      setIndex((prevIndex) => prevIndex - 1)
     }
 
     if (event.key === 'Escape') {
@@ -95,7 +97,7 @@ export const FullScreen = ({
           <Box className="fsTabContImage">
             <SliderSwap
               setIndex={setIndex}
-              fullScreen
+              fullScreen={fullscreen}
               fileType={tabSelected}
               files={allFiles[tabSelected]}
               index={index}

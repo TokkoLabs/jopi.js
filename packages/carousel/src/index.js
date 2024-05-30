@@ -6,7 +6,7 @@ import '../styles/gallery.css'
 import { ImageCard } from './components/ImageCard'
 import { FullScreen } from './components/FullScreen'
 import { SliderSwap } from './components/SliderSwap'
-import ButtonsMainImage from './components/ButtonsMainImage'
+import { ButtonsMainImage } from './components/ButtonsMainImage'
 
 export const Carousel = ({
   images = [],
@@ -148,25 +148,25 @@ export const Carousel = ({
     const imagesMap = images.map((img) => ({ url: img, type: 'fotos' }))
     if (frontCoverImg) imagesMap.unshift({ url: frontCoverImg, type: 'fotos' })
     const planosMap = planos.map((img) => ({ url: img, type: 'planos' }))
-    if (frontCoverBlueprints)
+    if (frontCoverBlueprints) {
       planosMap.unshift({ url: frontCoverBlueprints, type: 'planos' })
+    }
 
     const allFiles = [...imagesMap, ...planosMap]
-    const fileFiltered = allFiles.filter((img) => img.url == url)[0]
-    console.log(fileFiltered)
+    const fileFiltered = allFiles.filter((img) => img.url === url)[0]
 
     if (fileFiltered.type === 'fotos') {
-      imgWithCover.map((img, index) => {
-        if (img === fileFiltered.url) {
-          setIndex(index)
+      for (let i = 0; i < imgWithCover.length; i++) {
+        if (images[i] === fileFiltered.url) {
+          setIndex(i + (frontCoverImg ? 1 : 0))
         }
-      })
+      }
     } else {
-      bluePrintsWithCover.map((img, index) => {
-        if (img === fileFiltered.url) {
-          setIndex(index)
+      for (let i = 0; i < bluePrintsWithCover.length; i++) {
+        if (planos[i] === fileFiltered.url) {
+          setIndex(i + (frontCoverBlueprints ? 1 : 0))
         }
-      })
+      }
     }
     setTabSelected(fileFiltered.type)
   }
@@ -191,7 +191,7 @@ export const Carousel = ({
           {window.innerWidth < 786 ? (
             <Box __css={{ width: '100%', height: '100%' }}>
               <SliderSwap
-                files={Images}
+                files={[...imgWithCover, ...bluePrintsWithCover]}
                 handleTouchToogle={toggleFullscreen}
                 otherButton={otherButton}
                 handleImageClickToFullscreen={handleImageClickToFullscreen}

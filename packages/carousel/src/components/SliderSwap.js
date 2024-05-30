@@ -67,8 +67,9 @@ export const SliderSwap = ({
           startPos > iconNextPosition.x - 10 &&
           startPosY < iconNextPosition.y + 40 &&
           startPosY > iconNextPosition.y - 10
-        )
+        ) {
           return nextSlide()
+        }
         if (
           startPos < iconPrevPosition.x + 40 &&
           startPosY < iconPrevPosition.y + 40 &&
@@ -148,9 +149,12 @@ export const SliderSwap = ({
   useEffect(() => {
     if (fullScreen) setIndex(-translateX / sliderContainerWidth)
     if (!fullScreen) {
-      let fileVisibleIndex = Math.abs(translateX / (sliderContainerWidth || 1))
-      if (sliderContainerWidth)
+      const fileVisibleIndex = Math.abs(
+        translateX / (sliderContainerWidth || 1)
+      )
+      if (sliderContainerWidth) {
         handleImageClickToFullscreen(files[fileVisibleIndex])
+      }
     }
   }, [translateX])
 

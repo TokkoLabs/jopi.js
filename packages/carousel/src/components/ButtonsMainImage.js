@@ -3,7 +3,7 @@ import '../../styles/gallery.css'
 import { Box } from '@oneloop/box'
 import { ButtonGallery } from './ButtonGallery'
 
-export default function ButtonsMainImage({
+export const ButtonsMainImage = ({
   video,
   video360,
   images,
@@ -13,7 +13,7 @@ export default function ButtonsMainImage({
   setTabSelected,
   handleTouchToogle,
   setIndex,
-}) {
+}) => {
   const handleClick = (e, type) => {
     e.stopPropagation()
     setTabSelected(type)

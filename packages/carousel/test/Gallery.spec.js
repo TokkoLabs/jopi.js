@@ -71,7 +71,7 @@ describe('Carousel', () => {
         planos={['', '']}
         frontCoverImg={['img']}
         frontCoverBlueprints={['img']}
-        otherButton={true}
+        otherButton
       />
     )
     const fullscreenButton = wrapper.find('.firstTabImg').at(0)
