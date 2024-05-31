@@ -4,7 +4,7 @@ import { Svg } from '@oneloop/icons'
 
 const CheckboxBox = ({
   borderColor,
-  backgroundColor,
+  backgroundColor = 'red',
   tick,
   tickColor,
   isMedium,
