@@ -16,7 +16,6 @@ const validateImageDimensions = async (imageUrl) => {
 
 export const ImageCard = ({ url, styles, children, ...props }) => {
   const [rectangle, setRectangle] = useState(false)
-  const [done, setDone] = useState(false)
 
   const isRectangle = async () => {
     const isRectangle = await validateImageDimensions(url)
@@ -25,20 +24,13 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
 
   useEffect(() => {
     if (url) {
-      isRectangle().then(() => {
-        setDone(true)
-      })
-    } else {
-      setDone(true)
+      isRectangle()
     }
   }, [url])
 
-  if (!done && process.env.NODE_ENV !== 'test') {
-    return null
-  }
-
   return (
     <Box
+      className="image-card"
       __css={{
         display: 'flex',
         alignItems: 'center',
