@@ -145,9 +145,10 @@ export const SliderSwap = ({
     startTime,
     isClick,
   ])
-
   useEffect(() => {
-    if (fullScreen) setIndex(-translateX / sliderContainerWidth)
+    if (fullScreen) {
+      setIndex(-translateX / sliderContainerWidth)
+    }
     if (!fullScreen) {
       const fileVisibleIndex = Math.abs(
         translateX / (sliderContainerWidth || 1)
@@ -182,7 +183,7 @@ export const SliderSwap = ({
           display: 'flex',
           width: '100%',
           height: '100%',
-          transition: isDragging ? 'none' : 'transform 0.5s ease',
+          transition: isDragging ? 'none' : 'transform 0.8s ease',
           transform: `translateX(${translateX}px)`,
         }}
         className="sliderContainer"

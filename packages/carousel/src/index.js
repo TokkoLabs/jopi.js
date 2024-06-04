@@ -157,14 +157,14 @@ export const Carousel = ({
 
     if (fileFiltered.type === 'fotos') {
       for (let i = 0; i < imgWithCover.length; i++) {
-        if (images[i] === fileFiltered.url) {
-          setIndex(i + (frontCoverImg ? 1 : 0))
+        if (imgWithCover[i] === fileFiltered.url) {
+          setIndex(i)
         }
       }
     } else {
       for (let i = 0; i < bluePrintsWithCover.length; i++) {
-        if (planos[i] === fileFiltered.url) {
-          setIndex(i + (frontCoverBlueprints ? 1 : 0))
+        if (bluePrintsWithCover[i] === fileFiltered.url) {
+          setIndex(i)
         }
       }
     }
