@@ -15,7 +15,9 @@
   transition: opacity 0.4s ease-in-out;
   visibility: hidden;
 }
-
+.sliderContainer {
+  transition: transform 0.8s ease;
+}
 .fsOverlay {
   background-color: #000000;
   opacity: 0.8;
@@ -174,6 +176,7 @@
   height: 100%;
   object-fit: contain;
 }
+
 @media (min-width: 600px) {
   .fullscreen {
     padding: 30px 40px;

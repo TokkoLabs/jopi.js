@@ -147,6 +147,7 @@ export const Carousel = ({
   const handleImageClickToFullscreen = (url) => {
     const imagesMap = images.map((img) => ({ url: img, type: 'fotos' }))
     if (frontCoverImg) imagesMap.unshift({ url: frontCoverImg, type: 'fotos' })
+
     const planosMap = planos.map((img) => ({ url: img, type: 'planos' }))
     if (frontCoverBlueprints) {
       planosMap.unshift({ url: frontCoverBlueprints, type: 'planos' })
@@ -155,16 +156,20 @@ export const Carousel = ({
     const allFiles = [...imagesMap, ...planosMap]
     const fileFiltered = allFiles.filter((img) => img.url === url)[0]
 
+    if (!fileFiltered) return
+
     if (fileFiltered.type === 'fotos') {
       for (let i = 0; i < imgWithCover.length; i++) {
         if (imgWithCover[i] === fileFiltered.url) {
           setIndex(i)
+          break
         }
       }
     } else {
       for (let i = 0; i < bluePrintsWithCover.length; i++) {
         if (bluePrintsWithCover[i] === fileFiltered.url) {
           setIndex(i)
+          break
         }
       }
     }

@@ -9,6 +9,7 @@ export default {
 
 export const CarouselComponent = () => {
   const imgs = [
+    'https://static.tokkobroker.com/pictures/105224213655380644253178824020147782780512921439883798407827684520410749716462.jpg',
     'https://static.inmofactory.com/images/inmofactory/documents/1/124683/34021431/582525589.jpg?rule=web_412x257',
     'https://imgs.nestimg.com/casa_en_fraccionamiento_privadas_de_la_hacienda_3210125690712336672.jpg',
     'https://static.tokkobroker.com/pictures/3576822133737522479342344804526371670339487603874495331054752417644934016466.jpg',
@@ -32,7 +33,7 @@ export const CarouselComponent = () => {
   return (
     <Box>
       <Carousel
-        frontCoverImg="https://www.wallpaperuse.com/wallp/0-9852_m.jpg"
+        frontCoverImg="https://img.freepik.com/foto-gratis/villa-lujo-piscina-espectacular-diseno-contemporaneo-arte-digital-bienes-raices-hogar-casa-propiedad-ge_1258-150749.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1716076800&semt=sph"
         images={imgs}
         video={VIDEO}
         planos={PLANO}

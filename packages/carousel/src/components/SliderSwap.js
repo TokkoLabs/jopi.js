@@ -150,23 +150,34 @@ export const SliderSwap = ({
       setIndex(-translateX / sliderContainerWidth)
     }
     if (!fullScreen) {
-      const fileVisibleIndex = Math.abs(
-        translateX / (sliderContainerWidth || 1)
+      const fileVisibleIndex = Math.round(
+        Math.abs(translateX / (sliderContainerWidth || 1))
       )
-      if (sliderContainerWidth) {
+      if (sliderContainerWidth && handleImageClickToFullscreen) {
         handleImageClickToFullscreen(files[fileVisibleIndex])
       }
     }
   }, [translateX])
 
   useEffect(() => {
-    if (!fullScreen || !sliderContainerWidth) return
-    setTranslateX(-sliderContainerWidth * index)
-    sliderRef.current.style.transform = `translateX(${
-      -sliderContainerWidth * index
-    }px)`
+    if (!sliderContainerWidth) return
+    if (!fullScreen) {
+      const fileVisibleIndex = Math.round(
+        Math.abs(translateX / (sliderContainerWidth || 1))
+      )
+      const validIndex = index || fileVisibleIndex
+      setTranslateX(-sliderContainerWidth * validIndex)
+      sliderRef.current.style.transform = `translateX(${
+        -sliderContainerWidth * index
+      }px)`
+    }
+    if (fullScreen) {
+      setTranslateX(-sliderContainerWidth * index)
+      sliderRef.current.style.transform = `translateX(${
+        -sliderContainerWidth * index
+      }px)`
+    }
   }, [sliderContainerWidth, index, fullScreen])
-
   return (
     <Box
       ref={sliderContainerRef}
@@ -181,9 +192,10 @@ export const SliderSwap = ({
         ref={sliderRef}
         __css={{
           display: 'flex',
+          alignItems: 'center',
           width: '100%',
           height: '100%',
-          transition: isDragging ? 'none' : 'transform 0.8s ease',
+          transition: isDragging ? 'none' : 'transform .8s ease',
           transform: `translateX(${translateX}px)`,
         }}
         className="sliderContainer"
@@ -223,7 +235,7 @@ export const SliderSwap = ({
             </Box>
           ))}
         {fullScreen &&
-          (fileType === 'videos' || fileType === 'videos360') &&
+          (fileType === 'videos' || fileType === 'video360') &&
           files.map((video, index) => (
             <Box
               key={index}
@@ -232,7 +244,7 @@ export const SliderSwap = ({
                 alignItems: 'center',
                 justifyContent: 'center',
                 minWidth: '100%',
-                height: '100%',
+                height: `${sliderContainerWidth * 0.7}px`,
                 borderRadius: '12px',
                 cursor: 'pointer',
               }}
