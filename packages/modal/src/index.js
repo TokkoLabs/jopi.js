@@ -24,10 +24,8 @@ export const Modal = ({
 
   const handleKeyDown = (event) => {
     if (event.key === 'Escape') {
-      const FW = document.getElementsByClassName('openFullscreen')[0]
-      if (!FW) {
-        closeModal()
-      }
+      event.stopPropagation()
+      closeModal()
     }
   }
 

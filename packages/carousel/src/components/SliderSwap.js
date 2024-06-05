@@ -195,7 +195,7 @@ export const SliderSwap = ({
           alignItems: 'center',
           width: '100%',
           height: '100%',
-          transition: isDragging ? 'none' : 'transform .8s ease',
+          transition: 'transform .2s ease',
           transform: `translateX(${translateX}px)`,
         }}
         className="sliderContainer"
