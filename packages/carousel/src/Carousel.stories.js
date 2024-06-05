@@ -31,15 +31,13 @@ export const CarouselComponent = () => {
   ]
 
   return (
-    <Box>
-      <Carousel
-        frontCoverImg="https://img.freepik.com/foto-gratis/villa-lujo-piscina-espectacular-diseno-contemporaneo-arte-digital-bienes-raices-hogar-casa-propiedad-ge_1258-150749.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1716076800&semt=sph"
-        images={imgs}
-        video={VIDEO}
-        planos={PLANO}
-        video360={Video360}
-      />
-    </Box>
+    <Carousel
+      frontCoverImg="https://img.freepik.com/foto-gratis/villa-lujo-piscina-espectacular-diseno-contemporaneo-arte-digital-bienes-raices-hogar-casa-propiedad-ge_1258-150749.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1716076800&semt=sph"
+      images={imgs}
+      video={VIDEO}
+      planos={PLANO}
+      video360={Video360}
+    />
   )
 }
 

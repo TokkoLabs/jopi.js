@@ -197,7 +197,7 @@ export const Carousel = ({
                 handleImageClickToFullscreen={handleImageClickToFullscreen}
                 setIndex={setIndex}
               />
-              {!otherButton && containerWidth > 600 && (
+              {!otherButton && containerWidth > 530 && (
                 <Box
                   __css={{ bottom: '6px' }}
                   className="buttonsMainImageSlider"

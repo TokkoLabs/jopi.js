@@ -138,10 +138,9 @@
 }
 .swapSliderIconPrev,
 .swapSliderIconNext {
-  font-size: 12px;
   color: var(--neutralGray2);
   &.fullScreen {
-    font-size: 32px;
+    font-size: 32px !important;
     color: var(--neutralGray8);
   }
 }
@@ -225,16 +224,11 @@
   }
 }
 @media (min-width: 700px) {
-  .nextPrevIconContainer {
-    width: 40px;
-    height: 40px;
-  }
-  .swapSliderIconPrev,
-  .swapSliderIconNext {
-    font-size: 24px;
+  .swapSliderIconNext,
+  .swapSliderIconPrev {
     color: var(--neutralGray2);
     &.fullScreen {
-      font-size: 40px;
+      font-size: 40px !important;
       color: var(--neutralGray8);
     }
   }

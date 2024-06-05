@@ -158,7 +158,6 @@ export const SliderSwap = ({
       }
     }
   }, [translateX])
-
   useEffect(() => {
     if (!sliderContainerWidth) return
     if (!fullScreen) {
@@ -259,23 +258,39 @@ export const SliderSwap = ({
           ))}
       </Box>
       <Box
-        __css={{ left: fullScreen ? '-5px' : '16px' }}
+        __css={{
+          left: fullScreen ? '-5px' : '16px',
+          width: sliderContainerWidth < 700 ? '30px' : '40px',
+          height: sliderContainerWidth < 700 ? '30px' : '40px',
+        }}
         ref={iconPrevRef}
         className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
       >
         <Icon
           className={`swapSliderIconPrev ${fullScreen ? 'fullScreen' : ''}`}
           icon="icon-atras"
+          style={{
+            fontSize:
+              sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
+          }}
         />
       </Box>
       <Box
-        __css={{ right: fullScreen ? '-5px' : '16px' }}
+        __css={{
+          right: fullScreen ? '-5px' : '16px',
+          width: sliderContainerWidth < 700 ? '30px' : '40px',
+          height: sliderContainerWidth < 700 ? '30px' : '40px',
+        }}
         ref={iconNextRef}
         className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
       >
         <Icon
           className={`swapSliderIconNext ${fullScreen ? 'fullScreen' : ''}`}
-          style={{ transform: 'rotate(180deg)' }}
+          style={{
+            transform: 'rotate(180deg)',
+            fontSize:
+              sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
+          }}
           icon="icon-atras"
         />
       </Box>
