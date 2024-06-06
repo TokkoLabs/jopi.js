@@ -6,7 +6,6 @@ import { Carousel } from '../src'
 import { SliderSwap } from '../src/components/SliderSwap'
 import { ImageCard } from '../src/components/ImageCard'
 import { Button } from '@oneloop/button'
-import { Box } from '@oneloop/box'
 
 configure({ adapter: new Adapter() })
 
