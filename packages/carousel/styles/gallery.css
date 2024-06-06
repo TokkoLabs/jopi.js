@@ -15,7 +15,9 @@
   transition: opacity 0.4s ease-in-out;
   visibility: hidden;
 }
-
+.sliderContainer {
+  transition: transform 0.8s ease;
+}
 .fsOverlay {
   background-color: #000000;
   opacity: 0.8;
@@ -136,10 +138,9 @@
 }
 .swapSliderIconPrev,
 .swapSliderIconNext {
-  font-size: 12px;
   color: var(--neutralGray2);
   &.fullScreen {
-    font-size: 32px;
+    font-size: 32px !important;
     color: var(--neutralGray8);
   }
 }
@@ -174,6 +175,7 @@
   height: 100%;
   object-fit: contain;
 }
+
 @media (min-width: 600px) {
   .fullscreen {
     padding: 30px 40px;
@@ -222,16 +224,11 @@
   }
 }
 @media (min-width: 700px) {
-  .nextPrevIconContainer {
-    width: 40px;
-    height: 40px;
-  }
-  .swapSliderIconPrev,
-  .swapSliderIconNext {
-    font-size: 24px;
+  .swapSliderIconNext,
+  .swapSliderIconPrev {
     color: var(--neutralGray2);
     &.fullScreen {
-      font-size: 40px;
+      font-size: 40px !important;
       color: var(--neutralGray8);
     }
   }

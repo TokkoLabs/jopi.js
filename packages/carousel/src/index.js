@@ -41,8 +41,8 @@ export const Carousel = ({
 
   const [emptyImgArray, setEmptyImgArray] = useState([])
   const carouselContainerRef = useRef()
-  const containerWidth = carouselContainerRef.current?.parentElement.clientWidth
-  const [carouselContainerWidth, setCarouselContainerWidth] = useState(0)
+  const containerWidth =
+    carouselContainerRef.current?.parentElement.clientWidth || window.innerWidth
   const [mainImageWidth, setMainImageWidth] = useState(0)
   const [followImgColumns, setFollowImgColumns] = useState(0)
   const [followingImgWidth, setFollowingImgWidth] = useState(0)
@@ -72,33 +72,26 @@ export const Carousel = ({
     return () => window.removeEventListener('resize', debouncedHandleResize)
   }, [])
 
-  useEffect(() => {
-    setCarouselContainerWidth(containerWidth)
-  }, [containerWidth])
-
   useLayoutEffect(() => {
     let newMainImageWidth
-    if (carouselContainerWidth <= 700) {
+    if (containerWidth <= 700) {
       setFollowImgColumns(0)
-      newMainImageWidth = carouselContainerWidth
-    } else if (carouselContainerWidth >= 650 && carouselContainerWidth < 960) {
+      newMainImageWidth = containerWidth
+    } else if (containerWidth >= 650 && containerWidth < 960) {
       setFollowImgColumns(1)
-      newMainImageWidth = carouselContainerWidth * 0.68
-    } else if (carouselContainerWidth >= 960 && carouselContainerWidth < 1215) {
+      newMainImageWidth = containerWidth * 0.68
+    } else if (containerWidth >= 960 && containerWidth < 1215) {
       setFollowImgColumns(2)
-      newMainImageWidth = carouselContainerWidth * 0.513
-    } else if (
-      carouselContainerWidth >= 1215 &&
-      carouselContainerWidth < 1480
-    ) {
+      newMainImageWidth = containerWidth * 0.513
+    } else if (containerWidth >= 1215 && containerWidth < 1480) {
       setFollowImgColumns(2)
-      newMainImageWidth = carouselContainerWidth * 0.51
+      newMainImageWidth = containerWidth * 0.51
     } else {
       setFollowImgColumns(3)
-      newMainImageWidth = carouselContainerWidth * 0.41
+      newMainImageWidth = containerWidth * 0.41
     }
     setMainImageWidth(Math.round(newMainImageWidth))
-  }, [carouselContainerWidth, containerWidth])
+  }, [containerWidth])
 
   useEffect(() => {
     setCarouselHeight(Math.round(mainImageWidth * 0.562))
@@ -147,6 +140,7 @@ export const Carousel = ({
   const handleImageClickToFullscreen = (url) => {
     const imagesMap = images.map((img) => ({ url: img, type: 'fotos' }))
     if (frontCoverImg) imagesMap.unshift({ url: frontCoverImg, type: 'fotos' })
+
     const planosMap = planos.map((img) => ({ url: img, type: 'planos' }))
     if (frontCoverBlueprints) {
       planosMap.unshift({ url: frontCoverBlueprints, type: 'planos' })
@@ -155,16 +149,20 @@ export const Carousel = ({
     const allFiles = [...imagesMap, ...planosMap]
     const fileFiltered = allFiles.filter((img) => img.url === url)[0]
 
+    if (!fileFiltered) return
+
     if (fileFiltered.type === 'fotos') {
       for (let i = 0; i < imgWithCover.length; i++) {
-        if (images[i] === fileFiltered.url) {
-          setIndex(i + (frontCoverImg ? 1 : 0))
+        if (imgWithCover[i] === fileFiltered.url) {
+          setIndex(i)
+          break
         }
       }
     } else {
       for (let i = 0; i < bluePrintsWithCover.length; i++) {
-        if (planos[i] === fileFiltered.url) {
-          setIndex(i + (frontCoverBlueprints ? 1 : 0))
+        if (bluePrintsWithCover[i] === fileFiltered.url) {
+          setIndex(i)
+          break
         }
       }
     }
@@ -177,10 +175,13 @@ export const Carousel = ({
         position: 'relative',
         width: '100%',
       }}
+      ref={carouselContainerRef}
     >
       {!otherComponent ? (
         <Box
-          height={`${carouselHeight || window.innerWidth * 0.562}px`}
+          height={`${
+            containerWidth >= 786 ? carouselHeight : containerWidth * 0.562
+          }px`}
           __css={{
             display: 'flex',
             alignItems: 'center',
@@ -188,7 +189,7 @@ export const Carousel = ({
             width: '100%',
           }}
         >
-          {window.innerWidth < 786 ? (
+          {containerWidth < 786 ? (
             <Box __css={{ width: '100%', height: '100%' }}>
               <SliderSwap
                 files={[...imgWithCover, ...bluePrintsWithCover]}
@@ -197,7 +198,7 @@ export const Carousel = ({
                 handleImageClickToFullscreen={handleImageClickToFullscreen}
                 setIndex={setIndex}
               />
-              {!otherButton && window.innerWidth > 600 && (
+              {!otherButton && containerWidth > 530 && (
                 <Box
                   __css={{ bottom: '6px' }}
                   className="buttonsMainImageSlider"
@@ -226,7 +227,6 @@ export const Carousel = ({
                 gap: '16px',
                 height: '100%',
               }}
-              ref={carouselContainerRef}
             >
               <ImageCard
                 onClick={() => {
@@ -237,11 +237,9 @@ export const Carousel = ({
                 position={'relative'}
                 height={'100%'}
                 width={`${
-                  followImgColumns === 0
-                    ? carouselContainerWidth
-                    : mainImageWidth
+                  followImgColumns === 0 ? containerWidth : mainImageWidth
                 }px`}
-                minWidth={followImgColumns === 0 ? carouselContainerWidth : 0}
+                minWidth={followImgColumns === 0 ? containerWidth : 0}
                 url={Images[0]}
               >
                 {!Images[0] && (

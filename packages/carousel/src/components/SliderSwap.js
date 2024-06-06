@@ -145,27 +145,38 @@ export const SliderSwap = ({
     startTime,
     isClick,
   ])
-
   useEffect(() => {
-    if (fullScreen) setIndex(-translateX / sliderContainerWidth)
+    if (fullScreen) {
+      setIndex(-translateX / sliderContainerWidth)
+    }
     if (!fullScreen) {
-      const fileVisibleIndex = Math.abs(
-        translateX / (sliderContainerWidth || 1)
+      const fileVisibleIndex = Math.round(
+        Math.abs(translateX / (sliderContainerWidth || 1))
       )
-      if (sliderContainerWidth) {
+      if (sliderContainerWidth && handleImageClickToFullscreen) {
         handleImageClickToFullscreen(files[fileVisibleIndex])
       }
     }
   }, [translateX])
-
   useEffect(() => {
-    if (!fullScreen || !sliderContainerWidth) return
-    setTranslateX(-sliderContainerWidth * index)
-    sliderRef.current.style.transform = `translateX(${
-      -sliderContainerWidth * index
-    }px)`
+    if (!sliderContainerWidth) return
+    if (!fullScreen) {
+      const fileVisibleIndex = Math.round(
+        Math.abs(translateX / (sliderContainerWidth || 1))
+      )
+      const validIndex = index || fileVisibleIndex
+      setTranslateX(-sliderContainerWidth * validIndex)
+      sliderRef.current.style.transform = `translateX(${
+        -sliderContainerWidth * index
+      }px)`
+    }
+    if (fullScreen) {
+      setTranslateX(-sliderContainerWidth * index)
+      sliderRef.current.style.transform = `translateX(${
+        -sliderContainerWidth * index
+      }px)`
+    }
   }, [sliderContainerWidth, index, fullScreen])
-
   return (
     <Box
       ref={sliderContainerRef}
@@ -180,9 +191,10 @@ export const SliderSwap = ({
         ref={sliderRef}
         __css={{
           display: 'flex',
+          alignItems: 'center',
           width: '100%',
           height: '100%',
-          transition: isDragging ? 'none' : 'transform 0.5s ease',
+          transition: 'transform .2s ease',
           transform: `translateX(${translateX}px)`,
         }}
         className="sliderContainer"
@@ -222,7 +234,7 @@ export const SliderSwap = ({
             </Box>
           ))}
         {fullScreen &&
-          (fileType === 'videos' || fileType === 'videos360') &&
+          (fileType === 'videos' || fileType === 'video360') &&
           files.map((video, index) => (
             <Box
               key={index}
@@ -231,7 +243,7 @@ export const SliderSwap = ({
                 alignItems: 'center',
                 justifyContent: 'center',
                 minWidth: '100%',
-                height: '100%',
+                height: `${sliderContainerWidth * 0.7}px`,
                 borderRadius: '12px',
                 cursor: 'pointer',
               }}
@@ -246,23 +258,39 @@ export const SliderSwap = ({
           ))}
       </Box>
       <Box
-        __css={{ left: fullScreen ? '-5px' : '16px' }}
+        __css={{
+          left: fullScreen ? '-5px' : '16px',
+          width: sliderContainerWidth < 700 ? '30px' : '40px',
+          height: sliderContainerWidth < 700 ? '30px' : '40px',
+        }}
         ref={iconPrevRef}
         className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
       >
         <Icon
           className={`swapSliderIconPrev ${fullScreen ? 'fullScreen' : ''}`}
           icon="icon-atras"
+          style={{
+            fontSize:
+              sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
+          }}
         />
       </Box>
       <Box
-        __css={{ right: fullScreen ? '-5px' : '16px' }}
+        __css={{
+          right: fullScreen ? '-5px' : '16px',
+          width: sliderContainerWidth < 700 ? '30px' : '40px',
+          height: sliderContainerWidth < 700 ? '30px' : '40px',
+        }}
         ref={iconNextRef}
         className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
       >
         <Icon
           className={`swapSliderIconNext ${fullScreen ? 'fullScreen' : ''}`}
-          style={{ transform: 'rotate(180deg)' }}
+          style={{
+            transform: 'rotate(180deg)',
+            fontSize:
+              sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
+          }}
           icon="icon-atras"
         />
       </Box>
