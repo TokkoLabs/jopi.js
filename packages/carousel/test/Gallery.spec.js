@@ -6,6 +6,7 @@ import { Carousel } from '../src'
 import { SliderSwap } from '../src/components/SliderSwap'
 import { ImageCard } from '../src/components/ImageCard'
 import { Button } from '@oneloop/button'
+import { Box } from '@oneloop/box'
 
 configure({ adapter: new Adapter() })
 
@@ -20,7 +21,6 @@ describe('Carousel', () => {
     const wrapper = mount(<Carousel images={['', '']} />)
 
     const btn = wrapper.find('.buttonGallery')
-
     expect(btn.at(0).text()).toBe('Fotos')
   })
 
@@ -82,11 +82,10 @@ describe('Carousel', () => {
     expect(fullscrenComponent.first().hasClass('openFullscreen')).toBe(false)
   })
 
-  it('renders SliderSwap component when window width is less than 600', () => {
+  it('renders SliderSwap component when window width is less than 786', () => {
     window.innerWidth = 500
-
     const wrapper = shallow(<Carousel />)
-
+    console.log(wrapper.debug())
     expect(wrapper.find('SliderSwap').length).toEqual(1)
   })
 

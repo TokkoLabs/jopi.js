@@ -41,7 +41,8 @@ export const Carousel = ({
 
   const [emptyImgArray, setEmptyImgArray] = useState([])
   const carouselContainerRef = useRef()
-  const containerWidth = carouselContainerRef.current?.parentElement.clientWidth
+  const containerWidth =
+    carouselContainerRef.current?.parentElement.clientWidth || window.innerWidth
   const [mainImageWidth, setMainImageWidth] = useState(0)
   const [followImgColumns, setFollowImgColumns] = useState(0)
   const [followingImgWidth, setFollowingImgWidth] = useState(0)
