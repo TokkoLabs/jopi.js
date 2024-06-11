@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { ImageCard } from './ImageCard'
 import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
+import theme from '@oneloop/theme'
 
 export const SliderSwap = ({
   files = [],
@@ -63,6 +64,7 @@ export const SliderSwap = ({
       const elapsedTime = Date.now() - startTime
 
       if (isClick && elapsedTime < 300) {
+        if (files.length === 0) return
         if (
           startPos > iconNextPosition.x - 10 &&
           startPosY < iconNextPosition.y + 40 &&
@@ -177,6 +179,7 @@ export const SliderSwap = ({
       }px)`
     }
   }, [sliderContainerWidth, index, fullScreen])
+
   return (
     <Box
       ref={sliderContainerRef}
@@ -200,6 +203,7 @@ export const SliderSwap = ({
         className="sliderContainer"
       >
         {!fullScreen &&
+          files.length > 0 &&
           files.map((img, index) => (
             <ImageCard
               key={index}
@@ -213,6 +217,27 @@ export const SliderSwap = ({
               url={img}
             />
           ))}
+        {!fullScreen && files.length === 0 && (
+          <Box
+            __css={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100%',
+              height: '100%',
+              backgroundColor: theme.colors.neutralGray7,
+              borderRadius: '12px',
+            }}
+          >
+            <Icon
+              width="100%"
+              height="100%"
+              icon="icon-propiedades"
+              fontSize="34px"
+              color={theme.colors.neutralGray4}
+            />
+          </Box>
+        )}
         {fullScreen &&
           (fileType === 'fotos' || fileType === 'planos') &&
           files.map((img, index) => (
@@ -257,43 +282,51 @@ export const SliderSwap = ({
             </Box>
           ))}
       </Box>
-      <Box
-        __css={{
-          left: fullScreen ? '-5px' : '16px',
-          width: sliderContainerWidth < 700 ? '30px' : '40px',
-          height: sliderContainerWidth < 700 ? '30px' : '40px',
-        }}
-        ref={iconPrevRef}
-        className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
-      >
-        <Icon
-          className={`swapSliderIconPrev ${fullScreen ? 'fullScreen' : ''}`}
-          icon="icon-atras"
-          style={{
-            fontSize:
-              sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
-          }}
-        />
-      </Box>
-      <Box
-        __css={{
-          right: fullScreen ? '-5px' : '16px',
-          width: sliderContainerWidth < 700 ? '30px' : '40px',
-          height: sliderContainerWidth < 700 ? '30px' : '40px',
-        }}
-        ref={iconNextRef}
-        className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
-      >
-        <Icon
-          className={`swapSliderIconNext ${fullScreen ? 'fullScreen' : ''}`}
-          style={{
-            transform: 'rotate(180deg)',
-            fontSize:
-              sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
-          }}
-          icon="icon-atras"
-        />
-      </Box>
+      {!fullScreen && files.length > 0 && (
+        <>
+          <Box
+            __css={{
+              left: fullScreen ? '-5px' : '16px',
+              width: sliderContainerWidth < 700 ? '30px' : '40px',
+              height: sliderContainerWidth < 700 ? '30px' : '40px',
+            }}
+            ref={iconPrevRef}
+            className={`nextPrevIconContainer ${
+              fullScreen ? 'fullScreen' : ''
+            }`}
+          >
+            <Icon
+              className={`swapSliderIconPrev ${fullScreen ? 'fullScreen' : ''}`}
+              icon="icon-atras"
+              style={{
+                fontSize:
+                  sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
+              }}
+            />
+          </Box>
+          <Box
+            __css={{
+              right: fullScreen ? '-5px' : '16px',
+              width: sliderContainerWidth < 700 ? '30px' : '40px',
+              height: sliderContainerWidth < 700 ? '30px' : '40px',
+            }}
+            ref={iconNextRef}
+            className={`nextPrevIconContainer ${
+              fullScreen ? 'fullScreen' : ''
+            }`}
+          >
+            <Icon
+              className={`swapSliderIconNext ${fullScreen ? 'fullScreen' : ''}`}
+              style={{
+                transform: 'rotate(180deg)',
+                fontSize:
+                  sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
+              }}
+              icon="icon-atras"
+            />
+          </Box>
+        </>
+      )}
       {!fullScreen && (
         <Box onClick={(e) => e.stopPropagation()} className="otherButtonSwap">
           {otherButton}
