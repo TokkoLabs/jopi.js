@@ -117,9 +117,17 @@ export const Carousel = ({
       imgWithCover.length > 0 ||
       bluePrintsWithCover.length > 0
     ) {
-      if (bluePrintsWithCover.length > 0 && !imgWithCover.length > 0) {
-        setTabSelected('planos')
-      }
+      setTabSelected(
+        images.length > 0 || frontCoverImg
+          ? 'fotos'
+          : planos.length > 0 || frontCoverBlueprints
+          ? 'planos'
+          : video.length > 0
+          ? 'videos'
+          : video360.length > 0
+          ? 'video360'
+          : ''
+      )
       setFullscreen(true)
     }
   }
@@ -309,8 +317,12 @@ export const Carousel = ({
                           0 && (
                           <Box
                             __css={{
-                              padding: '14px 15px',
                               borderRadius: '50%',
+                              width: '46px',
+                              height: '46px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
                               backgroundColor: theme.colors.neutralGray8,
                               opacity: '0.8',
                               color: theme.colors.black,
