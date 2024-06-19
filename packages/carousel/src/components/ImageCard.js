@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
+import { Text } from '@oneloop/text'
+import { ImageErrorFallback } from './ImageErrorFallback'
 
 const validateImageDimensions = async (imageUrl) => {
   // eslint-disable-next-line no-undef
   const img = new Image()
   img.src = imageUrl
 
-  await new Promise((resolve) => {
+  await new Promise((resolve, reject) => {
     img.onload = () => resolve()
+    img.onerror = () => reject()
   })
 
   return img.width > img.height
@@ -16,10 +19,14 @@ const validateImageDimensions = async (imageUrl) => {
 
 export const ImageCard = ({ url, styles, children, ...props }) => {
   const [rectangle, setRectangle] = useState(false)
-
+  const [errorImage, setErrorImage] = useState(false)
   const isRectangle = async () => {
-    const isRectangle = await validateImageDimensions(url)
-    return setRectangle(isRectangle)
+    try {
+      const isRectangle = await validateImageDimensions(url)
+      return setRectangle(isRectangle)
+    } catch (error) {
+      return setErrorImage(true)
+    }
   }
 
   useEffect(() => {
@@ -27,6 +34,8 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
       isRectangle()
     }
   }, [url])
+
+  if (errorImage) return <ImageErrorFallback {...props} />
 
   return (
     <Box
@@ -42,7 +51,11 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
         backgroundSize: rectangle ? 'cover' : 'contain',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundImage: `url(${url})`,
+        backgroundImage: `url(${
+          !errorImage
+            ? url
+            : 'https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg'
+        })`,
         cursor: 'pointer',
         ...styles,
       }}

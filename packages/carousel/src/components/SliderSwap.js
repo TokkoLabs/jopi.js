@@ -3,6 +3,7 @@ import { ImageCard } from './ImageCard'
 import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
 import theme from '@oneloop/theme'
+import { ImageErrorFallback } from './ImageErrorFallback'
 
 export const SliderSwap = ({
   files = [],
@@ -12,6 +13,7 @@ export const SliderSwap = ({
   handleImageClickToFullscreen,
   fileType,
   setIndex,
+  setSwapInndex,
   index,
 }) => {
   const sliderContainerRef = useRef(null)
@@ -30,6 +32,15 @@ export const SliderSwap = ({
   const iconNextPosition = iconNextRef.current?.getBoundingClientRect()
   const iconPrevPosition = iconPrevRef.current?.getBoundingClientRect()
   const [translateX, setTranslateX] = useState(0)
+  const [imgErrors, setImgErrors] = useState({})
+  const [imgIndexClick, setImgIndexClick] = useState(0)
+  const debounce = (func, wait) => {
+    let timeout
+    return (...args) => {
+      clearTimeout(timeout)
+      timeout = setTimeout(() => func(...args), wait)
+    }
+  }
 
   const touchStart = (event) => {
     const position =
@@ -70,16 +81,16 @@ export const SliderSwap = ({
           startPosY < iconNextPosition.y + 40 &&
           startPosY > iconNextPosition.y - 10
         ) {
-          return nextSlide()
+          return debouncedNextSlide()
         }
         if (
           startPos < iconPrevPosition.x + 40 &&
           startPosY < iconPrevPosition.y + 40 &&
           startPosY > iconPrevPosition.y - 10
         ) {
-          return prevSlide()
+          return debouncedPrevSlide()
         }
-        if (!otherButton && !fullScreen) return handleTouchToogle()
+        if (!fullScreen) return handleTouchToogle()
         return
       }
       if (
@@ -111,6 +122,9 @@ export const SliderSwap = ({
     setTranslateX(newTranslateX)
     sliderRef.current.style.transform = `translateX(${newTranslateX}px)`
   }
+
+  const debouncedNextSlide = debounce(nextSlide, 250)
+  const debouncedPrevSlide = debounce(prevSlide, 250)
 
   const resetPosition = () => {
     setCurrentTranslate(0)
@@ -147,19 +161,23 @@ export const SliderSwap = ({
     startTime,
     isClick,
   ])
+
   useEffect(() => {
     if (fullScreen) {
       setIndex(-translateX / sliderContainerWidth)
+      if (setSwapInndex) setSwapInndex(imgIndexClick)
     }
     if (!fullScreen) {
       const fileVisibleIndex = Math.round(
         Math.abs(translateX / (sliderContainerWidth || 1))
       )
       if (sliderContainerWidth && handleImageClickToFullscreen) {
+        setImgIndexClick(fileVisibleIndex)
         handleImageClickToFullscreen(files[fileVisibleIndex])
       }
     }
   }, [translateX])
+
   useEffect(() => {
     if (!sliderContainerWidth) return
     if (!fullScreen) {
@@ -168,9 +186,11 @@ export const SliderSwap = ({
       )
       const validIndex = index || fileVisibleIndex
       setTranslateX(-sliderContainerWidth * validIndex)
+
       sliderRef.current.style.transform = `translateX(${
         -sliderContainerWidth * index
       }px)`
+      setImgIndexClick(validIndex)
     }
     if (fullScreen) {
       setTranslateX(-sliderContainerWidth * index)
@@ -178,7 +198,14 @@ export const SliderSwap = ({
         -sliderContainerWidth * index
       }px)`
     }
-  }, [sliderContainerWidth, index, fullScreen])
+  }, [sliderContainerWidth, index])
+
+  const handleImgError = (url) => {
+    setImgErrors((prevErrors) => ({
+      ...prevErrors,
+      [url]: true,
+    }))
+  }
 
   return (
     <Box
@@ -207,9 +234,6 @@ export const SliderSwap = ({
           files.map((img, index) => (
             <ImageCard
               key={index}
-              onClick={(e) => {
-                handleImageClickToFullscreen(img)
-              }}
               className="firstTabImg"
               position={'relative'}
               height={'100%'}
@@ -255,7 +279,16 @@ export const SliderSwap = ({
               }}
               onClick={(e) => e.stopPropagation()}
             >
-              <img className="imgFullScreenSlide" src={img} alt={fileType} />
+              {imgErrors[img] ? (
+                <ImageErrorFallback fullscreen />
+              ) : (
+                <img
+                  className="imgFullScreenSlide"
+                  src={img}
+                  alt={fileType}
+                  onError={() => handleImgError(img)}
+                />
+              )}
             </Box>
           ))}
         {fullScreen &&
@@ -282,7 +315,7 @@ export const SliderSwap = ({
             </Box>
           ))}
       </Box>
-      {!fullScreen && files.length > 0 && (
+      {((!fullScreen && files.length > 0) || fullScreen) && (
         <>
           <Box
             __css={{
