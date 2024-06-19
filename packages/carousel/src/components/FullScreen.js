@@ -19,6 +19,7 @@ export const FullScreen = ({
 }) => {
   const allFiles = { fotos, videos, video360, planos }
   const [contTab, setContTab] = useState(0)
+  const [swapInndex, setSwapInndex] = useState(index)
   const windowWidth = window.innerWidth
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown)
@@ -62,10 +63,10 @@ export const FullScreen = ({
     }
   }
   const closeFullscreen = () => {
+    setIndex(swapInndex)
     setFullscreen(false)
-    setTabSelected('fotos')
-    setIndex(0)
   }
+  console.log(swapInndex)
   return (
     <Box className={`fullscreen ${fullscreen ? 'openFullscreen' : ''}`}>
       <Box className="fsCloseIconMobile">
@@ -98,6 +99,7 @@ export const FullScreen = ({
             <SliderSwap
               setIndex={setIndex}
               fullScreen={fullscreen}
+              setSwapInndex={setSwapInndex}
               fileType={tabSelected}
               files={allFiles[tabSelected]}
               index={index}

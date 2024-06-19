@@ -111,25 +111,11 @@ export const Carousel = ({
 
   const toggleFullscreen = () => {
     if (otherButton) return
-    if (
-      video.length > 0 ||
-      video360.length > 0 ||
-      imgWithCover.length > 0 ||
-      bluePrintsWithCover.length > 0
-    ) {
+    if ([...imgWithCover, ...bluePrintsWithCover].length === 0)
       setTabSelected(
-        images.length > 0 || frontCoverImg
-          ? 'fotos'
-          : planos.length > 0 || frontCoverBlueprints
-          ? 'planos'
-          : video.length > 0
-          ? 'videos'
-          : video360.length > 0
-          ? 'video360'
-          : ''
+        video.length > 0 ? 'videos' : video360.length > 0 ? 'video360' : ''
       )
-      setFullscreen(true)
-    }
+    setFullscreen(true)
   }
 
   const debounce = (func, wait) => {
@@ -157,7 +143,9 @@ export const Carousel = ({
     const allFiles = [...imagesMap, ...planosMap]
     const fileFiltered = allFiles.filter((img) => img.url === url)[0]
 
-    if (!fileFiltered) return
+    if (!fileFiltered) {
+      return
+    }
 
     if (fileFiltered.type === 'fotos') {
       for (let i = 0; i < imgWithCover.length; i++) {
