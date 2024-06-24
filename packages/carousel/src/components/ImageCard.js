@@ -20,12 +20,15 @@ const validateImageDimensions = async (imageUrl) => {
 export const ImageCard = ({ url, styles, children, ...props }) => {
   const [rectangle, setRectangle] = useState(false)
   const [errorImage, setErrorImage] = useState(false)
+  const [showSkeleton, setShowSkeleton] = useState(true)
   const isRectangle = async () => {
     try {
       const isRectangle = await validateImageDimensions(url)
       return setRectangle(isRectangle)
     } catch (error) {
       return setErrorImage(true)
+    } finally {
+      setShowSkeleton(false)
     }
   }
 
@@ -37,7 +40,7 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
 
   if (errorImage) return <ImageErrorFallback {...props} />
 
-  return (
+  return !showSkeleton ? (
     <Box
       className="image-card"
       __css={{
@@ -51,11 +54,7 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
         backgroundSize: rectangle ? 'cover' : 'contain',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundImage: `url(${
-          !errorImage
-            ? url
-            : 'https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg'
-        })`,
+        backgroundImage: `url(${url})`,
         cursor: 'pointer',
         ...styles,
       }}
@@ -63,5 +62,17 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
     >
       {children}
     </Box>
+  ) : (
+    <Box
+      className="image-card"
+      __css={{
+        background: theme.colors.neutralGray8,
+        width: '100%',
+        height: '47%',
+        borderRadius: '12px',
+        ...styles,
+      }}
+      {...props}
+    ></Box>
   )
 }

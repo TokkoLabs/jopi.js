@@ -4,12 +4,12 @@ import { Box } from '@oneloop/box'
 import { ButtonGallery } from './ButtonGallery'
 
 export const ButtonsMainImage = ({
-  video,
-  video360,
-  images,
-  imgWithCover,
-  planos,
-  frontCoverBlueprints,
+  video = [],
+  video360 = [],
+  images = [],
+  imgWithCover = [],
+  planos = [],
+  frontCoverBlueprints = [],
   setTabSelected,
   handleTouchToogle,
   setIndex,

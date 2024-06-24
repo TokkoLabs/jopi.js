@@ -25,6 +25,7 @@ export const Carousel = ({
   const [tabSelected, setTabSelected] = useState('fotos')
   const tabContainers = []
   const [index, setIndex] = useState(0)
+  const [URLOpenFullscreen, setURLOpenFullscreen] = useState(0)
   const Images = [...images, ...planos]
   const imgWithCover = [...images]
   const bluePrintsWithCover = [...planos]
@@ -41,11 +42,12 @@ export const Carousel = ({
 
   const [emptyImgArray, setEmptyImgArray] = useState([])
   const carouselContainerRef = useRef()
-  const containerWidth =
-    carouselContainerRef.current?.parentElement.clientWidth || window.innerWidth
+  const containerWidth = carouselContainerRef.current?.parentElement.clientWidth
   const [mainImageWidth, setMainImageWidth] = useState(0)
   const [followImgColumns, setFollowImgColumns] = useState(0)
   const [followingImgWidth, setFollowingImgWidth] = useState(0)
+  const mainImageSkeletonRef = useRef()
+  const mainImageWidthSkeleton = mainImageSkeletonRef.current?.clientWidth
 
   if (video.length > 0) {
     tabContainers.push('Videos')
@@ -173,7 +175,33 @@ export const Carousel = ({
       }}
       ref={carouselContainerRef}
     >
-      {!otherComponent ? (
+      {!containerWidth ? (
+        <Box className="gallerySkeletonsContainer">
+          <Box
+            className="mainImageContainer"
+            backgroundColor={theme.colors.neutralGray8}
+            borderRadius={16}
+            __css={{ height: mainImageWidthSkeleton * 0.562 }}
+            ref={mainImageSkeletonRef}
+          >
+            <Box height="100%" width="100%" borderRadius={12}></Box>
+          </Box>
+          <Box
+            __css={{ maxHeight: mainImageWidthSkeleton * 0.562 }}
+            className="followingSkeletonImagesContainer"
+          >
+            {Array(6)
+              .fill()
+              .map((el, index) => (
+                <Box
+                  key={`key${index}`}
+                  borderRadius={12}
+                  backgroundColor={theme.colors.neutralGray8}
+                ></Box>
+              ))}
+          </Box>
+        </Box>
+      ) : !otherComponent ? (
         <Box
           height={`${
             containerWidth >= 786 ? carouselHeight : containerWidth * 0.562
@@ -193,6 +221,7 @@ export const Carousel = ({
                 otherButton={otherButton}
                 handleImageClickToFullscreen={handleImageClickToFullscreen}
                 setIndex={setIndex}
+                setURLOpenFullscreen={setURLOpenFullscreen}
               />
               {!otherButton && containerWidth > 530 && (
                 <Box
@@ -337,6 +366,7 @@ export const Carousel = ({
       ) : (
         <Box onClick={toggleFullscreen}>{otherComponent}</Box>
       )}
+
       <FullScreen
         fullscreen={fullscreen}
         setFullscreen={setFullscreen}
@@ -350,6 +380,8 @@ export const Carousel = ({
         planos={bluePrintsWithCover}
         video360={video360}
         bluePrintsWithCover={bluePrintsWithCover}
+        URLOpenFullscreen={URLOpenFullscreen}
+        handleImageClickToFullscreen={handleImageClickToFullscreen}
       />
     </Box>
   )

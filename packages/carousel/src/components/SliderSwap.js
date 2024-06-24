@@ -13,8 +13,8 @@ export const SliderSwap = ({
   handleImageClickToFullscreen,
   fileType,
   setIndex,
-  setSwapInndex,
   index,
+  setURLOpenFullscreen = () => {},
 }) => {
   const sliderContainerRef = useRef(null)
   const sliderRef = useRef(null)
@@ -32,8 +32,9 @@ export const SliderSwap = ({
   const iconNextPosition = iconNextRef.current?.getBoundingClientRect()
   const iconPrevPosition = iconPrevRef.current?.getBoundingClientRect()
   const [translateX, setTranslateX] = useState(0)
+  const [visibledIndex, setVisibledIndex] = useState(0)
   const [imgErrors, setImgErrors] = useState({})
-  const [imgIndexClick, setImgIndexClick] = useState(0)
+
   const debounce = (func, wait) => {
     let timeout
     return (...args) => {
@@ -61,7 +62,7 @@ export const SliderSwap = ({
         event.type === 'mousemove' ? event.clientX : event.touches[0].clientX
       const translate = currentPosition - startPos + prevTranslate
       setCurrentTranslate(translate)
-      sliderRef.current.style.transform = `translateX(${translate}px)`
+      handleTraslate(translate)
       if (Math.abs(currentPosition - startPos) > 5) {
         setIsClick(false)
       }
@@ -101,7 +102,7 @@ export const SliderSwap = ({
       } else if (movedBy > 50 && translateX < 0) {
         prevSlide()
       } else {
-        sliderRef.current.style.transform = `translateX(${prevTranslate}px)`
+        handleTraslate(prevTranslate)
       }
 
       resetPosition()
@@ -114,13 +115,13 @@ export const SliderSwap = ({
       -sliderContainerWidth * (files.length - 1)
     )
     setTranslateX(newTranslateX)
-    sliderRef.current.style.transform = `translateX(${newTranslateX}px)`
+    handleTraslate(newTranslateX)
   }
 
   const prevSlide = () => {
     const newTranslateX = Math.min(translateX + sliderContainerWidth, 0)
     setTranslateX(newTranslateX)
-    sliderRef.current.style.transform = `translateX(${newTranslateX}px)`
+    handleTraslate(newTranslateX)
   }
 
   const debouncedNextSlide = debounce(nextSlide, 250)
@@ -163,42 +164,29 @@ export const SliderSwap = ({
   ])
 
   useEffect(() => {
-    if (fullScreen) {
+    if (fullScreen || !sliderContainerWidth) return
+    setVisibledIndex(Math.round(Math.abs(translateX / sliderContainerWidth)))
+  }, [translateX])
+
+  useEffect(() => {
+    setURLOpenFullscreen(files[visibledIndex])
+    if (handleImageClickToFullscreen)
+      handleImageClickToFullscreen(files[visibledIndex])
+  }, [visibledIndex, setURLOpenFullscreen])
+
+  useEffect(() => {
+    if (fullScreen && sliderContainerWidth) {
       setIndex(-translateX / sliderContainerWidth)
-      if (setSwapInndex) setSwapInndex(imgIndexClick)
-    }
-    if (!fullScreen) {
-      const fileVisibleIndex = Math.round(
-        Math.abs(translateX / (sliderContainerWidth || 1))
-      )
-      if (sliderContainerWidth && handleImageClickToFullscreen) {
-        setImgIndexClick(fileVisibleIndex)
-        handleImageClickToFullscreen(files[fileVisibleIndex])
-      }
     }
   }, [translateX])
 
   useEffect(() => {
     if (!sliderContainerWidth) return
-    if (!fullScreen) {
-      const fileVisibleIndex = Math.round(
-        Math.abs(translateX / (sliderContainerWidth || 1))
-      )
-      const validIndex = index || fileVisibleIndex
-      setTranslateX(-sliderContainerWidth * validIndex)
-
-      sliderRef.current.style.transform = `translateX(${
-        -sliderContainerWidth * index
-      }px)`
-      setImgIndexClick(validIndex)
-    }
     if (fullScreen) {
+      handleTraslate(-sliderContainerWidth * index)
       setTranslateX(-sliderContainerWidth * index)
-      sliderRef.current.style.transform = `translateX(${
-        -sliderContainerWidth * index
-      }px)`
     }
-  }, [sliderContainerWidth, index])
+  }, [fullScreen, index, sliderContainerWidth])
 
   const handleImgError = (url) => {
     setImgErrors((prevErrors) => ({
@@ -206,7 +194,9 @@ export const SliderSwap = ({
       [url]: true,
     }))
   }
-
+  const handleTraslate = (traslation) => {
+    return (sliderRef.current.style.transform = `translateX(${traslation}px)`)
+  }
   return (
     <Box
       ref={sliderContainerRef}
@@ -225,7 +215,6 @@ export const SliderSwap = ({
           width: '100%',
           height: '100%',
           transition: 'transform .2s ease',
-          transform: `translateX(${translateX}px)`,
         }}
         className="sliderContainer"
       >
