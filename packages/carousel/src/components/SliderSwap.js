@@ -170,8 +170,9 @@ export const SliderSwap = ({
 
   useEffect(() => {
     setURLOpenFullscreen(files[visibledIndex])
-    if (handleImageClickToFullscreen)
+    if (handleImageClickToFullscreen) {
       handleImageClickToFullscreen(files[visibledIndex])
+    }
   }, [visibledIndex, setURLOpenFullscreen])
 
   useEffect(() => {

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Box } from '@oneloop/box'
 import theme from '@oneloop/theme'
-import { Text } from '@oneloop/text'
 import { ImageErrorFallback } from './ImageErrorFallback'
 
 const validateImageDimensions = async (imageUrl) => {
@@ -11,7 +10,7 @@ const validateImageDimensions = async (imageUrl) => {
 
   await new Promise((resolve, reject) => {
     img.onload = () => resolve()
-    img.onerror = () => reject()
+    img.onerror = (error) => reject(error)
   })
 
   return img.width > img.height
