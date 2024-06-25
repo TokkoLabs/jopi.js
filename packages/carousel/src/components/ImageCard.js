@@ -34,6 +34,8 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
   useEffect(() => {
     if (url) {
       isRectangle()
+    } else {
+      setShowSkeleton(false)
     }
   }, [url])
 
