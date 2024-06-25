@@ -7,13 +7,14 @@ import { ImageErrorFallback } from './ImageErrorFallback'
 
 export const SliderSwap = ({
   files = [],
-  handleTouchToogle,
+  setFullscreen,
   otherButton,
   fullScreen = false,
   handleImageClickToFullscreen,
   fileType,
   setIndex,
   index,
+  tabSelected,
   setURLOpenFullscreen = () => {},
 }) => {
   const sliderContainerRef = useRef(null)
@@ -69,7 +70,7 @@ export const SliderSwap = ({
     }
   }
 
-  const touchEnd = () => {
+  const debouncedTouchEnd = debounce(() => {
     if (isDragging) {
       setIsDragging(false)
       const movedBy = currentTranslate - prevTranslate
@@ -91,7 +92,7 @@ export const SliderSwap = ({
         ) {
           return debouncedPrevSlide()
         }
-        if (!fullScreen) return handleTouchToogle()
+        if (!fullScreen) setFullscreen(true)
         return
       }
       if (
@@ -104,9 +105,12 @@ export const SliderSwap = ({
       } else {
         handleTraslate(prevTranslate)
       }
-
       resetPosition()
     }
+  }, 50)
+
+  const touchEnd = () => {
+    debouncedTouchEnd()
   }
 
   const nextSlide = () => {
@@ -123,7 +127,6 @@ export const SliderSwap = ({
     setTranslateX(newTranslateX)
     handleTraslate(newTranslateX)
   }
-
   const debouncedNextSlide = debounce(nextSlide, 250)
   const debouncedPrevSlide = debounce(prevSlide, 250)
 
@@ -150,7 +153,9 @@ export const SliderSwap = ({
       sliderContainer.removeEventListener('mousemove', touchMove)
       sliderContainer.removeEventListener('touchstart', touchStart)
       sliderContainer.removeEventListener('touchend', touchEnd)
-      sliderContainer.removeEventListener('touchmove', touchMove)
+      sliderContainer.removeEventListener('touchmove', touchMove, {
+        passive: true,
+      })
     }
   }, [
     isDragging,
@@ -164,22 +169,22 @@ export const SliderSwap = ({
   ])
 
   useEffect(() => {
-    if (fullScreen || !sliderContainerWidth) return
+    if (fullScreen) return
     setVisibledIndex(Math.round(Math.abs(translateX / sliderContainerWidth)))
-  }, [translateX])
+  }, [translateX, fullScreen])
 
   useEffect(() => {
     setURLOpenFullscreen(files[visibledIndex])
     if (handleImageClickToFullscreen) {
       handleImageClickToFullscreen(files[visibledIndex])
     }
-  }, [visibledIndex, setURLOpenFullscreen])
+  }, [visibledIndex])
 
   useEffect(() => {
     if (fullScreen && sliderContainerWidth) {
       setIndex(-translateX / sliderContainerWidth)
     }
-  }, [translateX])
+  }, [translateX, tabSelected, fullScreen])
 
   useEffect(() => {
     if (!sliderContainerWidth) return
@@ -187,7 +192,7 @@ export const SliderSwap = ({
       handleTraslate(-sliderContainerWidth * index)
       setTranslateX(-sliderContainerWidth * index)
     }
-  }, [fullScreen, index, sliderContainerWidth])
+  }, [fullScreen, tabSelected, sliderContainerWidth])
 
   const handleImgError = (url) => {
     setImgErrors((prevErrors) => ({
@@ -195,6 +200,7 @@ export const SliderSwap = ({
       [url]: true,
     }))
   }
+
   const handleTraslate = (traslation) => {
     return (sliderRef.current.style.transform = `translateX(${traslation}px)`)
   }
