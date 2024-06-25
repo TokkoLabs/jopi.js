@@ -218,7 +218,7 @@ export const Carousel = ({
             <Box __css={{ width: '100%', height: '100%' }}>
               <SliderSwap
                 files={[...imgWithCover, ...bluePrintsWithCover]}
-                handleTouchToogle={toggleFullscreen}
+                setFullscreen={setFullscreen}
                 otherButton={otherButton}
                 handleImageClickToFullscreen={handleImageClickToFullscreen}
                 setIndex={setIndex}

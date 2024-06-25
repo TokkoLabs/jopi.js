@@ -106,6 +106,7 @@ export const FullScreen = ({
               files={allFiles[tabSelected]}
               index={index}
               windowWidth={windowWidth}
+              tabSelected={tabSelected}
             />
             <Text className="contFotos" variant="bodyBold.fontSize14">{`${
               index + 1
