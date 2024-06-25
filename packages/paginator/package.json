@@ -1,14 +1,14 @@
 {
   "name": "@oneloop/paginator",
-  "version": "1.0.161",
+  "version": "1.0.162",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.283",
-    "@oneloop/text": "^1.2.284"
+    "@oneloop/box": "^1.2.284",
+    "@oneloop/text": "^1.2.285"
   },
   "peerDependencies": {
     "react": "^16.8.0"
