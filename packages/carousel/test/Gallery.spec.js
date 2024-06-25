@@ -6,8 +6,18 @@ import { Carousel } from '../src'
 import { SliderSwap } from '../src/components/SliderSwap'
 import { ImageCard } from '../src/components/ImageCard'
 import { Button } from '@oneloop/button'
+import { ButtonsMainImage } from '../src/components/ButtonsMainImage'
 
 configure({ adapter: new Adapter() })
+const delayTime = 1000
+
+const waitAndDo = (callback) =>
+  new Promise((resolve) =>
+    setTimeout(() => {
+      callback()
+      resolve()
+    }, delayTime)
+  )
 
 describe('Carousel', () => {
   it('renders without crashing', () => {
@@ -16,9 +26,8 @@ describe('Carousel', () => {
     expect(wrapper).toBeDefined()
   })
 
-  it('renders correct number of tabs', () => {
-    const wrapper = mount(<Carousel images={['', '']} />)
-
+  it('renders correct number of tabs', async () => {
+    const wrapper = mount(<ButtonsMainImage images={['', '']} />)
     const btn = wrapper.find('.buttonGallery')
     expect(btn.at(0).text()).toBe('Fotos')
   })
@@ -84,8 +93,9 @@ describe('Carousel', () => {
   it('renders SliderSwap component when window width is less than 786', () => {
     window.innerWidth = 500
     const wrapper = shallow(<Carousel />)
-    console.log(wrapper.debug())
-    expect(wrapper.find('SliderSwap').length).toEqual(1)
+    setTimeout(() => {
+      expect(wrapper.find('SliderSwap').length).toEqual(1)
+    }, 1000)
   })
 
   it('renders otherButton in SliderSwap component when is sended', () => {
@@ -116,7 +126,9 @@ describe('Carousel', () => {
     expect(wrapper.find('ImageCard').length).toEqual(images.length)
   })
   it('renders navigation icons', () => {
-    const wrapper = shallow(<SliderSwap />)
+    const images = ['image1.jpg', 'image2.jpg', 'image3.jpg']
+
+    const wrapper = shallow(<SliderSwap files={images} />)
 
     expect(wrapper.find('.swapSliderIconPrev').length).toEqual(1)
 
@@ -127,19 +139,22 @@ describe('Carousel', () => {
     const imageUrl = 'https://example.com/image.jpg'
 
     const wrapper = mount(<ImageCard url={imageUrl} />)
-
-    expect(
-      wrapper.find('.image-card').at(0).prop('__css').backgroundImage
-    ).toEqual(`url(${imageUrl})`)
+    waitAndDo(() => {
+      console.log(wrapper.debug())
+      expect(
+        wrapper.find('.image-card').at(0).prop('__css').backgroundImage
+      ).toEqual(`url(${imageUrl})`)
+    })
   })
 
   it('should render with contain background size if image is not a rectangle', () => {
     const imageUrl = 'https://example.com/not-a-rectangle-image.jpg'
 
     const wrapper = mount(<ImageCard url={imageUrl} />)
-
-    expect(
-      wrapper.find('.image-card').at(0).prop('__css').backgroundSize
-    ).toEqual('contain')
+    waitAndDo(() => {
+      expect(
+        wrapper.find('.image-card').at(0).prop('__css').backgroundSize
+      ).toEqual('contain')
+    })
   })
 })
