@@ -175,7 +175,6 @@
   height: 100%;
   object-fit: contain;
 }
-
 @media (min-width: 600px) {
   .fullscreen {
     padding: 30px 40px;
@@ -231,5 +230,71 @@
       font-size: 40px !important;
       color: var(--neutralGray8);
     }
+  }
+}
+.gallerySkeletonsContainer {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  container-type: inline-size;
+}
+
+@container (max-width: 810px) {
+  .mainImageContainer {
+    width: 100%;
+  }
+  .followingSkeletonImagesContainer {
+    display: none;
+  }
+}
+
+@container (min-width: 786px) and (max-width: 960px) {
+  .mainImageContainer {
+    width: 70%;
+    background-color: #000000;
+  }
+  .followingSkeletonImagesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 16px;
+    overflow: hidden;
+  }
+  .followingSkeletonImagesContainer > div {
+    min-height: calc(50% - 8px);
+  }
+}
+@container (min-width: 961px) and (max-width: 1480px) {
+  .mainImageContainer {
+    width: 53%;
+    background-color: #000000;
+  }
+  .followingSkeletonImagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 47%;
+    gap: 16px;
+    overflow: hidden;
+  }
+  .followingSkeletonImagesContainer > div {
+    width: calc(50% - 8px);
+    height: calc(50% - 8px);
+  }
+}
+@container (min-width: 1480px) {
+  .mainImageContainer {
+    width: 45%;
+    background-color: #000000;
+  }
+  .followingSkeletonImagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    gap: 16px;
+    overflow: hidden;
+  }
+  .followingSkeletonImagesContainer > div {
+    width: calc(33.33% - 10.67px);
+    height: calc(50% - 8px);
   }
 }

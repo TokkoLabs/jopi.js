@@ -2,16 +2,20 @@ import React, { useEffect, useRef, useState } from 'react'
 import { ImageCard } from './ImageCard'
 import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
+import theme from '@oneloop/theme'
+import { ImageErrorFallback } from './ImageErrorFallback'
 
 export const SliderSwap = ({
   files = [],
-  handleTouchToogle,
+  setFullscreen,
   otherButton,
   fullScreen = false,
   handleImageClickToFullscreen,
   fileType,
   setIndex,
   index,
+  tabSelected,
+  setURLOpenFullscreen = () => {},
 }) => {
   const sliderContainerRef = useRef(null)
   const sliderRef = useRef(null)
@@ -29,6 +33,16 @@ export const SliderSwap = ({
   const iconNextPosition = iconNextRef.current?.getBoundingClientRect()
   const iconPrevPosition = iconPrevRef.current?.getBoundingClientRect()
   const [translateX, setTranslateX] = useState(0)
+  const [visibledIndex, setVisibledIndex] = useState(0)
+  const [imgErrors, setImgErrors] = useState({})
+
+  const debounce = (func, wait) => {
+    let timeout
+    return (...args) => {
+      clearTimeout(timeout)
+      timeout = setTimeout(() => func(...args), wait)
+    }
+  }
 
   const touchStart = (event) => {
     const position =
@@ -49,35 +63,36 @@ export const SliderSwap = ({
         event.type === 'mousemove' ? event.clientX : event.touches[0].clientX
       const translate = currentPosition - startPos + prevTranslate
       setCurrentTranslate(translate)
-      sliderRef.current.style.transform = `translateX(${translate}px)`
+      handleTraslate(translate)
       if (Math.abs(currentPosition - startPos) > 5) {
         setIsClick(false)
       }
     }
   }
 
-  const touchEnd = () => {
+  const debouncedTouchEnd = debounce(() => {
     if (isDragging) {
       setIsDragging(false)
       const movedBy = currentTranslate - prevTranslate
       const elapsedTime = Date.now() - startTime
 
       if (isClick && elapsedTime < 300) {
+        if (files.length === 0) return
         if (
           startPos > iconNextPosition.x - 10 &&
           startPosY < iconNextPosition.y + 40 &&
           startPosY > iconNextPosition.y - 10
         ) {
-          return nextSlide()
+          return debouncedNextSlide()
         }
         if (
           startPos < iconPrevPosition.x + 40 &&
           startPosY < iconPrevPosition.y + 40 &&
           startPosY > iconPrevPosition.y - 10
         ) {
-          return prevSlide()
+          return debouncedPrevSlide()
         }
-        if (!otherButton && !fullScreen) return handleTouchToogle()
+        if (!fullScreen) setFullscreen(true)
         return
       }
       if (
@@ -88,11 +103,14 @@ export const SliderSwap = ({
       } else if (movedBy > 50 && translateX < 0) {
         prevSlide()
       } else {
-        sliderRef.current.style.transform = `translateX(${prevTranslate}px)`
+        handleTraslate(prevTranslate)
       }
-
       resetPosition()
     }
+  }, 50)
+
+  const touchEnd = () => {
+    debouncedTouchEnd()
   }
 
   const nextSlide = () => {
@@ -101,14 +119,16 @@ export const SliderSwap = ({
       -sliderContainerWidth * (files.length - 1)
     )
     setTranslateX(newTranslateX)
-    sliderRef.current.style.transform = `translateX(${newTranslateX}px)`
+    handleTraslate(newTranslateX)
   }
 
   const prevSlide = () => {
     const newTranslateX = Math.min(translateX + sliderContainerWidth, 0)
     setTranslateX(newTranslateX)
-    sliderRef.current.style.transform = `translateX(${newTranslateX}px)`
+    handleTraslate(newTranslateX)
   }
+  const debouncedNextSlide = debounce(nextSlide, 250)
+  const debouncedPrevSlide = debounce(prevSlide, 250)
 
   const resetPosition = () => {
     setCurrentTranslate(0)
@@ -133,7 +153,9 @@ export const SliderSwap = ({
       sliderContainer.removeEventListener('mousemove', touchMove)
       sliderContainer.removeEventListener('touchstart', touchStart)
       sliderContainer.removeEventListener('touchend', touchEnd)
-      sliderContainer.removeEventListener('touchmove', touchMove)
+      sliderContainer.removeEventListener('touchmove', touchMove, {
+        passive: true,
+      })
     }
   }, [
     isDragging,
@@ -145,38 +167,43 @@ export const SliderSwap = ({
     startTime,
     isClick,
   ])
+
   useEffect(() => {
-    if (fullScreen) {
+    if (fullScreen) return
+    setVisibledIndex(Math.round(Math.abs(translateX / sliderContainerWidth)))
+  }, [translateX, fullScreen])
+
+  useEffect(() => {
+    setURLOpenFullscreen(files[visibledIndex])
+    if (handleImageClickToFullscreen) {
+      handleImageClickToFullscreen(files[visibledIndex])
+    }
+  }, [visibledIndex])
+
+  useEffect(() => {
+    if (fullScreen && sliderContainerWidth) {
       setIndex(-translateX / sliderContainerWidth)
     }
-    if (!fullScreen) {
-      const fileVisibleIndex = Math.round(
-        Math.abs(translateX / (sliderContainerWidth || 1))
-      )
-      if (sliderContainerWidth && handleImageClickToFullscreen) {
-        handleImageClickToFullscreen(files[fileVisibleIndex])
-      }
-    }
-  }, [translateX])
+  }, [translateX, tabSelected, fullScreen])
+
   useEffect(() => {
     if (!sliderContainerWidth) return
-    if (!fullScreen) {
-      const fileVisibleIndex = Math.round(
-        Math.abs(translateX / (sliderContainerWidth || 1))
-      )
-      const validIndex = index || fileVisibleIndex
-      setTranslateX(-sliderContainerWidth * validIndex)
-      sliderRef.current.style.transform = `translateX(${
-        -sliderContainerWidth * index
-      }px)`
-    }
     if (fullScreen) {
+      handleTraslate(-sliderContainerWidth * index)
       setTranslateX(-sliderContainerWidth * index)
-      sliderRef.current.style.transform = `translateX(${
-        -sliderContainerWidth * index
-      }px)`
     }
-  }, [sliderContainerWidth, index, fullScreen])
+  }, [fullScreen, tabSelected, sliderContainerWidth])
+
+  const handleImgError = (url) => {
+    setImgErrors((prevErrors) => ({
+      ...prevErrors,
+      [url]: true,
+    }))
+  }
+
+  const handleTraslate = (traslation) => {
+    return (sliderRef.current.style.transform = `translateX(${traslation}px)`)
+  }
   return (
     <Box
       ref={sliderContainerRef}
@@ -195,17 +222,14 @@ export const SliderSwap = ({
           width: '100%',
           height: '100%',
           transition: 'transform .2s ease',
-          transform: `translateX(${translateX}px)`,
         }}
         className="sliderContainer"
       >
         {!fullScreen &&
+          files.length > 0 &&
           files.map((img, index) => (
             <ImageCard
               key={index}
-              onClick={(e) => {
-                handleImageClickToFullscreen(img)
-              }}
               className="firstTabImg"
               position={'relative'}
               height={'100%'}
@@ -213,6 +237,27 @@ export const SliderSwap = ({
               url={img}
             />
           ))}
+        {!fullScreen && files.length === 0 && (
+          <Box
+            __css={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100%',
+              height: '100%',
+              backgroundColor: theme.colors.neutralGray7,
+              borderRadius: '12px',
+            }}
+          >
+            <Icon
+              width="100%"
+              height="100%"
+              icon="icon-propiedades"
+              fontSize="34px"
+              color={theme.colors.neutralGray4}
+            />
+          </Box>
+        )}
         {fullScreen &&
           (fileType === 'fotos' || fileType === 'planos') &&
           files.map((img, index) => (
@@ -230,7 +275,16 @@ export const SliderSwap = ({
               }}
               onClick={(e) => e.stopPropagation()}
             >
-              <img className="imgFullScreenSlide" src={img} alt={fileType} />
+              {imgErrors[img] ? (
+                <ImageErrorFallback fullscreen />
+              ) : (
+                <img
+                  className="imgFullScreenSlide"
+                  src={img}
+                  alt={fileType}
+                  onError={() => handleImgError(img)}
+                />
+              )}
             </Box>
           ))}
         {fullScreen &&
@@ -257,43 +311,51 @@ export const SliderSwap = ({
             </Box>
           ))}
       </Box>
-      <Box
-        __css={{
-          left: fullScreen ? '-5px' : '16px',
-          width: sliderContainerWidth < 700 ? '30px' : '40px',
-          height: sliderContainerWidth < 700 ? '30px' : '40px',
-        }}
-        ref={iconPrevRef}
-        className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
-      >
-        <Icon
-          className={`swapSliderIconPrev ${fullScreen ? 'fullScreen' : ''}`}
-          icon="icon-atras"
-          style={{
-            fontSize:
-              sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
-          }}
-        />
-      </Box>
-      <Box
-        __css={{
-          right: fullScreen ? '-5px' : '16px',
-          width: sliderContainerWidth < 700 ? '30px' : '40px',
-          height: sliderContainerWidth < 700 ? '30px' : '40px',
-        }}
-        ref={iconNextRef}
-        className={`nextPrevIconContainer ${fullScreen ? 'fullScreen' : ''}`}
-      >
-        <Icon
-          className={`swapSliderIconNext ${fullScreen ? 'fullScreen' : ''}`}
-          style={{
-            transform: 'rotate(180deg)',
-            fontSize:
-              sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
-          }}
-          icon="icon-atras"
-        />
-      </Box>
+      {((!fullScreen && files.length > 0) || fullScreen) && (
+        <>
+          <Box
+            __css={{
+              left: fullScreen ? '-5px' : '16px',
+              width: sliderContainerWidth < 700 ? '30px' : '40px',
+              height: sliderContainerWidth < 700 ? '30px' : '40px',
+            }}
+            ref={iconPrevRef}
+            className={`nextPrevIconContainer ${
+              fullScreen ? 'fullScreen' : ''
+            }`}
+          >
+            <Icon
+              className={`swapSliderIconPrev ${fullScreen ? 'fullScreen' : ''}`}
+              icon="icon-atras"
+              style={{
+                fontSize:
+                  sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
+              }}
+            />
+          </Box>
+          <Box
+            __css={{
+              right: fullScreen ? '-5px' : '16px',
+              width: sliderContainerWidth < 700 ? '30px' : '40px',
+              height: sliderContainerWidth < 700 ? '30px' : '40px',
+            }}
+            ref={iconNextRef}
+            className={`nextPrevIconContainer ${
+              fullScreen ? 'fullScreen' : ''
+            }`}
+          >
+            <Icon
+              className={`swapSliderIconNext ${fullScreen ? 'fullScreen' : ''}`}
+              style={{
+                transform: 'rotate(180deg)',
+                fontSize:
+                  sliderContainerWidth < 700 && !fullScreen ? '12px' : '24px',
+              }}
+              icon="icon-atras"
+            />
+          </Box>
+        </>
+      )}
       {!fullScreen && (
         <Box onClick={(e) => e.stopPropagation()} className="otherButtonSwap">
           {otherButton}
