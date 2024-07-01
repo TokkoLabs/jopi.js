@@ -65,6 +65,7 @@ export const FullScreen = ({
       closeFullscreen()
     }
   }
+
   const closeFullscreen = () => {
     handleImageClickToFullscreen(URLOpenFullscreen)
     setFullscreen(false)

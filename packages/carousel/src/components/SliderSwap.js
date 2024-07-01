@@ -174,7 +174,7 @@ export const SliderSwap = ({
   }, [translateX, fullScreen])
 
   useEffect(() => {
-    setURLOpenFullscreen(files[visibledIndex])
+    setURLOpenFullscreen(files[visibledIndex || 0])
     if (handleImageClickToFullscreen) {
       handleImageClickToFullscreen(files[visibledIndex])
     }
@@ -193,6 +193,10 @@ export const SliderSwap = ({
       setTranslateX(-sliderContainerWidth * index)
     }
   }, [fullScreen, tabSelected, sliderContainerWidth])
+
+  useEffect(() => {
+    if (fullScreen) handleTraslate(-sliderContainerWidth * index)
+  }, [index])
 
   const handleImgError = (url) => {
     setImgErrors((prevErrors) => ({
