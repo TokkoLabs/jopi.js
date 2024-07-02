@@ -97,6 +97,7 @@ export const Modal = ({
               placeItems: 'center',
               cursor: 'pointer',
               boxShadow: '4px 4px 12px 0px rgba(87, 95, 99, 0.25)',
+              zIndex: '1000',
             }}
           >
             <Icon
