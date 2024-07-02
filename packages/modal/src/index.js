@@ -44,9 +44,9 @@ export const Modal = ({
 
   useEffect(() => {
     if (closeModal && modalRef.current) {
-      modalRef.current.focus();
+      modalRef.current.focus()
     }
-  }, []);
+  }, [])
 
   return (
     <Box
