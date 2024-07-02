@@ -81,6 +81,7 @@ export const BigModal = () => {
 
 export const ScrollModal = () => {
   const [open, toggle] = useToggle(false)
+  const [open2, toggle2] = useToggle(false)
   return (
     <React.Fragment>
       <Button onClick={toggle}>Show modal</Button>
@@ -91,6 +92,7 @@ export const ScrollModal = () => {
           scrollHeight={'500px'}
           fixedCLoseBtn
           closeModal={toggle}
+          paddings="10px"
         >
           <Modal.Header text="Soy un modal grande" variant={['start', 'l']} />
           <Modal.Body>
@@ -100,6 +102,18 @@ export const ScrollModal = () => {
                 height: '408px',
               }}
             >
+              <Button onClick={toggle2}>Show modal 2</Button>
+              {open2 && (
+                <Modal
+                  modalBG
+                  blockScroll
+                  scrollHeight={'100px'}
+                  fixedCLoseBtn
+                  closeModal={toggle2}
+                >
+                  <Modal.Body>Holaa</Modal.Body>
+                </Modal>
+              )}
               <Text>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the standard dummy text ever

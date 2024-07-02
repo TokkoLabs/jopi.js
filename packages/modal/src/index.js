@@ -13,8 +13,11 @@ export const Modal = ({
   closeModal = false,
   scrollHeight = '600px',
   fixedCLoseBtn = false,
+  paddings = '24px',
   ...props
 }) => {
+  const modalRef = useRef(null)
+
   useEffect(() => {
     if (blockScroll) {
       document.body.style.overflow = 'hidden'
@@ -23,7 +26,7 @@ export const Modal = ({
   }, [])
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && document.activeElement === modalRef.current) {
       event.stopPropagation()
       closeModal()
     }
@@ -39,8 +42,16 @@ export const Modal = ({
     }
   }, [])
 
+  useEffect(() => {
+    if (closeModal && modalRef.current) {
+      modalRef.current.focus()
+    }
+  }, [])
+
   return (
     <Box
+      tabIndex={-1}
+      ref={modalRef}
       __css={{
         position: 'fixed',
         zIndex: '1000',
@@ -109,7 +120,7 @@ export const Modal = ({
         )}
         <Box
           __css={{
-            padding: '24px',
+            padding: paddings,
             display: 'flex',
             flexDirection: 'column',
             gap: '24px',

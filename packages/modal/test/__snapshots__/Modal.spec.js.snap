@@ -143,6 +143,7 @@ exports[`Modal renders correctly 1`] = `
 
 <div
   className="c0"
+  tabIndex={-1}
 >
   <div
     className="c1"
