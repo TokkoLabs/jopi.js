@@ -39,7 +39,9 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
     }
   }, [url])
 
-  if (errorImage) return <ImageErrorFallback {...props} />
+  if (errorImage) {
+    return <ImageErrorFallback {...props}>{children}</ImageErrorFallback>
+  }
 
   return !showSkeleton ? (
     <Box

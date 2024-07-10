@@ -110,9 +110,14 @@ export const Carousel = ({
     }
     if (emptyArray) setEmptyImgArray(emptyArray)
   }, [followImgColumns, windowResize])
-
   const toggleFullscreen = () => {
-    if (otherButton) return
+    if (
+      otherButton ||
+      [...video, ...video360, ...imgWithCover, ...bluePrintsWithCover]
+        .length === 0
+    ) {
+      return
+    }
     if ([...imgWithCover, ...bluePrintsWithCover].length === 0) {
       setTabSelected(
         video.length > 0 ? 'videos' : video360.length > 0 ? 'video360' : ''
