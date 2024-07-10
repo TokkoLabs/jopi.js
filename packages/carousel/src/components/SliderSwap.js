@@ -278,12 +278,14 @@ export const SliderSwap = ({
                 cursor: 'pointer',
               }}
               onClick={(e) => e.stopPropagation()}
+              onDragStart={(e) => e.preventDefault()}
             >
               {imgErrors[img] ? (
                 <ImageErrorFallback fullscreen />
               ) : (
                 <img
                   className="imgFullScreenSlide"
+                  style={{ pointerEvents: 'none' }}
                   src={img}
                   alt={fileType}
                   onError={() => handleImgError(img)}
