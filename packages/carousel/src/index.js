@@ -115,8 +115,9 @@ export const Carousel = ({
       otherButton ||
       [...video, ...video360, ...imgWithCover, ...bluePrintsWithCover]
         .length === 0
-    )
+    ) {
       return
+    }
     if ([...imgWithCover, ...bluePrintsWithCover].length === 0) {
       setTabSelected(
         video.length > 0 ? 'videos' : video360.length > 0 ? 'video360' : ''
