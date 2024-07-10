@@ -3,7 +3,11 @@ import { Text } from '@oneloop/text'
 import theme from '@oneloop/theme'
 import React from 'react'
 
-export const ImageErrorFallback = ({ fullscreen = false, ...props }) => {
+export const ImageErrorFallback = ({
+  fullscreen = false,
+  children,
+  ...props
+}) => {
   return (
     <Box
       __css={{
@@ -15,6 +19,7 @@ export const ImageErrorFallback = ({ fullscreen = false, ...props }) => {
         borderRadius: '12px',
         gap: '8px',
         height: '47%',
+        cursor: 'pointer',
       }}
       {...props}
     >
@@ -62,6 +67,7 @@ export const ImageErrorFallback = ({ fullscreen = false, ...props }) => {
       >
         No pudimos cargar esta imagen
       </Text>
+      {children}
     </Box>
   )
 }
