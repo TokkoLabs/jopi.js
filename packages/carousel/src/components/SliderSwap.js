@@ -127,8 +127,8 @@ export const SliderSwap = ({
     setTranslateX(newTranslateX)
     handleTraslate(newTranslateX)
   }
-  const debouncedNextSlide = debounce(nextSlide, 250)
-  const debouncedPrevSlide = debounce(prevSlide, 250)
+  const debouncedNextSlide = debounce(nextSlide, 170)
+  const debouncedPrevSlide = debounce(prevSlide, 170)
 
   const resetPosition = () => {
     setCurrentTranslate(0)
@@ -278,12 +278,14 @@ export const SliderSwap = ({
                 cursor: 'pointer',
               }}
               onClick={(e) => e.stopPropagation()}
+              onDragStart={(e) => e.preventDefault()}
             >
               {imgErrors[img] ? (
                 <ImageErrorFallback fullscreen />
               ) : (
                 <img
                   className="imgFullScreenSlide"
+                  style={{ pointerEvents: 'none' }}
                   src={img}
                   alt={fileType}
                   onError={() => handleImgError(img)}
