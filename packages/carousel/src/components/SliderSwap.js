@@ -127,8 +127,8 @@ export const SliderSwap = ({
     setTranslateX(newTranslateX)
     handleTraslate(newTranslateX)
   }
-  const debouncedNextSlide = debounce(nextSlide, 100)
-  const debouncedPrevSlide = debounce(prevSlide, 100)
+  const debouncedNextSlide = debounce(nextSlide, 180)
+  const debouncedPrevSlide = debounce(prevSlide, 180)
 
   const resetPosition = () => {
     setCurrentTranslate(0)
