@@ -48,7 +48,7 @@ export const Carousel = ({
   const [followingImgWidth, setFollowingImgWidth] = useState(0)
   const mainImageSkeletonRef = useRef()
   const mainImageWidthSkeleton = mainImageSkeletonRef.current?.clientWidth
-
+  const allPictures = [...imgWithCover, ...bluePrintsWithCover]
   if (video.length > 0) {
     tabContainers.push('Videos')
   }
@@ -118,7 +118,7 @@ export const Carousel = ({
     ) {
       return
     }
-    if ([...imgWithCover, ...bluePrintsWithCover].length === 0) {
+    if (allPictures.length === 0) {
       setTabSelected(
         video.length > 0 ? 'videos' : video360.length > 0 ? 'video360' : ''
       )
@@ -172,7 +172,6 @@ export const Carousel = ({
     }
     setTabSelected(fileFiltered.type)
   }
-
   return (
     <Box
       __css={{
@@ -222,7 +221,7 @@ export const Carousel = ({
           {containerWidth < 786 ? (
             <Box __css={{ width: '100%', height: '100%' }}>
               <SliderSwap
-                files={[...imgWithCover, ...bluePrintsWithCover]}
+                files={allPictures}
                 setFullscreen={setFullscreen}
                 otherButton={otherButton}
                 handleImageClickToFullscreen={handleImageClickToFullscreen}
@@ -332,12 +331,13 @@ export const Carousel = ({
                         />
                       ) : (
                         index + 1 === followImgColumns * 2 &&
-                        images.length > followImgColumns * 2 &&
-                        images.length -
+                        allPictures.length > followImgColumns * 2 &&
+                        allPictures.length -
                           1 -
                           followImgColumns * 2 +
                           planos.length >
-                          0 && (
+                          0 &&
+                        allPictures.length - 1 - followImgColumns * 2 > 0 && (
                           <Box
                             __css={{
                               borderRadius: '50%',
@@ -354,11 +354,7 @@ export const Carousel = ({
                               fontWeight: '700',
                             }}
                           >{`+${
-                            images.length -
-                            1 -
-                            followImgColumns * 2 +
-                            planos.length +
-                            (frontCoverBlueprints ? 1 : 0)
+                            allPictures.length - 1 - followImgColumns * 2
                           }`}</Box>
                         )
                       )}
