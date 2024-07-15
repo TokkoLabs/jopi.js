@@ -41,7 +41,7 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
     }
   }, [url])
 
-  if (errorImage) {
+  if (url && errorImage) {
     return <ImageErrorFallback {...props}>{children}</ImageErrorFallback>
   }
 
