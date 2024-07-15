@@ -49,6 +49,7 @@ export const Carousel = ({
   const mainImageSkeletonRef = useRef()
   const mainImageWidthSkeleton = mainImageSkeletonRef.current?.clientWidth
   const allPictures = [...imgWithCover, ...bluePrintsWithCover]
+
   if (video.length > 0) {
     tabContainers.push('Videos')
   }
