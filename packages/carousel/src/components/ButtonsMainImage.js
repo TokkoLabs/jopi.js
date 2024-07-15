@@ -11,13 +11,13 @@ export const ButtonsMainImage = ({
   planos = [],
   frontCoverBlueprints = [],
   setTabSelected,
-  handleTouchToogle,
+  setFullscreen,
   setIndex,
 }) => {
   const handleClick = (e, type) => {
     e.stopPropagation()
     setTabSelected(type)
-    handleTouchToogle()
+    setFullscreen(true)
     setIndex(0)
   }
   return (
