@@ -110,6 +110,7 @@ export const Carousel = ({
     }
     if (emptyArray) setEmptyImgArray(emptyArray)
   }, [followImgColumns, windowResize])
+
   const toggleFullscreen = () => {
     if (
       otherButton ||
@@ -223,6 +224,7 @@ export const Carousel = ({
               <SliderSwap
                 files={allPictures}
                 setFullscreen={setFullscreen}
+                toggleFullscreen={toggleFullscreen}
                 otherButton={otherButton}
                 handleImageClickToFullscreen={handleImageClickToFullscreen}
                 setIndex={setIndex}
@@ -242,7 +244,7 @@ export const Carousel = ({
                     frontCoverBlueprints={frontCoverBlueprints}
                     setTabSelected={setTabSelected}
                     setIndex={setIndex}
-                    handleTouchToogle={toggleFullscreen}
+                    setFullscreen={setFullscreen}
                   />
                 </Box>
               )}
@@ -292,7 +294,7 @@ export const Carousel = ({
                     frontCoverBlueprints={frontCoverBlueprints}
                     setTabSelected={setTabSelected}
                     setIndex={setIndex}
-                    handleTouchToogle={toggleFullscreen}
+                    setFullscreen={setFullscreen}
                   />
                 )}
               </ImageCard>
@@ -341,6 +343,7 @@ export const Carousel = ({
                           <Box
                             __css={{
                               borderRadius: '50%',
+                              position: 'absolute',
                               width: '46px',
                               height: '46px',
                               display: 'flex',

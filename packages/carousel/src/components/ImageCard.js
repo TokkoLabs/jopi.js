@@ -20,7 +20,9 @@ export const ImageCard = ({ url, styles, children, ...props }) => {
   const [rectangle, setRectangle] = useState(false)
   const [errorImage, setErrorImage] = useState(false)
   const [showSkeleton, setShowSkeleton] = useState(true)
+
   const isRectangle = async () => {
+    setErrorImage(false)
     try {
       const isRectangle = await validateImageDimensions(url)
       return setRectangle(isRectangle)
