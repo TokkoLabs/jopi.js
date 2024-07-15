@@ -7,6 +7,7 @@ import { ImageErrorFallback } from './ImageErrorFallback'
 
 export const SliderSwap = ({
   files = [],
+  toggleFullscreen,
   setFullscreen,
   otherButton,
   fullScreen = false,
@@ -243,6 +244,7 @@ export const SliderSwap = ({
           ))}
         {!fullScreen && files.length === 0 && (
           <Box
+            onClick={() => toggleFullscreen()}
             __css={{
               display: 'flex',
               justifyContent: 'center',
@@ -251,6 +253,7 @@ export const SliderSwap = ({
               height: '100%',
               backgroundColor: theme.colors.neutralGray7,
               borderRadius: '12px',
+              cursor: 'pointer',
             }}
           >
             <Icon
