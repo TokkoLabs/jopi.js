@@ -21,11 +21,15 @@ exports[`Toast renders correctly 1`] = `
   padding: 0px 24px 0px 0px;
   gap: 24px;
   position: relative;
-  width: 423px;
   height: 72px;
   background: #272E33;
   border-radius: 6px;
   color: white;
+  width: 423px;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
 }
 
 .c2 {
@@ -190,11 +194,15 @@ exports[`Toast renders correctly five 1`] = `
   padding: 0px 24px 0px 0px;
   gap: 24px;
   position: relative;
-  width: 423px;
   height: 72px;
   background: #272E33;
   border-radius: 6px;
   color: white;
+  width: 423px;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
 }
 
 .c2 {
@@ -341,6 +349,12 @@ exports[`Toast renders correctly five 1`] = `
         className="c4 c5"
         kind="primary"
         size="small"
+        style={
+          {
+            "height": "32px",
+            "width": "32px",
+          }
+        }
       />
     </div>
     <p
@@ -398,11 +412,15 @@ exports[`Toast renders correctly four 1`] = `
   padding: 0px 24px 0px 0px;
   gap: 24px;
   position: relative;
-  width: 423px;
   height: 72px;
   background: #272E33;
   border-radius: 6px;
   color: white;
+  width: 423px;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
 }
 
 .c2 {
@@ -591,11 +609,15 @@ exports[`Toast renders correctly four 2`] = `
   padding: 0px 24px 0px 0px;
   gap: 24px;
   position: relative;
-  width: 423px;
   height: 72px;
   background: #272E33;
   border-radius: 6px;
   color: white;
+  width: 423px;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
 }
 
 .c2 {
@@ -784,11 +806,15 @@ exports[`Toast renders correctly seven 1`] = `
   padding: 0px 24px 0px 0px;
   gap: 24px;
   position: relative;
-  width: 423px;
   height: 72px;
   background: #272E33;
   border-radius: 6px;
   color: white;
+  width: 423px;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
 }
 
 .c2 {
@@ -1051,11 +1077,15 @@ exports[`Toast renders correctly six 1`] = `
   padding: 0px 24px 0px 0px;
   gap: 24px;
   position: relative;
-  width: 423px;
   height: 72px;
   background: #272E33;
   border-radius: 6px;
   color: white;
+  width: 423px;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
 }
 
 .c2 {
@@ -1202,6 +1232,12 @@ exports[`Toast renders correctly six 1`] = `
         className="c4 c5"
         kind="primary"
         size="small"
+        style={
+          {
+            "height": "32px",
+            "width": "32px",
+          }
+        }
       />
     </div>
     <p
@@ -1259,11 +1295,15 @@ exports[`Toast renders correctly three 1`] = `
   padding: 0px 24px 0px 0px;
   gap: 24px;
   position: relative;
-  width: 423px;
   height: 72px;
   background: #272E33;
   border-radius: 6px;
   color: white;
+  width: 423px;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
 }
 
 .c2 {
