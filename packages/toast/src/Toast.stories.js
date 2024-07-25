@@ -1,6 +1,7 @@
 import React from 'react'
 import { useToggle } from '@oneloop/hooks'
 import { Button } from '@oneloop/button'
+import { Text } from '@oneloop/text'
 
 import { Toast } from '.'
 
@@ -127,6 +128,20 @@ export const loading = () =>
       </React.Fragment>
     )
   })
+export const loadingWithoutCloseButton = () =>
+  React.createElement(() => {
+    const [openAlert, setOpenAlert] = useToggle(false)
+    return (
+      <React.Fragment>
+        <Button onClick={setOpenAlert}>Show loading toast without close icon button</Button>
+        <br />
+        <br />
+        {openAlert && (
+          <Toast variant="loading" text="Cargando..." variantLoader={'spinner'} closeFunction={setOpenAlert} hideCloseIcon />
+        )}
+      </React.Fragment>
+    )
+  })
 export const exporting = () =>
   React.createElement(() => {
     const [openAlert, setOpenAlert] = useToggle(false)
@@ -151,6 +166,42 @@ export const success = () =>
         <br />
         {openAlert && (
           <Toast variant="success" text="Report export ready!" textDownload={'Download'} icon='icon-check' closeFunction={setOpenAlert} variantText='bodyBold.fontSize14' download={() => { console.log('hola, soy un texto que se le pasa al onclick para descargar') }}/>
+        )}
+      </React.Fragment>
+    )
+  })
+export const withSubtitle = () =>
+  React.createElement(() => {
+    const [openAlert, setOpenAlert] = useToggle(false)
+    return (
+      <React.Fragment>
+        <Button onClick={setOpenAlert}>Show toast with subtitle</Button>
+        <br />
+        <br />
+        {openAlert && (
+          <Toast variant="error" text="Error message" subtitle="Error subtitle" icon={'icon-error'} closeFunction={setOpenAlert} />
+        )}
+      </React.Fragment>
+    )
+  })
+
+export const withCloseIconNeighbor = () =>
+  React.createElement(() => {
+    const [openAlert, setOpenAlert] = useToggle(false)
+    return (
+      <React.Fragment>
+        <Button onClick={setOpenAlert}>Show toast with close icon neighbor</Button>
+        <br />
+        <br />
+        {openAlert && (
+          <Toast
+            variant="error"
+            text="Error message"
+            subtitle="Error subtitle"
+            icon={'icon-error'}
+            closeIconNeighbor={<Text color="white" fontWeight="700"> Hey!</Text>}
+            closeFunction={setOpenAlert}
+          />
         )}
       </React.Fragment>
     )
