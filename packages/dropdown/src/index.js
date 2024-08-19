@@ -15,11 +15,11 @@ export const Dropdown = ({ children, ...props }) => {
 
   useOnClickOutside(ref, () => toggle(false))
 
-  const value = React.useMemo(() => ({ open, toggle, ref }), [open])
+  const value = React.useMemo(() => ({ open, toggle }), [open])
 
   return (
     <DropdownContext.Provider value={value}>
-      <Box {...props} __css={{ position: 'relative', height: '200px' }}>
+      <Box ref={ref} {...props} __css={{ position: 'relative', height: '200px' }}>
         {children}
       </Box>
     </DropdownContext.Provider>
@@ -93,12 +93,11 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
 }
 
 const DropdownList = ({ children, width = '236px', height = '150px', clickClose = false, ...props }) => {
-  const { open, ref, toggle } = useDropdownContext()
+  const { open, toggle } = useDropdownContext()
   return (
     open && (
       <List
         onClick={clickClose ? toggle : () => {}}
-        ref={ref}
         {...props}
         sx={{
           display: 'flex',
