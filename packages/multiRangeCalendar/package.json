@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/multirangecalendar",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
