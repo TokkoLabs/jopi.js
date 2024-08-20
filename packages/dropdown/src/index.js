@@ -19,10 +19,8 @@ export const Dropdown = ({ children, ...props }) => {
 
   return (
     <DropdownContext.Provider value={value}>
-      <Box {...props} __css={{ position: 'relative', height: '200px' }}>
-        <Box className="dropdown-ref-container" ref={ref}>
-          {children}
-        </Box>
+      <Box ref={ref} {...props} __css={{ position: 'relative', height: '200px' }}>
+        {children}
       </Box>
     </DropdownContext.Provider>
   )
