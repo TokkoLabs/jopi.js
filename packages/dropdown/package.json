@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/dropdown",
-  "version": "1.2.375",
+  "version": "1.2.376",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
