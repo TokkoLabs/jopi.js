@@ -1,9 +1,9 @@
-import React, { createContext, useContext } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import { Box } from '@oneloop/box'
 import { Button, ButtonIcon } from '@oneloop/button'
 import { Icon } from '@oneloop/icons'
 import { List } from '@oneloop/list'
-import { useToggle, useOnClickOutside } from '@oneloop/hooks'
+import { useOnClickOutside } from '@oneloop/hooks'
 import { Text } from '@oneloop/text'
 import theme from '@oneloop/theme'
 
@@ -11,11 +11,11 @@ const DropdownContext = createContext()
 
 export const Dropdown = ({ children, ...props }) => {
   const ref = React.useRef()
-  const [open, toggle] = useToggle(false)
+  const [open, setIsOpen] = useState(false)
 
-  useOnClickOutside(ref, () => toggle(false))
+  useOnClickOutside(ref, () => setIsOpen(false))
 
-  const value = React.useMemo(() => ({ open, toggle }), [open])
+  const value = React.useMemo(() => ({ open, setIsOpen, ref }), [open])
 
   return (
     <DropdownContext.Provider value={value}>
@@ -37,7 +37,7 @@ const useDropdownContext = () => {
 }
 
 const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, filled = false, isButtonIcon = false, isArrowStatic = false, variantSize = 'dropdownSizeNormal', selection, ...props }) => {
-  const { toggle } = useDropdownContext()
+  const { setIsOpen } = useDropdownContext()
 
   const variantValues = Object.values(theme.buttons)[Object.keys(theme.buttons).indexOf(variant)]
   const colorFilled = variantValues.colorFilled
@@ -57,16 +57,16 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
         icon={icon}
         filled={filled}
         holdPress
-        onClick={ !disabled ? toggle : undefined}
+        onClick={ !disabled ? () => setIsOpen(prevState => !prevState) : undefined}
       />
     )
   }
 
   return (
     <Button
-      variant={[variant, variantSize]}
+        variant={[variant, variantSize]}
       {...props}
-      onClick={ !disabled ? toggle : undefined}
+      onClick={ !disabled ? () => setIsOpen(prevState => !prevState) : undefined}
       sx={{
         display: 'flex',
         flexDirection: 'row',
@@ -93,11 +93,11 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
 }
 
 const DropdownList = ({ children, width = '236px', height = '150px', clickClose = false, ...props }) => {
-  const { open, toggle } = useDropdownContext()
+  const { open, setIsOpen } = useDropdownContext()
   return (
     open && (
       <List
-        onClick={clickClose ? toggle : () => {}}
+        onClick={clickClose ? () => setIsOpen(false) : () => {}}
         {...props}
         sx={{
           display: 'flex',
