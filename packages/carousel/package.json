@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/carousel",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
