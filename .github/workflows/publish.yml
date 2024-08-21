@@ -41,3 +41,10 @@ jobs:
 
     - name: Push changes to master
       run: git push origin master --follow-tags
+
+    - name: Checkout and update development branch
+      run: |
+        git fetch origin development
+        git checkout development
+        git merge master
+        git push origin development --follow-tags
