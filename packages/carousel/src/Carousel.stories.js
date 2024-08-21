@@ -16,8 +16,8 @@ export const CarouselComponent = () => {
   ]
 
   const VIDEO = [
-    'https://www.youtube.com/embed/YDL8HbY9ENU',
-    'https://www.youtube.com/embed/70KXYjyzFK4',
+    'https://www.youtube.com/embed/D02mwv9JIVY',
+    'https://www.youtube.com/embed/itu7i36F4J4',
   ]
 
   const PLANO = [
