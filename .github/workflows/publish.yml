@@ -1,88 +1,40 @@
-on:
-  pull_request:
-    branches:
-      - master
+name: Lerna Publish
+
+on: workflow_dispatch
 
 jobs:
-  build-and-publish:
-    name: Build Jopi & Publish New Version in NPM
+  publish:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
-      - name: Creating and switching branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git switch -c "publish"
-          git push --set-upstream origin publish
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
 
-      - name: Installing node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          registry-url: 'https://registry.npmjs.org'
+    - name: Cache Yarn modules
+      uses: actions/cache@v3
+      with:
+        path: ~/.yarn/cache
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
 
-      - name: Installing yarn
-        run: |
-          yarn install
+    - name: Install dependencies
+      run: yarn install
 
-      - name: Run tests
-        run: yarn test
+    - name: Install Lerna
+      run: yarn global add lerna@4.0.0
 
-      - name: Run coverage
-        run: yarn jest --coverage
+    - name: Run Lerna version
+      run: yarn lerna version patch --yes
 
-      - name: Build Jopi
-        run: yarn build
-
-      - name: Set Git config
-        run: |
-          git config --global user.email "${{secrets.GIT_EMAIL}}"
-          git config --global user.name "${{secrets.GIT_USER}}"
-
-      - name: Update lerna packages
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          lerna version patch --yes --force-publish 
-        #  cd node_modules/.bin
-        #  lerna version patch --yes --force-publish=*
-        #  lerna version --no-push # => this don't fail, but don't change anithing
-        #  yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
-      
-      - name: "NPM Identity"
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
-
-      - name: Publish New Jopi version to NPM
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          lerna publish from-git --no-private --force-publish --no-push --yes
-
-  merge-me:
-    name: Merge to master
-    needs:
-      - build-and-publish
-    runs-on: ubuntu-latest
-    steps:
-      - name: Merge me!
-        uses: ridedott/merge-me-action@master
-        with:
-          # This must be used as GitHub Actions token does not support
-          # pushing to protected branches.
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Delete publish branch
-        run: |
-          git checkout master
-          git branch -d publish
+    - name: Run Lerna publish
+      run: yarn lerna publish from-package --yes
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

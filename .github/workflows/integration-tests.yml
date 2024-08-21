@@ -1,3 +1,5 @@
+name: Integration tests
+
 on:
   pull_request:
     branches:
@@ -19,9 +21,6 @@ jobs:
 
       - name: Installing yarn
         run: yarn install
-
-      - name: Run tests
-        run: yarn test
 
       - name: Run coverage
         run: yarn jest --coverage
