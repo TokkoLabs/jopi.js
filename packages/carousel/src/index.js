@@ -351,7 +351,7 @@ export const Carousel = ({
                               alignItems: 'center',
                               justifyContent: 'center',
                               backgroundColor: theme.colors.neutralGray8,
-                              opacity: '0.7',
+                              opacity: '0.8',
                               color: theme.colors.black,
                               fontFamily: 'Nunito Sans',
                               fontSize: '14px',
