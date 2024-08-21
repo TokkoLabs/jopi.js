@@ -1,4 +1,5 @@
 @import '../../theme/styles/globals.css';
+
 .fullscreen {
   position: fixed;
   display: flex;
@@ -12,12 +13,14 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease;
   visibility: hidden;
 }
+
 .sliderContainer {
   transition: transform 0.8s ease;
 }
+
 .fsOverlay {
   background-color: #000000;
   opacity: 0.8;
@@ -107,19 +110,24 @@
   font-size: 16px;
   cursor: pointer;
 }
+
 .fsCloseIconDesktop {
   display: none;
 }
+
 .iconPrev,
 .iconNext {
   position: absolute;
 }
+
 .iconPrev {
   left: -20px;
 }
+
 .iconNext {
   right: -20px;
 }
+
 .nextPrevIconContainer {
   display: flex;
   justify-content: center;
@@ -136,6 +144,7 @@
     top: calc(50% - 10px);
   }
 }
+
 .swapSliderIconPrev,
 .swapSliderIconNext {
   color: var(--neutralGray2);
@@ -144,6 +153,7 @@
     color: var(--neutralGray8);
   }
 }
+
 .otherButtonSwap {
   position: absolute;
   bottom: 16px;
@@ -164,6 +174,7 @@
   display: flex;
   gap: 8px;
 }
+
 .imgFullScreenSlide {
   pointer-events: none;
   width: 100%;
@@ -172,12 +183,15 @@
   outline: none;
   user-select: none;
 }
+
 .imgFullScreenSlide:active {
   outline: none;
 }
+
 .imgFullScreenSlide:focus {
   outline: none;
 }
+
 .videoFullScreenSlide {
   width: 100%;
   max-width: 1085px;
@@ -185,6 +199,7 @@
   max-height: 610px;
   object-fit: contain;
 }
+
 @media (min-width: 600px) {
   .fullscreen {
     padding: 30px 40px;
@@ -232,6 +247,7 @@
     width: auto;
   }
 }
+
 @media (min-width: 700px) {
   .swapSliderIconNext,
   .swapSliderIconPrev {
@@ -242,6 +258,7 @@
     }
   }
 }
+
 .gallerySkeletonsContainer {
   display: flex;
   width: 100%;
