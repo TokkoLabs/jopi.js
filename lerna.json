@@ -2,5 +2,9 @@
   "npmClient": "yarn",
   "private": true,
   "version": "independent",
-  "command.publish.verifyAccess": false
+  "command.publish.verifyAccess": false,
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*"
+  ]
 }
