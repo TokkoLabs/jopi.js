@@ -36,9 +36,10 @@ jobs:
         git config --global user.name "aguescribano87"
         git config --global user.email "aguescribano87@gmail.com"
 
-    - name: Create new branch
+    - name: Create and push new branch
       run: |
         git checkout -b release-branch
+        git push origin release-branch
 
     - name: Run Lerna version
       run: yarn lerna version patch --yes
