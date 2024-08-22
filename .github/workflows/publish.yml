@@ -36,10 +36,10 @@ jobs:
         git config --global user.name "aguescribano87"
         git config --global user.email "aguescribano87@gmail.com"
 
-    - name: Create and push new branch
+    - name: Create and configure .npmrc
       run: |
-        git checkout -b release-branch
-        git push origin release-branch
+        echo 'registry=https://registry.npmjs.org/' > .npmrc
+        echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
 
     - name: Run Lerna version
       run: yarn lerna version patch --yes
@@ -49,37 +49,28 @@ jobs:
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-    - name: Push changes to new branch
+    - name: Create and push release branch
       run: |
-        git push origin release-branch --follow-tags
+        git checkout -b release-branch
+        git add .
+        git commit -m "Release new version"
+        git push origin release-branch
 
-    - name: Create Pull Request
-      id: pr
+    - name: Create Pull Request from release branch to master
       uses: repo-sync/pull-request@v2
       with:
         source_branch: release-branch
         destination_branch: master
-        pr_title: 'Lerna Publish PR'
-        pr_body: 'This PR was automatically created by the Lerna Publish workflow.'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Merge PR
-      if: steps.pr.outputs.pull_request_number
-      uses: actions/github-script@v6
-      with:
-        script: |
-          github.pulls.merge({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            pull_number: ${{ steps.pr.outputs.pull_request_number }},
-            merge_method: 'squash',
-          })
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        pr_title: Lerna Publish PR
+        pr_body: "This PR was automatically created by the Lerna Publish workflow."
+      env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
 
     - name: Checkout and update development branch
       run: |
-        sudo chmod -R ugo+rw .git
         git fetch origin development
         git checkout development
         git merge master
         git push origin development --follow-tags
+      env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
