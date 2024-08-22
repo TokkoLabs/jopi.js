@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.5.366",
+  "version": "1.5.367",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -13,7 +13,7 @@
     "@oneloop/button": "^1.2.364",
     "@oneloop/calendar": "^1.0.88",
     "@oneloop/card": "^1.0.99",
-    "@oneloop/carousel": "^1.0.35",
+    "@oneloop/carousel": "^1.0.39",
     "@oneloop/checkbox": "^1.2.320",
     "@oneloop/collapsible": "^1.2.366",
     "@oneloop/containermenu": "^1.0.120",
