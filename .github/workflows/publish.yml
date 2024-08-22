@@ -27,6 +27,8 @@ jobs:
 
     - name: Install dependencies
       run: yarn install
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     - name: Install Lerna
       run: yarn global add lerna@4.0.0
