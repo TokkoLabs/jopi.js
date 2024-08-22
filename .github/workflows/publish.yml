@@ -44,6 +44,11 @@ jobs:
     - name: Run Lerna version
       run: yarn lerna version patch --yes
 
+    - name: Run Lerna publish
+      run: npx lerna publish from-package --force-publish --yes
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
     - name: Push changes to new branch
       run: |
         git push origin release-branch --follow-tags
@@ -73,6 +78,7 @@ jobs:
 
     - name: Checkout and update development branch
       run: |
+        sudo chmod -R ugo+rw .git
         git fetch origin development
         git checkout development
         git merge master
