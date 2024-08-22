@@ -13,12 +13,12 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-in-out;
   visibility: hidden;
 }
 
 .sliderContainer {
-  transition: transform 0.8s ease-out;
+  transition: transform 0.8s ease-in-out;
 }
 
 .fsOverlay {
