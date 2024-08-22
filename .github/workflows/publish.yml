@@ -36,16 +36,39 @@ jobs:
         git config --global user.name "aguescribano87"
         git config --global user.email "aguescribano87@gmail.com"
 
+    - name: Create new branch
+      run: |
+        git checkout -b release-branch
+
     - name: Run Lerna version
       run: yarn lerna version patch --yes
 
-    - name: Run Lerna publish
-      run: yarn lerna publish from-package --yes
-      env:
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - name: Push changes to new branch
+      run: |
+        git push origin release-branch --follow-tags
 
-    - name: Push changes to master
-      run: git push origin master --follow-tags
+    - name: Create Pull Request
+      id: pr
+      uses: repo-sync/pull-request@v2
+      with:
+        source_branch: release-branch
+        destination_branch: master
+        pr_title: 'Lerna Publish PR'
+        pr_body: 'This PR was automatically created by the Lerna Publish workflow.'
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Merge PR
+      if: steps.pr.outputs.pull_request_number
+      uses: actions/github-script@v6
+      with:
+        script: |
+          github.pulls.merge({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: ${{ steps.pr.outputs.pull_request_number }},
+            merge_method: 'squash',
+          })
+        github-token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Checkout and update development branch
       run: |
