@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.5.365",
+  "version": "1.5.366",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
