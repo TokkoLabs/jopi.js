@@ -49,6 +49,7 @@ export const Carousel = ({
   const mainImageSkeletonRef = useRef()
   const mainImageWidthSkeleton = mainImageSkeletonRef.current?.clientWidth
   const allPictures = [...imgWithCover, ...bluePrintsWithCover]
+  const showOtherButtonsGalleryMobile = containerWidth > 530
 
   if (video.length > 0) {
     tabContainers.push('Videos')
@@ -231,18 +232,20 @@ export const Carousel = ({
                 setIndex={setIndex}
                 setURLOpenFullscreen={setURLOpenFullscreen}
               />
-              {!otherButton && containerWidth > 530 && (
+              {!otherButton && containerWidth > 300 && (
                 <Box
                   __css={{ bottom: '6px' }}
                   className="buttonsMainImageSlider"
                 >
                   <ButtonsMainImage
                     video={video}
-                    video360={video360}
-                    images={images}
-                    imgWithCover={imgWithCover}
-                    planos={planos}
-                    frontCoverBlueprints={frontCoverBlueprints}
+                    video360={showOtherButtonsGalleryMobile && video360}
+                    images={showOtherButtonsGalleryMobile && images}
+                    imgWithCover={showOtherButtonsGalleryMobile && imgWithCover}
+                    planos={showOtherButtonsGalleryMobile && planos}
+                    frontCoverBlueprints={
+                      showOtherButtonsGalleryMobile && frontCoverBlueprints
+                    }
                     setTabSelected={setTabSelected}
                     setIndex={setIndex}
                     setFullscreen={setFullscreen}
