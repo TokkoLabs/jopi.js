@@ -27,20 +27,46 @@ jobs:
 
     - name: Install dependencies
       run: yarn install
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     - name: Install Lerna
       run: yarn global add lerna@4.0.0
+
+    - name: Configure Git identity
+      run: |
+        git config --global user.name "aguescribano87"
+        git config --global user.email "aguescribano87@gmail.com"
+
+    - name: Create and configure .npmrc
+      run: |
+        echo 'registry=https://registry.npmjs.org/' > .npmrc
+        echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
 
     - name: Run Lerna version
       run: yarn lerna version patch --yes
 
     - name: Run Lerna publish
-      run: yarn lerna publish from-package --yes
+      run: npx lerna publish from-package --force-publish --yes
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-    - name: Push changes to master
-      run: git push origin master --follow-tags
+    - name: Create and push release branch
+      run: |
+        git checkout -b release-branch
+        git add .
+        git commit -m "Release new version"
+        git push origin release-branch
+
+    - name: Create Pull Request from release branch to master
+      uses: repo-sync/pull-request@v2
+      with:
+        source_branch: release-branch
+        destination_branch: master
+        pr_title: Lerna Publish PR
+        pr_body: "This PR was automatically created by the Lerna Publish workflow."
+      env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
 
     - name: Checkout and update development branch
       run: |
@@ -48,3 +74,5 @@ jobs:
         git checkout development
         git merge master
         git push origin development --follow-tags
+      env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
