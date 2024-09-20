@@ -239,7 +239,10 @@ export const Carousel = ({
                 >
                   <ButtonsMainImage
                     video={video}
-                    video360={showOtherButtonsGalleryMobile && video360}
+                    video360={
+                      (video.length === 0 || showOtherButtonsGalleryMobile) &&
+                      video360
+                    }
                     images={showOtherButtonsGalleryMobile && images}
                     imgWithCover={showOtherButtonsGalleryMobile && imgWithCover}
                     planos={showOtherButtonsGalleryMobile && planos}
