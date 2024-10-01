@@ -350,3 +350,23 @@ export const iconSolarium = () => <Icon icon='icon-solarium' fontSize='24px'/>
 export const iconFrente = () => <Icon icon='icon-frente' fontSize='24px'/>
 
 export const iconFondo = () => <Icon icon='icon-fondo' fontSize='24px'/>
+
+export const iconHeading = () => <Icon icon='icon-heading' fontSize='24px'/>
+
+export const iconAudio = () => <Icon icon='icon-audio' fontSize='24px'/>
+
+export const iconApple = () => <Icon icon='icon-apple' fontSize='24px'/>
+
+export const iconFacebook = () => <Icon icon='icon-facebook' fontSize='24px'/>
+
+export const iconGoogle = () => <Icon icon='icon-google' fontSize='24px'/>
+
+export const iconInstagram = () => <Icon icon='icon-instagram' fontSize='24px'/>
+
+export const iconLinkedin = () => <Icon icon='icon-linkedin' fontSize='24px'/>
+
+export const iconPausar = () => <Icon icon='icon-pausar' fontSize='24px'/>
+
+export const iconX = () => <Icon icon='icon-x' fontSize='24px'/>
+
+export const iconYoutube = () => <Icon icon='icon-youtube' fontSize='24px'/>
