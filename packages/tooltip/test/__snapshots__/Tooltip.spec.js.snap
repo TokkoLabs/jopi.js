@@ -60,16 +60,6 @@ exports[`Submenu renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 18px;
-  height: 18px;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -89,14 +79,14 @@ exports[`Submenu renders correctly 1`] = `
   justify-content: center;
 }
 
-.c5 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-family: primary;
 }
 
-.c6 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -131,25 +121,16 @@ exports[`Submenu renders correctly 1`] = `
           className="c2"
           type="button"
         >
-          <span
-            className="c3"
+          <i
+            className="icon-propiedades"
             style={
               {
-                "color": "#485C66",
+                "fontSize": "18px",
+                "height": "18px",
+                "width": "18px",
               }
             }
-          >
-            <i
-              className="icon-propiedades"
-              style={
-                {
-                  "fontSize": "18px",
-                  "height": "18px",
-                  "width": "18px",
-                }
-              }
-            />
-          </span>
+          />
         </button>
       </div>
     </div>
@@ -168,16 +149,16 @@ exports[`Submenu renders correctly 1`] = `
       className="c0"
     >
       <div
-        className="c4"
+        className="c3"
       >
         <p
-          className="c5"
+          className="c4"
         >
           Sitios Webs
         </p>
       </div>
       <div
-        className="c6"
+        className="c5"
         data-popper-arrow={true}
         id="arrow"
       />

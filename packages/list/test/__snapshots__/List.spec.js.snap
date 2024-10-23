@@ -100,16 +100,6 @@ exports[`List renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 14px;
-  height: 14px;
-}
-
-.c8 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   font-weight: 400;
   border: solid 1px transparent;
   box-shadow: none;
@@ -121,7 +111,7 @@ exports[`List renders correctly 1`] = `
   width: 100%;
 }
 
-.c9 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -141,7 +131,7 @@ exports[`List renders correctly 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c9 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -149,7 +139,7 @@ exports[`List renders correctly 1`] = `
   height: 18px;
 }
 
-.c11 {
+.c10 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -161,7 +151,7 @@ exports[`List renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c15 {
+.c14 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -178,7 +168,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c12 {
+.c11 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -204,35 +194,35 @@ input:focus ~ .c0 {
   display: flex;
 }
 
-.c14 {
+.c13 {
   display: none;
 }
 
-input:checked:not(:disabled) ~ .c13 {
+input:checked:not(:disabled) ~ .c12 {
   display: block;
 }
 
-.c17 {
+.c16 {
   display: none;
 }
 
-input:not(:checked):not(:disabled) ~ .c16 {
+input:not(:checked):not(:disabled) ~ .c15 {
   display: block;
 }
 
-.c21 {
+.c20 {
   display: none;
 }
 
-input:checked:disabled ~ .c20 {
+input:checked:disabled ~ .c19 {
   display: block;
 }
 
-.c19 {
+.c18 {
   display: none;
 }
 
-input:disabled:not(:checked) ~ .c18 {
+input:disabled:not(:checked) ~ .c17 {
   display: block;
 }
 
@@ -256,22 +246,18 @@ input:disabled:not(:checked) ~ .c18 {
         <div
           className="c0 c6"
         >
-          <span
-            className="c0 c7"
-          >
-            <i
-              className="icon-buscar"
-              style={
-                {
-                  "fontSize": "14px",
-                  "height": "14px",
-                  "width": "14px",
-                }
+          <i
+            className="icon-buscar"
+            style={
+              {
+                "fontSize": "14px",
+                "height": "14px",
+                "width": "14px",
               }
-            />
-          </span>
+            }
+          />
           <input
-            className="c0 c8"
+            className="c0 c7"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -285,19 +271,19 @@ input:disabled:not(:checked) ~ .c18 {
       </div>
     </span>
     <li
-      className="c0 c9"
+      className="c0 c8"
       width={1}
     >
       <div
-        className="c0 c10"
+        className="c0 c9"
       >
         <input
-          className="c0 c11"
+          className="c0 c10"
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          className="c0 c12 c13 c14 c0 c15"
+          className="c0 c11 c12 c13 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -323,7 +309,7 @@ input:disabled:not(:checked) ~ .c18 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c12 c16 c17 c0 c15"
+          className="c0 c11 c15 c16 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -343,7 +329,7 @@ input:disabled:not(:checked) ~ .c18 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c12 c18 c19 c0 c15"
+          className="c0 c11 c17 c18 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -363,7 +349,7 @@ input:disabled:not(:checked) ~ .c18 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c12 c20 c21 c0 c15"
+          className="c0 c11 c19 c20 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -391,19 +377,19 @@ input:disabled:not(:checked) ~ .c18 {
       One
     </li>
     <li
-      className="c0 c9"
+      className="c0 c8"
       width={1}
     >
       <div
-        className="c0 c10"
+        className="c0 c9"
       >
         <input
-          className="c0 c11"
+          className="c0 c10"
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          className="c0 c12 c13 c14 c0 c15"
+          className="c0 c11 c12 c13 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -429,7 +415,7 @@ input:disabled:not(:checked) ~ .c18 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c12 c16 c17 c0 c15"
+          className="c0 c11 c15 c16 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -449,7 +435,7 @@ input:disabled:not(:checked) ~ .c18 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c12 c18 c19 c0 c15"
+          className="c0 c11 c17 c18 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -469,7 +455,7 @@ input:disabled:not(:checked) ~ .c18 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c12 c20 c21 c0 c15"
+          className="c0 c11 c19 c20 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -497,19 +483,19 @@ input:disabled:not(:checked) ~ .c18 {
       Two
     </li>
     <li
-      className="c0 c9"
+      className="c0 c8"
       width={1}
     >
       <div
-        className="c0 c10"
+        className="c0 c9"
       >
         <input
-          className="c0 c11"
+          className="c0 c10"
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          className="c0 c12 c13 c14 c0 c15"
+          className="c0 c11 c12 c13 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -535,7 +521,7 @@ input:disabled:not(:checked) ~ .c18 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c12 c16 c17 c0 c15"
+          className="c0 c11 c15 c16 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -555,7 +541,7 @@ input:disabled:not(:checked) ~ .c18 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c12 c18 c19 c0 c15"
+          className="c0 c11 c17 c18 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -575,7 +561,7 @@ input:disabled:not(:checked) ~ .c18 {
         </svg>
         <svg
           aria-hidden="true"
-          className="c0 c12 c20 c21 c0 c15"
+          className="c0 c11 c19 c20 c0 c14"
           fill="none"
           height={16}
           viewBox="0 0 16 16"
@@ -901,26 +887,6 @@ exports[`ListIcon renders correctly 1`] = `
   position: relative;
 }
 
-.c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 12px;
-  height: 12px;
-}
-
-.c6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 14px;
-  height: 14px;
-}
-
 @media screen and (min-width:40em) {
 
 }
@@ -955,20 +921,16 @@ exports[`ListIcon renders correctly 1`] = `
             }
             type="button"
           >
-            <span
-              className="c5"
-            >
-              <i
-                className="icon-agente"
-                style={
-                  {
-                    "fontSize": "12px",
-                    "height": "12px",
-                    "width": "12px",
-                  }
+            <i
+              className="icon-agente"
+              style={
+                {
+                  "fontSize": "12px",
+                  "height": "12px",
+                  "width": "12px",
                 }
-              />
-            </span>
+              }
+            />
             <span>
               Item 1
             </span>
@@ -999,20 +961,16 @@ exports[`ListIcon renders correctly 1`] = `
             }
             type="button"
           >
-            <span
-              className="c6"
-            >
-              <i
-                className="icon-agente"
-                style={
-                  {
-                    "fontSize": "14px",
-                    "height": "14px",
-                    "width": "14px",
-                  }
+            <i
+              className="icon-agente"
+              style={
+                {
+                  "fontSize": "14px",
+                  "height": "14px",
+                  "width": "14px",
                 }
-              />
-            </span>
+              }
+            />
             <span>
               Item 2
             </span>
@@ -1043,20 +1001,16 @@ exports[`ListIcon renders correctly 1`] = `
             }
             type="button"
           >
-            <span
-              className="c6"
-            >
-              <i
-                className="icon-agente"
-                style={
-                  {
-                    "fontSize": "14px",
-                    "height": "14px",
-                    "width": "14px",
-                  }
+            <i
+              className="icon-agente"
+              style={
+                {
+                  "fontSize": "14px",
+                  "height": "14px",
+                  "width": "14px",
                 }
-              />
-            </span>
+              }
+            />
             <span>
               Item 3
             </span>

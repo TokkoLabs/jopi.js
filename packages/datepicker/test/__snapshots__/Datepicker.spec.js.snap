@@ -42,16 +42,6 @@ exports[`Datepicker default 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 16px;
-  height: 16px;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   font-weight: 400;
   border: solid 1px transparent;
   box-shadow: none;
@@ -80,28 +70,19 @@ exports[`Datepicker default 1`] = `
       <div
         className="c1"
       >
-        <span
-          className="c2"
+        <i
+          className="icon-calendario"
           onClick={[Function]}
           style={
             {
-              "cursor": "pointer",
+              "fontSize": "16px",
+              "height": "16px",
+              "width": "16px",
             }
           }
-        >
-          <i
-            className="icon-calendario"
-            style={
-              {
-                "fontSize": "16px",
-                "height": "16px",
-                "width": "16px",
-              }
-            }
-          />
-        </span>
+        />
         <input
-          className="c3"
+          className="c2"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
