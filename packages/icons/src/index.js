@@ -83,21 +83,10 @@ export const ChevronRight = ({ color = 'black', ...props }) => (
 )
 
 export const Icon = ({ icon, fontSize, ...props }) => (
-  <Box
-    {...props}
-    __css={{
-      display: 'grid',
-      placeItems: 'center',
-      width: fontSize,
-      height: fontSize,
-    }}
-    as='span'
-  >
-    <i className={icon} style={{
-      fontSize: fontSize,
-      width: fontSize,
-      height: fontSize,
-    }}
-    />
-  </Box>
+  <i className={icon} {...props} style={{
+    fontSize: fontSize,
+    width: fontSize,
+    height: fontSize,
+  }}
+  />
 )
