@@ -91,6 +91,7 @@ export const Icon = ({ icon, fontSize, ...props }) => (
       width: fontSize,
       height: fontSize,
     }}
+    as='span'
   >
     <i className={icon} style={{
       fontSize: fontSize,
