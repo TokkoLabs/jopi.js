@@ -165,7 +165,7 @@ exports[`Submenu first case 1`] = `
           className="c2"
           type="button"
         >
-          <div
+          <span
             className="c3"
             style={
               {
@@ -183,7 +183,7 @@ exports[`Submenu first case 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </button>
       </div>
     </div>
@@ -211,7 +211,7 @@ exports[`Submenu first case 1`] = `
             className="c6"
             type="button"
           >
-            <div
+            <span
               className="c7"
             >
               <i
@@ -224,7 +224,7 @@ exports[`Submenu first case 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
             <span>
               Contacto
             </span>
@@ -237,7 +237,7 @@ exports[`Submenu first case 1`] = `
             className="c6"
             type="button"
           >
-            <div
+            <span
               className="c7"
             >
               <i
@@ -250,7 +250,7 @@ exports[`Submenu first case 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
             <span>
               Empresa
             </span>
@@ -263,7 +263,7 @@ exports[`Submenu first case 1`] = `
             className="c6"
             type="button"
           >
-            <div
+            <span
               className="c7"
             >
               <i
@@ -276,7 +276,7 @@ exports[`Submenu first case 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
             <span>
               Propiedad
             </span>
@@ -289,7 +289,7 @@ exports[`Submenu first case 1`] = `
             className="c6"
             type="button"
           >
-            <div
+            <span
               className="c7"
             >
               <i
@@ -302,7 +302,7 @@ exports[`Submenu first case 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
             <span>
               Emprendimiento
             </span>
@@ -315,7 +315,7 @@ exports[`Submenu first case 1`] = `
             className="c6"
             type="button"
           >
-            <div
+            <span
               className="c7"
             >
               <i
@@ -328,7 +328,7 @@ exports[`Submenu first case 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
             <span>
               Email
             </span>

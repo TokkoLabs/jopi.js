@@ -177,7 +177,7 @@ exports[`Input errors 1`] = `
       type="text"
       width="100%"
     />
-    <div
+    <span
       className="c3"
     >
       <i
@@ -190,7 +190,7 @@ exports[`Input errors 1`] = `
           }
         }
       />
-    </div>
+    </span>
   </div>
   <div
     className="c4"
@@ -902,7 +902,7 @@ exports[`Input inputWithPasswordIcon 1`] = `
       width="100%"
     />
     <div>
-      <div
+      <span
         className="c5"
       >
         <i
@@ -915,7 +915,7 @@ exports[`Input inputWithPasswordIcon 1`] = `
             }
           }
         />
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -1298,7 +1298,7 @@ exports[`Input searchBoldIcon 1`] = `
   <div
     className="c1"
   >
-    <div
+    <span
       className="c2"
     >
       <i
@@ -1311,7 +1311,7 @@ exports[`Input searchBoldIcon 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <input
       className="c3"
       onBlur={[Function]}

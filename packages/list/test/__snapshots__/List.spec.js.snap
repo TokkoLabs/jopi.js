@@ -256,7 +256,7 @@ input:disabled:not(:checked) ~ .c18 {
         <div
           className="c0 c6"
         >
-          <div
+          <span
             className="c0 c7"
           >
             <i
@@ -269,7 +269,7 @@ input:disabled:not(:checked) ~ .c18 {
                 }
               }
             />
-          </div>
+          </span>
           <input
             className="c0 c8"
             onBlur={[Function]}
@@ -955,7 +955,7 @@ exports[`ListIcon renders correctly 1`] = `
             }
             type="button"
           >
-            <div
+            <span
               className="c5"
             >
               <i
@@ -968,7 +968,7 @@ exports[`ListIcon renders correctly 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
             <span>
               Item 1
             </span>
@@ -999,7 +999,7 @@ exports[`ListIcon renders correctly 1`] = `
             }
             type="button"
           >
-            <div
+            <span
               className="c6"
             >
               <i
@@ -1012,7 +1012,7 @@ exports[`ListIcon renders correctly 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
             <span>
               Item 2
             </span>
@@ -1043,7 +1043,7 @@ exports[`ListIcon renders correctly 1`] = `
             }
             type="button"
           >
-            <div
+            <span
               className="c6"
             >
               <i
@@ -1056,7 +1056,7 @@ exports[`ListIcon renders correctly 1`] = `
                   }
                 }
               />
-            </div>
+            </span>
             <span>
               Item 3
             </span>

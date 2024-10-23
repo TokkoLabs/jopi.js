@@ -126,7 +126,7 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
   <div
     className="c1"
   >
-    <div
+    <span
       className="c2"
       style={
         {
@@ -145,7 +145,7 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <p
       className="c3"
       style={
@@ -168,7 +168,7 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
         className="c6"
         type="button"
       >
-        <div
+        <span
           className="c7"
         >
           <i
@@ -181,7 +181,7 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
               }
             }
           />
-        </div>
+        </span>
       </button>
     </div>
   </div>
