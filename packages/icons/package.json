@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/icons",
-  "version": "1.2.311",
+  "version": "1.2.312",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
