@@ -131,7 +131,7 @@ exports[`Submenu renders correctly 1`] = `
           className="c2"
           type="button"
         >
-          <div
+          <span
             className="c3"
             style={
               {
@@ -149,7 +149,7 @@ exports[`Submenu renders correctly 1`] = `
                 }
               }
             />
-          </div>
+          </span>
         </button>
       </div>
     </div>

@@ -127,30 +127,16 @@ exports[`Icon renders correctly Exclamation 1`] = `
 `;
 
 exports[`Icon renders correctly Icon 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
-}
-
-<span
-  className="c0"
->
-  <i
-    className="icon-agregar"
-    style={
-      {
-        "fontSize": "24px",
-        "height": "24px",
-        "width": "24px",
-      }
+<i
+  className="icon-agregar"
+  style={
+    {
+      "fontSize": "24px",
+      "height": "24px",
+      "width": "24px",
     }
-  />
-</span>
+  }
+/>
 `;
 
 exports[`Icon renders correctly Substract 1`] = `

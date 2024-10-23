@@ -65,7 +65,7 @@ exports[`Alert info 1`] = `
   >
     Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!
   </p>
-  <div
+  <span
     className="c3"
     style={
       {
@@ -83,6 +83,6 @@ exports[`Alert info 1`] = `
         }
       }
     />
-  </div>
+  </span>
 </div>
 `;

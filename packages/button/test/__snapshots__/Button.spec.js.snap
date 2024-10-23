@@ -281,7 +281,7 @@ exports[`Button collapseButtonOpen 1`] = `
     }
     type="button"
   >
-    <div
+    <span
       className="c2"
     >
       <i
@@ -294,7 +294,7 @@ exports[`Button collapseButtonOpen 1`] = `
           }
         }
       />
-    </div>
+    </span>
   </button>
 </div>
 `;
@@ -738,7 +738,7 @@ exports[`Button mainButton 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
     >
       <i
@@ -751,7 +751,7 @@ exports[`Button mainButton 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <span>
       Emprendimientos
     </span>
@@ -819,7 +819,7 @@ exports[`Button mainButtonCollapsible 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
     >
       <i
@@ -832,7 +832,7 @@ exports[`Button mainButtonCollapsible 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <span>
       Emprendimientos
     </span>
@@ -918,7 +918,7 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
     >
       <i
@@ -931,7 +931,7 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <span>
       Emprendimientos
     </span>
@@ -1017,7 +1017,7 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
     >
       <i
@@ -1030,7 +1030,7 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <span>
       Emprendimientos
     </span>
@@ -1112,7 +1112,7 @@ exports[`Button mainButtonIconActive 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
       style={
         {
@@ -1130,7 +1130,7 @@ exports[`Button mainButtonIconActive 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <span
       style={
         {
@@ -1230,7 +1230,7 @@ exports[`Button mainButtonIconBadge 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
       style={
         {
@@ -1248,7 +1248,7 @@ exports[`Button mainButtonIconBadge 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <div
       className="c3"
       style={
@@ -1329,7 +1329,7 @@ exports[`Button mainButtonIconBadgeFilled 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
       style={
         {
@@ -1347,7 +1347,7 @@ exports[`Button mainButtonIconBadgeFilled 1`] = `
           }
         }
       />
-    </div>
+    </span>
   </button>
 </div>
 `;
@@ -1410,7 +1410,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
       style={
         {
@@ -1428,7 +1428,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 1`] = `
           }
         }
       />
-    </div>
+    </span>
   </button>
 </div>
 `;
@@ -1491,7 +1491,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
       style={
         {
@@ -1509,7 +1509,7 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
           }
         }
       />
-    </div>
+    </span>
     <span
       className="icon-dropdown"
       onClick={[Function]}
@@ -1618,7 +1618,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
       style={
         {
@@ -1636,7 +1636,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <span
       style={
         {
@@ -1911,7 +1911,7 @@ input:disabled:not(:checked) ~ .c11 {
         />
       </svg>
     </div>
-    <div
+    <span
       className="c0 c15"
     >
       <i
@@ -1924,7 +1924,7 @@ input:disabled:not(:checked) ~ .c11 {
           }
         }
       />
-    </div>
+    </span>
   </button>
 </div>
 `;
@@ -2180,7 +2180,7 @@ input:disabled:not(:checked) ~ .c11 {
         />
       </svg>
     </div>
-    <div
+    <span
       className="c0 c15"
       style={
         {
@@ -2198,7 +2198,7 @@ input:disabled:not(:checked) ~ .c11 {
           }
         }
       />
-    </div>
+    </span>
   </button>
 </div>
 `;
@@ -2646,7 +2646,7 @@ exports[`Button roundButton 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
     >
       <i
@@ -2659,7 +2659,7 @@ exports[`Button roundButton 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <span>
       Label
     </span>
@@ -2725,7 +2725,7 @@ exports[`Button roundButtonColourFeedback 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
     >
       <i
@@ -2738,7 +2738,7 @@ exports[`Button roundButtonColourFeedback 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <span>
       Label
     </span>
@@ -2804,7 +2804,7 @@ exports[`Button roundButtonDisabled 1`] = `
     className="c1"
     type="button"
   >
-    <div
+    <span
       className="c2"
     >
       <i
@@ -2817,7 +2817,7 @@ exports[`Button roundButtonDisabled 1`] = `
           }
         }
       />
-    </div>
+    </span>
     <span>
       Label
     </span>

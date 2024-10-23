@@ -156,7 +156,7 @@ exports[`Modal renders correctly 1`] = `
       className="c3"
       onClick={[Function]}
     >
-      <div
+      <span
         className="c4"
         color="#344149"
       >
@@ -170,7 +170,7 @@ exports[`Modal renders correctly 1`] = `
             }
           }
         />
-      </div>
+      </span>
     </div>
     <div
       className="c5"
