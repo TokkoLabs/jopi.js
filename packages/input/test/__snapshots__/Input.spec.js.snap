@@ -132,23 +132,13 @@ exports[`Input errors 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 14px;
-  height: 14px;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-.c5 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -177,26 +167,22 @@ exports[`Input errors 1`] = `
       type="text"
       width="100%"
     />
-    <span
-      className="c3"
-    >
-      <i
-        className="icon-error"
-        style={
-          {
-            "fontSize": "14px",
-            "height": "14px",
-            "width": "14px",
-          }
+    <i
+      className="icon-error"
+      style={
+        {
+          "fontSize": "14px",
+          "height": "14px",
+          "width": "14px",
         }
-      />
-    </span>
+      }
+    />
   </div>
   <div
-    className="c4"
+    className="c3"
   >
     <p
-      className="c5"
+      className="c4"
     >
       Minimo 8 caracteres.
     </p>
@@ -857,14 +843,6 @@ exports[`Input inputWithPasswordIcon 1`] = `
   width: 100%;
 }
 
-.c5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: grid;
-  place-items: center;
-}
-
 @media screen and (min-width:40em) {
 
 }
@@ -902,20 +880,16 @@ exports[`Input inputWithPasswordIcon 1`] = `
       width="100%"
     />
     <div>
-      <span
-        className="c5"
-      >
-        <i
-          className="icon-ocultar"
-          style={
-            {
-              "fontSize": undefined,
-              "height": undefined,
-              "width": undefined,
-            }
+      <i
+        className="icon-ocultar"
+        style={
+          {
+            "fontSize": undefined,
+            "height": undefined,
+            "width": undefined,
           }
-        />
-      </span>
+        }
+      />
     </div>
   </div>
 </div>
@@ -1268,14 +1242,6 @@ exports[`Input searchBoldIcon 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: grid;
-  place-items: center;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   font-weight: 700;
   border: solid 1px transparent;
   box-shadow: none;
@@ -1298,22 +1264,18 @@ exports[`Input searchBoldIcon 1`] = `
   <div
     className="c1"
   >
-    <span
-      className="c2"
-    >
-      <i
-        className="icon-buscar"
-        style={
-          {
-            "fontSize": undefined,
-            "height": undefined,
-            "width": undefined,
-          }
+    <i
+      className="icon-buscar"
+      style={
+        {
+          "fontSize": undefined,
+          "height": undefined,
+          "width": undefined,
         }
-      />
-    </span>
+      }
+    />
     <input
-      className="c3"
+      className="c2"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}

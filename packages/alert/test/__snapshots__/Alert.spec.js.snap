@@ -39,16 +39,6 @@ exports[`Alert info 1`] = `
   flex-grow: 1;
 }
 
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 12px;
-  height: 12px;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -65,24 +55,15 @@ exports[`Alert info 1`] = `
   >
     Éxito!!! Pudiste hacer todo lo que querías y te salió pipi cucu!
   </p>
-  <span
-    className="c3"
+  <i
+    className="icon-cerrar"
     style={
       {
-        "cursor": "pointer",
+        "fontSize": "12px",
+        "height": "12px",
+        "width": "12px",
       }
     }
-  >
-    <i
-      className="icon-cerrar"
-      style={
-        {
-          "fontSize": "12px",
-          "height": "12px",
-          "width": "12px",
-        }
-      }
-    />
-  </span>
+  />
 </div>
 `;

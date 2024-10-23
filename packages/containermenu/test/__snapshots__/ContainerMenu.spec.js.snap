@@ -42,20 +42,10 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 18px;
-  height: 18px;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   font-family: primary;
 }
 
-.c4 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -64,14 +54,14 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
   top: 12px;
 }
 
-.c5 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
 }
 
-.c6 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -106,16 +96,6 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
   position: relative;
 }
 
-.c7 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: grid;
-  place-items: center;
-  width: 12px;
-  height: 12px;
-}
-
 @media screen and (min-width:40em) {
 
 }
@@ -126,28 +106,18 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
   <div
     className="c1"
   >
-    <span
-      className="c2"
+    <i
+      className="icon-favoritos"
       style={
         {
-          "color": "#DF1E02",
-          "marginTop": "2px",
+          "fontSize": "18px",
+          "height": "18px",
+          "width": "18px",
         }
       }
-    >
-      <i
-        className="icon-favoritos"
-        style={
-          {
-            "fontSize": "18px",
-            "height": "18px",
-            "width": "18px",
-          }
-        }
-      />
-    </span>
+    />
     <p
-      className="c3"
+      className="c2"
       style={
         {
           "color": "#384248",
@@ -159,29 +129,25 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
     </p>
   </div>
   <div
-    className="c4"
+    className="c3"
   >
     <div
-      className="c5"
+      className="c4"
     >
       <button
-        className="c6"
+        className="c5"
         type="button"
       >
-        <span
-          className="c7"
-        >
-          <i
-            className="icon-configuracion"
-            style={
-              {
-                "fontSize": "12px",
-                "height": "12px",
-                "width": "12px",
-              }
+        <i
+          className="icon-configuracion"
+          style={
+            {
+              "fontSize": "12px",
+              "height": "12px",
+              "width": "12px",
             }
-          />
-        </span>
+          }
+        />
       </button>
     </div>
   </div>
