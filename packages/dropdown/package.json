@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/dropdown",
-  "version": "1.2.379",
+  "version": "1.2.380",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,9 +8,9 @@
   ],
   "dependencies": {
     "@oneloop/box": "^1.2.285",
-    "@oneloop/button": "^1.2.366",
+    "@oneloop/button": "^1.2.367",
     "@oneloop/hooks": "^1.2.307",
-    "@oneloop/list": "^1.2.358"
+    "@oneloop/list": "^1.2.359"
   },
   "peerDependencies": {
     "react": "^16.8.0"
