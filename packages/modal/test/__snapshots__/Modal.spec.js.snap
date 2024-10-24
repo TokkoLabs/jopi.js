@@ -73,6 +73,17 @@ exports[`Modal renders correctly 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 12px;
+  height: 12px;
+  color: #344149;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   padding: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -85,7 +96,7 @@ exports[`Modal renders correctly 1`] = `
   height: 500;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -95,20 +106,20 @@ exports[`Modal renders correctly 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-family: primary;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
 }
 
-.c9 {
+.c10 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -123,7 +134,7 @@ exports[`Modal renders correctly 1`] = `
   gap: 24px;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,27 +156,31 @@ exports[`Modal renders correctly 1`] = `
       className="c3"
       onClick={[Function]}
     >
-      <i
-        className="icon-cerrar"
+      <div
+        className="c4"
         color="#344149"
-        style={
-          {
-            "fontSize": "12px",
-            "height": "12px",
-            "width": "12px",
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "12px",
+              "height": "12px",
+              "width": "12px",
+            }
           }
-        }
-      />
+        />
+      </div>
     </div>
     <div
-      className="c4"
+      className="c5"
     >
       <div
-        className="c5 c6"
+        className="c6 c7"
         onClick={[Function]}
       >
         <p
-          className="c7"
+          className="c8"
           style={
             {
               "color": "#344149",
@@ -177,14 +192,14 @@ exports[`Modal renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c8"
+        className="c9"
       >
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </p>
       </div>
       <div
-        className="c9 c6"
+        className="c10 c7"
       >
         <button
           onClick={[Function]}

@@ -257,6 +257,16 @@ exports[`Button collapseButtonOpen 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 10px;
+  height: 10px;
+}
+
 <div
   className="c0"
 >
@@ -271,16 +281,20 @@ exports[`Button collapseButtonOpen 1`] = `
     }
     type="button"
   >
-    <i
-      className="icon-atras"
-      style={
-        {
-          "fontSize": "10px",
-          "height": "10px",
-          "width": "10px",
+    <div
+      className="c2"
+    >
+      <i
+        className="icon-atras"
+        style={
+          {
+            "fontSize": "10px",
+            "height": "10px",
+            "width": "10px",
+          }
         }
-      }
-    />
+      />
+    </div>
   </button>
 </div>
 `;
@@ -707,6 +721,16 @@ exports[`Button mainButton 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
 <div
   className="c0"
 >
@@ -714,16 +738,20 @@ exports[`Button mainButton 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-propiedades"
-      style={
-        {
-          "fontSize": "16px",
-          "height": "16px",
-          "width": "16px",
+    <div
+      className="c2"
+    >
+      <i
+        className="icon-propiedades"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
         }
-      }
-    />
+      />
+    </div>
     <span>
       Emprendimientos
     </span>
@@ -774,6 +802,16 @@ exports[`Button mainButtonCollapsible 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
 <div
   className="c0"
 >
@@ -781,16 +819,20 @@ exports[`Button mainButtonCollapsible 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-propiedades"
-      style={
-        {
-          "fontSize": "16px",
-          "height": "16px",
-          "width": "16px",
+    <div
+      className="c2"
+    >
+      <i
+        className="icon-propiedades"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
         }
-      }
-    />
+      />
+    </div>
     <span>
       Emprendimientos
     </span>
@@ -855,6 +897,16 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
 @media screen and (min-width:40em) {
 
 }
@@ -866,16 +918,20 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-propiedades"
-      style={
-        {
-          "fontSize": "16px",
-          "height": "16px",
-          "width": "16px",
+    <div
+      className="c2"
+    >
+      <i
+        className="icon-propiedades"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
         }
-      }
-    />
+      />
+    </div>
     <span>
       Emprendimientos
     </span>
@@ -940,6 +996,16 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
 @media screen and (min-width:40em) {
 
 }
@@ -951,16 +1017,20 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-propiedades"
-      style={
-        {
-          "fontSize": "16px",
-          "height": "16px",
-          "width": "16px",
+    <div
+      className="c2"
+    >
+      <i
+        className="icon-propiedades"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
         }
-      }
-    />
+      />
+    </div>
     <span>
       Emprendimientos
     </span>
@@ -1025,6 +1095,16 @@ exports[`Button mainButtonIconActive 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+}
+
 <div
   className="c0"
 >
@@ -1032,16 +1112,25 @@ exports[`Button mainButtonIconActive 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-propiedades"
+    <div
+      className="c2"
       style={
         {
-          "fontSize": "18px",
-          "height": "18px",
-          "width": "18px",
+          "color": "#DF1E02",
         }
       }
-    />
+    >
+      <i
+        className="icon-propiedades"
+        style={
+          {
+            "fontSize": "18px",
+            "height": "18px",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
     <span
       style={
         {
@@ -1103,6 +1192,16 @@ exports[`Button mainButtonIconBadge 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   line-height: 14px;
   display: inline-block;
   font-size: 10px;
@@ -1131,18 +1230,27 @@ exports[`Button mainButtonIconBadge 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-propiedades"
-      style={
-        {
-          "fontSize": "18px",
-          "height": "18px",
-          "width": "18px",
-        }
-      }
-    />
     <div
       className="c2"
+      style={
+        {
+          "color": "#DF1E02",
+        }
+      }
+    >
+      <i
+        className="icon-propiedades"
+        style={
+          {
+            "fontSize": "18px",
+            "height": "18px",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
+    <div
+      className="c3"
       style={
         {
           "left": "16px",
@@ -1200,6 +1308,16 @@ exports[`Button mainButtonIconBadgeFilled 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+}
+
 @media screen and (min-width:40em) {
 
 }
@@ -1211,16 +1329,25 @@ exports[`Button mainButtonIconBadgeFilled 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-configuracion"
+    <div
+      className="c2"
       style={
         {
-          "fontSize": "18px",
-          "height": "18px",
-          "width": "18px",
+          "color": "#344149",
         }
       }
-    />
+    >
+      <i
+        className="icon-configuracion"
+        style={
+          {
+            "fontSize": "18px",
+            "height": "18px",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
   </button>
 </div>
 `;
@@ -1268,6 +1395,14 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+}
+
 <div
   className="c0"
 >
@@ -1275,16 +1410,25 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-configuracion"
+    <div
+      className="c2"
       style={
         {
-          "fontSize": undefined,
-          "height": undefined,
-          "width": undefined,
+          "color": "#344149",
         }
       }
-    />
+    >
+      <i
+        className="icon-configuracion"
+        style={
+          {
+            "fontSize": undefined,
+            "height": undefined,
+            "width": undefined,
+          }
+        }
+      />
+    </div>
   </button>
 </div>
 `;
@@ -1332,6 +1476,14 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+}
+
 <div
   className="c0"
 >
@@ -1339,16 +1491,25 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-configuracion"
+    <div
+      className="c2"
       style={
         {
-          "fontSize": undefined,
-          "height": undefined,
-          "width": undefined,
+          "color": undefined,
         }
       }
-    />
+    >
+      <i
+        className="icon-configuracion"
+        style={
+          {
+            "fontSize": undefined,
+            "height": undefined,
+            "width": undefined,
+          }
+        }
+      />
+    </div>
     <span
       className="icon-dropdown"
       onClick={[Function]}
@@ -1419,6 +1580,16 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   line-height: 14px;
   display: inline-block;
   font-size: 10px;
@@ -1447,16 +1618,25 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-propiedades"
+    <div
+      className="c2"
       style={
         {
-          "fontSize": "18px",
-          "height": "18px",
-          "width": "18px",
+          "color": "#DF1E02",
         }
       }
-    />
+    >
+      <i
+        className="icon-propiedades"
+        style={
+          {
+            "fontSize": "18px",
+            "height": "18px",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
     <span
       style={
         {
@@ -1468,7 +1648,7 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
       test
     </span>
     <div
-      className="c2"
+      className="c3"
       style={
         {
           "position": "absolute",
@@ -1579,6 +1759,16 @@ input:checked ~ .c0 {
 
 input:focus ~ .c0 {
   box-shadow: active;
+}
+
+.c15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
 }
 
 .c7 {
@@ -1721,16 +1911,20 @@ input:disabled:not(:checked) ~ .c11 {
         />
       </svg>
     </div>
-    <i
-      className="icon-propiedades"
-      style={
-        {
-          "fontSize": "18px",
-          "height": "18px",
-          "width": "18px",
+    <div
+      className="c0 c15"
+    >
+      <i
+        className="icon-propiedades"
+        style={
+          {
+            "fontSize": "18px",
+            "height": "18px",
+            "width": "18px",
+          }
         }
-      }
-    />
+      />
+    </div>
   </button>
 </div>
 `;
@@ -1830,6 +2024,16 @@ input:checked ~ .c0 {
 
 input:focus ~ .c0 {
   box-shadow: active;
+}
+
+.c15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 10px;
+  height: 10px;
 }
 
 .c7 {
@@ -1976,16 +2180,25 @@ input:disabled:not(:checked) ~ .c11 {
         />
       </svg>
     </div>
-    <i
-      className="icon-propiedades"
+    <div
+      className="c0 c15"
       style={
         {
-          "fontSize": "10px",
-          "height": "10px",
-          "width": "10px",
+          "color": "#384248",
         }
       }
-    />
+    >
+      <i
+        className="icon-propiedades"
+        style={
+          {
+            "fontSize": "10px",
+            "height": "10px",
+            "width": "10px",
+          }
+        }
+      />
+    </div>
   </button>
 </div>
 `;
@@ -2418,6 +2631,14 @@ exports[`Button roundButton 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+}
+
 <div
   className="c0"
 >
@@ -2425,16 +2646,20 @@ exports[`Button roundButton 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-unificar"
-      style={
-        {
-          "fontSize": undefined,
-          "height": undefined,
-          "width": undefined,
+    <div
+      className="c2"
+    >
+      <i
+        className="icon-unificar"
+        style={
+          {
+            "fontSize": undefined,
+            "height": undefined,
+            "width": undefined,
+          }
         }
-      }
-    />
+      />
+    </div>
     <span>
       Label
     </span>
@@ -2485,6 +2710,14 @@ exports[`Button roundButtonColourFeedback 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+}
+
 <div
   className="c0"
 >
@@ -2492,16 +2725,20 @@ exports[`Button roundButtonColourFeedback 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-check"
-      style={
-        {
-          "fontSize": undefined,
-          "height": undefined,
-          "width": undefined,
+    <div
+      className="c2"
+    >
+      <i
+        className="icon-check"
+        style={
+          {
+            "fontSize": undefined,
+            "height": undefined,
+            "width": undefined,
+          }
         }
-      }
-    />
+      />
+    </div>
     <span>
       Label
     </span>
@@ -2552,6 +2789,14 @@ exports[`Button roundButtonDisabled 1`] = `
   position: relative;
 }
 
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+}
+
 <div
   className="c0"
 >
@@ -2559,16 +2804,20 @@ exports[`Button roundButtonDisabled 1`] = `
     className="c1"
     type="button"
   >
-    <i
-      className="icon-unificar"
-      style={
-        {
-          "fontSize": undefined,
-          "height": undefined,
-          "width": undefined,
+    <div
+      className="c2"
+    >
+      <i
+        className="icon-unificar"
+        style={
+          {
+            "fontSize": undefined,
+            "height": undefined,
+            "width": undefined,
+          }
         }
-      }
-    />
+      />
+    </div>
     <span>
       Label
     </span>

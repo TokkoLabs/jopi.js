@@ -112,6 +112,16 @@ exports[`Toast renders correctly 1`] = `
   color: white;
 }
 
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -146,16 +156,20 @@ exports[`Toast renders correctly 1`] = `
       onClick={[Function]}
       type="button"
     >
-      <i
-        className="icon-cerrar"
-        style={
-          {
-            "fontSize": "14px",
-            "height": "14px",
-            "width": "14px",
+      <div
+        className="c6"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "14px",
+              "height": "14px",
+              "width": "14px",
+            }
           }
-        }
-      />
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -286,6 +300,16 @@ exports[`Toast renders correctly five 1`] = `
   color: white;
 }
 
+.c9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -350,16 +374,20 @@ exports[`Toast renders correctly five 1`] = `
       onClick={[Function]}
       type="button"
     >
-      <i
-        className="icon-cerrar"
-        style={
-          {
-            "fontSize": "14px",
-            "height": "14px",
-            "width": "14px",
+      <div
+        className="c9"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "14px",
+              "height": "14px",
+              "width": "14px",
+            }
           }
-        }
-      />
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -420,6 +448,16 @@ exports[`Toast renders correctly four 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   font-family: primary;
   color: white;
   display: -webkit-box;
@@ -432,14 +470,14 @@ exports[`Toast renders correctly four 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -475,6 +513,16 @@ exports[`Toast renders correctly four 1`] = `
   color: white;
 }
 
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -492,18 +540,22 @@ exports[`Toast renders correctly four 1`] = `
   <div
     className="c2"
   >
-    <i
-      className="icon-check"
-      style={
-        {
-          "fontSize": "32px",
-          "height": "32px",
-          "width": "32px",
-        }
-      }
-    />
-    <p
+    <div
       className="c3"
+    >
+      <i
+        className="icon-check"
+        style={
+          {
+            "fontSize": "32px",
+            "height": "32px",
+            "width": "32px",
+          }
+        }
+      />
+    </div>
+    <p
+      className="c4"
       color="white"
       display="flex"
     >
@@ -511,24 +563,28 @@ exports[`Toast renders correctly four 1`] = `
     </p>
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <button
-      className="c5"
+      className="c6"
       color="white"
       onClick={[Function]}
       type="button"
     >
-      <i
-        className="icon-cerrar"
-        style={
-          {
-            "fontSize": "14px",
-            "height": "14px",
-            "width": "14px",
+      <div
+        className="c7"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "14px",
+              "height": "14px",
+              "width": "14px",
+            }
           }
-        }
-      />
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -589,6 +645,16 @@ exports[`Toast renders correctly four 2`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   font-family: primary;
   color: white;
   display: -webkit-box;
@@ -601,14 +667,14 @@ exports[`Toast renders correctly four 2`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -644,6 +710,16 @@ exports[`Toast renders correctly four 2`] = `
   color: white;
 }
 
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -661,18 +737,22 @@ exports[`Toast renders correctly four 2`] = `
   <div
     className="c2"
   >
-    <i
-      className="icon-error"
-      style={
-        {
-          "fontSize": "32px",
-          "height": "32px",
-          "width": "32px",
-        }
-      }
-    />
-    <p
+    <div
       className="c3"
+    >
+      <i
+        className="icon-error"
+        style={
+          {
+            "fontSize": "32px",
+            "height": "32px",
+            "width": "32px",
+          }
+        }
+      />
+    </div>
+    <p
+      className="c4"
       color="white"
       display="flex"
     >
@@ -680,24 +760,28 @@ exports[`Toast renders correctly four 2`] = `
     </p>
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <button
-      className="c5"
+      className="c6"
       color="white"
       onClick={[Function]}
       type="button"
     >
-      <i
-        className="icon-cerrar"
-        style={
-          {
-            "fontSize": "14px",
-            "height": "14px",
-            "width": "14px",
+      <div
+        className="c7"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "14px",
+              "height": "14px",
+              "width": "14px",
+            }
           }
-        }
-      />
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -758,6 +842,16 @@ exports[`Toast renders correctly seven 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   font-family: primary;
   color: white;
   display: -webkit-box;
@@ -770,14 +864,14 @@ exports[`Toast renders correctly seven 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -813,7 +907,17 @@ exports[`Toast renders correctly seven 1`] = `
   color: white;
 }
 
-.c6 {
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 12px;
+  height: 12px;
+}
+
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -849,6 +953,16 @@ exports[`Toast renders correctly seven 1`] = `
   color: white;
 }
 
+.c9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -866,42 +980,50 @@ exports[`Toast renders correctly seven 1`] = `
   <div
     className="c2"
   >
-    <i
-      className="icon-check"
-      style={
-        {
-          "fontSize": "32px",
-          "height": "32px",
-          "width": "32px",
-        }
-      }
-    />
-    <p
+    <div
       className="c3"
+    >
+      <i
+        className="icon-check"
+        style={
+          {
+            "fontSize": "32px",
+            "height": "32px",
+            "width": "32px",
+          }
+        }
+      />
+    </div>
+    <p
+      className="c4"
       color="white"
       display="flex"
     >
       Report export ready!
     </p>
     <div
-      className="c4"
+      className="c5"
     >
       <button
-        className="c5"
+        className="c6"
         color="white"
         onClick={[Function]}
         type="button"
       >
-        <i
-          className="icon-descargar"
-          style={
-            {
-              "fontSize": "12px",
-              "height": "12px",
-              "width": "12px",
+        <div
+          className="c7"
+        >
+          <i
+            className="icon-descargar"
+            style={
+              {
+                "fontSize": "12px",
+                "height": "12px",
+                "width": "12px",
+              }
             }
-          }
-        />
+          />
+        </div>
         <span>
           Download
         </span>
@@ -909,24 +1031,28 @@ exports[`Toast renders correctly seven 1`] = `
     </div>
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <button
-      className="c6"
+      className="c8"
       color="white"
       onClick={[Function]}
       type="button"
     >
-      <i
-        className="icon-cerrar"
-        style={
-          {
-            "fontSize": "14px",
-            "height": "14px",
-            "width": "14px",
+      <div
+        className="c9"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "14px",
+              "height": "14px",
+              "width": "14px",
+            }
           }
-        }
-      />
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -1057,6 +1183,16 @@ exports[`Toast renders correctly six 1`] = `
   color: white;
 }
 
+.c9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1121,16 +1257,20 @@ exports[`Toast renders correctly six 1`] = `
       onClick={[Function]}
       type="button"
     >
-      <i
-        className="icon-cerrar"
-        style={
-          {
-            "fontSize": "14px",
-            "height": "14px",
-            "width": "14px",
+      <div
+        className="c9"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "14px",
+              "height": "14px",
+              "width": "14px",
+            }
           }
-        }
-      />
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -1191,6 +1331,16 @@ exports[`Toast renders correctly three 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   font-family: primary;
   color: white;
   display: -webkit-box;
@@ -1203,14 +1353,14 @@ exports[`Toast renders correctly three 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   position: relative;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1246,6 +1396,16 @@ exports[`Toast renders correctly three 1`] = `
   color: white;
 }
 
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1263,18 +1423,22 @@ exports[`Toast renders correctly three 1`] = `
   <div
     className="c2"
   >
-    <i
-      className="icon-alertas"
-      style={
-        {
-          "fontSize": "32px",
-          "height": "32px",
-          "width": "32px",
-        }
-      }
-    />
-    <p
+    <div
       className="c3"
+    >
+      <i
+        className="icon-alertas"
+        style={
+          {
+            "fontSize": "32px",
+            "height": "32px",
+            "width": "32px",
+          }
+        }
+      />
+    </div>
+    <p
+      className="c4"
       color="white"
       display="flex"
     >
@@ -1282,24 +1446,28 @@ exports[`Toast renders correctly three 1`] = `
     </p>
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <button
-      className="c5"
+      className="c6"
       color="white"
       onClick={[Function]}
       type="button"
     >
-      <i
-        className="icon-cerrar"
-        style={
-          {
-            "fontSize": "14px",
-            "height": "14px",
-            "width": "14px",
+      <div
+        className="c7"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "14px",
+              "height": "14px",
+              "width": "14px",
+            }
           }
-        }
-      />
+        />
+      </div>
     </button>
   </div>
 </div>
