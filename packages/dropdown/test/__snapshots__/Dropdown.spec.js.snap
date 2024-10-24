@@ -83,6 +83,26 @@ exports[`Dropdown DropdownDefault 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 12px;
+  height: 12px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -106,7 +126,7 @@ exports[`Dropdown DropdownDefault 1`] = `
   width: 100%;
 }
 
-.c4 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -141,14 +161,14 @@ exports[`Dropdown DropdownDefault 1`] = `
   border-radius: 12px;
 }
 
-.c5 {
+.c7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-family: primary;
 }
 
-.c6 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -189,16 +209,25 @@ exports[`Dropdown DropdownDefault 1`] = `
       id="button"
       type="button"
     >
-      <i
-        className="icon-cerrar"
+      <div
+        className="c3"
         style={
           {
-            "fontSize": "16px",
-            "height": "16px",
-            "width": "16px",
+            "color": "#FFFFFF",
           }
         }
-      />
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "16px",
+              "height": "16px",
+              "width": "16px",
+            }
+          }
+        />
+      </div>
       <span
         style={
           {
@@ -209,20 +238,32 @@ exports[`Dropdown DropdownDefault 1`] = `
           }
         }
       />
-      <i
-        className="icon-dropdown"
+      <div
+        className="c4"
         style={
           {
-            "fontSize": "12px",
-            "height": "12px",
-            "width": "12px",
+            "color": "#FFFFFF",
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
           }
         }
-      />
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "fontSize": "12px",
+              "height": "12px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
   <li
-    className="c3"
+    className="c5"
     width={1}
   >
     <div
@@ -236,7 +277,7 @@ exports[`Dropdown DropdownDefault 1`] = `
         className="c1"
       >
         <button
-          className="c4"
+          className="c6"
           style={
             {
               "borderRadius": "0px",
@@ -245,7 +286,7 @@ exports[`Dropdown DropdownDefault 1`] = `
           type="button"
         >
           <p
-            className="c5"
+            className="c7"
             style={
               {
                 "padding": "9px 12px 9px 12px",
@@ -259,7 +300,7 @@ exports[`Dropdown DropdownDefault 1`] = `
     </div>
   </li>
   <li
-    className="c6"
+    className="c8"
     width={1}
   >
     <div
@@ -273,7 +314,7 @@ exports[`Dropdown DropdownDefault 1`] = `
         className="c1"
       >
         <button
-          className="c4"
+          className="c6"
           style={
             {
               "borderRadius": "0px",
@@ -282,7 +323,7 @@ exports[`Dropdown DropdownDefault 1`] = `
           type="button"
         >
           <p
-            className="c5"
+            className="c7"
             style={
               {
                 "padding": "9px 12px 9px 12px",
@@ -379,6 +420,16 @@ exports[`Dropdown DropdownItem 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 16px;
@@ -398,7 +449,7 @@ exports[`Dropdown DropdownItem 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -406,7 +457,7 @@ exports[`Dropdown DropdownItem 1`] = `
   height: 18px;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -418,7 +469,7 @@ exports[`Dropdown DropdownItem 1`] = `
   cursor: pointer;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -435,7 +486,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -454,42 +505,42 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-family: primary;
 }
 
-.c9 {
+.c10 {
   display: none;
 }
 
-input:checked:not(:disabled) ~ .c8 {
+input:checked:not(:disabled) ~ .c9 {
   display: block;
 }
 
-.c12 {
+.c13 {
   display: none;
 }
 
-input:not(:checked):not(:disabled) ~ .c11 {
+input:not(:checked):not(:disabled) ~ .c12 {
   display: block;
 }
 
-.c16 {
+.c17 {
   display: none;
 }
 
-input:checked:disabled ~ .c15 {
+input:checked:disabled ~ .c16 {
   display: block;
 }
 
-.c14 {
+.c15 {
   display: none;
 }
 
-input:disabled:not(:checked) ~ .c13 {
+input:disabled:not(:checked) ~ .c14 {
   display: block;
 }
 
@@ -509,43 +560,58 @@ input:disabled:not(:checked) ~ .c13 {
       onClick={[Function]}
       type="button"
     >
-      <i
-        className="icon-cerrar"
-        style={
-          {
-            "fontSize": "16px",
-            "height": "16px",
-            "width": "16px",
+      <div
+        className="c0 c4"
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "16px",
+              "height": "16px",
+              "width": "16px",
+            }
           }
-        }
-      />
+        />
+      </div>
       <span />
-      <i
-        className="icon-dropdown"
+      <div
+        className="c0 c4"
         style={
           {
-            "fontSize": "16px",
-            "height": "16px",
-            "width": "16px",
+            "position": "static",
+            "right": "12px",
+            "transform": "rotate(0deg)",
           }
         }
-      />
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "fontSize": "16px",
+              "height": "16px",
+              "width": "16px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
   <li
-    className="c0 c4"
+    className="c0 c5"
     width={1}
   >
     <div
-      className="c0 c5"
+      className="c0 c6"
     >
       <input
-        className="c0 c6"
+        className="c0 c7"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        className="c0 c7 c8 c9 c0 c10"
+        className="c0 c8 c9 c10 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -571,7 +637,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c11 c12 c0 c10"
+        className="c0 c8 c12 c13 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -591,7 +657,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c13 c14 c0 c10"
+        className="c0 c8 c14 c15 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -611,7 +677,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c15 c16 c0 c10"
+        className="c0 c8 c16 c17 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -637,7 +703,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
     </div>
     <p
-      className="c0 c17"
+      className="c0 c18"
       style={
         {
           "padding": "9px 12px 9px 12px",
@@ -648,19 +714,19 @@ input:disabled:not(:checked) ~ .c13 {
     </p>
   </li>
   <li
-    className="c0 c4"
+    className="c0 c5"
     width={1}
   >
     <div
-      className="c0 c5"
+      className="c0 c6"
     >
       <input
-        className="c0 c6"
+        className="c0 c7"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        className="c0 c7 c8 c9 c0 c10"
+        className="c0 c8 c9 c10 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -686,7 +752,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c11 c12 c0 c10"
+        className="c0 c8 c12 c13 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -706,7 +772,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c13 c14 c0 c10"
+        className="c0 c8 c14 c15 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -726,7 +792,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
       <svg
         aria-hidden="true"
-        className="c0 c7 c15 c16 c0 c10"
+        className="c0 c8 c16 c17 c0 c11"
         fill="none"
         height={16}
         viewBox="0 0 16 16"
@@ -752,7 +818,7 @@ input:disabled:not(:checked) ~ .c13 {
       </svg>
     </div>
     <p
-      className="c0 c17"
+      className="c0 c18"
       style={
         {
           "padding": "9px 12px 9px 12px",
@@ -1015,6 +1081,16 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1038,7 +1114,7 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1046,7 +1122,7 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1078,7 +1154,7 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   position: relative;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1086,7 +1162,7 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   height: 18px;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1098,7 +1174,7 @@ exports[`Dropdown DropdownListMultiselect 1`] = `
   cursor: pointer;
 }
 
-.c12 {
+.c13 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1115,7 +1191,7 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c9 {
+.c10 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1134,14 +1210,14 @@ input:focus ~ .c0 {
   box-shadow: active;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-family: primary;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1163,7 +1239,7 @@ input:focus ~ .c0 {
   width: 100%;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1195,35 +1271,35 @@ input:focus ~ .c0 {
   position: relative;
 }
 
-.c11 {
+.c12 {
   display: none;
 }
 
-input:checked:not(:disabled) ~ .c10 {
+input:checked:not(:disabled) ~ .c11 {
   display: block;
 }
 
-.c14 {
+.c15 {
   display: none;
 }
 
-input:not(:checked):not(:disabled) ~ .c13 {
+input:not(:checked):not(:disabled) ~ .c14 {
   display: block;
 }
 
-.c18 {
+.c19 {
   display: none;
 }
 
-input:checked:disabled ~ .c17 {
+input:checked:disabled ~ .c18 {
   display: block;
 }
 
-.c16 {
+.c17 {
   display: none;
 }
 
-input:disabled:not(:checked) ~ .c15 {
+input:disabled:not(:checked) ~ .c16 {
   display: block;
 }
 
@@ -1250,20 +1326,29 @@ input:disabled:not(:checked) ~ .c15 {
       onClick={[Function]}
       type="button"
     >
-      <i
-        className="icon-cerrar"
+      <div
+        className="c0 c4"
         style={
           {
-            "fontSize": "14px",
-            "height": "14px",
-            "width": "14px",
+            "color": "#FFFFFF",
           }
         }
-      />
+      >
+        <i
+          className="icon-cerrar"
+          style={
+            {
+              "fontSize": "14px",
+              "height": "14px",
+              "width": "14px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
   <li
-    className="c0 c4"
+    className="c0 c5"
     width={1}
   >
     <div
@@ -1274,10 +1359,10 @@ input:disabled:not(:checked) ~ .c15 {
       }
     >
       <div
-        className="c0 c5"
+        className="c0 c6"
       >
         <button
-          className="c0 c6"
+          className="c0 c7"
           onClick={[Function]}
           style={
             {
@@ -1287,17 +1372,17 @@ input:disabled:not(:checked) ~ .c15 {
           type="button"
         >
           <div
-            className="c0 c7"
+            className="c0 c8"
           >
             <input
-              className="c0 c8"
+              className="c0 c9"
               defaultChecked={false}
               disabled={true}
               type="checkbox"
             />
             <svg
               aria-hidden="true"
-              className="c0 c9 c10 c11 c0 c12"
+              className="c0 c10 c11 c12 c0 c13"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -1323,7 +1408,7 @@ input:disabled:not(:checked) ~ .c15 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c9 c13 c14 c0 c12"
+              className="c0 c10 c14 c15 c0 c13"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -1343,7 +1428,7 @@ input:disabled:not(:checked) ~ .c15 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c9 c15 c16 c0 c12"
+              className="c0 c10 c16 c17 c0 c13"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -1363,7 +1448,7 @@ input:disabled:not(:checked) ~ .c15 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c9 c17 c18 c0 c12"
+              className="c0 c10 c18 c19 c0 c13"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -1397,7 +1482,7 @@ input:disabled:not(:checked) ~ .c15 {
             }
           >
             <p
-              className="c0 c19"
+              className="c0 c20"
               style={
                 {
                   "padding": "9px 12px 9px 12px",
@@ -1412,7 +1497,7 @@ input:disabled:not(:checked) ~ .c15 {
     </div>
   </li>
   <li
-    className="c0 c20"
+    className="c0 c21"
     width={1}
   >
     <div
@@ -1423,10 +1508,10 @@ input:disabled:not(:checked) ~ .c15 {
       }
     >
       <div
-        className="c0 c5"
+        className="c0 c6"
       >
         <button
-          className="c0 c21"
+          className="c0 c22"
           onClick={[Function]}
           style={
             {
@@ -1436,17 +1521,17 @@ input:disabled:not(:checked) ~ .c15 {
           type="button"
         >
           <div
-            className="c0 c7"
+            className="c0 c8"
           >
             <input
-              className="c0 c8"
+              className="c0 c9"
               defaultChecked={true}
               disabled={false}
               type="checkbox"
             />
             <svg
               aria-hidden="true"
-              className="c0 c9 c10 c11 c0 c12"
+              className="c0 c10 c11 c12 c0 c13"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -1472,7 +1557,7 @@ input:disabled:not(:checked) ~ .c15 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c9 c13 c14 c0 c12"
+              className="c0 c10 c14 c15 c0 c13"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -1492,7 +1577,7 @@ input:disabled:not(:checked) ~ .c15 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c9 c15 c16 c0 c12"
+              className="c0 c10 c16 c17 c0 c13"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -1512,7 +1597,7 @@ input:disabled:not(:checked) ~ .c15 {
             </svg>
             <svg
               aria-hidden="true"
-              className="c0 c9 c17 c18 c0 c12"
+              className="c0 c10 c18 c19 c0 c13"
               fill="none"
               height={16}
               viewBox="0 0 16 16"
@@ -1546,7 +1631,7 @@ input:disabled:not(:checked) ~ .c15 {
             }
           >
             <p
-              className="c0 c19"
+              className="c0 c20"
               style={
                 {
                   "padding": "9px 12px 9px 12px",
@@ -1640,6 +1725,16 @@ exports[`Dropdown DropdownMultiselect 1`] = `
   flex: 1;
 }
 
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 12px;
+  height: 12px;
+}
+
 @media screen and (min-width:40em) {
 
 }
@@ -1656,16 +1751,27 @@ exports[`Dropdown DropdownMultiselect 1`] = `
       type="button"
     >
       <span />
-      <i
-        className="icon-dropdown"
+      <div
+        className="c3"
         style={
           {
-            "fontSize": "12px",
-            "height": "12px",
-            "width": "12px",
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
           }
         }
-      />
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "fontSize": "12px",
+              "height": "12px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -1722,6 +1828,16 @@ exports[`Dropdown DropdownMultiselect 2`] = `
   position: relative;
 }
 
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+}
+
 @media screen and (min-width:40em) {
 
 }
@@ -1736,16 +1852,25 @@ exports[`Dropdown DropdownMultiselect 2`] = `
       className="c2"
       type="button"
     >
-      <i
-        className="icon-configuracion"
+      <div
+        className="c3"
         style={
           {
-            "fontSize": 14,
-            "height": 14,
-            "width": 14,
+            "color": "#A6B2BA",
           }
         }
-      />
+      >
+        <i
+          className="icon-configuracion"
+          style={
+            {
+              "fontSize": 14,
+              "height": 14,
+              "width": 14,
+            }
+          }
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -1831,6 +1956,16 @@ exports[`Dropdown DropdownSelection 1`] = `
   flex: 1;
 }
 
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 12px;
+  height: 12px;
+}
+
 @media screen and (min-width:40em) {
 
 }
@@ -1860,16 +1995,27 @@ exports[`Dropdown DropdownSelection 1`] = `
       >
         Seleccion
       </span>
-      <i
-        className="icon-dropdown"
+      <div
+        className="c3"
         style={
           {
-            "fontSize": "12px",
-            "height": "12px",
-            "width": "12px",
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
           }
         }
-      />
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "fontSize": "12px",
+              "height": "12px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
 </div>
@@ -1953,6 +2099,16 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
   flex: 1;
 }
 
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 12px;
+  height: 12px;
+}
+
 @media screen and (min-width:40em) {
 
 }
@@ -1981,16 +2137,27 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
       >
         Seleccion
       </span>
-      <i
-        className="icon-dropdown"
+      <div
+        className="c3"
         style={
           {
-            "fontSize": "12px",
-            "height": "12px",
-            "width": "12px",
+            "position": "absolute",
+            "right": "12px",
+            "transform": "rotate(0deg)",
           }
         }
-      />
+      >
+        <i
+          className="icon-dropdown"
+          style={
+            {
+              "fontSize": "12px",
+              "height": "12px",
+              "width": "12px",
+            }
+          }
+        />
+      </div>
     </button>
   </div>
 </div>

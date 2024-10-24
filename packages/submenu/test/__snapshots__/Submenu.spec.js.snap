@@ -60,6 +60,16 @@ exports[`Submenu first case 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -81,7 +91,7 @@ exports[`Submenu first case 1`] = `
   justify-content: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -89,7 +99,7 @@ exports[`Submenu first case 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -121,6 +131,16 @@ exports[`Submenu first case 1`] = `
   position: relative;
 }
 
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 12px;
+  height: 12px;
+}
+
 <div
   style={
     {
@@ -145,16 +165,25 @@ exports[`Submenu first case 1`] = `
           className="c2"
           type="button"
         >
-          <i
-            className="icon-propiedades"
+          <div
+            className="c3"
             style={
               {
-                "fontSize": "18px",
-                "height": "18px",
-                "width": "18px",
+                "color": "#485C66",
               }
             }
-          />
+          >
+            <i
+              className="icon-propiedades"
+              style={
+                {
+                  "fontSize": "18px",
+                  "height": "18px",
+                  "width": "18px",
+                }
+              }
+            />
+          </div>
         </button>
       </div>
     </div>
@@ -173,113 +202,133 @@ exports[`Submenu first case 1`] = `
       className="c0"
     >
       <div
-        className="c3"
+        className="c4"
       >
         <div
-          className="c4"
+          className="c5"
         >
           <button
-            className="c5"
+            className="c6"
             type="button"
           >
-            <i
-              className="icon-contactos"
-              style={
-                {
-                  "fontSize": "12px",
-                  "height": "12px",
-                  "width": "12px",
+            <div
+              className="c7"
+            >
+              <i
+                className="icon-contactos"
+                style={
+                  {
+                    "fontSize": "12px",
+                    "height": "12px",
+                    "width": "12px",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <span>
               Contacto
             </span>
           </button>
         </div>
         <div
-          className="c4"
+          className="c5"
         >
           <button
-            className="c5"
+            className="c6"
             type="button"
           >
-            <i
-              className="icon-empresa"
-              style={
-                {
-                  "fontSize": "12px",
-                  "height": "12px",
-                  "width": "12px",
+            <div
+              className="c7"
+            >
+              <i
+                className="icon-empresa"
+                style={
+                  {
+                    "fontSize": "12px",
+                    "height": "12px",
+                    "width": "12px",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <span>
               Empresa
             </span>
           </button>
         </div>
         <div
-          className="c4"
+          className="c5"
         >
           <button
-            className="c5"
+            className="c6"
             type="button"
           >
-            <i
-              className="icon-propiedades"
-              style={
-                {
-                  "fontSize": "12px",
-                  "height": "12px",
-                  "width": "12px",
+            <div
+              className="c7"
+            >
+              <i
+                className="icon-propiedades"
+                style={
+                  {
+                    "fontSize": "12px",
+                    "height": "12px",
+                    "width": "12px",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <span>
               Propiedad
             </span>
           </button>
         </div>
         <div
-          className="c4"
+          className="c5"
         >
           <button
-            className="c5"
+            className="c6"
             type="button"
           >
-            <i
-              className="icon-emprendimientos"
-              style={
-                {
-                  "fontSize": "12px",
-                  "height": "12px",
-                  "width": "12px",
+            <div
+              className="c7"
+            >
+              <i
+                className="icon-emprendimientos"
+                style={
+                  {
+                    "fontSize": "12px",
+                    "height": "12px",
+                    "width": "12px",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <span>
               Emprendimiento
             </span>
           </button>
         </div>
         <div
-          className="c4"
+          className="c5"
         >
           <button
-            className="c5"
+            className="c6"
             type="button"
           >
-            <i
-              className="icon-email"
-              style={
-                {
-                  "fontSize": "12px",
-                  "height": "12px",
-                  "width": "12px",
+            <div
+              className="c7"
+            >
+              <i
+                className="icon-email"
+                style={
+                  {
+                    "fontSize": "12px",
+                    "height": "12px",
+                    "width": "12px",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <span>
               Email
             </span>

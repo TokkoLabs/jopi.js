@@ -139,6 +139,16 @@ exports[`Collapsible main 1`] = `
   overflow: hidden;
 }
 
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
 @media screen and (min-width:40em) {
 
 }
@@ -154,16 +164,25 @@ exports[`Collapsible main 1`] = `
         className="c2"
         type="button"
       >
-        <i
-          className="icon-emprendimientos"
+        <div
+          className="c3"
           style={
             {
-              "fontSize": "16px",
-              "height": "16px",
-              "width": "16px",
+              "color": "#DF1E02",
             }
           }
-        />
+        >
+          <i
+            className="icon-emprendimientos"
+            style={
+              {
+                "fontSize": "16px",
+                "height": "16px",
+                "width": "16px",
+              }
+            }
+          />
+        </div>
         <span
           style={
             {
@@ -199,6 +218,16 @@ exports[`Collapsible main 1`] = `
   position: relative;
 }
 
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
 .c2 {
   box-sizing: border-box;
   margin: 0;
@@ -254,16 +283,25 @@ exports[`Collapsible main 1`] = `
         className="c2"
         type="button"
       >
-        <i
-          className="icon-emprendimientos"
+        <div
+          className="c3"
           style={
             {
-              "fontSize": "16px",
-              "height": "16px",
-              "width": "16px",
+              "color": "#485C66",
             }
           }
-        />
+        >
+          <i
+            className="icon-emprendimientos"
+            style={
+              {
+                "fontSize": "16px",
+                "height": "16px",
+                "width": "16px",
+              }
+            }
+          />
+        </div>
         <span
           style={
             {
@@ -289,6 +327,16 @@ exports[`Collapsible main 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
 }
 
 .c2 {
@@ -331,7 +379,7 @@ exports[`Collapsible main 1`] = `
   overflow: hidden;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -371,16 +419,25 @@ exports[`Collapsible main 1`] = `
         className="c2"
         type="button"
       >
-        <i
-          className="icon-emprendimientos"
+        <div
+          className="c3"
           style={
             {
-              "fontSize": "16px",
-              "height": "16px",
-              "width": "16px",
+              "color": "#485C66",
             }
           }
-        />
+        >
+          <i
+            className="icon-emprendimientos"
+            style={
+              {
+                "fontSize": "16px",
+                "height": "16px",
+                "width": "16px",
+              }
+            }
+          />
+        </div>
         <span
           style={
             {
@@ -392,7 +449,7 @@ exports[`Collapsible main 1`] = `
           Emprendimientos
         </span>
         <div
-          className="c3"
+          className="c4"
           style={
             {
               "position": "absolute",
