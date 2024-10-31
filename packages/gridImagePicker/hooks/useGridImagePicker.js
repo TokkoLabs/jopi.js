@@ -18,7 +18,7 @@ function useGridImagePicker ({
   maxSizeInMB,
   minAspectRatio,
   maxAspectRatio,
-  onChange
+  onChange,
 }) {
   const [isDraggingActive, setIsDraggingActive] = useState(false)
   const [items, setItems] = useState(() => getItemsInitialState(listOfSrc))
@@ -47,28 +47,28 @@ function useGridImagePicker ({
   }, [itemsAreReady])
 
   const handleClickItem = useCallback((targetItem) => {
-    const isUnclickable = !isItemClickable(targetItem, isMaxSelectableReached);
+    const isUnclickable = !isItemClickable(targetItem, isMaxSelectableReached)
     if (isUnclickable) return
-  
+
     const updatedItems = targetItem.checked
       ? getUpdatedItemsWithDecrement(items, targetItem)
       : getUpdatedItemsWithIncrement(items, targetItem)
-  
+
     const refreshedItems = refreshItemsPosition(updatedItems)
     setItems(refreshedItems)
   }, [isMaxSelectableReached, items])
-  
+
   const handleSelectAll = useCallback(() => {
     const newItems = getSelectAllItems(items, maxSelectable)
     const refreshedItems = refreshItemsPosition(newItems)
     setItems(refreshedItems)
   }, [items, maxSelectable])
-  
+
   const handleDeselectAll = useCallback(() => {
     const newItems = getDeselectAllItems(items)
     setItems(newItems)
   }, [items])
-  
+
   const handleUpdateItem = useCallback(({ id, ...restOfKeys }) => {
     const newItems = items.map(item => item.id === id
       ? { ...item, ...restOfKeys }
@@ -76,7 +76,7 @@ function useGridImagePicker ({
     )
     setItems(newItems)
   }, [items])
-  
+
   const handleDragStart = () => {
     setIsDraggingActive(true)
   }
@@ -101,7 +101,7 @@ function useGridImagePicker ({
       handleDeselectAll,
       handleSelectAll,
       handleDragStart,
-      handleDragEnd
+      handleDragEnd,
     },
   }
 }

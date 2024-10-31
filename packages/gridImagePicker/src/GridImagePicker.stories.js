@@ -1,3 +1,4 @@
+import React from 'react'
 import { GridImagePicker } from '.'
 
 const INSTAGRAM_RECOMMENDED_MIN_ASPECT_RATIO = 4 / 5

@@ -1,4 +1,4 @@
-import { isItemClickable } from "./manageItem"
+import { isItemClickable } from './manageItem'
 
 export const getItemsInitialState = (listOfSrc) => {
   const initializedItem = listOfSrc.map((src, index) => ({
@@ -11,7 +11,7 @@ export const getItemsInitialState = (listOfSrc) => {
     aspectRatio: 0,
     aspectRatioError: false,
     fetchError: false,
-    loading: true
+    loading: true,
   }))
 
   return initializedItem
@@ -61,13 +61,13 @@ export const fillCheckedItems = (listOfItems, maxSelectable) => {
 }
 
 export const refreshItemsPosition = (items) => {
-  let currentPosition = 1;
+  let currentPosition = 1
 
   return items.map((item) => ({
     ...item,
     position: item.checked ? currentPosition++ : 0,
-  }));
-};
+  }))
+}
 
 export const getSelectAllItems = (listOfItems, maxSelect) => {
   let countAlreadyChecked = listOfItems.filter(item => item.checked).length

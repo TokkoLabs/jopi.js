@@ -1,4 +1,4 @@
-
+import React from 'react'
 import { DndContext, closestCenter, MouseSensor, useSensor, useSensors } from '@dnd-kit/core'
 import { SortableContext, rectSortingStrategy } from '@dnd-kit/sortable'
 import { Box } from '@oneloop/box'
@@ -33,7 +33,7 @@ export const GridImagePicker = ({
     maxSizeInMB,
     minAspectRatio,
     maxAspectRatio,
-    onChange
+    onChange,
   })
   const { items, config, status } = attributes
   const {
@@ -42,7 +42,7 @@ export const GridImagePicker = ({
     handleDeselectAll,
     handleSelectAll,
     handleDragStart,
-    handleDragEnd
+    handleDragEnd,
   } = methods
 
   const sensors = useSensors(

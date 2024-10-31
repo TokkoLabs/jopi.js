@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { Box } from '@oneloop/box'
@@ -13,7 +13,7 @@ const ImageItem = ({
   handleClick,
   handleUpdateItem,
   status,
-  config
+  config,
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: item.id })
   const [size, isLoadingSize, isErrorSize] = useSize(item.src)
@@ -49,7 +49,7 @@ const ImageItem = ({
       __css={{ backgroundImage }}
       style={{
         transform: CSS.Transform.toString(transform),
-        transition
+        transition,
       }}
       { ...attributes }
       {...listeners }

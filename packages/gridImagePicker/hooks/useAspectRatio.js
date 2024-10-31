@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
-function useAspectRatio(src) {
+function useAspectRatio (src) {
   const [data, setData] = useState({
     aspectRatio: 0,
     loading: true,
-    error: false
+    error: false,
   })
 
   useEffect(() => {
     const fetchAspectRatio = async (src) => {
       try {
         setData({ aspectRatio: 0, loading: true, error: false })
-        
-        const img = new Image()
+
+        const img = new document.Image()
         img.src = src
-        
+
         img.onload = () => {
           const aspectRatio = img.width / img.height
           setData({ aspectRatio, loading: false, error: false })
