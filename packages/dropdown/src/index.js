@@ -80,6 +80,9 @@ const DropdownButton = ({ icon, text, variant = 'dropdown', disabled = false, fi
         border: filled && borderFilled,
         backgroundColor: filled && backgroundColorFilled,
         justifyContent: isArrowStatic ? 'center' : 'flex-start',
+        '& span': {
+          flex: 1,
+        },
       }}
     >
       { icon && (!filled ? <Icon icon={icon} fontSize='16px'/> : <Icon icon={icon} fontSize='16px' style={{ color: colorFilled }}/>) }

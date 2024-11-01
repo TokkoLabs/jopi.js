@@ -73,6 +73,12 @@ exports[`Dropdown DropdownDefault 1`] = `
   justify-content: flex-start;
 }
 
+.c2 span {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .c3 {
   box-sizing: border-box;
   margin: 0;
@@ -402,6 +408,12 @@ exports[`Dropdown DropdownItem 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.c3 span {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c4 {
@@ -1707,6 +1719,12 @@ exports[`Dropdown DropdownMultiselect 1`] = `
   justify-content: flex-start;
 }
 
+.c2 span {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .c3 {
   box-sizing: border-box;
   margin: 0;
@@ -1932,6 +1950,12 @@ exports[`Dropdown DropdownSelection 1`] = `
   justify-content: flex-start;
 }
 
+.c2 span {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .c3 {
   box-sizing: border-box;
   margin: 0;
@@ -2067,6 +2091,12 @@ exports[`Dropdown DropdownSelectionDisabled 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+}
+
+.c2 span {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c3 {
