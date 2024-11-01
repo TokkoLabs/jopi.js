@@ -1,18 +1,18 @@
 {
   "name": "@oneloop/gridimagepicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
-    "@oneloop/icons": "^1.2.309",
     "@dnd-kit/core": "^6.0.8",
-    "@dnd-kit/sortable": "^7.0.2",
     "@dnd-kit/modifiers": "^7.0.0",
-    "@dnd-kit/utilities": "^3.2.2"
+    "@dnd-kit/sortable": "^7.0.2",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@oneloop/box": "^1.2.285",
+    "@oneloop/icons": "^1.2.309"
   },
   "peerDependencies": {
     "react": "^16.8.0"
