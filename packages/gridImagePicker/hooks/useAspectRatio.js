@@ -12,7 +12,7 @@ function useAspectRatio (src) {
       try {
         setData({ aspectRatio: 0, loading: true, error: false })
 
-        const img = new document.Image()
+        const img = new window.Image()
         img.src = src
 
         img.onload = () => {

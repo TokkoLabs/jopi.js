@@ -15,9 +15,8 @@ function useSize (src) {
         const blob = await response.blob()
 
         const sizeInMegaBytes = (blob.size / 1024) / 1024
-        const truncatedSize = Math.floor(sizeInMegaBytes * 100) / 100
 
-        setData({ size: truncatedSize, loading: false, error: false })
+        setData({ size: sizeInMegaBytes, loading: false, error: false })
       } catch (error) {
         console.error(error)
         setData({ size: 0, loading: false, error: true })
