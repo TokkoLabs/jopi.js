@@ -43,6 +43,7 @@ const ImageItem = ({
       as="button"
       className="imageItemWrapper"
       onClick={() => handleClick(item)}
+      data-active={item.checked}
       data-disabled={unclickable}
       data-error={isError}
       data-dragging={isDraggingActive}

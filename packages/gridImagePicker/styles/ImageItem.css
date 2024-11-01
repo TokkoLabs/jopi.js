@@ -12,13 +12,32 @@
   justify-content: center;
   padding: 0;
   position: relative;
-  transition: outline-color 100ms linear;
   width: 90px;
+}
+
+.imageItemWrapper::before {
+  border: 2px solid transparent;
+  border-radius: inherit;
+  box-sizing: border-box;
+  content: '';  
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: border-color 100ms linear;
+  width: 100%;
+}
+
+.imageItemWrapper[data-active="true"]::before {
+  border-color: #1A4958;
 }
 
 .imageItemWrapper::after {
   background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: inherit;
+  box-sizing: border-box;
   content: '';
   height: 100%;
   left: 0;
@@ -26,11 +45,22 @@
   pointer-events: none;
   position: absolute;
   top: 0;
-  transition: opacity 100ms linear;
+  transition: opacity 100ms linear, background-color 100ms linear, border-color 100ms linear;
   width: 100%;
 }
 
 .imageItemWrapper[data-disabled="true"]::after {
+  opacity: 1;
+}
+
+.imageItemWrapper[data-disabled="false"][data-active="false"]::after {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.imageItemWrapper[data-disabled="false"][data-active="true"]::after {
+  background-color: #1D23274D;
+  border-color: #1A4958;
   opacity: 1;
 }
 
@@ -146,7 +176,7 @@
 .imageItemCover {
   align-items: flex-end;
   background-color: transparent;
-  border: 2px solid #1A4958;
+  border: 2px solid transparent;
   border-radius: 9px;
   display: flex;
   height: 100%;
@@ -157,6 +187,7 @@
   top: 0;
   transition: opacity 100ms linear;
   width: 100%;
+  z-index: 5;
 }
 
 .imageItemCover[data-visible="true"] {
@@ -175,13 +206,13 @@
 }
 
 .imageItemIconCheck {
-  font-size: 14px;
   color: #FFFFFF;
+  font-size: 14px;
   min-width: unset!important;
 }
 
 .imageItemIconError {
-  font-size: 20px;
   color: #FFFFFF;
+  font-size: 20px;
   min-width: unset!important;
 }
