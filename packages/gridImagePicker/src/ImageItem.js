@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
+import { Check, Icon } from '@oneloop/icons'
 import useSize from '../hooks/useSize'
 import useAspectRatio from '../hooks/useAspectRatio'
 import { getTooltipErrorText } from '../utils/getTooltipErrorText'
@@ -63,7 +63,7 @@ const ImageItem = ({
       </Box>
 
       <Box className="imageItemCheckbox" data-active={item.checked} data-visible={!unclickable}>
-        <Icon icon="icon-adicionales" className="imageItemIconCheck" />
+        <Check className="imageItemIconCheck" color="white" />
       </Box>
 
       <Box className="imageItemError" data-visible={isError && !isLoading}>
