@@ -11,11 +11,11 @@ configure({ adapter: new Adapter() })
 const OriginalImage = global.Image
 
 describe('GridImagePicker', () => {
-  beforeAll(async () => {
+  beforeAll(() => {
     mockFetch()
 
     global.Image = class {
-      constructor () {
+      constructor() {
         setTimeout(() => {
           this.height = 100
           this.width = 250
@@ -27,75 +27,54 @@ describe('GridImagePicker', () => {
 
   afterAll(() => {
     restoreFetch()
-
     global.Image = OriginalImage
   })
 
-  it('Should render properly', async () => {
+  const mountGridImagePicker = async (props = {}) => {
     let wrapper
-
     await act(async () => {
-      wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} />)
+      wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} {...props} />)
       await new Promise(resolve => setTimeout(resolve, 0))
     })
+    wrapper.update()
+    return wrapper
+  }
 
+  it('Should render properly', async () => {
+    const wrapper = await mountGridImagePicker()
     expect(wrapper).toBeDefined()
   })
 
   it('Should render control buttons properly', async () => {
-    let wrapper
+    const wrapper = await mountGridImagePicker()
 
-    await act(async () => {
-      wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} />)
-      await new Promise(resolve => setTimeout(resolve, 100))
-    })
+    const selectButton = wrapper.find({ children: 'Select' })
+    const deselectButton = wrapper.find({ children: 'Deselect' })
 
-    const selectableButton = wrapper.find({ children: 'Select' })
-    const deselectableButton = wrapper.find({ children: 'Deselect' })
-
-    expect(selectableButton).toBeDefined()
-    expect(deselectableButton).toBeDefined()
+    expect(selectButton).toBeDefined()
+    expect(deselectButton).toBeDefined()
   })
 
-  it('Should have an error based on aspect ratio', async () => {
-    let wrapper
+  it('Should display an error based on aspect ratio', async () => {
+    const wrapper = await mountGridImagePicker({ minAspectRatio: 14 })
 
-    await act(async () => {
-      wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} minAspectRatio={14} />)
-      await new Promise(resolve => setTimeout(resolve, 0))
-    })
-    wrapper.update()
-
-    const imageItems = wrapper.find('.imageItemError').hostNodes()
-
-    imageItems.forEach(item => {
+    const errorItems = wrapper.find('.imageItemError').hostNodes()
+    errorItems.forEach(item => {
       expect(item.prop('data-visible')).toBe(true)
     })
   })
 
-  it('Should have an error based on size', async () => {
-    let wrapper
+  it('Should display an error based on size', async () => {
+    const wrapper = await mountGridImagePicker({ maxSizeInMB: 0 })
 
-    await act(async () => {
-      wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} maxSizeInMB={0} />)
-      await new Promise(resolve => setTimeout(resolve, 0))
-    })
-    wrapper.update()
-
-    const imageItems = wrapper.find('.imageItemError').hostNodes()
-
-    imageItems.forEach((item, index) => {
+    const errorItems = wrapper.find('.imageItemError').hostNodes()
+    errorItems.forEach(item => {
       expect(item.prop('data-visible')).toBe(true)
     })
   })
 
-  it('Should be all (possible) items active after selection toggles', async () => {
-    let wrapper
-
-    await act(async () => {
-      wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} />)
-      await new Promise(resolve => setTimeout(resolve, 0))
-    })
+  it('Should activate all items after selection toggles', async () => {
+    const wrapper = await mountGridImagePicker()
 
     const deselectButton = wrapper.findWhere(node => node.type() === 'button' && node.text().startsWith('Deselect'))
     const selectButton = wrapper.findWhere(node => node.type() === 'button' && node.text().startsWith('Select'))
@@ -104,45 +83,33 @@ describe('GridImagePicker', () => {
     selectButton.simulate('click')
     wrapper.update()
 
-    const imageItems = wrapper.find('.imageItemCheckbox').hostNodes()
-
-    imageItems.forEach(item => {
+    const checkboxes = wrapper.find('.imageItemCheckbox').hostNodes()
+    checkboxes.forEach(item => {
       expect(item.prop('data-active')).toBe(true)
       expect(item.prop('data-visible')).toBe(true)
     })
   })
 
-  it('Should all the items having the check active except the last one', async () => {
-    let wrapper
-
-    await act(async () => {
-      wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} />)
-      await new Promise(resolve => setTimeout(resolve, 0))
-    })
+  it('Should activate all items except the last one after specific toggles', async () => {
+    const wrapper = await mountGridImagePicker()
 
     const imageItems = wrapper.find('.imageItemWrapper').hostNodes()
 
     await act(async () => {
       imageItems.at(imageItems.length - 1).simulate('click')
     })
-
     await act(async () => {
       imageItems.at(imageItems.length - 2).simulate('click')
     })
-
     await act(async () => {
       imageItems.at(imageItems.length - 2).simulate('click')
     })
     wrapper.update()
 
     const checkboxes = wrapper.find('.imageItemCheckbox').hostNodes()
-
     checkboxes.forEach((item, index) => {
-      if (index === checkboxes.length - 1) {
-        expect(item.prop('data-active')).toBe(false)
-      } else {
-        expect(item.prop('data-active')).toBe(true)
-      }
+      const isLastItem = index === checkboxes.length - 1
+      expect(item.prop('data-active')).toBe(!isLastItem)
     })
   })
 })
