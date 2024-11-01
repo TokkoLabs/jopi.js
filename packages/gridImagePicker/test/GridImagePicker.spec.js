@@ -15,7 +15,7 @@ describe('GridImagePicker', () => {
     mockFetch()
 
     global.Image = class {
-      constructor() {
+      constructor () {
         setTimeout(() => {
           this.height = 100
           this.width = 250
