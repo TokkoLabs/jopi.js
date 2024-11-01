@@ -10,7 +10,6 @@ import {
   getSelectAllItems,
   getDeselectAllItems,
 } from '../utils/manageListOfItems'
-import '../styles/GridImagePicker.css'
 
 function useGridImagePicker ({
   listOfSrc,

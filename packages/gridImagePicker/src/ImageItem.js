@@ -3,9 +3,9 @@ import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { Box } from '@oneloop/box'
 import { Check, Icon } from '@oneloop/icons'
-import useSize from '../hooks/useSize'
-import useAspectRatio from '../hooks/useAspectRatio'
-import { getTooltipErrorText } from '../utils/getTooltipErrorText'
+import useSize from './hooks/useSize'
+import useAspectRatio from './hooks/useAspectRatio'
+import { getTooltipErrorText } from './utils/getTooltipErrorText'
 import '../styles/ImageItem.css'
 
 const ImageItem = ({

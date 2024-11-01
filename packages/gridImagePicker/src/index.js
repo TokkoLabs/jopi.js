@@ -3,7 +3,7 @@ import { DndContext, closestCenter, MouseSensor, useSensor, useSensors } from '@
 import { SortableContext, rectSortingStrategy } from '@dnd-kit/sortable'
 import { Box } from '@oneloop/box'
 import ImageItem from './ImageItem'
-import useGridImagePicker from '../hooks/useGridImagePicker'
+import useGridImagePicker from './hooks/useGridImagePicker'
 import '../styles/GridImagePicker.css'
 
 /**
