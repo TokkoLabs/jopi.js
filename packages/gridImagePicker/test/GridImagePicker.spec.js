@@ -15,7 +15,7 @@ describe('GridImagePicker', () => {
     mockFetch()
 
     global.Image = class {
-      constructor() {
+      constructor () {
         setTimeout(() => {
           this.height = 100
           this.width = 250
@@ -114,7 +114,7 @@ describe('GridImagePicker', () => {
 
   it('Should all the items having the check active except the last one', async () => {
     let wrapper
-  
+
     await act(async () => {
       wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} />)
       await new Promise(resolve => setTimeout(resolve, 0))
