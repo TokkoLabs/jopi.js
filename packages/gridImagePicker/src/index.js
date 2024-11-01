@@ -14,8 +14,8 @@ import '../styles/GridImagePicker.css'
  * @param {number} [props.maxSelectablePreferenceByUser=10] - Maximum number of images that can be selected by the user.
  *        Default is 10. This value is a preference; if there are fewer images available than this number, it will adjust accordingly.
  * @param {number} [props.maxSizeInMB=8] - Maximum size in megabytes for each image. Default is 8 MB. Images exceeding this limit will be marked as an error.
- * @param {number|null} [props.minAspectRatio=null] - Minimum aspect ratio allowed for the images. Images that don't meet this ratio will be marked as an error.
- * @param {number|null} [props.maxAspectRatio=null] - Maximum aspect ratio allowed for the images. Images that exceed this ratio will be marked as an error.
+ * @param {number} [props.minAspectRatio] - Minimum aspect ratio allowed for the images. Images that don't meet this ratio will be marked as an error.
+ * @param {number} [props.maxAspectRatio] - Maximum aspect ratio allowed for the images. Images that exceed this ratio will be marked as an error.
  * @param {Function} [props.onChange] - Optional callback function invoked whenever the internal state of images changes.
  *        Called with the updated list of items as `(items) => onChange(items)`.
  */
@@ -23,8 +23,8 @@ export const GridImagePicker = ({
   listOfSrc,
   maxSelectablePreferenceByUser = 10,
   maxSizeInMB = 8,
-  minAspectRatio = null,
-  maxAspectRatio = null,
+  minAspectRatio,
+  maxAspectRatio,
   onChange,
 }) => {
   const { attributes, methods } = useGridImagePicker({
@@ -52,6 +52,7 @@ export const GridImagePicker = ({
       },
     })
   )
+
   return (
     <Box className="gridImagePickerContainer">
       <Box className="gridButtonsWrapper">
@@ -59,7 +60,7 @@ export const GridImagePicker = ({
           as="button"
           className="gridButton gridButtonSelect"
           onClick={handleSelectAll}
-          disabled={status.itemsCheckedCount === config.maxSelectable || !status.itemsAreReady}
+          disabled={status.numberOfCheckedItems === config.maxSelectable || !status.itemsAreReady}
         >
           Select {status.itemsAreReady ? config.maxSelectable : 0}
         </Box>
@@ -67,7 +68,7 @@ export const GridImagePicker = ({
           as="button"
           className="gridButton gridButtonDeselect"
           onClick={handleDeselectAll}
-          disabled={status.itemsCheckedCount === 0}
+          disabled={status.numberOfCheckedItems === 0}
         >
           Deselect all
         </Box>

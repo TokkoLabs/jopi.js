@@ -29,8 +29,8 @@ const ImageItem = ({
 
   useEffect(() => {
     const id = item.id
-    const sizeError = size > maxSizeInMB
-    const aspectRatioError = (maxAspectRatio && aspectRatio > maxAspectRatio) || (minAspectRatio && aspectRatio < minAspectRatio)
+    const sizeError = !isNaN(maxSizeInMB) && (size > maxSizeInMB)
+    const aspectRatioError = (!isNaN(maxAspectRatio) && aspectRatio > maxAspectRatio) || (!isNaN(minAspectRatio) && aspectRatio < minAspectRatio)
     const fetchError = isErrorSize || isErrorAspectRatio
     const loading = isLoadingSize || isLoadingAspectRatio
 
