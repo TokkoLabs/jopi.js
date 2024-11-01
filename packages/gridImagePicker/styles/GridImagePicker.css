@@ -1,0 +1,61 @@
+.gridImagePickerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gridImagePicker {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: fit-content;
+}
+
+.gridButtonsWrapper {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.gridButton {
+  background-color: #FFF;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  padding: 8px 12px;
+  transition:
+    background-color 100ms linear,
+    border-color 100ms linear,
+    color 100ms linear,
+    filter 100ms linear
+  ;
+}
+
+.gridButton:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.gridButtonSelect {
+  border-color: #1A4958;
+  color: #1A4958;
+}
+
+.gridButtonSelect:disabled {
+  border-color: #C2CCD3;
+  color: #C2CCD3;
+  cursor: default;
+}
+
+.gridButtonDeselect {
+  color: #2E393F;
+}
+
+.gridButtonDeselect:disabled {
+  background-color: #EAEEF1;
+  color: #C2CCD3;
+  cursor: default;
+}
