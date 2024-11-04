@@ -1,0 +1,28 @@
+.imageItemTooltip {
+  background-color: #1D2327;
+  border-radius: 4px;
+  color: #FFFFFF;
+  display: flex;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  left: 50%;
+  line-height: 16px;
+  max-width: 240px;
+  opacity: 0;
+  padding: 4px 8px;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  transform: translate(-50%, -85%);
+  transition: opacity 100ms ease-out;
+  width: max-content;
+  z-index: 2;
+}
+
+.imageItemTooltip[data-showable="false"] {
+  display: none;
+}
+
+.imageItemWrapper[data-dragging="false"]:hover .imageItemTooltip {
+  opacity: 1;
+}

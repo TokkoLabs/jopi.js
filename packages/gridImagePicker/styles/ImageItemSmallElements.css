@@ -1,0 +1,96 @@
+.imageItemCount {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  color: transparent;
+  display: flex;
+  font-size: 11px;
+  font-weight: 600;
+  height: 24px;
+  justify-content: center;
+  left: 8px;
+  line-height: 16px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+  z-index: 1;
+}
+
+.imageItemCount[data-visible="true"] {
+  color: #1D2327;
+  opacity: 1;
+}
+
+.imageItemCheckboxWrapper {
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 3px;
+  display: flex;
+  height: 16px;
+  justify-content: center;
+  width: 16px;
+  z-index: 1;
+}
+
+.imageItemCheckbox {
+  align-items: center;
+  background-color: #FFF;
+  border: 1px solid #C2CCD3;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px #FFF;
+  display: flex;
+  height: 16px;
+  justify-content: center;
+  opacity: 0;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  transition: background-color 100ms linear;
+  width: 16px;
+}
+
+.imageItemCheckbox[data-active="true"] {
+  background-color: #1B90D2;
+  border-color: #1B90D2;
+}
+
+.imageItemCheckbox[data-visible="true"] {
+  opacity: 1;
+}
+
+.imageItemError {
+  align-items: center;
+  background-color: #DF1517;
+  border-radius: 8px;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  transition: opacity 150ms ease-in;
+  width: 24px;
+  z-index: 1;
+}
+
+.imageItemError[data-visible="true"] {
+  opacity: 1;
+}
+
+.imageItemIconCheck {
+  color: #FFFFFF;
+  font-size: 14px;
+  min-width: unset!important;
+}
+
+.imageItemIconError {
+  color: #FFFFFF;
+  font-size: 20px;
+  min-width: unset!important;
+}
