@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { arrayMove } from '@dnd-kit/sortable'
 import { isItemClickable } from '../utils/manageItem'
 import {
@@ -45,8 +45,8 @@ function useGridImagePicker ({
     setItems(updatedItems)
   }, [itemsAreReady])
 
-  const handleClickItem = useCallback((targetItem) => {
-    const isUnclickable = !isItemClickable(targetItem, isMaxSelectableReached)
+  const handleClickItem = (targetItem) => {
+    const isUnclickable = !isItemClickable(targetItem, isMaxSelectableReached, itemsAreReady)
     if (isUnclickable) return
 
     const updatedItems = targetItem.checked
@@ -55,26 +55,26 @@ function useGridImagePicker ({
 
     const refreshedItems = refreshItemsPosition(updatedItems)
     setItems(refreshedItems)
-  }, [isMaxSelectableReached, items])
+  }
 
-  const handleSelectAll = useCallback(() => {
+  const handleSelectAll = () => {
     const newItems = getSelectAllItems(items, maxSelectable)
     const refreshedItems = refreshItemsPosition(newItems)
     setItems(refreshedItems)
-  }, [items, maxSelectable])
+  }
 
-  const handleDeselectAll = useCallback(() => {
+  const handleDeselectAll = () => {
     const newItems = getDeselectAllItems(items)
     setItems(newItems)
-  }, [items])
+  }
 
-  const handleUpdateItem = useCallback(({ id, ...restOfKeys }) => {
-    const newItems = items.map(item => item.id === id
-      ? { ...item, ...restOfKeys }
-      : item
-    )
-    setItems(newItems)
-  }, [items])
+  const handleUpdateItem = ({ id, ...restOfKeys }) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, ...restOfKeys } : item
+      )
+    );
+  }
 
   const handleDragStart = () => {
     setIsDraggingActive(true)
