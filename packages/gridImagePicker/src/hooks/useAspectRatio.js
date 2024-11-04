@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 
 function useAspectRatio (src) {
   const [data, setData] = useState({
+    height: 0,
+    width: 0,
     aspectRatio: 0,
     loading: true,
     error: false,
@@ -10,23 +12,25 @@ function useAspectRatio (src) {
   useEffect(() => {
     const fetchAspectRatio = async (src) => {
       try {
-        setData({ aspectRatio: 0, loading: true, error: false })
+        setData({ height: 0, width: 0, aspectRatio: 0, loading: true, error: false })
 
         const img = new window.Image()
         img.src = src
 
         img.onload = () => {
+          const { height } = img
+          const { width } = img
           const aspectRatio = img.width / img.height
-          setData({ aspectRatio, loading: false, error: false })
+          setData({ height, width, aspectRatio, loading: false, error: false })
         }
 
         img.onerror = (error) => {
           console.error(error)
-          setData({ aspectRatio: 0, loading: false, error: true })
+          setData({ height: 0, width: 0, aspectRatio: 0, loading: false, error: true })
         }
       } catch (error) {
         console.error(error)
-        setData({ aspectRatio: 0, loading: false, error: true })
+        setData({ height: 0, width: 0, aspectRatio: 0, loading: false, error: true })
       }
     }
 
@@ -35,7 +39,13 @@ function useAspectRatio (src) {
     }
   }, [src])
 
-  return [data.aspectRatio, data.loading, data.error]
+  return [
+    data.height,
+    data.width,
+    data.aspectRatio,
+    data.loading,
+    data.error
+  ]
 }
 
 export default useAspectRatio
