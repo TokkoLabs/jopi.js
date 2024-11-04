@@ -44,7 +44,7 @@ function useAspectRatio (src) {
     data.width,
     data.aspectRatio,
     data.loading,
-    data.error
+    data.error,
   ]
 }
 

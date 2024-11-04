@@ -73,7 +73,7 @@ function useGridImagePicker ({
       prevItems.map((item) =>
         item.id === id ? { ...item, ...restOfKeys } : item
       )
-    );
+    )
   }
 
   const handleDragStart = () => {

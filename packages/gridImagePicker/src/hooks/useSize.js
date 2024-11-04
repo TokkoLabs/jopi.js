@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-function useSize(src) {
+function useSize (src) {
   const [data, setData] = useState({
     size: 0,
     loading: true,
