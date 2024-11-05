@@ -6,6 +6,8 @@ export const getItemsInitialState = (listOfSrc) => {
     src,
     checked: false,
     position: 0,
+    height: 0,
+    width: 0,
     size: 0,
     sizeError: false,
     aspectRatio: 0,
@@ -69,18 +71,20 @@ export const refreshItemsPosition = (items) => {
   }))
 }
 
-export const getSelectAllItems = (listOfItems, maxSelect) => {
-  let countAlreadyChecked = listOfItems.filter(item => item.checked).length
+export const getSelectAllItems = (listOfItems, maxSelectable) => {
+  let numberOfItemsAlreadyChecked = listOfItems.filter(item => item.checked).length
   let newMaxPosition = Math.max(...listOfItems.map(item => item.position)) + 1
+  let isMaxSelectableReached = numberOfItemsAlreadyChecked >= maxSelectable
 
   const newItems = listOfItems.map(item => {
     if (item.checked) return item
-    if (countAlreadyChecked >= maxSelect) return item
-    if (!isItemClickable(item)) return item
+    if (isMaxSelectableReached) return item
+    if (!isItemClickable(item, isMaxSelectableReached, true)) return item
 
     const newItem = { ...item, checked: true, position: newMaxPosition }
     newMaxPosition++
-    countAlreadyChecked++
+    numberOfItemsAlreadyChecked++
+    isMaxSelectableReached = numberOfItemsAlreadyChecked >= maxSelectable
 
     return newItem
   })

@@ -6,7 +6,12 @@ import { Check, Icon } from '@oneloop/icons'
 import useSize from './hooks/useSize'
 import useAspectRatio from './hooks/useAspectRatio'
 import { getTooltipErrorText } from './utils/getTooltipErrorText'
+import { isItemClickable } from './utils/manageItem'
 import '../styles/ImageItem.css'
+import '../styles/ImageItemBlanket.css'
+import '../styles/ImageItemCover.css'
+import '../styles/ImageItemSmallElements.css'
+import '../styles/ImageItemTooltip.css'
 
 const ImageItem = ({
   item,
@@ -17,7 +22,7 @@ const ImageItem = ({
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: item.id })
   const [size, isLoadingSize, isErrorSize] = useSize(item.src)
-  const [aspectRatio, isLoadingAspectRatio, isErrorAspectRatio] = useAspectRatio(item.src)
+  const [height, width, aspectRatio, isLoadingAspectRatio, isErrorAspectRatio] = useAspectRatio(item.src)
   const { isDraggingActive, isMaxSelectableReached, itemsAreReady } = status
   const { maxSizeInMB, minAspectRatio, maxAspectRatio } = config
   const isLoading = item.loading
@@ -25,7 +30,7 @@ const ImageItem = ({
 
   const tooltipErrorText = getTooltipErrorText(item)
   const backgroundImage = item.loading || item.fetchError ? '' : `url(${item.src})`
-  const unclickable = (isMaxSelectableReached && !item.checked) || isError || isLoading || !itemsAreReady
+  const unclickable = !isItemClickable(item, isMaxSelectableReached, itemsAreReady)
 
   useEffect(() => {
     const id = item.id
@@ -34,7 +39,7 @@ const ImageItem = ({
     const fetchError = isErrorSize || isErrorAspectRatio
     const loading = isLoadingSize || isLoadingAspectRatio
 
-    handleUpdateItem({ id, size, sizeError, aspectRatio, aspectRatioError, fetchError, loading })
+    handleUpdateItem({ id, size, sizeError, height, width, aspectRatio, aspectRatioError, fetchError, loading })
   }, [size, isLoadingSize, isErrorSize, aspectRatio, isLoadingAspectRatio, isErrorAspectRatio])
 
   return (
@@ -43,9 +48,6 @@ const ImageItem = ({
       as="button"
       className="imageItemWrapper"
       onClick={() => handleClick(item)}
-      data-active={item.checked}
-      data-disabled={unclickable}
-      data-error={isError}
       data-dragging={isDraggingActive}
       __css={{ backgroundImage }}
       style={{
@@ -55,6 +57,13 @@ const ImageItem = ({
       { ...attributes }
       {...listeners }
     >
+      <Box
+        className="imageItemBlanket"
+        data-light={unclickable}
+        data-dark={item.checked}
+        data-grey={isError}
+      />
+
       <Box className="imageItemCount" data-visible={item.checked}>
         {item.position}
       </Box>
@@ -71,7 +80,7 @@ const ImageItem = ({
         <Icon icon="icon-error" className="imageItemIconError" />
       </Box>
 
-      <Box className="imageItemAspectRatioTooltip">
+      <Box className="imageItemTooltip" data-showable={Boolean(tooltipErrorText)}>
         {tooltipErrorText}
       </Box>
     </Box>

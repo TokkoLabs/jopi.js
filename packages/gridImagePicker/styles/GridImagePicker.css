@@ -1,3 +1,8 @@
+:root {
+  --image-item-width: 88px;
+  --gap-between-images: 16px;
+}
+
 .gridImagePickerContainer {
   display: flex;
   flex-direction: column;
@@ -5,10 +10,12 @@
 }
 
 .gridImagePicker {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-between-images);
+  max-width: calc(4 * var(--image-item-width) + 3 * var(--gap-between-images));
+  min-width: unset !important;
+  width: 100%;
 }
 
 .gridButtonsWrapper {
