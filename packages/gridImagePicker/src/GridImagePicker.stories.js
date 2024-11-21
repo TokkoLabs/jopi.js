@@ -66,6 +66,6 @@ export default {
       },
     },
   },
-};
+}
 
-export const Normal = (args) => <GridImagePicker {...args} />;
+export const Normal = (args) => <GridImagePicker {...args} />

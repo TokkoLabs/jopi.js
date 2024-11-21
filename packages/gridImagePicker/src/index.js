@@ -27,7 +27,7 @@ export const GridImagePicker = ({
   minAspectRatio,
   maxAspectRatio,
   onChange,
-  texts
+  texts,
 }) => {
   const { attributes, methods } = useGridImagePicker({
     listOfSrc,
