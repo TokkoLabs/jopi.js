@@ -19,6 +19,7 @@ const ImageItem = ({
   handleUpdateItem,
   status,
   config,
+  texts
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: item.id })
   const [size, isLoadingSize, isErrorSize] = useSize(item.src)
@@ -28,7 +29,7 @@ const ImageItem = ({
   const isLoading = item.loading
   const isError = item.sizeError || item.aspectRatioError || item.fetchError
 
-  const tooltipErrorText = getTooltipErrorText(item)
+  const tooltipErrorText = getTooltipErrorText(item, texts)
   const backgroundImage = item.loading || item.fetchError ? '' : `url(${item.src})`
   const unclickable = !isItemClickable(item, isMaxSelectableReached, itemsAreReady)
 
@@ -69,7 +70,7 @@ const ImageItem = ({
       </Box>
 
       <Box className="imageItemCover" data-visible={item.position === 1}>
-        <Box className="imageItemCoverText"> Cover </Box>
+        <Box className="imageItemCoverText"> {texts.cover} </Box>
       </Box>
 
       <Box className="imageItemCheckbox" data-active={item.checked} data-visible={!unclickable}>
