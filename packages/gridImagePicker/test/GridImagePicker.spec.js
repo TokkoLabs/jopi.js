@@ -10,6 +10,13 @@ configure({ adapter: new Adapter() })
 
 const OriginalImage = global.Image
 
+const texts = {
+  cover: 'Mock cover text',
+  fetchError: 'Mock fetch error',
+  sizeError: 'Mock size error',
+  aspectRatioError: 'Mock aspect ratio error',
+}
+
 describe('GridImagePicker', () => {
   beforeAll(() => {
     mockFetch()
@@ -30,7 +37,7 @@ describe('GridImagePicker', () => {
     global.Image = OriginalImage
   })
 
-  const mountGridImagePicker = async (props = {}) => {
+  const mountGridImagePicker = async (props = { texts }) => {
     let wrapper
     await act(async () => {
       wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} {...props} />)
@@ -48,15 +55,15 @@ describe('GridImagePicker', () => {
   it('Should render control buttons properly', async () => {
     const wrapper = await mountGridImagePicker()
 
-    const selectButton = wrapper.find({ children: 'Select' })
-    const deselectButton = wrapper.find({ children: 'Deselect' })
+    const selectButton = wrapper.find({ children: 'Seleccionar' })
+    const deselectButton = wrapper.find({ children: 'Deseleccionar' })
 
     expect(selectButton).toBeDefined()
     expect(deselectButton).toBeDefined()
   })
 
   it('Should display an error based on aspect ratio', async () => {
-    const wrapper = await mountGridImagePicker({ minAspectRatio: 14 })
+    const wrapper = await mountGridImagePicker({ minAspectRatio: 14, texts })
 
     const errorItems = wrapper.find('.imageItemError').hostNodes()
     errorItems.forEach(item => {
@@ -65,7 +72,7 @@ describe('GridImagePicker', () => {
   })
 
   it('Should display an error based on size', async () => {
-    const wrapper = await mountGridImagePicker({ maxSizeInMB: 0 })
+    const wrapper = await mountGridImagePicker({ maxSizeInMB: 0, texts })
 
     const errorItems = wrapper.find('.imageItemError').hostNodes()
     errorItems.forEach(item => {
@@ -76,8 +83,8 @@ describe('GridImagePicker', () => {
   it('Should activate all items after selection toggles', async () => {
     const wrapper = await mountGridImagePicker()
 
-    const deselectButton = wrapper.findWhere(node => node.type() === 'button' && node.text().startsWith('Deselect'))
-    const selectButton = wrapper.findWhere(node => node.type() === 'button' && node.text().startsWith('Select'))
+    const deselectButton = wrapper.findWhere(node => node.type() === 'button' && node.text().startsWith('Deseleccionar'))
+    const selectButton = wrapper.findWhere(node => node.type() === 'button' && node.text().startsWith('Seleccionar'))
 
     deselectButton.simulate('click')
     selectButton.simulate('click')
