@@ -10,6 +10,7 @@
   max-width: 240px;
   opacity: 0;
   padding: 4px 8px;
+  pointer-events: none;
   position: absolute;
   text-align: left;
   top: 0;
@@ -23,6 +24,6 @@
   display: none;
 }
 
-.imageItemWrapper[data-dragging="false"]:hover .imageItemTooltip {
+.imageItemOuterWrapper:hover .imageItemWrapper[data-dragging="false"] + .imageItemTooltip {
   opacity: 1;
 }
