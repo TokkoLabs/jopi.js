@@ -15,6 +15,10 @@
   width: 88px;
 }
 
+.imageItemWrapper * {
+  pointer-events: none;
+}
+
 .imageItemWrapper[data-dragging="true"] {
   cursor: grabbing;
 }
