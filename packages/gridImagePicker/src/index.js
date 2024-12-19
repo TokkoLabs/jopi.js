@@ -81,6 +81,7 @@ export const GridImagePicker = ({
         collisionDetection={closestCenter}
         onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
+        autoScroll={false}
       >
         <SortableContext items={items} strategy={rectSortingStrategy}>
           <Box as="section" className="gridImagePicker">
