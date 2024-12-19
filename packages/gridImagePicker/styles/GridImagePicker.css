@@ -1,5 +1,4 @@
 :root {
-  --image-item-width: 88px;
   --gap-between-images: 16px;
 }
 
@@ -14,7 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap-between-images);
-  max-width: calc(4 * var(--image-item-width) + 3 * var(--gap-between-images));
+  max-width: 430px;
   min-width: unset !important;
   width: 100%;
 }
