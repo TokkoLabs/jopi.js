@@ -74,12 +74,7 @@
   color: #2E393F;
 }
 
-.gridButtonDeselect:active {
-  background-color: #D6DEE2;
-  color: #2E393F;
-}
-
-.gridButtonDeselect:focus {
+.gridButtonDeselect:focus-visible:not(:disabled) {
   background-color: #F3F6F8;
   border-color: #1B90D2;
   color: #2E393F;
