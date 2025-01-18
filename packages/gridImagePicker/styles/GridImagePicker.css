@@ -33,6 +33,7 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
+  outline: none;
   padding: 8px 12px;
   transition:
     background-color 100ms linear,
@@ -42,18 +43,25 @@
   ;
 }
 
-.gridButton:hover:not(:disabled) {
-  filter: brightness(1.1);
-}
-
 .gridButtonSelect {
   border-color: #1A4958;
   color: #1A4958;
 }
 
+.gridButtonSelect:hover:not(:disabled),
+.gridButtonSelect:active {
+  background-color: #1A4958;
+  color: white;
+}
+
+.gridButtonSelect:focus {
+  border-color: #1B90D2;
+  color: #1A4958;
+}
+
 .gridButtonSelect:disabled {
-  border-color: #C2CCD3;
-  color: #C2CCD3;
+  border-color: #EAEEF1;
+  color: #94A2AB;
   cursor: default;
 }
 
@@ -61,8 +69,24 @@
   color: #2E393F;
 }
 
+.gridButtonDeselect:hover:not(:disabled) {
+  background-color: #EAEEF1;
+  color: #2E393F;
+}
+
+.gridButtonDeselect:active {
+  background-color: #D6DEE2;
+  color: #2E393F;
+}
+
+.gridButtonDeselect:focus {
+  background-color: #F3F6F8;
+  border-color: #1B90D2;
+  color: #2E393F;
+}
+
 .gridButtonDeselect:disabled {
   background-color: #EAEEF1;
-  color: #C2CCD3;
+  color: #94A2AB;
   cursor: default;
 }
