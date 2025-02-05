@@ -8,6 +8,13 @@ import { ImageCard } from '../src/components/ImageCard'
 import { Button } from '@oneloop/button'
 import { ButtonsMainImage } from '../src/components/ButtonsMainImage'
 
+const defaultTabTextsDict = {
+  videos: 'Videos',
+  video360: 'Video 360°',
+  photos: 'Fotos',
+  bluePrints: 'Planos',
+}
+
 configure({ adapter: new Adapter() })
 const delayTime = 1000
 
@@ -21,13 +28,15 @@ const waitAndDo = (callback) =>
 
 describe('Carousel', () => {
   it('renders without crashing', () => {
-    const wrapper = mount(<Carousel />)
+    const wrapper = mount(<Carousel tabTextsDict={defaultTabTextsDict} />)
 
     expect(wrapper).toBeDefined()
   })
 
   it('renders correct number of tabs', async () => {
-    const wrapper = mount(<ButtonsMainImage images={['', '']} />)
+    const wrapper = mount(
+      <ButtonsMainImage tabTextsDict={defaultTabTextsDict} images={['', '']} />
+    )
     const btn = wrapper.find('.buttonGallery')
     expect(btn.at(0).text()).toBe('Fotos')
   })
@@ -49,7 +58,7 @@ describe('Carousel', () => {
 
     const tab = wrapper.find('.fsTabHeader')
 
-    expect(tab.at(0).text()).toBe('VideosVideo360FotosPlanos')
+    expect(tab.at(0).text()).toBe('VideosVideo 360°FotosPlanos')
 
     const videosNode = wrapper
       .findWhere((node) => node.text() === 'Videos')
@@ -64,7 +73,7 @@ describe('Carousel', () => {
     panosNode.simulate('click')
 
     const Video360 = wrapper
-      .findWhere((node) => node.text() === 'Video360')
+      .findWhere((node) => node.text() === 'Video 360°')
       .at(0)
 
     Video360.simulate('click')
@@ -80,6 +89,7 @@ describe('Carousel', () => {
         frontCoverImg={['img']}
         frontCoverBlueprints={['img']}
         otherButton
+        tabTextsDict={defaultTabTextsDict}
       />
     )
     const fullscreenButton = wrapper.find('.firstTabImg').at(0)
@@ -92,7 +102,7 @@ describe('Carousel', () => {
 
   it('renders SliderSwap component when window width is less than 786', () => {
     window.innerWidth = 500
-    const wrapper = shallow(<Carousel />)
+    const wrapper = shallow(<Carousel tabTextsDict={defaultTabTextsDict} />)
     setTimeout(() => {
       expect(wrapper.find('SliderSwap').length).toEqual(1)
     }, 1000)
@@ -101,13 +111,17 @@ describe('Carousel', () => {
   it('renders otherButton in SliderSwap component when is sended', () => {
     window.innerWidth = 500
 
-    const wrapper = mount(<Carousel otherButton={<Button />} />)
+    const wrapper = mount(
+      <Carousel tabTextsDict={defaultTabTextsDict} otherButton={<Button />} />
+    )
 
     expect(wrapper.find('.otherButtonSwap').exists()).toBe(true)
   })
 
   it('close fullscreen', () => {
-    const wrapper = mount(<Carousel images={['', '']} />)
+    const wrapper = mount(
+      <Carousel tabTextsDict={defaultTabTextsDict} images={['', '']} />
+    )
 
     const closeBtn = wrapper.find('.closeIcon').at(0)
 

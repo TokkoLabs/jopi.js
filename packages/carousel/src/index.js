@@ -60,19 +60,19 @@ export const Carousel = ({
   const showOtherButtonsGalleryMobile = containerWidth > 530
 
   if (video.length > 0) {
-    tabContainers.push({label:tabTextsDict['videos'],value:'videos'})
+    tabContainers.push({ label: tabTextsDict.videos, value: 'videos' })
   }
 
   if (video360.length > 0) {
-    tabContainers.push({label:tabTextsDict['video360'],value:'video360'})
+    tabContainers.push({ label: tabTextsDict.video360, value: 'video360' })
   }
 
   if (images.length > 0 || frontCoverImg.length > 0) {
-    tabContainers.push({label:tabTextsDict['photos'],value:'fotos'})
+    tabContainers.push({ label: tabTextsDict.photos, value: 'fotos' })
   }
 
   if (planos.length > 0 || frontCoverBlueprints.length > 0) {
-    tabContainers.push({label:tabTextsDict['bluePrints'],value:'planos'})
+    tabContainers.push({ label: tabTextsDict.bluePrints, value: 'planos' })
   }
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export const Carousel = ({
     const debouncedHandleResize = debounce(changeWidth, 200)
     window.addEventListener('resize', debouncedHandleResize)
     return () => window.removeEventListener('resize', debouncedHandleResize)
-  }, []) 
+  }, [])
 
   useLayoutEffect(() => {
     let newMainImageWidth
