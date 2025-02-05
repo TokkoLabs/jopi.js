@@ -8,6 +8,13 @@ import { FullScreen } from './components/FullScreen'
 import { SliderSwap } from './components/SliderSwap'
 import { ButtonsMainImage } from './components/ButtonsMainImage'
 
+const defaultTabTextsDict = {
+  videos: 'Videos',
+  video360: 'Video 360°',
+  photos: 'Fotos',
+  bluePrints: 'Planos',
+}
+
 export const Carousel = ({
   images = [],
   planos = [],
@@ -17,6 +24,7 @@ export const Carousel = ({
   otherButton = false,
   frontCoverImg = false,
   frontCoverBlueprints = false,
+  tabTextsDict = defaultTabTextsDict,
   ...props
 }) => {
   const [windowResize, setWindowResize] = useState(false)
@@ -52,19 +60,19 @@ export const Carousel = ({
   const showOtherButtonsGalleryMobile = containerWidth > 530
 
   if (video.length > 0) {
-    tabContainers.push('Videos')
+    tabContainers.push({ label: tabTextsDict.videos, value: 'videos' })
   }
 
   if (video360.length > 0) {
-    tabContainers.push('Video360')
+    tabContainers.push({ label: tabTextsDict.video360, value: 'video360' })
   }
 
   if (images.length > 0 || frontCoverImg.length > 0) {
-    tabContainers.push('Fotos')
+    tabContainers.push({ label: tabTextsDict.photos, value: 'fotos' })
   }
 
   if (planos.length > 0 || frontCoverBlueprints.length > 0) {
-    tabContainers.push('Planos')
+    tabContainers.push({ label: tabTextsDict.bluePrints, value: 'planos' })
   }
 
   useEffect(() => {
@@ -252,6 +260,7 @@ export const Carousel = ({
                     setTabSelected={setTabSelected}
                     setIndex={setIndex}
                     setFullscreen={setFullscreen}
+                    tabTextsDict={tabTextsDict}
                   />
                 </Box>
               )}
@@ -302,6 +311,7 @@ export const Carousel = ({
                     setTabSelected={setTabSelected}
                     setIndex={setIndex}
                     setFullscreen={setFullscreen}
+                    tabTextsDict={tabTextsDict}
                   />
                 )}
               </ImageCard>
@@ -394,6 +404,7 @@ export const Carousel = ({
         bluePrintsWithCover={bluePrintsWithCover}
         URLOpenFullscreen={URLOpenFullscreen}
         handleImageClickToFullscreen={handleImageClickToFullscreen}
+        tabTextsDict={tabTextsDict}
       />
     </Box>
   )

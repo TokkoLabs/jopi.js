@@ -86,13 +86,11 @@ export const FullScreen = ({
           {tabContainers.map((tab, i) => (
             <Text
               key={i}
-              onClick={() => changeTabContainer(tab.toLocaleLowerCase())}
-              className={`${
-                tabSelected === tab.toLocaleLowerCase() && 'tabSelected'
-              }`}
+              onClick={() => changeTabContainer(tab.value)}
+              className={`${tabSelected === tab.value && 'tabSelected'}`}
               variant="bodyBold.fontSize14"
             >
-              {tab}
+              {tab.label}
             </Text>
           ))}
         </Box>
