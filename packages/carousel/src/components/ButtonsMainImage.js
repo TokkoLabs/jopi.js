@@ -13,6 +13,7 @@ export const ButtonsMainImage = ({
   setTabSelected,
   setFullscreen,
   setIndex,
+  tabTextsDict,
 }) => {
   const handleClick = (e, type) => {
     e.stopPropagation()
@@ -24,7 +25,7 @@ export const ButtonsMainImage = ({
     <Box className="buttonsMainImgContainer">
       {video.length > 0 && (
         <ButtonGallery
-          text={'Videos'}
+          text={tabTextsDict.videos}
           onClick={(e) => {
             handleClick(e, 'videos')
           }}
@@ -32,7 +33,7 @@ export const ButtonsMainImage = ({
       )}
       {video360.length > 0 && (
         <ButtonGallery
-          text={'Video 360°'}
+          text={tabTextsDict.video360}
           onClick={(e) => {
             handleClick(e, 'video360')
           }}
@@ -41,7 +42,7 @@ export const ButtonsMainImage = ({
       {(images.length > 0 || imgWithCover.length > 0) && (
         <ButtonGallery
           className="buttonGallery"
-          text={'Fotos'}
+          text={tabTextsDict.photos}
           onClick={(e) => {
             handleClick(e, 'fotos')
           }}
@@ -49,7 +50,7 @@ export const ButtonsMainImage = ({
       )}
       {(planos.length > 0 || frontCoverBlueprints.length > 0) && (
         <ButtonGallery
-          text={'Planos'}
+          text={tabTextsDict.bluePrints}
           onClick={(e) => {
             handleClick(e, 'planos')
           }}
