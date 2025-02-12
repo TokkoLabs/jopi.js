@@ -11,7 +11,10 @@ function useSize (src) {
     const fetchImageSize = async (src) => {
       try {
         setData({ size: 0, loading: true, error: false })
-        const response = await window.fetch(src)
+        const response = await window.fetch(src, {
+          credentials: 'include',
+          cache: 'no-store',
+        })
 
         const blob = await response.blob()
         const sizeInMegaBytes = (blob.size / 1024) / 1024
