@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const defaultFetcher = async (url) => fetch(url)
+const defaultFetcher = async (url) => window.fetch(url)
 
 function useSize (src, sizeFetcher = defaultFetcher) {
   const [data, setData] = useState({

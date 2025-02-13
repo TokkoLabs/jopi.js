@@ -20,7 +20,7 @@ const ImageItem = ({
   status,
   config,
   texts,
-  sizeFetcher
+  sizeFetcher,
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: item.id })
   const [size, isLoadingSize, isErrorSize] = useSize(item.src, sizeFetcher)
