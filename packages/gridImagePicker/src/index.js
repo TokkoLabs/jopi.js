@@ -18,6 +18,7 @@ import '../styles/GridImagePicker.css'
  * @param {number} [props.maxAspectRatio] - Maximum aspect ratio allowed for the images. Images that exceed this ratio will be marked as an error.
  * @param {Function} [props.onChange] - Optional callback function invoked whenever the internal state of images changes.
  *        Called with the updated list of items as `(items) => onChange(items)`.
+ * @param {Function} [props.sizeFetcher] - Optional fetch function to get the size of the images. Default: (src) => fetch(src)
  * @param {Object} props.texts - Nested texts
  */
 export const GridImagePicker = ({
@@ -28,6 +29,7 @@ export const GridImagePicker = ({
   maxAspectRatio,
   onChange,
   texts,
+  sizeFetcher
 }) => {
   const { attributes, methods } = useGridImagePicker({
     listOfSrc,
@@ -94,6 +96,7 @@ export const GridImagePicker = ({
                 handleClick={handleClickItem}
                 handleUpdateItem={handleUpdateItem}
                 texts={texts}
+                sizeFetcher={sizeFetcher}
               />
             ))}
           </Box>
