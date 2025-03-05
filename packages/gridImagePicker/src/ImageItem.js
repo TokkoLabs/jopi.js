@@ -20,9 +20,10 @@ const ImageItem = ({
   status,
   config,
   texts,
+  sizeFetcher,
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: item.id })
-  const [size, isLoadingSize, isErrorSize] = useSize(item.src)
+  const [size, isLoadingSize, isErrorSize] = useSize(item.src, sizeFetcher)
   const [height, width, aspectRatio, isLoadingAspectRatio, isErrorAspectRatio] = useAspectRatio(item.src)
   const wrapperRef = useRef(null)
   const [tooltipPosition, setTooltipPosition] = useState({ left: 0, top: 0 })
