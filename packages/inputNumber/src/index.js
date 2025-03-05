@@ -58,11 +58,11 @@ export const InputNumber = ({
 
   const handleChange = (e) => {
     if (e.target.value === '') {
-      return 0
+      return min
     }
 
     if (e.target.value >= min && e.target.value <= max) {
-      setValueInput(parseInt(e.target.value))
+      setValueInput(Number(e.target.value))
     } else {
       e.stopPropagation()
     }
@@ -113,8 +113,8 @@ export const InputNumber = ({
         {...props}
         onKeyDown={(e) => {
           if (e.target.value.length === 1 && e.key === 'Backspace') {
-            setValueInput(0)
-            e.target.value = 0
+            setValueInput(min)
+            e.target.value = min
           }
         }}
       />
@@ -131,12 +131,9 @@ export const InputNumber = ({
       >
         <Icon
           id="arrowUpNumberInput"
-          icon="icon-dropdown"
+          icon="icon-colapsar"
           fontSize="12px"
-          style={{
-            transform: 'rotate(180deg) translateX(1px)',
-            cursor: 'pointer',
-          }}
+          style={{ cursor: 'pointer' }}
           onClick={() =>
             !disabled && setValueInput(Math.min(max, valueInput + step))
           }
