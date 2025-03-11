@@ -207,6 +207,7 @@ export const SliderSwap = ({
   }
 
   const handleTraslate = (traslation) => {
+    if (!sliderRef.current?.style) return
     return (sliderRef.current.style.transform = `translateX(${traslation}px)`)
   }
   return (
