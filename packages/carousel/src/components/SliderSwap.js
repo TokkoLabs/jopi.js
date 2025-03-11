@@ -306,6 +306,8 @@ export const SliderSwap = ({
                 alignItems: 'center',
                 justifyContent: 'center',
                 minWidth: '100%',
+                maxHeight: '100%',
+                maxWidth: '100%',
                 height: `${sliderContainerWidth * 0.7}px`,
                 borderRadius: '12px',
                 cursor: 'pointer',
