@@ -35,15 +35,15 @@ const CustomHeader = ({
   increaseMonth,
   prevMonthButtonDisabled,
   nextMonthButtonDisabled,
-  locale
+  locale,
 }) => {
   const formatDate = (date, locale) => {
-    const month = date.toLocaleString(locale.code, { month: "long" })
-      .replace(/^./, (match) => match.toUpperCase());
-    const year = date.toLocaleString(locale.code, { year: "numeric" });
+    const month = date.toLocaleString(locale.code, { month: 'long' })
+      .replace(/^./, (match) => match.toUpperCase())
+    const year = date.toLocaleString(locale.code, { year: 'numeric' })
 
-    return `${month} ${year}`;
-  };
+    return `${month} ${year}`
+  }
 
   return (
     <Box className="customHeader">
@@ -54,7 +54,7 @@ const CustomHeader = ({
         disabled={prevMonthButtonDisabled}
       >
         <Icon icon='icon-atras' fontSize='16px' color="#2E393F" />
-        </Box>
+      </Box>
       <Box className="customHeaderDate">
         {formatDate(date, locale)}
       </Box>
@@ -67,16 +67,18 @@ const CustomHeader = ({
         <Icon icon='icon-siguiente' fontSize='16px' color="#2E393F" />
       </Box>
     </Box>
-  );
-};
+  )
+}
 
 export const Datepicker = (props) => {
+  const { locale } = props
+
   return (
     <DatePicker
       className="red-border"
       customInput={<CustomInput />}
       renderCustomHeader={headerProps => (
-        <CustomHeader {...headerProps} locale={props.locale} />
+        <CustomHeader {...headerProps} locale={locale} />
       )}
       {...props}
     />
