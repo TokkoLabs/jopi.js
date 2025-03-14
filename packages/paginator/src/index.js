@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box } from '@oneloop/box'
 import _ from 'lodash'
+import { Icon } from '@oneloop/icons'
 
 export const Paginator = ({
   currentPage,
@@ -101,34 +102,34 @@ export const Paginator = ({
     <Box
       sx={{
         display: 'flex',
-        fontFamily: 'body',
-        fontSize: '12px',
+        alignItems: 'center',
+        fontFamily: 'Nunito Sans',
+        fontSize: '11.11px',
         cursor: 'pointer',
-        color: '#C8C9CA',
-        fontStyle: 'normal',
-        fontWeight: 'normal',
-        lineHeight: '22px',
+        color: '#2E393F',
+        fontWeight: '600',
       }}
       {...sx}
     >
-      <Box
+      {!onFirstPage() && <Box
         sx={{
-          paddingLeft: '0.5rem',
-          paddingRight: '0.5rem',
+          padding: '8px',
+          borderRadius: '6px',
+          '&:hover': {
+            background: '#F3F6F8',
+          },
         }}
+        onClick={(e) => changePage(currentPage - 1, e)}
       >
-        {!onFirstPage() && (
-          <Box onClick={(e) => changePage(currentPage - 1, e)}>{'<'}</Box>
-        )}
-      </Box>
+        <Icon icon='icon-atras' fontSize='16px'/>
+      </Box>}
       {elements().map((element, index) => {
         const Element = () => {
           if (typeof element === 'string') {
             return (
               <Box
                 sx={{
-                  paddingLeft: '0.5rem',
-                  paddingRight: '0.5rem',
+                  padding: '8px',
                 }}
               >
                 {element}
@@ -141,28 +142,40 @@ export const Paginator = ({
                 return (
                   <Box
                     sx={{
-                      color: '#D54936',
-                      borderBottom: '2px solid #D54936',
-                      paddingBottom: '3px',
-                      paddingLeft: '0.5rem',
-                      paddingRight: '0.5rem',
+                      width: '32px',
+                      height: '32px',
+                      borderRadius: '6px',
+                      display: 'grid',
+                      placeItems: 'center',
+                      color: '#FFF',
+                      background: '#586A74',
+                      userSelect: 'none',
                     }}
                     style={selectedPageStyle}
                     key={page}
                   >
-                    {page}
+                    <span>{page}</span>
                   </Box>
                 )
               }
               return (
                 <Box
                   sx={{
-                    paddingLeft: '0.5rem',
-                    paddingRight: '0.5rem',
+                    width: '32px',
+                    height: '32px',
+                    borderRadius: '6px',
+                    display: 'grid',
+                    placeItems: 'center',
+                    userSelect: 'none',
+
+                    '&:hover': {
+                      background: '#F3F6F8',
+                    },
                   }}
                   key={page}
+                  onClick={(e) => changePage(page, e)}
                 >
-                  <span onClick={(e) => changePage(page, e)}>{page}</span>
+                  <span>{page}</span>
                 </Box>
               )
             })
@@ -171,16 +184,18 @@ export const Paginator = ({
         }
         return <Element key={index} />
       })}
-      <Box
+      {hasMorePages() && <Box
         sx={{
-          paddingLeft: '0.5rem',
-          paddingRight: '0.5rem',
+          padding: '8px',
+          borderRadius: '6px',
+          '&:hover': {
+            background: '#F3F6F8',
+          },
         }}
+        onClick={(e) => changePage(currentPage + 1, e)}
       >
-        {hasMorePages() && (
-          <Box onClick={(e) => changePage(currentPage + 1, e)}>{'>'}</Box>
-        )}
-      </Box>
+        <Icon icon='icon-siguiente' fontSize='16px'/>
+      </Box>}
     </Box>
   )
 }
