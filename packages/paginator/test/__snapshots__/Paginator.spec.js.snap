@@ -9,38 +9,73 @@ exports[`Paginator Paginator with (total > perPage && total % perPage != 0) && (
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: body;
-  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Nunito Sans;
+  font-size: 11.11px;
   cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
+  color: #2E393F;
+  font-weight: 600;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.c1:hover {
+  background: #F3F6F8;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  color: #D54936;
-  border-bottom: 2px solid #D54936;
-  padding-bottom: 3px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: #F3F6F8;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #FFF;
+  background: #586A74;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <div
@@ -48,49 +83,54 @@ exports[`Paginator Paginator with (total > perPage && total % perPage != 0) && (
 >
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &lt;
+      <i
+        className="icon-atras"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       1
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       2
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       3
     </span>
   </div>
   <div
-    className="c3"
+    className="c4"
   >
-    4
+    <span>
+      4
+    </span>
   </div>
-  <div
-    className="c1"
-  />
 </div>
 `;
 
@@ -120,38 +160,73 @@ exports[`Paginator Paginator with (total > perPage && total % perPage == 0) && (
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: body;
-  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Nunito Sans;
+  font-size: 11.11px;
   cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
+  color: #2E393F;
+  font-weight: 600;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.c1:hover {
+  background: #F3F6F8;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  color: #D54936;
-  border-bottom: 2px solid #D54936;
-  padding-bottom: 3px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: #F3F6F8;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #FFF;
+  background: #586A74;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <div
@@ -159,31 +234,38 @@ exports[`Paginator Paginator with (total > perPage && total % perPage == 0) && (
 >
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &lt;
+      <i
+        className="icon-atras"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       1
     </span>
   </div>
   <div
-    className="c3"
+    className="c4"
   >
-    2
+    <span>
+      2
+    </span>
   </div>
-  <div
-    className="c1"
-  />
 </div>
 `;
 
@@ -247,27 +329,63 @@ exports[`Paginator Paginator with error in currentPage value String 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: body;
-  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Nunito Sans;
+  font-size: 11.11px;
   cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
+  color: #2E393F;
+  font-weight: 600;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.c1:hover {
+  background: #F3F6F8;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: #F3F6F8;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 8px;
 }
 
 <div
@@ -275,63 +393,65 @@ exports[`Paginator Paginator with error in currentPage value String 1`] = `
 >
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &lt;
+      <i
+        className="icon-atras"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       1
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       2
     </span>
   </div>
   <div
-    className="c1"
+    className="c4"
   >
     ...
   </div>
   <div
-    className="c1"
+    className="c4"
   >
     ...
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       99
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       100
     </span>
   </div>
-  <div
-    className="c1"
-  />
 </div>
 `;
 
@@ -344,27 +464,56 @@ exports[`Paginator Paginator with error, currentPage too big 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: body;
-  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Nunito Sans;
+  font-size: 11.11px;
   cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
+  color: #2E393F;
+  font-weight: 600;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.c1:hover {
+  background: #F3F6F8;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: #F3F6F8;
 }
 
 <div
@@ -372,26 +521,31 @@ exports[`Paginator Paginator with error, currentPage too big 1`] = `
 >
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &lt;
+      <i
+        className="icon-atras"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       1
     </span>
   </div>
-  <div
-    className="c1"
-  />
 </div>
 `;
 
@@ -438,38 +592,80 @@ exports[`Paginator renders correctly 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: body;
-  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Nunito Sans;
+  font-size: 11.11px;
   cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
+  color: #2E393F;
+  font-weight: 600;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #FFF;
+  background: #586A74;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  color: #D54936;
-  border-bottom: 2px solid #D54936;
-  padding-bottom: 3px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2:hover {
+  background: #F3F6F8;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  padding: 8px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.c4:hover {
+  background: #F3F6F8;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
 }
 
 <div
@@ -477,106 +673,105 @@ exports[`Paginator renders correctly 1 1`] = `
 >
   <div
     className="c1"
-  />
-  <div
-    className="c2"
   >
-    1
+    <span>
+      1
+    </span>
   </div>
   <div
-    className="c1"
+    className="c2"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       2
     </span>
   </div>
   <div
-    className="c1"
+    className="c2"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       3
     </span>
   </div>
   <div
-    className="c1"
+    className="c2"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       4
     </span>
   </div>
   <div
-    className="c1"
+    className="c2"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       5
     </span>
   </div>
   <div
-    className="c1"
+    className="c2"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       6
     </span>
   </div>
   <div
-    className="c1"
+    className="c2"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       7
     </span>
   </div>
   <div
-    className="c1"
+    className="c2"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       8
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
   >
     ...
   </div>
   <div
-    className="c1"
+    className="c2"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       99
     </span>
   </div>
   <div
-    className="c1"
+    className="c2"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       100
     </span>
   </div>
   <div
-    className="c1"
+    className="c4"
+    onClick={[Function]}
   >
     <div
-      className="c3"
-      onClick={[Function]}
+      className="c5"
     >
-      &gt;
+      <i
+        className="icon-siguiente"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
 </div>
@@ -608,38 +803,80 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: body;
-  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Nunito Sans;
+  font-size: 11.11px;
   cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
+  color: #2E393F;
+  font-weight: 600;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.c1:hover {
+  background: #F3F6F8;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  color: #D54936;
-  border-bottom: 2px solid #D54936;
-  padding-bottom: 3px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: #F3F6F8;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 8px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #FFF;
+  background: #586A74;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <div
@@ -647,127 +884,137 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
 >
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &lt;
+      <i
+        className="icon-atras"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       1
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       2
     </span>
   </div>
   <div
-    className="c1"
+    className="c4"
   >
     ...
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       407
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       408
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       409
     </span>
   </div>
   <div
-    className="c3"
+    className="c5"
   >
-    410
+    <span>
+      410
+    </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       411
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       412
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       413
     </span>
   </div>
   <div
-    className="c1"
+    className="c4"
   >
     ...
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       459
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       460
     </span>
   </div>
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &gt;
+      <i
+        className="icon-siguiente"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
 </div>
@@ -782,13 +1029,15 @@ exports[`Paginator renders correctly 4 - with sx 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: body;
-  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Nunito Sans;
+  font-size: 11.11px;
   cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
+  color: #2E393F;
+  font-weight: 600;
   padding: 50px;
   color: black;
   background-color: lightgray;
@@ -800,25 +1049,65 @@ exports[`Paginator renders correctly 4 - with sx 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.c1:hover {
+  background: #F3F6F8;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  color: #D54936;
-  border-bottom: 2px solid #D54936;
-  padding-bottom: 3px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: #F3F6F8;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #FFF;
+  background: #586A74;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 8px;
 }
 
 <div
@@ -829,113 +1118,124 @@ exports[`Paginator renders correctly 4 - with sx 1`] = `
 >
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &lt;
+      <i
+        className="icon-atras"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       1
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       2
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       3
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       4
     </span>
   </div>
   <div
-    className="c3"
+    className="c4"
   >
-    5
+    <span>
+      5
+    </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       6
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       7
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       8
     </span>
   </div>
   <div
-    className="c1"
+    className="c5"
   >
     ...
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       59
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       60
     </span>
   </div>
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &gt;
+      <i
+        className="icon-siguiente"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
 </div>
@@ -950,38 +1250,80 @@ exports[`Paginator renders correctly 5 - with selectedPageStyle 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: body;
-  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Nunito Sans;
+  font-size: 11.11px;
   cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
+  color: #2E393F;
+  font-weight: 600;
 }
 
 .c1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.c1:hover {
+  background: #F3F6F8;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  color: #D54936;
-  border-bottom: 2px solid #D54936;
-  padding-bottom: 3px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: #F3F6F8;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #FFF;
+  background: #586A74;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 8px;
 }
 
 <div
@@ -989,52 +1331,57 @@ exports[`Paginator renders correctly 5 - with selectedPageStyle 1`] = `
 >
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &lt;
+      <i
+        className="icon-atras"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       1
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       2
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       3
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       4
     </span>
   </div>
   <div
-    className="c3"
+    className="c4"
     style={
       {
         "borderBottom": "5px dotted purple",
@@ -1043,66 +1390,72 @@ exports[`Paginator renders correctly 5 - with selectedPageStyle 1`] = `
       }
     }
   >
-    5
+    <span>
+      5
+    </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       6
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       7
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       8
     </span>
   </div>
   <div
-    className="c1"
+    className="c5"
   >
     ...
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       59
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       60
     </span>
   </div>
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &gt;
+      <i
+        className="icon-siguiente"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
 </div>
@@ -1117,13 +1470,15 @@ exports[`Paginator renders correctly 6 - with sx and selectedPageStyle 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: body;
-  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Nunito Sans;
+  font-size: 11.11px;
   cursor: pointer;
-  color: #C8C9CA;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 22px;
+  color: #2E393F;
+  font-weight: 600;
   padding: 50px;
   color: black;
   background-color: lightgray;
@@ -1135,25 +1490,65 @@ exports[`Paginator renders correctly 6 - with sx and selectedPageStyle 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.c1:hover {
+  background: #F3F6F8;
 }
 
 .c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
 }
 
 .c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  color: #D54936;
-  border-bottom: 2px solid #D54936;
-  padding-bottom: 3px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: #F3F6F8;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #FFF;
+  background: #586A74;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 8px;
 }
 
 <div
@@ -1164,52 +1559,57 @@ exports[`Paginator renders correctly 6 - with sx and selectedPageStyle 1`] = `
 >
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &lt;
+      <i
+        className="icon-atras"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       1
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       2
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       3
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       4
     </span>
   </div>
   <div
-    className="c3"
+    className="c4"
     style={
       {
         "borderBottom": "5px dotted purple",
@@ -1218,66 +1618,72 @@ exports[`Paginator renders correctly 6 - with sx and selectedPageStyle 1`] = `
       }
     }
   >
-    5
+    <span>
+      5
+    </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       6
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       7
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       8
     </span>
   </div>
   <div
-    className="c1"
+    className="c5"
   >
     ...
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       59
     </span>
   </div>
   <div
-    className="c1"
+    className="c3"
+    onClick={[Function]}
   >
-    <span
-      onClick={[Function]}
-    >
+    <span>
       60
     </span>
   </div>
   <div
     className="c1"
+    onClick={[Function]}
   >
     <div
       className="c2"
-      onClick={[Function]}
     >
-      &gt;
+      <i
+        className="icon-siguiente"
+        style={
+          {
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+      />
     </div>
   </div>
 </div>
