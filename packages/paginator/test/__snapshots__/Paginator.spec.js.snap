@@ -18,6 +18,7 @@ exports[`Paginator Paginator with (total > perPage && total % perPage != 0) && (
   cursor: pointer;
   color: #2E393F;
   font-weight: 600;
+  gap: 4px;
 }
 
 .c1 {
@@ -169,6 +170,7 @@ exports[`Paginator Paginator with (total > perPage && total % perPage == 0) && (
   cursor: pointer;
   color: #2E393F;
   font-weight: 600;
+  gap: 4px;
 }
 
 .c1 {
@@ -338,6 +340,7 @@ exports[`Paginator Paginator with error in currentPage value String 1`] = `
   cursor: pointer;
   color: #2E393F;
   font-weight: 600;
+  gap: 4px;
 }
 
 .c1 {
@@ -473,6 +476,7 @@ exports[`Paginator Paginator with error, currentPage too big 1`] = `
   cursor: pointer;
   color: #2E393F;
   font-weight: 600;
+  gap: 4px;
 }
 
 .c1 {
@@ -601,6 +605,7 @@ exports[`Paginator renders correctly 1 1`] = `
   cursor: pointer;
   color: #2E393F;
   font-weight: 600;
+  gap: 4px;
 }
 
 .c1 {
@@ -812,6 +817,7 @@ exports[`Paginator renders correctly 3 - big numbers 1`] = `
   cursor: pointer;
   color: #2E393F;
   font-weight: 600;
+  gap: 4px;
 }
 
 .c1 {
@@ -1038,6 +1044,7 @@ exports[`Paginator renders correctly 4 - with sx 1`] = `
   cursor: pointer;
   color: #2E393F;
   font-weight: 600;
+  gap: 4px;
   padding: 50px;
   color: black;
   background-color: lightgray;
@@ -1259,6 +1266,7 @@ exports[`Paginator renders correctly 5 - with selectedPageStyle 1`] = `
   cursor: pointer;
   color: #2E393F;
   font-weight: 600;
+  gap: 4px;
 }
 
 .c1 {
@@ -1479,6 +1487,7 @@ exports[`Paginator renders correctly 6 - with sx and selectedPageStyle 1`] = `
   cursor: pointer;
   color: #2E393F;
   font-weight: 600;
+  gap: 4px;
   padding: 50px;
   color: black;
   background-color: lightgray;
