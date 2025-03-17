@@ -5,6 +5,7 @@ import '@oneloop/theme/styles/globals.css'
 import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
 import { Input } from '@oneloop/input'
+import { enUS as defaultLocale } from 'date-fns/locale';
 
 const CustomInput = forwardRef(({ value, onClick }, ref) => {
   const inputRef = useRef(ref)
@@ -71,16 +72,19 @@ const CustomHeader = ({
 }
 
 export const Datepicker = (props) => {
-  const { locale } = props
+  const { locale, ...rest } = props
+
+  const targetLocale = locale ?? defaultLocale
 
   return (
     <DatePicker
       className="red-border"
       customInput={<CustomInput />}
       renderCustomHeader={headerProps => (
-        <CustomHeader {...headerProps} locale={locale} />
+        <CustomHeader {...headerProps} locale={targetLocale} />
       )}
-      {...props}
+      locale={targetLocale}
+      {...rest}
     />
   )
 }
