@@ -2,6 +2,7 @@ import React, { forwardRef, useRef } from 'react'
 import DatePicker from 'react-datepicker'
 import '../styles/datepicker.css'
 import '@oneloop/theme/styles/globals.css'
+import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
 import { Input } from '@oneloop/input'
 
@@ -28,11 +29,57 @@ const CustomInput = forwardRef(({ value, onClick }, ref) => {
 })
 CustomInput.displayName = 'CustomInput'
 
+const CustomHeader = ({
+  date,
+  decreaseMonth,
+  increaseMonth,
+  prevMonthButtonDisabled,
+  nextMonthButtonDisabled,
+  locale,
+}) => {
+  const formatDate = (date, locale) => {
+    const month = date.toLocaleString(locale.code, { month: 'long' })
+      .replace(/^./, (match) => match.toUpperCase())
+    const year = date.toLocaleString(locale.code, { year: 'numeric' })
+
+    return `${month} ${year}`
+  }
+
+  return (
+    <Box className="customHeader">
+      <Box
+        as="button"
+        className="customHeaderButton"
+        onClick={decreaseMonth}
+        disabled={prevMonthButtonDisabled}
+      >
+        <Icon icon='icon-atras' fontSize='16px' color="#2E393F" />
+      </Box>
+      <Box className="customHeaderDate">
+        {formatDate(date, locale)}
+      </Box>
+      <Box
+        as="button"
+        className="customHeaderButton"
+        onClick={increaseMonth}
+        disabled={nextMonthButtonDisabled}
+      >
+        <Icon icon='icon-siguiente' fontSize='16px' color="#2E393F" />
+      </Box>
+    </Box>
+  )
+}
+
 export const Datepicker = (props) => {
+  const { locale } = props
+
   return (
     <DatePicker
       className="red-border"
       customInput={<CustomInput />}
+      renderCustomHeader={headerProps => (
+        <CustomHeader {...headerProps} locale={locale} />
+      )}
       {...props}
     />
   )
