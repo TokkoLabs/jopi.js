@@ -108,6 +108,7 @@ export const Paginator = ({
         cursor: 'pointer',
         color: '#2E393F',
         fontWeight: '600',
+        gap: '4px',
       }}
       {...sx}
     >
