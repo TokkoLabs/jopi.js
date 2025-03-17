@@ -5,7 +5,7 @@ import '@oneloop/theme/styles/globals.css'
 import { Box } from '@oneloop/box'
 import { Icon } from '@oneloop/icons'
 import { Input } from '@oneloop/input'
-import { enUS as defaultLocale } from 'date-fns/locale';
+import { enUS as defaultLocale } from 'date-fns/locale'
 
 const CustomInput = forwardRef(({ value, onClick }, ref) => {
   const inputRef = useRef(ref)
