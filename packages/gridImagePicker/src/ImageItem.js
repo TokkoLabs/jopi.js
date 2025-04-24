@@ -17,6 +17,7 @@ const ImageItem = ({
   item,
   handleClick,
   handleUpdateItem,
+  onEdit,
   status,
   config,
   texts,
@@ -33,10 +34,16 @@ const ImageItem = ({
   const { maxSizeInMB, minAspectRatio, maxAspectRatio } = config
   const isLoading = item.loading
   const isError = item.sizeError || item.aspectRatioError || item.fetchError
+  const isFizableError = !item.fetchError && onEdit
 
-  const tooltipErrorText = getTooltipErrorText(item, texts)
-  const backgroundImage = item.loading || item.fetchError ? '' : `url(${item.src})`
-  const unclickable = !isItemClickable(item, isMaxSelectableReached, itemsAreReady)
+  const tooltipErrorText = getTooltipErrorText(item, texts, onEdit)
+  const backgroundImage =
+    item.loading || item.fetchError ? '' : `url(${item.src})`
+  const unclickable = !isItemClickable(
+    item,
+    isMaxSelectableReached,
+    itemsAreReady
+  )
 
   useEffect(() => {
     const handleHideTooltip = () => {
@@ -80,6 +87,11 @@ const ImageItem = ({
     setIsTooltipShowable(shouldShowTooltip)
   }
 
+  const handleEdit = (e) => {
+    e.stopPropagation()
+    onEdit(item)
+  }
+
   return (
     <Box className="imageItemOuterWrapper">
       <Box
@@ -89,7 +101,9 @@ const ImageItem = ({
         }}
         as="button"
         className="imageItemWrapper"
-        onClick={() => handleClick(item)}
+        onClick={() =>
+          isFizableError && isError ? onEdit(item) : handleClick(item)
+        }
         onMouseMove={handleMouseMove}
         data-dragging={isDraggingActive}
         __css={{ backgroundImage }}
@@ -121,6 +135,13 @@ const ImageItem = ({
 
         <Box className="imageItemError" data-visible={isError && !isLoading}>
           <Icon icon="icon-error" className="imageItemIconError" />
+        </Box>
+        <Box
+          className="imageItemEdit"
+          data-visible={isFizableError && !isLoading}
+          onClick={(e) => handleEdit(e)}
+        >
+          <Icon icon="icon-editar" className="imageItemIconEdit" />
         </Box>
       </Box>
 

@@ -28,6 +28,7 @@ export const GridImagePicker = ({
   minAspectRatio,
   maxAspectRatio,
   onChange,
+  onEdit = null,
   texts,
   sizeFetcher,
 }) => {
@@ -94,6 +95,7 @@ export const GridImagePicker = ({
                 status={status}
                 config={config}
                 handleClick={handleClickItem}
+                onEdit={onEdit}
                 handleUpdateItem={handleUpdateItem}
                 texts={texts}
                 sizeFetcher={sizeFetcher}

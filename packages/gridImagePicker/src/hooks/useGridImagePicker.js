@@ -9,6 +9,8 @@ import {
   fillCheckedItems,
   getSelectAllItems,
   getDeselectAllItems,
+  getItemChanged,
+  getItemsWithNewUrl,
 } from '../utils/manageListOfItems'
 
 function useGridImagePicker ({
@@ -20,14 +22,28 @@ function useGridImagePicker ({
   onChange,
 }) {
   const [isDraggingActive, setIsDraggingActive] = useState(false)
+  const [initialUrlList, setInitialUrlList] = useState(listOfSrc)
+  const [itemNewUrl, setItemNewUrl] = useState(null)
   const [items, setItems] = useState(() => getItemsInitialState(listOfSrc))
+
+  useEffect(() => {
+    setItemNewUrl(getItemChanged(initialUrlList, listOfSrc))
+  }, [listOfSrc])
+
+  useEffect(() => {
+    if (!itemNewUrl) return
+    setItems(prevItems => getItemsWithNewUrl(prevItems, itemNewUrl))
+    setInitialUrlList(listOfSrc)
+    setItemNewUrl(null)
+  }, [itemNewUrl])
+
   const maxSelectable = Math.min(
     maxSelectablePreferenceByUser,
     items.filter(item => !item.sizeError && !item.aspectRatioError && !item.fetchError).length
   )
-  const numberOfCheckedItems = items.filter(item => item.checked).length
+  const numberOfCheckedItems = items.filter((item) => item.checked).length
   const isMaxSelectableReached = numberOfCheckedItems >= maxSelectable
-  const itemsAreReady = items.every(item => !item.loading)
+  const itemsAreReady = items.every((item) => !item.loading)
 
   const config = { maxSizeInMB, minAspectRatio, maxAspectRatio, maxSelectable }
   const status = { isDraggingActive, isMaxSelectableReached, itemsAreReady, numberOfCheckedItems }
