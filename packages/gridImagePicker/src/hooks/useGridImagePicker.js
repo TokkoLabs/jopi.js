@@ -8,7 +8,8 @@ import {
   refreshItemsPosition,
   fillCheckedItems,
   getSelectAllItems,
-  getDeselectAllItems,
+  getDeselectAllItems,getItemChanged,
+  getItemsWithNewUrl
 } from '../utils/manageListOfItems'
 
 function useGridImagePicker ({
@@ -20,11 +21,20 @@ function useGridImagePicker ({
   onChange,
 }) {
   const [isDraggingActive, setIsDraggingActive] = useState(false)
+  const [initialUrlList, setInitialUrlList] = useState(listOfSrc)
+  const [itemNewUrl, setItemNewUrl] = useState(null)
   const [items, setItems] = useState(() => getItemsInitialState(listOfSrc))
 
   useEffect(() => {
-    setItems((prevItems) => getItemsInitialState(listOfSrc, prevItems))
+    setItemNewUrl(getItemChanged(initialUrlList, listOfSrc));
   }, [listOfSrc])
+
+  useEffect(() => {
+    if (!itemNewUrl) return
+    setItems(prevItems => getItemsWithNewUrl(prevItems, itemNewUrl))
+    setInitialUrlList(listOfSrc)
+    setItemNewUrl(null)
+  }, [itemNewUrl])
 
   const maxSelectable = Math.min(
     maxSelectablePreferenceByUser,
