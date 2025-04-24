@@ -21,7 +21,7 @@ function useGridImagePicker ({
 }) {
   const [isDraggingActive, setIsDraggingActive] = useState(false)
   const [items, setItems] = useState(() => getItemsInitialState(listOfSrc))
-  const maxSelectable = Math.min(
+    const maxSelectable = Math.min(
     maxSelectablePreferenceByUser,
     items.filter(item => !item.sizeError && !item.aspectRatioError && !item.fetchError).length
   )
