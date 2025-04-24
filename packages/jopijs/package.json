@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/jopijs",
-  "version": "1.5.395",
+  "version": "1.5.396",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -21,7 +21,7 @@
     "@oneloop/drawer": "^1.0.275",
     "@oneloop/dropdown": "^1.2.382",
     "@oneloop/fonts": "^1.0.132",
-    "@oneloop/gridimagepicker": "^1.0.10",
+    "@oneloop/gridimagepicker": "^1.0.12",
     "@oneloop/icons": "^1.2.314",
     "@oneloop/image": "^1.2.302",
     "@oneloop/input": "^1.2.358",
