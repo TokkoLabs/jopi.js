@@ -44,7 +44,7 @@ const ImageItem = ({
     isMaxSelectableReached,
     itemsAreReady
   )
-  
+
   useEffect(() => {
     const handleHideTooltip = () => {
       setIsTooltipShowable(false)
@@ -91,7 +91,7 @@ const ImageItem = ({
     e.stopPropagation()
     onEdit(item)
   }
-  
+
   return (
     <Box className="imageItemOuterWrapper">
       <Box

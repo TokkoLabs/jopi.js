@@ -8,8 +8,9 @@ import {
   refreshItemsPosition,
   fillCheckedItems,
   getSelectAllItems,
-  getDeselectAllItems,getItemChanged,
-  getItemsWithNewUrl
+  getDeselectAllItems,
+  getItemChanged,
+  getItemsWithNewUrl,
 } from '../utils/manageListOfItems'
 
 function useGridImagePicker ({
@@ -26,7 +27,7 @@ function useGridImagePicker ({
   const [items, setItems] = useState(() => getItemsInitialState(listOfSrc))
 
   useEffect(() => {
-    setItemNewUrl(getItemChanged(initialUrlList, listOfSrc));
+    setItemNewUrl(getItemChanged(initialUrlList, listOfSrc))
   }, [listOfSrc])
 
   useEffect(() => {

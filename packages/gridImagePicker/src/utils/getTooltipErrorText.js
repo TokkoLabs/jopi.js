@@ -5,13 +5,10 @@ const tooltipFetchErrorDefaultText = 'The image cannot be loaded'
 const tooltipImageEditionSuggestionText = 'Crop the image to publish it'
 
 export const getTooltipErrorText = (item, texts, editable) => {
-  if (item.fetchError) return texts.fetchError ?? tooltipFetchErrorDefaultText
-  if (item.sizeError && !editable)
-    return texts.sizeError ?? tooltipSizeErrorDefaultText
-  if (item.aspectRatioError && !editable)
-    return texts.aspectRatioError ?? tooltipAspectRatioErrorDefaultText
-  if ((item.aspectRatioError || item.sizeError) && editable)
-    return tooltipImageEditionSuggestionText
+  if (item.fetchError) { return texts.fetchError ?? tooltipFetchErrorDefaultText }
+  if (item.sizeError && !editable) { return texts.sizeError ?? tooltipSizeErrorDefaultText }
+  if (item.aspectRatioError && !editable) { return texts.aspectRatioError ?? tooltipAspectRatioErrorDefaultText }
+  if ((item.aspectRatioError || item.sizeError) && editable) { return tooltipImageEditionSuggestionText }
 
   return null
 }
