@@ -13,7 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap-between-images);
-  max-width: 540px;
+  max-width: 550px;
   min-width: unset !important;
   width: 100%;
 }
