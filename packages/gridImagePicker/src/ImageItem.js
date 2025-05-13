@@ -6,7 +6,7 @@ import { Check, Icon } from '@oneloop/icons'
 import useSize from './hooks/useSize'
 import useAspectRatio from './hooks/useAspectRatio'
 import { getTooltipErrorText } from './utils/getTooltipErrorText'
-import { isItemClickable } from './utils/manageItem'
+import { isDisabledCheckbox, isItemClickable } from './utils/manageItem'
 import '../styles/ImageItem.css'
 import '../styles/ImageItemBlanket.css'
 import '../styles/ImageItemCover.css'
@@ -44,6 +44,7 @@ const ImageItem = ({
     isMaxSelectableReached,
     itemsAreReady
   )
+  const disabled = isDisabledCheckbox(item, isMaxSelectableReached)
 
   useEffect(() => {
     const handleHideTooltip = () => {
@@ -129,7 +130,7 @@ const ImageItem = ({
           <Box className="imageItemCoverText"> {texts.cover} </Box>
         </Box>
 
-        <Box className="imageItemCheckbox" data-active={item.checked} data-visible={!unclickable}>
+        <Box className="imageItemCheckbox" data-active={item.checked} data-disabled={disabled} data-visible={!unclickable}>
           <Check className="imageItemIconCheck" color="white" />
         </Box>
 
