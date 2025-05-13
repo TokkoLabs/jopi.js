@@ -1,6 +1,6 @@
 {
   "name": "@oneloop/gridimagepicker",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
