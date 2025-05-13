@@ -60,6 +60,11 @@
   opacity: 1;
 }
 
+.imageItemCheckbox[data-disabled="true"] {
+  opacity: 0.5;
+  background-color: #F3F6F8;
+}
+
 .imageItemError {
   align-items: center;
   background-color: #DF1517;

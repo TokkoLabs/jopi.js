@@ -5,3 +5,10 @@ export const isItemClickable = (item, isMaxSelectableReached, itemsAreReady) => 
 
   return !isUnclickable
 }
+
+export const isDisabledCheckbox = (item, isMaxSelectableReached) => {
+  const { sizeError, fetchError, aspectRatioError, checked } = item
+  const isDisabled = !sizeError && !fetchError && !aspectRatioError && !checked && isMaxSelectableReached
+
+  return isDisabled
+}
