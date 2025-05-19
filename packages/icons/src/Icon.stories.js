@@ -370,3 +370,35 @@ export const iconPausar = () => <Icon icon='icon-pausar' fontSize='24px'/>
 export const iconX = () => <Icon icon='icon-x' fontSize='24px'/>
 
 export const iconYoutube = () => <Icon icon='icon-youtube' fontSize='24px'/>
+
+export const iconAi = () => <Icon icon='icon-ai' fontSize='24px'/>
+
+export const iconAlertaRound = () => <Icon icon='icon-alerta_round' fontSize='24px'/>
+
+export const iconBandejadeentrada = () => <Icon icon='icon-bandejadeentrada' fontSize='24px'/>
+
+export const iconCropimage = () => <Icon icon='icon-cropimage' fontSize='24px'/>
+
+export const iconFlechaabajo = () => <Icon icon='icon-flechaabajo' fontSize='24px'/>
+
+export const iconFlechaarriba = () => <Icon icon='icon-flechaarriba' fontSize='24px'/>
+
+export const iconIratokko = () => <Icon icon='icon-iratokko' fontSize='24px'/>
+
+export const iconPinupsolido = () => <Icon icon='icon-pinupsolido' fontSize='24px'/>
+
+export const iconPremium = () => <Icon icon='icon-premium' fontSize='24px'/>
+
+export const iconPremiumline = () => <Icon icon='icon-premiumline' fontSize='24px'/>
+
+export const iconReenviado = () => <Icon icon='icon-reenviado' fontSize='24px'/>
+
+export const iconReset = () => <Icon icon='icon-reset' fontSize='24px'/>
+
+export const iconSituacion = () => <Icon icon='icon-situacion' fontSize='24px'/>
+
+export const iconTodoslosmensajes = () => <Icon icon='icon-todoslosmensajes' fontSize='24px'/>
+
+export const iconTokki = () => <Icon icon='icon-tokki' fontSize='24px'/>
+
+export const iconZonaprop = () => <Icon icon='icon-zonaprop' fontSize='24px'/>
