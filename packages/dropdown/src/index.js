@@ -114,7 +114,7 @@ const DropdownList = ({ children, width = '236px', height = '150px', clickClose 
           top: '38px',
           zIndex: 1,
           width: width,
-          height: height,
+          maxHeight: height,
         }}
       >
         {children}
