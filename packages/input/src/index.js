@@ -71,15 +71,15 @@ export const Input = forwardRef(
       finalVariant = 'inputError'
       colorPlaceholder = 'error'
       suffix = (
-        <Icon 
-          icon="icon-error" 
-          fontSize={fontSizePrefix} 
+        <Icon
+          icon="icon-error"
+          fontSize={fontSizePrefix}
           style={{ cursor: 'pointer' }}
           onClick={() => {
             setText('')
             if (props.onChange) {
               const syntheticEvent = {
-                target: { value: '' }
+                target: { value: '' },
               }
               props.onChange(syntheticEvent)
             }
