@@ -221,8 +221,8 @@ describe('Input', () => {
 
     errorIcon.simulate('click')
 
-    // Check that the input value is cleared (state should be empty)
-    expect(component.state('text')).toBe('')
+    // Check that the input value is cleared (verificar el valor del input, no el estado)
+    expect(component.find(Box).at(2).props().value).toBe('')
   })
 
   test('error icon has pointer cursor', () => {
