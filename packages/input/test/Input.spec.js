@@ -172,4 +172,69 @@ describe('Input', () => {
 
     expect(component).toMatchSnapshot()
   })
+
+  test('error icon is clickable and clears input', () => {
+    const mockOnChange = jest.fn()
+    const component = shallow(
+      <Input
+        errors="Error message"
+        placeholder="Placeholder text"
+        onChange={mockOnChange}
+      />
+    )
+
+    // Simulate typing in the input
+    component
+      .find(Box)
+      .at(2)
+      .simulate('change', { target: { value: 'test text' } })
+
+    // Find and click the error icon
+    const errorIcon = component.find(Icon).filterWhere(icon => icon.props().icon === 'icon-error')
+    expect(errorIcon.exists()).toBeTruthy()
+
+    errorIcon.simulate('click')
+
+    // Check that onChange was called with empty value
+    expect(mockOnChange).toHaveBeenCalledWith({
+      target: { value: '' },
+    })
+  })
+
+  test('error icon clears input without onChange prop', () => {
+    const component = shallow(
+      <Input
+        errors="Error message"
+        placeholder="Placeholder text"
+      />
+    )
+
+    // Simulate typing in the input
+    component
+      .find(Box)
+      .at(2)
+      .simulate('change', { target: { value: 'test text' } })
+
+    // Find and click the error icon
+    const errorIcon = component.find(Icon).filterWhere(icon => icon.props().icon === 'icon-error')
+    expect(errorIcon.exists()).toBeTruthy()
+
+    errorIcon.simulate('click')
+
+    // Check that the input value is cleared (state should be empty)
+    expect(component.state('text')).toBe('')
+  })
+
+  test('error icon has pointer cursor', () => {
+    const component = shallow(
+      <Input
+        errors="Error message"
+        placeholder="Placeholder text"
+      />
+    )
+
+    const errorIcon = component.find(Icon).filterWhere(icon => icon.props().icon === 'icon-error')
+    expect(errorIcon.exists()).toBeTruthy()
+    expect(errorIcon.props().style).toEqual({ cursor: 'pointer' })
+  })
 })
