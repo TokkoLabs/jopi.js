@@ -92,9 +92,19 @@ export default {
 
 export const input = () => <Input placeholder="Placeholder text" width='300px'/>
 
-export const inputWithErrors = () => (
-  <Input errors="Minimo 8 caracteres." placeholder="Placeholder text" width='300px'/>
-)
+export const InputWithErrors = () => {
+  const [value, setValue] = React.useState('')
+
+  return (
+    <Input
+      errors="Minimo 8 caracteres."
+      placeholder="Placeholder text"
+      width='300px'
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  )
+}
 
 export const inputWithInfoAlert = () => (
   <Input infoAlert="Campo Requerido" placeholder="Placeholder text" width='300px'/>
