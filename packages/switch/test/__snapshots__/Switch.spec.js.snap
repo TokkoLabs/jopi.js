@@ -15,8 +15,8 @@ exports[`Switch renders alt correctly 1`] = `
   padding: 2px 4px;
   border-radius: circle;
   cursor: pointer;
-  border: 1px solid #D4DBDE;
-  background-color: neutral.0;
+  border: 1px solid #94A2AB;
+  background-color: #94A2AB;
   position: relative;
   outline: none;
   -webkit-transition: background-color .1s cubic-bezier(.4,0,.2,1);
@@ -25,7 +25,7 @@ exports[`Switch renders alt correctly 1`] = `
 
 .c0::before {
   content: '';
-  background: #D4DBDE;
+  background: white;
   position: absolute;
   width: 16px;
   height: 16px;
@@ -52,12 +52,13 @@ exports[`Switch renders alt correctly 1`] = `
 }
 
 .c0[disabled] {
-  background-color: #EFF2F3;
-  border: none;
+  background-color: #C2CCD3;
+  border: 1px solid #C2CCD3;
+  cursor: not-allowed;
 }
 
 .c0[disabled]::before {
-  background: #C1CCD0;
+  background: #EAEEF1;
   box-shadow: none;
 }
 
@@ -82,8 +83,8 @@ exports[`Switch renders correctly 1`] = `
   padding: 2px 4px;
   border-radius: circle;
   cursor: pointer;
-  border: 1px solid #D4DBDE;
-  background-color: neutral.0;
+  border: 1px solid #94A2AB;
+  background-color: #94A2AB;
   position: relative;
   outline: none;
   -webkit-transition: background-color .1s cubic-bezier(.4,0,.2,1);
@@ -92,7 +93,7 @@ exports[`Switch renders correctly 1`] = `
 
 .c0::before {
   content: '';
-  background: #D4DBDE;
+  background: white;
   position: absolute;
   width: 16px;
   height: 16px;
@@ -119,12 +120,13 @@ exports[`Switch renders correctly 1`] = `
 }
 
 .c0[disabled] {
-  background-color: #EFF2F3;
-  border: none;
+  background-color: #C2CCD3;
+  border: 1px solid #C2CCD3;
+  cursor: not-allowed;
 }
 
 .c0[disabled]::before {
-  background: #C1CCD0;
+  background: #EAEEF1;
   box-shadow: none;
 }
 
