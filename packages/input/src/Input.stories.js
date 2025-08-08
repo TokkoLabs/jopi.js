@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { Input } from '.'
+import { Box } from '@oneloop/box'
+import { Text } from '@oneloop/text'
 import { ButtonIcon } from '@oneloop/button'
 import { useToggle } from '@oneloop/hooks'
 import { Icon } from '@oneloop/icons'
@@ -91,6 +93,34 @@ export default {
 }
 
 export const input = () => <Input placeholder="Placeholder text" width='300px'/>
+
+export const InputWithOnChange = () => {
+  const [value, setValue] = React.useState('')
+  const [errors, setErrors] = React.useState(undefined)
+
+  const processText = (input) => {
+    setValue(input.target.value)
+    if (input.target.value.length > 10) {
+      setErrors('String must be 10 characters max.')
+    } else {
+      setErrors(undefined)
+    }
+  }
+
+  return (
+    <>
+      <Input
+        label="El nombre debe tener 10 caracteres como máximo"
+        errors={errors}
+        placeholder="Placeholder text"
+        width='300px'
+        value={value}
+        onChange={(e) => processText(e) }
+      />
+      <Text> El valor ingresado es: {value}</Text>
+    </>
+  )
+}
 
 export const InputWithErrors = () => {
   const [value, setValue] = React.useState('')
