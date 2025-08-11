@@ -279,6 +279,7 @@ input:disabled:not(:checked) ~ .c18 {
             onMouseOver={[Function]}
             placeholder="Search"
             type="text"
+            value=""
             width="100%"
           />
         </div>
