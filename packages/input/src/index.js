@@ -70,7 +70,22 @@ export const Input = forwardRef(
     } else if (errors !== undefined) {
       finalVariant = 'inputError'
       colorPlaceholder = 'error'
-      suffix = <Icon icon="icon-error" fontSize={fontSizePrefix} />
+      suffix = (
+        <Icon
+          icon="icon-error"
+          fontSize={fontSizePrefix}
+          style={{ cursor: 'pointer' }}
+          onClick={() => {
+            setText('')
+            if (props.onChange) {
+              const syntheticEvent = {
+                target: { value: '' },
+              }
+              props.onChange(syntheticEvent)
+            }
+          }}
+        />
+      )
     }
 
     return (
@@ -136,11 +151,17 @@ export const Input = forwardRef(
             variant={[finalVariant, variantSize]}
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}
-            onChange={(e) => setText(e.target.value)}
+            onChange={(e) => {
+              setText(e.target.value)
+              if (props.onChange) {
+                props.onChange(e)
+              }
+            }}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
             width="100%"
             ref={ref}
+            value={props.value !== undefined ? props.value : text}
             {...props}
             __css={{
               fontWeight: bold ? 700 : 400,

@@ -69,6 +69,7 @@ exports[`Input disabled 1`] = `
       onMouseOut={[Function]}
       onMouseOver={[Function]}
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -175,10 +176,17 @@ exports[`Input errors 1`] = `
       onMouseOver={[Function]}
       placeholder="Placeholder text"
       type="text"
+      value=""
       width="100%"
     />
     <div
       className="c3"
+      onClick={[Function]}
+      style={
+        {
+          "cursor": "pointer",
+        }
+      }
     >
       <i
         className="icon-error"
@@ -289,6 +297,7 @@ exports[`Input infoAlert 1`] = `
       onMouseOver={[Function]}
       placeholder="Placeholder text"
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -412,6 +421,7 @@ exports[`Input inputInlineLabel 1`] = `
       onMouseOver={[Function]}
       placeholder="Hello World!"
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -486,6 +496,7 @@ exports[`Input inputMedium 1`] = `
       onMouseOver={[Function]}
       placeholder="Placeholder text"
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -570,6 +581,7 @@ exports[`Input inputWithIcon 1`] = `
       onMouseOver={[Function]}
       placeholder="Hello World!"
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -672,6 +684,7 @@ exports[`Input inputWithLabel 1`] = `
       onMouseOver={[Function]}
       placeholder="Hello World!"
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -781,6 +794,7 @@ exports[`Input inputWithPassword 1`] = `
       onMouseOver={[Function]}
       placeholder="Hello World!"
       type="password"
+      value=""
       width="100%"
     />
     <span
@@ -899,6 +913,7 @@ exports[`Input inputWithPasswordIcon 1`] = `
       onMouseOver={[Function]}
       placeholder="Hello World!"
       type="password"
+      value=""
       width="100%"
     />
     <div>
@@ -989,6 +1004,7 @@ exports[`Input placeholder 1`] = `
       onMouseOver={[Function]}
       placeholder="test"
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -1063,6 +1079,7 @@ exports[`Input readonly 1`] = `
       onMouseOver={[Function]}
       placeholder="Hello World!"
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -1136,6 +1153,7 @@ exports[`Input renders correctly 1`] = `
       onMouseOut={[Function]}
       onMouseOver={[Function]}
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -1220,6 +1238,7 @@ exports[`Input searchBold 1`] = `
       onMouseOver={[Function]}
       placeholder="Search"
       type="text"
+      value=""
       width="100%"
     />
   </div>
@@ -1321,6 +1340,7 @@ exports[`Input searchBoldIcon 1`] = `
       onMouseOver={[Function]}
       placeholder="Search"
       type="text"
+      value=""
       width="100%"
     />
   </div>
