@@ -6,7 +6,7 @@ import interactionPlugin from '@fullcalendar/interaction'
 import rrulePlugin from '@fullcalendar/rrule'
 import FullCalendar from '@fullcalendar/react'
 import '../styles/calendar.css'
-import esLocale from '@fullcalendar/core/locales/es-us'
+import allLocales from '@fullcalendar/core/locales-all'
 
 const date = new Date()
 
@@ -63,7 +63,7 @@ export const Calendar = ({
 
   return (
     <Box id={variant}>
-      <FullCalendar locale={esLocale} {...options} />
+      <FullCalendar locales={allLocales} {...options} />
     </Box>
   )
 }
