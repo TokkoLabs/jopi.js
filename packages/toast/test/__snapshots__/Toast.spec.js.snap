@@ -1427,7 +1427,7 @@ exports[`Toast renders correctly three 1`] = `
       className="c3"
     >
       <i
-        className="icon-alertas"
+        className="icon-alerta_round"
         style={
           {
             "fontSize": "32px",

@@ -21,7 +21,7 @@ describe('Toast', () => {
   test('renders correctly three', () => {
     const tree = renderer
       .create(
-        <Toast icon={'icon-alertas'} variant="alert" text="Alert message" />
+        <Toast icon={'icon-alerta_round'} variant="alert" text="Alert message" />
       )
       .toJSON()
 
