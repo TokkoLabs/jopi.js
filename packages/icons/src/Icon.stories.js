@@ -33,8 +33,6 @@ export const iconAgente = () => <Icon icon='icon-agente' fontSize='24px'/>
 
 export const iconAgregar = () => <Icon icon='icon-agregar' fontSize='24px'/>
 
-export const iconAlertas = () => <Icon icon='icon-alertas' fontSize='24px'/>
-
 export const iconAmbientes = () => <Icon icon='icon-ambientes' fontSize='24px'/>
 
 export const iconAnalisiscontactos = () => <Icon icon='icon-analisiscontactos' fontSize='24px'/>
@@ -109,10 +107,6 @@ export const iconEditar = () => <Icon icon='icon-editar' fontSize='24px'/>
 
 export const iconEditarfichainfo = () => <Icon icon='icon-editarfichainfo' fontSize='24px'/>
 
-export const iconEditarpropiedad = () => <Icon icon='icon-editarpropiedad' fontSize='24px'/>
-
-export const iconEditarsitio = () => <Icon icon='icon-editarsitio' fontSize='24px'/>
-
 export const iconElectricidad = () => <Icon icon='icon-electricidad' fontSize='24px'/>
 
 export const iconEliminar = () => <Icon icon='icon-eliminar' fontSize='24px'/>
@@ -168,8 +162,6 @@ export const iconInformacioninterna = () => <Icon icon='icon-informacioninterna'
 export const iconIr = () => <Icon icon='icon-ir' fontSize='24px'/>
 
 export const iconLink = () => <Icon icon='icon-link' fontSize='24px'/>
-
-export const iconListadocontactos = () => <Icon icon='icon-listadocontactos' fontSize='24px'/>
 
 export const iconMapa = () => <Icon icon='icon-mapa' fontSize='24px'/>
 
@@ -254,8 +246,6 @@ export const iconRespuestasrapidas = () => <Icon icon='icon-respuestasrapidas' f
 export const iconSalir = () => <Icon icon='icon-salir' fontSize='24px'/>
 
 export const iconSeguimiento = () => <Icon icon='icon-seguimiento' fontSize='24px'/>
-
-export const iconSeguimientos = () => <Icon icon='icon-seguimientos' fontSize='24px'/>
 
 export const iconSelectall = () => <Icon icon='icon-selectall' fontSize='24px'/>
 
@@ -402,3 +392,19 @@ export const iconTodoslosmensajes = () => <Icon icon='icon-todoslosmensajes' fon
 export const iconTokki = () => <Icon icon='icon-tokki' fontSize='24px'/>
 
 export const iconZonaprop = () => <Icon icon='icon-zonaprop' fontSize='24px'/>
+
+export const iconUniven = () => <Icon icon='icon-univen' fontSize='24px'/>
+
+export const iconUnivenai = () => <Icon icon='icon-univenai' fontSize='24px'/>
+
+export const iconEventocancelado = () => <Icon icon='icon-eventocancelado' fontSize='24px'/>
+
+export const iconEventoconfirmado = () => <Icon icon='icon-eventoconfirmado' fontSize='24px'/>
+
+export const iconKanban = () => <Icon icon='icon-kanban' fontSize='24px'/>
+
+export const iconLista = () => <Icon icon='icon-lista' fontSize='24px'/>
+
+export const iconEquivalencia = () => <Icon icon='icon-equivalencia' fontSize='24px'/>
+
+export const iconNuevaNota = () => <Icon icon='icon-nuevanota' fontSize='24px'/>
