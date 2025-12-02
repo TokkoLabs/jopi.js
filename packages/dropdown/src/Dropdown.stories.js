@@ -44,7 +44,7 @@ let data = [
     content: {
       name: 'Agustin Iglesias',
       count: 10,
-      icon: 'icon-alertas',
+      icon: 'icon-alerta_round',
     },
   },
   {

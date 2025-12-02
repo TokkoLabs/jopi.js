@@ -79,7 +79,7 @@ export const alert = () =>
         <br />
         <br />
         {openAlert && (
-          <Toast icon={'icon-alertas'} variant="alert" text="Alert message" closeFunction={setOpenAlert} />
+          <Toast icon={'icon-alerta_round'} variant="alert" text="Alert message" closeFunction={setOpenAlert} />
         )}
       </React.Fragment>
     )
