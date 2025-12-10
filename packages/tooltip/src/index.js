@@ -1,7 +1,7 @@
 import React from 'react'
 import { createPopper } from '@popperjs/core'
-import { Box } from '@oneloop/box'
-import { isMouseOutJoin } from '@oneloop/hooks'
+import { Box } from '@quintoandar-tokko/box'
+import { isMouseOutJoin } from '@quintoandar-tokko/hooks'
 
 export const ParentTooltip = ({ children, setHover, hover, placement = 'right', offset = 8, ...props }) => {
   let styles = { position: 'absolute', width: offset + 'px' }

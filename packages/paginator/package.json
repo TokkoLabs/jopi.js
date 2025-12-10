@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/paginator",
+  "name": "@quintoandar-tokko/paginator",
   "version": "1.0.165",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -7,8 +7,8 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
-    "@oneloop/text": "^1.2.286"
+    "@quintoandar-tokko/box": "^1.2.285",
+    "@quintoandar-tokko/text": "^1.2.286"
   },
   "peerDependencies": {
     "react": "^16.8.0"

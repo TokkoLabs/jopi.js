@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { Tags } from '.'
 import { Modal } from '../../modal/src'
-import { Button } from '@oneloop/button'
+import { Button } from '@quintoandar-tokko/button'
 
 export default {
   component: Tags,

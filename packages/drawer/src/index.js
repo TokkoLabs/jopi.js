@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex } from '@oneloop/box'
+import { Box, Flex } from '@quintoandar-tokko/box'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export const Drawer = ({

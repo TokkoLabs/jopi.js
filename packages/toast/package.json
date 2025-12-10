@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/toast",
+  "name": "@quintoandar-tokko/toast",
   "version": "1.0.100",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -7,11 +7,11 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
-    "@oneloop/button": "^1.2.370",
-    "@oneloop/icons": "^1.2.316",
-    "@oneloop/loader": "^1.2.326",
-    "@oneloop/text": "^1.2.286"
+    "@quintoandar-tokko/box": "^1.2.285",
+    "@quintoandar-tokko/button": "^1.2.370",
+    "@quintoandar-tokko/icons": "^1.2.316",
+    "@quintoandar-tokko/loader": "^1.2.326",
+    "@quintoandar-tokko/text": "^1.2.286"
   },
   "peerDependencies": {
     "react": "^16.8.0"

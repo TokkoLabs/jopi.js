@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ButtonIcon } from '@oneloop/button'
+import { ButtonIcon } from '@quintoandar-tokko/button'
 import 'jest-styled-components'
 
 import { ContainerMenu } from '../src'

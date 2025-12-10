@@ -2,9 +2,9 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { ButtonIcon } from '@oneloop/button'
+import { ButtonIcon } from '@quintoandar-tokko/button'
 import { ParentTooltip, Tooltip } from '../src'
-import { Text } from '@oneloop/text'
+import { Text } from '@quintoandar-tokko/text'
 
 describe('Submenu', () => {
   test('renders correctly', () => {

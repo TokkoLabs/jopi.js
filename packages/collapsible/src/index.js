@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Button, ButtonIcon } from '@oneloop/button'
-import { Box } from '@oneloop/box'
+import { Button, ButtonIcon } from '@quintoandar-tokko/button'
+import { Box } from '@quintoandar-tokko/box'
 
 const CollapsibleContext = createContext()
 

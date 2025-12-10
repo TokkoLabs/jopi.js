@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
+import { Box } from '@quintoandar-tokko/box'
 import { Button, ButtonIcon } from '.'
-import { useToggle } from '@oneloop/hooks'
+import { useToggle } from '@quintoandar-tokko/hooks'
 
 export default {
   component: Button,

@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable multiline-ternary */
 import React, { useEffect, useReducer, useRef, useState } from 'react'
-import { Box } from '@oneloop/box'
-import { Tags } from '@oneloop/tags'
+import { Box } from '@quintoandar-tokko/box'
+import { Tags } from '@quintoandar-tokko/tags'
 
 const wrappedReducer = (state, action) => {
   switch (action.type) {

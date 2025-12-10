@@ -1,9 +1,9 @@
 import React from 'react'
-import { Flex, Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import { Text } from '@oneloop/text'
-import { ButtonIcon } from '@oneloop/button'
-import { Loader } from '@oneloop/loader'
+import { Flex, Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Text } from '@quintoandar-tokko/text'
+import { ButtonIcon } from '@quintoandar-tokko/button'
+import { Loader } from '@quintoandar-tokko/loader'
 
 export const Toast = ({ variant = 'base', variantLoader, variantText = 'body.fontSize14', icon, text, subtitle, closeIconNeighbor, textDownload, download, hideCloseIcon = false, ...props }) => (
   <Flex

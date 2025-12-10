@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { List, useFilterData } from '.'
-import { ButtonIcon } from '@oneloop/button'
+import { ButtonIcon } from '@quintoandar-tokko/button'
 
 export default {
   component: List,

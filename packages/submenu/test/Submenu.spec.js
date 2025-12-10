@@ -4,7 +4,7 @@ import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import 'jest-styled-components'
 
-import { ButtonIcon } from '@oneloop/button'
+import { ButtonIcon } from '@quintoandar-tokko/button'
 import { ParentSubmenu, Submenu } from '../src'
 
 Enzyme.configure({ adapter: new Adapter() })

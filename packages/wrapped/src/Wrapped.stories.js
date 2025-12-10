@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
-import { Box } from '@oneloop/box'
-import { Input } from '@oneloop/input'
-import { Button } from '@oneloop/button'
+import { Box } from '@quintoandar-tokko/box'
+import { Input } from '@quintoandar-tokko/input'
+import { Button } from '@quintoandar-tokko/button'
 
 import { Wrapped } from '.'
 

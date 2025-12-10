@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { ImageCard } from './ImageCard'
-import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import theme from '@oneloop/theme'
+import { Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import theme from '@quintoandar-tokko/theme'
 import { ImageErrorFallback } from './ImageErrorFallback'
 
 export const SliderSwap = ({

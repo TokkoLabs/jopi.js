@@ -1,6 +1,6 @@
-import { Box } from '@oneloop/box'
-import { Text } from '@oneloop/text'
-import theme from '@oneloop/theme'
+import { Box } from '@quintoandar-tokko/box'
+import { Text } from '@quintoandar-tokko/text'
+import theme from '@quintoandar-tokko/theme'
 import React from 'react'
 
 export const ImageErrorFallback = ({

@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/button",
+  "name": "@quintoandar-tokko/button",
   "version": "1.2.370",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -7,8 +7,8 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
-    "@oneloop/fonts": "^1.0.134",
+    "@quintoandar-tokko/box": "^1.2.285",
+    "@quintoandar-tokko/fonts": "^1.0.134",
     "styled-components": "5.3.5",
     "styled-system": "5.1.5"
   },

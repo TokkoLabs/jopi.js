@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Text } from '@oneloop/text'
+import { Text } from '@quintoandar-tokko/text'
 import 'jest-styled-components'
 
 import { Badge } from '../src'

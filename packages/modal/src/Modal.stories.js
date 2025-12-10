@@ -1,9 +1,9 @@
 import React from 'react'
-import { useToggle } from '@oneloop/hooks'
-import { Text } from '@oneloop/text'
-import { Button } from '@oneloop/button'
+import { useToggle } from '@quintoandar-tokko/hooks'
+import { Text } from '@quintoandar-tokko/text'
+import { Button } from '@quintoandar-tokko/button'
 import { Modal } from '.'
-import { Box } from '@oneloop/box'
+import { Box } from '@quintoandar-tokko/box'
 
 export default {
   component: Modal,

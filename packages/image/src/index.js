@@ -1,8 +1,8 @@
 import React from 'react'
-import { Badge } from '@oneloop/badge'
-import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import { useToggle } from '@oneloop/hooks'
+import { Badge } from '@quintoandar-tokko/badge'
+import { Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import { useToggle } from '@quintoandar-tokko/hooks'
 
 export const Image = ({ textBadge, variant, variantBadge = 'badgeInfoRow', icon, iconColor = '#AEBAC0', ...props }) => {
   const [error, setError] = useToggle(false)

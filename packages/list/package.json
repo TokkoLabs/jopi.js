@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/list",
+  "name": "@quintoandar-tokko/list",
   "version": "1.2.364",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -7,9 +7,9 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
-    "@oneloop/hooks": "^1.2.307",
-    "@oneloop/input": "^1.2.361"
+    "@quintoandar-tokko/box": "^1.2.285",
+    "@quintoandar-tokko/hooks": "^1.2.307",
+    "@quintoandar-tokko/input": "^1.2.361"
   },
   "peerDependencies": {
     "react": "^16.8.0"

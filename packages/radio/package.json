@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/radio",
+  "name": "@quintoandar-tokko/radio",
   "version": "1.2.316",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -7,8 +7,8 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
-    "@oneloop/icons": "^1.2.316"
+    "@quintoandar-tokko/box": "^1.2.285",
+    "@quintoandar-tokko/icons": "^1.2.316"
   },
   "peerDependencies": {
     "react": "^16.8.0"

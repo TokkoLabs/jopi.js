@@ -1,7 +1,7 @@
 import React from 'react'
 import { configure, addDecorator } from '@storybook/react'
 import { ThemeProvider } from 'styled-components'
-import theme from '@oneloop/theme'
+import theme from '@quintoandar-tokko/theme'
 
 addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>)
 

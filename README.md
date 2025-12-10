@@ -67,9 +67,9 @@ You can check [how to theming](https://styled-system.com/getting-started#theming
 Yes you can, we are using it. The only extra thing that you need to do is crate a declarations.d.ts file on your project and declare jopi.js packages that you would like to use. Like:
 
 ```
-declare module '@oneloop/jopijs'
-declare module '@oneloop/theme'
-declare module '@oneloop/hooks'
+declare module '@quintoandar-tokko/jopijs'
+declare module '@quintoandar-tokko/theme'
+declare module '@quintoandar-tokko/hooks'
 ```
 
 ##### How can i manually publish a package to NPM?

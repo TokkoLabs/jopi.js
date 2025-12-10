@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box } from '@oneloop/box'
-import { Label } from '@oneloop/label'
-import { Text } from '@oneloop/text'
-import theme from '@oneloop/theme'
+import { Box } from '@quintoandar-tokko/box'
+import { Label } from '@quintoandar-tokko/label'
+import { Text } from '@quintoandar-tokko/text'
+import theme from '@quintoandar-tokko/theme'
 
 export const Textarea = ({
   prefix,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
+import { Box } from '@quintoandar-tokko/box'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'

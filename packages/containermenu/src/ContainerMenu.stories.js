@@ -1,10 +1,10 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
-import { ButtonIcon } from '@oneloop/button'
+import { Box } from '@quintoandar-tokko/box'
+import { ButtonIcon } from '@quintoandar-tokko/button'
 import { ContainerMenu } from '.'
-import { List } from '@oneloop/list'
-import { Tabs } from '@oneloop/tabs'
-import { useToggle } from '@oneloop/hooks'
+import { List } from '@quintoandar-tokko/list'
+import { Tabs } from '@quintoandar-tokko/tabs'
+import { useToggle } from '@quintoandar-tokko/hooks'
 
 export default {
   component: ContainerMenu,

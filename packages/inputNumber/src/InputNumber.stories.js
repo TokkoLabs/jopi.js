@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { InputNumber } from '.'
-import { Text } from '@oneloop/text'
+import { Text } from '@quintoandar-tokko/text'
 
 export default {
   component: InputNumber,

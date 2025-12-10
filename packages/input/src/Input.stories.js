@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { Input } from '.'
-import { Text } from '@oneloop/text'
-import { ButtonIcon } from '@oneloop/button'
-import { useToggle } from '@oneloop/hooks'
-import { Icon } from '@oneloop/icons'
+import { Text } from '@quintoandar-tokko/text'
+import { ButtonIcon } from '@quintoandar-tokko/button'
+import { useToggle } from '@quintoandar-tokko/hooks'
+import { Icon } from '@quintoandar-tokko/icons'
 
 export default {
   component: Input,

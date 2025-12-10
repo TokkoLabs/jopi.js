@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import { Text } from '@oneloop/text'
+import { Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Text } from '@quintoandar-tokko/text'
 import { SliderSwap } from './SliderSwap'
 
 export const FullScreen = ({

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Carousel } from '.'
-import { Box } from '@oneloop/box'
+import { Box } from '@quintoandar-tokko/box'
 
 export default {
   component: Carousel,

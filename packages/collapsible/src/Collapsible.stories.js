@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Collapsible } from '.'
-import { Button, ButtonIcon } from '@oneloop/button'
+import { Button, ButtonIcon } from '@quintoandar-tokko/button'
 
 export default {
   component: Collapsible,

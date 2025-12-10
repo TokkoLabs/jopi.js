@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../styles/gallery.css'
-import { Box } from '@oneloop/box'
+import { Box } from '@quintoandar-tokko/box'
 import { ButtonGallery } from './ButtonGallery'
 
 export const ButtonsMainImage = ({

@@ -2,9 +2,9 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { Checkbox } from '@oneloop/checkbox'
-import { Image } from '@oneloop/image'
-import { Text } from '@oneloop/text'
+import { Checkbox } from '@quintoandar-tokko/checkbox'
+import { Image } from '@quintoandar-tokko/image'
+import { Text } from '@quintoandar-tokko/text'
 import { Table } from '../src'
 
 describe('Table', () => {

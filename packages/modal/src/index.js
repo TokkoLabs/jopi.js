@@ -1,9 +1,9 @@
 /* eslint-disable multiline-ternary */
 import React, { useEffect, useRef, useState } from 'react'
-import { Box, Flex } from '@oneloop/box'
-import theme from '@oneloop/theme'
-import { Text } from '@oneloop/text'
-import { Icon } from '@oneloop/icons'
+import { Box, Flex } from '@quintoandar-tokko/box'
+import theme from '@quintoandar-tokko/theme'
+import { Text } from '@quintoandar-tokko/text'
+import { Icon } from '@quintoandar-tokko/icons'
 
 export const Modal = ({
   children,

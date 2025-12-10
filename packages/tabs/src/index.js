@@ -1,7 +1,7 @@
 import React, { useState, createContext, useContext } from 'react'
-import { Box } from '@oneloop/box'
-import { useToggle } from '@oneloop/hooks'
-import theme from '@oneloop/theme'
+import { Box } from '@quintoandar-tokko/box'
+import { useToggle } from '@quintoandar-tokko/hooks'
+import theme from '@quintoandar-tokko/theme'
 
 const TabsContext = createContext()
 

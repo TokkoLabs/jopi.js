@@ -1,10 +1,10 @@
 /* eslint-disable react/boolean-prop-naming */
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
-import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import { Text } from '@oneloop/text'
-import theme from '@oneloop/theme'
+import { Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Text } from '@quintoandar-tokko/text'
+import theme from '@quintoandar-tokko/theme'
 import '../../theme/styles/globals.css'
 
 export const InputNumber = ({
