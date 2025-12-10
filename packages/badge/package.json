@@ -1,13 +1,13 @@
 {
   "name": "@quintoandar-tokko/badge",
-  "version": "1.2.305",
+  "version": "1.2.306",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.285"
+    "@quintoandar-tokko/box": "^1.2.286"
   },
   "peerDependencies": {
     "react": "^16.8.0"

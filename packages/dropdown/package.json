@@ -1,16 +1,16 @@
 {
   "name": "@quintoandar-tokko/dropdown",
-  "version": "1.2.387",
+  "version": "1.2.388",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.285",
-    "@quintoandar-tokko/button": "^1.2.370",
-    "@quintoandar-tokko/hooks": "^1.2.307",
-    "@quintoandar-tokko/list": "^1.2.364"
+    "@quintoandar-tokko/box": "^1.2.286",
+    "@quintoandar-tokko/button": "^1.2.371",
+    "@quintoandar-tokko/hooks": "^1.2.308",
+    "@quintoandar-tokko/list": "^1.2.365"
   },
   "peerDependencies": {
     "react": "^16.8.0"

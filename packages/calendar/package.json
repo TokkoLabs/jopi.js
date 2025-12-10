@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/calendar",
-  "version": "1.0.89",
+  "version": "1.0.90",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -14,7 +14,7 @@
     "@fullcalendar/react": "^6.1.8",
     "@fullcalendar/rrule": "^6.1.8",
     "@fullcalendar/timegrid": "^6.1.8",
-    "@quintoandar-tokko/box": "^1.2.285",
+    "@quintoandar-tokko/box": "^1.2.286",
     "rrule": "^2.7.2"
   },
   "peerDependencies": {

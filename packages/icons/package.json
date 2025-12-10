@@ -1,13 +1,13 @@
 {
   "name": "@quintoandar-tokko/icons",
-  "version": "1.2.316",
+  "version": "1.2.317",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.285"
+    "@quintoandar-tokko/box": "^1.2.286"
   },
   "peerDependencies": {
     "react": "^16.8.0"

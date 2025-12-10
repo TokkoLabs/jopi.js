@@ -1,15 +1,15 @@
 {
   "name": "@quintoandar-tokko/list",
-  "version": "1.2.364",
+  "version": "1.2.365",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.285",
-    "@quintoandar-tokko/hooks": "^1.2.307",
-    "@quintoandar-tokko/input": "^1.2.361"
+    "@quintoandar-tokko/box": "^1.2.286",
+    "@quintoandar-tokko/hooks": "^1.2.308",
+    "@quintoandar-tokko/input": "^1.2.362"
   },
   "peerDependencies": {
     "react": "^16.8.0"

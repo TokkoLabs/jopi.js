@@ -1,14 +1,14 @@
 {
   "name": "@quintoandar-tokko/input",
-  "version": "1.2.361",
+  "version": "1.2.362",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.285",
-    "@quintoandar-tokko/icons": "^1.2.316",
+    "@quintoandar-tokko/box": "^1.2.286",
+    "@quintoandar-tokko/icons": "^1.2.317",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {

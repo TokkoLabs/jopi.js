@@ -1,14 +1,14 @@
 {
   "name": "@quintoandar-tokko/paginator",
-  "version": "1.0.165",
+  "version": "1.0.166",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.285",
-    "@quintoandar-tokko/text": "^1.2.286"
+    "@quintoandar-tokko/box": "^1.2.286",
+    "@quintoandar-tokko/text": "^1.2.287"
   },
   "peerDependencies": {
     "react": "^16.8.0"

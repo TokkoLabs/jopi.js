@@ -1,14 +1,14 @@
 {
   "name": "@quintoandar-tokko/tooltip",
-  "version": "1.0.128",
+  "version": "1.0.129",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.285",
     "@popperjs/core": "^2.11.5",
+    "@quintoandar-tokko/box": "^1.2.286",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
