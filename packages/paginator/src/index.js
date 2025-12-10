@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
+import { Box } from '@quintoandar-tokko/box'
 import _ from 'lodash'
-import { Icon } from '@oneloop/icons'
+import { Icon } from '@quintoandar-tokko/icons'
 
 export const Paginator = ({
   currentPage,

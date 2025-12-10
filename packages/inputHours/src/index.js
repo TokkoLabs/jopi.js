@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import { Text } from '@oneloop/text'
-import { Input } from '@oneloop/input'
-import { useOnClickOutside } from '@oneloop/hooks'
+import { Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Text } from '@quintoandar-tokko/text'
+import { Input } from '@quintoandar-tokko/input'
+import { useOnClickOutside } from '@quintoandar-tokko/hooks'
 import { format, addMinutes, set } from 'date-fns'
-import theme from '@oneloop/theme'
+import theme from '@quintoandar-tokko/theme'
 
 const defaultHours = []
 

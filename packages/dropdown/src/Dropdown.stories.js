@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Dropdown } from '.'
-import { useFilterData } from '@oneloop/list'
-import { ButtonIcon } from '@oneloop/button'
+import { useFilterData } from '@quintoandar-tokko/list'
+import { ButtonIcon } from '@quintoandar-tokko/button'
 
 export default {
   component: Dropdown,

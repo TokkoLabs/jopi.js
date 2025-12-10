@@ -1,7 +1,7 @@
 import React from 'react'
-import { useToggle } from '@oneloop/hooks'
-import { Button } from '@oneloop/button'
-import { Text } from '@oneloop/text'
+import { useToggle } from '@quintoandar-tokko/hooks'
+import { Button } from '@quintoandar-tokko/button'
+import { Text } from '@quintoandar-tokko/text'
 
 import { Toast } from '.'
 

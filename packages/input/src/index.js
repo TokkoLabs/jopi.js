@@ -1,11 +1,11 @@
 /* eslint-disable react/display-name */
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import { Text } from '@oneloop/text'
-import { useToggle } from '@oneloop/hooks'
-import theme from '@oneloop/theme'
+import { Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Text } from '@quintoandar-tokko/text'
+import { useToggle } from '@quintoandar-tokko/hooks'
+import theme from '@quintoandar-tokko/theme'
 
 export const Input = forwardRef(
   (

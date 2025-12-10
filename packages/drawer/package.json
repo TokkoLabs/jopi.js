@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/drawer",
+  "name": "@quintoandar-tokko/drawer",
   "version": "1.0.275",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -7,7 +7,7 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
+    "@quintoandar-tokko/box": "^1.2.285",
     "framer-motion": "2.9.4"
   },
   "peerDependencies": {

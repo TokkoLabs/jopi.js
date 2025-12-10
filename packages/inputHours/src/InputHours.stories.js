@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { InputHours } from '.'
 import { format, isBefore } from 'date-fns'
-import { Text } from '@oneloop/text'
-import { Button } from '@oneloop/button'
+import { Text } from '@quintoandar-tokko/text'
+import { Button } from '@quintoandar-tokko/button'
 
 export default {
   component: InputHours,

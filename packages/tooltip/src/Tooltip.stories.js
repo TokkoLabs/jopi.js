@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import { ButtonIcon } from '@oneloop/button'
-import { useToggle, isMouseOutTooltip, isMouseOutParent } from '@oneloop/hooks'
-import { Text } from '@oneloop/text'
+import { ButtonIcon } from '@quintoandar-tokko/button'
+import { useToggle, isMouseOutTooltip, isMouseOutParent } from '@quintoandar-tokko/hooks'
+import { Text } from '@quintoandar-tokko/text'
 import { ParentTooltip, Tooltip } from '.'
 
 export default {

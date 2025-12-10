@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Badge } from '.'
-import { Text } from '@oneloop/text'
+import { Text } from '@quintoandar-tokko/text'
 
 export default {
   component: Badge,

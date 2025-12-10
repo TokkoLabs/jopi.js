@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import { Text } from '@oneloop/text'
+import { Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Text } from '@quintoandar-tokko/text'
 
 export const ContainerMenu = ({ children, variant = 'normal', titleText, prefixIcon, suffix, width, height, ...props }) => (
   <Box

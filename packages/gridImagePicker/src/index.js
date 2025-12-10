@@ -1,7 +1,7 @@
 import React from 'react'
 import { DndContext, closestCenter, MouseSensor, useSensor, useSensors } from '@dnd-kit/core'
 import { SortableContext, rectSortingStrategy } from '@dnd-kit/sortable'
-import { Box } from '@oneloop/box'
+import { Box } from '@quintoandar-tokko/box'
 import ImageItem from './ImageItem'
 import useGridImagePicker from './hooks/useGridImagePicker'
 import '../styles/GridImagePicker.css'

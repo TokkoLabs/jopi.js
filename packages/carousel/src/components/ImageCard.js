@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Box } from '@oneloop/box'
-import theme from '@oneloop/theme'
+import { Box } from '@quintoandar-tokko/box'
+import theme from '@quintoandar-tokko/theme'
 import { ImageErrorFallback } from './ImageErrorFallback'
 
 const validateImageDimensions = async (imageUrl) => {

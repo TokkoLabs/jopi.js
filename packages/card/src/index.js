@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
-import theme from '@oneloop/theme'
+import { Box } from '@quintoandar-tokko/box'
+import theme from '@quintoandar-tokko/theme'
 
 export const Card = ({ variant = 'normal', active, ...props }) => {
   const variantValues = Object.values(theme.card)[Object.keys(theme.card).indexOf(variant)]

@@ -4,7 +4,7 @@ import 'jest-styled-components'
 import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import { ButtonIcon } from '@oneloop/button'
+import { ButtonIcon } from '@quintoandar-tokko/button'
 import { Toast } from '../src'
 
 Enzyme.configure({ adapter: new Adapter() })

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
-import { useToggle } from '@oneloop/hooks'
-import { Button, ButtonIcon } from '@oneloop/button'
-import { Text } from '@oneloop/text'
+import { Box } from '@quintoandar-tokko/box'
+import { useToggle } from '@quintoandar-tokko/hooks'
+import { Button, ButtonIcon } from '@quintoandar-tokko/button'
+import { Text } from '@quintoandar-tokko/text'
 import { Drawer } from '.'
 
 export default {

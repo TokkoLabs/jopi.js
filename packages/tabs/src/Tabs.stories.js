@@ -1,9 +1,9 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import { Table } from '@oneloop/table'
+import { Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Table } from '@quintoandar-tokko/table'
 import { Tabs } from '.'
-import { Text } from '@oneloop/text'
+import { Text } from '@quintoandar-tokko/text'
 
 export default {
   component: Tabs,

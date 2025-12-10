@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex } from '@oneloop/box'
+import { Flex } from '@quintoandar-tokko/box'
 
 export const Label = props => (
   <Flex

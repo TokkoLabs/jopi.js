@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-expressions */
 import React from 'react'
-import { Box } from '@oneloop/box'
-import '@oneloop/fonts'
-import { Icon } from '@oneloop/icons'
+import { Box } from '@quintoandar-tokko/box'
+import '@quintoandar-tokko/fonts'
+import { Icon } from '@quintoandar-tokko/icons'
 
 export const Tags = ({
   children,

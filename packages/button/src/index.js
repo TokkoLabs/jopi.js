@@ -1,11 +1,11 @@
 import React from 'react'
-import { Badge } from '@oneloop/badge'
-import { Box } from '@oneloop/box'
-import { Checkbox } from '@oneloop/checkbox'
-import { Icon } from '@oneloop/icons'
-import { Image } from '@oneloop/image'
-import theme from '@oneloop/theme'
-import '@oneloop/fonts'
+import { Badge } from '@quintoandar-tokko/badge'
+import { Box } from '@quintoandar-tokko/box'
+import { Checkbox } from '@quintoandar-tokko/checkbox'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Image } from '@quintoandar-tokko/image'
+import theme from '@quintoandar-tokko/theme'
+import '@quintoandar-tokko/fonts'
 
 export const Button = ({ variant, ...props }) => (
   <Box sx={{ position: 'relative' }}>

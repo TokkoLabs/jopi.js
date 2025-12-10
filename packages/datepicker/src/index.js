@@ -1,10 +1,10 @@
 import React, { forwardRef, useRef } from 'react'
 import DatePicker from 'react-datepicker'
 import '../styles/datepicker.css'
-import '@oneloop/theme/styles/globals.css'
-import { Box } from '@oneloop/box'
-import { Icon } from '@oneloop/icons'
-import { Input } from '@oneloop/input'
+import '@quintoandar-tokko/theme/styles/globals.css'
+import { Box } from '@quintoandar-tokko/box'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Input } from '@quintoandar-tokko/input'
 import { enUS as defaultLocale } from 'date-fns/locale'
 
 const CustomInput = forwardRef(({ value, onClick }, ref) => {

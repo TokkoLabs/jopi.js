@@ -2,11 +2,11 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { Box } from '@oneloop/box'
-import { Badge } from '@oneloop/badge'
-import { Checkbox } from '@oneloop/checkbox'
-import { Image } from '@oneloop/image'
-import { Text } from '@oneloop/text'
+import { Box } from '@quintoandar-tokko/box'
+import { Badge } from '@quintoandar-tokko/badge'
+import { Checkbox } from '@quintoandar-tokko/checkbox'
+import { Image } from '@quintoandar-tokko/image'
+import { Text } from '@quintoandar-tokko/text'
 import { Card } from '../src'
 
 describe('Card', () => {

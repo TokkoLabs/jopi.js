@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/box",
+  "name": "@quintoandar-tokko/box",
   "version": "1.2.285",
   "main": "lib/index.js",
   "module": "src/index.js",

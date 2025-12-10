@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
-import '@oneloop/fonts'
+import { Box } from '@quintoandar-tokko/box'
+import '@quintoandar-tokko/fonts'
 
 export const Badge = ({ variant = ['badgeNormal', 'primary'], isNotButton, ...props }) => (
   <Box

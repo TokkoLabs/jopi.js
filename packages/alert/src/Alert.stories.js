@@ -1,6 +1,6 @@
 import React from 'react'
-import { useToggle } from '@oneloop/hooks'
-import { Button } from '@oneloop/button'
+import { useToggle } from '@quintoandar-tokko/hooks'
+import { Button } from '@quintoandar-tokko/button'
 
 import { Alert } from '.'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
+import { Box } from '@quintoandar-tokko/box'
 
 export const Text = (props) => (
   <Box

@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState } from 'react'
-import { Box } from '@oneloop/box'
-import { Button, ButtonIcon } from '@oneloop/button'
-import { Icon } from '@oneloop/icons'
-import { List } from '@oneloop/list'
-import { useOnClickOutside } from '@oneloop/hooks'
-import { Text } from '@oneloop/text'
-import theme from '@oneloop/theme'
+import { Box } from '@quintoandar-tokko/box'
+import { Button, ButtonIcon } from '@quintoandar-tokko/button'
+import { Icon } from '@quintoandar-tokko/icons'
+import { List } from '@quintoandar-tokko/list'
+import { useOnClickOutside } from '@quintoandar-tokko/hooks'
+import { Text } from '@quintoandar-tokko/text'
+import theme from '@quintoandar-tokko/theme'
 
 const DropdownContext = createContext()
 

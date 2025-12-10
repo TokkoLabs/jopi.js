@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
-import { Svg } from '@oneloop/icons'
+import { Box } from '@quintoandar-tokko/box'
+import { Svg } from '@quintoandar-tokko/icons'
 
 const CheckboxBox = ({
   borderColor,

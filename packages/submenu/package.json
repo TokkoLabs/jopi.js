@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/submenu",
+  "name": "@quintoandar-tokko/submenu",
   "version": "1.0.130",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -7,7 +7,7 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
+    "@quintoandar-tokko/box": "^1.2.285",
     "@popperjs/core": "^2.11.5",
     "prop-types": "^15.7.2"
   },

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useToggle } from '@oneloop/hooks'
+import { useToggle } from '@quintoandar-tokko/hooks'
 
 import { Switch } from '.'
 

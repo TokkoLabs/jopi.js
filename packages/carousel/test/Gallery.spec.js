@@ -5,7 +5,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import { Carousel } from '../src'
 import { SliderSwap } from '../src/components/SliderSwap'
 import { ImageCard } from '../src/components/ImageCard'
-import { Button } from '@oneloop/button'
+import { Button } from '@quintoandar-tokko/button'
 import { ButtonsMainImage } from '../src/components/ButtonsMainImage'
 
 const defaultTabTextsDict = {

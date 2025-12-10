@@ -7,20 +7,20 @@ We try to give developers every component they need in their UX in a simple, min
 
 You can install Jopi.js from:
 
-`npm i @oneloop/jopijs`
+`npm i @quintoandar-tokko/jopijs`
 
 Or
 
-`yarn add @oneloop/jopijs`
+`yarn add @quintoandar-tokko/jopijs`
 
 For now, we recommend to install Jopi.js with it's theme while we tried to decouple some stuff and give you more flexibility.
 For install Jopi.js theme run
 
-`npm i @oneloop/theme`
+`npm i @quintoandar-tokko/theme`
 
 or
 
-`yarn add @oneloop/theme`
+`yarn add @quintoandar-tokko/theme`
 
 ### Usage
 

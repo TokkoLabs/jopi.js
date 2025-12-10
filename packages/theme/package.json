@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/theme",
+  "name": "@quintoandar-tokko/theme",
   "version": "1.2.359",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -10,5 +10,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d5d352afc447d6b85112a31bccdc765ced5fee81"
+  "gitHead": "9d0ab44132f62377c75a828f702a0b07f765dfa3"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/alert",
+  "name": "@quintoandar-tokko/alert",
   "version": "1.2.370",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -7,10 +7,10 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
-    "@oneloop/button": "^1.2.370",
-    "@oneloop/icons": "^1.2.316",
-    "@oneloop/text": "^1.2.286"
+    "@quintoandar-tokko/box": "^1.2.285",
+    "@quintoandar-tokko/button": "^1.2.370",
+    "@quintoandar-tokko/icons": "^1.2.316",
+    "@quintoandar-tokko/text": "^1.2.286"
   },
   "peerDependencies": {
     "react": "^16.8.0"

@@ -1,6 +1,6 @@
-import { Box } from '@oneloop/box'
+import { Box } from '@quintoandar-tokko/box'
 import React from 'react'
-import theme from '@oneloop/theme'
+import theme from '@quintoandar-tokko/theme'
 
 export const ButtonGallery = ({ text, ...props }) => {
   return (

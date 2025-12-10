@@ -1,12 +1,12 @@
 import React from 'react'
-import { Box } from '@oneloop/box'
-import { Badge } from '@oneloop/badge'
-import { Checkbox } from '@oneloop/checkbox'
-import { Icon } from '@oneloop/icons'
-import { Image } from '@oneloop/image'
+import { Box } from '@quintoandar-tokko/box'
+import { Badge } from '@quintoandar-tokko/badge'
+import { Checkbox } from '@quintoandar-tokko/checkbox'
+import { Icon } from '@quintoandar-tokko/icons'
+import { Image } from '@quintoandar-tokko/image'
 import { Card } from '.'
-import { Text } from '@oneloop/text'
-import { useToggle } from '@oneloop/hooks'
+import { Text } from '@quintoandar-tokko/text'
+import { useToggle } from '@quintoandar-tokko/hooks'
 
 export default {
   component: Card,

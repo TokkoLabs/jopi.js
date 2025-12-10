@@ -1,5 +1,5 @@
 {
-  "name": "@oneloop/input-number",
+  "name": "@quintoandar-tokko/input-number",
   "version": "1.0.109",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -7,8 +7,8 @@
     "lib"
   ],
   "dependencies": {
-    "@oneloop/box": "^1.2.285",
-    "@oneloop/icons": "^1.2.316",
+    "@quintoandar-tokko/box": "^1.2.285",
+    "@quintoandar-tokko/icons": "^1.2.316",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
@@ -17,5 +17,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d5d352afc447d6b85112a31bccdc765ced5fee81"
+  "gitHead": "9d0ab44132f62377c75a828f702a0b07f765dfa3"
 }

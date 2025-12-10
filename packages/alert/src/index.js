@@ -1,7 +1,7 @@
 import React from 'react'
-import { Flex } from '@oneloop/box'
-import { Text } from '@oneloop/text'
-import { Icon } from '@oneloop/icons'
+import { Flex } from '@quintoandar-tokko/box'
+import { Text } from '@quintoandar-tokko/text'
+import { Icon } from '@quintoandar-tokko/icons'
 
 export const Alert = ({ variant = 'info', text, closeAlert, ...props }) => (
   <Flex
