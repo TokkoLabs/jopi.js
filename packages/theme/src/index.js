@@ -428,7 +428,7 @@ const theme = {
   },
   inputNumber: {
     default: {
-      background: colors.neutralGray8,
+      background: '#FFF',
       color: colors.neutralGray1,
       ':hover': {
         color: colors.black,
@@ -436,6 +436,13 @@ const theme = {
           color: colors.neutralGray1,
         },
       },
+    },
+    disabled: {
+      background: '#EAEEF1',
+      color: '#94A2AB',
+      pointerEvents: 'none',
+      userSelect: 'none',
+      borderColor: '#EAEEF1',
     },
     active: {
       borderColor: colors.neutralGray3,

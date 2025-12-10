@@ -55,6 +55,12 @@ export default {
       type: 'boolean',
       control: { type: 'none' },
     },
+    showArrows: {
+      name: 'showArrows',
+      description: 'Booleano para indicar si se muestran las flechas',
+      type: 'boolean',
+      control: { type: 'none' },
+    },
   },
 }
 

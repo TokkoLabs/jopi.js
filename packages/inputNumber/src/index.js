@@ -17,6 +17,7 @@ export const InputNumber = ({
   val = () => {},
   text,
   variant = 'default',
+  showArrows = true,
   ...props
 }) => {
   const [valueInput, setValueInput] = useState(startVal)
@@ -46,7 +47,7 @@ export const InputNumber = ({
 
   useEffect(() => {
     const handleClick = (event) => {
-      if (!inputCont.current?.contains(event.target)) {
+      if (!inputCont.current?.contains(event.target) && !disabled) {
         setInputVariants(inputVariants.filter((elem) => elem !== 'filled'))
       }
     }
@@ -75,6 +76,14 @@ export const InputNumber = ({
     }
   }
 
+  useEffect(() => {
+    if (disabled) {
+      setInputVariants(['disabled'])
+    } else {
+      setInputVariants([variant])
+    }
+  }, [disabled])
+
   return (
     <Box
       as="div"
@@ -87,7 +96,7 @@ export const InputNumber = ({
         padding: '7px 10px',
         gap: '8px',
         borderRadius: '8px',
-        border: 'solid 1px transparent',
+        border: 'solid 1px #D6DEE2',
         height: '32px',
       }}
       onClick={handleFocus}
@@ -106,7 +115,7 @@ export const InputNumber = ({
           background: 'transparent',
           border: 'none',
           outline: 'none',
-          color: theme.colors.neutralGray1,
+          color: disabled ? '#94A2AB' : theme.colors.neutralGray1,
           textAlign: 'center',
           padding: '0',
         }}
@@ -118,10 +127,11 @@ export const InputNumber = ({
           }
         }}
       />
-      <Text variant="body.fontSize14" style={{ marginRight: '15px' }}>
+      {text && <Text variant="body.fontSize14" style={{ marginRight: '15px' }}>
         {text}
-      </Text>
-      <Box
+      </Text>}
+      {showArrows && (
+        <Box
         __css={{
           display: 'flex',
           flexDirection: 'column',
@@ -129,25 +139,26 @@ export const InputNumber = ({
           justifyContent: 'center',
         }}
       >
-        <Icon
-          id="arrowUpNumberInput"
-          icon="icon-colapsar"
-          fontSize="12px"
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            !disabled && setValueInput(Math.min(max, valueInput + step))
-          }
-        />
-        <Icon
-          id="arrowDownNumberInput"
-          icon="icon-dropdown"
-          fontSize="12px"
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            !disabled && setValueInput(Math.max(min, valueInput - step))
-          }
-        />
-      </Box>
+          <Icon
+            id="arrowUpNumberInput"
+            icon="icon-colapsar"
+            fontSize="12px"
+            style={{ cursor: 'pointer' }}
+            onClick={() =>
+              !disabled && setValueInput(Math.min(max, valueInput + step))
+            }
+          />
+          <Icon
+            id="arrowDownNumberInput"
+            icon="icon-dropdown"
+            fontSize="12px"
+            style={{ cursor: 'pointer' }}
+            onClick={() =>
+              !disabled && setValueInput(Math.max(min, valueInput - step))
+            }
+          />
+        </Box>
+      )}
     </Box>
   )
 }
