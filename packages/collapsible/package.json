@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/collapsible",
-  "version": "1.2.374",
+  "version": "1.2.375",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@quintoandar-tokko/box": "^1.2.287",
-    "@quintoandar-tokko/button": "^1.2.372",
+    "@quintoandar-tokko/button": "^1.2.373",
     "framer-motion": "2.9.4"
   },
   "peerDependencies": {
