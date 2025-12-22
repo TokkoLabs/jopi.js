@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/datepicker",
-  "version": "1.2.380",
+  "version": "1.2.381",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -10,8 +10,8 @@
   "dependencies": {
     "@datepicker-react/hooks": "^2.2.0",
     "@quintoandar-tokko/box": "^1.2.287",
-    "@quintoandar-tokko/button": "^1.2.375",
-    "@quintoandar-tokko/dropdown": "^1.2.391",
+    "@quintoandar-tokko/button": "^1.2.376",
+    "@quintoandar-tokko/dropdown": "^1.2.392",
     "@quintoandar-tokko/icons": "^1.2.318",
     "@quintoandar-tokko/text": "^1.2.288",
     "date-fns": "^2.8.1",
