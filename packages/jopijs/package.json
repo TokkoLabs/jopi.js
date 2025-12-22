@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/jopijs",
-  "version": "1.5.413",
+  "version": "1.5.414",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -16,7 +16,7 @@
     "@quintoandar-tokko/carousel": "^1.0.55",
     "@quintoandar-tokko/checkbox": "^1.2.329",
     "@quintoandar-tokko/collapsible": "^1.2.374",
-    "@quintoandar-tokko/containermenu": "^1.0.129",
+    "@quintoandar-tokko/containermenu": "^1.0.130",
     "@quintoandar-tokko/datepicker": "^1.2.378",
     "@quintoandar-tokko/drawer": "^1.0.277",
     "@quintoandar-tokko/dropdown": "^1.2.389",
