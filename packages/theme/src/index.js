@@ -951,6 +951,13 @@ const theme = {
       fontSize: '18px',
       fontSizeIcon: '18px',
     },
+    iconSmallSize16px: {
+      height: '32px',
+      width: '32px',
+      borderRadius: '9px',
+      fontSize: '16px',
+      fontSizeIcon: '16px',
+    },
     iconExtraSmall: {
       height: '26px',
       width: '26px',
