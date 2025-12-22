@@ -1,13 +1,13 @@
 {
   "name": "@quintoandar-tokko/label",
-  "version": "1.2.286",
+  "version": "1.2.287",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.286"
+    "@quintoandar-tokko/box": "^1.2.287"
   },
   "peerDependencies": {
     "react": "^16.8.0"

@@ -1,14 +1,14 @@
 {
   "name": "@quintoandar-tokko/button",
-  "version": "1.2.371",
+  "version": "1.2.372",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.286",
-    "@quintoandar-tokko/fonts": "^1.0.135",
+    "@quintoandar-tokko/box": "^1.2.287",
+    "@quintoandar-tokko/fonts": "^1.0.136",
     "styled-components": "5.3.5",
     "styled-system": "5.1.5"
   },

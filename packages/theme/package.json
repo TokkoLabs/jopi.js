@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/theme",
-  "version": "1.2.360",
+  "version": "1.2.361",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [

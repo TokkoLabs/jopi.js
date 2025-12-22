@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/submenu",
-  "version": "1.0.131",
+  "version": "1.0.132",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@popperjs/core": "^2.11.5",
-    "@quintoandar-tokko/box": "^1.2.286",
+    "@quintoandar-tokko/box": "^1.2.287",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {

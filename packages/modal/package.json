@@ -1,16 +1,16 @@
 {
   "name": "@quintoandar-tokko/modal",
-  "version": "1.2.379",
+  "version": "1.2.380",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.286",
-    "@quintoandar-tokko/button": "^1.2.371",
-    "@quintoandar-tokko/hooks": "^1.2.308",
-    "@quintoandar-tokko/text": "^1.2.287",
+    "@quintoandar-tokko/box": "^1.2.287",
+    "@quintoandar-tokko/button": "^1.2.372",
+    "@quintoandar-tokko/hooks": "^1.2.309",
+    "@quintoandar-tokko/text": "^1.2.288",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {

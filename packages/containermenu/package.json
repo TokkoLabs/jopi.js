@@ -1,15 +1,15 @@
 {
   "name": "@quintoandar-tokko/containermenu",
-  "version": "1.0.127",
+  "version": "1.0.128",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.286",
-    "@quintoandar-tokko/button": "^1.2.371",
-    "@quintoandar-tokko/text": "^1.2.287"
+    "@quintoandar-tokko/box": "^1.2.287",
+    "@quintoandar-tokko/button": "^1.2.372",
+    "@quintoandar-tokko/text": "^1.2.288"
   },
   "peerDependencies": {
     "react": "^16.8.0"
