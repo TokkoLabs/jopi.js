@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/toast",
-  "version": "1.0.103",
+  "version": "1.0.104",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@quintoandar-tokko/box": "^1.2.287",
-    "@quintoandar-tokko/button": "^1.2.373",
+    "@quintoandar-tokko/button": "^1.2.375",
     "@quintoandar-tokko/icons": "^1.2.318",
     "@quintoandar-tokko/loader": "^1.2.328",
     "@quintoandar-tokko/text": "^1.2.288"

@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/button",
-  "version": "1.2.374",
+  "version": "1.2.375",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
