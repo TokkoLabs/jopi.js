@@ -17,6 +17,7 @@ export const SliderSwap = ({
   index,
   tabSelected,
   setURLOpenFullscreen = () => {},
+  disableRightClick = false,
 }) => {
   const sliderContainerRef = useRef(null)
   const sliderRef = useRef(null)
@@ -289,10 +290,16 @@ export const SliderSwap = ({
               ) : (
                 <img
                   className="imgFullScreenSlide"
-                  style={{ pointerEvents: 'none' }}
+                  style={{ 
+                    pointerEvents: disableRightClick ? 'auto' : 'none',
+                  }}
                   src={img}
                   alt={fileType}
                   onError={() => handleImgError(img)}
+                  draggable={false}
+                  onContextMenu={
+                    disableRightClick ? (e) => e.preventDefault() : undefined
+                  }
                 />
               )}
             </Box>
