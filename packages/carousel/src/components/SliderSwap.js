@@ -290,7 +290,7 @@ export const SliderSwap = ({
               ) : (
                 <img
                   className="imgFullScreenSlide"
-                  style={{ 
+                  style={{
                     pointerEvents: disableRightClick ? 'auto' : 'none',
                   }}
                   src={img}
