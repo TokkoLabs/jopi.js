@@ -8,7 +8,7 @@ export const ParentSubmenu = ({ children, setHover, hover, placement = 'right', 
   if (typeof window === 'object' && document !== undefined && document.getElementById(props.id) !== null) {
     const values = document.getElementById(props.id).getBoundingClientRect()
     if (placement === 'right') {
-      styles = { position: 'fixed', width: offset + 'px', height: values.height, marginLeft: values.width }
+      styles = { position: 'fixed', width: offset + 'px', height: values.height + 50, marginLeft: values.width, transform: 'translateY(-25px)' }
     } else if (placement === 'bottom') {
       styles = { position: 'fixed', width: values.width, height: offset + 'px', marginTop: values.width }
     } else if (placement === 'left') {
