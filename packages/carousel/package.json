@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/carousel",
-  "version": "1.0.55",
+  "version": "1.0.58",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -10,7 +10,7 @@
   ],
   "dependencies": {
     "@quintoandar-tokko/box": "^1.2.287",
-    "@quintoandar-tokko/button": "^1.2.372",
+    "@quintoandar-tokko/button": "^1.2.376",
     "@quintoandar-tokko/hooks": "^1.2.309",
     "@quintoandar-tokko/text": "^1.2.288",
     "prop-types": "^15.7.2"

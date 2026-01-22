@@ -1378,7 +1378,7 @@ const theme = {
       height: '32px',
       width: '32px',
       fontSize: '14px',
-      fontSizeIcon: '18px',
+      fontSizeIcon: '16px',
       lineHeight: '18px',
       fontWeight: 'normal',
       backgroundColor: colors.transparent,
