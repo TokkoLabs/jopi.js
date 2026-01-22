@@ -25,6 +25,7 @@ export const Carousel = ({
   frontCoverImg = false,
   frontCoverBlueprints = false,
   tabTextsDict = defaultTabTextsDict,
+  disableRightClick = false,
   ...props
 }) => {
   const [windowResize, setWindowResize] = useState(false)
@@ -405,6 +406,7 @@ export const Carousel = ({
         URLOpenFullscreen={URLOpenFullscreen}
         handleImageClickToFullscreen={handleImageClickToFullscreen}
         tabTextsDict={tabTextsDict}
+        disableRightClick={disableRightClick}
       />
     </Box>
   )

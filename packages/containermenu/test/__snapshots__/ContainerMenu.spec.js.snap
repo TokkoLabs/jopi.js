@@ -44,8 +44,8 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
   min-width: 0;
   display: grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .c3 {
@@ -131,7 +131,6 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
       style={
         {
           "color": "#DF1E02",
-          "marginTop": "2px",
         }
       }
     >
@@ -139,9 +138,9 @@ exports[`ContainerMenu renders correctly with only headers 1`] = `
         className="icon-favoritos"
         style={
           {
-            "fontSize": "18px",
-            "height": "18px",
-            "width": "18px",
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
           }
         }
       />
