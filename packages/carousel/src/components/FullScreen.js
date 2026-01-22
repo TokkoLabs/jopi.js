@@ -18,6 +18,7 @@ export const FullScreen = ({
   planos,
   handleImageClickToFullscreen,
   URLOpenFullscreen,
+  disableRightClick = false,
 }) => {
   const allFiles = { fotos, videos, video360, planos }
   const [contTab, setContTab] = useState(0)
@@ -106,6 +107,7 @@ export const FullScreen = ({
               index={index}
               windowWidth={windowWidth}
               tabSelected={tabSelected}
+              disableRightClick={disableRightClick}
             />
             <Text className="contFotos" variant="bodyBold.fontSize14">{`${
               index + 1
