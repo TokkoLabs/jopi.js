@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/jopijs",
-  "version": "1.5.422",
+  "version": "1.5.421",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -52,5 +52,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "3c5995a3482c9cd1b428a69e135c934c37bce2ae"
+  "gitHead": "27528c5be1f5a65c43763be93a4c4ebcca52f20e"
 }
