@@ -27,6 +27,7 @@ export const Wrapped = ({
   tagVariant,
   clickFn,
   idKey = 'id',
+  showCloseIconCallback,
   ...props
 }) => {
   const [store, dispatch] = useReducer(wrappedReducer, { restItems: [] })
@@ -80,7 +81,7 @@ export const Wrapped = ({
     const handleClick = (event) => {
       if (
         !RefItemsWindow.current?.contains(event.target) &&
-        !event.target.className?.includes('numberTag')
+        !event.target.classList?.contains('numberTag') // fallback for svg's cases
       ) {
         setShowRestItems(false)
       }
@@ -104,6 +105,10 @@ export const Wrapped = ({
     dispatch({ type: 'DELETE_REST_ITEM' })
     fnClose(item)
   }
+  const shouldShowCloseIcon = (item) =>
+    typeof showCloseIconCallback === 'function'
+      ? showCloseIconCallback(item)
+      : true
 
   return (
     <>
@@ -120,10 +125,14 @@ export const Wrapped = ({
       >
         {items.map((item, i) => (
           <Tags
-            key={item[idKey] + i}
+            key={`${item[idKey]}-${i}`}
             id={item[idKey]}
             variant={tagVariant}
-            closeIcon={fnClose ? () => deleteRestItem(item) : false}
+            closeIcon={
+              fnClose && shouldShowCloseIcon(item)
+                ? () => deleteRestItem(item)
+                : false
+            }
             style={{ marginRight: '5px' }}
             onClick={item[clickFn]}
           >
@@ -169,10 +178,14 @@ export const Wrapped = ({
         >
           {store.restItems.map((item, i) => (
             <Tags
-              key={item[idKey] + i}
+              key={`${item[idKey]}-${i}`}
               id={item[idKey]}
               variant={tagVariant}
-              closeIcon={fnClose ? () => deleteRestItem(item) : false}
+              closeIcon={
+                fnClose && shouldShowCloseIcon(item)
+                  ? () => deleteRestItem(item)
+                  : false
+              }
               style={{ marginRight: '5px', marginBottom: '5px' }}
               onClick={item[clickFn]}
             >
