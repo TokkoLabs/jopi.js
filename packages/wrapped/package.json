@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/wrapped",
-  "version": "1.0.84",
+  "version": "1.0.87",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [

@@ -1,0 +1,21 @@
+{
+  "name": "@quintoandar-tokko/submenu",
+  "version": "1.0.135",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "@quintoandar-tokko/box": "^1.2.287",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "62bb9176280e6372d544130d6ee8031f0bd0e33b"
+}
