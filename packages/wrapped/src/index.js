@@ -133,7 +133,7 @@ export const Wrapped = ({
                 ? () => deleteRestItem(item)
                 : false
             }
-            style={{ marginRight: '5px' }}
+            style={{ marginRight: '5px', transform: 'scale(1.5)' }}
             onClick={item[clickFn]}
           >
             <Box
