@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/jopijs",
-  "version": "1.5.424",
+  "version": "1.5.425",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -43,7 +43,7 @@
     "@quintoandar-tokko/textarea": "^1.0.248",
     "@quintoandar-tokko/toast": "^1.0.105",
     "@quintoandar-tokko/tooltip": "^1.0.130",
-    "@quintoandar-tokko/wrapped": "^1.0.88",
+    "@quintoandar-tokko/wrapped": "^1.0.89",
     "styled-components": "^5.3.5"
   },
   "peerDependencies": {
