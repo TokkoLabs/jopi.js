@@ -4,7 +4,7 @@ import { Icon } from '@quintoandar-tokko/icons'
 import { Text } from '@quintoandar-tokko/text'
 import { SliderSwap } from './SliderSwap'
 
-export const FullScreen = ({
+export const ImageFullScreen = ({
   fullscreen,
   tabContainers,
   tabSelected,

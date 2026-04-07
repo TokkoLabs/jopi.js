@@ -4,8 +4,7 @@ import theme from '@quintoandar-tokko/theme'
 import { Icon } from '@quintoandar-tokko/icons'
 import '../styles/gallery.css'
 import { ImageCard } from './components/ImageCard'
-import { FullScreen } from './components/FullScreen'
-import { SliderSwap } from './components/SliderSwap'
+import { ImageFullScreen, SliderSwap } from '@quintoandar-tokko/image-full-screen'
 import { ButtonsMainImage } from './components/ButtonsMainImage'
 
 const defaultTabTextsDict = {
@@ -390,7 +389,7 @@ export const Carousel = ({
         <Box onClick={toggleFullscreen}>{otherComponent}</Box>
       )}
 
-      <FullScreen
+      <ImageFullScreen
         fullscreen={fullscreen}
         setFullscreen={setFullscreen}
         tabContainers={tabContainers}

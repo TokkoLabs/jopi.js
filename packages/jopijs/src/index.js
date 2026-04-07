@@ -5,6 +5,7 @@ import { Button, ButtonIcon } from '@quintoandar-tokko/button'
 import { Calendar } from '@quintoandar-tokko/calendar'
 import { Card } from '@quintoandar-tokko/card'
 import { Carousel } from '@quintoandar-tokko/carousel'
+import { ImageFullScreen } from '@quintoandar-tokko/image-full-screen'
 import { Checkbox } from '@quintoandar-tokko/checkbox'
 import { Collapsible } from '@quintoandar-tokko/collapsible'
 import { ContainerMenu } from '@quintoandar-tokko/containermenu'
@@ -53,6 +54,7 @@ export {
   Flex,
   Fonts,
   Carousel,
+  ImageFullScreen,
   Heading,
   GridImagePicker,
   Icon,

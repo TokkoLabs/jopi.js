@@ -62,8 +62,8 @@ exports[`Submenu renders correctly 1`] = `
   min-width: 0;
   display: grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .c4 {
@@ -143,9 +143,9 @@ exports[`Submenu renders correctly 1`] = `
               className="icon-propiedades"
               style={
                 {
-                  "fontSize": "18px",
-                  "height": "18px",
-                  "width": "18px",
+                  "fontSize": "16px",
+                  "height": "16px",
+                  "width": "16px",
                 }
               }
             />
