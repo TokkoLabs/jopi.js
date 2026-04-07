@@ -23,6 +23,7 @@
     "@quintoandar-tokko/fonts": "^1.0.136",
     "@quintoandar-tokko/gridimagepicker": "^1.0.18",
     "@quintoandar-tokko/icons": "^1.2.318",
+    "@quintoandar-tokko/image-full-screen": "^1.0.0",
     "@quintoandar-tokko/image": "^1.2.304",
     "@quintoandar-tokko/input": "^1.2.363",
     "@quintoandar-tokko/input-hours": "^1.0.92",
