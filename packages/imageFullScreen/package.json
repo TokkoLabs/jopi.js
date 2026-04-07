@@ -5,6 +5,7 @@
   "module": "src/index.js",
   "files": [
     "lib",
+    "src",
     "styles",
     "components"
   ],
