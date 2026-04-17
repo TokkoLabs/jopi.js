@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/gridimagepicker",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -15,7 +15,7 @@
     "@dnd-kit/sortable": "^7.0.2",
     "@dnd-kit/utilities": "^3.2.2",
     "@quintoandar-tokko/box": "^1.2.287",
-    "@quintoandar-tokko/icons": "^1.2.318"
+    "@quintoandar-tokko/icons": "^1.2.319"
   },
   "peerDependencies": {
     "react": "^16.8.0"
