@@ -393,7 +393,7 @@ export const iconTokki = () => <Icon icon='icon-tokki' fontSize='24px'/>
 
 export const iconZonaprop = () => <Icon icon='icon-zonaprop' fontSize='24px'/>
 
-export const iconUniven = () => <Icon icon='icon-univen' fontSize='24px'/>
+export const iconUniven = () => <Icon icon='icon-Univen' fontSize='24px'/>
 
 export const iconUnivenai = () => <Icon icon='icon-univenai' fontSize='24px'/>
 
@@ -408,3 +408,61 @@ export const iconLista = () => <Icon icon='icon-lista' fontSize='24px'/>
 export const iconEquivalencia = () => <Icon icon='icon-equivalencia' fontSize='24px'/>
 
 export const iconNuevaNota = () => <Icon icon='icon-nuevanota' fontSize='24px'/>
+
+export const iconAgenda = () => <Icon icon='icon-agenda' fontSize='24px'/>
+
+export const iconBajada = () => <Icon icon='icon-bajada' fontSize='24px'/>
+
+export const iconBold = () => <Icon icon='icon-bold' fontSize='24px'/>
+
+export const iconBullets = () => <Icon icon='icon-bullets' fontSize='24px'/>
+
+export const iconCenterAlign = () => <Icon icon='icon-center-align' fontSize='24px'/>
+
+export const iconColega = () => <Icon icon='icon-colega' fontSize='24px'/>
+
+export const iconCronometro = () => <Icon icon='icon-cronometro' fontSize='24px'/>
+
+export const iconDashboard = () => <Icon icon='icon-dashboard' fontSize='24px'/>
+
+export const iconEmailabierto = () => <Icon icon='icon-emailabierto' fontSize='24px'/>
+
+export const iconInterlineado = () => <Icon icon='icon-interlineado' fontSize='24px'/>
+
+export const iconItalic = () => <Icon icon='icon-italic' fontSize='24px'/>
+
+export const iconJustifyAling = () => <Icon icon='icon-justify-aling' fontSize='24px'/>
+
+export const iconLeftAlign = () => <Icon icon='icon-left-align' fontSize='24px'/>
+
+export const iconList = () => <Icon icon='icon-list' fontSize='24px'/>
+
+export const iconMover = () => <Icon icon='icon-mover' fontSize='24px'/>
+
+export const iconPlay = () => <Icon icon='icon-play' fontSize='24px'/>
+
+export const iconQuintoandar = () => <Icon icon='icon-quintoandar' fontSize='24px'/>
+
+export const iconRightAlign = () => <Icon icon='icon-right-align' fontSize='24px'/>
+
+export const iconSena = () => <Icon icon='icon-sena' fontSize='24px'/>
+
+export const iconSincronizando = () => <Icon icon='icon-sincronizando' fontSize='24px'/>
+
+export const iconSortBy = () => <Icon icon='icon-sort-by' fontSize='24px'/>
+
+export const iconSubida = () => <Icon icon='icon-subida' fontSize='24px'/>
+
+export const iconSubrayar = () => <Icon icon='icon-subrayar' fontSize='24px'/>
+
+export const iconTask = () => <Icon icon='icon-task' fontSize='24px'/>
+
+export const iconTextBackgroundColor = () => <Icon icon='icon-text-background-color' fontSize='24px'/>
+
+export const iconTokkochat = () => <Icon icon='icon-tokkochat' fontSize='24px'/>
+
+export const iconTopleftarrow = () => <Icon icon='icon-topleftarrow' fontSize='24px'/>
+
+export const iconUnivenchat = () => <Icon icon='icon-univenchat' fontSize='24px'/>
+
+export const iconVendio = () => <Icon icon='icon-vendio' fontSize='24px'/>
