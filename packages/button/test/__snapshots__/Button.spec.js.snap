@@ -841,8 +841,7 @@ exports[`Button mainButtonCollapsible 1`] = `
       style={
         {
           "color": "#798B97",
-          "fontSize": "14px",
-          "paddingTop": "4px",
+          "fontSize": "12px",
           "position": "absolute",
           "right": "10px",
           "transform": "rotate(0deg)",
@@ -940,8 +939,7 @@ exports[`Button mainButtonCollapsibleLarge 1`] = `
       style={
         {
           "color": "#798B97",
-          "fontSize": "14px",
-          "paddingTop": "4px",
+          "fontSize": "12px",
           "position": "absolute",
           "right": "10px",
           "transform": "rotate(0deg)",
@@ -1039,8 +1037,7 @@ exports[`Button mainButtonCollapsibleNotActive 1`] = `
       style={
         {
           "color": "#798B97",
-          "fontSize": "14px",
-          "paddingTop": "4px",
+          "fontSize": "12px",
           "position": "absolute",
           "right": "10px",
           "transform": "rotate(0deg)",
@@ -1101,8 +1098,8 @@ exports[`Button mainButtonIconActive 1`] = `
   min-width: 0;
   display: grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 <div
@@ -1124,9 +1121,9 @@ exports[`Button mainButtonIconActive 1`] = `
         className="icon-propiedades"
         style={
           {
-            "fontSize": "18px",
-            "height": "18px",
-            "width": "18px",
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
           }
         }
       />
@@ -1194,8 +1191,8 @@ exports[`Button mainButtonIconBadge 1`] = `
   min-width: 0;
   display: grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .c3 {
@@ -1242,9 +1239,9 @@ exports[`Button mainButtonIconBadge 1`] = `
         className="icon-propiedades"
         style={
           {
-            "fontSize": "18px",
-            "height": "18px",
-            "width": "18px",
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
           }
         }
       />
@@ -1516,10 +1513,9 @@ exports[`Button mainButtonIconBadgeFilledOneVariant 2`] = `
       style={
         {
           "color": "#798B97",
-          "fontSize": "14px",
+          "fontSize": "12px",
           "paddingLeft": "1px",
           "paddingRight": "1px",
-          "paddingTop": "4px",
           "position": "absolute",
           "right": "10px",
           "transform": "rotate(0deg)",
@@ -1582,8 +1578,8 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
   min-width: 0;
   display: grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .c3 {
@@ -1630,9 +1626,9 @@ exports[`Button mainButtonIconBadgeWithText 1`] = `
         className="icon-propiedades"
         style={
           {
-            "fontSize": "18px",
-            "height": "18px",
-            "width": "18px",
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
           }
         }
       />
@@ -1767,8 +1763,8 @@ input:focus ~ .c0 {
   min-width: 0;
   display: grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .c7 {
@@ -1918,9 +1914,9 @@ input:disabled:not(:checked) ~ .c11 {
         className="icon-propiedades"
         style={
           {
-            "fontSize": "18px",
-            "height": "18px",
-            "width": "18px",
+            "fontSize": "16px",
+            "height": "16px",
+            "width": "16px",
           }
         }
       />
