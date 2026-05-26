@@ -1,0 +1,250 @@
+@import '../../theme/styles/globals.css';
+
+.fullscreen {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  padding: 38px 28px 28px 28px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease-in-out;
+  visibility: hidden;
+}
+
+.sliderContainer {
+  transition: transform 0.8s ease-in-out;
+}
+
+.fsOverlay {
+  background-color: #000000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+}
+
+.fullscreen.openFullscreen {
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+}
+
+.fsTabHeader {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  max-width: 360px;
+  border-radius: 8px;
+  background: var(--neutralGray8);
+  gap: 20px;
+}
+
+.fsTabHeader p {
+  cursor: pointer;
+  color: var(--neutralGray2);
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--neutralGray5);
+  line-height: 8px;
+}
+
+.fsTabHeader p:hover {
+  color: var(--neutralGray1);
+  border-color: var(--neutralGray1);
+}
+
+.fsTabHeader p.tabSelected {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.fsContainerTabs {
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+  min-height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fsTabCont {
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+}
+
+.fsTabContImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  width: 100%;
+  gap: 24px;
+}
+
+.fsTabContImage p {
+  color: var(--neutralGray8);
+  position: absolute;
+  bottom: 0px;
+}
+
+.fsCloseIconMobile {
+  position: absolute;
+  color: var(--neutralGray8);
+  right: 20px;
+  top: 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.fsCloseIconDesktop {
+  display: none;
+}
+
+.iconPrev,
+.iconNext {
+  position: absolute;
+}
+
+.iconPrev {
+  left: -20px;
+}
+
+.iconNext {
+  right: -20px;
+}
+
+.nextPrevIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: calc(50% - 20px);
+  background-color: var(--neutralGray8);
+  border-radius: 50%;
+  cursor: pointer;
+  &.fullScreen {
+    background-color: transparent;
+    top: calc(50% - 10px);
+  }
+}
+
+.swapSliderIconPrev,
+.swapSliderIconNext {
+  color: var(--neutralGray2);
+  &.fullScreen {
+    font-size: 32px !important;
+    color: var(--neutralGray8);
+  }
+}
+
+.otherButtonSwap {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  & button {
+    border-radius: 7px;
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+}
+
+.imgFullScreenSlide {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  outline: none;
+  user-select: none;
+}
+
+.imgFullScreenSlide:active {
+  outline: none;
+}
+
+.imgFullScreenSlide:focus {
+  outline: none;
+}
+
+.videoFullScreenSlide {
+  width: 100%;
+  max-width: 1085px;
+  height: 100%;
+  max-height: 610px;
+  object-fit: contain;
+}
+
+@media (min-width: 600px) {
+  .fullscreen {
+    padding: 30px 40px;
+    gap: 8px;
+  }
+  .fsCloseIconDesktop {
+    display: block;
+    position: absolute;
+    color: var(--neutralGray8);
+    right: 4px;
+    font-size: 32px;
+    top: 0px;
+    cursor: pointer;
+  }
+  .fsCloseIconMobile {
+    display: none;
+  }
+  .fsTabHeader {
+    padding: 8px 16px;
+    align-items: center;
+    width: auto;
+    max-width: 100%;
+    & p {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  .fsContainerTabs {
+    width: 90%;
+    padding-top: 0;
+  }
+  .iconPrev,
+  .iconNext {
+    position: relative;
+  }
+  .fsTabContImage {
+    width: 95%;
+  }
+  .fsTabContImage img {
+    max-width: 95%;
+    max-height: 95%;
+    height: auto;
+  }
+  .imgFullScreenSlide {
+    width: auto;
+  }
+}
+
+@media (min-width: 700px) {
+  .swapSliderIconNext,
+  .swapSliderIconPrev {
+    color: var(--neutralGray2);
+    &.fullScreen {
+      font-size: 40px !important;
+      color: var(--neutralGray8);
+    }
+  }
+}

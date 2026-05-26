@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { Box } from '@quintoandar-tokko/box'
 import { Icon } from '@quintoandar-tokko/icons'
 import { Text } from '@quintoandar-tokko/text'
-import { SliderSwap } from './SliderSwap'
+import { SliderSwap } from './components/SliderSwap'
+import '../styles/imageFullScreen.css'
 
-export const FullScreen = ({
+export { SliderSwap } from './components/SliderSwap'
+
+export const ImageFullScreen = ({
   fullscreen,
   tabContainers,
   tabSelected,
