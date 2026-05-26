@@ -40,7 +40,7 @@ describe('GridImagePicker', () => {
   const mountGridImagePicker = async (props = { texts }) => {
     let wrapper
     await act(async () => {
-      wrapper = mount(<GridImagePicker listOfSrc={imagesUrls} {...props} />)
+      wrapper = mount(<GridImagePicker listOfImages={imagesUrls} {...props} />)
       await new Promise(resolve => setTimeout(resolve, 0))
     })
     wrapper.update()
@@ -56,7 +56,7 @@ describe('GridImagePicker', () => {
     const wrapper = await mountGridImagePicker()
 
     const selectButton = wrapper.find({ children: 'Seleccionar' })
-    const deselectButton = wrapper.find({ children: 'Deseleccionar' })
+    const deselectButton = wrapper.find({ children: 'Deseleccionar todos' })
 
     expect(selectButton).toBeDefined()
     expect(deselectButton).toBeDefined()
@@ -83,7 +83,7 @@ describe('GridImagePicker', () => {
   it('Should activate all items after selection toggles', async () => {
     const wrapper = await mountGridImagePicker()
 
-    const deselectButton = wrapper.findWhere(node => node.type() === 'button' && node.text().startsWith('Deseleccionar'))
+    const deselectButton = wrapper.findWhere(node => node.type() === 'button' && node.text().startsWith('Deseleccionar todos'))
     const selectButton = wrapper.findWhere(node => node.type() === 'button' && node.text().startsWith('Seleccionar'))
 
     deselectButton.simulate('click')
