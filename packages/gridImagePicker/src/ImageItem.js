@@ -154,14 +154,14 @@ const ImageItem = ({
             data-active={!isEditedActive}
             onClick={(e) => { e.stopPropagation(); setIsEditedActive(false); onSwitchChange?.(item, false) }}
           >
-            Original
+            {texts?.original}
           </Box>
           <Box
             className="imageItemSwitchOption"
             data-active={isEditedActive}
             onClick={(e) => { e.stopPropagation(); setIsEditedActive(true); onSwitchChange?.(item, true) }}
           >
-            Editada
+            {texts?.edited}
           </Box>
         </Box>
       </Box>
