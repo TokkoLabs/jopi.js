@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/jopijs",
-  "version": "1.5.434",
+  "version": "1.5.435",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -21,7 +21,7 @@
     "@quintoandar-tokko/drawer": "^1.0.277",
     "@quintoandar-tokko/dropdown": "^1.2.394",
     "@quintoandar-tokko/fonts": "^1.0.137",
-    "@quintoandar-tokko/gridimagepicker": "^1.0.22",
+    "@quintoandar-tokko/gridimagepicker": "^1.0.24",
     "@quintoandar-tokko/icons": "^1.2.319",
     "@quintoandar-tokko/image": "^1.2.304",
     "@quintoandar-tokko/image-full-screen": "^1.0.5",
