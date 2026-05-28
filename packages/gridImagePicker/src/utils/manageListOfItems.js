@@ -1,9 +1,11 @@
 import { isItemClickable } from './manageItem'
 
-export const getItemsInitialState = (listOfSrc) => {
-  const initializedItem = listOfSrc.map((src, index) => ({
+export const getItemsInitialState = (listOfImages) => {
+  const initializedItem = listOfImages.map((image, index) => ({
     id: index + 1,
-    src,
+    src: image.src,
+    editedSrc: image.editedSrc,
+    isEdited: image.isEdited,
     checked: false,
     position: 0,
     height: 0,
@@ -154,8 +156,8 @@ export const getItemChanged = (originalList, newList) => {
   const length = Math.min(originalList.length, newList.length)
 
   for (let i = 0; i < length; i++) {
-    if (originalList[i] !== newList[i]) {
-      return { oldUrl: originalList[i], newUrl: newList[i] }
+    if (originalList[i].src !== newList[i].src) {
+      return { oldUrl: originalList[i].src, newUrl: newList[i].src }
     }
   }
 

@@ -12,20 +12,24 @@ import '../styles/ImageItemBlanket.css'
 import '../styles/ImageItemCover.css'
 import '../styles/ImageItemSmallElements.css'
 import '../styles/ImageItemTooltip.css'
+import '../styles/ImageItemSwitch.css'
 
 const ImageItem = ({
   item,
   handleClick,
   handleUpdateItem,
   onEdit,
+  onSwitchChange,
   status,
   config,
   texts,
   sizeFetcher,
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: item.id })
-  const [size, isLoadingSize, isErrorSize] = useSize(item.src, sizeFetcher)
-  const [height, width, aspectRatio, isLoadingAspectRatio, isErrorAspectRatio] = useAspectRatio(item.src)
+  const [isEditedActive, setIsEditedActive] = useState(true)
+  const displaySrc = isEditedActive && item.editedSrc ? item.editedSrc : item.src
+  const [size, isLoadingSize, isErrorSize] = useSize(displaySrc, sizeFetcher)
+  const [height, width, aspectRatio, isLoadingAspectRatio, isErrorAspectRatio] = useAspectRatio(displaySrc)
   const wrapperRef = useRef(null)
   const [tooltipPosition, setTooltipPosition] = useState({ left: 0, top: 0 })
   const [isTooltipShowable, setIsTooltipShowable] = useState(false)
@@ -37,8 +41,7 @@ const ImageItem = ({
   const isFizableError = !item.fetchError && onEdit
 
   const tooltipErrorText = getTooltipErrorText(item, texts, onEdit)
-  const backgroundImage =
-    item.loading || item.fetchError ? '' : `url(${item.src})`
+  const backgroundImage = item.loading || item.fetchError ? '' : `url(${displaySrc})`
   const unclickable = !isItemClickable(
     item,
     isMaxSelectableReached,
@@ -143,6 +146,23 @@ const ImageItem = ({
           onClick={(e) => handleEdit(e)}
         >
           <Icon icon="icon-editar" className="imageItemIconEdit" />
+        </Box>
+
+        <Box className="imageItemSwitch" data-visible={item.isEdited && itemsAreReady && (!isError || !!item.editedSrc)} data-cover={item.position === 1}>
+          <Box
+            className="imageItemSwitchOption"
+            data-active={!isEditedActive}
+            onClick={(e) => { e.stopPropagation(); setIsEditedActive(false); onSwitchChange?.(item, false) }}
+          >
+            {texts?.original}
+          </Box>
+          <Box
+            className="imageItemSwitchOption"
+            data-active={isEditedActive}
+            onClick={(e) => { e.stopPropagation(); setIsEditedActive(true); onSwitchChange?.(item, true) }}
+          >
+            {texts?.edited}
+          </Box>
         </Box>
       </Box>
 
