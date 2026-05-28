@@ -14,7 +14,7 @@ import {
 } from '../utils/manageListOfItems'
 
 function useGridImagePicker ({
-  listOfSrc,
+  listOfImages,
   maxSelectablePreferenceByUser,
   maxSizeInMB,
   minAspectRatio,
@@ -22,18 +22,18 @@ function useGridImagePicker ({
   onChange,
 }) {
   const [isDraggingActive, setIsDraggingActive] = useState(false)
-  const [initialUrlList, setInitialUrlList] = useState(listOfSrc)
+  const [initialUrlList, setInitialUrlList] = useState(listOfImages)
   const [itemNewUrl, setItemNewUrl] = useState(null)
-  const [items, setItems] = useState(() => getItemsInitialState(listOfSrc))
+  const [items, setItems] = useState(() => getItemsInitialState(listOfImages))
 
   useEffect(() => {
-    setItemNewUrl(getItemChanged(initialUrlList, listOfSrc))
-  }, [listOfSrc])
+    setItemNewUrl(getItemChanged(initialUrlList, listOfImages))
+  }, [listOfImages])
 
   useEffect(() => {
     if (!itemNewUrl) return
     setItems(prevItems => getItemsWithNewUrl(prevItems, itemNewUrl))
-    setInitialUrlList(listOfSrc)
+    setInitialUrlList(listOfImages)
     setItemNewUrl(null)
   }, [itemNewUrl])
 

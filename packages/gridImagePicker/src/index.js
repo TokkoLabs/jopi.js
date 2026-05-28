@@ -10,7 +10,7 @@ import '../styles/GridImagePicker.css'
  * A grid-based image picker component with sortable and selectable images.
  *
  * @param {Object} props - The props for GridImagePicker.
- * @param {string[]} props.listOfSrc - Array of image URLs to display in the grid.
+ * @param {Array<{src: string, isEdited: boolean}>} props.listOfImages - Array of image objects to display in the grid.
  * @param {number} [props.maxSelectablePreferenceByUser=10] - Maximum number of images that can be selected by the user.
  *        Default is 10. This value is a preference; if there are fewer images available than this number, it will adjust accordingly.
  * @param {number} [props.maxSizeInMB=8] - Maximum size in megabytes for each image. Default is 8 MB. Images exceeding this limit will be marked as an error.
@@ -18,22 +18,24 @@ import '../styles/GridImagePicker.css'
  * @param {number} [props.maxAspectRatio] - Maximum aspect ratio allowed for the images. Images that exceed this ratio will be marked as an error.
  * @param {Function} [props.onChange] - Optional callback function invoked whenever the internal state of images changes.
  *        Called with the updated list of items as `(items) => onChange(items)`.
+ * @param {Function} [props.onSwitchChange] - Optional callback invoked when the user toggles the Original/Editada switch. Called with `(item, isEditedActive)`.
  * @param {Function} [props.sizeFetcher] - Optional fetch function to get the size of the images. Default: (src) => fetch(src)
  * @param {Object} props.texts - Nested texts
  */
 export const GridImagePicker = ({
-  listOfSrc,
+  listOfImages,
   maxSelectablePreferenceByUser = 10,
   maxSizeInMB = 8,
   minAspectRatio,
   maxAspectRatio,
   onChange,
   onEdit = null,
+  onSwitchChange,
   texts,
   sizeFetcher,
 }) => {
   const { attributes, methods } = useGridImagePicker({
-    listOfSrc,
+    listOfImages,
     maxSelectablePreferenceByUser,
     maxSizeInMB,
     minAspectRatio,
@@ -96,6 +98,7 @@ export const GridImagePicker = ({
                 config={config}
                 handleClick={handleClickItem}
                 onEdit={onEdit}
+                onSwitchChange={item => onSwitchChange(item)}
                 handleUpdateItem={handleUpdateItem}
                 texts={texts}
                 sizeFetcher={sizeFetcher}
