@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/jopijs",
-  "version": "1.5.431",
+  "version": "1.5.432",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
