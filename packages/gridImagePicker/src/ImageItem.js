@@ -27,6 +27,7 @@ const ImageItem = ({
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: item.id })
   const [isEditedActive, setIsEditedActive] = useState(true)
+  const previousEditedSrc = useRef(item.editedSrc)
   const displaySrc = isEditedActive && item.editedSrc ? item.editedSrc : item.src
   const [size, isLoadingSize, isErrorSize] = useSize(displaySrc, sizeFetcher)
   const [height, width, aspectRatio, isLoadingAspectRatio, isErrorAspectRatio] = useAspectRatio(displaySrc)
@@ -48,6 +49,18 @@ const ImageItem = ({
     itemsAreReady
   )
   const disabled = isDisabledCheckbox(item, isMaxSelectableReached)
+
+  // When an image gets (re)edited, its `editedSrc` changes. Reflect that by
+  // switching the toggle back to the edited version, so the freshly edited
+  // preview is shown even if the user had toggled to "Original" beforehand.
+  useEffect(() => {
+    if (item.editedSrc === previousEditedSrc.current) return
+    previousEditedSrc.current = item.editedSrc
+
+    if (item.isEdited && item.editedSrc) {
+      setIsEditedActive(true)
+    }
+  }, [item.editedSrc, item.isEdited])
 
   useEffect(() => {
     const handleHideTooltip = () => {
@@ -168,7 +181,7 @@ const ImageItem = ({
 
       <Box
         className="imageItemTooltip"
-        data-showable={isTooltipShowable}
+        data-showable={isTooltipShowable && Boolean(tooltipErrorText)}
         __css={{ left: tooltipPosition.left, top: tooltipPosition.top }}
       >
         {tooltipErrorText}

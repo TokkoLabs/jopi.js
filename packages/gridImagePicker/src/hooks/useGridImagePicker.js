@@ -37,6 +37,23 @@ function useGridImagePicker ({
     setItemNewUrl(null)
   }, [itemNewUrl])
 
+  // Keep the edited preview metadata in sync with the source list, since
+  // `editedSrc` and `isEdited` can change after an image is edited. Items are
+  // matched by their positional `id` (assigned from the original list order),
+  // so this stays correct even with duplicate `src`s or after reordering.
+  useEffect(() => {
+    setItems(prevItems => {
+      let hasChanges = false
+      const nextItems = prevItems.map(item => {
+        const source = listOfImages[item.id - 1]
+        if (!source || (source.editedSrc === item.editedSrc && source.isEdited === item.isEdited)) return item
+        hasChanges = true
+        return { ...item, editedSrc: source.editedSrc, isEdited: source.isEdited }
+      })
+      return hasChanges ? nextItems : prevItems
+    })
+  }, [listOfImages])
+
   const maxSelectable = Math.min(
     maxSelectablePreferenceByUser,
     items.filter(item => !item.sizeError && !item.aspectRatioError && !item.fetchError).length
