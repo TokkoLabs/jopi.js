@@ -97,6 +97,80 @@ describe('GridImagePicker', () => {
     })
   })
 
+  it('Should reflect a freshly edited image (switch appears and shows the edited preview)', async () => {
+    const editedSrc = 'data:image/png;base64,EDITED_VERSION'
+    const sizeFetcher = jest.fn(() =>
+      Promise.resolve({
+        blob: () => Promise.resolve(new window.Blob(['mock'], { type: 'image/jpeg' })),
+      })
+    )
+
+    let wrapper
+    await act(async () => {
+      wrapper = mount(<GridImagePicker listOfImages={imagesUrls} texts={texts} sizeFetcher={sizeFetcher} />)
+      await new Promise(resolve => setTimeout(resolve, 0))
+    })
+    wrapper.update()
+
+    // The switch is hidden while the image has no edited version.
+    expect(wrapper.find('.imageItemSwitch').hostNodes().at(0).prop('data-visible')).toBe(false)
+
+    // Simulate finishing an edit: the source list now carries the edited version.
+    const editedList = imagesUrls.map((image, index) =>
+      index === 0 ? { ...image, editedSrc, isEdited: true } : image
+    )
+    await act(async () => {
+      wrapper.setProps({ listOfImages: editedList })
+      await new Promise(resolve => setTimeout(resolve, 50))
+    })
+    wrapper.update()
+
+    // The switch now appears (isEdited synced) and the preview points to the
+    // new edited image (editedSrc synced and used as the displayed source).
+    expect(wrapper.find('.imageItemSwitch').hostNodes().at(0).prop('data-visible')).toBe(true)
+    expect(sizeFetcher).toHaveBeenCalledWith(editedSrc)
+  })
+
+  it('Should flip the switch to the edited version after a re-edit even if "Original" was selected', async () => {
+    // The first image already has an edited version equal to its own src, so the
+    // switch is present from the start.
+    const initialList = imagesUrls.map((image, index) =>
+      index === 0 ? { ...image, editedSrc: image.src, isEdited: true } : image
+    )
+
+    let wrapper
+    await act(async () => {
+      wrapper = mount(<GridImagePicker listOfImages={initialList} texts={texts} />)
+      await new Promise(resolve => setTimeout(resolve, 0))
+    })
+    wrapper.update()
+
+    const switchOptions = wrapper.find('.imageItemSwitch').hostNodes().at(0).find('.imageItemSwitchOption').hostNodes()
+    // "Editada" is active by default.
+    expect(switchOptions.at(1).prop('data-active')).toBe(true)
+
+    // The user toggles to "Original".
+    await act(async () => {
+      switchOptions.at(0).simulate('click')
+    })
+    wrapper.update()
+    expect(wrapper.find('.imageItemSwitch').hostNodes().at(0).find('.imageItemSwitchOption').hostNodes().at(0).prop('data-active')).toBe(true)
+
+    // The user edits the image: the source list now carries a new edited version.
+    const editedSrc = 'data:image/png;base64,EDITED_VERSION'
+    const editedList = initialList.map((image, index) =>
+      index === 0 ? { ...image, editedSrc, isEdited: true } : image
+    )
+    await act(async () => {
+      wrapper.setProps({ listOfImages: editedList })
+      await new Promise(resolve => setTimeout(resolve, 50))
+    })
+    wrapper.update()
+
+    // The switch flips back to the edited version.
+    expect(wrapper.find('.imageItemSwitch').hostNodes().at(0).find('.imageItemSwitchOption').hostNodes().at(1).prop('data-active')).toBe(true)
+  })
+
   it('Should activate all items except the last one after specific toggles', async () => {
     const wrapper = await mountGridImagePicker()
 

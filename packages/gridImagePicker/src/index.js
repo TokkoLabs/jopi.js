@@ -98,7 +98,7 @@ export const GridImagePicker = ({
                 config={config}
                 handleClick={handleClickItem}
                 onEdit={onEdit}
-                onSwitchChange={item => onSwitchChange(item)}
+                onSwitchChange={onSwitchChange}
                 handleUpdateItem={handleUpdateItem}
                 texts={texts}
                 sizeFetcher={sizeFetcher}
