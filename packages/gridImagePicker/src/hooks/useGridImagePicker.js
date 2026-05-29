@@ -20,6 +20,7 @@ function useGridImagePicker ({
   minAspectRatio,
   maxAspectRatio,
   onChange,
+  onSwitchChange,
 }) {
   const [isDraggingActive, setIsDraggingActive] = useState(false)
   const [initialUrlList, setInitialUrlList] = useState(listOfImages)
@@ -37,18 +38,17 @@ function useGridImagePicker ({
     setItemNewUrl(null)
   }, [itemNewUrl])
 
-  // Keep the edited preview metadata in sync with the source list, since
-  // `editedSrc` and `isEdited` can change after an image is edited. Items are
-  // matched by their positional `id` (assigned from the original list order),
-  // so this stays correct even with duplicate `src`s or after reordering.
+  // Sync `editedSrc` from the source list, matched by positional `id` (robust to duplicate `src` and reordering).
   useEffect(() => {
     setItems(prevItems => {
       let hasChanges = false
       const nextItems = prevItems.map(item => {
         const source = listOfImages[item.id - 1]
-        if (!source || (source.editedSrc === item.editedSrc && source.isEdited === item.isEdited)) return item
+        if (!source || source.editedSrc === item.editedSrc) return item
         hasChanges = true
-        return { ...item, editedSrc: source.editedSrc, isEdited: source.isEdited }
+        // No `editedSrc` means nothing to show as edited (the flip-back lives in ImageItem).
+        const isEditedActive = source.editedSrc ? item.isEditedActive : false
+        return { ...item, editedSrc: source.editedSrc, isEditedActive }
       })
       return hasChanges ? nextItems : prevItems
     })
@@ -109,6 +109,16 @@ function useGridImagePicker ({
     )
   }
 
+  // Single source of truth for the shown version: stored in `items` (for `onChange`) and reported via `onSwitchChange`.
+  const handleSwitchChange = (targetItem, isEditedActive) => {
+    setItems(prevItems =>
+      prevItems.map(item =>
+        item.id === targetItem.id ? { ...item, isEditedActive } : item
+      )
+    )
+    onSwitchChange?.(targetItem, isEditedActive)
+  }
+
   const handleDragStart = () => {
     setIsDraggingActive(true)
   }
@@ -130,6 +140,7 @@ function useGridImagePicker ({
     methods: {
       handleClickItem,
       handleUpdateItem,
+      handleSwitchChange,
       handleDeselectAll,
       handleSelectAll,
       handleDragStart,
