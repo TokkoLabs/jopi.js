@@ -26,7 +26,8 @@ const ImageItem = ({
   sizeFetcher,
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: item.id })
-  const [isEditedActive, setIsEditedActive] = useState(true)
+  const previousEditedSrc = useRef(item.editedSrc)
+  const isEditedActive = item.isEditedActive
   const displaySrc = isEditedActive && item.editedSrc ? item.editedSrc : item.src
   const [size, isLoadingSize, isErrorSize] = useSize(displaySrc, sizeFetcher)
   const [height, width, aspectRatio, isLoadingAspectRatio, isErrorAspectRatio] = useAspectRatio(displaySrc)
@@ -48,6 +49,16 @@ const ImageItem = ({
     itemsAreReady
   )
   const disabled = isDisabledCheckbox(item, isMaxSelectableReached)
+
+  // On (re)edit, flip back to the edited version and notify; the ref skips mount/re-renders.
+  useEffect(() => {
+    if (item.editedSrc === previousEditedSrc.current) return
+    previousEditedSrc.current = item.editedSrc
+
+    if (item.editedSrc) {
+      onSwitchChange?.(item, true)
+    }
+  }, [item.editedSrc])
 
   useEffect(() => {
     const handleHideTooltip = () => {
@@ -148,18 +159,18 @@ const ImageItem = ({
           <Icon icon="icon-editar" className="imageItemIconEdit" />
         </Box>
 
-        <Box className="imageItemSwitch" data-visible={item.isEdited && itemsAreReady && (!isError || !!item.editedSrc)} data-cover={item.position === 1}>
+        <Box className="imageItemSwitch" data-visible={Boolean(item.editedSrc) && itemsAreReady} data-cover={item.position === 1}>
           <Box
             className="imageItemSwitchOption"
             data-active={!isEditedActive}
-            onClick={(e) => { e.stopPropagation(); setIsEditedActive(false); onSwitchChange?.(item, false) }}
+            onClick={(e) => { e.stopPropagation(); onSwitchChange?.(item, false) }}
           >
             {texts?.original}
           </Box>
           <Box
             className="imageItemSwitchOption"
             data-active={isEditedActive}
-            onClick={(e) => { e.stopPropagation(); setIsEditedActive(true); onSwitchChange?.(item, true) }}
+            onClick={(e) => { e.stopPropagation(); onSwitchChange?.(item, true) }}
           >
             {texts?.edited}
           </Box>
@@ -168,7 +179,7 @@ const ImageItem = ({
 
       <Box
         className="imageItemTooltip"
-        data-showable={isTooltipShowable}
+        data-showable={isTooltipShowable && Boolean(tooltipErrorText)}
         __css={{ left: tooltipPosition.left, top: tooltipPosition.top }}
       >
         {tooltipErrorText}

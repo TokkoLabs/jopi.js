@@ -5,7 +5,8 @@ export const getItemsInitialState = (listOfImages) => {
     id: index + 1,
     src: image.src,
     editedSrc: image.editedSrc,
-    isEdited: image.isEdited,
+    // Whether the edited version is shown; only meaningful when there's an `editedSrc`.
+    isEditedActive: Boolean(image.editedSrc),
     checked: false,
     position: 0,
     height: 0,

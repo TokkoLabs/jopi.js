@@ -20,6 +20,7 @@ function useGridImagePicker ({
   minAspectRatio,
   maxAspectRatio,
   onChange,
+  onSwitchChange,
 }) {
   const [isDraggingActive, setIsDraggingActive] = useState(false)
   const [initialUrlList, setInitialUrlList] = useState(listOfImages)
@@ -36,6 +37,22 @@ function useGridImagePicker ({
     setInitialUrlList(listOfImages)
     setItemNewUrl(null)
   }, [itemNewUrl])
+
+  // Sync `editedSrc` from the source list, matched by positional `id` (robust to duplicate `src` and reordering).
+  useEffect(() => {
+    setItems(prevItems => {
+      let hasChanges = false
+      const nextItems = prevItems.map(item => {
+        const source = listOfImages[item.id - 1]
+        if (!source || source.editedSrc === item.editedSrc) return item
+        hasChanges = true
+        // No `editedSrc` means nothing to show as edited (the flip-back lives in ImageItem).
+        const isEditedActive = source.editedSrc ? item.isEditedActive : false
+        return { ...item, editedSrc: source.editedSrc, isEditedActive }
+      })
+      return hasChanges ? nextItems : prevItems
+    })
+  }, [listOfImages])
 
   const maxSelectable = Math.min(
     maxSelectablePreferenceByUser,
@@ -92,6 +109,16 @@ function useGridImagePicker ({
     )
   }
 
+  // Single source of truth for the shown version: stored in `items` (for `onChange`) and reported via `onSwitchChange`.
+  const handleSwitchChange = (targetItem, isEditedActive) => {
+    setItems(prevItems =>
+      prevItems.map(item =>
+        item.id === targetItem.id ? { ...item, isEditedActive } : item
+      )
+    )
+    onSwitchChange?.(targetItem, isEditedActive)
+  }
+
   const handleDragStart = () => {
     setIsDraggingActive(true)
   }
@@ -113,6 +140,7 @@ function useGridImagePicker ({
     methods: {
       handleClickItem,
       handleUpdateItem,
+      handleSwitchChange,
       handleDeselectAll,
       handleSelectAll,
       handleDragStart,
