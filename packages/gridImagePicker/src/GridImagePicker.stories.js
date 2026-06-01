@@ -118,12 +118,12 @@ const SIMULATED_EDITED_SRC =
      </svg>`
   )
 
-// Verifies the Original/Editada toggle + edit sync: image #1 starts edited (editedSrc === src); editing swaps in the green tile.
+// Verifies the Original/Editada toggle + edit sync: image #1 has a distinct editedSrc, so toggling reloads the displayed source without re-running the initial auto-select that would undo a manual deselection.
 export const EditSync = ({ listOfImages, texts, ...args }) => {
   const [images, setImages] = useState(() =>
     listOfImages.map(({ src }, index) =>
       index === 1
-        ? { src, editedSrc: src }
+        ? { src, editedSrc: SIMULATED_EDITED_SRC }
         : { src }
     )
   )

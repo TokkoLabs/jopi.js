@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { arrayMove } from '@dnd-kit/sortable'
 import { isItemClickable } from '../utils/manageItem'
 import {
@@ -26,6 +26,7 @@ function useGridImagePicker ({
   const [initialUrlList, setInitialUrlList] = useState(listOfImages)
   const [itemNewUrl, setItemNewUrl] = useState(null)
   const [items, setItems] = useState(() => getItemsInitialState(listOfImages))
+  const hasAutoSelectedRef = useRef(false)
 
   useEffect(() => {
     setItemNewUrl(getItemChanged(initialUrlList, listOfImages))
@@ -74,7 +75,9 @@ function useGridImagePicker ({
   useEffect(() => {
     if (!itemsAreReady) return
 
-    const updatedItems = fillCheckedItems(items, maxSelectable)
+    // Auto-select only the first time items become ready; later reloads (toggling Original/Editada) re-enter this effect and the flag prevents overriding the user's manual deselection (url changes still run inside `fillCheckedItems`).
+    const updatedItems = fillCheckedItems(items, maxSelectable, hasAutoSelectedRef.current)
+    hasAutoSelectedRef.current = true
     setItems(updatedItems)
   }, [itemsAreReady])
 
