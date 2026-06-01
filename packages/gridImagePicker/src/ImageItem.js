@@ -42,12 +42,15 @@ const ImageItem = ({
   const isFizableError = !item.fetchError && onEdit
 
   const tooltipErrorText = getTooltipErrorText(item, texts, onEdit)
-  const backgroundImage = item.loading || item.fetchError ? '' : `url(${displaySrc})`
+  // Keep the previous image painted while a (re)load is in flight; CSS swaps it in once ready, avoiding the flash on switch.
+  const backgroundImage = item.fetchError ? '' : `url(${displaySrc})`
   const unclickable = !isItemClickable(
     item,
     isMaxSelectableReached,
     itemsAreReady
   )
+  // Checkbox visibility is per-item (itemsAreReady forced true) so reloading one image (e.g. on switch) doesn't flicker every checkbox.
+  const checkboxVisible = isItemClickable(item, isMaxSelectableReached, true)
   const disabled = isDisabledCheckbox(item, isMaxSelectableReached)
 
   // On (re)edit, flip back to the edited version and notify; the ref skips mount/re-renders.
@@ -144,7 +147,7 @@ const ImageItem = ({
           <Box className="imageItemCoverText"> {texts.cover} </Box>
         </Box>
 
-        <Box className="imageItemCheckbox" data-active={item.checked} data-disabled={disabled} data-visible={!unclickable}>
+        <Box className="imageItemCheckbox" data-active={item.checked} data-disabled={disabled} data-visible={checkboxVisible}>
           <Check className="imageItemIconCheck" color="white" />
         </Box>
 

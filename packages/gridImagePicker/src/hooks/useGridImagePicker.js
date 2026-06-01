@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { arrayMove } from '@dnd-kit/sortable'
 import { isItemClickable } from '../utils/manageItem'
 import {
@@ -26,6 +26,7 @@ function useGridImagePicker ({
   const [initialUrlList, setInitialUrlList] = useState(listOfImages)
   const [itemNewUrl, setItemNewUrl] = useState(null)
   const [items, setItems] = useState(() => getItemsInitialState(listOfImages))
+  const hasAutoSelectedRef = useRef(false)
 
   useEffect(() => {
     setItemNewUrl(getItemChanged(initialUrlList, listOfImages))
@@ -74,7 +75,9 @@ function useGridImagePicker ({
   useEffect(() => {
     if (!itemsAreReady) return
 
-    const updatedItems = fillCheckedItems(items, maxSelectable)
+    // Auto-select only the first time items become ready; later reloads (toggling Original/Editada) re-enter this effect and the flag prevents overriding the user's manual deselection (url changes still run inside `fillCheckedItems`).
+    const updatedItems = fillCheckedItems(items, maxSelectable, hasAutoSelectedRef.current)
+    hasAutoSelectedRef.current = true
     setItems(updatedItems)
   }, [itemsAreReady])
 
@@ -102,11 +105,20 @@ function useGridImagePicker ({
   }
 
   const handleUpdateItem = ({ id, ...restOfKeys }) => {
-    setItems((prevItems) =>
-      prevItems.map((item) =>
-        item.id === id ? { ...item, ...restOfKeys } : item
-      )
-    )
+    setItems((prevItems) => {
+      let hasNewError = false
+      const updatedItems = prevItems.map((item) => {
+        if (item.id !== id) return item
+        const merged = { ...item, ...restOfKeys }
+        // Deselect when the (re)loaded version is errored (e.g. after switching Original/Editada).
+        if (merged.checked && (merged.sizeError || merged.aspectRatioError || merged.fetchError)) {
+          hasNewError = true
+          return { ...merged, checked: false, position: 0 }
+        }
+        return merged
+      })
+      return hasNewError ? refreshItemsPosition(updatedItems) : updatedItems
+    })
   }
 
   // Single source of truth for the shown version: stored in `items` (for `onChange`) and reported via `onSwitchChange`.
@@ -125,7 +137,8 @@ function useGridImagePicker ({
 
   const handleDragEnd = ({ active, over }) => {
     setIsDraggingActive(false)
-    if (active.id === over.id) return
+    // `over` is null when dropped outside a droppable zone: nothing to reorder.
+    if (!over || active.id === over.id) return
 
     const oldIndex = items.findIndex(item => item.id === active.id)
     const newIndex = items.findIndex(item => item.id === over.id)

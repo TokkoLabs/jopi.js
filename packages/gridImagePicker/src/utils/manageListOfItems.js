@@ -54,7 +54,7 @@ export const getUpdatedItemsWithDecrement = (listOfItems, targetItem) => {
   return newItems
 }
 
-export const fillCheckedItems = (listOfItems, maxSelectable) => {
+export const fillCheckedItems = (listOfItems, maxSelectable, skipAutoSelect = false) => {
   let items = [...listOfItems]
   let changed = false
 
@@ -81,6 +81,9 @@ export const fillCheckedItems = (listOfItems, maxSelectable) => {
 
     return item
   })
+
+  // Auto-check runs only on initial load; later transitions to "ready" (e.g. toggling Original/Editada) must not reselect and should respect the user's current selection.
+  if (!changed && skipAutoSelect) return listOfItems
 
   // Auto check en items cuando no hubo cambio de url
   if (!changed) {

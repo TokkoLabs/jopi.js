@@ -9,6 +9,11 @@ const INSTAGRAM_RECOMMENDED_MIN_ASPECT_RATIO = 4 / 5
 const INSTAGRAM_RECOMMENDED_MAX_ASPECT_RATIO = 1.91 / 1
 const MAX_INSTAGRAM_SIZE_IN_MB = 8
 
+// Mirrors the real consumer (tokkobroker-react): uncached size fetch so each switch
+// re-fetches over the network, surfacing the real loading window for the size.
+const getUrlWithoutCache = (src) => `${src}?no_cache=${Date.now()}`
+const sizeFetcher = (src) => window.fetch(getUrlWithoutCache(src))
+
 export default {
   title: 'GridImagePicker',
   component: GridImagePicker,
@@ -104,7 +109,7 @@ export default {
 }
 
 export const Normal = ({ listOfImages, ...args }) => {
-  return <GridImagePicker {...args} listOfImages={listOfImages} />
+  return <GridImagePicker {...args} listOfImages={listOfImages} sizeFetcher={sizeFetcher} />
 }
 
 // A distinguishable green "EDITED" tile so the edit sync is visually obvious.
@@ -118,12 +123,12 @@ const SIMULATED_EDITED_SRC =
      </svg>`
   )
 
-// Verifies the Original/Editada toggle + edit sync: image #1 starts edited (editedSrc === src); editing swaps in the green tile.
+// Verifies the Original/Editada toggle + edit sync: image #1 has a distinct editedSrc, so toggling reloads the displayed source without re-running the initial auto-select that would undo a manual deselection.
 export const EditSync = ({ listOfImages, texts, ...args }) => {
   const [images, setImages] = useState(() =>
     listOfImages.map(({ src }, index) =>
       index === 1
-        ? { src, editedSrc: src }
+        ? { src, editedSrc: SIMULATED_EDITED_SRC }
         : { src }
     )
   )
@@ -159,6 +164,7 @@ export const EditSync = ({ listOfImages, texts, ...args }) => {
       texts={{ ...texts, original: 'Original', edited: 'Editada' }}
       onEdit={handleEdit}
       onChange={handleChange}
+      sizeFetcher={sizeFetcher}
     />
   )
 }

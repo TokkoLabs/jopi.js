@@ -254,4 +254,46 @@ describe('GridImagePicker', () => {
       expect(item.prop('data-active')).toBe(!isLastItem)
     })
   })
+
+  it('Should keep a manually deselected item deselected after toggling the Original/Editada switch', async () => {
+    // The first image has a distinct edited source, so toggling the switch reloads the displayed source.
+    const initialList = imagesUrls.map((image, index) =>
+      index === 0
+        ? { ...image, editedSrc: 'data:image/png;base64,EDITED_DISTINCT_VERSION' }
+        : image
+    )
+
+    let wrapper
+    await act(async () => {
+      wrapper = mount(<GridImagePicker listOfImages={initialList} texts={texts} />)
+      await new Promise(resolve => setTimeout(resolve, 0))
+    })
+    wrapper.update()
+
+    // All items start selected by the initial auto-select.
+    const initialCheckboxes = wrapper.find('.imageItemCheckbox').hostNodes()
+    initialCheckboxes.forEach(item => expect(item.prop('data-active')).toBe(true))
+
+    // The user manually deselects the last item.
+    const imageItems = wrapper.find('.imageItemWrapper').hostNodes()
+    await act(async () => {
+      imageItems.at(imageItems.length - 1).simulate('click')
+    })
+    wrapper.update()
+    expect(
+      wrapper.find('.imageItemCheckbox').hostNodes().at(imageItems.length - 1).prop('data-active')
+    ).toBe(false)
+
+    // Toggling to "Original" re-fetches the displayed source and flips itemsAreReady; this must NOT re-run the initial auto-select.
+    await act(async () => {
+      wrapper.find('.imageItemSwitch').hostNodes().at(0).find('.imageItemSwitchOption').hostNodes().at(0).simulate('click')
+      await new Promise(resolve => setTimeout(resolve, 50))
+    })
+    wrapper.update()
+
+    // The manually deselected item stays deselected.
+    expect(
+      wrapper.find('.imageItemCheckbox').hostNodes().at(imageItems.length - 1).prop('data-active')
+    ).toBe(false)
+  })
 })
