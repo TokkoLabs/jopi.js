@@ -105,11 +105,20 @@ function useGridImagePicker ({
   }
 
   const handleUpdateItem = ({ id, ...restOfKeys }) => {
-    setItems((prevItems) =>
-      prevItems.map((item) =>
-        item.id === id ? { ...item, ...restOfKeys } : item
-      )
-    )
+    setItems((prevItems) => {
+      let hasNewError = false
+      const updatedItems = prevItems.map((item) => {
+        if (item.id !== id) return item
+        const merged = { ...item, ...restOfKeys }
+        // Deselect when the (re)loaded version is errored (e.g. after switching Original/Editada).
+        if (merged.checked && (merged.sizeError || merged.aspectRatioError || merged.fetchError)) {
+          hasNewError = true
+          return { ...merged, checked: false, position: 0 }
+        }
+        return merged
+      })
+      return hasNewError ? refreshItemsPosition(updatedItems) : updatedItems
+    })
   }
 
   // Single source of truth for the shown version: stored in `items` (for `onChange`) and reported via `onSwitchChange`.
