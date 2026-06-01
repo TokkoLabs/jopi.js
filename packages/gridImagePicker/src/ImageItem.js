@@ -49,6 +49,8 @@ const ImageItem = ({
     isMaxSelectableReached,
     itemsAreReady
   )
+  // Checkbox visibility is per-item (itemsAreReady forced true) so reloading one image (e.g. on switch) doesn't flicker every checkbox.
+  const checkboxVisible = isItemClickable(item, isMaxSelectableReached, true)
   const disabled = isDisabledCheckbox(item, isMaxSelectableReached)
 
   // On (re)edit, flip back to the edited version and notify; the ref skips mount/re-renders.
@@ -145,7 +147,7 @@ const ImageItem = ({
           <Box className="imageItemCoverText"> {texts.cover} </Box>
         </Box>
 
-        <Box className="imageItemCheckbox" data-active={item.checked} data-disabled={disabled} data-visible={!unclickable}>
+        <Box className="imageItemCheckbox" data-active={item.checked} data-disabled={disabled} data-visible={checkboxVisible}>
           <Check className="imageItemIconCheck" color="white" />
         </Box>
 
