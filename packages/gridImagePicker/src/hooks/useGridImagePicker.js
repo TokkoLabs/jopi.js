@@ -137,7 +137,8 @@ function useGridImagePicker ({
 
   const handleDragEnd = ({ active, over }) => {
     setIsDraggingActive(false)
-    if (active.id === over.id) return
+    // `over` is null when dropped outside a droppable zone: nothing to reorder.
+    if (!over || active.id === over.id) return
 
     const oldIndex = items.findIndex(item => item.id === active.id)
     const newIndex = items.findIndex(item => item.id === over.id)
