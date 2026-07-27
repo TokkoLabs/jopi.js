@@ -1,7 +1,9 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 import { Box } from '@quintoandar-tokko/box'
 import { Icon } from '@quintoandar-tokko/icons'
 import { Table } from '@quintoandar-tokko/table'
+import { createTheme } from '@quintoandar-tokko/theme'
 import { Tabs } from '.'
 import { Text } from '@quintoandar-tokko/text'
 
@@ -154,5 +156,40 @@ export const MinimalTabs = () => (
       <Tabs.Content id="item0" key="Content0">Primer Item</Tabs.Content>
       <Tabs.Content id="item1" key="Content1">Segundo item</Tabs.Content>
     </Tabs>
+  </Box>
+)
+
+// Stand-in for a brand supplied by the host app: the library ships only Tokko
+// Broker, so the story invents one to show the override working.
+const demoBrand = {
+  name: 'demo',
+  colors: {
+    primary: '#118C4F',
+    primaryHover: '#0E7342',
+  },
+  fontFamily: 'Georgia, serif',
+}
+
+export const brandComparison = () => (
+  <Box __css={{ display: 'flex', gap: '40px' }}>
+    {[undefined, demoBrand].map(brand => {
+      const theme = createTheme(brand)
+
+      return (
+        <ThemeProvider key={theme.brand} theme={theme}>
+          <Box __css={{ width: '340px', padding: '5px' }}>
+            <Text variant='bodyBold.fontSize14'>{theme.brand}</Text>
+            <Tabs variant='minimal'>
+              <Tabs.Tab variant='minimal' id={`${theme.brand}-0`} key="Tab0">
+                <Text variant='bodyBold.fontSize14'>Primera tab</Text>
+              </Tabs.Tab>
+              <Tabs.Tab variant='minimal' id={`${theme.brand}-1`} key="Tab1">
+                <Text variant='bodyBold.fontSize14'>Segunda tab</Text>
+              </Tabs.Tab>
+            </Tabs>
+          </Box>
+        </ThemeProvider>
+      )
+    })}
   </Box>
 )

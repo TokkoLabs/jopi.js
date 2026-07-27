@@ -37,6 +37,8 @@ import { Tooltip, ParentTooltip } from '@quintoandar-tokko/tooltip'
 import { Toast } from '@quintoandar-tokko/toast'
 import { Wrapped } from '@quintoandar-tokko/wrapped'
 import { ThemeProvider } from 'styled-components'
+import { createTheme, TOKKOBROKER } from '@quintoandar-tokko/theme'
+import { JopiThemeProvider } from './JopiThemeProvider'
 export {
   Alert,
   Badge,
@@ -81,6 +83,9 @@ export {
   Tooltip,
   Toast,
   ThemeProvider,
+  JopiThemeProvider,
+  createTheme,
+  TOKKOBROKER,
   useFilterData,
   Wrapped,
 }
