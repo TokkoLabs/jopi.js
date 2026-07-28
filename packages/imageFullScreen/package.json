@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/image-full-screen",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -12,7 +12,7 @@
     "@quintoandar-tokko/box": "^1.2.287",
     "@quintoandar-tokko/icons": "^1.2.319",
     "@quintoandar-tokko/text": "^1.2.288",
-    "@quintoandar-tokko/theme": "^1.2.362"
+    "@quintoandar-tokko/theme": "^1.2.363"
   },
   "peerDependencies": {
     "react": "^16.8.0",
