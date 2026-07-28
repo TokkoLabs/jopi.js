@@ -393,7 +393,7 @@ export const iconTokki = () => <Icon icon='icon-tokki' fontSize='24px'/>
 
 export const iconZonaprop = () => <Icon icon='icon-zonaprop' fontSize='24px'/>
 
-export const iconUniven = () => <Icon icon='icon-Univen' fontSize='24px'/>
+export const iconUniven = () => <Icon icon='icon-univen' fontSize='24px'/>
 
 export const iconUnivenai = () => <Icon icon='icon-univenai' fontSize='24px'/>
 
