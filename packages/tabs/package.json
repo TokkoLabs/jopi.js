@@ -7,7 +7,9 @@
     "lib"
   ],
   "dependencies": {
-    "@quintoandar-tokko/box": "^1.2.287"
+    "@quintoandar-tokko/box": "^1.2.287",
+    "@quintoandar-tokko/hooks": "^1.2.309",
+    "@quintoandar-tokko/theme": "^1.2.362"
   },
   "peerDependencies": {
     "react": "^16.8.0"

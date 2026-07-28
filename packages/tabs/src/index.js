@@ -1,7 +1,7 @@
 import React, { useState, createContext, useContext } from 'react'
 import { Box } from '@quintoandar-tokko/box'
 import { useToggle } from '@quintoandar-tokko/hooks'
-import theme from '@quintoandar-tokko/theme'
+import { useBrandTheme } from '@quintoandar-tokko/theme'
 
 const TabsContext = createContext()
 
@@ -59,6 +59,7 @@ const Tab = ({
 }) => {
   const { active, setActive } = useTabsContext()
   const [hover, setHover] = useToggle(false)
+  const theme = useBrandTheme()
   const fontText = Object.values(theme.text[variantBody][variantFont])
   let color
   const variantValues = Object.values(theme.tab)[
@@ -88,7 +89,7 @@ const Tab = ({
       __css={{
         position: 'relative',
         cursor: 'pointer',
-        fontFamily: 'Nunito Sans',
+        fontFamily: theme.fonts.primary,
         textTransform: variant === 'minimal' ? 'none' : 'uppercase',
         textAlign: 'center',
         display: 'flex',
@@ -127,7 +128,10 @@ const Tab = ({
             border:
               variant === 'normal'
                 ? undefined
-                : '1px solid ' + (active === id ? '#df1e02 !important' : color),
+                : '1px solid ' +
+                  (active === id
+                    ? theme.colors.primary + ' !important'
+                    : color),
             position: 'absolute',
             right: variant === 'normal' ? '10px' : 'calc(25%)',
             left: variant === 'normal' ? '10px' : 'calc(25%)',

@@ -14,7 +14,7 @@ exports[`Tabs renders correctly with headers and content 1`] = `
   min-width: 0;
   position: relative;
   cursor: pointer;
-  font-family: Nunito Sans;
+  font-family: "Nunito Sans",sans-serif;
   text-transform: uppercase;
   text-align: center;
   display: -webkit-box;
@@ -60,7 +60,7 @@ exports[`Tabs renders correctly with headers and content 1`] = `
   min-width: 0;
   position: relative;
   cursor: pointer;
-  font-family: Nunito Sans;
+  font-family: "Nunito Sans",sans-serif;
   text-transform: uppercase;
   text-align: center;
   display: -webkit-box;
@@ -179,7 +179,7 @@ exports[`Tabs renders correctly with only headers 1`] = `
   min-width: 0;
   position: relative;
   cursor: pointer;
-  font-family: Nunito Sans;
+  font-family: "Nunito Sans",sans-serif;
   text-transform: uppercase;
   text-align: center;
   display: -webkit-box;
@@ -225,7 +225,7 @@ exports[`Tabs renders correctly with only headers 1`] = `
   min-width: 0;
   position: relative;
   cursor: pointer;
-  font-family: Nunito Sans;
+  font-family: "Nunito Sans",sans-serif;
   text-transform: uppercase;
   text-align: center;
   display: -webkit-box;
