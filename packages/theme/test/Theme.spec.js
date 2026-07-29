@@ -59,6 +59,26 @@ describe('createTheme', () => {
     expect(buttons.primary[':hover'].backgroundColor).toBe('#0E7342')
   })
 
+  it('resolves onBrand from optional badge tokens, defaulting to primary-500', () => {
+    expect(createTheme().buttons.onBrand.backgroundColor).toBe('#DF1517')
+    expect(createTheme(demoBrand).buttons.onBrand.backgroundColor).toBe(
+      '#DF1517'
+    )
+    expect(createTheme().buttons.onBrand.color).toBe('#FFFFFF')
+
+    const withOnBrand = createTheme({
+      ...demoBrand,
+      colors: {
+        ...demoBrand.colors,
+        badgeOnBrand: '#062756',
+        badgeOnBrandText: '#CCDAF6',
+      },
+    })
+
+    expect(withOnBrand.buttons.onBrand.backgroundColor).toBe('#062756')
+    expect(withOnBrand.buttons.onBrand.color).toBe('#CCDAF6')
+  })
+
   it('keeps the same theme shape across brands', () => {
     expect(Object.keys(createTheme(demoBrand)).sort()).toEqual(
       Object.keys(createTheme()).sort()
