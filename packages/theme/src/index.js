@@ -745,6 +745,12 @@ export const createTheme = (brand) => {
           color: colors.neutral[0],
         },
       },
+      // Contrast tone for badges on brand-colored surfaces (e.g. header).
+      // Defaults to design-system primary-500; hosts may override via badgeOnBrand*.
+      onBrand: {
+        color: colors.badgeOnBrandText || colors.neutral[0],
+        backgroundColor: colors.badgeOnBrand || '#DF1517',
+      },
       large: {
         height: '48px',
         borderRadius: '12px',
