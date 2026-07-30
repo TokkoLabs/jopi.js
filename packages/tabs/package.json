@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/tabs",
-  "version": "1.4.306",
+  "version": "1.4.307",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
