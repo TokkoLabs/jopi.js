@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/tabs",
-  "version": "1.4.307",
+  "version": "1.4.308",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -9,7 +9,7 @@
   "dependencies": {
     "@quintoandar-tokko/box": "^1.2.287",
     "@quintoandar-tokko/hooks": "^1.2.309",
-    "@quintoandar-tokko/theme": "^1.2.364"
+    "@quintoandar-tokko/theme": "^1.2.366"
   },
   "peerDependencies": {
     "react": "^16.8.0"
