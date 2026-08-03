@@ -18,16 +18,18 @@ export const Tags = ({
       variant={variant}
       {...props}
       __css={{
-        fontFamily: 'Nunito Sans',
+        // Fallbacks without ThemeProvider. With provider, createTheme().tags.*
+        // metrics (incl. brand fontFamily) win via tx="tags".
+        fontFamily: 'primary',
+        fontSize: '12px',
+        fontWeight: '400',
+        lineHeight: '16px',
+        minHeight: '20px',
+        padding: '3px 4px',
         display: 'inline-flex',
         alignItems: 'center',
-        padding: '3px 4px',
         gap: '5px',
-        height: '20px',
         borderRadius: '4px',
-        fontWeight: '400',
-        fontSize: '12px',
-        lineHeight: '12px',
         cursor: !noClick ? 'pointer' : 'default',
         border: 'solid 1px transparent',
         pointerEvents: noClick && 'none',

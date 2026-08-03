@@ -59,6 +59,18 @@ describe('createTheme', () => {
     expect(buttons.primary[':hover'].backgroundColor).toBe('#0E7342')
   })
 
+  it('applies the brand font and multi-font-safe metrics on tags', () => {
+    const tokko = createTheme()
+    expect(tokko.tags.secondary.fontFamily).toBe('"Nunito Sans", sans-serif')
+    expect(tokko.tags.secondary.lineHeight).toBe('16px')
+    expect(tokko.tags.secondary.minHeight).toBe('20px')
+    expect(tokko.tags.secondary.height).toBeUndefined()
+
+    const demo = createTheme(demoBrand)
+    expect(demo.tags.warning.fontFamily).toBe('"Demo Sans", sans-serif')
+    expect(demo.tags.default.lineHeight).toBe('16px')
+  })
+
   it('resolves onBrand from optional badge tokens, defaulting to primary-500', () => {
     expect(createTheme().buttons.onBrand.backgroundColor).toBe('#DF1517')
     expect(createTheme(demoBrand).buttons.onBrand.backgroundColor).toBe(
