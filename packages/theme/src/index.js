@@ -430,34 +430,53 @@ export const createTheme = (brand) => {
         borderColor: colors.infoAlert,
       },
     },
-    tags: {
-      color: colors.neutralGray1,
-      secondary: {
-        background: '#B3DBE8',
-        ':hover': {
-          color: '#25697E',
-          border: '1px solid' + colors.secondary,
+    tags: (() => {
+      // Applied on every color variant: styled-system `variant` only reads the
+      // named key (e.g. tags.secondary), not sibling keys on tags.
+      const metrics = {
+        fontFamily: fontFamily,
+        fontSize: '12px',
+        fontWeight: 400,
+        lineHeight: '16px',
+        minHeight: '20px',
+        padding: '3px 4px',
+      }
+
+      return {
+        color: colors.neutralGray1,
+        ...metrics,
+        secondary: {
+          ...metrics,
+          background: '#B3DBE8',
+          ':hover': {
+            color: '#25697E',
+            border: '1px solid' + colors.secondary,
+          },
+          ':active': {
+            color: '#25697E',
+            border: '1px solid transparent',
+          },
         },
-        ':active': {
-          color: '#25697E',
-          border: '1px solid transparent',
+        warning: {
+          ...metrics,
+          background: '#FFF7CE',
         },
-      },
-      warning: {
-        background: '#FFF7CE',
-      },
-      success: {
-        background: '#D0FCEC',
-      },
-      dark: {
-        background: '#DDE5E9',
-      },
-      default: {
-        background: '#FFFFFF',
-        border: '1px solid' + colors.neutralGray5,
-        borderRadius: '6px',
-      },
-    },
+        success: {
+          ...metrics,
+          background: '#D0FCEC',
+        },
+        dark: {
+          ...metrics,
+          background: '#DDE5E9',
+        },
+        default: {
+          ...metrics,
+          background: '#FFFFFF',
+          border: '1px solid' + colors.neutralGray5,
+          borderRadius: '6px',
+        },
+      }
+    })(),
     fontSizes: fontSize,
     fonts: {
       primary: fontFamily,
