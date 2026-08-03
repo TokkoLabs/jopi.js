@@ -5,7 +5,12 @@ exports[`Tags secondary 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  font-family: Nunito Sans;
+  font-family: primary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  min-height: 20px;
+  padding: 3px 4px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -14,13 +19,8 @@ exports[`Tags secondary 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 3px 4px;
   gap: 5px;
-  height: 20px;
   border-radius: 4px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
   cursor: pointer;
   border: solid 1px transparent;
 }
