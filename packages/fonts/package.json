@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/fonts",
-  "version": "1.0.139",
+  "version": "1.0.140",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [

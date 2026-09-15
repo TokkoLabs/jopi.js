@@ -1,6 +1,6 @@
 {
   "name": "@quintoandar-tokko/alert",
-  "version": "1.2.379",
+  "version": "1.2.380",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -8,8 +8,8 @@
   ],
   "dependencies": {
     "@quintoandar-tokko/box": "^1.2.287",
-    "@quintoandar-tokko/button": "^1.2.380",
-    "@quintoandar-tokko/icons": "^1.2.321",
+    "@quintoandar-tokko/button": "^1.2.381",
+    "@quintoandar-tokko/icons": "^1.2.323",
     "@quintoandar-tokko/text": "^1.2.288"
   },
   "peerDependencies": {
