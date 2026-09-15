@@ -466,3 +466,15 @@ export const iconTopleftarrow = () => <Icon icon='icon-topleftarrow' fontSize='2
 export const iconUnivenchat = () => <Icon icon='icon-univenchat' fontSize='24px'/>
 
 export const iconVendio = () => <Icon icon='icon-vendio' fontSize='24px'/>
+
+export const iconAscending = () => <Icon icon='icon-ascending' fontSize='24px'/>
+
+export const iconCarpeta = () => <Icon icon='icon-carpeta' fontSize='24px'/>
+
+export const iconCodigos = () => <Icon icon='icon-codigos' fontSize='24px'/>
+
+export const iconDescending = () => <Icon icon='icon-descending' fontSize='24px'/>
+
+export const iconEquipo = () => <Icon icon='icon-equipo' fontSize='24px'/>
+
+export const iconImportar = () => <Icon icon='icon-importar' fontSize='24px'/>
